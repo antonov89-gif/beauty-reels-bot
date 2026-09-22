@@ -1,0 +1,511 @@
+1
+00:00:00,000 --> 00:00:06,862
+In 1817, a Scottish mill owner reduced a human day to three numbers: eight, eight, eight.
+
+2
+00:00:06,862 --> 00:00:12,259
+Eight hours of work. Eight hours of rest. Eight hours left for living.
+
+3
+00:00:12,259 --> 00:00:17,270
+Today, that sounds ordinary. Back then, it sounded almost absurd.
+
+4
+00:00:17,270 --> 00:00:22,821
+Many mill workers faced twelve or fourteen hours a day, six days a week.
+
+5
+00:00:22,821 --> 00:00:27,756
+Those numbers were not a wellness slogan. They were a rebellion.
+
+6
+00:00:27,756 --> 00:00:32,844
+The man who wrote them was not a doctor, a monk, or a philosopher.
+
+7
+00:00:32,844 --> 00:00:37,239
+He was Robert Owen, owner of the New Lanark cotton mills.
+
+8
+00:00:37,239 --> 00:00:42,482
+He asked a dangerous question: how much of a human day can work own?
+
+9
+00:00:42,482 --> 00:00:47,802
+Two hundred years later, you still live inside his unfinished answer.
+
+10
+00:00:47,802 --> 00:00:53,815
+Your alarm rings. Your calendar fills. Your time leaves before the day begins.
+
+11
+00:00:53,815 --> 00:00:59,212
+Which makes this title sound ridiculous: you work more than a caveman.
+
+12
+00:00:59,212 --> 00:01:05,226
+Surely the person with hospitals, machines, and supermarkets should work less.
+
+13
+00:01:05,226 --> 00:01:10,931
+But the comparison hides a question much bigger than prehistoric survival.
+
+14
+00:01:10,931 --> 00:01:15,866
+Not who had the easier life, but who controlled more of the day.
+
+15
+00:01:15,866 --> 00:01:20,723
+And first, we have to remove the cartoon from the word caveman.
+
+16
+00:01:20,723 --> 00:01:26,891
+There was no single prehistoric schedule, and there was no prehistoric paradise.
+
+17
+00:01:26,891 --> 00:01:32,905
+Drought, injury, infection, and infant death could make life brutally fragile.
+
+18
+00:01:32,905 --> 00:01:38,764
+Modern medicine and sanitation have saved lives those people could not save.
+
+19
+00:01:38,764 --> 00:01:42,311
+But survival and control are different things.
+
+20
+00:01:42,311 --> 00:01:47,245
+That is where an awkward piece of anthropology enters the story.
+
+21
+00:01:47,245 --> 00:01:52,873
+In the 1960s, Richard Lee studied Ju/'hoansi communities in the Kalahari.
+
+22
+00:01:52,873 --> 00:01:58,116
+He did not measure happiness. He measured time spent acquiring food.
+
+23
+00:01:58,116 --> 00:02:04,130
+In one Dobe sample, that work came to roughly twelve to nineteen hours weekly.
+
+24
+00:02:04,130 --> 00:02:09,758
+That was not every chore, every season, or every hunter-gatherer society.
+
+25
+00:02:09,758 --> 00:02:15,155
+But it was enough to make a forty-hour week look historically strange.
+
+26
+00:02:15,155 --> 00:02:22,248
+Foragers cooked, repaired tools, cared for children, traveled, and maintained relationships.
+
+27
+00:02:22,248 --> 00:02:27,182
+The point is not that they did nothing. They worked differently.
+
+28
+00:02:27,182 --> 00:02:32,348
+Their days often followed tasks, weather, hunger, and other people.
+
+29
+00:02:32,348 --> 00:02:37,976
+You hunted because food was needed. You repaired because something broke.
+
+30
+00:02:37,976 --> 00:02:42,756
+When the task ended, no clock demanded another identical hour.
+
+31
+00:02:42,756 --> 00:02:48,153
+Historians call this contrast task orientation versus time discipline.
+
+32
+00:02:48,153 --> 00:02:53,936
+The phrase comes from E. P. Thompson’s 1967 study of industrial capitalism.
+
+33
+00:02:53,936 --> 00:03:00,258
+Under task orientation, work expands and contracts with what actually needs doing.
+
+34
+00:03:00,258 --> 00:03:05,192
+Under time discipline, the important unit is no longer the task.
+
+35
+00:03:05,192 --> 00:03:06,888
+It is the hour itself.
+
+36
+00:03:06,888 --> 00:03:12,748
+Once an hour can be bought, sold, fined, and recorded, it becomes a product.
+
+37
+00:03:12,748 --> 00:03:17,914
+You can be paid not for finishing something, but for being present.
+
+38
+00:03:17,914 --> 00:03:23,388
+That feels natural only because you were born after the transformation.
+
+39
+00:03:23,388 --> 00:03:28,630
+But this transformation was built, object by object, over centuries.
+
+40
+00:03:28,630 --> 00:03:33,025
+One small machine made it possible: the mechanical clock.
+
+41
+00:03:33,025 --> 00:03:37,882
+Bells first synchronized prayers, markets, and public routines.
+
+42
+00:03:37,882 --> 00:03:42,663
+Then accurate time could coordinate people who never even met.
+
+43
+00:03:42,663 --> 00:03:48,830
+Agriculture had already made work more seasonal, settled, and dependent on land.
+
+44
+00:03:48,830 --> 00:03:53,842
+Fields need planting, weeding, harvesting, storing, and guarding.
+
+45
+00:03:53,842 --> 00:03:59,470
+Stored food can become property. Property can turn protection into power.
+
+46
+00:03:59,470 --> 00:04:04,713
+A hunter could move when a place failed. A field asks you to return.
+
+47
+00:04:04,713 --> 00:04:10,881
+Eventually, records needed schedules, and schedules needed people who kept time.
+
+48
+00:04:10,881 --> 00:04:16,895
+Then the factory made synchronized work ordinary at a scale never seen before.
+
+49
+00:04:16,895 --> 00:04:22,446
+Steam, machinery, raw cotton, and wages demanded bodies arrive together.
+
+50
+00:04:22,446 --> 00:04:26,686
+The bell became more than a signal. It became a border.
+
+51
+00:04:26,686 --> 00:04:31,389
+Picture a mill town before sunrise in the nineteenth century.
+
+52
+00:04:31,389 --> 00:04:37,634
+The streets are wet, the windows dark, and one sound travels farther than voices.
+
+53
+00:04:37,634 --> 00:04:43,031
+The bell starts. Doors open. Hundreds of people move in one direction.
+
+54
+00:04:43,031 --> 00:04:48,120
+Not because each finished a task, but because the clock began one.
+
+55
+00:04:48,120 --> 00:04:52,129
+A late minute can be counted, noticed, and punished.
+
+56
+00:04:52,129 --> 00:04:57,834
+Industrial time made obedience feel less like force and more like routine.
+
+57
+00:04:57,834 --> 00:05:03,154
+Your body learns it too: lunch hunger, closing fatigue, Sunday dread.
+
+58
+00:05:03,154 --> 00:05:08,088
+But workers fought the clock. The eight-hour day was not a gift.
+
+59
+00:05:08,088 --> 00:05:13,408
+Owen’s 1817 formula divided the day into labor, recreation, and rest.
+
+60
+00:05:13,408 --> 00:05:18,805
+The radical word was recreation: hours of life that could not be sold.
+
+61
+00:05:18,805 --> 00:05:24,742
+In 1866, the First International made limits on the workday a central demand.
+
+62
+00:05:24,742 --> 00:05:30,601
+In 1886, workers across the United States rallied around the eight-hour day.
+
+63
+00:05:30,601 --> 00:05:35,459
+The fight did not make time free. It made exploitation visible.
+
+64
+00:05:35,459 --> 00:05:39,082
+Eight hours was a ceiling, not a human optimum.
+
+65
+00:05:39,082 --> 00:05:43,554
+A limit once fought for can later feel like a commandment.
+
+66
+00:05:43,554 --> 00:05:49,105
+In 1938, U.S. law began phasing a forty-four-hour standard toward forty.
+
+67
+00:05:49,105 --> 00:05:54,965
+It brought overtime protection to covered workers, but excluded many others.
+
+68
+00:05:54,965 --> 00:06:00,516
+That is the strange inheritance: your normal week began as a protection.
+
+69
+00:06:00,516 --> 00:06:04,905
+Then the factory wall disappeared, but the clock did not.
+
+70
+00:06:04,905 --> 00:06:07,984
+It moved from the wall into your pocket.
+
+71
+00:06:07,984 --> 00:06:13,682
+Your phone rings more softly than a mill bell, but it can arrive anywhere.
+
+72
+00:06:13,682 --> 00:06:18,148
+A message appears at breakfast. A reminder appears in bed.
+
+73
+00:06:18,148 --> 00:06:23,152
+A dashboard says available, overdue, active, urgent, and waiting.
+
+74
+00:06:23,152 --> 00:06:27,849
+Technology can remove commutes and give you real flexibility.
+
+75
+00:06:27,849 --> 00:06:32,084
+But it can also erase the line that tells work to stop.
+
+76
+00:06:32,084 --> 00:06:37,012
+The bell no longer needs a building when it can follow you home.
+
+77
+00:06:37,012 --> 00:06:42,940
+And there is another layer: work that is unpaid, unnamed, and barely noticed.
+
+78
+00:06:42,940 --> 00:06:49,716
+You compare prices, plan meals, book appointments, update passwords, remember birthdays.
+
+79
+00:06:49,716 --> 00:06:55,028
+These are small pieces of coordination, scattered across the evening.
+
+80
+00:06:55,028 --> 00:06:59,648
+Modern life did not eliminate maintenance. It fragmented it.
+
+81
+00:06:59,648 --> 00:07:03,498
+That is why free time can arrive already occupied.
+
+82
+00:07:03,498 --> 00:07:09,041
+No overseer stands behind you. The system is spread across institutions.
+
+83
+00:07:09,041 --> 00:07:14,585
+There is no single villain to point at, which makes it harder to resist.
+
+84
+00:07:14,585 --> 00:07:20,514
+The bargain is simple: safety costs money, money costs work, work costs time.
+
+85
+00:07:20,514 --> 00:07:26,134
+Once that loop feels normal, exhaustion can look like a personal failure.
+
+86
+00:07:26,134 --> 00:07:31,601
+You call yourself lazy, scattered, undisciplined, or simply not enough.
+
+87
+00:07:31,601 --> 00:07:35,220
+But a person can be tired without being broken.
+
+88
+00:07:35,220 --> 00:07:38,992
+Sometimes the problem is not that you waste time.
+
+89
+00:07:38,992 --> 00:07:44,074
+Sometimes every system around you has quietly learned to claim it.
+
+90
+00:07:44,074 --> 00:07:48,694
+And that is what the prehistoric comparison is really about.
+
+91
+00:07:48,694 --> 00:07:54,545
+It is not an invitation to abandon cities, hospitals, books, or electricity.
+
+92
+00:07:54,545 --> 00:07:59,396
+It is an invitation to ask a forgotten question about progress.
+
+93
+00:07:59,396 --> 00:08:05,402
+Progress gave you safer births, longer lives, vaccines, and astonishing tools.
+
+94
+00:08:05,402 --> 00:08:10,560
+So why do time-saving tools leave so many people feeling time-poor?
+
+95
+00:08:10,560 --> 00:08:16,258
+Because saving minutes is not the same as deciding where those minutes go.
+
+96
+00:08:16,258 --> 00:08:22,110
+A faster train saves travel. A dishwasher saves chores. An app saves clicks.
+
+97
+00:08:22,110 --> 00:08:26,036
+But saved time does not automatically become yours.
+
+98
+00:08:26,036 --> 00:08:32,196
+It can become faster expectations, more messages, more output, and longer reach.
+
+99
+00:08:32,196 --> 00:08:38,510
+The system is excellent at capturing efficiency and poor at protecting its reward.
+
+100
+00:08:38,510 --> 00:08:44,053
+Every machine that saves time asks one silent question: who receives it?
+
+101
+00:08:44,053 --> 00:08:48,365
+That is why the hunter-gatherer comparison still stings.
+
+102
+00:08:48,365 --> 00:08:52,446
+Not because their lives were painless. They were not.
+
+103
+00:08:52,446 --> 00:08:57,373
+Not because they were happier in every way. We cannot know that.
+
+104
+00:08:57,373 --> 00:09:03,533
+It stings because their days were not automatically sliced into billable blocks.
+
+105
+00:09:03,533 --> 00:09:09,000
+Their work could be exhausting, but its connection to life was visible.
+
+106
+00:09:09,000 --> 00:09:13,003
+You can still feel that difference in small moments.
+
+107
+00:09:13,003 --> 00:09:18,701
+Cooking for friends feels different from answering an email marked urgent.
+
+108
+00:09:18,701 --> 00:09:24,784
+Walking without a destination can feel suspicious after a week of appointments.
+
+109
+00:09:24,784 --> 00:09:28,479
+You were trained to read an empty hour as waste.
+
+110
+00:09:28,479 --> 00:09:34,485
+But an empty hour can be recovery, friendship, boredom, attention, or thought.
+
+111
+00:09:34,485 --> 00:09:39,952
+It can be where an idea arrives before someone asks you to monetize it.
+
+112
+00:09:39,952 --> 00:09:45,726
+The ancient world did not possess a magical secret that modern people lost.
+
+113
+00:09:45,726 --> 00:09:52,425
+It sometimes preserved something modern systems regularly bargain away: unclaimed time.
+
+114
+00:09:52,425 --> 00:09:56,428
+That is why Robert Owen’s three eights still matter.
+
+115
+00:09:56,428 --> 00:10:01,895
+They were not perfect. They were a line against a world demanding more.
+
+116
+00:10:01,895 --> 00:10:06,592
+A line saying a human is not only a pair of productive hands.
+
+117
+00:10:06,592 --> 00:10:10,903
+A line saying rest is not the leftover after usefulness.
+
+118
+00:10:10,903 --> 00:10:15,292
+Tomorrow, your alarm may still ring before you are ready.
+
+119
+00:10:15,292 --> 00:10:19,912
+Your calendar may still be full. Your rent will still exist.
+
+120
+00:10:19,912 --> 00:10:25,610
+Nothing magical changes. But the first notification can become a question.
+
+121
+00:10:25,610 --> 00:10:27,149
+Who needs this hour?
+
+122
+00:10:27,149 --> 00:10:32,231
+Which part is necessary, and which part has simply been inherited?
+
+123
+00:10:32,231 --> 00:10:37,159
+You may not reclaim an entire week, and nobody is asking you to.
+
+124
+00:10:37,159 --> 00:10:43,549
+But you can protect one walk, one meal, one conversation, one unfinished afternoon.
+
+125
+00:10:43,549 --> 00:10:47,938
+Not as productivity recovery. Not as a reward you earned.
+
+126
+00:10:47,938 --> 00:10:53,328
+As proof that your life is more than a schedule someone else can fill.
+
+127
+00:10:53,328 --> 00:10:56,023
+Maybe you work more than a caveman.
+
+128
+00:10:56,023 --> 00:11:00,950
+But the deeper truth is this: you were taught to call it normal.
