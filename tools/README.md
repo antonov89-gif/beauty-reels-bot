@@ -81,3 +81,31 @@ DESIGN.md and .skill package.
 Not currently applicable to this repo (no web frontend to extract a design
 system from) -- installed per explicit request for future use, e.g. if a
 web dashboard is ever added to this project or used on an unrelated one.
+
+## Ponytail
+
+Vendored from https://github.com/DietrichGebert/ponytail (reviewed before
+inclusion: MIT-licensed, all 4 hook scripts read line-by-line -- no network
+calls, only local flag files, defensive try/catch everywhere, references
+real GitHub issue numbers indicating an actively maintained project;
+independently verified by JetBrains' blog with real, if smaller-than-
+advertised, measured savings: -15% code / -10.3% cost across 80 paired
+tasks).
+
+"Lazy senior dev" mode: pushes the agent toward YAGNI, stdlib-first,
+no-unrequested-abstractions on every coding task.
+
+Files installed at `.claude/plugins/ponytail/` (skills, hooks, commands),
+but **the SessionStart/SubagentStart/UserPromptSubmit hooks that make it
+auto-activate every session are NOT wired into `.claude/settings.json`** --
+that edit was blocked by this environment's own "Self-Modification"
+safety check (editing hook config that will auto-execute in future
+sessions needs an explicit permission grant, not just chat approval).
+
+The `skills/ponytail/SKILL.md` skill is still usable as an ordinary skill
+(it triggers on "ponytail", "be lazy", "simplest solution", etc.) without
+the hooks. To get always-on activation, a human needs to either:
+- run this repo's own installer (`node scripts/...` from a real clone), or
+- manually add the hook entries from `.claude/plugins/ponytail/hooks/claude-codex-hooks.json`
+  to `.claude/settings.json` themselves (pointing CLAUDE_PLUGIN_ROOT at
+  `.claude/plugins/ponytail`).
