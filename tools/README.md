@@ -65,3 +65,19 @@ GitHub stars (the video's "80k+" claim is inflated). 100+ skills for BigQuery,
 GKE, Cloud Run, Firebase, Google Ads, etc. Not installed here: none of it is
 relevant to this Telegram bot's stack. Ask if a specific skill from it is
 ever needed.
+
+## SkillUI
+
+Installed globally via npm (`npm install -g skillui@1.3.4`, from the real
+author amaancoderx/npxskillui, verified by matching package.json's
+repository field). Reverse-engineers a design system (colors, fonts,
+spacing, animations, components) from a live URL, git repo, or local
+directory into a DESIGN.md + .skill package Claude Code reads
+automatically. Pure static analysis -- no AI calls, no API keys.
+
+Verified working: `skillui --url https://example.com` produced a valid
+DESIGN.md and .skill package.
+
+Not currently applicable to this repo (no web frontend to extract a design
+system from) -- installed per explicit request for future use, e.g. if a
+web dashboard is ever added to this project or used on an unrelated one.
