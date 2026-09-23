@@ -262,7 +262,7 @@ class VideoRenderAgent:
 class InstagramPublishingAgent:
     @staticmethod
     async def create_reels_container(media_url: str, caption: str) -> str:
-        if INSTAGRAM_ACCESS_TOKEN == "MOCK_ACCESS_TOKEN" or not INSTAGRAM_ACCESS_TOKEN:
+        if INSTAGRAM_ACCESS_TOKEN == "MOCK_INSTAGRAM_TOKEN" or not INSTAGRAM_ACCESS_TOKEN:
             logger.info("[Publishing Agent] РЎРёРјСѓР»СЏС†РёСЏ Р·Р°РіСЂСѓР·РєРё Reels РІ Instagram...")
             await asyncio.sleep(1.5)
             return "MOCK_CONTAINER_ID_12345"
@@ -284,7 +284,7 @@ class InstagramPublishingAgent:
 
     @staticmethod
     async def check_container_status(container_id: str) -> bool:
-        if INSTAGRAM_ACCESS_TOKEN == "MOCK_ACCESS_TOKEN" or not INSTAGRAM_ACCESS_TOKEN:
+        if INSTAGRAM_ACCESS_TOKEN == "MOCK_INSTAGRAM_TOKEN" or not INSTAGRAM_ACCESS_TOKEN:
             await asyncio.sleep(1)
             return True
             
@@ -302,7 +302,7 @@ class InstagramPublishingAgent:
 
     @staticmethod
     async def publish_reels(container_id: str) -> str:
-        if INSTAGRAM_ACCESS_TOKEN == "MOCK_ACCESS_TOKEN" or not INSTAGRAM_ACCESS_TOKEN:
+        if INSTAGRAM_ACCESS_TOKEN == "MOCK_INSTAGRAM_TOKEN" or not INSTAGRAM_ACCESS_TOKEN:
             logger.info("[Publishing Agent] Р’РёРґРµРѕ СѓСЃРїРµС€РЅРѕ РѕРїСѓР±Р»РёРєРѕРІР°РЅРѕ!")
             return "MOCK_MEDIA_ID_9988"
             
