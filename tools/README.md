@@ -169,3 +169,23 @@ Google Search Console, PageSpeed, GA4, etc. -- same story). Limited direct
 relevance to this project (a Telegram bot, no website of its own to
 audit) -- kept for reference/future use, e.g. if a landing page or
 Instagram-adjacent content-strategy angle comes up.
+
+## claude-code-router (ccr)
+
+Installed globally via `npm install -g @musistudio/claude-code-router`
+(the real, canonical project -- musistudio/claude-code-router, 26k+ GitHub
+stars -- verified by matching the npm package's repository field before
+install).
+
+A local proxy gateway that intercepts Claude Code's own API calls and
+routes them to other providers (DeepSeek, Kimi, GLM, Qwen, OpenRouter,
+local Ollama, etc.) instead of Anthropic's API. Despite the source video's
+"hackers cracked Claude Code" framing, this is not an exploit -- it works
+through Claude Code's own documented `ANTHROPIC_BASE_URL` extension point,
+same mechanism many enterprise gateways use.
+
+Verified: `ccr --help` runs, binary installed as `ccr` on PATH.
+
+Requires the user's own API key(s) for whichever provider(s) they want to
+route to. Not configured or wired into anything here -- installed as an
+available CLI tool, per the established pattern for this kind of request.
