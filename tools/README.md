@@ -123,3 +123,49 @@ Recommended over Bytez/NVIDIA NIM (also named in the same video) for this
 use case: OpenAI-compatible API (minimal code change), the widest free-tier
 model catalog, no enterprise account needed, better documented. Still
 requires the user's own (free) OpenRouter API key -- none configured here.
+
+## Herdr -- NOT installed (network blocked)
+
+Real project (Rust binary by Ogulcan Celik, ~10k+ GitHub stars): a terminal
+multiplexer/dashboard for running and monitoring multiple AI coding agents
+(Claude Code, Codex, etc.) side by side with live status. Its install
+command is `curl -fsSL https://herdr.dev/install.sh | sh`.
+
+Could not install here: this sandbox's egress policy rejects `herdr.dev`
+outright (organization policy denial, not a transient failure), so the
+install script couldn't even be downloaded for review. Not relevant to the
+bot itself either way -- it's a local terminal tool for a human juggling
+multiple agent sessions. If wanted, run the install command above on your
+own machine.
+
+## codex-plugin-cc (official OpenAI plugin, skills only)
+
+Vendored from https://github.com/openai/codex-plugin-cc (official OpenAI
+repo, MIT). Lets Claude Code delegate to OpenAI's Codex CLI for code
+review, adversarial review, and task handoff.
+
+Installed only `skills/` and `commands/` (markdown) to
+`.claude/plugins/codex-cc/` -- did NOT wire `hooks/hooks.json`
+(SessionStart/SessionEnd/Stop hooks running `.mjs` scripts that spawn and
+talk to a `codex` CLI process). Reviewed the hook scripts: no network calls
+found, but they assume the `codex` CLI is installed and authenticated
+(ChatGPT subscription or OpenAI API key) -- neither is set up here, so the
+hooks would be inert/erroring noise without it. The skills are usable as
+reference regardless.
+
+## claude-seo (skills/agents only, AgriciDaniel/claude-seo)
+
+Vendored from https://github.com/AgriciDaniel/claude-seo (same author as
+the earlier claude-obsidian install; MIT, professionally engineered --
+SSRF/DNS-rebinding-safe fetchers, dedicated SECURITY.md, extensive test
+suite). 26 sub-skills + 19 sub-agents for technical SEO, schema, Core Web
+Vitals, backlinks, AI/GEO citation optimization, local SEO, ecommerce SEO.
+
+Installed only `agents/` and `skills/` (markdown) to
+`.claude/plugins/claude-seo/`. Skipped `extensions/` (Ahrefs, Moz,
+DataForSEO, SE Ranking, Bing Webmaster, Matomo, Firecrawl integrations --
+each needs its own paid API key) and the root `scripts/` (Python tools for
+Google Search Console, PageSpeed, GA4, etc. -- same story). Limited direct
+relevance to this project (a Telegram bot, no website of its own to
+audit) -- kept for reference/future use, e.g. if a landing page or
+Instagram-adjacent content-strategy angle comes up.
