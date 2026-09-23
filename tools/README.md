@@ -109,3 +109,17 @@ the hooks. To get always-on activation, a human needs to either:
 - manually add the hook entries from `.claude/plugins/ponytail/hooks/claude-codex-hooks.json`
   to `.claude/settings.json` themselves (pointing CLAUDE_PLUGIN_ROOT at
   `.claude/plugins/ponytail`).
+
+## OpenRouter (free LLM fallback for the bot)
+
+`reels_mvp.py`'s `MultiAgentSwarm.call_llm` now falls back to OpenRouter
+(openrouter.ai) when no real `OPENAI_API_KEY` is set but `OPENROUTER_API_KEY`
+is. OpenRouter is OpenAI-request-compatible, so this is a small addition,
+not a new SDK. Default free model: `meta-llama/llama-3.3-70b-instruct:free`
+(override with `OPENROUTER_MODEL`, see openrouter.ai/models for other
+`:free`-suffixed options like Qwen, Kimi/Moonshot, GLM).
+
+Recommended over Bytez/NVIDIA NIM (also named in the same video) for this
+use case: OpenAI-compatible API (minimal code change), the widest free-tier
+model catalog, no enterprise account needed, better documented. Still
+requires the user's own (free) OpenRouter API key -- none configured here.

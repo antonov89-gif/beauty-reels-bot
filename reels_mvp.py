@@ -21,6 +21,11 @@ from aiogram.filters import Command
 # =====================================================================
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "MOCK_OPENAI_API_KEY")
+# Optional free/cheap fallback via OpenRouter (openrouter.ai) -- used only when
+# no real OPENAI_API_KEY is configured. Free-tier models carry a ":free" model
+# suffix; swap OPENROUTER_MODEL for a different one from openrouter.ai/models.
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
+OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "meta-llama/llama-3.3-70b-instruct:free")
 INSTAGRAM_BUSINESS_ACCOUNT_ID = os.getenv("INSTAGRAM_BUSINESS_ACCOUNT_ID", "MOCK_INSTAGRAM_ID")
 INSTAGRAM_ACCESS_TOKEN = os.getenv("INSTAGRAM_ACCESS_TOKEN", "MOCK_INSTAGRAM_TOKEN")
 
@@ -123,18 +128,31 @@ def get_db_connection():
 class MultiAgentSwarm:
     @staticmethod
     async def call_llm(prompt: str, system_message: str) -> str:
-        """Integration point with OpenAI API."""
-        if OPENAI_API_KEY == "MOCK_OPENAI_API_KEY" or not OPENAI_API_KEY:
+        """Integration point with OpenAI API, with an OpenRouter free-tier
+        fallback when no OpenAI key is configured (see OPENROUTER_API_KEY)."""
+        has_openai = OPENAI_API_KEY != "MOCK_OPENAI_API_KEY" and OPENAI_API_KEY
+        if not has_openai and not OPENROUTER_API_KEY:
             await asyncio.sleep(1)
             return "MOCK_RESPONSE"
-        
-        url = "https://api.openai.com/v1/chat/completions"
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {OPENAI_API_KEY}"
-        }
+
+        if has_openai:
+            url = "https://api.openai.com/v1/chat/completions"
+            headers = {
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {OPENAI_API_KEY}"
+            }
+            model = "gpt-4o"
+        else:
+            # OpenRouter is OpenAI-compatible -- same request/response shape.
+            url = "https://openrouter.ai/api/v1/chat/completions"
+            headers = {
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {OPENROUTER_API_KEY}"
+            }
+            model = OPENROUTER_MODEL
+
         data = {
-            "model": "gpt-4o",
+            "model": model,
             "messages": [
                 {"role": "system", "content": system_message},
                 {"role": "user", "content": prompt}
@@ -147,6 +165,7 @@ class MultiAgentSwarm:
                     if resp.status == 200:
                         result = await resp.json()
                         return result["choices"][0]["message"]["content"]
+                    logger.error(f"LLM API returned {resp.status}: {await resp.text()}")
                     return "MOCK_RESPONSE"
         except Exception as e:
             logger.error(f"Error LLM: {e}")
