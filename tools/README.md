@@ -1,0 +1,67 @@
+# tools/
+
+Security/dev tooling installed for use *on this repo*, not part of the bot.
+
+## SkillSpector (NVIDIA)
+
+Official security scanner for Claude Code / Codex / MCP skills:
+https://github.com/NVIDIA/SkillSpector (Apache-2.0)
+
+Not vendored into this repo (it's a standalone pip package, not a skill/library
+this project imports). Installed into an isolated venv since it requires
+Python >=3.12 and this environment's default python3 is 3.11:
+
+```bash
+python3.12 -m venv /opt/skillspector-venv
+/opt/skillspector-venv/bin/pip install skillspector
+```
+
+Usage:
+
+```bash
+/opt/skillspector-venv/bin/skillspector scan <path-or-git-url> --no-llm
+```
+
+**Caveat found while testing on this repo's own `.claude/skills/`:** without
+an LLM API key (`--no-llm`, static analysis only), it produces real false
+positives on any skill whose *subject matter* is security or prompt
+engineering -- e.g. it flagged `security-and-hardening` (a skill that teaches
+threat modeling) as CRITICAL for containing the example phrase "disable
+security" in its own documentation, and `prompt-master` for discussing
+"system prompt" as a prompt-engineering concept. Manually verified both are
+false positives by reading the flagged text. For trustworthy verdicts, run
+with an LLM provider configured (`OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, or
+`SKILLSPECTOR_PROVIDER=ollama` for local models) rather than `--no-llm`.
+
+## ScrapeGraphAI
+
+Official pip package, real project (`ScrapeGraphAI/Scrapegraph-ai` on GitHub).
+Video claimed "30k+ stars" -- actual count is in the low thousands, so that
+figure was inflated, but the project itself is legitimate.
+
+Installed into its own venv (needs its own dependency set -- langchain,
+playwright, etc. -- separate from the bot's requirements.txt):
+
+```bash
+python3.12 -m venv /opt/scrapegraphai-venv
+/opt/scrapegraphai-venv/bin/pip install scrapegraphai
+```
+
+Verified: `import scrapegraphai` works, version 2.2.4. Needs an LLM API key
+(OpenAI/Anthropic/etc.) to actually scrape anything -- none configured here.
+Not wired into the bot; nothing in reels_mvp.py currently needs web scraping.
+
+## claude-automation-recommender (official Anthropic)
+
+Installed as a Claude Code skill at `.claude/skills/claude-automation-recommender/`.
+From `anthropics/claude-plugins-official`, the `claude-code-setup` plugin.
+Read-only: analyzes a repo and recommends MCP servers, skills, hooks,
+subagents, and slash commands worth adding -- doesn't modify anything itself.
+
+## google/skills (verified, not installed)
+
+Real official Google repo (Apache-2.0, github.com/google/skills) -- ~12.2k
+GitHub stars (the video's "80k+" claim is inflated). 100+ skills for BigQuery,
+GKE, Cloud Run, Firebase, Google Ads, etc. Not installed here: none of it is
+relevant to this Telegram bot's stack. Ask if a specific skill from it is
+ever needed.
