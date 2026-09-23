@@ -1,4 +1,5 @@
 import os
+import html
 import sqlite3
 import asyncio
 import logging
@@ -12,7 +13,7 @@ logger = logging.getLogger("UGC_Beauty_Orchestrator")
 
 # AIOGRAM Imports
 from aiogram import Bot, Dispatcher, Router, F
-from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, ReplyKeyboardMarkup, KeyboardButton
+from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, ReplyKeyboardMarkup, KeyboardButton, FSInputFile
 from aiogram.filters import Command
 
 # =====================================================================
@@ -22,6 +23,18 @@ TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "MOCK_OPENAI_API_KEY")
 INSTAGRAM_BUSINESS_ACCOUNT_ID = os.getenv("INSTAGRAM_BUSINESS_ACCOUNT_ID", "MOCK_INSTAGRAM_ID")
 INSTAGRAM_ACCESS_TOKEN = os.getenv("INSTAGRAM_ACCESS_TOKEN", "MOCK_INSTAGRAM_TOKEN")
+
+# HyperFrames render project (reels-video/) -- portrait 1080x1920 composition
+# used as the render target for VideoRenderAgent. See reels-video/templates/
+# for the source template that gets filled in per draft.
+HYPERFRAMES_PROJECT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "reels-video")
+REEL_TEMPLATE_PATH = os.path.join(HYPERFRAMES_PROJECT_DIR, "templates", "reel-card.template.html")
+REEL_COMPOSITION_PATH = os.path.join(HYPERFRAMES_PROJECT_DIR, "index.html")
+RENDERS_DIR = os.path.join(HYPERFRAMES_PROJECT_DIR, "renders")
+HYPERFRAMES_RENDER_QUALITY = os.getenv("HYPERFRAMES_RENDER_QUALITY", "looks")
+# Serializes renders: the HyperFrames render target is index.html in a shared
+# project dir, so two drafts rendering at once would overwrite each other.
+_render_lock = asyncio.Lock()
 
 # =====================================================================
 # DATABASE MANAGEMENT (SQLite)
@@ -183,6 +196,64 @@ class MultiAgentSwarm:
         logger.info("[QA Agent] РџСЂРѕРІРµСЂРєР° РЅР° СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРµ Р±СЊСЋС‚Рё-СЃС‚Р°РЅРґР°СЂС‚Р°Рј Рё РїРѕР»РёС‚РёРєРµ Meta...")
         await asyncio.sleep(0.5)
         return {"is_passed": True, "score": 9.5}
+
+
+# =====================================================================
+# REAL VIDEO RENDER ENGINE (HYPERFRAMES) -- REPLACES THE MOCK MEDIA_URL
+# =====================================================================
+class VideoRenderAgent:
+    """Renders an actual MP4 for a draft via the HyperFrames CLI.
+
+    There is no real footage or AI-generated visual clip behind
+    `visual_prompt` yet (that would need a paid video-gen API and
+    credentials this project doesn't have configured). Rather than keep
+    faking a media_url, this renders a real animated "reel card" --
+    hook / body / CTA text on a branded background -- from the actual
+    draft copy, so what gets sent to the user and (eventually) published
+    is a genuine, watchable video instead of a placeholder link.
+    """
+
+    @staticmethod
+    def _fill_template(draft: sqlite3.Row) -> str:
+        if not os.path.exists(REEL_TEMPLATE_PATH):
+            raise FileNotFoundError(f"Render template not found: {REEL_TEMPLATE_PATH}")
+        template = open(REEL_TEMPLATE_PATH, "r", encoding="utf-8").read()
+        replacements = {
+            "{{TITLE}}": html.escape(draft["title"] or ""),
+            "{{HOOK}}": html.escape(draft["hook"] or ""),
+            "{{BODY}}": html.escape(draft["body"] or ""),
+            "{{CTA}}": html.escape(draft["cta"] or ""),
+        }
+        for placeholder, value in replacements.items():
+            template = template.replace(placeholder, value)
+        return template
+
+    @classmethod
+    async def render_draft(cls, draft: sqlite3.Row) -> str:
+        """Renders draft `draft` to an MP4 and returns its local path."""
+        os.makedirs(RENDERS_DIR, exist_ok=True)
+        output_path = os.path.join(RENDERS_DIR, f"draft_{draft['id']}.mp4")
+
+        async with _render_lock:
+            filled_html = cls._fill_template(draft)
+            with open(REEL_COMPOSITION_PATH, "w", encoding="utf-8") as f:
+                f.write(filled_html)
+
+            logger.info(f"[VideoRender Agent] Рендерю HyperFrames-композицию для черновика {draft['id']}...")
+            proc = await asyncio.create_subprocess_exec(
+                "hyperframes", "render", "-q", HYPERFRAMES_RENDER_QUALITY, "-o", output_path,
+                cwd=HYPERFRAMES_PROJECT_DIR,
+                stdout=asyncio.subprocess.PIPE,
+                stderr=asyncio.subprocess.PIPE,
+            )
+            stdout, stderr = await proc.communicate()
+
+        if proc.returncode != 0 or not os.path.exists(output_path):
+            error_tail = stderr.decode(errors="ignore")[-2000:] if stderr else "unknown error"
+            raise RuntimeError(f"HyperFrames render failed for draft {draft['id']}: {error_tail}")
+
+        logger.info(f"[VideoRender Agent] Готово: {output_path}")
+        return output_path
 
 
 # =====================================================================
@@ -356,6 +427,9 @@ def get_main_reply_keyboard() -> ReplyKeyboardMarkup:
 def get_draft_approval_keyboard(draft_id: int) -> InlineKeyboardMarkup:
     kb = [
         [
+            InlineKeyboardButton(text="\U0001F3AC Превью (рендер)", callback_data=f"prev_{draft_id}")
+        ],
+        [
             InlineKeyboardButton(text="вњ… РћРґРѕР±СЂРёС‚СЊ", callback_data=f"app_{draft_id}"),
             InlineKeyboardButton(text="вќЊ РћС‚РєР»РѕРЅРёС‚СЊ", callback_data=f"rej_{draft_id}")
         ],
@@ -523,6 +597,31 @@ async def cmd_settings(message: Message):
     await message.reply(text, parse_mode="Markdown")
 
 # --- CALLBACK HANDLING (APPROVALS, DISAPPROVALS) ---
+@router.callback_query(F.data.startswith("prev_"))
+async def handle_preview(callback: CallbackQuery):
+    """Renders the draft right now via HyperFrames and sends the real MP4
+    back to the chat, without changing the draft's status."""
+    draft_id = int(callback.data.split("_")[1])
+    conn = get_db_connection()
+    draft = conn.execute("SELECT * FROM drafts WHERE id = ?", (draft_id,)).fetchone()
+    conn.close()
+
+    if not draft:
+        await callback.answer("Черновик не найден.", show_alert=True)
+        return
+
+    await callback.answer("Рендерю превью, это займёт ~10-20 секунд...")
+    try:
+        video_path = await VideoRenderAgent.render_draft(draft)
+        await callback.message.answer_video(
+            FSInputFile(video_path),
+            caption=f"🎬 Превью черновика ID {draft_id}: «{draft['title']}»",
+        )
+    except Exception as e:
+        logger.error(f"Не удалось отрендерить превью для черновика {draft_id}: {e}")
+        await callback.message.answer(f"❌ Ошибка рендера превью: {e}")
+
+
 @router.callback_query(F.data.startswith("app_"))
 async def handle_approval(callback: CallbackQuery):
     draft_id = int(callback.data.split("_")[1])
@@ -530,10 +629,10 @@ async def handle_approval(callback: CallbackQuery):
     conn.execute("UPDATE drafts SET status = 'APPROVED' WHERE id = ?", (draft_id,))
     conn.commit()
     conn.close()
-    
-    await callback.answer("РЈС‚РІРµСЂР¶РґРµРЅРѕ! Р’РёРґРµРѕ РѕС‚РїСЂР°РІР»РµРЅРѕ РІ Instagram API...", show_alert=True)
-    await callback.message.edit_text(f"вњ… **РЎР¦Р•РќРђР РР™ ID {draft_id} РћР”РћР‘Р Р•Рќ**\n\nРђРіРµРЅС‚-РџСѓР±Р»РёРєР°С‚РѕСЂ Р·Р°РіСЂСѓР¶Р°РµС‚ Reels РЅР° СЃРµСЂРІРµСЂР° Instagram...")
-    asyncio.create_task(publish_draft_to_instagram(draft_id))
+
+    await callback.answer("Одобрено! Рендерю ролик и готовлю публикацию...", show_alert=True)
+    await callback.message.edit_text(f"✅ **СЦЕНАРИЙ ID {draft_id} ОДОБРЕН**\n\nРендерю ролик через HyperFrames и готовлю публикацию...")
+    asyncio.create_task(render_and_publish_draft(draft_id, callback.message))
 
 @router.callback_query(F.data.startswith("sch_"))
 async def handle_scheduling(callback: CallbackQuery):
@@ -571,18 +670,69 @@ async def handle_revision(callback: CallbackQuery):
     await callback.message.edit_text(f"рџ› пёЏ **РЎР¦Р•РќРђР РР™ ID {draft_id} РћРўРџР РђР’Р›Р•Рќ РќРђ РљРћР Р Р•РљРўРР РћР’РљРЈ**\n\nРђРіРµРЅС‚-РЎС†РµРЅР°СЂРёСЃС‚ РїРµСЂРµРґРµР»С‹РІР°РµС‚ СЂРѕР»РёРє.")
 
 
+async def render_and_publish_draft(draft_id: int, status_message: Message):
+    """Renders the approved draft's real video, sends it to the chat for
+    confirmation, records its local path as media_url, then hands off to
+    the (still-simulated, unless real Instagram creds are set) publishing
+    agent."""
+    conn = get_db_connection()
+    draft = conn.execute("SELECT * FROM drafts WHERE id = ?", (draft_id,)).fetchone()
+    conn.close()
+
+    if not draft:
+        return
+
+    try:
+        video_path = await VideoRenderAgent.render_draft(draft)
+    except Exception as e:
+        logger.error(f"Рендер черновика {draft_id} не удался: {e}")
+        conn = get_db_connection()
+        conn.execute(
+            "UPDATE drafts SET status = 'RENDER_FAILED', revision_feedback = ? WHERE id = ?",
+            (str(e), draft_id),
+        )
+        conn.commit()
+        conn.close()
+        await status_message.answer(f"❌ Рендер черновика ID {draft_id} не удался: {e}")
+        return
+
+    conn = get_db_connection()
+    conn.execute("UPDATE drafts SET media_url = ? WHERE id = ?", (video_path, draft_id))
+    conn.commit()
+    conn.close()
+
+    await status_message.answer_video(
+        FSInputFile(video_path),
+        caption=f"✅ Готовый ролик по черновику ID {draft_id}: «{draft['title']}»",
+    )
+
+    await publish_draft_to_instagram(draft_id)
+
+
 async def publish_draft_to_instagram(draft_id: int):
     conn = get_db_connection()
     draft = conn.execute("SELECT * FROM drafts WHERE id = ?", (draft_id,)).fetchone()
     conn.close()
-    
+
     if not draft:
         return
-        
+
     try:
         caption = f"{draft['title']}\n\n{draft['hook']}\n{draft['body']}\n\n{draft['cta']}"
         video_url = draft["media_url"]
-        
+
+        # The Instagram Graph API needs a publicly reachable HTTPS URL for
+        # the video, not a local file path. When real credentials are
+        # configured (mock mode ignores video_url entirely), fail honestly
+        # here instead of sending a local path the API cannot fetch.
+        real_ig_credentials = INSTAGRAM_ACCESS_TOKEN not in (None, "", "MOCK_INSTAGRAM_TOKEN", "MOCK_ACCESS_TOKEN")
+        if real_ig_credentials and not video_url.startswith(("http://", "https://")):
+            raise Exception(
+                "media_url is a local file path, not a public URL -- upload the "
+                "rendered video to public storage (S3/Cloudinary/etc.) before "
+                "publishing with real Instagram credentials."
+            )
+
         container_id = await InstagramPublishingAgent.create_reels_container(video_url, caption)
         
         conn = get_db_connection()
