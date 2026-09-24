@@ -214,3 +214,19 @@ hung process -- `timeout` doesn't reliably enforce its limit in this
 sandbox either). Fix: `npm install --replace-registry-host=always`, which
 forces npm to resolve tarballs against the configured `registry.npmjs.org`
 instead of the lockfile's mirror host -- install then completes in ~20s.
+
+## ruFlo (ruvnet/ruflo)
+
+Installed globally via `npm install -g ruflo@latest` (v3.44.0). Verified
+canonical: the npm package's `repository.url` points at
+`github.com/ruvnet/claude-flow` -- ruFlo is the rebrand of ruvnet's
+claude-flow (73k+ GitHub stars, MIT), a well-known multi-agent
+orchestration harness for Claude Code (swarms, shared/vector memory,
+agent federation).
+
+Installed as a CLI only (`ruflo` on PATH, `ruflo --version` / `--help`
+confirmed). Deliberately NOT run `ruflo init` in this repo -- that would
+embed a heavy multi-agent coordination layer (its own configs, memory,
+swarms) into the project, which is overkill for a single focused Telegram
+bot. Kept available for experimentation on other tasks, per the
+established pattern for global CLI tools (cf. claude-code-router).
