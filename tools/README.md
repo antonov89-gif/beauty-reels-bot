@@ -189,3 +189,28 @@ Verified: `ccr --help` runs, binary installed as `ccr` on PATH.
 Requires the user's own API key(s) for whichever provider(s) they want to
 route to. Not configured or wired into anything here -- installed as an
 available CLI tool, per the established pattern for this kind of request.
+
+## FreeLLMAPI (freellmapi/)
+
+Vendored from `tashfeenahmed/freellmapi` (confirmed via git commit-history
+comparison to be the genuine original among ~10 near-identical GitHub
+forks -- see commit `17b67f1`). Self-hosted proxy that unifies multiple
+LLM providers behind one API key, with a local dashboard, AES-encrypted
+credential storage, and no telemetry.
+
+Verified end-to-end locally: `npm install` (workspaces: shared/server/
+client/cli), then `npm run dev` (server on :3001, Vite client on :5173),
+dashboard reachable and rendering (screenshot taken via Playwright with
+the sandbox's pre-installed Chromium). Not wired into the bot -- installed
+standalone for evaluation, same as `screenshot-to-code/` and
+`open-generative-ai/`.
+
+**Sandbox install gotcha:** the vendored `package-lock.json` has tarball
+`resolved` URLs pointing at `registry.npmmirror.com` (a Chinese mirror),
+which this sandbox's egress proxy blocks with 403. Plain `npm install`
+retries against that dead host on every package and can stall for 10+
+minutes (observed: a `timeout 300` wrapper failed to actually kill the
+hung process -- `timeout` doesn't reliably enforce its limit in this
+sandbox either). Fix: `npm install --replace-registry-host=always`, which
+forces npm to resolve tarballs against the configured `registry.npmjs.org`
+instead of the lockfile's mirror host -- install then completes in ~20s.
