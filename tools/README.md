@@ -245,3 +245,39 @@ a tool from this server is actually invoked -- nothing configured or
 authenticated here. Relevant to this bot's video pipeline as a cloud
 alternative/complement to the local HyperFrames render path, e.g. for
 merge-field template renders at scale; not wired into `reels_mvp.py`.
+
+## Claude Mem (thedotmack/claude-mem) -- NOT installed here (deliberately)
+
+Verified canonical via `npm view claude-mem repository.url` ->
+`github.com/thedotmack/claude-mem`, author Alex Newman, Apache-2.0. Several
+GitHub accounts (Mu-L, ThorsHammer666369, y1024, aiminnovations) mirror it
+with an identical description -- forks, not independent originals.
+
+Cross-session persistent memory for Claude Code: hooks on SessionStart,
+UserPromptSubmit, PostToolUse, PreToolUse(Read), Stop, and SessionEnd
+capture what happens in a session, compress it via the Claude Agent SDK
+(your own API key), and store it locally in SQLite; later sessions get
+relevant context injected back in.
+
+**Reviewed before considering install:** cloned the source and read the
+telemetry module (`src/services/telemetry/`). It sends anonymous usage
+analytics to PostHog (`us.i.posthog.com`) by default -- version, OS,
+token/cost/duration counts, observation-type counts, error text run
+through a secret-scrubber first. Not session content/code, just
+aggregated operational metrics, and it's honestly documented in the
+source. Opt out with `DISABLE_TELEMETRY=1` or `DO_NOT_TRACK=1`.
+
+**Not installed in this sandbox:** the real install (`npx claude-mem
+install`) registers auto-executing hooks by editing `.claude/settings.json`
+itself -- exactly the kind of edit this sandbox's "Self-Modification"
+safety check blocks (same reason Ponytail's and codex-cc's hooks aren't
+wired here either). It also wouldn't be useful here regardless: this
+container is reclaimed after the session ends, so persistent
+cross-session memory has no machine to persist on. Install it on your own
+local Claude Code instead:
+
+```bash
+npx claude-mem install
+# or, to skip the default analytics:
+DISABLE_TELEMETRY=1 npx claude-mem install
+```
