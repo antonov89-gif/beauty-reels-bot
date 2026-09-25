@@ -281,3 +281,56 @@ npx claude-mem install
 # or, to skip the default analytics:
 DISABLE_TELEMETRY=1 npx claude-mem install
 ```
+
+## OmniRoute -- NOT installed (active unpatched RCE)
+
+Real project (`diegosouzapw/OmniRoute` on GitHub, `omniroute` on npm, MIT,
+359-provider free AI gateway proxy). Declined to install: the current npm
+release (3.8.50) is affected by **CVE-2026-88062**, an unauthenticated
+remote code execution in its `/api/acp/agents` endpoint, with **no fixed
+version published yet** by the maintainers as of this check. It also ships
+with default secrets (`JWT_SECRET=omniroute-default-secret-change-me`,
+dashboard password `CHANGEME`) that must be changed manually or the admin
+API is trivially compromised (CVE-2026-49352). Since it runs a listening
+local HTTP server, this isn't a config nit -- it's exploitable RCE in the
+code itself. Revisit once a patched release ships.
+
+## Headroom Desktop (gglucass/headroom-desktop)
+
+Real project, MIT-licensed shell (company: Garm Tech BV), Tauri-based
+system-tray desktop app for macOS/Windows/Linux that compresses tool
+output/logs before they hit the model to cut Claude Code/Codex token
+costs ~50%. **Paid subscription** (from $4/mo, 7-day free trial, requires
+a Headroom account) -- the open-source repo is just the app shell.
+
+Not installed here: it's a native GUI system-tray app, and this sandbox
+is a headless cloud container with no display -- there's nothing for it
+to run in. Install on your own machine:
+
+```bash
+brew install --cask headroom   # macOS
+# or download the installer for Windows/Linux from:
+# https://github.com/gglucass/headroom-desktop/releases/latest
+```
+
+Distinct from `headroomlabs-ai/headroom` (npm `headroom-ai`, a
+library/proxy/MCP-server for programmatic token compression, not a
+desktop app) and `patwalls/headroom` (a free macOS menu-bar app that just
+displays Claude Code usage %, no compression) -- three unrelated projects
+share the same name.
+
+## task-observer (rebelytics/one-skill-to-rule-them-all)
+
+Installed as a Claude Code skill at `.claude/skills/task-observer/`.
+Real project by Eoghan Henn (rebelytics.com), CC BY 4.0, canonical source
+`github.com/rebelytics/one-skill-to-rule-them-all`. Reviewed before
+inclusion: pure Markdown skill + local Python/bash helper scripts for an
+observation log, no network calls found in any script.
+
+Watches a work session for patterns, corrections, and methodology worth
+turning into a reusable skill; over time proposes new skills or
+improvements to existing ones for review. Also known as "One Skill to
+Rule Them All" -- its SKILL.md asks to be invoked before the first tool
+call of every session, which needs a CLAUDE.md instruction or session-start
+hook to actually enforce (description-matching alone isn't reliable) --
+not wired up automatically here, usable as an on-demand skill as-is.
