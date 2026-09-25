@@ -334,3 +334,40 @@ Rule Them All" -- its SKILL.md asks to be invoked before the first tool
 call of every session, which needs a CLAUDE.md instruction or session-start
 hook to actually enforce (description-matching alone isn't reliable) --
 not wired up automatically here, usable as an on-demand skill as-is.
+
+## Project-specific skills and hooks (from claude-automation-recommender)
+
+Added after running `claude-automation-recommender` against this repo:
+
+- **`.claude/skills/render-and-verify/`** -- verifies a HyperFrames render
+  actually produced a valid, non-empty MP4 (via `ffprobe`) before reporting
+  success, instead of trusting the CLI's exit code alone.
+- **`.claude/skills/instagram-publish-checklist/`** -- pre-flight checklist
+  for `publish_draft_to_instagram` (mock-vs-real token mode, public HTTPS
+  `media_url`, async container-status polling). Codifies the root cause of
+  the mock-token bug fixed in commit `bbb805e` so it doesn't recur.
+
+**Two hook scripts were also written but NOT wired into
+`.claude/settings.json`** -- adding them was blocked by this sandbox's
+"Self-Modification" safety check (same restriction that stopped Ponytail's
+and codex-cc's hooks from being wired automatically):
+
+- `.claude/hooks/guard-env-edit.sh` (PreToolUse on Edit/Write) -- blocks a
+  silent edit to any `.env`/`.env.*` file (real secrets: OpenRouter,
+  ElevenLabs, Instagram token), except `.env.example`/`.env.sample`.
+- `.claude/hooks/check-reels-mvp-syntax.sh` (PostToolUse on Edit/Write) --
+  runs `ast.parse` on `reels_mvp.py` right after any edit, catching a
+  syntax error immediately rather than at the next bot restart (relevant
+  given this file's documented mojibake/encoding history).
+
+Both scripts are written, executable, and tested standalone. To activate
+them, add this to `.claude/settings.json`'s `"hooks"` block yourself:
+
+```json
+"PreToolUse": [
+  {"matcher": "Edit|Write", "hooks": [{"type": "command", "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/guard-env-edit.sh"}]}
+],
+"PostToolUse": [
+  {"matcher": "Edit|Write", "hooks": [{"type": "command", "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/check-reels-mvp-syntax.sh"}]}
+]
+```
