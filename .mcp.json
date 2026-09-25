@@ -32,6 +32,10 @@
       "env": {
         "PERPLEXITY_API_KEY": "${PERPLEXITY_API_KEY}"
       }
+    },
+    "shotstack": {
+      "type": "http",
+      "url": "https://mcp.shotstack.io"
     }
   }
 }

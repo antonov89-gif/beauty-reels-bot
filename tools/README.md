@@ -230,3 +230,18 @@ embed a heavy multi-agent coordination layer (its own configs, memory,
 swarms) into the project, which is overkill for a single focused Telegram
 bot. Kept available for experimentation on other tasks, per the
 established pattern for global CLI tools (cf. claude-code-router).
+
+## Shotstack MCP server
+
+Added to `.mcp.json` as a hosted HTTP MCP server (`https://mcp.shotstack.io`)
+per explicit user request. Real, official Shotstack product -- a cloud
+video-editing API: render an Edit JSON timeline, save/reuse templates,
+render merge-field variants, poll render status, open an interactive
+Studio canvas.
+
+Requires the user to complete OAuth with their own Shotstack account and
+a **production** API key (sandbox/stage keys are rejected) the first time
+a tool from this server is actually invoked -- nothing configured or
+authenticated here. Relevant to this bot's video pipeline as a cloud
+alternative/complement to the local HyperFrames render path, e.g. for
+merge-field template renders at scale; not wired into `reels_mvp.py`.
