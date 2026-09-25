@@ -405,3 +405,41 @@ Relevant to this project: `requirements.txt` already includes
 `openpyxl` (Excel handling), so a local, no-API-key Office-to-Markdown
 converter is a plausible fit if the bot ever needs to ingest
 spreadsheets/docs from users.
+
+## graphify (Graphify-Labs/graphify)
+
+Re-checked after initially being dismissed early in this session as
+likely clickbait without deep verification (same mistake almost made
+with FreeLLMAPI). On closer check: real, canonical repo is
+`github.com/Graphify-Labs/graphify` -- confirmed via the PyPI package
+`graphifyy`'s `project_urls` (npm's bare `graphify` package name is
+unrelated, same naming-squat pattern as `anydoc`; several GitHub
+accounts mirror the real repo's README as usual). A GitHub issue
+claiming it doesn't reduce token usage was closed via a merged fix PR,
+not left unresolved -- read as a sign of active maintenance, not a red
+flag. Could not independently verify the claimed star count (GitHub API
+blocked for out-of-scope repos in this session) -- treat that number
+with the same skepticism as other inflated stats seen in these videos.
+
+Turns a codebase (+ docs, PDFs, DB schemas) into a queryable knowledge
+graph via local deterministic tree-sitter AST parsing (20+ languages) --
+code never leaves the machine; only docs/PDFs/images optionally go to
+your configured LLM API for semantic extraction. No telemetry.
+
+Installed: `uv tool install graphifyy` (PyPI, confirmed pointing at the
+real repo), then `graphify install --platform claude` (writes the skill
++ a CLAUDE.md pointer; this happened at user scope in this sandbox, not
+inside the repo -- run the same two commands on your own machine to get
+it there instead).
+
+**Verified working end-to-end** on this actual repo: `graphify extract .
+--code-only` (no LLM/API key needed) produced a real graph — 20496
+nodes, 45686 edges, 767 communities across 2614 code files in ~30s, and
+automatically skipped 14 files it flagged as potentially containing
+secrets. `graphify query "how does VideoRenderAgent render a draft"`
+correctly surfaced `VideoRenderAgent`, `.render_draft()`,
+`publish_draft_to_instagram()`, and `handle_approval()` from
+`reels_mvp.py`.
+
+The generated `graphify-out/` (53MB, regenerable) is gitignored --
+not committed.
