@@ -443,3 +443,26 @@ correctly surfaced `VideoRenderAgent`, `.render_draft()`,
 
 The generated `graphify-out/` (53MB, regenerable) is gitignored --
 not committed.
+
+## ECC / "Everything Claude Code" (affaan-m/ECC) -- NOT installed
+
+Real project (MIT, has a proper SECURITY.md with a vulnerability-reporting
+process), not a scam -- but declined a full install. A YouTube short
+advertised "63 agents, 249 skills"; the actual repo (cloned and inspected)
+has 68 agents, 293 skills, and 53 separate hook scripts across 97MB.
+Claimed star counts vary wildly by source (240k/200k/82k/267k) -- not
+trusted.
+
+Its `hooks/hooks.json` intercepts every Bash, Write, Edit, and PowerShell
+call plus a catch-all `.*` matcher (`observe-runner.js`,
+`governance-capture.js` run on literally every tool call). Spot-checked
+those two scripts for network calls -- found none -- but auditing all 53
+hook scripts plus reviewing 293 skills for correctness/safety is outside
+what this session can responsibly do; that's a full audit of a
+small-to-medium open-source product, not a file read.
+
+Also heavily redundant with what's already installed here (295 agent
+personas, 60+ skills covering the same "AI engineering team" ground).
+Not installed, in whole or in part. Revisit only for a specific named
+piece (one agent, one skill) the user wants pulled out and reviewed
+individually -- not the whole harness.
