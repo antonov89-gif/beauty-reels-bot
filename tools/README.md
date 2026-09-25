@@ -371,3 +371,37 @@ them, add this to `.claude/settings.json`'s `"hooks"` block yourself:
   {"matcher": "Edit|Write", "hooks": [{"type": "command", "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/check-reels-mvp-syntax.sh"}]}
 ]
 ```
+
+## skills CLI (vercel-labs/skills)
+
+Installed globally via `npm install -g skills` (real project,
+`github.com/vercel-labs/skills`, MIT, v1.7.0 -- verified via npm's
+`repository.url`). Open agent-skills manager (`npx skills` /
+`bunx skills`): find, install, update, remove, back up, sync Agent
+Skills across Claude Code, Codex, Cursor, and 75+ other agents from a
+shared skills.sh registry. Verified: `skills --version` runs.
+
+Not configured with any particular skill source here -- installed as an
+available CLI tool per explicit request, same treatment as
+claude-code-router and ruflo.
+
+## anydoc MCP server (ofershap/mcp-server-anydoc)
+
+Added to `.mcp.json` (`npx -y mcp-server-anydoc`). Converts PDF/Word/
+Excel/PowerPoint to clean Markdown locally, no API key, nothing leaves
+the machine. Reviewed before adding: MIT-licensed, wraps the real
+`@firecrawl/anydoc` (`^0.2.3`) as its actual conversion engine, no
+network calls found in the wrapper's own source.
+
+**Naming gotcha found during verification:** the bare npm package name
+`anydoc` is NOT Firecrawl's project -- it's an unrelated 2018 "node web
+server" package by a different author that happened to squat the name
+first. The real Firecrawl package is scoped: `@firecrawl/anydoc`. Also
+note the usual fork-farm pattern on GitHub (shlomsh/anydoc,
+chengniu/anydoc, Idk121-blip/anydoc, etc. -- all identical READMEs,
+none are the original `firecrawl/anydoc`).
+
+Relevant to this project: `requirements.txt` already includes
+`openpyxl` (Excel handling), so a local, no-API-key Office-to-Markdown
+converter is a plausible fit if the bot ever needs to ingest
+spreadsheets/docs from users.

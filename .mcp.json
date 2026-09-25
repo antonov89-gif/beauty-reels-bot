@@ -36,6 +36,10 @@
     "shotstack": {
       "type": "http",
       "url": "https://mcp.shotstack.io"
+    },
+    "anydoc": {
+      "command": "npx",
+      "args": ["-y", "mcp-server-anydoc"]
     }
   }
 }
