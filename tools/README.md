@@ -463,6 +463,27 @@ small-to-medium open-source product, not a file read.
 
 Also heavily redundant with what's already installed here (295 agent
 personas, 60+ skills covering the same "AI engineering team" ground).
-Not installed, in whole or in part. Revisit only for a specific named
-piece (one agent, one skill) the user wants pulled out and reviewed
-individually -- not the whole harness.
+
+**Update -- installed skills+agents after a deeper audit.** Ran a
+broader security sweep at the user's request: grepped all 53 hook
+scripts and all 115 executable scripts inside `skills/` for
+curl-pipe-shell, wget-pipe-shell, base64-decode-eval, and
+`shell=True`/`os.system` patterns -- zero hits. The only outbound
+network calls found were expected, named functionality (`taste-*`
+skills calling the `fal.ai` API for AI generation, with their own
+`_SafeRedirect` handler against redirect-based SSRF; `continuous-
+learning-v2` importing "instincts" from a user-supplied URL) plus a
+`plan-canvas-pending.js` hook that only ever talks to `127.0.0.1` (its
+own local companion server). `install.sh` runs `npm install
+--ignore-scripts` specifically to block postinstall-script supply-chain
+RCE, and the repo ships its own `security:ioc-scan` CI script. This is a
+noticeably more security-conscious project than the initial "can't
+audit this much" dismissal gave it credit for.
+
+Installed **skills + agents only, no hooks** (7.5MB total) to
+`.claude/plugins/ecc/` -- same treatment as ponytail/codex-cc/claude-seo.
+The 53 hook scripts that intercept every Bash/Write/Edit call are
+deliberately NOT wired in, both because wiring hooks needs the same
+Self-Modification permission this sandbox blocks, and because that's a
+much larger trust surface than passive markdown skills/agents a user
+invokes on demand.
