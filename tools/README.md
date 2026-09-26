@@ -576,3 +576,23 @@ Engineering.
   unrelated "marketing skills for Claude Code" projects by different
   authors with no way to tell which one (if any) the video meant. Needs
   a screenshot or a repo link from the user to proceed.
+
+**Update -- Marketing Skill identified and installed.** A screenshot of
+the reel's GitHub-page cutaway named the author, "Built by Corey
+Haines" -- matches `coreyhaines31/marketingskills` exactly (README text
+identical: Conversion Factory, Swipe Files, Coding for Marketers,
+Magister). MIT-licensed, 49 individual marketing skills (copywriting,
+CRO, SEO, ads, analytics, etc.) plus `tools/clis/*.js` -- ~65 small CLI
+wrappers, one per named marketing SaaS (SendGrid, Mailchimp, Google Ads,
+Segment, Mixpanel, etc.), each reading its own API key from an env var
+and calling only that service's official API domain. Spot-checked
+`sendgrid.js` and grepped every URL across all CLI wrappers -- all
+resolve to the claimed service's own domain, no hidden third-party
+endpoint. The README's "Partners" section (Converly, Ploy) is disclosed
+sponsorship, not a hidden dark pattern.
+
+Installed to `.claude/plugins/marketing-skills/` (skills/ + tools/,
+4.9MB). Relevant to this project for hook/caption copywriting and
+content-strategy skills even though most of the ad-platform CLIs
+(Google/Meta/TikTok Ads, etc.) aren't relevant to a Telegram bot without
+those integrations configured.
