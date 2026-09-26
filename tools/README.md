@@ -536,3 +536,43 @@ to register an auto-running hook needs the Self-Modification permission
 this sandbox blocks. The skill itself works standalone without it; run
 `node .claude/skills/unlazy/scripts/install-hooks.mjs` yourself if you
 want the Stop-hook backstop too.
+
+## Instagram reel "TOP-5 SKILLS Claude Code" -- 3 of 5 installed
+
+Watched via Nexlev's Instagram video tool (1/day free-tier limit, so no
+second pass for more detail was possible). Named skills: Marketing
+Skill, Stop Slop Skill, UI UX Pro Max, Remotion Skill, Context
+Engineering.
+
+- **Context Engineering** -- already installed (Addy Osmani's
+  `context-engineering`).
+- **Stop Slop** -- installed to `.claude/skills/stop-slop/`. Canonical
+  author confirmed via commit-history comparison:
+  `hardikpandya/stop-slop` (2026-01-11 first commit) predates
+  `mohamedgame/stop-slop` (2026-01-26, a later fork of it). MIT, pure
+  Markdown, no scripts. Rewrites AI-sounding prose to remove "AI tells" --
+  functionally overlaps with the already-installed `humanizer` skill;
+  kept both since they use different rule sets.
+- **UI UX Pro Max** -- installed to `.claude/skills/ui-ux-pro-max/`
+  (3.7MB of just the skill directory, out of a 30MB full repo). Two
+  identical-looking repos exist with the exact same first commit
+  (author "Viet Tran", 2025-11-30): `nextlevelbuilder/ui-ux-pro-max-skill`
+  (1.7k followers, real org, official site ui-ux-pro-max-skill.com) vs
+  `waamengineer/ui-ux-pro-max-skill` (0 followers, a handful of forked
+  repos) -- installed from `nextlevelbuilder` as the evidently canonical
+  one. MIT, has SECURITY.md. Scanned all Python scripts for network
+  calls: only `refresh-google-fonts.py` (a maintainer/CI catalog-update
+  tool, not run by the skill itself) and `logo/generate.py` (calls an
+  image-gen API, which is the skill's stated purpose) -- nothing hidden.
+- **Remotion Skill** -- installed `remotion-best-practices` (1.7MB) from
+  the *official* `remotion-dev/skills` repo (Remotion's own GitHub org,
+  not a third party) rather than any of the several unofficial
+  "claude-remotion-skill" clones found in search. Note: this project's
+  actual video pipeline is HyperFrames, not Remotion -- installed anyway
+  since it was explicitly named in the video, but it isn't the engine
+  `VideoRenderAgent` uses.
+- **Marketing Skill** -- NOT installed. The name shown on screen is too
+  generic to identify a single specific repo; a search turns up 7+
+  unrelated "marketing skills for Claude Code" projects by different
+  authors with no way to tell which one (if any) the video meant. Needs
+  a screenshot or a repo link from the user to proceed.
