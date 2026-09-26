@@ -487,3 +487,22 @@ deliberately NOT wired in, both because wiring hooks needs the same
 Self-Modification permission this sandbox blocks, and because that's a
 much larger trust surface than passive markdown skills/agents a user
 invokes on demand.
+
+## github-pr-review (aidankinzett/claude-git-pr-skill)
+
+Installed as `.claude/skills/github-pr-review/SKILL.md`. Small,
+single-purpose skill (no scripts, pure Markdown) for reviewing GitHub
+PRs via `gh api`: always drafts a *pending* review first, always shows
+the exact comments/suggestions and requested event type
+(APPROVE/REQUEST_CHANGES/COMMENT) and gets explicit user approval via
+AskUserQuestion before posting anything public. Explicitly checks for
+and refuses to proceed without the `gh` CLI installed and authenticated.
+
+Reviewed the whole thing before installing (it's short) -- no prompt
+injection, no hidden instructions, no network activity beyond the `gh`
+CLI calls it's transparently built around.
+
+Note: this sandbox doesn't have `gh` CLI installed (GitHub access here
+goes through the harness's own MCP tools instead, per this session's
+system prompt) so the skill is inert here -- it'll activate once `gh`
+is installed and `gh auth login` run, e.g. on your own machine.
