@@ -596,3 +596,31 @@ Installed to `.claude/plugins/marketing-skills/` (skills/ + tools/,
 content-strategy skills even though most of the ad-platform CLIs
 (Google/Meta/TikTok Ads, etc.) aren't relevant to a Telegram bot without
 those integrations configured.
+
+## "5 Claude skills that save hours" (YouTube, dubbed video)
+
+Transcript (English original under a Russian dub) named: MCP Builder,
+Brainstorming, Brand Guidelines, Teaching (the dub rendered this as
+"Learn"), Skill Creator.
+
+- **Skill Creator** -- already installed (`anthropic-skills:skill-creator`).
+- **MCP Builder** -- installed to `.claude/skills/mcp-builder/` from the
+  official `anthropics/skills` repo. Guide for building MCP servers
+  (Python FastMCP or Node/TS SDK) -- not itself a connector to other
+  apps; it teaches how to *build* one.
+- **Brand Guidelines** -- installed to `.claude/skills/brand-guidelines/`,
+  same official repo. Caveat: as shipped it encodes *Anthropic's own*
+  brand colors/typography (its stated purpose is demonstrating the
+  brand-guidelines pattern), not a blank template -- edit the color/font
+  values in it before relying on it for this project's own visual
+  identity, if that's ever needed.
+- **Brainstorming** and **Teaching** -- NOT installed. Neither appears
+  in the official `anthropics/skills` GitHub repo (verified by cloning
+  and listing it: academy-guide, algorithmic-art, brand-guidelines,
+  canvas-design, claude-api, discernment-nudge, doc-coauthoring, docx,
+  frontend-design, internal-comms, mcp-builder, pdf, pptx, skill-creator,
+  slack-gif-creator, theme-factory, web-artifacts-builder,
+  webapp-testing, xlsx -- no brainstorming/teaching/learn among them).
+  They're most likely built into claude.ai's own in-product skill
+  library rather than published as separate open-source repos, so
+  there's nothing to fetch and install here.
