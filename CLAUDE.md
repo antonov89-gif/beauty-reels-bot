@@ -60,6 +60,14 @@ For multi-step tasks, state a brief plan:
 
 Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
 
+## 5. Prefer Token-Efficient Tools
+
+**Don't burn context on what an installed skill already does cheaper.**
+
+- Codebase questions (architecture, "where is X", call relationships) -> query `graphify` (`graphify-out/graph.json` if built, else build it with `--code-only` first) instead of grepping/reading files one by one.
+- Fetching a web page for its content -> use `defuddle` to strip boilerplate before reading, instead of the raw page.
+- Only fall back to manual file reads/greps when the task needs exact source text (editing) or the skill doesn't cover it.
+
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
