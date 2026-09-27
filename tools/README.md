@@ -624,3 +624,33 @@ Brainstorming, Brand Guidelines, Teaching (the dub rendered this as
   They're most likely built into claude.ai's own in-product skill
   library rather than published as separate open-source repos, so
   there's nothing to fetch and install here.
+
+## "3 skills everyone needs" (Instagram Reel, instagram.com/reel/Ddua0yrsWQw)
+
+Named three Claude Code plugins with exact `/plugin install` commands
+shown on screen: Superpowers, Frontend Design, Skill Creator.
+
+Verified via the plugin catalog before installing:
+- **superpowers** -- publisher `obra` (Jesse Vincent), tier: partner,
+  upstream `github.com/obra/superpowers`. Not from
+  `claude-plugins-official` despite the reel's install command implying
+  that -- it has its own marketplace repo, added separately as
+  `superpowers-dev`.
+- **frontend-design** and **skill-creator** -- publisher Anthropic
+  (official), upstream `github.com/anthropics/claude-plugins-official`.
+  Matches the reel's commands exactly.
+
+All three installed for real via the actual CLI plugin system (not just
+suggested), scope: user (available across all projects, not just this
+one):
+```
+claude plugin marketplace add anthropics/claude-plugins-official
+claude plugin install frontend-design@claude-plugins-official
+claude plugin install skill-creator@claude-plugins-official
+claude plugin marketplace add obra/superpowers   # -> registers as superpowers-dev
+claude plugin install superpowers@superpowers-dev
+```
+Confirmed enabled via `claude plugin list`. `superpowers` auto-loads 15
+sub-skills (TDD, systematic-debugging, code-review, git-worktrees,
+brainstorming, etc.) through a `SessionStart` hook; `frontend-design`
+and `skill-creator` are single-skill plugins with no hooks.
