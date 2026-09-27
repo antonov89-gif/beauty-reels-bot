@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 reels_automation.db
 graphify-out/
+tools/browser-agent/state.json
+tools/browser-agent/profile/
+tools/browser-agent/node_modules/
