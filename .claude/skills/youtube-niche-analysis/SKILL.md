@@ -84,13 +84,42 @@ mcp__Nexlev__get_channel_promotions(query="channelProfile", channelId=...)
 Reveals if top competitors are selling courses/products the anchor
 channel isn't — a content-gap signal that's also a revenue signal.
 
-### 9. Only if text tools can't answer a visual question
+### 9. Thumbnail / CTR analysis
+For the anchor channel's outlier videos (step 4) and the top competitor
+videos (step 6), score what's actually driving clicks:
+```
+mcp__vidq__vidiq_score_thumbnail(videoId=..., title=...)
+```
+Returns a 0-100 CTR score plus specific strengths/improvements (face
+clarity, contrast, text legibility, emotion). Only works on videos that
+are actually live on YouTube — for a not-yet-published draft thumbnail,
+fall back to a manual read (contrast, emotion, focal point, legibility
+at small size) instead of guessing a score.
+
+To find what visual concepts are already saturated vs. open in the niche:
+```
+mcp__vidq__vidiq_similar_thumbnails(description=<concept>, minViews=...)
+# or vidiq_similar_thumbnails(videoId=<a specific video>) to check how
+# common that exact composition already is
+```
+A concept with high view-counts but few matches = an underused visual
+angle worth testing. A crowded cluster = differentiate or avoid.
+
+To improve a specific underperforming thumbnail:
+```
+mcp__vidq__vidiq_generate_thumbnail(videoId=..., feedback=<score_thumbnail output>)
+mcp__vidq__vidiq_refine_thumbnail(sourceThumbnail=..., instructions=<one specific change>)
+```
+Iterate one change at a time; keep the best result rather than
+regenerating from scratch each round.
+
+### 10. Only if text/image tools can't answer a visual question
 ```
 mcp__Nexlev__watch_youtube_video_and_ask(...)
 ```
 Expensive — last resort per the tool's own guidance. Use only for
-questions text (transcript/comments/metadata) genuinely can't answer,
-e.g. editing style, on-screen graphics, thumbnail composition.
+questions neither text (transcript/comments/metadata) nor thumbnail
+scoring can answer, e.g. editing style, on-screen graphics, pacing.
 
 ## Output format
 
@@ -101,7 +130,9 @@ Deliver as a structured report, not a wall of tool output:
    quotes/transcript evidence, not generic assumptions.
 3. **Good competitors** (2-4) — why they're strong, what to learn from.
 4. **Bad/weak competitors** (2-4) — why they're exploitable.
-5. **Content gap opportunities** — specific video/content ideas that (a)
+5. **Thumbnail/CTR findings** — scores for the anchor's own outliers vs.
+   top competitors, plus which visual concepts are saturated vs. open.
+6. **Content gap opportunities** — specific video/content ideas that (a)
    no strong competitor is doing, (b) the comment/transcript evidence
    suggests real audience demand for, (c) fit the anchor channel's
    existing format. Rank by estimated view potential, not novelty alone.
