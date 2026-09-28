@@ -729,3 +729,45 @@ Noted but not installed: a legitimate fork (`nessalazne/youtube-agent-skill`,
 adds Blotato upload integration, credits the original) and an
 unverified fork (`99le16/youtube-agent-skill`) turned up in the same
 search -- stuck with the original since that's what the reel showed.
+
+## "Agent-Reach" (Instagram Reel, instagram.com/reel/Dc--QgyxGIK)
+
+Named **Agent-Reach** (`Panniantong/Agent-Reach`) -- a CLI + agent skill
+giving AI agents read/search access to X, Reddit, YouTube, GitHub,
+Instagram, LinkedIn, Bilibili, XiaoHongShu, etc. with "zero API fees".
+
+Verified real: `github.com/Panniantong/Agent-Reach`, MIT, ~86k stars,
+376 commits. Not a squat.
+
+**Risk flagged to the user before installing, and they explicitly
+chose to proceed.** "No API key" works by reusing *your own logged-in
+sessions*: cookies exported from your browser (Cookie-Editor, or
+`agent-reach configure --from-browser chrome`) for X/Instagram/LinkedIn.
+That violates those platforms' ToS (account-ban risk) and means handing
+session cookies to a third-party CLI (account-takeover risk if the tool
+were ever compromised).
+
+Code review before install: cloned and grepped `agent_reach/` for
+outbound POST/urlopen calls to anything other than the target platforms.
+Only two hits, both legitimate: `channels/web.py` -> Jina Reader
+(`r.jina.ai`, public page reader, no credentials sent) and
+`transcribe.py` -> Groq/OpenAI Whisper using a key *you* configure.
+Cookie extraction (`cookie_extract.py`) is local, per-platform,
+least-privilege; nothing exfiltrates cookies. Repo ships dedicated
+security tests (`test_cookie_security`, `test_scrub_credentials`,
+`test_home_isolation`, `test_private_file_writes`).
+
+Install notes (sandbox-specific): no `pipx` preinstalled (added via
+`pip install --user pipx`); pipx's uv backend too old (`--backend pip`);
+`codeload.github.com` zip downloads return 403 through the sandbox proxy,
+while `git clone` works -- so installed from a local clone:
+```
+git clone --depth 1 https://github.com/Panniantong/Agent-Reach.git /tmp/agent-reach-check
+python3 -m pipx install --backend pip /tmp/agent-reach-check
+```
+Installed `agent-reach 1.5.0` (pipx, sandbox-local, not in this repo).
+`agent-reach doctor`: 2/16 channels usable out of the box (RSS, any web
+page via Jina). Everything else -- including all cookie-based platforms
+-- is dormant until explicitly configured per platform. **No cookies or
+sessions were extracted here** (this sandbox has no browser profile with
+the user's logins anyway); `agent-reach install --env=auto` was not run.
