@@ -771,3 +771,55 @@ page via Jina). Everything else -- including all cookie-based platforms
 -- is dormant until explicitly configured per platform. **No cookies or
 sessions were extracted here** (this sandbox has no browser profile with
 the user's logins anyway); `agent-reach install --env=auto` was not run.
+
+## "AutoMontage" (Instagram Reel, instagram.com/reel/Ddx9JyCsg7V)
+
+Reel showed **AutoMontage-Agent**: a Claude-driven batch video editor for
+reels (subtitles, cards, meaning-matched images, music, vertical
+reframe) plus a review dashboard ("Пульт роликов") that turns timestamped
+feedback into agent commands (`automontage inbox`).
+
+**Two repos share the name** -- verified by comparing git history:
+- `mcdenil-skills/AutoMontage-Agent` -- **canonical**. MIT, 262 commits,
+  active as of 2026-09-28.
+- `lomakinigor/AutoMontage-Agent` -- stale copy with the identical root
+  history, 65 commits, last touched 2026-09-08. Even its own README
+  says to clone `mcdenil-skills`. Not used.
+
+Security review before install:
+- `package.json` has no `preinstall`/`postinstall`/`prepare` hooks.
+- Grep for `curl|sh`, `wget|sh`, `eval(`, `new Function(`,
+  `child_process...exec(`, base64 decode, `shell=True` across `src/`,
+  `scripts/`, `skills/`, `pult/`, `review/`, `config/` -- only hit is
+  `model.eval()` (PyTorch inference mode, harmless).
+- Every external host referenced in source: `api.pexels.com`,
+  `api.openai.com`, `api.anthropic.com`, `api.elevenlabs.io` (all used
+  with keys you supply), plus an `apple.com` plist DTD and a
+  `review.invalid` placeholder. No unknown endpoints.
+
+Installed per the official README, outside this repo (16MB +
+node_modules), sandbox-local:
+```
+git clone https://github.com/mcdenil-skills/AutoMontage-Agent.git ~/AutoMontage-Agent
+cd ~/AutoMontage-Agent
+npm ci                              # 255 packages, 0 vulnerabilities
+python3 -m pip install -r requirements.txt   # faster-whisper, opencv, numpy
+npm install -g .                    # global `automontage` command (v1.9.0)
+```
+`npm run doctor`: all core deps OK.
+
+**Sandbox-only fix needed for rendering:** Remotion downloads its own
+Chromium from `remotion.media` on first render, and that host isn't in
+this sandbox's egress allowlist (403 "Host not in allowlist"). Pointed
+it at the preinstalled headless shell instead by appending to
+`~/AutoMontage-Agent/remotion.config.js`:
+```js
+Config.setBrowserExecutable('/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell');
+```
+Not needed on a normal machine, where the download just works.
+
+With that, `npm run demo` rendered `out/demo.mp4` successfully: 1080x1920,
+14s, H.264 + AAC, 1.5MB, real overlay cards/vertical layout (silent by
+design -- the demo builds from a prepared edit sheet, no source footage).
+Directly relevant to this project's reels pipeline as a possible
+alternative/complement to the HyperFrames-based `VideoRenderAgent`.
