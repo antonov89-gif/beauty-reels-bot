@@ -691,3 +691,41 @@ Confirmed enabled via `claude plugin list` (v1.1.6, scope: user). Note:
 connecting it to RAD Security's cloud dashboard (`/agentkeeper:connect`)
 is a separate opt-in step, not done here -- installed for the local
 scanning skills only.
+
+## "youtube-agent-skill" (Instagram Reel, instagram.com/reel/DdimkgpxdKQ)
+
+Named `youtube-agent-skill` by GitHub user `jakeschincariol`, pasted as
+a plain GitHub link into Claude in the reel (an oversimplified
+description -- it's actually a real CLI plugin, see below).
+
+Verified real: `github.com/Jakeschincariol/youtube-agent-skill`, author
+Jake Schincariol (opusjake.ai), MIT. Ships a valid
+`.claude-plugin/marketplace.json` + `plugin.json`, so it installs
+through the normal `claude plugin` CLI rather than by pasting a link.
+
+Security check before installing: the skills aren't pure prompts --
+6 of the 11 ship actual Python scripts (535 lines total: hookscore.py,
+title.py, deadair.py, retention.py, chapters.py, swipe.py). Cloned the
+repo and grepped all of them for network calls, `eval`/`exec`,
+`subprocess`/`os.system`, and deserialization (`pickle`, `base64.b64decode`)
+-- zero hits. Small, dependency-free, deterministic Python; each script
+processes a file you feed it, nothing phones out.
+
+11 skills: yt-script (hook scoring against 21 formulas), yt-package
+(title+thumbnail pairing linter), yt-edit (edit-decision-list from a
+transcript), yt-retention (finds where viewers actually drop off),
+yt-shorts, yt-chapters, yt-comment, yt-seo, yt-plan, yt-audit, yt-viral
+(niche competitor ranking by outlier multiple, not channel size).
+Directly relevant to this project's own YouTube/Shorts content work.
+
+Installed for real via the CLI plugin system:
+```
+claude plugin marketplace add Jakeschincariol/youtube-agent-skill
+claude plugin install youtube-agent@youtube-agent-skill
+```
+Confirmed enabled via `claude plugin list` (v1.0.0, scope: user).
+
+Noted but not installed: a legitimate fork (`nessalazne/youtube-agent-skill`,
+adds Blotato upload integration, credits the original) and an
+unverified fork (`99le16/youtube-agent-skill`) turned up in the same
+search -- stuck with the original since that's what the reel showed.
