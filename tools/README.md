@@ -654,3 +654,40 @@ Confirmed enabled via `claude plugin list`. `superpowers` auto-loads 15
 sub-skills (TDD, systematic-debugging, code-review, git-worktrees,
 brainstorming, etc.) through a `SessionStart` hook; `frontend-design`
 and `skill-creator` are single-skill plugins with no hooks.
+
+## "Claude for Small Business" (Instagram Reel, instagram.com/reel/DdjUoAGtjMi)
+
+Named **Claude for Small Business** -- 33 skills + 12 connectors
+(QuickBooks, invoice chasing, Canva content generation, etc.), installed
+via Customize -> Plugins in the video.
+
+Verified via the plugin catalog: real, publisher Anthropic (official),
+upstream `github.com/anthropics/knowledge-work-plugins/small-business`
+-- 41 skills (payroll-prep, invoice-chase, tax-prep, content-strategy,
+crm-autopilot, etc.) + 34 live MCP connectors (QuickBooks, Xero, Gusto,
+Stripe, Square, HubSpot, Shopify, DocuSign, Slack, Zoom, Zoho, ...). Not
+exaggerated by the reel.
+
+**NOT installed here.** This plugin targets **Claude Cowork** (a
+separate product/UI for team workflows), not Claude Code -- it isn't
+addable via `claude plugin marketplace add`/`install` in this CLI, and
+isn't relevant to this repo's actual work (a Telegram bot codebase, not
+day-to-day small-business ops). To use it, install it from inside
+Cowork's own Customize -> Plugins -> Discovery panel, as shown in the
+reel.
+
+**Adjacent find, installed instead: AgentKeeper** (by RAD Security) --
+a free security scanner for Claude Code/Cowork itself: hooks +
+9 skills detecting credential exfiltration, reverse shells, prompt
+injection, and 24+ other threat patterns, plus a config audit. No
+account required for local scanning. Verified repo:
+`github.com/rad-security/claude-code-plugin` (MIT, matches the
+`agentkeeper.dev` site's own install instructions).
+```
+claude plugin marketplace add rad-security/claude-code-plugin
+claude plugin install agentkeeper@agentkeeper
+```
+Confirmed enabled via `claude plugin list` (v1.1.6, scope: user). Note:
+connecting it to RAD Security's cloud dashboard (`/agentkeeper:connect`)
+is a separate opt-in step, not done here -- installed for the local
+scanning skills only.
