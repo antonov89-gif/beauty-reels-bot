@@ -854,3 +854,28 @@ not installed (and would need the user's OpenAI login). Usable on a
 machine that has both CLIs logged in. The reel names "Claude Fable 5.1"
 and "GPT-6 Astra" as example models; per upstream README the models stay
 configurable and no silent provider fallback happens.
+
+## "find-skills" (Instagram Reel, instagram.com/reel/Ddzfi8jRihb)
+
+Reel: "most powerful skill for Claude" -- `find-skills` by Vercel, which
+searches an open skills directory and installs matches from plain
+language. The creator kept the link/command in his Telegram channel, so
+the name was matched against the repo, not taken from a link.
+
+Real: `skills/find-skills/SKILL.md` in `github.com/vercel-labs/skills`
+(the same repo as the `skills` CLI already installed above; repo active,
+last commit 2026-09-28). Copied verbatim into `.claude/skills/find-skills/`
+(project-level, committed), rather than `npx skills add -g`, so it
+travels with the repo.
+
+Reviewed the whole skill: a single 5.4KB `SKILL.md`, instructions only,
+no scripts or bundled files. It drives `npx skills find/add/update`.
+Corrections to the reel's pitch: the skill does NOT silently auto-install.
+It tells the agent to verify install count, source reputation and repo
+stars first, present options to the user, and only install when the user
+agrees (`npx skills add <pkg> -g -y`). The "700,000+ skills" figure from
+the reel was not verified.
+
+Standing caution: installing a third-party skill runs someone else's
+instructions inside the agent, so every skill it surfaces still needs the
+same review as the others in this file.
