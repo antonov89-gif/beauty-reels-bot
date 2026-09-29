@@ -823,3 +823,34 @@ With that, `npm run demo` rendered `out/demo.mp4` successfully: 1080x1920,
 design -- the demo builds from a prepared edit sheet, no source footage).
 Directly relevant to this project's reels pipeline as a possible
 alternative/complement to the HyperFrames-based `VideoRenderAgent`.
+
+## "Claudex Loop" (Instagram Reel, instagram.com/reel/Dd1iExMsds7)
+
+Reel showed **claudex-loop**: a free skill that has Claude Code and
+OpenAI Codex review each other. One model writes `PLAN.md`, the other
+critiques it until `APPROVED`; then the roles split for build vs. final
+inspection. Install shown: `/plugin install claudex-loop@claudex-loop`.
+
+**Already installed in this repo** (commit `29379eb`, 2026-09-23) as
+vendored project skills rather than a plugin -- documented here for the
+first time. Source: `github.com/chaseai-yt/claudex-loop` (Chase AI, MIT).
+Ships four skills: `claudex-loop`, `claudex-route`, `codex-build`,
+`codex-review`, in `.claude/skills/` with upstream README/LICENSE in
+`.claude/third_party/claudex-loop/`.
+
+Re-verified against upstream today: `diff -rq` of
+`skills/claudex-loop` vs. upstream HEAD (`8cf5e2c`, 2026-09-06) is empty,
+so the vendored copy is current. Did NOT also install the plugin form --
+it would register the same skills twice.
+
+Security review of `scripts/runner.py` (420 lines): no network calls, no
+`eval`/`exec`/`shell=True`/`os.system`/base64. `subprocess` only runs
+`git`, the reviewer CLI (argv list, prompt via stdin) and `--version`
+checks (plus `taskkill` on Windows for timeouts).
+
+**Cannot run in this sandbox:** the loop needs both CLIs and Python
+3.10+. Here `claude` and Python 3.11 exist but the OpenAI `codex` CLI is
+not installed (and would need the user's OpenAI login). Usable on a
+machine that has both CLIs logged in. The reel names "Claude Fable 5.1"
+and "GPT-6 Astra" as example models; per upstream README the models stay
+configurable and no silent provider fallback happens.
