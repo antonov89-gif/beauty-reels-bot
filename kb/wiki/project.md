@@ -13,7 +13,7 @@ Telegram-бот на aiogram 3 — панель управления UGC-кре�
 ## Данные
 
 SQLite `reels_automation.db`, таблицы: `competitors`, `ideas`, `drafts` (title/hook/body/cta/visual_prompt/audio_prompt, статус), `analytics`.
-При старте `seed_beauty_ugc_database()` **удаляет все drafts** и заливает демо-сценарии.
+При старте `seed_beauty_ugc_database()` заливает демо-сценарии **только в пустую базу** (с 2026-10-04 черновики больше не стираются).
 
 ## Запуск
 
@@ -40,4 +40,4 @@ SQLite `reels_automation.db`, таблицы: `competitors`, `ideas`, `drafts` (
 ## Осталось
 
 - Агент конкурентов (`run_competitor_analysis`) — заглушка; план: Instagram Graph API Business Discovery.
-- `seed_beauty_ugc_database()` при каждом старте удаляет все черновики.
+- **SQLite на Render Free не переживает редеплой/рестарт** — файловая система эфемерная. Нужен Persistent Disk (платно) или внешняя БД (например, бесплатный Postgres: Neon/Supabase).

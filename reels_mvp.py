@@ -335,12 +335,13 @@ async def seed_beauty_ugc_database():
     """Populates the database with actual high-quality UGC skincare drafts."""
     conn = get_db_connection()
     cursor = conn.cursor()
-    
-    # Clean old mock drafts to avoid duplication on re-runs
-    cursor.execute("DELETE FROM drafts")
-    cursor.execute("DELETE FROM ideas")
-    cursor.execute("DELETE FROM competitors")
-    
+
+    # Seed only an empty database, so restarts keep user drafts
+    if cursor.execute("SELECT COUNT(*) FROM drafts").fetchone()[0] > 0:
+        conn.close()
+        logger.info("Database already has drafts, skipping demo seed.")
+        return
+
     # 1. Add premium competitors
     competitors = [("smorodina_cosmetic",), ("shikcosmetics",), ("mixit_ru",), ("art_visage",)]
     cursor.executemany("INSERT INTO competitors (username, added_at) VALUES (?, datetime('now'))", competitors)
