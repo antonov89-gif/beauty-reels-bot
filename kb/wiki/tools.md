@@ -7,18 +7,18 @@
 - **Context7 MCP** — свежая документация библиотек (aiogram, OpenAI, Instagram Graph API). Подключён в `.mcp.json` (remote, `https://mcp.context7.com/mcp`). В облаке нужен домен `mcp.context7.com` в Allowed domains окружения.
 - **Субагенты из Agency Agents** (github.com/msitarzewski/agency-agents, MIT) в `.claude/agents/`: Instagram Curator, TikTok Strategist, Short Video Editing Coach, Content Creator. Остальные ~225 агентов библиотеки не ставим — шум в выборе агентов. Их роли пригодятся и как системные промпты для `call_llm` в боте.
 - **Правила Карпати** (github.com/forrestchang/andrej-karpathy-skills) — добавлены в `CLAUDE.md`: думать до кода, простота, точечные правки, проверка результата.
+- **Ponytail** (`ponytail@ponytail`), **Agent Skills** (`agent-skills@addy-agent-skills`) — плагины, поставлены по решению владельца проекта (2026-10-04). В облаке не сохраняются между сессиями.
+- **Graphify** — `pip install graphifyy` + `graphify install --platform claude`; граф знаний по коду (`/graphify .`). Для проекта на один файл пока малополезен.
+- **OmniRoute** v3.8.48 (`npm i -g omniroute`) — установлен, но **не запущен и не подключён**: если направить Claude Code на него (`ANTHROPIC_BASE_URL`), запросы и код уйдут сторонним бесплатным провайдерам и вместо Claude будут отвечать другие модели. Включать осознанно и только на своём компьютере.
 - **База знаний `kb/`** (этот wiki) — паттерн raw / wiki / output, совместим с Obsidian.
 
 ## Отложено / не ставим
 
 - **OpenMontage** (ИИ-видеопродакшн, github.com/calesthio/OpenMontage) — полезен для генерации рилсов, но ставить локально: в облаке YouTube и сервисы генерации заблокированы сетью.
-- **claude-mem**, **Agent Skills** (Addy Osmani), **find-skills** — дублируют ECC.
+- **claude-mem**, **find-skills** — дублируют ECC.
 - **AnyDoc** — не нужен, встроенные скиллы читают docx/xlsx/pptx.
 - **Firecrawl MCP** — нужен платный ключ, чтение сайтов уже даёт Agent Reach.
 - **Playwright MCP** — у бота нет веб-интерфейса.
-- **OmniRoute** — прокси, отправляет код сторонним бесплатным моделям. Не ставим.
-- **Ponytail** — «пиши меньше кода»; дублирует правила Карпати в `CLAUDE.md`.
-- **Graphify** — граф знаний по кодовой базе; бессмысленно для одного файла на ~650 строк. Вернуться, если проект вырастет.
 - **Strix** — ИИ-пентестер веб-приложений (нужны Docker и ключ LLM); у бота нет веб-интерфейса, только health-check.
 - **Headroom** — прокси-сжатие контекста, экономия ~15–20%. Только локально, по желанию.
 
