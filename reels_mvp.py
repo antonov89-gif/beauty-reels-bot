@@ -50,6 +50,19 @@ SCRIPT_SYSTEM_PROMPT = (
     '"audio_prompt" (звук и музыка, по-английски).'
 )
 
+PACKAGE_SYSTEM_PROMPT = (
+    "Ты SMM-редактор бьюти-аккаунта. По сценарию Reels подготовь пакет публикации в Instagram по-русски. "
+    "Подпись: до 600 символов, начинается с хука, в конце вопрос к зрителям (комментарии). "
+    "Хештеги: 8–12 штук, смесь широких и нишевых, без запрещённых и спамных. "
+    "Обложка: какой кадр взять и почему (крупный объект, 1–2 слова текста, ничего у нижнего края). "
+    "Проверка фактов: перечисли все утверждения о составе, эффекте, сроках и цифрах из сценария "
+    "(не больше 6), для каждого статус ok или warning и короткое пояснение. "
+    "warning ставь на медицинские обещания, абсолютные формулировки («навсегда», «за ночь»), "
+    "утверждения, нарушающие правила Meta, и всё, что нельзя подтвердить. Если таких утверждений нет, верни пустой список. "
+    'Ответ строго JSON: {"caption": "...", "hashtags": ["#...", ...], "cover_note": "...", '
+    '"fact_check": [{"claim": "...", "status": "ok|warning", "note": "..."}]}.'
+)
+
 QA_SYSTEM_PROMPT = (
     "Ты редактор и модератор бьюти-контента. Проверь сценарий Reels: соответствие правилам Meta "
     "(нет медицинских обещаний, нет «до/после» с нереалистичным результатом, нет запрещённых утверждений), "
@@ -127,7 +140,11 @@ def init_db():
             FOREIGN KEY (draft_id) REFERENCES drafts(id)
         )
     """)
-    
+
+    # Migration: older databases have no publication_package column
+    if "publication_package" not in {row[1] for row in cursor.execute("PRAGMA table_info(drafts)")}:
+        cursor.execute("ALTER TABLE drafts ADD COLUMN publication_package TEXT")
+
     conn.commit()
     conn.close()
     logger.info("Database schema initialized and tailored for Beauty UGC.")
@@ -247,6 +264,26 @@ class MultiAgentSwarm:
         if result and all(result.get(k) for k in SCRIPT_FIELDS):
             return {k: str(result[k]) for k in SCRIPT_FIELDS}
         return None
+
+    async def run_publication_package(self, script_data: dict):
+        """Caption, hashtags, cover note and fact check. Returns None if the LLM is unavailable."""
+        logger.info("[Publishing Agent] Готовим пакет публикации...")
+        result = await self.call_llm_json(json.dumps(script_data, ensure_ascii=False), PACKAGE_SYSTEM_PROMPT)
+        if not (result and result.get("caption") and isinstance(result.get("hashtags"), list)):
+            return None
+        return {
+            "caption": str(result["caption"])[:1500],
+            "hashtags": [str(h)[:40] for h in result["hashtags"]][:15],
+            "cover_note": str(result.get("cover_note", ""))[:300],
+            "fact_check": [
+                {
+                    "claim": str(i.get("claim", ""))[:200],
+                    "status": "ok" if i.get("status") == "ok" else "warning",
+                    "note": str(i.get("note", ""))[:200],
+                }
+                for i in (result.get("fact_check") or []) if isinstance(i, dict)
+            ][:8],
+        }
 
     async def run_qa_check(self, script_data: dict) -> dict:
         logger.info("[QA Agent] Проверка на соответствие бьюти-стандартам и политике Meta...")
@@ -449,6 +486,9 @@ def get_draft_approval_keyboard(draft_id: int) -> InlineKeyboardMarkup:
         [
             InlineKeyboardButton(text="🛠️ На доработку", callback_data=f"rev_{draft_id}"),
             InlineKeyboardButton(text="📅 В расписание", callback_data=f"sch_{draft_id}")
+        ],
+        [
+            InlineKeyboardButton(text="📦 Пакет публикации", callback_data=f"pkg_{draft_id}")
         ]
     ]
     return InlineKeyboardMarkup(inline_keyboard=kb)
@@ -710,6 +750,58 @@ async def handle_rejection(callback: CallbackQuery):
     await callback.answer("Черновик отправлен в брак.", show_alert=True)
     await callback.message.edit_text(f"❌ **СЦЕНАРИЙ ID {draft_id} ОТКЛОНЕН И АРХИВИРОВАН**")
 
+def hashtags_line(pkg: dict) -> str:
+    return " ".join(h if h.startswith("#") else f"#{h}" for h in pkg["hashtags"])
+
+
+def format_package_text(draft_id: int, pkg: dict) -> str:
+    # LLM text goes into Telegram Markdown: drop characters that would break the markup.
+    clean = lambda s: s.translate(str.maketrans("", "", "*_`[]"))
+    lines = [
+        f"📦 **ПАКЕТ ПУБЛИКАЦИИ ID {draft_id}**",
+        "━━━━━━━━━━━━━━━━━━━━━",
+        f"📝 **Подпись:**\n{clean(pkg['caption'])}",
+        f"#️⃣ **Хештеги:**\n{clean(hashtags_line(pkg))}",
+    ]
+    if pkg["cover_note"]:
+        lines.append(f"🖼️ **Обложка:** {clean(pkg['cover_note'])}")
+    if pkg["fact_check"]:
+        checks = "\n".join(
+            f"{'✅' if i['status'] == 'ok' else '⚠️'} {clean(i['claim'])} — {clean(i['note'])}" for i in pkg["fact_check"]
+        )
+        lines.append(f"🔎 **Проверка фактов:**\n{checks}")
+    else:
+        lines.append("🔎 **Проверка фактов:** спорных утверждений не найдено")
+    lines.append("⚙️ **При загрузке:** отметьте «контент создан ИИ», если видео сгенерировано нейросетью.")
+    return "\n\n".join(lines)
+
+
+@router.callback_query(F.data.startswith("pkg_"))
+async def handle_package(callback: CallbackQuery):
+    draft_id = int(callback.data.split("_")[1])
+    conn = get_db_connection()
+    d = conn.execute("SELECT * FROM drafts WHERE id = ?", (draft_id,)).fetchone()
+    conn.close()
+    if not d:
+        await callback.answer("Черновик не найден.", show_alert=True)
+        return
+    await callback.answer()
+
+    if d["publication_package"]:
+        pkg = json.loads(d["publication_package"])
+    else:
+        await callback.message.answer("📦 Готовлю пакет публикации...")
+        pkg = await MultiAgentSwarm().run_publication_package({k: d[k] for k in SCRIPT_FIELDS})
+        if pkg is None:
+            await callback.message.answer("⚠️ OpenAI недоступен (нет OPENAI_API_KEY или ошибка API) — пакет не создан.")
+            return
+        conn = get_db_connection()
+        conn.execute("UPDATE drafts SET publication_package = ? WHERE id = ?", (json.dumps(pkg, ensure_ascii=False), draft_id))
+        conn.commit()
+        conn.close()
+    await callback.message.answer(format_package_text(draft_id, pkg), parse_mode="Markdown")
+
+
 class ReviseDraft(StatesGroup):
     waiting_feedback = State()
 
@@ -762,7 +854,7 @@ async def process_revision_feedback(message: Message, state: FSMContext):
     qa = await swarm.run_qa_check(script)
     conn.execute(
         "UPDATE drafts SET title = ?, hook = ?, body = ?, cta = ?, visual_prompt = ?, audio_prompt = ?, "
-        "status = 'PENDING_USER', revision_feedback = ? WHERE id = ?",
+        "status = 'PENDING_USER', revision_feedback = ?, publication_package = NULL WHERE id = ?",
         (*(script[k] for k in SCRIPT_FIELDS), feedback, draft_id)
     )
     conn.commit()
@@ -782,6 +874,9 @@ async def publish_draft_to_instagram(draft_id: int):
         
     try:
         caption = f"{draft['title']}\n\n{draft['hook']}\n{draft['body']}\n\n{draft['cta']}"
+        if draft["publication_package"]:
+            pkg = json.loads(draft["publication_package"])
+            caption = f"{pkg['caption']}\n\n{hashtags_line(pkg)}"
         video_url = draft["media_url"]
         
         container_id = await InstagramPublishingAgent.create_reels_container(video_url, caption)
