@@ -233,6 +233,18 @@ class MultiAgentSwarm:
                 "audio_prompt": "Acoustic ASMR clicks, tapping on glass bottles, soft ambient water drops and peaceful sound design."
             }
 
+    async def run_revision(self, script_data: dict, feedback: str):
+        """Rewrites a script by user feedback. Returns the new script, or None if the LLM is unavailable."""
+        logger.info("[Script Agent] Переписываем сценарий по замечанию...")
+        result = await self.call_llm_json(
+            "Текущий сценарий:\n" + json.dumps(script_data, ensure_ascii=False) +
+            f"\n\nЗамечание автора: {feedback}\n\nПерепиши сценарий с учётом замечания, сохрани формат.",
+            SCRIPT_SYSTEM_PROMPT,
+        )
+        if result and all(result.get(k) for k in SCRIPT_FIELDS):
+            return {k: str(result[k]) for k in SCRIPT_FIELDS}
+        return None
+
     async def run_qa_check(self, script_data: dict) -> dict:
         logger.info("[QA Agent] Проверка на соответствие бьюти-стандартам и политике Meta...")
         result = await self.call_llm_json(json.dumps(script_data, ensure_ascii=False), QA_SYSTEM_PROMPT)
@@ -557,6 +569,14 @@ def format_draft_text(d, qa_text: str) -> str:
     )
 
 
+def format_qa_text(qa: dict) -> str:
+    verdict = "пройдено" if qa["is_passed"] else "есть замечания"
+    text = f"• Оценка: {qa['score']}/10 ({verdict})"
+    if qa.get("notes"):
+        text += f"\n• {qa['notes'].translate(str.maketrans('', '', '*_`[]'))}"
+    return text
+
+
 # --- COMMAND: /generate (кнопка «✨ Сгенерировать») ---
 class GenerateDraft(StatesGroup):
     waiting_topic = State()
@@ -604,11 +624,7 @@ async def process_generate_topic(message: Message, state: FSMContext):
     conn = get_db_connection()
     d = conn.execute("SELECT * FROM drafts WHERE id = ?", (draft_id,)).fetchone()
     conn.close()
-    verdict = "пройдено" if qa["is_passed"] else "есть замечания"
-    qa_text = f"• Оценка: {qa['score']}/10 ({verdict})"
-    if qa.get("notes"):
-        qa_text += f"\n• {qa['notes'].translate(str.maketrans('', '', '*_`[]'))}"
-    await message.answer(format_draft_text(d, qa_text), reply_markup=get_draft_approval_keyboard(draft_id), parse_mode="Markdown")
+    await message.answer(format_draft_text(d, format_qa_text(qa)), reply_markup=get_draft_approval_keyboard(draft_id), parse_mode="Markdown")
 
 # --- COMMAND: /schedule ---
 @router.message(Command("schedule"))
@@ -690,16 +706,66 @@ async def handle_rejection(callback: CallbackQuery):
     await callback.answer("Черновик отправлен в брак.", show_alert=True)
     await callback.message.edit_text(f"❌ **СЦЕНАРИЙ ID {draft_id} ОТКЛОНЕН И АРХИВИРОВАН**")
 
+class ReviseDraft(StatesGroup):
+    waiting_feedback = State()
+
+
 @router.callback_query(F.data.startswith("rev_"))
-async def handle_revision(callback: CallbackQuery):
+async def handle_revision(callback: CallbackQuery, state: FSMContext):
     draft_id = int(callback.data.split("_")[1])
     conn = get_db_connection()
     conn.execute("UPDATE drafts SET status = 'REVISING' WHERE id = ?", (draft_id,))
     conn.commit()
     conn.close()
-    
-    await callback.answer("Черновик направлен бьюти-сценаристу.", show_alert=True)
-    await callback.message.edit_text(f"🛠️ **СЦЕНАРИЙ ID {draft_id} ОТПРАВЛЕН НА КОРРЕКТИРОВКУ**\n\nАгент-Сценарист переделывает ролик.")
+
+    await state.set_state(ReviseDraft.waiting_feedback)
+    await state.update_data(draft_id=draft_id)
+    await callback.answer()
+    await callback.message.edit_text(
+        f"🛠️ **СЦЕНАРИЙ ID {draft_id} НА КОРРЕКТИРОВКЕ**\n\n"
+        f"Напиши одним сообщением, что исправить. Например: _хук слабый, сделай провокационнее_",
+        parse_mode="Markdown"
+    )
+
+
+@router.message(ReviseDraft.waiting_feedback, F.text)
+async def process_revision_feedback(message: Message, state: FSMContext):
+    draft_id = (await state.get_data())["draft_id"]
+    await state.clear()
+    feedback = message.text.strip()
+
+    conn = get_db_connection()
+    d = conn.execute("SELECT * FROM drafts WHERE id = ?", (draft_id,)).fetchone()
+    conn.close()
+    if not d:
+        await message.reply("❌ Черновик не найден.")
+        return
+
+    await message.reply("✍️ Агент-Сценарист переписывает сценарий...")
+    swarm = MultiAgentSwarm()
+    script = await swarm.run_revision({k: d[k] for k in SCRIPT_FIELDS}, feedback)
+
+    conn = get_db_connection()
+    if script is None:
+        conn.execute("UPDATE drafts SET status = 'PENDING_USER', revision_feedback = ? WHERE id = ?", (feedback, draft_id))
+        conn.commit()
+        conn.close()
+        await message.reply("⚠️ OpenAI недоступен (нет OPENAI_API_KEY или ошибка API) — черновик не изменён, замечание сохранено.")
+        return
+
+    # LLM text goes into Telegram Markdown: drop characters that would break the markup.
+    script = {k: v.translate(str.maketrans("", "", "*_`[]")) for k, v in script.items()}
+    qa = await swarm.run_qa_check(script)
+    conn.execute(
+        "UPDATE drafts SET title = ?, hook = ?, body = ?, cta = ?, visual_prompt = ?, audio_prompt = ?, "
+        "status = 'PENDING_USER', revision_feedback = ? WHERE id = ?",
+        (*(script[k] for k in SCRIPT_FIELDS), feedback, draft_id)
+    )
+    conn.commit()
+    d = conn.execute("SELECT * FROM drafts WHERE id = ?", (draft_id,)).fetchone()
+    conn.close()
+
+    await message.answer(format_draft_text(d, format_qa_text(qa)), reply_markup=get_draft_approval_keyboard(draft_id), parse_mode="Markdown")
 
 
 async def publish_draft_to_instagram(draft_id: int):
