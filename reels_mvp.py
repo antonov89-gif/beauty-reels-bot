@@ -1,4 +1,5 @@
 import os
+import json
 import sqlite3
 import asyncio
 import logging
@@ -14,6 +15,8 @@ logger = logging.getLogger("UGC_Beauty_Orchestrator")
 from aiogram import Bot, Dispatcher, Router, F
 from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, ReplyKeyboardMarkup, KeyboardButton
 from aiogram.filters import Command
+from aiogram.fsm.context import FSMContext
+from aiogram.fsm.state import State, StatesGroup
 
 # =====================================================================
 # CONFIGURATION & API KEYS PLACEHOLDERS
@@ -22,6 +25,34 @@ TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "MOCK_OPENAI_API_KEY")
 INSTAGRAM_BUSINESS_ACCOUNT_ID = os.getenv("INSTAGRAM_BUSINESS_ACCOUNT_ID", "MOCK_INSTAGRAM_ID")
 INSTAGRAM_ACCESS_TOKEN = os.getenv("INSTAGRAM_ACCESS_TOKEN", "MOCK_INSTAGRAM_TOKEN")
+
+# =====================================================================
+# AGENT PROMPTS
+# =====================================================================
+SCRIPT_FIELDS = ("title", "hook", "body", "cta", "visual_prompt", "audio_prompt")
+
+STRATEGY_SYSTEM_PROMPT = (
+    "Ты контент-стратег бьюти-UGC для Instagram Reels (уход за кожей, косметика). "
+    "Превращаешь темы в оригинальные концепты коротких вертикальных роликов 15–30 секунд: "
+    "понятная польза или эстетика, один ролик — одна мысль. Пиши по-русски. Отвечай только JSON."
+)
+
+SCRIPT_SYSTEM_PROMPT = (
+    "Ты сценарист бьюти-UGC Reels. По концепту напиши сценарий ролика 15–30 секунд по-русски. "
+    "Хук должен цеплять в первые 1–3 секунды. Без медицинских обещаний («вылечит», «навсегда уберёт»). "
+    "Ответ строго JSON с ключами: "
+    '"title" (концепт, до 60 символов), "hook" (первая фраза), '
+    '"body" (что происходит в кадре и что говорится), "cta" (призыв к действию), '
+    '"visual_prompt" (ТЗ для съёмки или генерации видео, по-английски), '
+    '"audio_prompt" (звук и музыка, по-английски).'
+)
+
+QA_SYSTEM_PROMPT = (
+    "Ты редактор и модератор бьюти-контента. Проверь сценарий Reels: соответствие правилам Meta "
+    "(нет медицинских обещаний, нет «до/после» с нереалистичным результатом, нет запрещённых утверждений), "
+    "сила хука, ясность призыва к действию. "
+    'Ответ строго JSON: {"is_passed": true/false, "score": число от 1 до 10, "notes": "кратко по-русски"}.'
+)
 
 # =====================================================================
 # DATABASE MANAGEMENT (SQLite)
@@ -109,7 +140,7 @@ def get_db_connection():
 # =====================================================================
 class MultiAgentSwarm:
     @staticmethod
-    async def call_llm(prompt: str, system_message: str) -> str:
+    async def call_llm(prompt: str, system_message: str, json_mode: bool = False) -> str:
         """Integration point with OpenAI API."""
         if OPENAI_API_KEY == "MOCK_OPENAI_API_KEY" or not OPENAI_API_KEY:
             await asyncio.sleep(1)
@@ -128,6 +159,8 @@ class MultiAgentSwarm:
             ],
             "temperature": 0.7
         }
+        if json_mode:
+            data["response_format"] = {"type": "json_object"}
         try:
             async with aiohttp.ClientSession() as session:
                 async with session.post(url, headers=headers, json=data) as resp:
@@ -148,8 +181,26 @@ class MultiAgentSwarm:
             f"Шокирующий разбор ошибок очищения пор (активность у @{username})"
         ]
 
+    async def call_llm_json(self, prompt: str, system_message: str):
+        """Returns parsed JSON from the LLM, or None in mock mode / on a bad response."""
+        raw = await self.call_llm(prompt, system_message, json_mode=True)
+        if raw == "MOCK_RESPONSE":
+            return None
+        try:
+            return json.loads(raw)
+        except json.JSONDecodeError:
+            logger.error(f"LLM returned non-JSON: {raw[:200]}")
+            return None
+
     async def run_content_strategy(self, trends: list) -> list:
         logger.info("[Strategy Agent] Переводим тренды в концепты оригинального бьюти-UGC...")
+        result = await self.call_llm_json(
+            "Темы/тренды:\n" + "\n".join(f"- {t}" for t in trends) +
+            '\n\nПредложи по одному концепту Reels на каждую тему. Ответ JSON: {"concepts": ["...", ...]}',
+            STRATEGY_SYSTEM_PROMPT,
+        )
+        if result and result.get("concepts"):
+            return [str(c) for c in result["concepts"]]
         await asyncio.sleep(1)
         return [
             f"UGC Концепт: Эстетика ASMR-нанесения матовой сыворотки с макролинзой",
@@ -158,8 +209,11 @@ class MultiAgentSwarm:
 
     async def run_script_and_prompts(self, idea_topic: str) -> dict:
         logger.info(f"[Script Agent] Пишем детальный бьюти-сценарий по секундам...")
+        result = await self.call_llm_json(f"Концепт ролика: {idea_topic}", SCRIPT_SYSTEM_PROMPT)
+        if result and all(result.get(k) for k in SCRIPT_FIELDS):
+            return {k: str(result[k]) for k in SCRIPT_FIELDS}
         await asyncio.sleep(1.5)
-        
+
         if "ошибки" in idea_topic.lower():
             return {
                 "title": "3 ошибки ухода, которые губят твою кожу",
@@ -181,6 +235,9 @@ class MultiAgentSwarm:
 
     async def run_qa_check(self, script_data: dict) -> dict:
         logger.info("[QA Agent] Проверка на соответствие бьюти-стандартам и политике Meta...")
+        result = await self.call_llm_json(json.dumps(script_data, ensure_ascii=False), QA_SYSTEM_PROMPT)
+        if result and "is_passed" in result:
+            return {"is_passed": bool(result["is_passed"]), "score": result.get("score"), "notes": str(result.get("notes", ""))}
         await asyncio.sleep(0.5)
         return {"is_passed": True, "score": 9.5}
 
@@ -360,6 +417,9 @@ def get_main_reply_keyboard() -> ReplyKeyboardMarkup:
         [
             KeyboardButton(text="📅 Расписание"),
             KeyboardButton(text="📈 Аналитика")
+        ],
+        [
+            KeyboardButton(text="✨ Сгенерировать")
         ]
     ]
     return ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True, persistent=True)
@@ -474,21 +534,81 @@ async def cmd_drafts(message: Message):
         return
         
     for d in drafts:
-        text = (
-            f"🌸 **БЬЮТИ-UGC ЧЕРНОВИК REELS ID: {d['id']}**\n"
-            f"━━━━━━━━━━━━━━━━━━━━━\n"
-            f"📌 **Концепт:** {d['title']}\n\n"
-            f"🧲 **ХУК (0-3 сек):**\n_{d['hook']}_\n\n"
-            f"📝 **ГОЛОС ЗА КАДРОМ / СУТЬ:**\n{d['body']}\n\n"
-            f"📢 **СТА (Призыв к действию):**\n*{d['cta']}*\n\n"
-            f"🎨 **AI ВИДЕО-ПРОМПТ (ТЗ для съемки):**\n`{d['visual_prompt']}`\n\n"
-            f"🎙️ **AI АУДИО-ПРОМПТ (Sound Design):**\n`{d['audio_prompt']}`\n"
-            f"━━━━━━━━━━━━━━━━━━━━━\n"
-            f"🛡️ **Анализ Шеф-Агента:**\n"
+        qa_text = (
             f"• Безопасность Meta: 10/10 (пройдено)\n"
             f"• Риски: Нет медицинских обещаний. Текст нативный."
         )
-        await message.answer(text, reply_markup=get_draft_approval_keyboard(d['id']), parse_mode="Markdown")
+        await message.answer(format_draft_text(d, qa_text), reply_markup=get_draft_approval_keyboard(d['id']), parse_mode="Markdown")
+
+
+def format_draft_text(d, qa_text: str) -> str:
+    return (
+        f"🌸 **БЬЮТИ-UGC ЧЕРНОВИК REELS ID: {d['id']}**\n"
+        f"━━━━━━━━━━━━━━━━━━━━━\n"
+        f"📌 **Концепт:** {d['title']}\n\n"
+        f"🧲 **ХУК (0-3 сек):**\n_{d['hook']}_\n\n"
+        f"📝 **ГОЛОС ЗА КАДРОМ / СУТЬ:**\n{d['body']}\n\n"
+        f"📢 **СТА (Призыв к действию):**\n*{d['cta']}*\n\n"
+        f"🎨 **AI ВИДЕО-ПРОМПТ (ТЗ для съемки):**\n`{d['visual_prompt']}`\n\n"
+        f"🎙️ **AI АУДИО-ПРОМПТ (Sound Design):**\n`{d['audio_prompt']}`\n"
+        f"━━━━━━━━━━━━━━━━━━━━━\n"
+        f"🛡️ **Анализ Шеф-Агента:**\n"
+        f"{qa_text}"
+    )
+
+
+# --- COMMAND: /generate (кнопка «✨ Сгенерировать») ---
+class GenerateDraft(StatesGroup):
+    waiting_topic = State()
+
+
+async def generate_draft(topic: str):
+    """Strategy → Script → QA. Saves the idea and a PENDING_USER draft; returns (draft_id, qa)."""
+    swarm = MultiAgentSwarm()
+    concept = (await swarm.run_content_strategy([topic]))[0]
+    script = await swarm.run_script_and_prompts(concept)
+    # LLM text goes into Telegram Markdown: drop characters that would break the markup.
+    script = {k: v.translate(str.maketrans("", "", "*_`[]")) for k, v in script.items()}
+    qa = await swarm.run_qa_check(script)
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO ideas (topic, created_at, status) VALUES (?, datetime('now'), 'GENERATED')", (topic,))
+    idea_id = cursor.lastrowid
+    cursor.execute("""
+        INSERT INTO drafts (
+            idea_id, title, hook, body, cta, visual_prompt, audio_prompt, status, created_at, media_url
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, 'PENDING_USER', datetime('now'), 'https://pub-static.arena.ai/assets/placeholder_video.mp4')
+    """, (idea_id, *(script[k] for k in SCRIPT_FIELDS)))
+    draft_id = cursor.lastrowid
+    conn.commit()
+    conn.close()
+    return draft_id, qa
+
+
+@router.message(Command("generate"))
+@router.message(F.text.lower().in_({"сгенерировать", "генерация", "✨ сгенерировать"}))
+async def cmd_generate(message: Message, state: FSMContext):
+    await state.set_state(GenerateDraft.waiting_topic)
+    await message.reply("✨ Напиши тему ролика одним сообщением.\nНапример: _сыворотка с ниацинамидом для жирной кожи_", parse_mode="Markdown")
+
+
+@router.message(GenerateDraft.waiting_topic, F.text)
+async def process_generate_topic(message: Message, state: FSMContext):
+    await state.clear()
+    topic = message.text.strip()
+    await message.reply("🤖 Агенты работают: стратегия → сценарий → проверка...")
+
+    draft_id, qa = await generate_draft(topic)
+
+    conn = get_db_connection()
+    d = conn.execute("SELECT * FROM drafts WHERE id = ?", (draft_id,)).fetchone()
+    conn.close()
+    verdict = "пройдено" if qa["is_passed"] else "есть замечания"
+    qa_text = f"• Оценка: {qa['score']}/10 ({verdict})"
+    if qa.get("notes"):
+        qa_text += f"\n• {qa['notes'].translate(str.maketrans('', '', '*_`[]'))}"
+    await message.answer(format_draft_text(d, qa_text), reply_markup=get_draft_approval_keyboard(draft_id), parse_mode="Markdown")
 
 # --- COMMAND: /schedule ---
 @router.message(Command("schedule"))

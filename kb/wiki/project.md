@@ -26,7 +26,14 @@ SQLite `reels_automation.db`, таблицы: `competitors`, `ideas`, `drafts` (
 2. **Mock-режим Instagram** — проверки сравнивали токен с `"MOCK_ACCESS_TOKEN"`, а дефолт `"MOCK_INSTAGRAM_TOKEN"`. Теперь без токена публикация симулируется.
 3. **Ожидание обработки видео** — добавлен `InstagramPublishingAgent.wait_until_ready()`: опрос статуса контейнера каждые 10 с, до 5 минут.
 
+## Генерация черновиков (2026-10-04)
+
+Кнопка «✨ Сгенерировать» (или `/generate`) → бот спрашивает тему → `generate_draft()`: Strategy → Script → QA через OpenAI (gpt-4o, JSON-режим) → черновик `PENDING_USER` с кнопками одобрения.
+Промпты агентов — константы `*_SYSTEM_PROMPT` в начале `reels_mvp.py`.
+Без `OPENAI_API_KEY` или при ошибке/не-JSON ответе агенты молча возвращают старые шаблоны (тема пользователя игнорируется).
+
 ## Осталось
 
-- Агенты (`MultiAgentSwarm`) — заглушки с захардкоженными текстами, `call_llm` не используется.
+- Агент конкурентов (`run_competitor_analysis`) — заглушка; план: Instagram Graph API Business Discovery.
+- Кнопка «🛠️ На доработку» только меняет статус, сценарий не переписывается.
 - `seed_beauty_ugc_database()` при каждом старте удаляет все черновики.
