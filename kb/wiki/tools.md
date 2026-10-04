@@ -6,6 +6,7 @@
 - **ECC (Everything Claude Code)** `ecc@ecc` и **claude-code-setup** — плагины, ставились в облачный контейнер (scope: user), **не сохраняются** между сессиями. Локально: `/plugin marketplace add https://github.com/affaan-m/ECC`, `/plugin install ecc@ecc`; `claude-code-setup` — из официального каталога Anthropic.
 - **Context7 MCP** — свежая документация библиотек (aiogram, OpenAI, Instagram Graph API). Подключён в `.mcp.json` (remote, `https://mcp.context7.com/mcp`). В облаке нужен домен `mcp.context7.com` в Allowed domains окружения.
 - **Субагенты из Agency Agents** (github.com/msitarzewski/agency-agents, MIT) в `.claude/agents/`: Instagram Curator, TikTok Strategist, Short Video Editing Coach, Content Creator. Остальные ~225 агентов библиотеки не ставим — шум в выборе агентов. Их роли пригодятся и как системные промпты для `call_llm` в боте.
+- **Правила Карпати** (github.com/forrestchang/andrej-karpathy-skills) — добавлены в `CLAUDE.md`: думать до кода, простота, точечные правки, проверка результата.
 - **База знаний `kb/`** (этот wiki) — паттерн raw / wiki / output, совместим с Obsidian.
 
 ## Отложено / не ставим
