@@ -130,7 +130,7 @@ _fonts = {}
 
 def font(size):
     if size not in _fonts:
-        _fonts[size] = ImageFont.truetype(FONT_PATH, int(size * S))
+        _fonts[size] = ImageFont.truetype(FONT_PATH, max(1, int(size * S)))
     return _fonts[size]
 
 
@@ -488,6 +488,14 @@ VW, VH = 1080, 1920
 V_CROP = (160, 1760)  # part of the wide scene kept in vertical mode
 V_BAND_Y = 560
 TITLE = "THE 5-MINUTE RULE"
+SLUG = "five_minute_rule"
+
+
+def load_episode(name):
+    """Swap in SCRIPT/SCENES/TITLE/SLUG from episodes/<name>.py (before forking workers)."""
+    import importlib
+    ep = importlib.import_module(f"episodes.{name}")
+    globals().update(SCRIPT=ep.SCRIPT, SCENES=ep.SCENES, TITLE=ep.TITLE, SLUG=ep.SLUG)
 
 
 def subtitle_words(line, t, voice_dur):
@@ -615,7 +623,10 @@ def main():
     ap.add_argument("--only", type=int, help="render a preview still of one scene (1-10)")
     ap.add_argument("--t", type=float, default=2.0, help="time (s) of the preview still")
     ap.add_argument("--vertical", action="store_true", help="9:16 Shorts/Reels version with subtitles")
+    ap.add_argument("--episode", help="episode module in episodes/ (default: built-in 5-minute rule)")
     a = ap.parse_args()
+    if a.episode:
+        load_episode(a.episode)
 
     os.makedirs(OUT, exist_ok=True)
     work = os.path.join(OUT, "work")
@@ -625,6 +636,7 @@ def main():
         render_frame(job + ((3.0, 0.15) if a.vertical else ()))
         return
 
+    work = os.path.join(OUT, f"work_{SLUG}")
     shutil.rmtree(work, ignore_errors=True)
     os.makedirs(work)
     PAD = 0.7
@@ -670,7 +682,7 @@ def main():
     music_path = os.path.join(work, "music.wav")
     music(music_path, total)
 
-    final = os.path.join(OUT, "five_minute_rule_shorts.mp4" if a.vertical else "five_minute_rule.mp4")
+    final = os.path.join(OUT, f"{SLUG}_shorts.mp4" if a.vertical else f"{SLUG}.mp4")
     subprocess.run([
         "ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", os.path.join(work, "f%05d.jpg"),
         "-i", voice_path, "-i", music_path, "-filter_complex",

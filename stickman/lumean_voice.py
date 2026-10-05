@@ -4,7 +4,7 @@ The whole script goes in one order (Lumean bills at least 500 chars per order),
 with silent {{pause}} markers between scenes; the result is cut at those pauses
 into scene01.wav ... scene10.wav for `make_video.py --voice-dir`.
 
-Usage:  LUMEAN_API_KEY=... python3 lumean_voice.py [--template <uuid>] [--out voice_lumean]
+Usage:  LUMEAN_API_KEY=... python3 lumean_voice.py [--episode name] [--template <uuid>] [--out dir]
 """
 import argparse
 import json
@@ -14,7 +14,7 @@ import subprocess
 import time
 import urllib.request
 
-from make_video import SCRIPT
+import make_video
 
 BASE = "https://api.lumean.app/api/public"
 PAUSE = 1.2
@@ -36,9 +36,14 @@ def api(method, path, body=None):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--template", help="TTS template id (default: first elevenlabs template)")
-    ap.add_argument("--out", default=os.path.join(os.path.dirname(os.path.abspath(__file__)), "out", "voice_lumean"))
+    ap.add_argument("--out", help="output folder (default: out/voice_<slug>)")
+    ap.add_argument("--episode", help="episode module in episodes/ (default: 5-minute rule)")
     a = ap.parse_args()
+    if a.episode:
+        make_video.load_episode(a.episode)
+    SCRIPT = make_video.SCRIPT
 
+    a.out = a.out or os.path.join(make_video.OUT, f"voice_{make_video.SLUG}")
     tpl = a.template or next(t["id"] for t in api("GET", "/templates") if t["service_key"] == "elevenlabs")
     text = f" {{{{pause={PAUSE}}}}} ".join(line for line, _ in SCRIPT)
     cost = api("POST", "/orders/chunks/preview", {"template_id": tpl, "input_text": text})
