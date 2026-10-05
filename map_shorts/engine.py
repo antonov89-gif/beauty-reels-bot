@@ -39,12 +39,8 @@ YTOP = my(LAT1)
 TM = json.load(open("timing.json"))
 D, TW = TM["D"], TM["T"]
 LEAD = 0.35
-starts = []
-t = LEAD
-for i, d in enumerate(D):
-    starts.append(t)
-    t += d + (0.08 if (i + 1) in CONT else 0.22)
-TOTAL = t + 0.9
+starts = [LEAD + s for s in TM["starts"]]
+TOTAL = starts[-1] + D[-1] + 1.2
 NF = int(TOTAL * FPS)
 
 
@@ -104,18 +100,26 @@ for sr in _SHP.iterShapeRecords():
     if rings:
         COUNTRY[name] = rings
 
+LABELPT = {"Italy": ("ITALY", 11.2, 44.0), "France": ("FRANCE", 2.4, 46.9), "Germany": ("GERMANY", 10.3, 51.1),
+           "Libya": ("LIBYA", 17.5, 27.8), "Egypt": ("EGYPT", 29.6, 26.6), "Greece": ("GREECE", 22.2, 39.6),
+           "Albania": ("ALBANIA", 20.05, 41.2), "Russia": ("SOVIET UNION", 40.0, 55.8)}
+
 SOVIET = ["Russia", "Ukraine", "Belarus", "Lithuania", "Latvia", "Estonia", "Moldova", "Georgia",
           "Armenia", "Azerbaijan", "Kazakhstan"]
 GERMANY = ["Germany", "Austria"]
 
 # ---------------------------------------------------------------- camera / map
+LEVELS = {  # name: (lon0, lat1(top), ppd, file)
+    "hi": (-15, 62, 240, "tex_hi.npy"),
+    "mid": (-25, 70, 120, "tex_mid.npy"),
+    "lo": (-25, 70, 30, "tex_lo.npy"),
+}
 _TEX = {}
 
 
 def tex(level):
     if level not in _TEX:
-        a = np.load("tex_hi.npy" if level == "hi" else "tex_lo.npy")
-        _TEX[level] = Image.fromarray(a)
+        _TEX[level] = np.load(LEVELS[level][3], mmap_mode="r")
     return _TEX[level]
 
 
@@ -137,12 +141,21 @@ class Cam:
         return np.stack([x, y], 1)
 
     def render(self):
-        level = "hi" if self.span < 30 else "lo"
-        ppd = TPPD if level == "hi" else TPPD / 4
         hw, hh = self.span / 2, H / 2 / self.ppd
-        box = ((self.lon - hw - LON0) * ppd, (YTOP - (self.Y + hh)) * ppd,
-               (self.lon + hw - LON0) * ppd, (YTOP - (self.Y - hh)) * ppd)
-        return tex(level).resize((W, H), Image.BILINEAR, box=box)
+        level = "lo" if self.span > 34 else "mid"
+        if self.span <= 14 and self.lon - hw > -15 and self.lon + hw < 50 \
+                and self.Y + hh < my(62) and self.Y - hh > my(22):
+            level = "hi"
+        lon0, lat1, ppd, _ = LEVELS[level]
+        T = tex(level)
+        top = my(lat1)
+        bx0, by0 = (self.lon - hw - lon0) * ppd, (top - (self.Y + hh)) * ppd
+        bx1, by1 = (self.lon + hw - lon0) * ppd, (top - (self.Y - hh)) * ppd
+        ix0, iy0 = max(0, int(bx0) - 1), max(0, int(by0) - 1)
+        ix1, iy1 = min(T.shape[1], int(bx1) + 2), min(T.shape[0], int(by1) + 2)
+        crop = Image.fromarray(np.ascontiguousarray(T[iy0:iy1, ix0:ix1]))
+        return crop.resize((W, H), Image.BICUBIC if self.span < 10 else Image.BILINEAR,
+                           box=(bx0 - ix0, by0 - iy0, bx1 - ix0, by1 - iy0))
 
 
 def lerp(a, b, k):
@@ -243,17 +256,23 @@ def arrow(img, pts, color, prog, width=22):
             break
         out.append(b)
         acc += s
+    sh = Image.new("RGBA", (W // 2, H // 2), (0, 0, 0, 0))
+    ds = ImageDraw.Draw(sh)
+    ds.line([(x / 2 + 6, y / 2 + 8) for x, y in out], fill=(0, 0, 0, 120), width=int(width * 0.75), joint="curve")
+    img.alpha_composite(sh.filter(ImageFilter.GaussianBlur(4)).resize((W, H), Image.BILINEAR))
     d = ImageDraw.Draw(img)
-    d.line(out, fill=BLK + (255,), width=width + 10, joint="curve")
+    (ax, ay), (bx, by) = out[-2], out[-1]
+    ang = math.atan2(by - ay, bx - ax)
+    hs = width * 2.0
+    tip = (bx + math.cos(ang) * hs * 0.7, by + math.sin(ang) * hs * 0.7)
+    l = (bx + math.cos(ang + 2.35) * hs, by + math.sin(ang + 2.35) * hs)
+    r = (bx + math.cos(ang - 2.35) * hs, by + math.sin(ang - 2.35) * hs)
+    d.line(out, fill=WHT + (255,), width=width + 12, joint="curve")
+    d.polygon([tip, l, r], fill=WHT + (255,), outline=WHT + (255,), width=12)
     d.line(out, fill=color + (255,), width=width, joint="curve")
-    if len(out) >= 2:
-        (ax, ay), (bx, by) = out[-2], out[-1]
-        ang = math.atan2(by - ay, bx - ax)
-        hs = width * 2.1
-        tip = (bx + math.cos(ang) * hs * 0.6, by + math.sin(ang) * hs * 0.6)
-        l = (bx + math.cos(ang + 2.4) * hs, by + math.sin(ang + 2.4) * hs)
-        r = (bx + math.cos(ang - 2.4) * hs, by + math.sin(ang - 2.4) * hs)
-        d.polygon([tip, l, r], fill=color + (255,), outline=BLK + (255,), width=5)
+    d.polygon([tip, l, r], fill=color + (255,))
+    lite = tuple(min(255, c + 70) for c in color)
+    d.line(out, fill=lite + (255,), width=max(2, width // 4), joint="curve")
 
 
 def big(img, txt, t, t0, y=520, size=150, color=YEL, sub=None):
@@ -273,16 +292,15 @@ def big(img, txt, t, t0, y=520, size=150, color=YEL, sub=None):
 
 
 # ---------------------------------------------------------------- scenes
-def sc(lines, cam, fx):
-    return {"lines": lines, "cam": cam, "fx": fx}
+def sc(lines, cam, fx, **kw):
+    return dict(lines=lines, cam=cam, fx=fx, **kw)
 
 
 def S_list():
     S = []
     S.append(sc((0, 0), (22, 49, 30, 30, 52, 26), [
         ("ehl", SOVIET, RED, WT(0, "Soviets"), 0.55),
-        ("badge", 40, 57, "THE SOVIETS", RED, WT(0, "Soviets"), "🇷🇺"),
-        ("emoji", 40, 52, "❌", 170, WT(0, "Soviets") + 0.5),
+        ("emoji", 40, 52.5, "❌", 170, WT(0, "Soviets") + 0.35),
         ("big", "HITLER'S HEADACHE", WT(0, "biggest"), 300, 92, WHT),
     ]))
     S.append(sc((1, 1), (-10, 46, 28, -14, 45, 30), [
@@ -380,7 +398,7 @@ def S_list():
         ("hl", ["Albania"], (120, 220, 120), 0, 0.45),
         ("arrow", [(21.6, 39.5), (20.9, 40.0), (20.1, 40.8)], BLU, WT(14, "pushed"), 0.9, 30),
         ("arrow", [(22.0, 40.2), (21.2, 40.7), (20.4, 41.3)], BLU, WT(14, "pushed") + 0.2, 0.9, 30),
-        ("emoji", 19.9, 41.2, "🏃", 150, WT(14, "Albania")),
+        ("emoji", 19.75, 41.85, "🏃", 150, WT(14, "Albania")),
         ("shake", WT(14, "pushed")),
     ]))
     S.append(sc((15, 15), (16, 46, 20, 19, 44, 18), [
@@ -399,15 +417,18 @@ def S_list():
         ("big", "DELAYED", WT(16, "weeks"), 520, 150),
         ("emoji", 30, 43.0, "⏳", 160, WT(16, "weeks")),
     ]))
-    S.append(sc((17, 17), (37.6, 55.75, 12, 37.6, 55.75, 6), [
-        ("dark", 0.35, WT(17, "leaving")),
+    S.append(sc((17, 17), (35.5, 55.6, 12, 37.2, 55.7, 8), [
+        ("frost", 0.22, WT(17, "leaving")),
         ("snow", WT(17, "winter") - 0.6),
-        ("label", 37.62, 55.75, "MOSCOW", WT(17, "Moscow") - 0.4, -1),
+        ("label", 37.62, 55.75, "MOSCOW", WT(17, "leaving"), -1),
+        ("arrow", [(31.0, 56.6), (34.0, 56.2), (36.6, 55.9)], (180, 40, 40), WT(17, "leaving"), 0.9, 30),
+        ("arrow", [(31.5, 54.3), (34.4, 54.9), (36.8, 55.5)], (180, 40, 40), WT(17, "leaving") + 0.2, 0.9, 30),
+        ("badge", 33.0, 57.3, "GERMAN ARMY", (180, 40, 40), WT(17, "German"), "🇩🇪", 44),
         ("emoji", 37.6, 54.9, "❄️", 200, WT(17, "winter")),
         ("big", "WINTER", WT(17, "winter"), 420, 190, WHT),
-    ]))
+    ], winter=WT(17, "winter") - 0.6))
     S.append(sc((18, 18), (15, 47, 22, 13, 44, 17), [
-        ("hl", GERMANY, (180, 40, 40), 0, 0.45),
+        ("hl", GERMANY, (180, 40, 40), 0, 0.45, False),
         ("hl", ["Italy"], GRN, WT(18, "ally"), 0.6),
         ("emoji", 13.0, 42.0, "😱", 170, WT(18, "nightmare")),
         ("big", "BIGGEST NIGHTMARE", WT(18, "nightmare"), 400, 110),
@@ -433,7 +454,8 @@ def scene_at(t):
 
 
 # ---------------------------------------------------------------- per-frame
-SNOW = np.random.default_rng(3).uniform(0, 1, (220, 4))
+SNOW = np.random.default_rng(3).uniform(0, 1, (320, 4))
+GRAIN = np.random.default_rng(9).normal(0, 4.0, (H + 256, W + 256, 1)).astype(np.float32)
 
 
 def draw_borders(ov, cam):
@@ -463,10 +485,15 @@ def draw_hl(img, cam, names, color, alpha, pulse=0.0):
     layer = Image.new("RGBA", (W, H), color + (0,))
     layer.putalpha(m)
     img.alpha_composite(layer)
+    g = Image.new("RGBA", (W // 4, H // 4), (0, 0, 0, 0))
+    dg = ImageDraw.Draw(g)
+    for e in edges:
+        dg.line([(x / 4, y / 4) for x, y in e], fill=color + (int(200 * min(1, a / 0.5)),), width=4)
+    img.alpha_composite(g.filter(ImageFilter.GaussianBlur(3)).resize((W, H), Image.BILINEAR))
     d = ImageDraw.Draw(img)
     for e in edges:
-        d.line(e, fill=color + (255,), width=6, joint="curve")
-        d.line(e, fill=(255, 255, 255, 200), width=2, joint="curve")
+        d.line(e, fill=color + (255,), width=5, joint="curve")
+        d.line(e, fill=(255, 255, 255, 220), width=2, joint="curve")
 
 
 def caption(img, t):
@@ -480,19 +507,28 @@ def caption(img, t):
             c0 = cur // 3 * 3
             chunk = words[c0:c0 + 3]
             f = font(POPX, 78)
-            gap = f.getlength(" ")
+            gap = f.getlength(" ") * 1.7
             ws = [f.getlength(w.upper()) for w in chunk]
             tot = sum(ws) + gap * (len(chunk) - 1)
             if tot > W - 70:
                 f = font(POPX, 78 * (W - 70) / tot)
-                gap = f.getlength(" ")
+                gap = f.getlength(" ") * 1.7
                 ws = [f.getlength(w.upper()) for w in chunk]
                 tot = sum(ws) + gap * (len(chunk) - 1)
             x = (W - tot) / 2
             d = ImageDraw.Draw(img)
+            since = t - (starts[i] + TW[i][cur])
             for j, (w, ww) in enumerate(zip(chunk, ws)):
-                col = YEL if c0 + j == cur else WHT
-                d.text((x, 1430), w.upper(), font=f, fill=col, anchor="lm", stroke_width=9, stroke_fill=BLK)
+                if c0 + j == cur:
+                    sc_ = 1.0 + 0.06 * max(0.0, 1 - since / 0.14)
+                    fz = font(POPX, f.size * sc_)
+                    wz = fz.getlength(w.upper())
+                    d.text((x + ww / 2 - wz / 2 + 4, 1436), w.upper(), font=fz, fill=(0, 0, 0, 160), anchor="lm")
+                    d.text((x + ww / 2 - wz / 2, 1430), w.upper(), font=fz, fill=YEL, anchor="lm", stroke_width=9,
+                           stroke_fill=BLK)
+                else:
+                    d.text((x + 4, 1436), w.upper(), font=f, fill=(0, 0, 0, 160), anchor="lm")
+                    d.text((x, 1430), w.upper(), font=f, fill=WHT, anchor="lm", stroke_width=9, stroke_fill=BLK)
                 x += ww + gap
             return
 
@@ -514,14 +550,33 @@ def frame(fi):
     draw_borders(ov, cam)
     img.alpha_composite(ov)
     # pass 1: map layers
+    names = []
     for f in s["fx"]:
         kind = f[0]
         if kind in ("hl", "ehl") and t >= f[3]:
             a = f[4] * ease((t - f[3]) / 0.25)
             draw_hl(img, cam, f[1], f[2], a, math.sin(t * 6) if kind == "ehl" else 0)
+            lab = LABELPT.get(f[1][0])
+            if lab and (len(f) < 6 or f[5]):
+                names.append((lab, ease((t - f[3] - 0.1) / 0.3)))
+        elif kind == "frost" and t >= f[2]:
+            a = f[1] * ease((t - f[2]) / 0.8)
+            img.alpha_composite(Image.new("RGBA", (W, H), (225, 238, 255, int(255 * a))))
         elif kind == "dark" and t >= f[2]:
             a = f[1] * ease((t - f[2]) / 0.5)
             img.alpha_composite(Image.new("RGBA", (W, H), (5, 10, 30, int(255 * a))))
+    for (txt, lo, la), k2 in names:
+        x, y = cam.xy(lo, la)
+        if -200 < x < W + 200 and 150 < y < 1350 and k2 > 0:
+            sz = max(34, min(70, 2.2 * cam.ppd))
+            f2 = font(POPX, sz)
+            sp = " ".join(txt)
+            lw = f2.getlength(sp) / 2
+            x = min(W - 40 - lw, max(40 + lw, x))
+            dl = ImageDraw.Draw(img)
+            dl.text((x + 3, y + 4), sp, font=f2, fill=(0, 0, 0, int(140 * k2)), anchor="mm")
+            dl.text((x, y), sp, font=f2, fill=(255, 255, 255, int(235 * k2)), anchor="mm",
+                    stroke_width=2, stroke_fill=(0, 0, 0, int(120 * k2)))
     for f in s["fx"]:
         kind = f[0]
         if kind == "arrow" and t >= f[3]:
@@ -569,13 +624,19 @@ def frame(fi):
     for ct in CUTS:
         if 0 <= t - ct < 0.12:
             a = 1 - (t - ct) / 0.12
-            img.alpha_composite(Image.new("RGBA", (W, H), (255, 255, 255, int(110 * a))))
+            img.alpha_composite(Image.new("RGBA", (W, H), (255, 255, 255, int(70 * a))))
             r, g, b, al = img.split()
             sh = int(10 * a) + 1
             img = Image.merge("RGBA", (r.transform(img.size, Image.AFFINE, (1, 0, -sh, 0, 1, 0)), g,
                                        b.transform(img.size, Image.AFFINE, (1, 0, sh, 0, 1, 0)), al))
     caption(img, t)
     rgb = np.asarray(img.convert("RGB")).astype(np.float32) * vignette()
+    if s.get("winter"):
+        wk = ease((t - s["winter"]) / 0.8)
+        gray = rgb.mean(2, keepdims=True)
+        rgb = rgb * (1 - 0.7 * wk) + (gray * np.array([0.95, 1.05, 1.25]) + 25) * 0.7 * wk
+    gy, gx = (fi * 37) % 256, (fi * 91) % 256
+    rgb += GRAIN[gy:gy + H, gx:gx + W]
     out = Image.fromarray(np.clip(rgb, 0, 255).astype(np.uint8))
     if shake > 0:
         dx = int(math.sin(t * 90) * 18 * shake)

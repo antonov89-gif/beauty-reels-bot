@@ -1,6 +1,6 @@
 # Shorts publication — Italy, Hitler's Worst Ally
 
-**File:** italy_ww2_shorts.mp4 (1080×1920, ~75 s) · **Subtitles:** italy_ww2.srt (EN)
+**File:** italy_ww2_shorts_v2.mp4 (1080×1920, ~71 s) · **Subtitles:** italy_ww2.srt (EN)
 
 ## Title
 Hitler's Worst Ally Was His Own Partner 🇮🇹
@@ -28,7 +28,7 @@ Frame with "ITALY" slam over the green-highlighted peninsula (≈ 0:07–0:08), 
 
 ## Upload fields
 - Category: Education · Audience: not made for kids
-- Altered or synthetic content: **Yes** (AI voiceover)
+- Altered or synthetic content: **Yes** (AI voiceover, ElevenLabs "David" via Lumean)
 - Pinned comment: Which was Italy's worst blunder — France, Egypt or Greece? 👇
 
 ## Fact check

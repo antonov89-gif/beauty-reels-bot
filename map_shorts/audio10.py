@@ -63,13 +63,11 @@ for s in E.S:
         elif k == "snow": add(wind(4.5), f[1], 1.0)
 sf.write("sfx.wav", sfx, SR)
 
-# voice track
-voice = np.zeros(N)
-for i in range(len(E.LINES)):
-    a, sr = sf.read(f"voice/l{i:02d}.wav")
-    if sr != SR:
-        a = np.interp(np.arange(int(len(a) * SR / sr)) * sr / SR, np.arange(len(a)), a)
-    add_i = int(E.starts[i] * SR); e = min(N, add_i + len(a)); voice[add_i:e] += a[: e - add_i]
+# voice track: one Lumean take placed at LEAD
+import subprocess as sp
+sp.run(["ffmpeg","-y","-loglevel","error","-i","lumean/result.mp3","-ar",str(SR),"-ac","1","voice_raw.wav"],check=True)
+a, sr = sf.read("voice_raw.wav")
+voice = np.zeros(N); i0 = int(E.LEAD * SR); e = min(N, i0 + len(a)); voice[i0:e] = a[: e - i0]
 sf.write("voice.wav", voice, SR)
 
 # music bed: minor drone + pulse, A minor -> F -> C -> G progression, 100 bpm
