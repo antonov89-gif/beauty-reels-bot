@@ -19,7 +19,12 @@ from aiogram.filters import Command
 # CONFIGURATION & API KEYS PLACEHOLDERS
 # =====================================================================
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "MOCK_OPENAI_API_KEY")
+# LLM: any OpenAI-compatible endpoint (tooken.club by default if TOOKEN_API_KEY is set).
+# Set TOOKEN_BASE_URL to the base URL from the tooken.club dashboard (e.g. https://.../v1).
+TOOKEN_API_KEY = os.getenv("TOOKEN_API_KEY")
+OPENAI_API_KEY = TOOKEN_API_KEY or os.getenv("OPENAI_API_KEY", "MOCK_OPENAI_API_KEY")
+LLM_BASE_URL = (os.getenv("TOOKEN_BASE_URL") if TOOKEN_API_KEY else None) or os.getenv("LLM_BASE_URL", "https://api.openai.com/v1")
+LLM_MODEL = os.getenv("LLM_MODEL", "gpt-4o")
 INSTAGRAM_BUSINESS_ACCOUNT_ID = os.getenv("INSTAGRAM_BUSINESS_ACCOUNT_ID", "MOCK_INSTAGRAM_ID")
 INSTAGRAM_ACCESS_TOKEN = os.getenv("INSTAGRAM_ACCESS_TOKEN", "MOCK_INSTAGRAM_TOKEN")
 
@@ -115,13 +120,13 @@ class MultiAgentSwarm:
             await asyncio.sleep(1)
             return "MOCK_RESPONSE"
         
-        url = "https://api.openai.com/v1/chat/completions"
+        url = f"{LLM_BASE_URL.rstrip('/')}/chat/completions"
         headers = {
             "Content-Type": "application/json",
             "Authorization": f"Bearer {OPENAI_API_KEY}"
         }
         data = {
-            "model": "gpt-4o",
+            "model": LLM_MODEL,
             "messages": [
                 {"role": "system", "content": system_message},
                 {"role": "user", "content": prompt}
