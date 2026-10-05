@@ -565,6 +565,56 @@ def overlays(img, s, t):
             text_c(ImageDraw.Draw(img), (W / 2, 385), "3,700,000", 96, INK, "Bold")
 
 
+def build_cues(max_words=6):
+    """Phrase-level cues from word timings, split evenly so no line ends with a lone word."""
+    cues = []
+    for i, line in enumerate(LINES):
+        words = line.split()
+        n = math.ceil(len(words) / max_words)
+        size = len(words) / n
+        bounds = [round(size * k) for k in range(n + 1)]
+        for j, k in zip(bounds[:-1], bounds[1:]):
+            t0 = starts[i] + TW[i][j] - 0.08
+            t1 = starts[i] + TW[i][k] - 0.05 if k < len(words) else END(i) + 0.25
+            cues.append((t0, t1, " ".join(words[j:k])))
+    return cues
+
+
+CUES = build_cues()
+
+
+def wrap(txt, f, maxw):
+    lines, cur = [], ""
+    for w in txt.split():
+        trial = (cur + " " + w).strip()
+        if f.getlength(trial) <= maxw or not cur:
+            cur = trial
+        else:
+            lines.append(cur)
+            cur = w
+    lines.append(cur)
+    return lines
+
+
+def subtitles(img, t):
+    for t0, t1, txt in CUES:
+        if t0 <= t < t1:
+            f = font(46, "SemiBold")
+            lines = wrap(txt, f, 860)
+            lh = 60
+            y0 = 1500 - lh * (len(lines) - 1)
+            lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            d = ImageDraw.Draw(lay)
+            for j, ln in enumerate(lines):
+                y = y0 + j * lh
+                w_ = f.getlength(ln)
+                d.rounded_rectangle((W / 2 - w_ / 2 - 18, y - 30, W / 2 + w_ / 2 + 18, y + 30), radius=14,
+                                    fill=(0, 0, 0, 120))
+                d.text((W / 2, y), ln, font=f, fill=(255, 255, 255, 245), anchor="mm")
+            img.alpha_composite(lay)
+            return
+
+
 def frame(fi):
     t = fi / FPS
     s = shot_at(t)
@@ -581,6 +631,7 @@ def frame(fi):
         img = info_bg()
         INFO[s["draw"]](img, t, s)
     overlays(img, s, t)
+    subtitles(img, t)
     return img.convert("RGB")
 
 
