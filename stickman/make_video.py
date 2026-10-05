@@ -354,7 +354,7 @@ def sc3(p, t, T):
               face="neutral", blink=blink_at(t), look=(4, 18),
               right_hand_item=lambda pp, hx, hy: phone(pp, hx - 30, hy - 50, t * 140))
     clock(p, 1560, 330, 120, t * 240)
-    handwrite(p, 1590, 640, SCRIPT[2][1], 70, t - 0.6, cps=12)
+    handwrite(p, 1450, 560, SCRIPT[2][1], 70, t - 0.6, cps=12)
     if t > 1.2:
         z = (t * 1.5) % 3
         for k in range(int(z) + 1):
@@ -482,17 +482,82 @@ SCENES = [sc1, sc2, sc3, sc4, sc5, sc6, sc7, sc8, sc9, sc10]
 # ---------------------------------------------------------------------------
 # Rendering
 # ---------------------------------------------------------------------------
+# Vertical (Shorts) layout: the centre of the wide scene sits in a band in the
+# middle of a 1080x1920 frame, with a title above and word-by-word subtitles below.
+VW, VH = 1080, 1920
+V_CROP = (160, 1760)  # part of the wide scene kept in vertical mode
+V_BAND_Y = 560
+TITLE = "THE 5-MINUTE RULE"
+
+
+def subtitle_words(line, t, voice_dur):
+    """Words of the current 3-word chunk and index of the spoken one.
+
+    Timing is spread over the line by word length, so it works with any voice."""
+    words = line.split()
+    wts = [len(w) + 2 for w in words]
+    tot = sum(wts)
+    if t < 0 or t > voice_dur + 0.4:
+        return [], -1
+    acc, cur = 0.0, len(words) - 1
+    for i, w in enumerate(wts):
+        acc += w / tot * voice_dur
+        if t < acc:
+            cur = i
+            break
+    c0 = cur // 3 * 3
+    return words[c0:c0 + 3], cur - c0
+
+
+def render_vertical(img, idx, t, T, voice_dur, delay):
+    x0, x1 = V_CROP
+    z = 1.0 + 0.04 * ease(t / T)
+    cw, ch = (x1 - x0) * S / z, H * S / z
+    cx, cy = (x0 + x1) / 2 * S, H * S / 2
+    bw = VW
+    bh = int(round(VW * H / (x1 - x0)))
+    band = img.resize((bw, bh), Image.LANCZOS, box=(cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2))
+    out = Image.new("RGB", (VW, VH), BG)
+    out.paste(band, (0, V_BAND_Y))
+    d = ImageDraw.Draw(out)
+    tf = ImageFont.truetype(FONT_PATH, 92)
+    d.text((VW / 2, 330), TITLE, font=tf, fill=INK, anchor="mm")
+    tw = tf.getlength(TITLE)
+    d.line([(VW / 2 - tw / 2, 392), (VW / 2 + tw / 2, 386)], fill=RED, width=8)
+    words, cur = subtitle_words(SCRIPT[idx][0], t - delay, voice_dur)
+    if words:
+        sf = ImageFont.truetype(FONT_PATH, 96)
+        gap = sf.getlength(" ")
+        widths = [sf.getlength(w.upper()) for w in words]
+        total = sum(widths) + gap * (len(words) - 1)
+        scale = min(1.0, (VW - 80) / total)
+        if scale < 1.0:
+            sf = ImageFont.truetype(FONT_PATH, int(96 * scale))
+            gap = sf.getlength(" ")
+            widths = [sf.getlength(w.upper()) for w in words]
+            total = sum(widths) + gap * (len(words) - 1)
+        x = (VW - total) / 2
+        for i, (w, ww) in enumerate(zip(words, widths)):
+            col = YELLOW if i == cur else WHITE
+            d.text((x, 1470), w.upper(), font=sf, fill=col, anchor="lm", stroke_width=7, stroke_fill=INK)
+            x += ww + gap
+    return out
+
+
 def render_frame(args):
-    idx, t, T, frame_no, path = args
+    idx, t, T, frame_no, path = args[:5]
+    vertical = len(args) > 5
     img = Image.new("RGB", (W * S, H * S), BG)
     p = Pen(img, boil=frame_no // 4)  # new wobble every 4 frames (~7.5/s)
-    # paper grain
     SCENES[idx](p, t, T)
-    # gentle push-in camera
-    z = 1.0 + 0.04 * ease(t / T)
-    cw, ch = W * S / z, H * S / z
-    x0, y0 = (W * S - cw) / 2, (H * S - ch) / 2
-    img = img.resize((W, H), Image.LANCZOS, box=(x0, y0, x0 + cw, y0 + ch))
+    if vertical:
+        img = render_vertical(img, idx, t, T, *args[5:])
+    else:
+        # gentle push-in camera
+        z = 1.0 + 0.04 * ease(t / T)
+        cw, ch = W * S / z, H * S / z
+        x0, y0 = (W * S - cw) / 2, (H * S - ch) / 2
+        img = img.resize((W, H), Image.LANCZOS, box=(x0, y0, x0 + cw, y0 + ch))
     img.save(path, quality=92)
 
 
@@ -549,19 +614,21 @@ def main():
     ap.add_argument("--voice-dir", help="folder with scene01.wav..scene10.wav to use instead of offline TTS")
     ap.add_argument("--only", type=int, help="render a preview still of one scene (1-10)")
     ap.add_argument("--t", type=float, default=2.0, help="time (s) of the preview still")
+    ap.add_argument("--vertical", action="store_true", help="9:16 Shorts/Reels version with subtitles")
     a = ap.parse_args()
 
     os.makedirs(OUT, exist_ok=True)
     work = os.path.join(OUT, "work")
     if a.only:
         os.makedirs(work, exist_ok=True)
-        render_frame((a.only - 1, a.t, 4.0, 0, os.path.join(OUT, f"preview_scene{a.only:02d}.jpg")))
+        job = (a.only - 1, a.t, 4.0, 0, os.path.join(OUT, f"preview_scene{a.only:02d}.jpg"))
+        render_frame(job + ((3.0, 0.15) if a.vertical else ()))
         return
 
     shutil.rmtree(work, ignore_errors=True)
     os.makedirs(work)
     PAD = 0.7
-    durations, voices = [], []
+    durations, voices, voice_lens = [], [], []
     for i, (line, _) in enumerate(SCRIPT):
         vp = os.path.join(work, f"voice{i + 1:02d}.wav")
         if a.voice_dir:
@@ -570,12 +637,16 @@ def main():
         else:
             tts(line, vp)
         voices.append(vp)
+        voice_lens.append(wav_len(vp))
         durations.append(wav_len(vp) + PAD + (0.5 if i == 0 else 0) + (1.2 if i == len(SCRIPT) - 1 else 0))
 
     jobs, n = [], 0
     for i, T in enumerate(durations):
         for k in range(int(round(T * FPS))):
-            jobs.append((i, k / FPS, T, n, os.path.join(work, f"f{n:05d}.jpg")))
+            job = (i, k / FPS, T, n, os.path.join(work, f"f{n:05d}.jpg"))
+            if a.vertical:
+                job += (voice_lens[i], 0.5 if i == 0 else 0.15)
+            jobs.append(job)
             n += 1
     print(f"Rendering {n} frames ({sum(durations):.1f}s)...")
     with Pool() as pool:
@@ -599,7 +670,7 @@ def main():
     music_path = os.path.join(work, "music.wav")
     music(music_path, total)
 
-    final = os.path.join(OUT, "five_minute_rule.mp4")
+    final = os.path.join(OUT, "five_minute_rule_shorts.mp4" if a.vertical else "five_minute_rule.mp4")
     subprocess.run([
         "ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", os.path.join(work, "f%05d.jpg"),
         "-i", voice_path, "-i", music_path, "-filter_complex",
