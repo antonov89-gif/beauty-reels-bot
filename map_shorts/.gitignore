@@ -1,0 +1,6 @@
+assets/
+*.mp4
+*.wav
+*.npy
+*.png
+__pycache__/
