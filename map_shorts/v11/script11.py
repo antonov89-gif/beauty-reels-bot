@@ -1,0 +1,21 @@
+LINES = [
+    "What if all eight billion people on Earth lived in one single building?",
+    "How big would it have to be?",
+    "In Whittier, Alaska, almost the entire town lives in one fourteen-story tower.",
+    "Post office, police, a clinic, even a church, all under one roof.",
+    "But for eight billion, we need to think much bigger.",
+    "The Indianapolis Motor Speedway seats about a quarter of a million people.",
+    "Mecca's Grand Mosque can hold around two million worshippers.",
+    "Still nowhere close. So forget seats, and measure space.",
+    "Pack people shoulder to shoulder, four per square meter.",
+    "Tesla's Giga Texas factory covers almost one square kilometer of floor.",
+    "That's room for over three million people. A whole country, in one factory.",
+    "Now think in volume. Boeing's plant in Everett is the biggest building on Earth by volume.",
+    "Stack people floor after floor, and it fits over thirty million.",
+    "To fit all eight billion of us, you would need more than three cubic kilometers.",
+    "That's one giant cube, a kilometer and a half on every side.",
+    "Drop it on Manhattan, and it's wider than Central Park, yet it still fits on the island.",
+    "And at fifteen hundred meters tall, it would tower over the Burj Khalifa.",
+    "All of humanity, in one building you could walk across in twenty minutes.",
+]
+CONT = set()
