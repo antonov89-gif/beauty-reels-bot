@@ -1,6 +1,6 @@
 # Publication — You Have $100 Billion. Spend It in 60 Seconds.
 
-**File:** spend_100b.mp4 (1080x1920, ~47 s). Visual language copied from the jack pockets audit (apFPtyZHuns): white studio, pale-blue money slab with a black counter and red spent slice, real photos with tiny lowercase labels, red arrows, price tags, green "bought" silhouettes, a grid multiplier, handwritten cards, hard cuts with click / cash-register sounds, no running subtitles. Voice: ElevenLabs "David" via Lumean.
+**File:** spend_100b_40s_master.mp4 (1080x1920, 40 s, CRF 14; earlier 47 s cut: spend_100b.mp4). Visual language copied from the jack pockets audit (apFPtyZHuns): white studio, pale-blue money slab with a black counter and red spent slice, real photos with tiny lowercase labels, red arrows, price tags, green "bought" silhouettes, a grid multiplier, handwritten cards, hard cuts with click / cash-register sounds, no running subtitles. Voice: ElevenLabs "David" via Lumean.
 
 ## Title (choose one)
 - You Have $100 Billion. Spend It in 60 Seconds. 💸
