@@ -56,20 +56,28 @@ def font(size, weight="Bold"):
 
 # ---------------------------------------------------------------- timeline
 NARR_CLIPS = {0: "intro", 2: "sugar", 18: "cargo", len(SCRIPT) - 1: "outro"}
+GEN = {v[0]: k for k, v in json.load(open("gen_jobs.json")).items() if os.path.exists(f"gen/{k}.mp4")}
+GEN_LEN = 4.0
 SHOTS = []
 num = 0
 for i, (text, card) in enumerate(SCRIPT):
     t0 = 0.0 if i == 0 else starts[i] - 0.15
     t1 = (starts[i + 1] - 0.15) if i + 1 < len(SCRIPT) else TOTAL
     if card is None:
-        SHOTS.append(dict(t0=t0, t1=t1, kind="clip", src=NARR_CLIPS.get(i, "intro"), line=i))
+        SHOTS.append(dict(t0=t0, t1=t1, kind="clip", src=NARR_CLIPS.get(i, "intro"), line=i, gen=GEN.get(i)))
         continue
     num += 1
     seg = t1 - t0
+    if i in GEN and not card.get("clip"):
+        mid = max(t0 + 2.6, t1 - GEN_LEN) if seg > 5.4 else t1
+        SHOTS.append(dict(t0=t0, t1=mid, kind="card", card=card, num=num, line=i))
+        if mid < t1:
+            SHOTS.append(dict(t0=mid, t1=t1, kind="clip", src=None, line=i, gen=GEN[i]))
+        continue
     if card.get("clip") and seg > 4.2:
         mid = t0 + max(2.8, min(4.0, seg * 0.5))
         SHOTS.append(dict(t0=t0, t1=mid, kind="card", card=card, num=num, line=i))
-        SHOTS.append(dict(t0=mid, t1=t1, kind="clip", src=card["clip"], line=i))
+        SHOTS.append(dict(t0=mid, t1=t1, kind="clip", src=card["clip"], line=i, gen=GEN.get(i)))
     else:
         SHOTS.append(dict(t0=t0, t1=t1, kind="card", card=card, num=num, line=i))
 
@@ -83,7 +91,36 @@ def shot_at(t):
 
 # ---------------------------------------------------------------- clips
 def clip_dir(s):
-    return f"frames/{s['src']}_{int(s['t0'] * 10)}"
+    return f"frames/{s['src'] or s['gen']}{'+' + s['gen'] if s.get('gen') and s['src'] else ''}_{int(s['t0'] * 10)}"
+
+
+def bars(src):
+    """Detect baked-in letterbox: returns (top, bottom) pixel rows of the picture area."""
+    out = subprocess.run(["ffmpeg", "-loglevel", "error", "-ss", "1.5", "-i", src, "-frames:v", "1", "-f", "rawvideo",
+                          "-pix_fmt", "gray", "-"], capture_output=True).stdout
+    probe = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height",
+                            "-of", "csv=p=0", src], capture_output=True, text=True).stdout.strip().split(",")
+    w, h = int(probe[0]), int(probe[1])
+    a = np.frombuffer(out, np.uint8)[: w * h].reshape(h, w).astype(np.float32)
+    rows = np.where(a.mean(1) > 12)[0]
+    return (int(rows[0]), int(rows[-1]) + 1, w, h) if len(rows) else (0, h, w, h)
+
+
+def gen_frames(s, out, start_index=1, max_len=None):
+    src = f"gen/{s['gen']}.mp4"
+    top, bot, w, h = bars(src)
+    ph = bot - top
+    # crop the picture area to 16:9 around its centre, then scale to 1920x1080
+    cw = min(w, int(ph * 16 / 9))
+    ch = int(cw * 9 / 16)
+    x0 = (w - cw) // 2
+    y0 = top + (ph - ch) // 2
+    dur = GEN_LEN if max_len is None else min(GEN_LEN, max_len)
+    speed = min(1.0, GEN_LEN / dur) if max_len else 1.0
+    vf = f"crop={cw}:{ch}:{x0}:{y0},scale=1920:1080:flags=lanczos,fps=30,eq=contrast=1.03:saturation=1.05"
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", src, "-vf", vf, "-frames:v", str(int(dur * FPS)),
+                    "-start_number", str(start_index), "-q:v", "3", f"{out}/%05d.jpg"], check=True)
+    return int(dur * FPS)
 
 
 def prep():
@@ -92,8 +129,17 @@ def prep():
     for s in SHOTS:
         if s["kind"] != "clip":
             continue
-        src = f"media/{s['src']}.mp4"
         dur = s["t1"] - s["t0"] + 0.2
+        out = clip_dir(s)
+        if s.get("gen"):
+            os.makedirs(out, exist_ok=True)
+            ng = gen_frames(s, out, 1, dur if not s["src"] else None)
+            if not s["src"]:
+                print("gen", out, ng, flush=True)
+                continue
+            dur -= ng / FPS
+            s["_gen_n"] = ng
+        src = f"media/{s['src']}.mp4"
         probe = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src],
                                capture_output=True, text=True).stdout.strip()
         clen = float(probe or 0)
@@ -103,15 +149,12 @@ def prep():
             off = max(0, clen - dur - 0.1)
         used[s["src"]] = off + dur
         speed = 1.0 if clen >= dur else clen / dur * 0.98
-        out = clip_dir(s)
-        if os.path.isdir(out) and len(os.listdir(out)) >= int(dur * FPS) - 2:
-            continue
         os.makedirs(out, exist_ok=True)
         vf = (f"setpts={1 / speed:.4f}*PTS,scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,"
               f"fps=30")
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{off:.2f}", "-i", src, "-t",
                         f"{dur / speed if speed < 1 else dur:.2f}", "-vf", vf, "-frames:v", str(int(dur * FPS) + 2),
-                        "-q:v", "3", f"{out}/%05d.jpg"], check=True)
+                        "-start_number", str(s.get("_gen_n", 0) + 1), "-q:v", "3", f"{out}/%05d.jpg"], check=True)
         print("clip", out, len(os.listdir(out)), flush=True)
 
 

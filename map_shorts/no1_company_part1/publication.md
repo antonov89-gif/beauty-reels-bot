@@ -92,7 +92,7 @@ business documentary, nvidia, tsmc, asml, saudi aramco, toyota, ferrari, inditex
 
 ## Upload fields
 - Category: Education · Audience: not made for kids
-- Altered or synthetic content: **Yes** (AI voiceover)
+- Altered or synthetic content: **Yes** (AI voiceover + AI-generated video: dramatized historical and illustrative scenes)
 - Pinned comment: Which company represents your country best? 👇
 - End screen: link Part 2 when it's out.
 
@@ -105,6 +105,8 @@ business documentary, nvidia, tsmc, asml, saudi aramco, toyota, ferrari, inditex
 - Ferrari phrasing kept vague ("deliberately limited numbers"); deliveries are ~13–14k cars/year.
 
 ## Credits (paste into the description)
+Some scenes are AI-generated dramatizations (vidIQ AI video): intro globe, NZ refrigerated ship, Barbados distillery, Debmarine ship, Belgian monks, Shopify 2004, M-Pesa phone, ASML cleanroom, Tuvalu atoll, Monaco 1860s casino.
+
 Stock video: Pexels —
 - Kiwi and Camera (pexels.com/video/38942518)
 - cottonbro studio (pexels.com/video/5537827)
