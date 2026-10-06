@@ -18,19 +18,19 @@ Which company represents YOUR country? Tell us in the comments 👇
 Chapters:
 0:00 Intro
 0:17 Dairy & drinks
-0:57 Oil & minerals
-1:37 The sea
-1:47 Airlines
-2:22 Ports
-2:40 Food
-3:03 Drinks
-3:41 Farming
-3:58 Online
-4:39 Chips & tech
-5:37 Medicine
-5:46 Energy
-6:29 Luxury & cars
-7:05 Monaco, Morocco, Spain
+0:52 Oil & minerals
+1:30 The sea
+1:39 Airlines
+2:10 Ports
+2:28 Food
+2:49 Drinks
+3:26 Farming
+3:41 Online
+4:17 Chips & tech
+5:07 Medicine
+5:16 Energy
+5:53 Luxury & cars
+6:28 Monaco, Morocco, Spain
 
 #companies #geography #business #economy #maps
 
@@ -92,7 +92,7 @@ business documentary, nvidia, tsmc, asml, saudi aramco, toyota, ferrari, inditex
 
 ## Upload fields
 - Category: Education · Audience: not made for kids
-- Altered or synthetic content: **Yes** (AI voiceover + AI-generated video: dramatized historical and illustrative scenes)
+- Altered or synthetic content: **Yes** (AI voiceover — ElevenLabs + AI-generated video: dramatized historical and illustrative scenes)
 - Pinned comment: Which company represents your country best? 👇
 - End screen: link Part 2 when it's out.
 

@@ -5,7 +5,7 @@ chars = [(r["char"], float(r["start"]), float(r["end"])) for r in rows]
 stream = "".join(c for c, _, _ in chars)
 pos = 0
 starts, D, T = [], [], []
-def norm(s): return re.sub(r"[^a-z0-9]", "", s.lower())
+def norm(s): return "".join(c for c in s.lower() if c.isalnum())
 # index of alnum chars
 alnum = [(i, c.lower()) for i, (c, _, _) in enumerate(chars) if c.isalnum()]
 k = 0

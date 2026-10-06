@@ -1,639 +1,640 @@
 1
-00:00:00,370 --> 00:00:02,389
+00:00:00,320 --> 00:00:01,941
 What if we looked at the number
 
 2
-00:00:02,359 --> 00:00:04,966
+00:00:01,911 --> 00:00:04,541
 one company of every country? Not always
 
 3
-00:00:04,936 --> 00:00:07,320
+00:00:04,511 --> 00:00:06,643
 the richest, or the most valuable on
 
 4
-00:00:07,290 --> 00:00:09,561
+00:00:06,613 --> 00:00:08,489
 the stock market, but the one that
 
 5
-00:00:09,531 --> 00:00:12,055
+00:00:08,459 --> 00:00:11,137
 best represents its country: the one that
 
 6
-00:00:12,025 --> 00:00:14,577
+00:00:11,107 --> 00:00:13,424
 makes something unique, sells it to the
 
 7
-00:00:14,547 --> 00:00:17,352
+00:00:13,394 --> 00:00:16,894
 world, or changes how we all live.
 
 8
-00:00:17,772 --> 00:00:21,024
+00:00:17,423 --> 00:00:20,506
 New Zealand once looked doomed by its isolation.
 
 9
-00:00:20,994 --> 00:00:24,217
+00:00:20,476 --> 00:00:23,583
 Then refrigerated ships arrived, and suddenly it
 
 10
-00:00:24,187 --> 00:00:26,936
+00:00:23,553 --> 00:00:25,417
 could send butter and cheese to the other
 
 11
-00:00:26,906 --> 00:00:29,478
+00:00:25,387 --> 00:00:28,379
 side of the planet. Today Fonterra is
 
 12
-00:00:29,448 --> 00:00:32,914
+00:00:28,349 --> 00:00:30,710
 one of the biggest dairy exporters on Earth.
 
 13
-00:00:33,334 --> 00:00:36,407
+00:00:31,067 --> 00:00:33,953
 On many tropical islands, colonial planters filled
 
 14
-00:00:36,377 --> 00:00:38,743
+00:00:33,923 --> 00:00:36,228
 the land with sugarcane. And when you
 
 15
-00:00:38,713 --> 00:00:41,503
+00:00:36,198 --> 00:00:38,444
 have too much cane, you ferment it.
 
 16
-00:00:41,923 --> 00:00:44,812
+00:00:38,765 --> 00:00:41,036
 In Barbados, Mount Gay has been making
 
 17
-00:00:44,782 --> 00:00:47,216
+00:00:41,006 --> 00:00:44,183
 rum since at least 1703, one of
 
 18
-00:00:47,186 --> 00:00:50,330
+00:00:44,153 --> 00:00:46,143
 the oldest rum brands in the world.
 
 19
-00:00:50,750 --> 00:00:53,617
+00:00:46,510 --> 00:00:49,292
 And in Brazil, Ambev brews the beer behind
 
 20
-00:00:53,587 --> 00:00:57,314
+00:00:49,262 --> 00:00:52,366
 almost every beach, carnival and football match.
 
 21
-00:00:57,734 --> 00:01:00,100
+00:00:52,756 --> 00:00:54,783
 Some countries simply dig their wealth
 
 22
-00:01:00,070 --> 00:01:01,880
+00:00:54,753 --> 00:00:56,954
 out of the ground. Colombia
 
 23
-00:01:01,850 --> 00:01:04,943
+00:00:56,924 --> 00:01:00,134
 has Ecopetrol, its national oil company.
 
 24
-00:01:05,363 --> 00:01:08,226
+00:01:00,439 --> 00:01:02,524
 But Africa is where resources look like a
 
 25
-00:01:08,196 --> 00:01:11,582
+00:01:02,494 --> 00:01:05,616
 page from the periodic table. South Africa still
 
 26
-00:01:11,552 --> 00:01:15,018
+00:01:05,586 --> 00:01:08,273
 lives the legend of gold with Gold Fields.
 
 27
-00:01:15,438 --> 00:01:17,988
+00:01:08,663 --> 00:01:11,086
 In the Democratic Republic of the Congo,
 
 28
-00:01:17,958 --> 00:01:19,740
+00:01:11,056 --> 00:01:12,583
 Kamoa Copper runs one of the
 
 29
-00:01:19,710 --> 00:01:22,819
+00:01:12,553 --> 00:01:15,147
 most promising copper mines on the planet.
 
 30
-00:01:23,239 --> 00:01:26,725
+00:01:15,478 --> 00:01:19,014
 Botswana built its economy on diamonds through Debswana,
 
 31
-00:01:26,695 --> 00:01:30,300
+00:01:18,984 --> 00:01:21,950
 a partnership between the government and De Beers.
 
 32
-00:01:30,720 --> 00:01:33,063
+00:01:22,278 --> 00:01:25,211
 And next door, in Namibia, Debmarine
 
 33
-00:01:33,033 --> 00:01:34,946
+00:01:25,181 --> 00:01:27,463
 goes one step further: its ships
 
 34
-00:01:34,916 --> 00:01:37,898
+00:01:27,433 --> 00:01:30,086
 vacuum diamonds straight from the seabed.
 
 35
-00:01:38,318 --> 00:01:40,866
+00:01:30,427 --> 00:01:33,197
 The sea feeds whole economies too. In
 
 36
-00:01:40,836 --> 00:01:44,205
+00:01:33,167 --> 00:01:36,111
 Greenland, the largest island in the world, Royal
 
 37
-00:01:44,175 --> 00:01:47,877
+00:01:36,081 --> 00:01:38,780
 Greenland turns fishing into the national engine.
 
 38
-00:01:48,297 --> 00:01:51,649
+00:01:39,116 --> 00:01:42,177
 Other countries became bridges between continents.
 
 39
-00:01:51,619 --> 00:01:53,834
+00:01:42,147 --> 00:01:44,801
 Panama, with Copa Airlines, is
 
 40
-00:01:53,804 --> 00:01:56,828
+00:01:44,771 --> 00:01:46,889
 the great connector of Latin America.
 
 41
-00:01:57,248 --> 00:01:59,652
+00:01:47,290 --> 00:01:49,955
 Ireland gave Europe Ryanair, the airline
 
 42
-00:01:59,622 --> 00:02:02,920
+00:01:49,925 --> 00:01:52,229
 that turned cheap flights into something normal.
 
 43
-00:02:03,340 --> 00:02:05,651
+00:01:52,551 --> 00:01:54,590
 Turkish Airlines flies to more countries
 
 44
-00:02:05,621 --> 00:02:08,330
+00:01:54,560 --> 00:01:56,585
 than any other airline on the planet.
 
 45
-00:02:08,750 --> 00:02:11,001
+00:01:56,921 --> 00:01:58,889
 Emirates turned a desert city into
 
 46
-00:02:10,971 --> 00:02:14,578
+00:01:58,859 --> 00:02:01,861
 a crossroads between Europe, Asia and Oceania.
 
 47
-00:02:14,998 --> 00:02:17,841
+00:02:02,613 --> 00:02:05,139
 And Ethiopian Airlines connects more African
 
 48
-00:02:17,811 --> 00:02:20,098
+00:02:05,109 --> 00:02:07,195
 cities than anyone else, doing in
 
 49
-00:02:20,068 --> 00:02:22,629
+00:02:07,165 --> 00:02:09,840
 the air what roads often can't.
 
 50
-00:02:23,049 --> 00:02:25,828
+00:02:10,253 --> 00:02:13,302
 Goods need routes as well. Ethiopia has
 
 51
-00:02:25,798 --> 00:02:28,271
+00:02:13,272 --> 00:02:15,751
 no coastline, so most of its trade
 
 52
-00:02:28,241 --> 00:02:31,653
+00:02:15,721 --> 00:02:18,246
 passes through the ports of tiny Djibouti.
 
 53
-00:02:32,073 --> 00:02:34,551
+00:02:18,531 --> 00:02:20,627
 And the Philippines, a country of
 
 54
-00:02:34,521 --> 00:02:37,316
+00:02:20,597 --> 00:02:23,031
 more than seven thousand islands, made
 
 55
-00:02:37,286 --> 00:02:40,341
+00:02:23,001 --> 00:02:27,650
 a port operator its flagship: ICTSI.
 
 56
-00:02:40,761 --> 00:02:41,964
+00:02:28,737 --> 00:02:29,777
 What travels in all
 
 57
-00:02:41,934 --> 00:02:44,706
+00:02:29,747 --> 00:02:33,130
 those containers? Very often, food.
 
 58
-00:02:45,126 --> 00:02:47,567
+00:02:33,550 --> 00:02:35,786
 Mexico's Grupo Bimbo is the largest
 
 59
-00:02:47,537 --> 00:02:50,111
+00:02:35,756 --> 00:02:37,386
 bakery company in the world.
 
 60
-00:02:50,531 --> 00:02:52,663
+00:02:37,757 --> 00:02:39,982
 Switzerland is home to Nestlé, the
 
 61
-00:02:52,633 --> 00:02:54,976
+00:02:39,952 --> 00:02:41,687
 biggest food company on Earth.
 
 62
-00:02:55,396 --> 00:02:57,936
+00:02:41,976 --> 00:02:44,711
 And Indonesia has Indofood, the maker
 
 63
-00:02:57,906 --> 00:03:00,209
+00:02:44,681 --> 00:02:47,288
 of Indomie, instant noodles for a
 
 64
-00:03:00,179 --> 00:03:03,287
+00:02:47,258 --> 00:02:49,469
 nation of nearly three hundred million.
 
 65
-00:03:03,707 --> 00:03:06,602
+00:02:49,842 --> 00:02:53,263
 Then come the drinks. In Scotland, whisky
 
 66
-00:03:06,572 --> 00:03:08,817
+00:02:53,233 --> 00:02:55,202
 began as a way to preserve barley
 
 67
-00:03:08,787 --> 00:03:11,771
+00:02:55,172 --> 00:02:58,279
 in a damp climate. William Grant and Sons,
 
 68
-00:03:11,741 --> 00:03:15,854
+00:02:58,249 --> 00:03:01,667
 the family behind Glenfiddich, carries that tradition.
 
 69
-00:03:16,274 --> 00:03:19,062
+00:03:02,010 --> 00:03:05,036
 In Belgium, monasteries have brewed beer
 
 70
-00:03:19,032 --> 00:03:21,486
+00:03:05,006 --> 00:03:08,669
 for centuries. Today, AB InBev is
 
 71
-00:03:21,456 --> 00:03:24,210
+00:03:08,639 --> 00:03:10,525
 the biggest brewer in the world.
 
 72
-00:03:24,630 --> 00:03:27,397
+00:03:11,280 --> 00:03:14,178
 Austria gave the world Red Bull, the energy
 
 73
-00:03:27,367 --> 00:03:30,280
+00:03:14,148 --> 00:03:16,488
 drink that also took over Formula One.
 
 74
-00:03:30,700 --> 00:03:33,506
+00:03:16,817 --> 00:03:19,343
 Sri Lanka has Dilmah, the family company that
 
 75
-00:03:33,476 --> 00:03:36,625
+00:03:19,313 --> 00:03:21,953
 puts Ceylon tea into cups around the world.
 
 76
-00:03:37,045 --> 00:03:39,095
+00:03:22,248 --> 00:03:24,171
 And in Cuba, Habanos sells the
 
 77
-00:03:39,065 --> 00:03:41,849
+00:03:24,141 --> 00:03:26,352
 cigars that made the island famous.
 
 78
-00:03:42,269 --> 00:03:45,654
+00:03:26,727 --> 00:03:30,704
 Farming has its giants too. Ukraine's MHP is
 
 79
-00:03:45,624 --> 00:03:49,729
+00:03:30,674 --> 00:03:33,258
 one of the largest poultry producers in Europe.
 
 80
-00:03:50,149 --> 00:03:52,862
+00:03:33,494 --> 00:03:35,881
 And Belarus exports something that works the
 
 81
-00:03:52,832 --> 00:03:55,076
+00:03:35,851 --> 00:03:38,679
 fields: Minsk Tractor Works sells its
 
 82
-00:03:55,046 --> 00:03:58,292
+00:03:38,649 --> 00:03:41,127
 tractors in more than one hundred countries.
 
 83
-00:03:58,712 --> 00:04:01,877
+00:03:41,496 --> 00:03:45,218
 Then the internet arrived. In Canada, Shopify
 
 84
-00:04:01,847 --> 00:04:04,295
+00:03:45,188 --> 00:03:46,832
 was born because one of its founders
 
 85
-00:04:04,265 --> 00:04:07,399
+00:03:46,802 --> 00:03:49,411
 wanted to sell snowboards online and found that
 
 86
-00:04:07,369 --> 00:04:10,536
+00:03:49,381 --> 00:03:52,392
 building a web store was absurdly hard.
 
 87
-00:04:10,956 --> 00:04:13,672
+00:03:52,749 --> 00:03:55,252
 In Argentina, Mercado Libre grew into
 
 88
-00:04:13,642 --> 00:04:17,535
+00:03:55,222 --> 00:03:58,048
 the biggest online marketplace in Latin America.
 
 89
-00:04:17,955 --> 00:04:21,181
+00:03:58,402 --> 00:04:01,195
 Tiny Lithuania launched Vinted, the second-hand
 
 90
-00:04:21,151 --> 00:04:24,361
+00:04:01,165 --> 00:04:03,504
 clothing app now used all over Europe.
 
 91
-00:04:24,781 --> 00:04:27,172
+00:04:03,761 --> 00:04:06,276
 And Estonia created Bolt, which competes
 
 92
-00:04:27,142 --> 00:04:29,074
+00:04:06,246 --> 00:04:07,610
 head to head with Uber.
 
 93
-00:04:29,494 --> 00:04:31,906
+00:04:08,336 --> 00:04:10,421
 In Kenya, where many people had
 
 94
-00:04:31,876 --> 00:04:34,352
+00:04:10,391 --> 00:04:12,859
 no bank account, M-Pesa showed in
 
 95
-00:04:34,322 --> 00:04:37,060
+00:04:12,829 --> 00:04:15,866
 2007 that a simple text message could
 
 96
-00:04:37,030 --> 00:04:39,239
+00:04:15,836 --> 00:04:17,420
 do the job of a bank.
 
 97
-00:04:39,659 --> 00:04:41,987
+00:04:17,791 --> 00:04:19,343
 And none of this would work without
 
 98
-00:04:41,957 --> 00:04:45,040
+00:04:19,313 --> 00:04:22,536
 microchips. In the United States, Nvidia went
 
 99
-00:04:45,010 --> 00:04:47,832
+00:04:22,506 --> 00:04:25,008
 from graphics cards for gamers to the chips
 
 100
-00:04:47,802 --> 00:04:51,147
+00:04:24,978 --> 00:04:28,422
 behind artificial intelligence, and at times became
 
 101
-00:04:51,117 --> 00:04:54,215
+00:04:28,392 --> 00:04:31,090
 the most valuable company in the world.
 
 102
-00:04:54,635 --> 00:04:57,889
+00:04:31,427 --> 00:04:34,778
 In the Netherlands, ASML builds the only machines
 
 103
-00:04:57,859 --> 00:05:00,953
+00:04:34,748 --> 00:04:36,983
 that can print the most advanced chips.
 
 104
-00:05:01,373 --> 00:05:03,872
+00:04:37,330 --> 00:04:40,262
 And in Taiwan, TSMC turns those
 
 105
-00:05:03,842 --> 00:05:06,916
+00:04:40,232 --> 00:04:43,037
 designs into reality, manufacturing most
 
 106
-00:05:06,886 --> 00:05:10,038
+00:04:43,007 --> 00:04:45,287
 of the world's most advanced chips.
 
 107
-00:05:10,458 --> 00:05:12,956
+00:04:45,698 --> 00:04:48,328
 South Korea has Samsung, the family
 
 108
-00:05:12,926 --> 00:05:15,942
+00:04:48,298 --> 00:04:50,511
 conglomerate that went from cheap televisions
 
 109
-00:05:15,912 --> 00:05:19,439
+00:04:50,481 --> 00:04:53,470
 to world-leading memory, screens and phones.
 
 110
-00:05:19,859 --> 00:05:22,199
+00:04:53,826 --> 00:04:56,027
 Finland's Nokia survived the fall of
 
 111
-00:05:22,169 --> 00:05:24,302
+00:04:55,997 --> 00:04:58,071
 its phones and reinvented itself
 
 112
-00:05:24,272 --> 00:05:26,914
+00:04:58,041 --> 00:04:59,845
 as a leader in mobile networks.
 
 113
-00:05:27,334 --> 00:05:29,337
+00:05:00,176 --> 00:05:01,831
 And the strangest one of all:
 
 114
-00:05:29,307 --> 00:05:31,680
+00:05:01,801 --> 00:05:04,014
 the Pacific nation of Tuvalu earns
 
 115
-00:05:31,650 --> 00:05:34,239
+00:05:03,984 --> 00:05:05,732
 a significant part of its income from
 
 116
-00:05:34,209 --> 00:05:36,970
+00:05:05,702 --> 00:05:07,402
 its internet address, dot T V.
 
 117
-00:05:37,390 --> 00:05:40,829
+00:05:08,055 --> 00:05:11,768
 Medicine matters too. Denmark's Novo Nordisk, the
 
 118
-00:05:40,799 --> 00:05:42,948
+00:05:11,738 --> 00:05:14,021
 maker of Ozempic, grew so big
 
 119
-00:05:42,918 --> 00:05:46,161
+00:05:13,991 --> 00:05:16,480
 that it moved the whole Danish economy.
 
 120
-00:05:46,581 --> 00:05:48,526
+00:05:16,834 --> 00:05:18,431
 But in much of the world, the
 
 121
-00:05:48,496 --> 00:05:50,824
+00:05:18,401 --> 00:05:21,312
 real king is still oil. Saudi Aramco
 
 122
-00:05:50,794 --> 00:05:52,684
+00:05:21,282 --> 00:05:22,844
 has been, for years, one of
 
 123
-00:05:52,654 --> 00:05:55,869
+00:05:22,814 --> 00:05:25,233
 the most profitable companies on the planet.
 
 124
-00:05:56,289 --> 00:05:58,593
+00:05:25,639 --> 00:05:27,944
 Norway, home of Equinor, did the
 
 125
-00:05:58,563 --> 00:06:00,721
+00:05:27,914 --> 00:05:29,988
 opposite of many oil states. It
 
 126
-00:06:00,691 --> 00:06:03,141
+00:05:29,958 --> 00:05:31,892
 saved its oil revenues in the largest
 
 127
-00:06:03,111 --> 00:06:05,952
+00:05:31,862 --> 00:05:33,585
 sovereign wealth fund in the world.
 
 128
-00:06:06,372 --> 00:06:08,919
+00:05:33,917 --> 00:05:36,373
 Qatar, with QatarEnergy, is one of
 
 129
-00:06:08,889 --> 00:06:12,622
+00:05:36,343 --> 00:05:39,263
 the largest exporters of liquefied natural gas.
 
 130
-00:06:13,042 --> 00:06:15,622
+00:05:39,579 --> 00:05:41,640
 In other countries, wealth flows down
 
 131
-00:06:15,592 --> 00:06:18,172
+00:05:41,610 --> 00:05:44,044
 the rivers. Paraguay shares the giant
 
 132
-00:06:18,142 --> 00:06:20,812
+00:05:44,014 --> 00:05:46,842
 Itaipu dam with Brazil, and sells most
 
 133
-00:06:20,782 --> 00:06:23,512
+00:05:46,812 --> 00:05:48,442
 of its share of the electricity.
 
 134
-00:06:23,932 --> 00:06:27,259
+00:05:48,754 --> 00:05:51,640
 And Bhutan's hydropower company exports electricity
 
 135
-00:06:27,229 --> 00:06:29,723
+00:05:51,610 --> 00:05:53,356
 from the Himalayas to India.
 
 136
-00:06:30,143 --> 00:06:32,722
+00:05:53,726 --> 00:05:56,416
 Then there is luxury. France turned
 
 137
-00:06:32,692 --> 00:06:35,616
+00:05:56,386 --> 00:05:59,899
 two centuries of elegance into LVMH, the
 
 138
-00:06:35,586 --> 00:06:38,511
+00:05:59,869 --> 00:06:02,081
 largest luxury group on the planet, from
 
 139
-00:06:38,481 --> 00:06:41,446
+00:06:02,051 --> 00:06:04,878
 Louis Vuitton to Moët and Chandon.
 
 140
-00:06:41,866 --> 00:06:44,023
+00:06:05,194 --> 00:06:07,116
 In Italy, Ferrari is more than
 
 141
-00:06:43,993 --> 00:06:46,629
+00:06:07,086 --> 00:06:09,717
 a car. It is design, engineering and
 
 142
-00:06:46,599 --> 00:06:50,254
+00:06:09,687 --> 00:06:12,630
 status, built in deliberately limited numbers.
 
 143
-00:06:50,674 --> 00:06:54,681
+00:06:13,432 --> 00:06:16,574
 Germany's Volkswagen Group builds around nine million vehicles
 
 144
-00:06:54,651 --> 00:06:58,265
+00:06:16,544 --> 00:06:19,985
 a year, from Volkswagen and Audi to Porsche.
 
 145
-00:06:58,685 --> 00:07:01,479
+00:06:20,260 --> 00:06:23,262
 And Japan's Toyota is the world's largest
 
 146
-00:07:01,449 --> 00:07:05,519
+00:06:23,232 --> 00:06:27,626
 carmaker, a symbol of efficiency and reliability.
 
 147
-00:07:05,939 --> 00:07:08,595
+00:06:28,120 --> 00:06:30,531
 In Monaco, a struggling royal family
 
 148
-00:07:08,565 --> 00:07:10,747
+00:06:30,501 --> 00:06:32,017
 built a casino in the eighteen
 
 149
-00:07:10,717 --> 00:07:13,468
+00:06:31,987 --> 00:06:34,595
 sixties. The Société des Bains de Mer
 
 150
-00:07:13,438 --> 00:07:16,923
+00:06:34,565 --> 00:06:37,194
 ended up financing the whole principality.
 
 151
-00:07:17,343 --> 00:07:19,593
+00:06:37,559 --> 00:06:39,516
 Morocco sits on most of the world's
 
 152
-00:07:19,563 --> 00:07:22,476
+00:06:39,486 --> 00:06:42,430
 known phosphate reserves, and OCP turns them
 
 153
-00:07:22,446 --> 00:07:26,039
+00:06:42,400 --> 00:06:45,575
 into the fertilizer that feeds crops everywhere.
 
 154
-00:07:26,459 --> 00:07:29,365
+00:06:45,864 --> 00:06:49,274
 And in Spain, Inditex, the owner of Zara,
 
 155
-00:07:29,335 --> 00:07:31,700
+00:06:49,244 --> 00:06:51,131
 can take a new design from sketch to
 
 156
-00:07:31,670 --> 00:07:33,750
+00:06:51,101 --> 00:06:53,337
 store in a matter of weeks. It
 
 157
-00:07:33,720 --> 00:07:37,247
+00:06:53,307 --> 00:06:56,041
 became the largest fashion group on the planet.
 
 158
-00:07:37,667 --> 00:07:40,610
+00:06:56,355 --> 00:07:00,054
 Fifty countries, fifty companies. And this is
 
 159
-00:07:40,580 --> 00:07:42,829
+00:07:00,024 --> 00:07:02,085
 only the beginning. Tell us in the
 
 160
-00:07:42,799 --> 00:07:46,496
+00:07:02,055 --> 00:07:04,825
 comments which company best represents your country.
+

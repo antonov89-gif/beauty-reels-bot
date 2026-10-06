@@ -1,7 +1,8 @@
 import numpy as np, soundfile as sf, subprocess, json
 SR = 44100
 tm = json.load(open("timing.json"))
-v, sr = sf.read("voice_kokoro.wav")
+import sys
+v, sr = sf.read(sys.argv[1] if len(sys.argv) > 1 else "voice_kokoro.wav")
 if sr != SR:
     v = np.interp(np.arange(int(len(v) * SR / sr)) * sr / SR, np.arange(len(v)), v)
 TOTAL = len(v) / SR + 2.5
