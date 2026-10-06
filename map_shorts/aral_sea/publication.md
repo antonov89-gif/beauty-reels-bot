@@ -1,6 +1,6 @@
 # Publication — Why Did a Whole Sea Disappear? (Aral Sea)
 
-**File:** aral_short.mp4 (1080x1920, ~68 s). Style: satellite-map Short (GeoGlobeTales dynamics). No paid generators used; voice is free Kokoro TTS.
+**File:** aral_short.mp4 (1080x1920, ~64 s). Style: satellite-map Short (GeoGlobeTales dynamics). No paid generators used; voice is free Kokoro TTS.
 
 ## Title (choose one)
 - Why One of Earth's Biggest Lakes Disappeared 😱 Aral Sea
@@ -19,4 +19,4 @@ Category: Education · Not made for kids · Altered or synthetic content: Yes (A
 Pinned comment: "Did you know the Aral Sea was once the 4th largest lake on Earth? Which place should I cover next?"
 
 ## Credits (add to description)
-Satellite imagery: NASA Visible Earth, Blue Marble (public domain). Map data: Natural Earth (public domain). The 1960 shoreline is an approximate illustration traced from the dry seabed. Voiceover: AI (Kokoro TTS). Emoji: Noto Color Emoji (OFL).
+Satellite imagery: NASA Visible Earth, Blue Marble (public domain). Relief shading: Mapzen/AWS Terrain Tiles (open elevation data; sources include SRTM, GMTED, NASADEM). Map data: Natural Earth (public domain). The 1960 shoreline is an approximate illustration traced from the dry seabed. Voiceover: AI (Kokoro TTS). Emoji: Noto Color Emoji (OFL).

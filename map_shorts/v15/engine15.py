@@ -122,6 +122,21 @@ def tex(level):
     return _TEX[level]
 
 
+_SH = None
+SH_LON0, SH_TOPLAT, SH_PAD = 38.0, 56.0, 1600
+K_RELIEF = 1.7
+FLAT = math.sin(math.radians(42))
+
+
+def shade_map():
+    global _SH
+    if _SH is None:
+        a = np.load("shade.npy")
+        u = np.clip((a + 1) * 127.5, 0, 255).astype(np.uint8)
+        _SH = np.pad(u, SH_PAD, constant_values=int((FLAT + 1) * 127.5))
+    return _SH
+
+
 class Cam:
     def __init__(self, lon, lat, span):
         self.span = span
@@ -153,8 +168,18 @@ class Cam:
         ix0, iy0 = max(0, int(bx0) - 1), max(0, int(by0) - 1)
         ix1, iy1 = min(T.shape[1], int(bx1) + 2), min(T.shape[0], int(by1) + 2)
         crop = Image.fromarray(np.ascontiguousarray(T[iy0:iy1, ix0:ix1]))
-        return crop.resize((W, H), Image.BICUBIC if self.span < 10 else Image.BILINEAR,
-                           box=(bx0 - ix0, by0 - iy0, bx1 - ix0, by1 - iy0))
+        out = crop.resize((W, H), Image.BICUBIC if self.span < 10 else Image.BILINEAR,
+                          box=(bx0 - ix0, by0 - iy0, bx1 - ix0, by1 - iy0))
+        if level == "mid":
+            SH = shade_map()
+            top = my(SH_TOPLAT)
+            sx0, sx1 = (self.lon - hw - SH_LON0) * 120 + SH_PAD, (self.lon + hw - SH_LON0) * 120 + SH_PAD
+            sy0, sy1 = (top - (self.Y + hh)) * 120 + SH_PAD, (top - (self.Y - hh)) * 120 + SH_PAD
+            if sx0 >= 0 and sy0 >= 0 and sx1 <= SH.shape[1] and sy1 <= SH.shape[0]:
+                piece = Image.fromarray(SH).resize((W, H), Image.BILINEAR, box=(sx0, sy0, sx1, sy1))
+                f = 1 + K_RELIEF * ((np.asarray(piece).astype(np.float32) / 127.5 - 1) - FLAT)
+                out = Image.fromarray(np.clip(np.asarray(out).astype(np.float32) * f[..., None], 0, 255).astype(np.uint8))
+        return out
 
 
 def lerp(a, b, k):
@@ -328,8 +353,8 @@ def S_list():
     ]))
     S.append(sc((1, 1), (59.8, 45.6, 5.5, 60.6, 44.6, 7.0), [
         ("sea60", 0),
-        ("big", "1960", WT(1, "1960"), 300, 140, WHT),
-        ("count", 0, 68000, "{:,} KM2", WT(1, "fourth"), 1.0, 430, "4TH LARGEST LAKE"),
+        ("big", "1960", WT(1, "1960"), 170, 150, WHT),
+        ("count", 0, 68000, "{:,} KM²", WT(1, "fourth"), 1.0, 430, "4TH LARGEST LAKE"),
         ("shake", WT(1, "1960")),
     ], t0=WT(1, "1960") - 0.12))
     S.append(sc((2, 2), (59.4, 44.0, 4.5, 59.6, 44.3, 4.0), [
@@ -374,8 +399,8 @@ def S_list():
     ]))
     S.append(sc((7, 7), (60.2, 44.9, 6.5, 60.2, 44.9, 7.5), [
         ("sea60", 0),
-        ("big", "2007", WT(7, "2007"), 300, 120, WHT),
-        ("count", 100, 10, "{}%", WT(7, "held"), 1.2, 330, "OF THE SEA LEFT"),
+        ("big", "2007", WT(7, "2007"), 170, 130, WHT),
+        ("count", 100, 10, "{}%", WT(7, "held"), 1.2, 420, "OF THE SEA LEFT"),
         ("emoji", 60.0, 44.8, "😱", 150, WT(7, "tenth")),
         ("shake", WT(7, "tenth")),
     ]))
@@ -598,6 +623,27 @@ def draw_dust(img, t, t_in):
         d.line([(x - L, y + L * 0.12), (x, y)], fill=(235, 205, 160, int(170 * k)), width=2 + int(sz * 3))
 
 
+def persp_coeffs(dst, src):
+    A, B = [], []
+    for (x, y), (u, v) in zip(dst, src):
+        A += [[x, y, 1, 0, 0, 0, -u * x, -u * y], [0, 0, 0, x, y, 1, -v * x, -v * y]]
+        B += [u, v]
+    return np.linalg.solve(np.array(A, np.float64), np.array(B, np.float64))
+
+
+def tilt_warp(img, a):
+    """fake 3D pitch: far (top) edge shows the whole width, near (bottom) edge is magnified"""
+    if a < 0.01:
+        return img
+    dst = [(0, 0), (W, 0), (W, H), (0, H)]
+    src = [(0, 0), (W, 0), (W - a * W, H), (a * W, H)]
+    out = img.transform((W, H), Image.PERSPECTIVE, persp_coeffs(dst, src), Image.BICUBIC)
+    hz = np.linspace(0.30, 0.0, H, dtype=np.float32)[:, None, None]
+    arr = np.asarray(out).astype(np.float32)
+    arr[..., :3] = arr[..., :3] * (1 - hz) + np.array([40, 52, 70], np.float32) * hz
+    return Image.fromarray(arr.astype(np.uint8), out.mode)
+
+
 def caption(img, t):
     for i in range(len(LINES)):
         if starts[i] - 0.05 <= t < starts[i] + D[i] + 0.15:
@@ -750,6 +796,7 @@ def frame(fi):
             sh = int(10 * a) + 1
             img = Image.merge("RGBA", (r.transform(img.size, Image.AFFINE, (1, 0, -sh, 0, 1, 0)), g,
                                        b.transform(img.size, Image.AFFINE, (1, 0, sh, 0, 1, 0)), al))
+    img = tilt_warp(img, 0.17 * min(1.0, max(0.0, (span - 5) / 8)))
     caption(img, t)
     rgb = np.asarray(img.convert("RGB")).astype(np.float32) * vignette()
     if s.get("winter"):
