@@ -1,0 +1,708 @@
+1
+00:00:00,320 --> 00:00:03,996
+In March 2023, a photo of the Pope
+
+2
+00:00:03,966 --> 00:00:06,538
+in a white puffer jacket fooled millions of
+
+3
+00:00:06,508 --> 00:00:09,790
+people. It was not real. Nobody had taken
+
+4
+00:00:09,760 --> 00:00:12,528
+it. A piece of software had imagined it.
+
+5
+00:00:12,895 --> 00:00:14,631
+Three years later, that is the
+
+6
+00:00:14,601 --> 00:00:17,590
+least impressive thing artificial intelligence can do.
+
+7
+00:00:18,177 --> 00:00:20,831
+So what changed, how fast, and what
+
+8
+00:00:20,801 --> 00:00:23,584
+is still coming? To make sense of it,
+
+9
+00:00:23,554 --> 00:00:26,960
+we need one simple idea: the S-curve.
+
+10
+00:00:27,292 --> 00:00:31,002
+Almost every technology grows in three phases.
+
+11
+00:00:30,972 --> 00:00:33,487
+First comes a slow start: years of
+
+12
+00:00:33,457 --> 00:00:37,828
+research, clumsy prototypes and very few users.
+
+13
+00:00:38,218 --> 00:00:40,303
+Then comes the steep part, where
+
+14
+00:00:40,273 --> 00:00:42,729
+everything improves at once and the world
+
+15
+00:00:42,699 --> 00:00:44,655
+changes in just a few years.
+
+16
+00:00:44,981 --> 00:00:48,727
+And finally the curve flattens. The technology
+
+17
+00:00:48,697 --> 00:00:50,991
+matures, and each new version is
+
+18
+00:00:50,961 --> 00:00:52,800
+only a little better than the last.
+
+19
+00:00:53,173 --> 00:00:55,456
+Mobile phones are a clean example. For
+
+20
+00:00:55,426 --> 00:00:57,708
+years they had tiny screens, no apps
+
+21
+00:00:57,678 --> 00:00:59,587
+and a battery that died by lunch.
+
+22
+00:00:59,979 --> 00:01:02,170
+Then the smartphone arrived, and within
+
+23
+00:01:02,140 --> 00:01:03,760
+a decade it was in nearly
+
+24
+00:01:03,730 --> 00:01:06,535
+every pocket. Today, a new model looks
+
+25
+00:01:06,505 --> 00:01:08,321
+almost the same as last year's.
+
+26
+00:01:08,683 --> 00:01:12,097
+Flight is another one. In 1903, the Wright
+
+27
+00:01:12,067 --> 00:01:14,790
+brothers stayed in the air for twelve seconds.
+
+28
+00:01:14,760 --> 00:01:17,830
+Sixty-six years later, people walked on the Moon.
+
+29
+00:01:18,211 --> 00:01:20,435
+Artificial intelligence spent decades on the
+
+30
+00:01:20,405 --> 00:01:21,920
+flat part of that curve.
+
+31
+00:01:22,237 --> 00:01:25,936
+Chess programs. Spam filters. Navigation apps that
+
+32
+00:01:25,906 --> 00:01:28,444
+find the fastest route. Recommendations that
+
+33
+00:01:28,414 --> 00:01:30,567
+know what you want to watch next.
+
+34
+00:01:30,892 --> 00:01:34,185
+In 1997, IBM's Deep Blue beat the world
+
+35
+00:01:34,155 --> 00:01:37,517
+chess champion. In 2016, AlphaGo beat one
+
+36
+00:01:37,487 --> 00:01:40,235
+of the best Go players alive. Impressive,
+
+37
+00:01:40,205 --> 00:01:43,008
+but each system could do exactly one thing.
+
+38
+00:01:43,502 --> 00:01:47,398
+Then, in November 2022, ChatGPT arrived.
+
+39
+00:01:47,368 --> 00:01:48,931
+Within about two months it reportedly
+
+40
+00:01:48,901 --> 00:01:51,172
+passed one hundred million users, one of
+
+41
+00:01:51,142 --> 00:01:53,469
+the fastest growing apps ever recorded.
+
+42
+00:01:53,821 --> 00:01:55,534
+That was the moment the curve bent
+
+43
+00:01:55,504 --> 00:01:57,866
+upward. And it has not stopped bending.
+
+44
+00:01:58,251 --> 00:02:01,486
+Start with images. In 2022, AI
+
+45
+00:02:01,456 --> 00:02:04,133
+pictures were a curiosity: melted faces,
+
+46
+00:02:04,103 --> 00:02:06,363
+hands with seven fingers, and text that
+
+47
+00:02:06,333 --> 00:02:07,963
+looked like a dream of text.
+
+48
+00:02:08,694 --> 00:02:10,791
+Within two years, the best image
+
+49
+00:02:10,761 --> 00:02:12,823
+generators were producing pictures most people
+
+50
+00:02:12,793 --> 00:02:15,192
+could not tell from photographs, with correct
+
+51
+00:02:15,162 --> 00:02:19,219
+reflections, believable skin and readable signs.
+
+52
+00:02:19,563 --> 00:02:21,543
+That is a gift for designers and
+
+53
+00:02:21,513 --> 00:02:25,340
+small businesses. It is also a problem.
+
+54
+00:02:25,310 --> 00:02:27,373
+When a convincing image costs nothing and
+
+55
+00:02:27,343 --> 00:02:30,424
+takes seconds, seeing is no longer believing.
+
+56
+00:02:30,919 --> 00:02:32,771
+Standards like content credentials try to
+
+57
+00:02:32,741 --> 00:02:34,652
+label how a file was made, but
+
+58
+00:02:34,622 --> 00:02:36,905
+adoption is still patchy, and the fakes
+
+59
+00:02:36,875 --> 00:02:38,865
+are improving faster than the labels.
+
+60
+00:02:39,278 --> 00:02:40,981
+Video was supposed to be the hard
+
+61
+00:02:40,951 --> 00:02:44,011
+one. In 2023 the internet laughed at
+
+62
+00:02:43,981 --> 00:02:45,950
+a clip of a famous actor eating spaghetti
+
+63
+00:02:45,920 --> 00:02:48,783
+that looked like a nightmare. Faces melted.
+
+64
+00:02:48,753 --> 00:02:50,568
+Noodles had a mind of their own.
+
+65
+00:02:50,958 --> 00:02:53,159
+Two years later, new models were generating
+
+66
+00:02:53,129 --> 00:02:55,819
+clips with realistic physics, smooth camera moves
+
+67
+00:02:55,789 --> 00:02:58,466
+and, for the first time, synchronized voices and
+
+68
+00:02:58,436 --> 00:03:01,564
+sound effects, all from a single sentence.
+
+69
+00:03:01,855 --> 00:03:03,453
+Today a short film can be drafted
+
+70
+00:03:03,423 --> 00:03:05,641
+in an afternoon. One person with a
+
+71
+00:03:05,611 --> 00:03:08,091
+laptop can prototype scenes that once needed
+
+72
+00:03:08,061 --> 00:03:10,656
+a crew, a location and a budget.
+
+73
+00:03:11,022 --> 00:03:14,164
+The tools also changed existing footage: swapping
+
+74
+00:03:14,134 --> 00:03:16,230
+a character into a scene, fixing where
+
+75
+00:03:16,200 --> 00:03:18,645
+an actor looks, turning a few photos into
+
+76
+00:03:18,615 --> 00:03:20,663
+a 3D space you can walk through.
+
+77
+00:03:20,981 --> 00:03:23,601
+The flip side is obvious. Anyone can now
+
+78
+00:03:23,571 --> 00:03:26,364
+fabricate a video of anyone saying anything, which
+
+79
+00:03:26,334 --> 00:03:28,338
+is why platforms ask creators to label
+
+80
+00:03:28,308 --> 00:03:31,122
+AI-made scenes, including a few in this video.
+
+81
+00:03:31,522 --> 00:03:33,665
+Voices are next. A few seconds of
+
+82
+00:03:33,635 --> 00:03:35,593
+recording is now enough to clone someone's
+
+83
+00:03:35,563 --> 00:03:37,600
+voice well enough to fool a friend.
+
+84
+00:03:37,928 --> 00:03:40,420
+That makes dubbing a film into thirty languages,
+
+85
+00:03:40,390 --> 00:03:43,427
+in the actor's own voice, almost routine. It
+
+86
+00:03:43,397 --> 00:03:45,830
+also powers a new kind of scam: a
+
+87
+00:03:45,800 --> 00:03:48,139
+phone call from your daughter asking for money.
+
+88
+00:03:48,482 --> 00:03:51,079
+A simple defense: agree on a family
+
+89
+00:03:51,049 --> 00:03:53,631
+code word that only real relatives know.
+
+90
+00:03:54,129 --> 00:03:56,969
+Music followed. Type a sentence, get a
+
+91
+00:03:56,939 --> 00:03:58,850
+full song with vocals. For a
+
+92
+00:03:58,820 --> 00:04:01,785
+while, the record labels answered with lawsuits.
+
+93
+00:04:02,118 --> 00:04:06,535
+Then the mood changed. In late 2025, Warner
+
+94
+00:04:06,505 --> 00:04:09,693
+settled with Suno and Udio, and Universal
+
+95
+00:04:09,663 --> 00:04:12,316
+settled with Udio. The fight moved from
+
+96
+00:04:12,286 --> 00:04:15,681
+'stop' to 'license it, and share the money.'
+
+97
+00:04:16,016 --> 00:04:18,543
+Whether artists really benefit from those deals
+
+98
+00:04:18,513 --> 00:04:20,447
+is still being argued. But the
+
+99
+00:04:20,417 --> 00:04:23,835
+era of ignoring AI music is over.
+
+100
+00:04:24,283 --> 00:04:26,287
+The most important change, though, was
+
+101
+00:04:26,257 --> 00:04:27,517
+not a picture or a
+
+102
+00:04:27,487 --> 00:04:29,849
+song. It was a chat box.
+
+103
+00:04:30,202 --> 00:04:32,172
+You write in plain language, and
+
+104
+00:04:32,142 --> 00:04:35,980
+it answers: it explains tax letters, fixes
+
+105
+00:04:35,950 --> 00:04:39,544
+a spreadsheet formula, drafts an email, helps
+
+106
+00:04:39,514 --> 00:04:42,143
+you learn a language, writes code.
+
+107
+00:04:42,451 --> 00:04:45,176
+Assistants now sit inside the tools people already
+
+108
+00:04:45,146 --> 00:04:51,513
+use: documents, spreadsheets, search, phones and programming editors.
+
+109
+00:04:51,826 --> 00:04:54,073
+And they are changing shape. At
+
+110
+00:04:54,043 --> 00:04:57,996
+first they only talked. Now they act.
+
+111
+00:04:58,421 --> 00:05:00,193
+An agent is an assistant that can use
+
+112
+00:05:00,163 --> 00:05:04,025
+tools: browse the web, open files, run
+
+113
+00:05:03,995 --> 00:05:07,438
+code, fill in forms, and keep going until
+
+114
+00:05:07,408 --> 00:05:10,155
+the task is done. The first experiments
+
+115
+00:05:10,125 --> 00:05:14,704
+in 2023, like AutoGPT, looped and got lost.
+
+116
+00:05:15,083 --> 00:05:17,226
+Now agents can work on programming tasks
+
+117
+00:05:17,196 --> 00:05:19,413
+for hours at a time. One research
+
+118
+00:05:19,383 --> 00:05:22,571
+group, METR, has measured that the length
+
+119
+00:05:22,541 --> 00:05:24,463
+of tasks AI can finish on its
+
+120
+00:05:24,433 --> 00:05:27,213
+own has been doubling every few months.
+
+121
+00:05:27,606 --> 00:05:29,552
+That does not make them reliable.
+
+122
+00:05:29,522 --> 00:05:32,014
+They still make confident mistakes, which
+
+123
+00:05:31,984 --> 00:05:33,825
+is why the best results come from
+
+124
+00:05:33,795 --> 00:05:35,681
+a human who checks the work.
+
+125
+00:05:36,066 --> 00:05:37,571
+Which brings us to the question
+
+126
+00:05:37,541 --> 00:05:40,518
+everyone asks: what happens to jobs?
+
+127
+00:05:40,931 --> 00:05:43,306
+So far the picture is mixed, but one
+
+128
+00:05:43,276 --> 00:05:47,556
+pattern keeps showing up. Stanford economists studying payroll
+
+129
+00:05:47,526 --> 00:05:49,565
+data found that young workers in the
+
+130
+00:05:49,535 --> 00:05:53,768
+most AI-exposed jobs lost ground, mostly because companies
+
+131
+00:05:53,738 --> 00:05:57,237
+hired fewer beginners, not because they fired people.
+
+132
+00:05:57,474 --> 00:06:01,104
+That matters, because entry-level work is where careers
+
+133
+00:06:01,074 --> 00:06:03,507
+start. If the simple tasks go to
+
+134
+00:06:03,477 --> 00:06:06,930
+software, how does anyone learn the hard ones?
+
+135
+00:06:07,267 --> 00:06:11,952
+History has examples. Telephone switchboards, typesetting and film
+
+136
+00:06:11,922 --> 00:06:15,041
+developing once employed huge numbers of people.
+
+137
+00:06:15,011 --> 00:06:17,259
+New jobs appeared, but not for the
+
+138
+00:06:17,229 --> 00:06:20,485
+same people, and not at the same time.
+
+139
+00:06:20,750 --> 00:06:23,578
+The honest answer is that nobody knows the
+
+140
+00:06:23,548 --> 00:06:26,338
+final number. What we do know is that
+
+141
+00:06:26,308 --> 00:06:31,086
+the valuable skills are shifting: judgment, taste, knowing
+
+142
+00:06:31,056 --> 00:06:34,161
+what to ask, and checking what comes back.
+
+143
+00:06:34,690 --> 00:06:37,124
+Now the big question. Today's systems
+
+144
+00:06:37,094 --> 00:06:39,946
+are narrow in a strange way: brilliant
+
+145
+00:06:39,916 --> 00:06:42,870
+at some tasks, clueless at others.
+
+146
+00:06:43,283 --> 00:06:47,028
+Artificial general intelligence, or AGI, means a system
+
+147
+00:06:46,998 --> 00:06:49,304
+that can learn and reason across almost any
+
+148
+00:06:49,274 --> 00:06:52,286
+intellectual task as well as a capable human.
+
+149
+00:06:52,615 --> 00:06:56,198
+When could that happen? Experts disagree wildly.
+
+150
+00:06:56,168 --> 00:06:57,743
+Some lab leaders say within a few
+
+151
+00:06:57,713 --> 00:07:00,912
+years. A large 2023 survey of researchers
+
+152
+00:07:00,882 --> 00:07:03,745
+put the median guess around 2047, and
+
+153
+00:07:03,715 --> 00:07:06,590
+many forecasts have moved earlier since. Others
+
+154
+00:07:06,560 --> 00:07:08,563
+doubt today's approach gets there at all.
+
+155
+00:07:08,949 --> 00:07:11,753
+Nobody knows. But the people building these systems
+
+156
+00:07:11,723 --> 00:07:14,366
+agree on one thing: if it happens,
+
+157
+00:07:14,336 --> 00:07:16,767
+it will not be like another app update.
+
+158
+00:07:17,064 --> 00:07:19,660
+It could speed up science, medicine and
+
+159
+00:07:19,630 --> 00:07:23,504
+clean energy. It could also concentrate power, and
+
+160
+00:07:23,474 --> 00:07:26,253
+in the wrong hands, cause real harm.
+
+161
+00:07:26,610 --> 00:07:29,114
+That is why governments are writing rules.
+
+162
+00:07:29,084 --> 00:07:31,146
+Europe's AI Act has been phasing in
+
+163
+00:07:31,116 --> 00:07:33,956
+since 2024, and labs now run
+
+164
+00:07:33,926 --> 00:07:37,217
+safety tests before releasing their strongest models.
+
+165
+00:07:37,634 --> 00:07:39,859
+Meanwhile, there is something you can do
+
+166
+00:07:39,829 --> 00:07:42,877
+today: use these tools, learn what they are
+
+167
+00:07:42,847 --> 00:07:45,209
+good at, and notice where they fail.
+
+168
+00:07:45,553 --> 00:07:47,570
+And to stay current, follow a
+
+169
+00:07:47,540 --> 00:07:50,344
+few good sources, and be skeptical
+
+170
+00:07:50,314 --> 00:07:52,955
+of anyone who sounds completely certain.
+
+171
+00:07:53,368 --> 00:07:55,906
+The curve is steep right now.
+
+172
+00:07:55,876 --> 00:07:58,332
+The real question is not whether AI
+
+173
+00:07:58,302 --> 00:08:00,782
+changes everything. It is who gets to
+
+174
+00:08:00,752 --> 00:08:03,195
+decide where the curve levels off.
+
+175
+00:08:03,553 --> 00:08:05,557
+Tell us in the comments: what
+
+176
+00:08:05,527 --> 00:08:06,869
+is the first thing you
+
+177
+00:08:06,839 --> 00:08:08,783
+would hand over to an AI?
+
