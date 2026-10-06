@@ -56,11 +56,11 @@ Stock video: Pexels —
 - Rüveyda Akkaya (pexels.com/video/36592372)
 - Joerg Mangelsen (pexels.com/video/16403223)
 
-Photos: Wikimedia Commons —
-- Begich Towers Condominium (Whittier, Alaska).jpg — Quintin Soloviev, CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Begich_Towers_Condominium_(Whittier,_Alaska).jpg)
-- Indianapolis Motor Speedway Aerial August 2018.jpg — Kimaz2412, CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Indianapolis_Motor_Speedway_Aerial_August_2018.jpg)
-- Aerial Boeing Everett Factory October 2011.jpg — Jeremy Elson, CC BY-SA 3.0 (https://commons.wikimedia.org/wiki/File:Aerial_Boeing_Everett_Factory_October_2011.jpg)
-- Gigafactory Texas Building 1 June 2022.jpg — Larry D. Moore, CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Gigafactory_Texas_Building_1_June_2022.jpg)
+Photos: Wikimedia Commons (cropped and animated; changes were made) —
+- "Begich Towers Condominium (Whittier, Alaska)" by Quintin Soloviev, CC BY 4.0 (creativecommons.org/licenses/by/4.0) — commons.wikimedia.org/wiki/File:Begich_Towers_Condominium_(Whittier,_Alaska).jpg
+- "Indianapolis Motor Speedway Aerial August 2018" by Kimaz2412, CC BY 2.0 (creativecommons.org/licenses/by/2.0) — commons.wikimedia.org/wiki/File:Indianapolis_Motor_Speedway_Aerial_August_2018.jpg
+- "Aerial Boeing Everett Factory October 2011" by Jeremy Elson, CC BY-SA 3.0 (creativecommons.org/licenses/by-sa/3.0) — commons.wikimedia.org/wiki/File:Aerial_Boeing_Everett_Factory_October_2011.jpg
+- "Gigafactory Texas Building 1 June 2022" by Larry D. Moore, CC BY 4.0 (creativecommons.org/licenses/by/4.0) — commons.wikimedia.org/wiki/File:Gigafactory_Texas_Building_1_June_2022.jpg
 
 Satellite imagery: USGS National Map (public domain). Map data: Natural Earth.
 Voiceover: AI (ElevenLabs via Lumean).
