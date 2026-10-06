@@ -6,3 +6,4 @@ assets/
 __pycache__/
 .lumean_key
 lumean/
+.wavespeed_key

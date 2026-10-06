@@ -5,7 +5,7 @@ import sys
 v, sr = sf.read(sys.argv[1] if len(sys.argv) > 1 else "voice_kokoro.wav")
 if sr != SR:
     v = np.interp(np.arange(int(len(v) * SR / sr)) * sr / SR, np.arange(len(v)), v)
-TOTAL = len(v) / SR + 2.5
+TOTAL = len(v) / SR + 10.0
 N = int(TOTAL * SR)
 t = np.arange(N) / SR
 # warm documentary bed: slow chord pads + soft plucked arpeggio, A minor / F / C / G at 84 bpm
