@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ffprobe *)",
+      "mcp__vidIQ__vidiq_job_poll",
+      "mcp__vidIQ__vidiq_balance",
+      "mcp__Nexlev__youtube_video_details",
+      "mcp__Nexlev__get_video_transcript"
+    ]
+  }
+}
