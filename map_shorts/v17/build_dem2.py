@@ -43,4 +43,7 @@ for name, ppd in (("mid", 120), ("hi", 240)):
     sh = np.asarray(Image.fromarray(((shade + 1) * 127.5).astype(np.uint8)).resize((w, h), Image.LANCZOS))
     np.save(f"shade_{name}.npy", sh)
     print(name, sh.shape)
-print("dem", dem.min(), dem.max())
+w = int(round((LON1 - LON0) * 120)); h = int(round((my(LAT1) - my(LAT0)) * 120))
+el = np.asarray(Image.fromarray(np.maximum(dem, 0).astype(np.float32)).resize((w, h), Image.BILINEAR))
+np.save("elev_mid.npy", el.astype(np.float32))
+print("dem", dem.min(), dem.max(), "elev", el.shape)
