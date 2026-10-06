@@ -1,0 +1,19 @@
+1|Long|The No.1 Company of EVERY Country (Part 1)|426s|1920x1080|26MB|audio:aac|decode errors:0
+2|Long|AI Will Change Everything (2026 edition)|535s|1920x1080|25MB|audio:aac|decode errors:0
+3|Long|Could You Spend $100 Billion?|789s|1920x1080|449MB|audio:aac|decode errors:0
+4|Short|What If Everyone Lived in One Building?|83s|1080x1920|28MB|audio:aac|decode errors:0
+5|Short|Italy, Hitler's Worst Ally|70s|1080x1920|26MB|audio:aac|decode errors:0
+6|Short|Why AI Is Moving So Fast|41s|1080x1920|15MB|audio:aac|decode errors:0
+7|Short|AI Voice Scams: One Free Defense|33s|1080x1920|9MB|audio:aac|decode errors:0
+8|Short|Is AI Taking Entry-Level Jobs?|55s|1080x1920|22MB|audio:aac|decode errors:0
+9|Short|When Will AGI Arrive?|45s|1080x1920|13MB|audio:aac|decode errors:0
+10|Short|Why Did a Whole Sea Disappear? (Aral Sea)|64s|1080x1920|22MB|audio:aac|decode errors:0
+11|Short|Why Hannibal Crossed the Alps with Elephants|62s|1080x1920|21MB|audio:aac|decode errors:0
+12|Short|Why Libya Built a Giant River Under the Desert|67s|1080x1920|23MB|audio:aac|decode errors:0
+13|Short|You Have $100 Billion. Spend It in 60 Seconds (40 s, video)|40s|1080x1920|25MB|audio:aac|decode errors:0
+14|Short|$100 Billion in 60 s (47 s photo version)|47s|1080x1920|14MB|audio:aac|decode errors:0
+15|Cut|How Tall Is $100 Billion?|40s|1080x1920|2MB|audio:aac|decode errors:0
+16|Cut|Can You Buy the Mona Lisa?|42s|1080x1920|14MB|audio:aac|decode errors:0
+17|Cut|The Catch: Your Money Grows|32s|1080x1920|2MB|audio:aac|decode errors:0
+18|Cut|Step 1: The Garage|29s|1080x1920|19MB|audio:aac|decode errors:0
+19|Cut|Buy the Whole Team?|38s|1080x1920|15MB|audio:aac|decode errors:0
