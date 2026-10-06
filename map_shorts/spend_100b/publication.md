@@ -1,6 +1,6 @@
 # Publication — You Have $100 Billion. Spend It in 60 Seconds.
 
-**File:** spend_100b_40s_master.mp4 (1080x1920, 40 s, CRF 14; earlier 47 s cut: spend_100b.mp4). Visual language copied from the jack pockets audit (apFPtyZHuns): white studio, pale-blue money slab with a black counter and red spent slice, real photos with tiny lowercase labels, red arrows, price tags, green "bought" silhouettes, a grid multiplier, handwritten cards, hard cuts with click / cash-register sounds, no running subtitles. Voice: ElevenLabs "David" via Lumean.
+**File:** spend_100b_40s_video.mp4 (1080x1920, 40 s, CRF 15; superyacht and Sphere are Pexels 4K video; earlier photo-only cut: spend_100b_40s_master.mp4). Visual language copied from the jack pockets audit (apFPtyZHuns): white studio, pale-blue money slab with a black counter and red spent slice, real photos with tiny lowercase labels, red arrows, price tags, green "bought" silhouettes, a grid multiplier, handwritten cards, hard cuts with click / cash-register sounds, no running subtitles. Voice: ElevenLabs "David" via Lumean.
 
 ## Title (choose one)
 - You Have $100 Billion. Spend It in 60 Seconds. 💸
@@ -26,4 +26,5 @@ Photos (Wikimedia Commons via Openverse):
 - "Thrill Island Icon of the Seas 2024" by Larry D. Moore, CC BY 4.0 (https://commons.wikimedia.org/w/index.php?curid=148504950); cropped, colour overlay added (changes were made)
 - "Sphere - Las Vegas (53685825749)" by Shelby L. Bell from Omaha, NE, US, CC BY 2.0 (https://commons.wikimedia.org/w/index.php?curid=147954339); cropped, colour overlay added (changes were made)
 - "USS Gerald R. Ford in Oslo closeup 3" by Jonas Tisell, CC BY 4.0 (https://commons.wikimedia.org/w/index.php?curid=132289642); cropped, colour overlay added (changes were made)
+Video clips (Pexels): Yunus Terk (pexels.com/video/37524011), Jason James (pexels.com/video/26892134).
 Voiceover: AI (ElevenLabs via Lumean). Fonts: Arimo, Gochi Hand (OFL).
