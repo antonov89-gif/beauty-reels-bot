@@ -1,6 +1,6 @@
 # Publication — Why Libya Built a Giant River Under the Desert
 
-**File:** libya_river_v2.mp4 (1080x1920, ~60 s). New style after the GeoGlobeTales audit (map_shorts/analysis/visual_gap.md): calm camera, small subtitles, neon pipelines, vector icons, unit dots, teal sea, relief, four 2D inserts (~32% of runtime: aquifer, wells drilling, pipe scale, fossil water level), cracked-earth texture, sand drift, 3 flashes, 4 slams. Free voice (Kokoro). No paid generators.
+**File:** libya_river_v3.mp4 (1080x1920, ~67 s). New style after the GeoGlobeTales audit (map_shorts/analysis/visual_gap.md): calm camera, small subtitles, neon pipelines, vector icons, unit dots, teal sea, relief, four 2D inserts (~32% of runtime: aquifer, wells drilling, pipe scale, fossil water level), cracked-earth texture, sand drift, 3 flashes, 4 slams. Voice: ElevenLabs "David" via Lumean (x1.1 tempo). No paid generators.
 
 ## Title (choose one)
 - Why Libya Built a Giant River Under the Desert 🏜️💧
@@ -19,4 +19,4 @@ Category: Education · Not made for kids · Altered or synthetic content: Yes (A
 Pinned comment: "Should Libya keep pumping fossil water, or find another source? Which megaproject should I map next?"
 
 ## Credits (add to description)
-Satellite imagery: NASA Visible Earth, Blue Marble (public domain). Relief shading: Mapzen/AWS Terrain Tiles (open elevation data). Map data: Natural Earth. Pipeline routes and well fields are approximate illustrations. Voiceover: AI (Kokoro TTS).
+Satellite imagery: NASA Visible Earth, Blue Marble (public domain). Relief shading: Mapzen/AWS Terrain Tiles (open elevation data). Map data: Natural Earth. Pipeline routes and well fields are approximate illustrations. Voiceover: AI (ElevenLabs via Lumean).
