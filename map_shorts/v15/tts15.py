@@ -4,12 +4,12 @@ from kokoro_onnx import Kokoro
 from script15 import LINES, MAPW
 k = Kokoro("assets/kokoro.onnx", "assets/voices.bin")
 SR = 24000
-GAP = 0.22
+GAP = 0.12
 parts, D, T, starts = [], [], [], []
 t = 0.0
 for i, line in enumerate(LINES):
     spoken = " ".join(MAPW.get(w, w) for w in line.split())
-    a, sr = k.create(spoken, voice="am_michael", speed=1.04, lang="en-us")
+    a, sr = k.create(spoken, voice="am_michael", speed=1.1, lang="en-us")
     idx = np.where(np.abs(a) > 0.01)[0]
     a = a[max(0, idx[0] - 400): idx[-1] + 1200]
     dur = len(a) / sr

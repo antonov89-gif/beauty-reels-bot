@@ -328,8 +328,8 @@ def S_list():
     ]))
     S.append(sc((1, 1), (59.8, 45.6, 5.5, 60.6, 44.6, 7.0), [
         ("sea60", 0),
-        ("big", "1960", WT(1, "1960"), 300, 170, WHT),
-        ("count", 0, 68000, "{:,} KM2", WT(1, "fourth"), 1.0, 380, "4TH LARGEST LAKE"),
+        ("big", "1960", WT(1, "1960"), 300, 140, WHT),
+        ("count", 0, 68000, "{:,} KM2", WT(1, "fourth"), 1.0, 430, "4TH LARGEST LAKE"),
         ("shake", WT(1, "1960")),
     ], t0=WT(1, "1960") - 0.12))
     S.append(sc((2, 2), (59.4, 44.0, 4.5, 59.6, 44.3, 4.0), [
@@ -440,6 +440,29 @@ def S_list():
 
 
 S = S_list()
+
+
+def with_splits(S):
+    ts = [s.get("t0", starts[s["lines"][0]] - (LEAD if i == 0 else 0.11)) for i, s in enumerate(S)] + [TOTAL]
+    out, flip = [], 1
+    for i, s in enumerate(S):
+        d = ts[i + 1] - ts[i]
+        if d > 3.4:
+            c = s["cam"]
+            mid = ts[i] + d * 0.5
+            s1, s2 = dict(s), dict(s)
+            s1["cam"] = (c[0], c[1], c[2], lerp(c[0], c[3], .5), lerp(c[1], c[4], .5), lerp(c[2], c[5], .5))
+            dx = flip * 0.10 * c[5]
+            flip = -flip
+            s2["cam"] = (c[3] + dx, c[4], c[5] * 0.78, c[3] - dx * 0.3, c[4], c[5] * 0.62)
+            s2["t0"] = mid
+            out += [s1, s2]
+        else:
+            out.append(s)
+    return out
+
+
+S = with_splits(S)
 DR0, DR1 = WT(5, 'starve'), WT(7, 'tenth') + 0.8
 SCENE_T = []
 for i, s in enumerate(S):
@@ -504,9 +527,11 @@ def _poly_px(cam, ll):
     return cam.xyY(np.array([(lo, my(la)) for lo, la in ll]))
 
 
-def dashed(d, p, color, width, on=30, off=18):
+def dashed(d, p, color, width, on=30, off=18, phase=0.0):
     pts = list(map(tuple, p)) + [tuple(p[0])]
-    acc, draw = 0.0, True
+    acc, draw = phase % (on + off), True
+    if acc >= on:
+        acc, draw = acc - on, False
     for (ax, ay), (bx, by) in zip(pts, pts[1:]):
         L = math.hypot(bx - ax, by - ay)
         pos = 0.0
@@ -539,10 +564,10 @@ def draw_sea(img, cam, t, t_in):
     img.alpha_composite(Image.fromarray(layer, "RGBA"))
     g = Image.new("RGBA", (W // 4, H // 4), (0, 0, 0, 0))
     q = p / 4
-    dashed(ImageDraw.Draw(g), q, (120, 190, 255, int(230 * ain)), 5, 8, 5)
+    dashed(ImageDraw.Draw(g), q, (120, 190, 255, int(230 * ain)), 5, 8, 5, t * 12)
     img.alpha_composite(g.filter(ImageFilter.GaussianBlur(3)).resize((W, H), Image.BILINEAR))
     d = ImageDraw.Draw(img)
-    dashed(d, p, (255, 255, 255, int(255 * ain)), 5)
+    dashed(d, p, (255, 255, 255, int(255 * ain)), 5, 30, 18, t * 48)
 
 
 def draw_sean(img, cam, t, t_in):
@@ -617,7 +642,13 @@ def frame(fi):
     t0, t1 = SCENE_T[si], SCENE_T[si + 1]
     k = ease((t - t0) / max(0.1, t1 - t0))
     c = s["cam"]
-    cam = Cam(lerp(c[0], c[3], k), lerp(c[1], c[4], k), lerp(c[2], c[5], k))
+    pz = 0.0
+    for f in s["fx"]:
+        te = f[2] if f[0] in ("big", "big2") else f[4] if f[0] == "count" else f[1] if f[0] == "shake" else None
+        if te is not None and 0 <= t - te < 0.32:
+            pz = max(pz, math.sin(math.pi * (t - te) / 0.32))
+    span = lerp(c[2], c[5], k) * (1 - 0.07 * pz)
+    cam = Cam(lerp(c[0], c[3], k) + 0.012 * span * math.sin(t * 1.9), lerp(c[1], c[4], k) + 0.01 * span * math.cos(t * 1.4), span)
     shake = 0.0
     for f in s["fx"]:
         if f[0] == "shake" and 0 <= t - f[1] < 0.35:
@@ -703,8 +734,15 @@ def frame(fi):
             v = f[1] + (f[2] - f[1]) * ease((t - f[4]) / f[5])
             txt = f[3].format(int(round(v)))
             big(img, txt, t, f[4], f[6], 150, YEL, f[7])
-    # chromatic aberration + flash at cuts
+    # whip smear + chromatic aberration + flash at cuts
     for ct in CUTS:
+        if 0 <= t - ct < 0.2:
+            a = 1 - (t - ct) / 0.2
+            n = int(70 * a * a)
+            if n > 2:
+                arr = np.asarray(img).astype(np.float32)
+                acc = sum(np.roll(arr, int(sh), axis=1) for sh in np.linspace(-n, n, 9)) / 9
+                img = Image.fromarray(acc.astype(np.uint8), "RGBA")
         if 0 <= t - ct < 0.12:
             a = 1 - (t - ct) / 0.12
             img.alpha_composite(Image.new("RGBA", (W, H), (255, 255, 255, int(70 * a))))
