@@ -1,6 +1,6 @@
 # Publication — The No.1 Company of Every Country (Part 1)
 
-**File:** no1_company_part1.mp4 (1920×1080, ~7:49) · **Subtitles:** no1_company_part1.srt (EN, also burned in small)
+**File:** no1_company_part1.mp4 (1920×1080, ~7:07) · **Subtitles:** no1_company_part1.srt (EN, also burned in small)
 
 ## Title
 The No.1 Company of EVERY Country (Part 1)
