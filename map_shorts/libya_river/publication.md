@@ -1,6 +1,6 @@
 # Publication — Why Libya Built a Giant River Under the Desert
 
-**File:** libya_river_v3.mp4 (1080x1920, ~67 s). New style after the GeoGlobeTales audit (map_shorts/analysis/visual_gap.md): calm camera, small subtitles, neon pipelines, vector icons, unit dots, teal sea, relief, four 2D inserts (~32% of runtime: aquifer, wells drilling, pipe scale, fossil water level), cracked-earth texture, sand drift, 3 flashes, 4 slams. Voice: ElevenLabs "David" via Lumean (x1.1 tempo). No paid generators.
+**File:** libya_river_3d.mp4 (real 3D terrain camera: ray-marched DEM, tilt up to 40°, yaw, haze; engine18) (1080x1920, ~67 s). New style after the GeoGlobeTales audit (map_shorts/analysis/visual_gap.md): calm camera, small subtitles, neon pipelines, vector icons, unit dots, teal sea, relief, four 2D inserts (~32% of runtime: aquifer, wells drilling, pipe scale, fossil water level), cracked-earth texture, sand drift, 3 flashes, 4 slams. Voice: ElevenLabs "David" via Lumean (x1.1 tempo). No paid generators.
 
 ## Title (choose one)
 - Why Libya Built a Giant River Under the Desert 🏜️💧
