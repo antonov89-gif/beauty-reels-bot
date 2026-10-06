@@ -256,7 +256,7 @@ S = [
     ("And here's something most people miss.",
      dict(t="card", lines=["catch #2:"], bg="black", arrow=True)),
     ("Real billionaires almost never have a hundred billion dollars sitting in cash.",
-     dict(t="photo", key="bank", label="(not in cash)", plain=True)),
+     dict(t="photo", key="cash", label="(not in cash)", plain=True)),
     ("Most of their wealth is shares in the companies they built. If they tried to sell everything at once, the price would fall.",
      dict(t="chart", mode="crash")),
     ("So they borrow against those shares instead, and the shares keep growing in the background.",

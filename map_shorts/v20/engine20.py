@@ -192,6 +192,47 @@ def slab(frac, lt, counter_text, color=INK, zoom=1.0, note=None, note_t=0.5):
 
 # ---------------------------------------------------------------- photos
 _IMG, _MSK = {}, {}
+import os as _os
+VID = {("lambo", True): "lambo2", ("jet", True): "jet", ("yacht", True): "yacht", ("yacht", False): "yacht",
+       ("island", True): "island", ("island", False): "island", ("la", True): "la", ("la", False): "la",
+       ("burj", True): "burj", ("burj", False): "burj", ("sphere", True): "sphere", ("sphere", False): "sphere",
+       ("suburb", True): "suburb", ("suburb", False): "suburb", ("bank", True): "bank", ("louvre", True): "louvre",
+       ("louvre", False): "louvre", ("nfl", True): "stadium_v", ("ship", True): "ship_v", ("desert", True): "desert_v",
+       ("cash", True): "cash"}
+_NV = {}
+_SESS = None
+
+
+def vid_for(sc):
+    return VID.get((sc.get("key"), bool(sc.get("plain")))) if sc.get("t") in ("photo", "failed") else None
+
+
+def vframe(name, idx):
+    if name not in _NV:
+        _NV[name] = len([f for f in _os.listdir(f"vframes/{name}") if f.endswith(".jpg")])
+    idx = max(0, min(_NV[name] - 1, idx))
+    return idx, Image.open(f"vframes/{name}/{idx + 1:05d}.jpg").convert("RGB")
+
+
+def vmask(name, idx, im):
+    global _SESS
+    p = f"vmasks/{name}/{idx:05d}.png"
+    if _os.path.exists(p):
+        return Image.open(p).convert("L")
+    from rembg import remove, new_session
+    if _SESS is None:
+        _SESS = new_session("u2net")
+    _os.makedirs(f"vmasks/{name}", exist_ok=True)
+    m = remove(im.resize((960, 540)), session=_SESS, only_mask=True).resize((1920, 1080), Image.BILINEAR)
+    m.save(p)
+    return m
+
+
+def scene_vid_offset(i, name, dur):
+    n = _NV.get(name) or len([f for f in _os.listdir(f"vframes/{name}") if f.endswith(".jpg")])
+    uses = [j for j, sc in enumerate(SCENES) if vid_for(sc) == name]
+    k = uses.index(i) if i in uses else 0
+    return int(min(max(0, n - dur * 30 - 1), k * 75))
 
 
 def load(key):
@@ -199,6 +240,19 @@ def load(key):
         _IMG[key] = Image.open(f"img/{key}.jpg").convert("RGB")
         _MSK[key] = Image.open(f"masks/{key}.png").convert("L")
     return _IMG[key], _MSK[key]
+
+
+def video_crop(name, idx, zoom, need_mask):
+    idx, im = vframe(name, idx)
+    cw, ch = W / zoom, H / zoom
+    box = ((W - cw) / 2, (H - ch) / 2, (W + cw) / 2, (H + ch) / 2)
+    img = im.resize((W, H), Image.BICUBIC, box=box).convert("RGBA") if zoom != 1.0 else im.convert("RGBA")
+    if need_mask:
+        m = vmask(name, idx, im)
+        m = m.resize((W, H), Image.BILINEAR, box=box) if zoom != 1.0 else m
+    else:
+        m = Image.new("L", (W, H), 0)
+    return img, m
 
 
 def photo_crop(key, zoom, focus=True):
@@ -241,7 +295,11 @@ _TILE = {}
 def tile(key, tw, th, gk):
     k2 = (key, tw, th)
     if k2 not in _TILE:
-        im, m = load(key)
+        if _os.path.exists(f"img/{key}.jpg"):
+            im, m = load(key)
+        else:
+            _, im = vframe(key, 60)
+            m = vmask(key, 60, im)
         bb = m.getbbox() or (0, 0, im.width, im.height)
         w = min(im.width, (bb[2] - bb[0]) * 1.2)
         h = w * th / tw
@@ -264,16 +322,29 @@ def scene_photo(i, sc, t, lt, dur):
     key = sc["key"]
     tpt = WT(i, sc["pt"]) if sc.get("pt") else None
     punch = tpt is not None and t >= tpt
-    z = (1.0 + 0.05 * ease(lt / dur)) if not punch else (1.22 + 0.04 * ease((t - tpt) / max(0.5, dur - (tpt - SCENE_T[i]))))
-    img, m = photo_crop(key, z)
+    vname = vid_for(sc)
     tb = WT(i, sc["buy"]) + 0.15 if sc.get("buy") else None
+    if vname:
+        z = 1.0 if not punch else 1.15
+        fidx = scene_vid_offset(i, vname, dur) + int(lt * FPS)
+        need = (tb is not None and t >= tb - 0.2) or (sc.get("label") and not sc.get("plain"))
+        img, m = video_crop(vname, fidx, z, bool(need))
+    else:
+        z = (1.0 + 0.05 * ease(lt / dur)) if not punch else (1.22 + 0.04 * ease((t - tpt) / max(0.5, dur - (tpt - SCENE_T[i]))))
+        img, m = photo_crop(key, z)
     gk = 0 if (tb is None or t < tb) else min(1.0, (t - tb) / 0.12) * (1 + 0.25 * max(0, 1 - (t - tb) / 0.3))
     if sc.get("grid") and tb is not None and t >= tb - 0.15:
         cols, rows = GRIDS.get(sc["grid"], (5, 2))
         tw, th = W // cols, H // rows
         base = Image.new("RGBA", (W, H), (12, 12, 12, 255))
         n = min(sc["grid"], 1 + int((t - (tb - 0.15)) / 0.05))
-        small = tile(key, tw - 4, th - 4, gk)
+        if key == "suburb":
+            _, fr = vframe("suburb", 60 + int(lt * 10) % 200)
+            small = fr.resize((tw - 4, th - 4), Image.BILINEAR).convert("RGBA")
+            if gk > 0:
+                small = Image.blend(small, Image.new("RGBA", small.size, GREEN + (255,)), 0.45 * min(1, gk))
+        else:
+            small = tile(key, tw - 4, th - 4, gk)
         for k in range(n):
             base.alpha_composite(small, ((k % cols) * tw + 2, (k // cols) * th + 2))
         img = base
@@ -281,6 +352,8 @@ def scene_photo(i, sc, t, lt, dur):
         img = green(img, m, gk)
         if sc.get("label") and not sc.get("plain") or (sc.get("plain") and sc.get("label")):
             tx, ty = mask_top(m)
+            if ty > H * 0.6:
+                ty = H * 0.42
             lk = ease((lt - 0.2) / 0.25)
             if lk > 0:
                 ly = max(230, ty - 150)
@@ -298,7 +371,9 @@ def scene_photo(i, sc, t, lt, dur):
 
 
 def scene_failed(i, sc, t, lt):
-    if sc.get("key"):
+    if vid_for(sc):
+        img, m = video_crop(vid_for(sc), scene_vid_offset(i, vid_for(sc), 6) + int(lt * FPS), 1.0, False)
+    elif sc.get("key"):
         img, m = photo_crop(sc["key"], 1.0 + 0.04 * ease(lt / 4))
     else:
         img = studio()

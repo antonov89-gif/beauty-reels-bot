@@ -161,7 +161,35 @@ def slab(spent_frac, t, lt, counter_value, counter_color=INK, zoom=1.0, human=Tr
 _IMG, _MSK = {}, {}
 
 
+import os as _os
+VV = {"yacht", "sphere"}
+_VT = [0.0]
+_SESS = None
+
+
+def vmask(name, idx, im):
+    global _SESS
+    p = f"vmasks/{name}/{idx:05d}.png"
+    if _os.path.exists(p):
+        return Image.open(p).convert("L")
+    from rembg import remove, new_session
+    if _SESS is None:
+        _SESS = new_session("u2net")
+    _os.makedirs(f"vmasks/{name}", exist_ok=True)
+    m = remove(im.resize((540, 960)), session=_SESS, only_mask=True).resize((W, H), Image.BILINEAR)
+    m.save(p)
+    return m
+
+
 def photo_crop(key, zoom):
+    if key in VV:
+        n = len([f for f in _os.listdir(f"vframes/{key}") if f.endswith(".jpg")])
+        idx = max(0, min(n - 1, int(_VT[0] * FPS)))
+        im = Image.open(f"vframes/{key}/{idx + 1:05d}.jpg").convert("RGB")
+        cw, ch = W / zoom, H / zoom
+        box = ((W - cw) / 2, (H - ch) / 2, (W + cw) / 2, (H + ch) / 2)
+        m = vmask(key, idx, im)
+        return im.resize((W, H), Image.BICUBIC, box=box).convert("RGBA"), m.resize((W, H), Image.BILINEAR, box=box), box
     if key not in _IMG:
         _IMG[key] = Image.open(f"img/{key}.jpg").convert("RGB")
         _MSK[key] = Image.open(f"masks/{key}.png").convert("L")
@@ -271,6 +299,7 @@ def frame(fi):
     t0 = SCENE_T[i]
     lt = t - t0
     if i in PHOTO:
+        _VT[0] = lt
         p = PHOTO[i]
         key = p["key"]
         img, m, _ = photo_crop(key, 1.0 + 0.07 * ease(lt / max(0.5, SCENE_T[i + 1] - t0)))
