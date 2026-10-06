@@ -306,7 +306,7 @@ def label(img, x, y, txt, t, t0, side=-1, size=44):
     d.ellipse((x - r, y - r, x + r, y + r), fill=WHT, outline=(0, 0, 0, 120), width=2)
     f = font(POPX, size * (0.7 + 0.3 * k))
     hw = f.getlength(txt) / 2
-    shadow_text(img, (min(W - 40 - hw, max(40 + hw, x)), y + side * 48), txt, f, WHT + (int(255 * min(1, k)),))
+    shadow_text(img, (min(W - 95 - hw, max(95 + hw, x)), y + side * 48), txt, f, WHT + (int(255 * min(1, k)),))
 
 
 # vector icons (white flat style with soft shadow), drawn around (x, y) with height h
@@ -458,6 +458,134 @@ def insert_aquifer(t, t0, green_t):
     return img
 
 
+def aquifer_base(level_y=960.0, show_title=False, tk=1.0):
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 255))
+    d = ImageDraw.Draw(img)
+    for y in range(0, 640, 8):
+        q = y / 640
+        c = tuple(int(v) for v in np.array([250, 226, 180]) * (1 - q) + np.array([255, 205, 140]) * q)
+        d.rectangle((0, y, W, y + 8), fill=c)
+    for y0, y1, col, name in [(640, 820, (232, 190, 128), "SAND"), (820, 960, (172, 118, 78), "CLAY"),
+                              (960, 1380, (205, 160, 108), "SANDSTONE"), (1380, 1920, (112, 82, 62), "BEDROCK")]:
+        d.rectangle((0, y0, W, y1), fill=col)
+        d.line([(0, y0), (W, y0)], fill=tuple(max(0, c - 30) for c in col), width=4)
+        d.text((40, y0 + 22), name, font=font(POP, 34), fill=(255, 255, 255, 200))
+    ov = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(ov).rectangle((0, level_y, W, 1380), fill=(40, 150, 255, 120))
+    img.alpha_composite(ov)
+    pores = [(px, py, pz) for px, py, pz in POROS if 980 + py * 380 >= level_y]
+    bloom(img, lambda dd, s: [dd.ellipse(((px * W - 9) * s, (980 + py * 380 - 9) * s, (px * W + 9) * s,
+                                          (980 + py * 380 + 9) * s), fill=(90, 210, 255, 220)) for px, py, pz in pores], 8, 1)
+    d = ImageDraw.Draw(img)
+    for px, py, pz in pores:
+        r = 3 + pz * 4
+        d.ellipse((px * W - r, 980 + py * 380 - r, px * W + r, 980 + py * 380 + r), fill=(200, 240, 255))
+    return img
+
+
+WELL_X = [120, 250, 380, 510, 640, 770]
+
+
+def insert_wells(t, t0, count_t):
+    lt = t - t0
+    img = aquifer_base()
+    d = ImageDraw.Draw(img)
+    for j, x in enumerate(WELL_X):
+        ts = 0.2 + 0.32 * j
+        dk = ease((lt - ts) / 0.7)
+        if dk <= 0:
+            continue
+        yb = 640 + (1120 - 640) * dk
+        d.rectangle((x - 9, 640, x + 9, yb), fill=(90, 90, 95))
+        d.polygon([(x - 14, yb), (x + 14, yb), (x, yb + 24)], fill=(200, 200, 205))
+        icon(img, "derrick", x, 585, 95, t, t0 + ts)
+        wk = ease((lt - ts - 0.8) / 0.6)
+        if wk > 0:
+            yt = 1120 - (1120 - 640) * wk
+            neon_line(img, [(x, 1120), (x, yt)], CYAN, 1.0, 8, 1.0)
+            if wk >= 1:
+                icon(img, "drop", x, 520 - 30 * math.sin((lt - ts) * 5) ** 2, 46, t, t0 + ts + 1.4)
+    dk = ease((lt - 0.4) / 0.6)
+    if dk > 0:
+        x = W - 70
+        y1 = 640 + (1000 - 640) * dk
+        d = ImageDraw.Draw(img)
+        d.line([(x, 640), (x, y1)], fill=WHT, width=5)
+        for yy in (640, y1):
+            d.line([(x - 20, yy), (x + 20, yy)], fill=WHT, width=5)
+        shadow_text(img, (x - 18, 820), "500 m+", font(POPX, 44), YEL + (int(255 * dk),), anchor="rm")
+    if t >= count_t:
+        v = 1300 * ease((t - count_t) / 1.4)
+        big_text(img, "≈{:,}".format(int(round(v))), t, count_t, 300, 150, CREAM, "WELLS")
+    return img
+
+
+def insert_fossil(t, t0, ft):
+    lt = t - t0
+    dk = ease((t - ft) / 2.6)
+    level = 960 + 300 * dk
+    img = aquifer_base(level)
+    d = ImageDraw.Draw(img)
+    if dk > 0:
+        neon_line(img, [(W - 90, 975), (W - 90, level - 10)], RED, 1.0, 12, 1.0)
+        d = ImageDraw.Draw(img)
+        d.polygon([(W - 118, level - 30), (W - 62, level - 30), (W - 90, level + 8)], fill=RED)
+        d.line([(0, level), (W, level)], fill=(255, 255, 255, 200), width=4)
+    for j, x in enumerate((260, 540, 820)):  # a trickle of refill, very slow
+        ph = ((lt * 0.35 + j * 0.33) % 1.0)
+        y = 650 + ph * 300
+        icon_drop(ImageDraw.Draw(img), x, y, 34, (120, 200, 255))
+    shadow_text(img, (W / 2, 900), "refill: almost none", font(POP, 40), WHT + (230,))
+    big_text(img, "FOSSIL WATER", t, ft, 300, 120, CREAM, "IT BARELY REFILLS")
+    fk = 1 - (t - ft) / 0.25
+    if 0 < fk <= 1:
+        img.alpha_composite(Image.new("RGBA", (W, H), (255, 255, 255, int(150 * fk))))
+    return img
+
+
+CRACKS = []
+_cr = np.random.default_rng(21)
+while len(CRACKS) < 300:
+    lo, la = _cr.uniform(9.5, 25.0), _cr.uniform(20.0, 32.5)
+    ang = _cr.uniform(0, 2 * math.pi)
+    pts = [(lo, la)]
+    for _ in range(_cr.integers(3, 7)):
+        ang += _cr.normal(0, 0.7)
+        st = _cr.uniform(0.15, 0.4)
+        lo, la = lo + math.cos(ang) * st, la + math.sin(ang) * st
+        pts.append((lo, la))
+    CRACKS.append(pts)
+SANDP = np.random.default_rng(31).uniform(0, 1, (220, 4))
+
+
+def draw_cracks(img, cam, alpha):
+    if alpha <= 0.01:
+        return
+    m = Image.new("L", (W // 4, H // 4), 0)
+    dm = ImageDraw.Draw(m)
+    for r in COUNTRY.get("Libya", []):
+        dm.polygon([tuple(q / 4) for q in cam.xyY(r)], fill=255)
+    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    dl = ImageDraw.Draw(lay)
+    for pts in CRACKS:
+        p = [cam.xy(*q) for q in pts]
+        dl.line([(x + 2, y + 2) for x, y in p], fill=(255, 235, 200, 90), width=2)
+        dl.line(p, fill=(70, 40, 20, 200), width=3)
+    a = np.asarray(lay).copy()
+    a[..., 3] = (a[..., 3].astype(np.float32) * np.asarray(m.resize((W, H), Image.BILINEAR)) / 255 * alpha).astype(np.uint8)
+    img.alpha_composite(Image.fromarray(a, "RGBA"))
+
+
+def draw_sand(img, t, t0):
+    k = ease((t - t0) / 0.8)
+    d = ImageDraw.Draw(img)
+    for sx, sy, sp, sz in SANDP:
+        x = (sx * W - (t - t0) * (300 + sp * 400)) % W
+        y = (sy * H + math.sin(t * 2 + sx * 9) * 20) % H
+        L = 30 + sz * 60
+        d.line([(x, y), (x + L, y - L * 0.08)], fill=(250, 225, 180, int(110 * k)), width=2 + int(sz * 2))
+
+
 def insert_pipe(t, t0, cars_t):
     lt = t - t0
     img = Image.new("RGBA", (W, H), (0, 0, 0, 255))
@@ -536,37 +664,43 @@ def S_list():
         ("region", ["Libya"], TEAL, 0.0, 0.28),
         ("pipes", WT(0, "giant"), 1.4, 1.0),
         ("big", "UNDER THE DESERT?", WT(0, "under"), 330, 110),
+        ("flash", WT(0, "under")),
     ]))
     S.append(sc((1, 1), (17.0, 28.3, 19, 17.0, 27.6, 16), [
         ("region", ["Libya"], ORANGE, WT(1, "desert") - 0.3, 0.42),
+        ("cracks", WT(1, "desert"), 0.75),
+        ("sand", WT(1, "Look")),
         ("count", 0, 90, "≈{}%", WT(1, "ninety"), 0.9, 330, "DESERT"),
+        ("label", 18.0, 24.0, "SAHARA", WT(1, "desert") + 0.3, 1),
         ("nodrop", 17.0, 26.0, WT(1, "rivers")),
     ]))
     S.append(sc((2, 2), (17.0, 27.6, 16, 17.2, 31.0, 9.5), [
         ("region", ["Libya"], ORANGE, 0, 0.25),
+        ("cracks", 0, 0.5),
         ("people", WT(2, "Almost"), 1.6),
+        ("label", 13.19, 32.89, "TRIPOLI", WT(2, "coast"), -1),
+        ("label", 20.07, 32.12, "BENGHAZI", WT(2, "coast") + 0.35, -1),
         ("ring", 17.6, 31.6, RED, WT(2, "running")),
     ]))
     S.append(sc((3, 3), (17.2, 31.0, 9.5, 21.3, 26.6, 8), [
-        ("big", "1950s", WT(3, "1950s"), 330, 150),
         ("derrick", FIND[0], FIND[1], WT(3, "oil")),
-        ("label", FIND[0], FIND[1] + 0.9, "SEARCHING FOR OIL", WT(3, "searching") + 0.4, -1),
+        ("label", FIND[0], FIND[1] + 0.9, "1950s: SEARCHING FOR OIL", WT(3, "searching") + 0.4, -1),
         ("ring", FIND[0], FIND[1], CYAN, WT(3, "Water") - 0.1),
-        ("big", "WATER", WT(3, "Water"), 560, 150, CYAN),
+        ("label", FIND[0], FIND[1] - 0.55, "WATER!", WT(3, "Water"), 1),
+        ("flash", WT(3, "Water")),
     ]))
     S.append(sc((4, 4), None, [], insert="aquifer", green=WT(4, "green")))
     S.append(sc((5, 5), (19.0, 28.0, 16, 18.0, 28.6, 14), [
         ("region", ["Libya"], TEAL, 0, 0.22),
         ("big", "1984", WT(5, "1984"), 300, 170),
         ("big2", "GREAT MAN-MADE RIVER", WT(5, "Great"), 450, 64),
+        ("plan", WT(5, "Libya"), 1.6),
     ]))
-    S.append(sc((6, 6), (18.0, 28.6, 14, 20.2, 26.8, 9.5), [
-        ("wells", WT(6, "More"), 2.6),
-        ("count", 0, 1300, "≈{:,}", WT(6, "thirteen"), 1.6, 330, "WELLS"),
-        ("label", 21.1, 25.0, "500 m+ DEEP", WT(6, "five"), 1),
-    ]))
+    S.append(sc((6, 6), None, [], insert="wells", count=WT(6, "thirteen")))
     S.append(sc((7, 7), (20.2, 26.8, 9.5, 17.0, 29.6, 15), [
-        ("wells", 0, 0.01),
+        ("wells", WT(7, "Then") - 0.1, 0.8),
+        ("label", 21.1, 25.7, "TAZERBO", WT(7, "Then") + 0.4, 1),
+        ("label", 13.9, 27.5, "JABAL HASAWNAH", WT(7, "across"), 1),
         ("pipes", WT(7, "pipes"), 3.2, 1.0),
         ("count", 0, 2800, "{:,}+ KM", WT(7, "two"), 1.4, 330, "OF PIPES"),
     ]))
@@ -575,18 +709,17 @@ def S_list():
         ("wells", 0, 0.01),
         ("pipes", 0, 0.01, 1.0),
         ("drops", WT(9, "supplies")),
+        ("label", 13.19, 32.89, "TRIPOLI", WT(9, "Today"), -1),
+        ("label", 20.07, 32.12, "BENGHAZI", WT(9, "Today") + 0.3, -1),
         ("count", 0, 70, "≈{}%", WT(9, "seventy"), 1.0, 330, "OF LIBYA'S FRESH WATER"),
     ]))
-    S.append(sc((10, 10), (17.0, 31.0, 11, 19.5, 27.2, 13), [
-        ("pipes", 0, 0.01, 1.0),
-        ("wells_red", WT(10, "fossil")),
-        ("ring", FIND[0], FIND[1], RED, WT(10, "fossil")),
-        ("ring", 13.9, 27.5, RED, WT(10, "fossil") + 0.25),
-        ("big", "FOSSIL WATER", WT(10, "fossil"), 330, 120, CREAM, "IT BARELY REFILLS"),
-    ]))
+    S.append(sc((10, 10), None, [], insert="fossil", fossil=WT(10, "fossil")))
     S.append(sc((11, 11), (19.5, 27.2, 13, 17.0, 27.5, 26), [
         ("region", ["Libya"], TEAL, WT(11, "fill"), 0.28),
         ("pipes_fade", WT(11, "one"), WT(11, "dry") + 0.4),
+        ("wells_dim", WT(11, "one"), WT(11, "dry") + 0.4),
+        ("cracks", WT(11, "one"), 0.6),
+        ("sand", WT(11, "Every")),
         ("big", "COULD RUN DRY", WT(11, "dry") - 0.2, 330, 120),
     ]))
     return S
@@ -680,6 +813,22 @@ def draw_fx(img, cam, s, t):
                 rk = ease((t - f[1]) / 0.5)
                 col = tuple(int(lerp(a, b, rk)) for a, b in zip(CYAN, RED))
                 dots(img, cam, WELLS, t, 0, 0.01, col, 5, 1 - 0.4 * rk * (0.5 + 0.5 * math.sin(t * 8)))
+        elif k == "cracks" and t >= f[1]:
+            draw_cracks(img, cam, f[2] * ease((t - f[1]) / 0.8))
+        elif k == "sand" and t >= f[1]:
+            draw_sand(img, t, f[1])
+        elif k == "plan" and t >= f[1]:
+            dd = ImageDraw.Draw(img)
+            for j, p in enumerate(PIPES):
+                pp = partial([cam.xy(*q) for q in p], ease((t - f[1] - 0.15 * j) / (f[2] * 0.5)))
+                for (x0, y0), (x1, y1) in zip(pp, pp[1:]):
+                    L = math.hypot(x1 - x0, y1 - y0)
+                    for u in range(0, int(L), 26):
+                        v = min(L, u + 14)
+                        dd.line([(x0 + (x1 - x0) * u / L, y0 + (y1 - y0) * u / L), (x0 + (x1 - x0) * v / L, y0 + (y1 - y0) * v / L)],
+                                fill=(255, 255, 255, 220), width=4)
+        elif k == "wells_dim" and t >= f[1]:
+            dots(img, cam, WELLS, t, 0, 0.01, CYAN, 5, 1 - 0.8 * ease((t - f[1]) / (f[2] - f[1])))
         elif k == "people" and t >= f[1]:
             n = 0
             for ci, (lo, la) in enumerate(CITIES):
@@ -729,6 +878,10 @@ def frame(fi):
     t0, t1 = SCENE_T[si], SCENE_T[si + 1]
     if s.get("insert") == "aquifer":
         img = insert_aquifer(t, t0, s["green"])
+    elif s.get("insert") == "wells":
+        img = insert_wells(t, t0, s["count"])
+    elif s.get("insert") == "fossil":
+        img = insert_fossil(t, t0, s["fossil"])
     elif s.get("insert") == "pipe":
         img = insert_pipe(t, t0, s["cars"])
     else:
@@ -741,6 +894,9 @@ def frame(fi):
         img = tilt(img, 0.12 * min(1.0, max(0.0, (span - 8) / 10)))
         img = rotate_zoom(img, 1.6 * math.sin(t * 0.33), 1.06)
         draw_text(img, s, t)
+        for f in s["fx"]:
+            if f[0] == "flash" and 0 <= t - f[1] < 0.25:
+                img.alpha_composite(Image.new("RGBA", (W, H), (255, 255, 255, int(150 * (1 - (t - f[1]) / 0.25)))))
     caption(img, t)
     rgb = np.asarray(img.convert("RGB")).astype(np.float32) * vignette()
     gy, gx = (fi * 37) % 256, (fi * 91) % 256

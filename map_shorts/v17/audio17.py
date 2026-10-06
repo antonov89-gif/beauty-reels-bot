@@ -74,9 +74,24 @@ for s in E.S:
             add(boom(), f[1], 0.5)
         elif k == "pipes_fade":
             add(wind(3.0), f[1], 0.8)
+        elif k == "flash":
+            add(boom(), f[1], 0.45)
+        elif k == "sand":
+            add(wind(3.0), f[1], 0.6)
+        elif k == "plan":
+            add(whoosh(0.8), f[1], 0.4)
+        elif k == "wells" and f[1] > 0.2:
+            pass
 for s, t0 in zip(E.S, E.SCENE_T):
     if s.get("insert") == "aquifer":
         add(whoosh(0.6), t0 - 0.1, 0.6); add(wind(3.0), s["green"], 0.5)
+    elif s.get("insert") == "wells":
+        add(whoosh(0.6), t0 - 0.1, 0.6)
+        for j in range(6):
+            for q in range(6): add(tick(), t0 + 0.2 + 0.32 * j + q * 0.11, 0.5)
+        for q in range(14): add(tick(), s["count"] + q * 0.1, 0.6)
+    elif s.get("insert") == "fossil":
+        add(whoosh(0.6), t0 - 0.1, 0.6); add(boom(), s["fossil"], 0.6); add(stamp(), s["fossil"], 0.5)
     elif s.get("insert") == "pipe":
         add(whoosh(0.6), t0 - 0.1, 0.6); add(stamp(), t0 + 0.2, 0.6)
         for q in range(10): add(pop(), s["cars"] + q * 0.11, 0.35)
