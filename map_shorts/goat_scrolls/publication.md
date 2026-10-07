@@ -21,3 +21,9 @@ In 1947, a shepherd lost one goat. / So he climbed the cliffs above the Dead Sea
 
 ## Facts / hedges
 Account varies (Bedouin shepherds, 1946-47); wording kept "reportedly". "~900" manuscripts and "eleven caves" are the commonly cited figures. Verify before posting.
+
+## v22 (3D version, like the reference) — dead_sea_goat_3d.mp4
+- 3D animated look: Seedream 4.5 images + Kling v3 turbo pro image-to-video (WaveSpeed). 10 clips (1x5 s test + 9x3 s) + 2 stills; overlays and captions by code.
+- Paid: WaveSpeed 4.96 $ (balance 14.95 -> 9.99 $, under the approved 7 $). Voice 0.23 RUB (Lumean, unchanged).
+- Captions: 1-3 words, bold white with black outline, bottom centre (as in reference).
+- AI disclosure: Altered or synthetic content = Yes.
