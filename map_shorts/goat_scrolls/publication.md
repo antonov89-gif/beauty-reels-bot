@@ -27,3 +27,7 @@ Account varies (Bedouin shepherds, 1946-47); wording kept "reportedly". "~900" m
 - Paid: WaveSpeed 4.96 $ (balance 14.95 -> 9.99 $, under the approved 7 $). Voice 0.23 RUB (Lumean, unchanged).
 - Captions: 1-3 words, bold white with black outline, bottom centre (as in reference).
 - AI disclosure: Altered or synthetic content = Yes.
+
+## v3 (reference-matched CGI style) — dead_sea_goat_v3.mp4 — RECOMMENDED
+- Style: Nano-Banana-2 edit with a reference frame of the competitor as style image (Daz/Blender-like CGI), + same character image for consistency; Kling v3 turbo pro clips 3 s.
+- Paid WaveSpeed this round: 8.20 $ (expected ~5.5 $; nano-banana-2 edit with 2 reference images cost more than the listed 0.07 $). Style tests 0.43 $. Total WaveSpeed for this short: 13.59 $ (balance 14.95 -> 1.35 $).
