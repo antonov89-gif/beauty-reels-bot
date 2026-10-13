@@ -9,7 +9,7 @@ S = [
   dict(t="map", lon=54.5, lat=24.8, z=8.0, mark=["uae"], label="UNITED ARAB EMIRATES")),
  # ---- the problem
  ("Here is the problem. The Persian Gulf is like a huge bottle. Oil from Saudi Arabia, Iraq, Kuwait, Qatar and the Emirates sits inside it.",
-  dict(t="map", lon=51.0, lat=27.0, z=14.0, mark=["gulf"], label="PERSIAN GULF")),
+  dict(clip=("tanker", 0.55), t="map", lon=51.0, lat=27.0, z=14.0, mark=["gulf"], label="PERSIAN GULF")),
  ("And the only sea exit is Hormuz. At its narrowest point it is only about thirty-three kilometers wide.",
   dict(t="map", lon=56.4, lat=26.55, z=1.5, mark=["hormuz"], label="~33 KM WIDE")),
  ("Ships do not even get all of that. The shipping lanes themselves are only a few kilometers wide.",
@@ -46,7 +46,7 @@ S = [
   dict(t="bar", a=20, b=3, la="THROUGH HORMUZ", lb="BYPASS")),
  # ---- containers
  ("But oil is only half of the problem. Everything else gets shipped in containers: food, medicine, cars, machines.",
-  dict(t="map", lon=55.2, lat=25.2, z=3.2, mark=["jebel", "fujairah", "khor"], label="CONTAINER PORTS")),
+  dict(clip=("port", 0.45), t="map", lon=55.2, lat=25.2, z=3.2, mark=["jebel", "fujairah", "khor"], label="CONTAINER PORTS")),
  ("Jebel Ali, near Dubai, is the biggest port in the Middle East. But it sits inside the Gulf, behind the strait.",
   dict(t="map", lon=55.03, lat=25.0, z=0.6, mark=["jebel"], label="JEBEL ALI")),
  ("So the cargo has started to move to the ports on the eastern coast, like Fujairah and Khor Fakkan, which belongs to the emirate of Sharjah.",
@@ -57,7 +57,7 @@ S = [
   dict(t="count", value=50000, fmt="~{:,} containers / week", sub="Khor Fakkan (one report, other figures differ)")),
  # ---- rail
  ("The missing link is the railway. Etihad Rail runs across the whole country, and its freight terminals connect four ports: Ruwais, Khalifa, Jebel Ali and Fujairah.",
-  dict(t="map", lon=55.0, lat=24.5, z=7.5, mark=["ruwais", "khalifa", "jebel", "fujairah"], route="rail", label="ETIHAD RAIL")),
+  dict(clip=("train", 0.6), t="map", lon=55.0, lat=24.5, z=7.5, mark=["ruwais", "khalifa", "jebel", "fujairah"], route="rail", label="ETIHAD RAIL")),
  ("In September, Etihad Rail and AD Ports launched a new freight service between Fujairah and the Industrial City of Abu Dhabi, about two hundred kilometers away.",
   dict(t="map", lon=55.6, lat=24.5, z=4.5, mark=["fujairah", "icad"], route="rail2", label="FUJAIRAH - ABU DHABI")),
  ("It runs three times a week, and shippers can now book containers straight to Abu Dhabi, with customs cleared there.",
