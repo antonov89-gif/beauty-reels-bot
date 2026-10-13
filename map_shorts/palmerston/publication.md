@@ -33,3 +33,8 @@ Category: Education. Not made for kids. Altered or synthetic content: Yes (AI vo
 
 ## Costs
 Voice Lumean 0.40 RUB. 302.ai: 2 Seedream edit frames (~0.08 $) + 2 Hailuo 2.3 Fast clips (~0.40 $). Nexlev analysis (free tier). Map tiles free.
+
+## Thumbnail / cover
+- Main: thumbnail_palmerston_A.jpg — "35 PEOPLE / 1 SURNAME", shocked islander with flowers + crowd with MARSTERS tags.
+- Alt: thumbnail_palmerston_B.jpg — atoll from above + "1 ISLAND / 1 FAMILY".
+Shorts: upload as cover in the YouTube mobile app (or use for TikTok/Reels cover). Generated with Seedream 4.5 via 302.ai (~0.08 $ for 2 images).
