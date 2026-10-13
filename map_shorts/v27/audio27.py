@@ -40,7 +40,7 @@ def waves(d):
     return x * (0.6 + 0.4 * np.sin(2 * np.pi * t / 4.5)) * 6
 for c in E.CUTS: add(whoosh(), c - 0.15, 0.3)
 add(whoosh(0.9), SC[0] + 1.0, 0.7)
-for w in ((0, "Palmerston"), (1, "thirtyfive"), (2, "airport"), (2, "five"), (2, "few"), (4, "William"), (5, "wife"), (5, "cousins"), (7, "three"), (9, "descendants"), (9, "fish"), (9, "farm"), (9, "ship")):
+for w in ((0, "Palmerston"), (1, "thirtyfive"), (2, "airport"), (2, "four"), (2, "few"), (4, "William"), (5, "wife"), (5, "cousins"), (7, "three"), (9, "descendants"), (9, "fish"), (9, "farm"), (9, "ship")):
     add(pop(), WT(*w), 0.9)
 for q in range(7): add(pop(), WT(1, "Marsters") - 0.2 + q * 0.08, 0.5)
 for w in ((3, "how"), (4, "eighteen"), (6, "Three"), (8, "rule"), (10, "check")): add(stamp(), WT(*w), 0.8)

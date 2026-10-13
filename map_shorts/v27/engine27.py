@@ -188,7 +188,7 @@ def kf(t, keys, logspan=False):
     return keys[-1][1]
 SC = [0.0] + [ST[i] - 0.12 for i in range(1, len(LINES))] + [TOTAL + 1]
 CUTS = SC[1:-1]
-PAL = (-163.16, -18.05); RARO = (-159.78, -21.23); ENG = (-2.0, 52.0)
+PAL = (-163.16, -18.05); RARO = (-159.77, -18.83); ENG = (-2.0, 52.0)
 CLIPS = {5: "ai_1863.mp4", 6: "ai_1863.mp4", 10: "ai_date.mp4"}
 _CF = {}
 def clip_frame(name, t0, t1, t):
@@ -201,11 +201,11 @@ def clip_frame(name, t0, t1, t):
     return Image.fromarray(fr[min(n - 1, max(0, int(k * (n - 1))))]).convert("RGBA")
 def cam_for(i, t):
     a, b = SC[i], SC[i + 1]
-    if i == 0: return kf(t, [(a, (-150, -12, 140)), (a + 1.2, (-158, -16, 60)), (WT(0, "Palmerston") - 0.2, (-163.16, -18.05, 0.6)), (b, (-163.16, -18.05, 0.32))], True)
-    if i == 1: return kf(t, [(a, (-163.16, -18.05, 0.30)), (b, (-163.16, -18.05, 0.22))])
-    if i == 2: return kf(t, [(a, (-162.2, -19.0, 10.0)), (b, (-161.6, -19.6, 7.5))])
+    if i == 0: return kf(t, [(a, (-150, -12, 140)), (WT(0, "zoom"), (-160, -17, 25)), (WT(0, "find"), (-163.16, -18.05, 1.0)), (b, (-163.16, -18.05, 0.32))], True)
+    if i == 1: return kf(t, [(a, (-163.16, -18.05, 0.30)), (WT(1, "share"), (-163.16, -18.05, 0.24)), (WT(1, "Marsters") - 0.3, (-163.17, -18.02, 0.12)), (b, (-163.17, -18.02, 0.10))], True)
+    if i == 2: return kf(t, [(a, (-161.5, -18.45, 6.0)), (b, (-161.5, -18.45, 4.8))])
     if i == 3: return kf(t, [(a, (-163.16, -18.05, 1.2)), (b, (-163.16, -18.05, 0.8))], True)
-    if i == 4: return kf(t, [(a, (-95, 18, 260)), (b, (-100, 12, 230))])
+    if i == 4: return kf(t, [(a, (-85, 15, 175)), (b, (-88, 14, 168))])
     if i in (7, 8): return kf(t, [(a, (-163.165, -18.05, 0.20)), (b, (-163.165, -18.05, 0.17))])
     if i == 9: return kf(t, [(a, (-163.18, -18.03, 0.07)), (b, (-163.18, -18.03, 0.05))])
     return (-163.16, -18.05, 0.3)
@@ -215,7 +215,16 @@ def render(t, fi):
     if i in CLIPS:
         t0 = SC[5] if i in (5, 6) else SC[10]; t1 = SC[7] if i in (5, 6) else SC[11] - 1.0
         img = clip_frame(CLIPS[i], t0, t1, t)
+        def bubble(x, y, s, k, left=True):
+            if k <= 0: return
+            f = font(POPX, 66 * k); tw = f.getlength(s)
+            dd = ImageDraw.Draw(img); x0, y0 = x - tw / 2 - 30, y - 50 * k
+            dd.rounded_rectangle((x0, y0, x0 + tw + 60, y0 + 100 * k), 30, fill=WHT, outline=BLK, width=5)
+            tx = x0 + (50 if left else tw + 10); dd.polygon([(tx, y0 + 98 * k), (tx + 40, y0 + 98 * k), (tx + (0 if left else 40), y0 + 150 * k)], fill=WHT)
+            dd.text((x, y), s, font=f, fill=BLK, anchor="mm")
         if i == 5:
+            if SC[5] + 0.3 <= t < WT(5, "cousins"): bubble(700, 760, "So... it's just us?", pop((t - SC[5] - 0.3) / 0.3), False)
+            if t >= WT(5, "cousins"): bubble(380, 860, "And my cousins!", pop((t - WT(5, "cousins")) / 0.3), True)
             if t >= WT(5, "wife"): badge(img, W / 2, 330, "WIFE #1", (200, 60, 120), pop((t - WT(5, "wife")) / 0.3), "💍", 56)
             if t >= WT(5, "cousins"): badge(img, W / 2, 470, "+2 COUSINS", (60, 120, 200), pop((t - WT(5, "cousins")) / 0.3), "🛶", 56)
         elif i == 6:
@@ -231,7 +240,7 @@ def render(t, fi):
     if i == 0:
         if sp > 0.9: pulse(img, px, py, t, SC[0] + 0.3, YEL, 140); ring(img, px, py, 46, YEL, 1.0)
         if t >= WT(0, "Palmerston"): badge(img, W / 2, 330, "PALMERSTON ISLAND", (0, 120, 200), pop((t - WT(0, "Palmerston")) / 0.3), "🇨🇰", 56)
-        big(img, "MIDDLE OF NOWHERE", t, WT(0, "middle"), 1180, 82, YEL) if t < WT(0, "zoom") + 0.6 else None
+        big(img, "MIDDLE OF NOWHERE", t, WT(0, "middle"), 560, 76, YEL) if t < WT(0, "zoom") + 0.4 else None
     elif i == 1:
         if t >= WT(1, "thirtyfive"): badge(img, W / 2, 330, "~35 PEOPLE", (30, 30, 30), pop((t - WT(1, "thirtyfive")) / 0.3), "👥", 60)
         if t >= WT(1, "Marsters") - 0.2:
@@ -242,8 +251,8 @@ def render(t, fi):
         k = ease((t - WT(2, "airport")) / 0.8)
         if k > 0:
             glow_line(img, partial([(px, py), (rx, ry)], k), WHT, 6, 0.6, dash=(24, 16), phase=t * 40)
-        if t >= WT(2, "airport"): pin(img, rx, ry, "AIRPORT", (30, 30, 30), pop((t - WT(2, "airport") - 0.4) / 0.3), "✈️", False, 46)
-        if t >= WT(2, "five"): badge(img, (px + rx) / 2 + 120, (py + ry) / 2, "~500 KM", YEL and (30, 30, 30), pop((t - WT(2, "five")) / 0.3), None, 50)
+        if t >= WT(2, "airport"): pin(img, rx, ry, "AITUTAKI", (30, 30, 30), pop((t - WT(2, "airport") - 0.4) / 0.3), "✈️", False, 46)
+        if t >= WT(2, "four"): badge(img, (px + rx) / 2, (py + ry) / 2 - 110, "~370 KM", YEL and (30, 30, 30), pop((t - WT(2, "four")) / 0.3), None, 50)
         ring(img, px, py, 40, YEL, 1.0)
         if t >= WT(2, "supply"):
             s = ease((t - WT(2, "supply")) / 2.4); paste_emoji(img, "🚢", lerp(rx, px, s), lerp(ry, py, s) - 30, 110)
@@ -271,11 +280,12 @@ def render(t, fi):
             for q in range(3):
                 ang = math.radians(-90 + q * 120 + 60)
                 badge(img, cx + math.cos(ang) * 330, cy + math.sin(ang) * 330, f"BRANCH {q + 1}", (30, 30, 30), 1.0, None, 40)
-        if i == 7 and t >= WT(7, "family"): paste_emoji(img, "👪", W / 2, 330, 150 * pop((t - WT(7, "family")) / 0.3))
+        if i == 7 and t >= WT(7, "family") and t < WT(7, "split"):
+            for q in range(6): paste_emoji(img, "👶", 190 + q * 140, 330 + (q % 2) * 70, 120 * pop((t - WT(7, "family") - q * 0.08) / 0.3))
         if i == 8:
-            big(img, "ONE RULE", t, WT(8, "rule"), 300, 120, YEL)
-            if t >= WT(8, "no"):
-                badge(img, W / 2, 1180, "NO MARRYING INSIDE YOUR BRANCH", (200, 40, 40), pop((t - WT(8, "no")) / 0.3), "❌", 40)
+            if t < WT(8, "no"): big(img, "ONE RULE", t, WT(8, "rule"), 300, 120, YEL)
+            else:
+                big(img, "NO MARRYING", t, WT(8, "no"), 260, 100, RED); paste_emoji(img, "❌", W / 2, 1180, 150 * pop((t - WT(8, "no")) / 0.3)); big(img, "INSIDE YOUR BRANCH", t, WT(8, "inside"), 380, 80, WHT)
     elif i == 9:
         for word, emo, x, y in (("fish", "🐟", 300, 700), ("farm", "🌴", 780, 760), ("ship", "🚢", 540, 1150)):
             if t >= WT(9, word): paste_emoji(img, emo, x, y + math.sin(t * 4) * 8, 150 * pop((t - WT(9, word)) / 0.3))

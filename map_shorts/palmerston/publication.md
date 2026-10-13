@@ -7,7 +7,7 @@ The Island Where Everyone Has the Same Surname 🏝️🤯 Palmerston Island
 Backup: One Family Owns This Entire Island 🏝️
 
 ## Description
-Palmerston Island is a tiny atoll in the Cook Islands 🇨🇰 About 35 people live here, and almost all of them share one surname: Marsters. The nearest airport is around 500 km away and the supply ship comes only a few times a year 🚢
+Palmerston Island is a tiny atoll in the Cook Islands 🇨🇰 About 35 people live here, and almost all of them share one surname: Marsters. The nearest airport, on Aitutaki, is almost 400 km away and the supply ship comes only a few times a year 🚢
 
 It started in 1863, when Englishman William Marsters arrived to run a coconut plantation 🥥 with his Polynesian wife, soon joined by two of her cousins. He raised a huge family, split the island into three parts, one for each branch, and set one rule: no marrying inside your own branch. His descendants still live there today 🐟🌴
 
@@ -28,7 +28,7 @@ Category: Education. Not made for kids. Altered or synthetic content: Yes (AI vo
 
 ## Fact notes (hedged in script)
 - Population ~35 in recent Cook Islands censuses (varies). Most residents are Marsters descendants.
-- Nearest airport: Rarotonga ~500 km (also Aitutaki/others similar distance); supply ships infrequent.
+- Nearest airport: Aitutaki ~370 km (great-circle); Rarotonga ~500 km. Supply ships infrequent.
 - William Marsters arrived 1863 as caretaker of a coconut plantation; Polynesian wife from Penrhyn plus her relatives (commonly told as three wives). Island divided among three family branches; rule against marrying within one's branch is the traditional account.
 
 ## Costs
