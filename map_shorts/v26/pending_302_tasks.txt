@@ -1,0 +1,10 @@
+Kling v3 turbo pro i2v tasks submitted via 302.ai before balance ran out (fetch after top-up):
+ai_checkout 4298376d084c4578bcf5d1c6ee7d07e6
+ai_bill fc83447cf9b045e69db6c808e2c02102
+ai_steward f09a0462d77d4fdb9e7109b1b129af6d
+ai_cocktails f7619bc69b474d72bef0178f1f56d397
+ai_wifi bde9d2914baa4f2ebdacdafb3676b149
+ai_tender 28ba8899b1c84c9d98fd19331138de49
+ai_hotel 9a788f3668aa427dbf59a316116b425b
+ai_shock 129fe804561a4e4e996d85e0b78e3822
+Next: Hailuo 2.3 Fast 768p test (0.20 $) on ai_cocktails.jpg.
