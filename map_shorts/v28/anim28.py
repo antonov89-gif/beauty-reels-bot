@@ -226,9 +226,9 @@ def map_anim(img, cam, i, t, lt):
 CARD_ICONS = {10: ["📈", "🚫", "👷"], 31: ["💸", "🐢", "🎯"], 36: ["⛽", "🌾", "🚢"], 37: ["🚪", "👇"]}
 
 
-def screen_anim(img, i, t, lt):
+def screen_anim(img, i, t, lt, on_clip=False):
     sc = S[i][1]; w = lambda word: WT(i, word)
-    if sc["t"] == "card" and i in CARD_ICONS:
+    if sc["t"] == "card" and i in CARD_ICONS and not on_clip:
         n = len(sc["lines"]); y0 = H / 2 - (n - 1) * 110
         for q, ch in enumerate(CARD_ICONS[i]):
             k = pop((lt - 0.4 - q * 0.7) / 0.35)
@@ -236,14 +236,14 @@ def screen_anim(img, i, t, lt):
                 f = font(POPX, 110); tw = min(f.getlength(sc["lines"][q]), W - 160)
                 paste_emoji(img, ch, W / 2 - tw / 2 - 110, y0 + q * 220 + math.sin(t * 3 + q) * 6, 110 * k)
                 paste_emoji(img, ch, W / 2 + tw / 2 + 110, y0 + q * 220 + math.cos(t * 3 + q) * 6, 110 * k)
-    if sc["t"] == "bar":
+    if sc["t"] == "bar" and not on_clip:
         icons = ("🛢️", "🛢️") if i == 19 else ("🚢", "🚆")
         for q in range(2):
             k = ease((lt - 0.4 - q * 0.6) / 1.2)
             if k > 0.05:
                 cx = W / 2 + (-330 if q == 0 else 330)
                 epop(img, icons[q], cx, H - 230 + 140, t, SC[i] + 0.4 + q * 0.6, 90)
-    if sc["t"] == "count":
+    if sc["t"] == "count" and not on_clip:
         if i == 8:
             ev_safe(lambda: stamp(img, "CLOSED", t, w("closed"), W * 0.78, H * 0.30, RED, 110))
         if i in (16, 18):
@@ -256,6 +256,11 @@ def screen_anim(img, i, t, lt):
             for q in range(3):
                 x = lerp(-200, 560 + q * 400, ease((lt - 0.3 - q * 0.4) / 0.8)); paste_emoji(img, "🚆", x, 260, 150)
     if "clip" in sc:
+        if i == 12: ev_safe(lambda: slam(img, "ALREADY PAST THE STRAIT", t, w("past"), H * 0.78 - 60, 90, GRN, 2.6))
+        if i == 0: ev_safe(lambda: slam(img, "SO NARROW...", t, w("narrow"), H * 0.78 - 60, 100, WHT, 2.4))
+        if i == 9:
+            ev_safe(lambda: slam(img, "CEASEFIRE", t, w("ceasefire"), H * 0.25, 110, GRN, 1.4)); ev_safe(lambda: slam(img, "FIGHTING AGAIN", t, w("fighting"), H * 0.25, 110, RED, 2.0))
+        if i == 35: ev_safe(lambda: epop(img, "🚪", W * 0.75, H * 0.35, t, w("door"), 150))
         if i == 20:
             for q, (word, ch) in enumerate((("food", "🍎"), ("medicine", "💊"), ("cars", "🚗"), ("machines", "⚙️"))):
                 ev_safe(lambda: epop(img, ch, 420 + q * 360, H * 0.42, t, w(word), 140))

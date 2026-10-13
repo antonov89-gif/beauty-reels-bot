@@ -1,5 +1,5 @@
 """Hormuz bypass long-form 16:9 map video. python3 engine28.py still N.. | info | prefetch | video A B out.mp4"""
-import json, math, subprocess, sys
+import json, math, os, subprocess, sys
 import numpy as np
 import shapefile
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
@@ -160,7 +160,7 @@ def cam_for(i, t):
     lo, la, z = sc["lon"], sc["lat"], sc["z"]
     k = ease((t - a) / max(1.0, b - a))
     if i == 0:
-        kk = ease((t - a) / 5.0); zz = math.exp(lerp(math.log(z * 5), math.log(z), kk)); return lo, la, zz
+        kk = ease((t - a - 5.3) / 4.5); zz = math.exp(lerp(math.log(z * 5), math.log(z), kk)); return lo, la, zz
     dur = b - a; mk = [m for m in sc.get("mark", []) if m in P]
     if dur > 7.5 and mk and not sc.get("route") and mk[-1] != "hormuz":
         tx, ty = P[mk[-1]][0], P[mk[-1]][1]
@@ -251,23 +251,31 @@ def clip_img(name, k):
     return Image.open(f"clips/{name}/{idx:04d}.jpg").convert("RGBA")
 
 
-def render(t, fi):
-    i = max(j for j in range(N) if SC[j] <= t) if t >= 0 else 0
-    lt = t - SC[i]; sc = S[i][1]
+def base_render(i, t, lt, sc):
     if sc["t"] in ("count", "bar", "card"):
         img = {"count": scene_count, "bar": scene_bar, "card": scene_card}[sc["t"]](i, t, lt)
         screen_anim(img, i, t, lt); return img
-    if "clip" in sc:
-        cn, fr = sc["clip"]; ts = SC[i] + (SC[i + 1] - SC[i]) * fr
-        if t >= ts:
-            im = clip_img(cn, t - ts); z = 1.0 + 0.04 * ease((t - ts) / 8.0)
-            if z > 1.001: im = im.resize((int(W * z), int(H * z)), Image.BILINEAR).crop((int(W * (z - 1) / 2), int(H * (z - 1) / 2), int(W * (z - 1) / 2) + W, int(H * (z - 1) / 2) + H))
-            a = ease((t - ts) / 0.5)
-            if a < 1: base = render_map(i, t, lt, sc); im = Image.blend(base, im, a)
-            if sc.get("label"): label_banner(im, "ILLUSTRATIVE STOCK FOOTAGE", 1)
-            screen_anim(im, i, t, lt)
-            return im
     return render_map(i, t, lt, sc)
+
+
+def render(t, fi):
+    i = max(j for j in range(N) if SC[j] <= t) if t >= 0 else 0
+    lt = t - SC[i]; sc = S[i][1]
+    if "clip" in sc:
+        cn, f0 = sc["clip"][0], sc["clip"][1]; f1 = sc["clip"][2] if len(sc["clip"]) > 2 else 1.0
+        ts = SC[i] + (SC[i + 1] - SC[i]) * f0; te = SC[i] + (SC[i + 1] - SC[i]) * f1
+        if ts <= t < te + (0.0 if f1 >= 1.0 else 0.4):
+            nfr = len(os.listdir(f"clips/{cn}")); rate = min(1.0, max(0.55, nfr / 30 / max(0.5, te - ts)))
+            im = clip_img(cn, (t - ts) * rate)
+            z = 1.0 + 0.05 * ease((t - ts) / 8.0)
+            im = im.resize((int(W * z), int(H * z)), Image.BILINEAR).crop((int(W * (z - 1) / 2), int(H * (z - 1) / 2), int(W * (z - 1) / 2) + W, int(H * (z - 1) / 2) + H))
+            a = 1.0 if f0 == 0.0 else ease((t - ts) / 0.4)
+            if f1 < 1.0 and t > te: a = 1 - ease((t - te) / 0.4)
+            if a < 1: im = Image.blend(base_render(i, t, lt, sc), im, a)
+            label_banner(im, "AI-GENERATED ILLUSTRATION" if cn.startswith("ai_") else "ILLUSTRATIVE STOCK FOOTAGE", 1)
+            screen_anim(im, i, t, lt, True)
+            return im
+    return base_render(i, t, lt, sc)
 
 
 def render_map(i, t, lt, sc):
