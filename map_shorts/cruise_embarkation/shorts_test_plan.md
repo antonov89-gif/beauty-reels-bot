@@ -16,3 +16,11 @@ Fare -> taxes and port fees -> gratuities -> drinks -> Wi-Fi -> excursions; a co
 
 ## If they work: long video 12-15 min
 "17 Embarkation Day Mistakes" is scripted, voiced (9:21) and has graphics; extend with a money section (cost breakdown) and a geography section (where ships are registered, the busiest cruise ports on a map) to reach 12-15 min and fit the channel.
+
+## Short 3 (DONE): Your $499 Cruise Really Costs $1,500 (46 s) - Cruise Insider style
+File /home/claude/v26/cruise_real_cost.mp4. Real-looking footage only (8 Kling v3 turbo pro clips via 302.ai + Pexels/Mixkit stock), cut on words, yellow sticky #1-#5, white rule headers, running cost counter.
+Title: Your $499 Cruise Really Costs $1,500 😳💸
+Description: That cheap cruise fare is just the start: taxes and port fees, gratuities, drinks, Wi-Fi, excursions and the hotel the night before. Typical example for a 7-night cruise; prices vary by cruise line. #shorts #cruise #cruisetips #money #travel
+Pinned comment: Which cost surprised you most? 1-5 👇
+Altered or synthetic content: Yes (AI voice, AI-generated scenes).
+Model test: Hailuo 2.3 Fast 768p 6 s (0.20 $) passes on a neutral scene, but MiniMax moderation rejected the cocktail scene; Kling accepted it.

@@ -10,11 +10,13 @@ STOCK = "/home/claude/v25/clips/"
 YEL, WHT, BLK, INK, GRN, RED = (255, 213, 0), (255, 255, 255), (0, 0, 0), (20, 20, 20), (70, 220, 120), (255, 80, 70)
 def clean(w): return "".join(c for c in w.lower() if c.isalnum())
 def WT(i, w, n=1):
-    ws = [clean(x) for x in LINES[i].split()]; c = 0
-    for j, x in enumerate(ws):
-        if x == clean(w) or clean(w) in x:
-            c += 1
-            if c == n: return ST[i] + TW[i][j]
+    ws = [clean(x) for x in LINES[i].split()]
+    for test in (lambda x: x == clean(w), lambda x: clean(w) in x):
+        c = 0
+        for j, x in enumerate(ws):
+            if test(x):
+                c += 1
+                if c == n: return ST[i] + TW[i][j]
     raise KeyError(w)
 CUTS = [  # (time, clip)
  (0.0, "departing_aerial"), (WT(0, "Here's") - 0.1, "ai_checkout"),
@@ -24,7 +26,7 @@ CUTS = [  # (time, clip)
  (ST[4] - 0.1, "ai_wifi"), (WT(4, "Roughly") - 0.1, "phone_typing"), (WT(4, "if") - 0.1, "ocean_cruise"),
  (ST[5] - 0.1, "ai_tender"), (WT(5, "and") - 0.1, "ai_hotel"), (WT(5, "so") - 0.1, "boarding2"),
  (ST[6] - 0.1, "ai_shock"),
- (ST[7] - 0.1, "aerial_lux"), (WT(7, "budget") - 0.1, "card_terminal"), (WT(7, "Which") - 0.1, "balcony_sunset"),
+ (ST[7] - 0.1, "aerial_lux"), (WT(7, "budget") - 0.1, "credit_laptop"), (WT(7, "Which") - 0.1, "balcony_sunset"),
 ]
 ITEMS = {1: (1, "TAXES & PORT FEES"), 2: (2, "GRATUITIES"), 3: (3, "DRINKS"), 4: (4, "WI-FI"), 5: (5, "EXCURSIONS + HOTEL")}
 ADDS = [(WT(1, "hundred"), 150), (WT(2, "hundred"), 126), (WT(3, "hundred"), 200), (WT(4, "twenty"), 140), (WT(5, "excursions"), 200), (WT(5, "hotel"), 150)]
@@ -102,7 +104,7 @@ def overlay(t):
         for ta, a in ADDS:
             if 0 <= t - ta < 1.3:
                 q = (t - ta) / 1.3
-                d.text((W / 2 + 300, 432 - 60 * q), f"+${a}", font=font(BX, 64), fill=RED + (int(255 * (1 - q * q)),), anchor="mm", stroke_width=6, stroke_fill=(0, 0, 0, int(200 * (1 - q * q))))
+                d.text((W / 2, 560 + 40 * q), f"+${a}", font=font(BX, 64), fill=RED + (int(255 * (1 - q * q)),), anchor="mm", stroke_width=6, stroke_fill=(0, 0, 0, int(200 * (1 - q * q))))
     else:
         kk = back((t - ST[6] + 0.1) / 0.45) if i == 6 else 1.0
         d.rounded_rectangle((W / 2 - 300, 350, W / 2 + 300, 520), 30, fill=(10, 10, 10, 200))
