@@ -12,11 +12,11 @@
 - **OmniRoute** v3.8.48 (`npm i -g omniroute`) — установлен, но **не запущен и не подключён**: если направить Claude Code на него (`ANTHROPIC_BASE_URL`), запросы и код уйдут сторонним бесплатным провайдерам и вместо Claude будут отвечать другие модели. Включать осознанно и только на своём компьютере.
 - **Playwright MCP** и **Firecrawl MCP** — добавлены в `.mcp.json` по решению владельца (2026-10-04). Playwright без ключей (`@playwright/mcp`); Firecrawl требует `FIRECRAWL_API_KEY` в окружении, без него не стартует. Оба при первом запуске Claude Code ждут подтверждения (`/mcp`). У бота нет веб-интерфейса, так что практической пользы мало.
 - **gstack** (Гэри Тан, github.com/garrytan/gstack, MIT) — ~55 слэш-скиллов роли «команды инженеров» (`/office-hours`, `/plan-ceo-review`, `/review`, `/qa`, `/ship`, `/cso` и др.). Поставлен 2026-10-13 в `~/.claude/skills/gstack` командой `./setup --no-browser` (телеметрия по умолчанию выключена). В облаке не сохраняется между сессиями. Для бота полезны `/review`, `/qa`, `/cso` (аудит безопасности), `/ship`; iOS-, дизайн- и Supabase-скиллы не нужны.
+- **OpenMontage** (ИИ-видеопродакшн, github.com/calesthio/OpenMontage) — установлен 2026-10-13 в `~/OpenMontage` (`make setup`: Python-venv, Remotion, Piper TTS, HyperFrames; `.env` создан без ключей). Проверка: `make demo` запускает рендер Remotion. Работает как отдельный проект: открыть Claude Code **в папке OpenMontage** и описать видео. Без ключей — бесплатная озвучка Piper и стоковые футажи; облачные генераторы (Kling, Veo, FLUX) требуют ключей в `.env`. В облаке не сохраняется между сессиями.
 - **База знаний `kb/`** (этот wiki) — паттерн raw / wiki / output, совместим с Obsidian.
 
 ## Отложено / не ставим
 
-- **OpenMontage** (ИИ-видеопродакшн, github.com/calesthio/OpenMontage) — полезен для генерации рилсов, но ставить локально: в облаке YouTube и сервисы генерации заблокированы сетью.
 - **claude-mem**, **find-skills** — дублируют ECC.
 - **AnyDoc** — не нужен, встроенные скиллы читают docx/xlsx/pptx.
 - **Strix** — ИИ-пентестер веб-приложений (нужны Docker и ключ LLM); у бота нет веб-интерфейса, только health-check.
