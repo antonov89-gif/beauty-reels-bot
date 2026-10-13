@@ -49,6 +49,20 @@ for i, (_, sc) in enumerate(S):
         add(stamp(), SC[i] + 0.4, 0.7)
         for q in range(len(sc.get("lines", []))): add(pop(), SC[i] + 0.4 + q * 0.7, 0.8)
     if "clip" in sc: add(whoosh(0.4), SC[i] + (SC[i + 1] - SC[i]) * sc["clip"][1] - 0.1, 0.4)
+
+EV_POP = [(0, "oil"), (2, "country"), (2, "desert"), (2, "mountains"), (3, "Saudi"), (3, "Iraq"), (3, "Kuwait"), (3, "Qatar"), (3, "Emirates"), (3, "bottle"),
+          (7, "China"), (7, "India"), (7, "Japan"), (7, "Korea"), (9, "agree"), (12, "Fujairah"), (13, "bottleneck"), (17, "built"), (20, "food"), (20, "medicine"),
+          (20, "cars"), (20, "machines"), (21, "behind"), (23, "Oman"), (23, "Sohar"), (23, "Duqm"), (26, "Industrial"), (28, "not"), (28, "map"), (29, "tunnels"),
+          (29, "bridges"), (29, "cuttings"), (30, "Saudi"), (30, "Iran"), (30, "helped"), (32, "weakness"), (32, "missile"), (35, "door")]
+EV_SLAM = [(0, "fifth"), (1, "shut"), (5, "few"), (8, "closed"), (9, "ceasefire"), (9, "fighting"), (12, "past"), (15, "2012"), (17, "expected"),
+           (21, "biggest"), (26, "two"), (34, "insurance"), (35, "fifth")]
+for w in EV_POP:
+    try: add(pop(), E.WT(*w), 0.7)
+    except KeyError: print("miss", w)
+for w in EV_SLAM:
+    try: add(stamp(), E.WT(*w), 0.75)
+    except KeyError: print("miss", w)
+add(whoosh(0.8), E.WT(4, "thirtythree"), 0.5); add(whoosh(1.0), E.WT(14, "crow"), 0.5)
 sf.write("sfx.wav", sfx, SR)
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", "lumean/result.mp3", "-ar", str(SR), "-ac", "1", "voice_44.wav"], check=True)
 a, _ = sf.read("voice_44.wav"); v = np.zeros(N); i0 = int(E.LEAD * SR); e = min(N, i0 + len(a)); v[i0:e] = a[:e - i0]

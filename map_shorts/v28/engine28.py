@@ -201,8 +201,15 @@ def scene_count(i, t, lt):
     while f.getlength(txt) > W - 160: f = font(POPX, f.size * 0.92)
     sl = 1.0 + 0.04 * math.sin(lt * 3)
     if "ships" in sc["fmt"]:
-        nshow = max(1, int(round(v / 5)))
-        for q in range(nshow): paste_emoji(img, "🚢", 330 + (q % 10) * 140, 190 + (q // 10) * 130, 100 * pop((lt - 0.2 - q * 0.04) / 0.25))
+        if sc.get("down"):
+            gone = ease((lt - 0.8) / 2.0)
+            for q in range(19):
+                x, y = 330 + (q % 10) * 140, 190 + (q // 10) * 130
+                if q < 2: paste_emoji(img, "🚢", x, y, 100)
+                elif gone < 1: paste_emoji(img, "🚢", x, y + gone * 400 * (0.5 + (q % 3) * 0.3), 100 * (1 - gone))
+        else:
+            nshow = max(1, int(round(v / 5)))
+            for q in range(nshow): paste_emoji(img, "🚢", 330 + (q % 10) * 140, 190 + (q // 10) * 130, 100 * pop((lt - 0.2 - q * 0.04) / 0.25))
     text_stroke(d, (W / 2, H / 2 + 120), txt, f, col, stroke=10)
     text_stroke(d, (W / 2, H / 2 + 260), sc["sub"].upper(), font(POP, 46), WHT, stroke=5)
     return img
@@ -247,9 +254,9 @@ def clip_img(name, k):
 def render(t, fi):
     i = max(j for j in range(N) if SC[j] <= t) if t >= 0 else 0
     lt = t - SC[i]; sc = S[i][1]
-    if sc["t"] == "count": return scene_count(i, t, lt)
-    if sc["t"] == "bar": return scene_bar(i, t, lt)
-    if sc["t"] == "card": return scene_card(i, t, lt)
+    if sc["t"] in ("count", "bar", "card"):
+        img = {"count": scene_count, "bar": scene_bar, "card": scene_card}[sc["t"]](i, t, lt)
+        screen_anim(img, i, t, lt); return img
     if "clip" in sc:
         cn, fr = sc["clip"]; ts = SC[i] + (SC[i + 1] - SC[i]) * fr
         if t >= ts:
@@ -258,6 +265,7 @@ def render(t, fi):
             a = ease((t - ts) / 0.5)
             if a < 1: base = render_map(i, t, lt, sc); im = Image.blend(base, im, a)
             if sc.get("label"): label_banner(im, "ILLUSTRATIVE STOCK FOOTAGE", 1)
+            screen_anim(im, i, t, lt)
             return im
     return render_map(i, t, lt, sc)
 
@@ -293,6 +301,7 @@ def render_map(i, t, lt, sc):
             pts = smooth(ipath(cam, r)) if rt == "asia" else ipath(cam, r)
             if rt == "asia": arrow(img, partial(pts, kk), col, 1.0, 12) if kk > 0 else None
             else: glow_line(img, partial(pts, kk), col, 10, 0.8, dash=(26, 16) if rt in ("pipe", "pipe2", "all") else None, phase=t * 60)
+    map_anim(img, cam, i, t, lt)
     if sc.get("label"): label_banner(img, sc["label"], (lt - 0.1) / 0.5)
     if rt and rt not in ("crow", "asia"):
         ImageDraw.Draw(img).text((W - 40, H - 150), "Routes simplified", font=font(POP, 26), fill=(255, 255, 255, 200), anchor="rm", stroke_width=3, stroke_fill=BLK)
@@ -326,6 +335,14 @@ GRAIN = np.random.default_rng(3).normal(0, 2.5, (H + 256, W + 256, 1)).astype(np
 def frame(fi):
     t = fi / FPS
     img = render(t, fi)
+    i0 = max(j for j in range(N) if SC[j] <= t) if t >= 0 else 0; lt0 = t - SC[i0]
+    if i0 > 0 and lt0 < 0.35:
+        z = 1.0 + 0.12 * (1 - ease(lt0 / 0.35))
+        img = img.resize((int(W * z), int(H * z)), Image.BILINEAR).crop((int(W * (z - 1) / 2), int(H * (z - 1) / 2), int(W * (z - 1) / 2) + W, int(H * (z - 1) / 2) + H))
+    for st in SHAKE_T:
+        if 0 <= t - st < 0.4:
+            a = (1 - (t - st) / 0.4) * 16; dx, dy = int(math.sin(fi * 2.3) * a), int(math.cos(fi * 3.1) * a)
+            img = img.transform(img.size, Image.AFFINE, (1, 0, -dx, 0, 1, -dy), fillcolor=(0, 0, 0, 255))
     for ct in CUTS:
         if 0 <= t - ct < 0.15:
             a = 1 - (t - ct) / 0.15
@@ -337,6 +354,13 @@ def frame(fi):
     gy, gx = (fi * 37) % 256, (fi * 91) % 256
     rgb += GRAIN[gy:gy + H, gx:gx + W]
     return Image.fromarray(np.clip(rgb, 0, 255).astype(np.uint8))
+
+
+exec(open("anim28.py").read())
+SHAKE_T = []
+for _i, _w in ((1, "shut"), (8, "closed")):
+    try: SHAKE_T.append(WT(_i, _w))
+    except KeyError: pass
 
 
 if __name__ == "__main__":
