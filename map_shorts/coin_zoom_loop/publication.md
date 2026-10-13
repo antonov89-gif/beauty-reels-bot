@@ -1,7 +1,7 @@
 # Short (24 s perfect loop, 9:16): Infinite zoom into a €1 coin
 Format inspired by infinite-zoom loop Shorts (e.g. SezCreate). Own art, own maps, own music; only the format is borrowed.
 Chain: hand with €1 coin → the map on the coin → Europe (21 euro countries) → Switzerland (uses the franc) → Zurich → Paradeplatz → hatch → vault door → gold bars → the stamp on the bar shows the hand with the coin → loop.
-File: /home/claude/v29/coin_zoom_loop.mp4 (1080x1920, 24.0 s, loops seamlessly in picture and sound).
+Final file: coin_zoom_pro.mp4 (1080x1920, 24.0 s, reference style: real photo of a hand + clean vector levels, no captions). Older satellite version: coin_zoom_loop.mp4.
 
 ## Title (pick one)
 1. I zoomed into a €1 coin… 🤯🪙
@@ -22,7 +22,7 @@ How many loops did you watch? 👇
 
 #shorts #geography #money #euro #switzerland #zurich #gold #infinitezoom #loop #maps
 
-Credits: Satellite imagery Esri World Imagery (Esri, Maxar, Earthstar Geographics). Borders: Natural Earth. Art, animation and music: original (synthesised), no AI generation used.
+Credits: Borders and lakes: Natural Earth. Opening photo of the hand and coin: AI-generated (Seedream 4.5 via 302.ai). Vector art, animation and music: original.
 
 ## Tags
 infinite zoom, zoom loop, euro coin, 1 euro, eurozone, switzerland, swiss franc, zurich, paradeplatz, gold bar, gold vault, geography, money, maps, satisfying loop
@@ -31,7 +31,7 @@ infinite zoom, zoom loop, euro coin, 1 euro, eurozone, switzerland, swiss franc,
 Where should the next coin zoom go: 🇺🇸 dollar, 🇯🇵 yen or 🇬🇧 pound? 👇
 
 ## Settings
-Category Education. Not made for kids. Altered or synthetic content: No (no AI-generated realistic people or events; animated illustration).
+Category Education. Not made for kids. Altered or synthetic content: Yes (the opening hand photo is AI-generated).
 
 ## Fact sources
 - Bulgaria 21st euro member, 1 Jan 2026: ECB press release https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr260101~c830245e42.en.html
