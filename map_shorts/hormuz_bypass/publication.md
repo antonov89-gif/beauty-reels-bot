@@ -1,4 +1,4 @@
-# Long video (5:20, 16:9): How the UAE Is Building a Backup Road Around the Strait of Hormuz
+# Long video (5:22, 16:9): How the UAE Is Building a Backup Road Around the Strait of Hormuz
 Idea source: a 2026 Russian-language documentary on the same topic (used only as topic inspiration; own research, script, maps).
 File: /home/claude/v28/hormuz_bypass.mp4 (1920x1080, ~5:22). Map: NASA GIBS Blue Marble + Esri World Imagery, Natural Earth borders.
 
