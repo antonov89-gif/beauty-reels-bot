@@ -11,6 +11,7 @@
 - **Graphify** — `pip install graphifyy` + `graphify install --platform claude`; граф знаний по коду (`/graphify .`). Для проекта на один файл пока малополезен.
 - **OmniRoute** v3.8.48 (`npm i -g omniroute`) — установлен, но **не запущен и не подключён**: если направить Claude Code на него (`ANTHROPIC_BASE_URL`), запросы и код уйдут сторонним бесплатным провайдерам и вместо Claude будут отвечать другие модели. Включать осознанно и только на своём компьютере.
 - **Playwright MCP** и **Firecrawl MCP** — добавлены в `.mcp.json` по решению владельца (2026-10-04). Playwright без ключей (`@playwright/mcp`); Firecrawl требует `FIRECRAWL_API_KEY` в окружении, без него не стартует. Оба при первом запуске Claude Code ждут подтверждения (`/mcp`). У бота нет веб-интерфейса, так что практической пользы мало.
+- **gstack** (Гэри Тан, github.com/garrytan/gstack, MIT) — ~55 слэш-скиллов роли «команды инженеров» (`/office-hours`, `/plan-ceo-review`, `/review`, `/qa`, `/ship`, `/cso` и др.). Поставлен 2026-10-13 в `~/.claude/skills/gstack` командой `./setup --no-browser` (телеметрия по умолчанию выключена). В облаке не сохраняется между сессиями. Для бота полезны `/review`, `/qa`, `/cso` (аудит безопасности), `/ship`; iOS-, дизайн- и Supabase-скиллы не нужны.
 - **База знаний `kb/`** (этот wiki) — паттерн raw / wiki / output, совместим с Obsidian.
 
 ## Отложено / не ставим
