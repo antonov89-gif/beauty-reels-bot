@@ -60,6 +60,7 @@ Write each vidIQ prompt as: core theme, subject and scene, atmosphere and qualit
 - Variants and covers live in `map_shorts/thumbnails/`.
 
 ## 8. Safety and housekeeping
+- **Paid generation (302.ai, vidIQ AI video, Higgsfield, etc.): always ask the user first**, with what will be generated and the estimated cost. Never spend without a yes, including test calls.
 - Never commit API keys (`.lumean_key` is gitignored). Never put the user's email into any file or request.
 - Do not create pull requests unless asked. Commit and push to the working branch with the required trailers.
 - `.mp4` files are gitignored on purpose. Send videos through the chat, not git.
