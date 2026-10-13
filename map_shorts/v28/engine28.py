@@ -161,6 +161,12 @@ def cam_for(i, t):
     k = ease((t - a) / max(1.0, b - a))
     if i == 0:
         kk = ease((t - a) / 5.0); zz = math.exp(lerp(math.log(z * 5), math.log(z), kk)); return lo, la, zz
+    dur = b - a; mk = [m for m in sc.get("mark", []) if m in P]
+    if dur > 7.5 and mk and not sc.get("route") and mk[-1] != "hormuz":
+        tx, ty = P[mk[-1]][0], P[mk[-1]][1]
+        k1 = ease((t - a) / (dur * 0.5)); k2 = ease((t - a - dur * 0.55) / 2.5)
+        zz = math.exp(lerp(math.log(z * 1.15), math.log(z), k1)); zz = math.exp(lerp(math.log(zz), math.log(z * 0.62), k2))
+        return lerp(lo, lerp(lo, tx, 0.6), k2), lerp(la, lerp(la, ty, 0.6), k2), zz
     zz = math.exp(lerp(math.log(z * 1.18), math.log(z * 0.94), k))
     return lo + 0.02 * z * (k - 0.5), la, zz
 
@@ -187,7 +193,7 @@ def bg_dark(t):
 
 def scene_count(i, t, lt):
     sc = S[i][1]; img = bg_dark(t); d = ImageDraw.Draw(img)
-    k = ease((lt - 0.3) / 1.8); v = sc["value"] * k
+    k = ease((lt - 0.3) / 1.8); v = sc["value"] * k if sc["value"] > 10 or sc.get("dec") else sc["value"]
     s = (f"{v:.{sc.get('dec', 0)}f}" if sc.get("dec") else f"{int(round(v)):,}")
     txt = sc["fmt"].replace("{:,}", s).replace("{:.1f}", s)
     col = RED if sc.get("down") else YEL
@@ -214,6 +220,7 @@ def scene_bar(i, t, lt):
             vt = (f"{int(v):,}" if v >= 1 else f"{v}") 
             text_stroke(d, (cx, base - h - 48), vt, font(POPX, 64), WHT, stroke=6)
         text_stroke(d, (cx, base + 62), lab, font(POP, 40), WHT, stroke=5)
+    if sc.get("unit"): text_stroke(d, (W / 2, 120), sc["unit"], font(POPX, 54), YEL, stroke=6)
     return img
 
 
@@ -263,6 +270,10 @@ def render_map(i, t, lt, sc):
         if tag in sc["mark"]: hl_country(img, cam, nm, (255, 200, 0) if tag != "asia" else (255, 120, 60), 0.28 * ease(lt / 1.0))
     if "lanes" in sc["mark"]:
         for q, ln in enumerate(LANES): glow_line(img, partial(smooth(ipath(cam, ln)), ease((lt - 0.4 - q * 0.4) / 1.4)), WHT, 7, 0.6, dash=(30, 18), phase=t * 50)
+    if "gulfcoast" in sc["mark"] and lt > 1.0:
+        dd = ImageDraw.Draw(img); f = font(POPX, 52)
+        x, y = cam.xy(54.6, 25.25); text_stroke(dd, (x, y), "INSIDE THE GULF", f, RED, stroke=7)
+        x, y = cam.xy(57.0, 25.0); text_stroke(dd, (x, y), "OUTSIDE", f, GRN, stroke=7) if lt > 2.0 else None
     if "gulf" in sc["mark"]:
         cx, cy = cam.xy(51.5, 27.0); f = font(POPX, 80)
         text_stroke(ImageDraw.Draw(img), (cx, cy), "PERSIAN GULF", f, WHT, stroke=7)
@@ -271,7 +282,7 @@ def render_map(i, t, lt, sc):
         if key in P:
             x, y = cam.xy(P[key][0], P[key][1])
             if key == "hormuz": pulse(img, x, y, t, SC[i] + 0.5, RED, 100)
-            pin(img, x, y, P[key][2], P[key][3], pop((lt - 0.5 - q * 0.35) / 0.3), up=(key not in ("jebel", "khalifa", "icad", "dubai")), size=44)
+            pin(img, x, y, P[key][2], P[key][3], pop((lt - 0.5 - q * 0.35) / 0.3), up=(key not in ("khalifa", "icad", "dubai", "ruwais")), size=44)
             q += 1
     rt = sc.get("route")
     if rt:

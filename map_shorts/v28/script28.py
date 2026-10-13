@@ -43,7 +43,7 @@ S = [
  ("Together, the two lines could carry roughly three million barrels a day around the strait, depending on whom you ask.",
   dict(t="count", value=3, fmt="~{:,}+ million bpd", sub="both pipelines, estimates vary")),
  ("Still, that is not the whole story. Before the war, nearly twenty million barrels a day went through Hormuz. A pipeline can only cover a part of that.",
-  dict(t="bar", a=20, b=3, la="THROUGH HORMUZ", lb="BYPASS")),
+  dict(t="bar", a=20, b=3, la="THROUGH HORMUZ", lb="BYPASS", unit="MILLION BARRELS A DAY")),
  # ---- containers
  ("But oil is only half of the problem. Everything else gets shipped in containers: food, medicine, cars, machines.",
   dict(clip=("port", 0.45), t="map", lon=55.2, lat=25.2, z=3.2, mark=["jebel", "fujairah", "khor"], label="CONTAINER PORTS")),
@@ -52,7 +52,7 @@ S = [
  ("So the cargo has started to move to the ports on the eastern coast, like Fujairah and Khor Fakkan, which belongs to the emirate of Sharjah.",
   dict(t="map", lon=56.3, lat=25.3, z=1.8, mark=["fujairah", "khor"], label="EAST COAST PORTS")),
  ("Oman, which owns the southern shore of the strait, also has ports outside it, like Sohar and Duqm. They have become part of the same escape plan.",
-  dict(t="map", lon=57.0, lat=23.0, z=9.0, mark=["sohar", "duqm"], label="OMAN'S PORTS")),
+  dict(t="map", lon=57.2, lat=22.0, z=12.0, mark=["sohar", "duqm"], label="OMAN'S PORTS")),
  ("One report says Khor Fakkan jumped from about two thousand containers a week to fifty thousand. Another gives different numbers, but both point the same way: up, and fast.",
   dict(t="count", value=50000, fmt="~{:,} containers / week", sub="Khor Fakkan (one report, other figures differ)")),
  # ---- rail
@@ -69,14 +69,14 @@ S = [
   dict(t="map", lon=56.2, lat=24.9, z=1.8, mark=["hajar"], label="HAJAR MOUNTAINS")),
  # ---- other
  ("The Emirates are not alone. Saudi Arabia sends oil west to the Red Sea through its East-West pipeline. Iran built a pipeline to Jask, but reports say it has not helped much.",
-  dict(t="map", lon=48.0, lat=25.5, z=22.0, mark=["saudi", "jask"], route="saudi", label="OTHER BYPASSES")),
+  dict(t="map", lon=48.0, lat=25.5, z=22.0, mark=["saudi", "yanbu", "jask"], route="saudi", label="OTHER BYPASSES")),
  # ---- caveats
  ("It is important to be honest here. These routes cost more, they are slower, and they can be attacked too. Nobody expects them to replace the sea.",
   dict(t="card", lines=["MORE EXPENSIVE", "SLOWER", "STILL VULNERABLE"])),
  ("And a pipeline has another weakness. It is a fixed line on the map. It cannot swerve around a missile.",
   dict(t="map", lon=55.0, lat=24.0, z=7.0, mark=["habshan", "fujairah"], route="pipe", label="FIXED LINES")),
  ("A ship carries thousands of containers at once. A train carries a few hundred. The numbers simply do not match.",
-  dict(t="bar", a=20000, b=300, la="BIG SHIP (TEU)", lb="TRAIN (TEU)", log=True)),
+  dict(t="bar", a=20000, b=300, la="BIG SHIP", lb="TRAIN", unit="CONTAINERS (TEU) PER TRIP")),
  # ---- close
  ("So Dubai is not really building a new Silk Road. It is building insurance. A backup plan across a desert, for the day the main road is blocked.",
   dict(t="map", lon=55.3, lat=24.8, z=7.0, mark=["jebel", "fujairah", "habshan"], route="all", label="INSURANCE, NOT A REPLACEMENT")),
