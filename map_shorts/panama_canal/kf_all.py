@@ -1,4 +1,4 @@
-import apipod, json, sys, concurrent.futures as cf
+import apipod, json, sys, time, concurrent.futures as cf
 REF = "https://s.apipod.ai/images/2026/10/14/b7543b2b-3587-4db4-9544-daf2f635fa2f.jpg"
 BASE = ("Cinematic documentary realism, as if filmed for a premium travel and engineering documentary: real-world location in Panama, {light}, warm saturated colour grade, "
  "high contrast with deep slightly crushed blacks, glossy clean surfaces, gentle film grain, anamorphic-like wide framing, physically plausible water, ships with correct real-world scale and proportions, "
@@ -41,9 +41,9 @@ def run(k):
     else: prompt = BASE.format(light=light) + (HERO if ref else "") + p
     body = {"model": "nano-banana-2.1", "prompt": prompt, "aspect_ratio": "16:9", "quality": "1K"}
     if ref: body["image_urls"] = [REF]
-    for attempt in range(2):
+    for attempt in range(6):
         r = apipod.submit("images", body)
-        if "data" not in r: print(k, r); continue
+        if "data" not in r: print(k, r.get("http_error")); time.sleep(20); continue
         w = apipod.wait("images", r["data"]["task_id"])
         if w.get("data", {}).get("status") == "completed":
             u = w["data"]["result"][0]; apipod.download(u, f"keyframes/{k}.jpg")
@@ -52,7 +52,7 @@ def run(k):
     return k, None, None
 ks = sys.argv[1:] or list(K)
 res = {}
-with cf.ThreadPoolExecutor(8) as ex:
+with cf.ThreadPoolExecutor(4) as ex:
     for k, c, u in ex.map(run, ks):
         print(k, c, u); sys.stdout.flush(); res[k] = u
 json.dump(res, open("keyframes/urls_%s.json" % ("all" if not sys.argv[1:] else "_".join(ks)), "w"), indent=1)
