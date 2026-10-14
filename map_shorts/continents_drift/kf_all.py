@@ -9,9 +9,9 @@ K = {
  "S2b": (CHAR + "Close-up of Max's hand resting flat on a light wooden table next to a plain yellow ruler with black tick marks and no numbers; beside the hand a small grey stone block with a thin crack in it; flat light-blue background.", True),
  "S3a": ("A small 15th-century wooden caravel with white sails crosses a calm stylised blue ocean; a giant yellow measuring tape lies flat on the water surface and stretches to the horizon; flat saturated blue sky; simple low-budget 3D look.", False),
  "S3b": (CHAR + "A giant yellow measuring tape lies extended along a flat grey road; a modern plain white-and-blue city bus with no writing is parked right beside it, the bus slightly shorter than the extended tape; Max stands small at the end of the tape pointing at it; flat ground, flat blue sky.", True),
- "S4a": (SPACE + "The globe shows the single supercontinent Pangaea: one big green-brown landmass surrounded by one ocean, a glowing orange crack zigzags through the middle of the landmass.", False),
- "S4b": (SPACE + "The globe shows today's continents spread apart with a wide blue Atlantic Ocean in the middle, a thin glowing orange line along the middle of the Atlantic.", False),
- "S6": (CHAR + "Medium close-up of Max with a smug proud face, holding up one hand next to a plain yellow ruler with no numbers; one of his fingernails is comically long; behind him the same Icelandic rift fissure with dark basalt walls and clear blue water; flat blue sky.", True),
+ "S4a": (SPACE + "NO people, no characters, no humans anywhere, only the globe in space. The globe shows the single supercontinent Pangaea: one big green-brown landmass surrounded by one ocean, a glowing orange crack zigzags through the middle of the landmass.", False),
+ "S4b": (SPACE + "NO people, no characters, no humans anywhere, only the globe in space. The globe shows today's continents spread apart with a wide blue Atlantic Ocean in the middle, a thin glowing orange line along the middle of the Atlantic.", False),
+ "S6": (CHAR + "Medium close-up of Max with a smug proud grin; he holds a plain yellow ruler with no numbers horizontally in front of his chest and lays his INDEX finger flat along the ruler, the index fingernail is comically long; his other hand gives a clear thumbs-up; no other raised fingers; behind him the same Icelandic rift fissure with dark basalt walls and clear blue water; flat blue sky.", True),
 }
 def run(k):
     p, ref = K[k]
