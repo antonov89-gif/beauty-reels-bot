@@ -126,7 +126,7 @@ def reveal(img, game, real, t, t0):
     pd.rounded_rectangle((36, y0, W - 36, y0 + 238), 26, fill=(8, 14, 28, int(225 * k)), outline=YEL + (int(255 * k),), width=5)
     img.alpha_composite(pan)
     d.text((W / 2, y0 + 62), game, font=f1, fill=YEL, anchor="mm", stroke_width=3, stroke_fill=BLK)
-    d.text((W / 2, y0 + 128), "IS", font=font(POP, 30), fill=(255, 255, 255, 220), anchor="mm")
+    d.text((W / 2, y0 + 128), "REPORTEDLY BASED ON", font=font(POP, 30), fill=(255, 255, 255, 220), anchor="mm")
     d.text((W / 2, y0 + 188), real, font=f2, fill=WHT, anchor="mm", stroke_width=2, stroke_fill=BLK)
 
 
@@ -165,8 +165,8 @@ def render_map(key, t0, t1, t, i):
         if lt > 3.2:
             k = ease((lt - 3.2) / 0.3)
             d.rounded_rectangle((60, 430, W - 60, 590), 24, fill=(8, 14, 28, int(235 * k)), outline=WHT + (255,), width=4)
-            d.text((W / 2, 475), "3 CONFIRMED BY ROCKSTAR", font=font(POPX, 44), fill=GRN, anchor="mm")
-            d.text((W / 2, 545), "3 NOT SAID (?)", font=font(POPX, 44), fill=ORG, anchor="mm")
+            d.text((W / 2, 475), "3 WIDELY REPORTED", font=font(POPX, 44), fill=GRN, anchor="mm")
+            d.text((W / 2, 545), "3 NOT REPORTED (?)", font=font(POPX, 44), fill=ORG, anchor="mm")
         tag(img, "REAL SATELLITE MAP")
     else:
         x, y = cam.xy(*m["pin"]); pin(img, x, y, ORG if key in UNSURE else RED, ease((lt - 0.15) / 0.3))
@@ -196,8 +196,8 @@ def hook_overlay(img, t):
     img.alpha_composite(pan)
     s = 1.0 + 0.12 * (1 - ease(t / 0.3))
     text_stroke(d, (W / 2, 245), "GTA 6 MAP", font(POPX, 120 * s), WHT, stroke=10)
-    text_stroke(d, (W / 2, 370), "= REAL FLORIDA", font(POPX, 100 * s), YEL, stroke=10)
-    d.text((W / 2, 440), "O MAPA DE GTA 6 É A FLÓRIDA REAL", font=font(POP, 34), fill=(255, 255, 255, int(255 * k)), anchor="mm", stroke_width=3, stroke_fill=BLK)
+    text_stroke(d, (W / 2, 370), "= REAL FLORIDA?", font(POPX, 100 * s), YEL, stroke=10)
+    d.text((W / 2, 440), "O MAPA DE GTA 6 É A FLÓRIDA REAL?", font=font(POP, 34), fill=(255, 255, 255, int(255 * k)), anchor="mm", stroke_width=3, stroke_fill=BLK)
 
 
 def end_overlay(img, t):

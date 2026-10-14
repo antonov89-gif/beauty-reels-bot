@@ -47,4 +47,4 @@ Own map engine (Esri satellite + Natural Earth) for the real side; AI frames for
 - Voice Lumean (ElevenLabs): ~0.5 RUB
 
 ## Wording rule (added after QC)
-Do NOT write "Rockstar says/confirmed" for the Miami/Keys/Everglades pairings: they are reported by BBC, Game Informer and GamesRadar+ (via Wikipedia). Use "widely reported". The Short on-screen text "3 CONFIRMED BY ROCKSTAR" should be changed to "3 WIDELY REPORTED" in the next version.
+Do NOT write "Rockstar says/confirmed" for the Miami/Keys/Everglades pairings: they are reported by BBC, Game Informer and GamesRadar+ (via Wikipedia). Use "widely reported". DONE in v3: on-screen text now "3 WIDELY REPORTED / 3 NOT REPORTED (?)", panels say "REPORTEDLY BASED ON", hook has a question mark. OPEN: voice line 0 still says "Every place in GTA 6 is based on real Florida" (re-record ~0.34 RUB).
