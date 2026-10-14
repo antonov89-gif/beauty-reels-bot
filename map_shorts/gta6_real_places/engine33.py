@@ -66,7 +66,9 @@ for i in range(N):
     a, b = SC[i], (SC[i + 1] if i + 1 < N else TOTAL)
     tw = sum(p[3] for p in sh); t = a
     for p in sh:
-        d = (b - a) * p[3] / tw; TL.append((t, t + d, i, p[1], p[2])); t += d
+        d = (b - a) * p[3] / tw
+        if i == 7: d = (WT(7, "meters") + 0.45 - a) if p[1] == "M" else (b - (WT(7, "meters") + 0.45))
+        TL.append((t, t + d, i, p[1], p[2])); t += d
 CUTS = [x[0] for x in TL[1:]]
 
 
@@ -173,7 +175,7 @@ def render_map(key, t0, t1, t, i):
         if key == "britton":
             try: ts = WT(i, "hundred") - 0.1
             except KeyError: ts = t0 + 1.2
-            if t >= ts and t < ts + 3.4:
+            if t >= ts and t < t1 - 0.05:
                 k = min(1, (t - ts) / 0.15); s = 1.6 - 0.6 * ease(k)
                 text_stroke(d, (W / 2, 900), "105 M", font(POPX, 230 * s), YEL, stroke=16)
                 text_stroke(d, (W / 2, 1060), "= 345 FT · HIGHEST POINT", font(POPX, 50), WHT, stroke=7)
