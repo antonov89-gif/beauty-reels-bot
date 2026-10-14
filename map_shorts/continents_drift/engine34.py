@@ -113,7 +113,7 @@ def drift_arrows(img, t, t0):
 
 def overlays(img, t):
     drift_arrows(img, t, WT(0, "drifting") - 0.1) if t < B[1] else None
-    if B[1] <= t < TL[1][1]: counter(img, 0, 2.5, "{:.1f} CM", 540, 380, t, WT(1, "two") - 0.1, 0.8, 110, YEL, "PER YEAR")
+    if B[1] <= t < TL[1][1]: counter(img, 2.5, 2.5, "{:.1f} CM", 540, 380, t, WT(1, "two") - 0.1, 0.8, 110, YEL, "PER YEAR")
     if TL[2][0] <= t < B[2]: bars(img, t, TL[2][0] + 0.1)
     if B[2] <= t < B[3]:
         counter(img, 1492, 2026, "{:.0f}", 540, 330, t, WT(2, "columbus") - 0.15, 1.6, 120, WHT, None) if t < TL[4][0] + 0.05 else None
