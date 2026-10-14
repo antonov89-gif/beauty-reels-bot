@@ -48,11 +48,11 @@ Reference analysed: "Un Avión de 445 Millones de Dólares" (Umbral del Saber, 2
 | 1 | Hook | 0:00–0:40 | $1M for 82 km; almost $4M to skip the line; "runs on rainwater" |
 | 2 | Roadmap | 0:40–1:00 | follow one ship; cost, pilot, dry months → world prices |
 | 3 | Scale | 1:00–2:05 | lock 427 m (> Eiffel Tower), 55 × 18 m; lift 26 m = 8-storey building; ~200 million L per crossing ≈ 80 Olympic pools |
-| 4 | History | 2:05–3:20 | Cape Horn detour, saves ~13,000 km; France 1880s, >20,000 deaths (est.); USA 1904–14, ~$375 M, >5,000 deaths; 1999 handover; 2016 new locks |
+| 4 | History | 2:05–3:20 | Cape Horn detour, saves ~13,000 km; France 1880s, >20,000 deaths (est.); USA 1904–14, almost $500 M, >5,000 deaths; 1999 handover; 2016 new locks |
 | 5 | CTA | 3:20–3:28 | subscribe |
 | 6 | Anchorage | 3:28–4:30 | Colón, ~35 ships a day, slots booked weeks ahead; compulsory pilot; tugs and "mules" |
 | 7 | Money | 4:30–5:45 | toll by ship type/capacity, up to ~$1M; FY2025: ~13,400 transits, ~$5.7 B (> $15 M/day); auctions: $3.98 M (Nov 2023), near $4 M (Aug 2026); Halliburton swam it for 36 cents (1928) |
-| 8 | Locks up | 5:45–6:25 | Agua Clara: gates up to ~30 m, gravity, 3 steps, +26 m; basins reuse ~60 % of water |
+| 8 | Locks up | 5:45–6:25 | Agua Clara: gates up to ~33 m, gravity, 3 steps, +26 m; basins reuse ~60 % of water |
 | 9 | Gatun Lake | 6:25–6:55 | largest artificial lake when built; islands were hilltops; "no rain, no canal" |
 | 10 | Culebra Cut | 6:55–7:25 | cut through the continental divide; Pacific entrance lies EAST of the Atlantic one |
 | 11 | Drought | 7:25–8:15 | 2023: ~40 % less rain, draft and slot limits (~20/day), detours via Suez/Africa; Río Indio reservoir in preparation |
@@ -68,7 +68,7 @@ Reference analysed: "Un Avión de 445 Millones de Dólares" (Umbral del Saber, 2
 | 1 | Giant container ship queue at sunrise off Panama; ship's bow cutting water; lock gates closing | AI ×3 + stock ×2 | ships moving slowly, water wake, gates swinging | slow aerial push-in; low tracking | **$1,000,000** count-up → **82 km**; "$4,000,000 to skip the line" | low pad, single hit on "$4M" | ship horn, water | hard cuts on numbers |
 | 2 | Map: Atlantic → Panama → Pacific, route line drawn; ship icon | own map engine | route draws, ship icon moves | slow zoom into Panama | ATLANTIC / PACIFIC labels, 82 km | pad builds | whoosh | map zoom → aerial |
 | 3 | X-ray/cutaway of a lock chamber with a ship; Eiffel Tower silhouette next to an upright chamber; water filling; 80 Olympic pools graphic | AI ×3 + own infographics | chamber tilts upright next to the tower; water level rises; pools fill one by one | static/orbit | **427 m** vs **330 m**; **55 × 18 m**; **+26 m** = 8 floors; **≈200,000,000 L ≈ 80 pools** | strings "wow" on Eiffel | click per graphic, water flow | match cut on water |
-| 4 | Globe route NY → Cape Horn → SF vs via Panama; sepia excavation era (AI, archival look); steam shovels; 1914 first ship | own map + AI ×4 (archival style) | long route draws, then short route; diggers working | slow pans, Ken Burns | **−13,000 km**; FRANCE 1881–1889; **>20,000** (est.); USA 1904–1914; **$375 M**; 15 AUG 1914 | darker pad, then hopeful | old film flicker, steam whistle | flash-to-sepia and back |
+| 4 | Globe route NY → Cape Horn → SF vs via Panama; sepia excavation era (AI, archival look); steam shovels; 1914 first ship | own map + AI ×4 (archival style) | long route draws, then short route; diggers working | slow pans, Ken Burns | **−13,000 km**; FRANCE 1881–1889; **>20,000** (est.); USA 1904–1914; **~$500 M**; 15 AUG 1914 | darker pad, then hopeful | old film flicker, steam whistle | flash-to-sepia and back |
 | 5 | Ship from above at dusk | AI ×1 | — | slow drone | subscribe button | — | click | cut |
 | 6 | Anchorage near Colón with dozens of ships; pilot boat alongside; pilot climbing a rope ladder; tugboats taking position; mule locomotive (old locks) | AI ×4 + stock ×2 | pilot climbs, tugs push water | tracking alongside; close-up hands on ladder | **≈35 ships/day**; COLÓN pin; "PILOT COMPULSORY" | light tension | boat engine, ropes, radio chatter (non-verbal) | cut on action (pilot steps on deck) |
 | 7 | Stack of dollar bills growing next to a ship; counter of revenue; auction gavel on a dock; swimmer in the canal (1928, archival look) | AI ×3 + own infographics | money stack rises; counter rolls; gavel hits | slow push-ins | **up to ~$1M**; **13,404 transits**; **$5.7 B** → **>$15 M/day**; **$3.98 M (2023)**; **≈$4 M (Aug 2026)**; **$0.36 (1928)** | rhythmic pulse; comic button on 36 cents | cash-register tick, gavel knock, splash | cut on gavel hit |
@@ -76,7 +76,7 @@ Reference analysed: "Un Avión de 445 Millones de Dólares" (Umbral del Saber, 2
 | 9 | Gatun Lake with green islands; rain over the rainforest | stock ×2 + AI ×2 | rain falls, ship glides | slow aerial | "LARGEST MAN-MADE LAKE (1914)"; "NO RAIN = NO CANAL" | calm pad | rain, birds | cross-fade on rain |
 | 10 | Culebra Cut cliffs; map showing Pacific entrance further east | stock/AI ×2 + own map | compass rotates on the map | slow pan; map zoom | arrow "→ SOUTHEAST"; ATLANTIC entrance vs PACIFIC entrance longitudes | curious pluck motif | compass tick | map → aerial |
 | 11 | Cracked lakebed edge, exposed shoreline; line of waiting ships at sea; map of detours via Suez / Cape of Good Hope | AI ×3 + own map | water level drops; queue grows; detour lines draw | slow pull-back | **−40 % rain (2023)**; **slots ~36 → ~20**; detour routes; RÍO INDIO reservoir pin | tense low strings | wind, dry crackle, horns | cut on horn |
-| 12 | Cocolí locks descending; ship under the Bridge of the Americas; Panama City skyline; pilot climbing down to boat | AI ×2 + stock ×2 | ship lowers; passes bridge; pilot boat peels away | tracking, drone rise | "8–10 HOURS"; PACIFIC OCEAN | resolution, warm strings | horn, water | slow dissolve to sunset |
+| 12 | Cocolí locks descending; ship under the Bridge of the Americas; Panama City skyline; pilot climbing down to boat | AI ×2 + stock ×2 | ship lowers; passes bridge; pilot boat peels away | tracking, drone rise | "~11 HOURS"; PACIFIC OCEAN | resolution, warm strings | horn, water | slow dissolve to sunset |
 | 13 | Ship sailing into Pacific sunset; rain drops on the lake | AI ×2 | — | slow push-out | "THE REAL CURRENCY: RAIN"; comment prompt | final chord | rain | fade out |
 
 About **36 AI shots** are planned (≈ 24 Veo clips, each 8-s clip gives 1–2 shots), about **12 stock shots**, and about **10 own map/infographic blocks**.
@@ -163,7 +163,7 @@ Continuity:
   - new chamber 427 × 55 × 18.3 m (1,400 × 180 × 60 ft);
   - lift 26 m;
   - basins reuse ~60 %;
-  - rolling gates up to ~30 m;
+  - rolling gates up to ~33 m;
   - US cost ≈ $375 M and ≈ 5,600 recorded deaths;
   - French era ≈ 22,000 deaths (estimate);
   - Halliburton 36 cents (1928);
