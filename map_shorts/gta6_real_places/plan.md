@@ -25,7 +25,14 @@ Hyper-detailed modern open-world game screenshot look (in-engine render, not a p
 dense props (flags, palm trees, graffiti, trash), cinematic depth of field, 9:16. Generic people only, no logos, no readable brand names.
 Label on every AI frame: "AI CONCEPT · NOT GAME FOOTAGE".
 
-## Facts to check before the voice
+## Fact check (done, Wikipedia: GTA VI + Britton Hill + Clewiston)
+- CONFIRMED as official comparisons: Leonida = Florida; Vice City = Miami; Leonida Keys = Florida Keys; Grassrivers = Everglades (BBC, Game Informer, GamesRadar+).
+- NOT stated by Rockstar: what Port Gellhorn, Ambrosia and Mount Kalaga are based on. Script must say "Rockstar hasn't said; closest real look-alike is ..." (fan guess), never "is based on".
+- Release: 19 Nov 2026 (delayed from 26 May 2026 in Nov 2025).
+- Britton Hill: 345 ft (105 m), highest natural point in Florida, lowest state high point in the US. Clewiston motto "America's Sweetest Town"; U.S. Sugar mill.
+- Pairing beats 6-8 are rewritten accordingly.
+
+## Facts to check before the voice (old list)
 - Official region names (Rockstar site, 2025): Vice City, Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia, Mount Kalaga National Park.
 - Real twins are our comparison, not Rockstar's statement: say "looks like" / "is based on" carefully.
 - Britton Hill 105 m (345 ft), highest point of Florida. Clewiston "America's Sweetest Town". Seven Mile Bridge, Florida Keys.
