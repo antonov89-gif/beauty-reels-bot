@@ -3,23 +3,32 @@ Reference (topic logic): Zack D. Films "How The Solar System Moves In Space" (33
 Reference (visual/edit principles): qjznxPtWCxk (as in the gold cube Short).
 Logic: thought experiment -> physical demo -> familiar benchmark -> scale-up with time -> human-scale answer -> comic payoff.
 
+## Data (vidIQ + Nexlev, 14 Oct 2026)
+- Reference 6JLCyiToRdo: 13.8M views, 33 s, ~80 words, no captions file; Zack D. Films (29.1M subs) top Shorts are 'how X works / how long/strong is X' (86M-255M views).
+- Nexlev Shorts search 'continental drift pangea': 'What If Pangea Came Back?' 12M; 'Pangaea Tectonics Plates' 12M; 'What If All Continents Joined Back Together?' 7.4M; 'Pangea to Present' 4.4M; 'Pangaea Breaks Apart' 1.2M. The word Pangaea carries the topic.
+- vidIQ score_title (short): 'Pangaea Is Still Breaking Apart Right Now 🤯' = 84/100. vidIQ credits left after this: 1 (resets 22 Oct 2026).
+
+## Title
+Pangaea Is Still Breaking Apart Right Now 🤯 (vidIQ 84)
+
 ## Hooks (pick one)
+A2. 'Pangaea never finished breaking up.' (chosen, uses the high-demand keyword)
 A. "Europe and America are drifting apart right now." (chosen)
 B. "The Atlantic Ocean is getting bigger every second you watch this."
 C. "Your fingernails are faster than an entire ocean."
 
-## Voice-over (84 words, Kokoro test: 31.0 s at 1.1x)
-Europe and America are drifting apart right now.
+## Voice-over v2 (84 words, Kokoro test: 31.0 s at 1.1x, 31.9 s at 1.05x)
+Pangaea never finished breaking up. Europe and America are still drifting apart.
 You can't feel it, because the Atlantic grows just two and a half centimeters a year. Slower than your fingernails.
 Since Columbus crossed it, that's about thirteen meters. Longer than a city bus.
-Now add time. Over a hundred and seventy-five million years, those centimeters tore a supercontinent apart and opened a whole ocean.
+Over a hundred and seventy-five million years, those centimeters tore Pangaea apart and opened a whole ocean.
 In Iceland, the seam rises from the sea, and the island is being pulled in two.
 So relax. Your nails are winning.
 
 ## Scenes (times from the Kokoro test; final from ElevenLabs alignment)
 | # | t | VO | Visual / object motion | Camera | Titles | Music | SFX | Cut |
 |---|---|---|---|---|---|---|---|---|
-| S1 | 0.0-3.1 | Europe and America... | Stylised globe, Atlantic; a glowing orange seam down the ocean floor; Europe and N. America slide a hair apart | slow push-in from orbit to the Atlantic | EUROPE <-> AMERICA | soft pulse starts | low tectonic rumble | match cut into the seam |
+| S1 | 0.0-4.8 | Pangaea never finished... still drifting apart | Stylised globe, Atlantic; a glowing orange seam down the ocean floor; Europe and N. America slide a hair apart | slow push-in from orbit to the Atlantic | EUROPE <-> AMERICA | soft pulse starts | low tectonic rumble | match cut into the seam |
 | S2a | 3.1-6.2 | You can't feel it... 2.5 cm a year | Cut-away of the seafloor: two rock slabs pull apart, lava wells up and cools into new crust | slow lateral dolly along the seam | 2.5 cm / YEAR | - | magma bubble, rock creak | cut on motion |
 | S2b | 6.2-9.7 | Slower than your fingernails | Max's hand next to a ruler: nail tip grows; beside it a mini rock seam opens less | macro, slight push | NAILS ~4 cm/yr vs ATLANTIC 2.5 cm/yr (race bars) | - | tick | cut |
 | S3a | 9.7-12.2 | Since Columbus crossed it | 1492-style caravel sails over a giant tape measure laid across the ocean; year counter 1492 -> 2026 | tracking alongside the ship | 1492 -> 2026 | - | waves, tape zip | whip along the tape (motivated) |
