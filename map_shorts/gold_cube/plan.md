@@ -48,22 +48,28 @@ Delivery: male, mid-low register, conversational, light irony, close dry recordi
 
 ---
 
-## 4. STYLE LOCK (English)
+## 4. STYLE LOCK (English) — revised to match the reference look
+
+The reference is NOT a cartoon. It is a semi-realistic "physics simulation" look: Sims-style CGI people with smooth slightly plastic skin, realistic PBR materials (marbled raw-meat cube, grass, Mt. Fuji photo textures), grey-box cities with detailed landmarks, particle streams of grains piling up, mannequin crowds in solid colours, saturated blue sky, soft grounded shadows, shallow depth of field in close-ups.
 
 ```
-Stylized 3D animation with a clean "computer simulation" feel, Pixar-like simplified shapes,
-bright saturated colours, clear midday sunlight, soft contact shadows, gentle ambient occlusion,
-readable silhouettes, the main object always separated from the background, clean horizon line,
-familiar real-world scale references, materials: polished gold with warm reflections,
-glowing orange molten gold, matte stone, soft fabric. 9:16 vertical framing, subject in the
-central safe area, empty space above for captions. Smooth physically plausible motion,
-no camera shake. Consistent character design across all shots.
+Semi-realistic 3D render in the look of a Blender / Unreal Engine physics simulation for educational
+"what if" videos: Sims-style CGI human with smooth slightly plastic skin and an expressive face,
+high-resolution realistic PBR materials, high-key vibrant daylight, clear saturated blue sky,
+soft grounded shadows, realistic repeating grass texture on the ground, subtle depth of field in
+close-ups, deep focus in wide scale shots. Environments simplified to emphasise scale: grey-box
+buildings, flat grass plane, detailed real landmarks. Gold is rendered as polished metallic gold with
+warm reflections; molten gold glows orange-yellow; the gold cube has slightly rounded edges and a
+glossy, slightly wet surface. Large quantities are shown as particle streams of small gold grains,
+rings and coins that pile up and fill a container. Crowds are low-poly mannequins in solid colours
+(blue, green, purple). Not cartoon, not Pixar, no exaggerated proportions. Vertical 9:16, subject centred.
 
-CHARACTER "NUGGET": short chubby cartoon gold miner, round face, big expressive eyes,
-thick brown mustache, round red nose, orange hard hat with a small headlamp,
-navy-blue overalls with one brass button, white T-shirt, white sneakers,
-exaggerated but friendly gestures. Same proportions, colours and outfit in every shot.
+CHARACTER "NUGGET": realistic 3D man about 40, short dark hair, light stubble, friendly expressive
+face, light-blue work shirt with rolled sleeves, dark jeans, brown work boots. Same face, clothes
+and proportions in every shot.
 ```
+
+Captions in the reference: bold white sans-serif, lower third (~70 % of the frame height), soft black drop shadow, word-by-word. Floating 3D labels tracking objects, blue LED-style number readouts on scales. We copy this approach (own wording and numbers).
 
 ---
 
