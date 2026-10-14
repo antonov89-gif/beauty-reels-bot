@@ -22,5 +22,8 @@ Category Education. Not made for kids. Altered or synthetic content: Yes (AI voi
 ## Credits
 Voice: AI (ElevenLabs David via Lumean). Keyframes: Nano Banana 2.1; animation: Grok Imagine 1.5 Fast (via APIpod). Music and SFX synthesized in-house.
 
+## Cover (1080x1920, in this folder)
+thumbnail_samoa.jpg: 'THIS COUNTRY DELETED A DAY', Mia shocked with her phone, a 'FRI 30' calendar page tearing away over the islands. Base Nano Banana 2.1, text added by hand.
+
 ## Cost
-Keyframes $0.40 (6 + 4 regenerated after lost links) + animations $0.648 + voice 0.46 RUB (one re-take: first take too fast).
+Keyframes $0.40 (6 + 4 regenerated after lost links) + animations $0.648 + cover $0.04 + voice 0.46 RUB (one re-take: first take too fast).
