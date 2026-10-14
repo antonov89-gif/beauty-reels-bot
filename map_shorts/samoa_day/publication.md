@@ -17,13 +17,16 @@ Sources: Wikipedia "International Date Line" (1892: Monday 4 July repeated; 2011
 Would you give up a whole day for better business? 👇
 
 ## Settings
-Category Education. Not made for kids. Altered or synthetic content: Yes (AI voice, AI-generated 3D scenes; the 1892 scene shows only hands, no portrait of a real person).
+Category Education. Not made for kids. Altered or synthetic content: Yes (AI voice, AI-generated 3D scenes; the king appears only as hands, no portrait of a real person; the 1892 trader is a fictional character).
 
 ## Credits
 Voice: AI (ElevenLabs David via Lumean). Keyframes: Nano Banana 2.1; animation: Grok Imagine 1.5 Fast (via APIpod). Music and SFX synthesized in-house.
 
 ## Cover (1080x1920, in this folder)
-thumbnail_samoa.jpg: 'THIS COUNTRY DELETED A DAY', Mia shocked with her phone, a 'FRI 30' calendar page tearing away over the islands. Base Nano Banana 2.1, text added by hand.
+- Main: thumbnail_samoa_C.jpg 'THEY DELETED FRIDAY!' with 'DEC 2011 / FRIDAY / 30' struck through in red on the calendar page and a 'THU 29 -> SAT 31' badge. Biggest text, reads best at feed size.
+- Alt: thumbnail_samoa_B.jpg 'FRIDAY NEVER HAPPENED HERE' with the same page and badge (curiosity wording).
+- First version: thumbnail_samoa.jpg 'THIS COUNTRY DELETED A DAY' (repeats the video title word for word).
+All three use the same base (thumb_base.jpg, Nano Banana 2.1); B and C are re-composed by thumb2.py at no extra cost (tighter crop, larger face, text on the page in perspective).
 
 ## Cost
 Keyframes $0.40 (6 + 4 regenerated after lost links) + animations $0.648 + cover $0.04 + voice 0.46 RUB (one re-take: first take too fast).
