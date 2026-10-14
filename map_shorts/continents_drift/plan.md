@@ -38,8 +38,10 @@ So relax. Your nails are winning.
 | S5 | 23.5-28.4 | In Iceland... pulled in two | Rift valley in Iceland; Max stands with one boot on each side, legs slowly spreading, arms flailing for balance | crane up revealing the island and the seam line | ICELAND: THE SEAM ABOVE WATER | soft | wind, rock grind, Max "whoa" foley | cut |
 | S6 | 28.4-32.0 | So relax. Your nails are winning. | Max proudly holds up a ridiculously long fingernail next to the ruler; the rift beside him barely moved | push-in to Max's smug face | YOUR NAILS: WINNING | button | comic "ding" | end on face |
 
-## STYLE LOCK
-Bright stylised 3D animation in the look of a polished science explainer (game-engine CG, Zack D. Films-like): clear readable shapes, expressive glossy materials, soft shadows, clean daylight, saturated colours, clear horizon and familiar objects for scale, main subject separated from the background, simulation feel. Characters: big expressive faces, slightly exaggerated reactions, smooth airbrushed skin, simple hair mesh. 9:16 vertical, centered composition with free space at the top third for numbers. No text, no letters, no logos, no watermark.
+## STYLE LOCK (v2, matched to the reference frames; same as the approved gold cube style)
+Clearly a 3D render in the look of a low-budget educational 'what if' explainer animation made in Daz Studio / Blender with game-engine assets, NOT a photograph, NOT Pixar, NOT cartoon, NOT hyper-realistic: characters have realistic human proportions and head size, normal-sized eyes, smooth airbrushed plastic-looking skin with soft shading and almost no pores, simple solid-clump hair mesh, slightly uncanny early-2010s game cutscene look, expressive exaggerated facial animation; simple matte clothing textures; simplified environments, flat saturated blue sky, simple even lighting with soft shadows. Space/diagram shots: dark navy starfield, thin glowing lines, simple low-poly objects, clean 3D icons (like the reference's yellow padlock). No text, no letters, no numbers, no logos. Vertical 9:16, free space above for captions.
+Captions like the reference: small white bold sans, 2-3 words, no box, at ~78% frame height (above the Shorts UI).
+Science rule: real Icelandic rift = dark basalt fissure with clear blue water, NO lava in S5; glowing seam only in schematic shots (S1, S2a, S4).
 
 ## Character / continuity
 - Max: man ~30, short brown hair, light stubble, red hoodie, blue jeans, brown hiking boots, expressive eyebrows. Same in S2b, S5, S6.
