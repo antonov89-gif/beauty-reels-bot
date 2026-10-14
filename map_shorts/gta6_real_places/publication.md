@@ -3,12 +3,12 @@ Reference: GU1H_GAMES (game-style stills, cutscene subtitles, countdown). We tak
 File: /home/claude/v33/gta6_real_places.mp4 (1080x1920, 50 s). Chat preview: gta6_real_places_chat.mp4.
 
 ## Title (pick one)
-1. GTA 6 Map = REAL Florida 🌴 (3 places are confirmed)
+1. GTA 6 Map = REAL Florida 🌴 (3 places are widely reported)
 2. Where Is GTA 6 REALLY Set? Real Places on the Map
 3. Mount Kalaga Can't Exist in Florida. Here's Why
 
 ## Description
-GTA 6 is set in Leonida, which is Florida. Rockstar has said Vice City is Miami, the Leonida Keys are the Florida Keys and Grassrivers is the Everglades. For Port Gellhorn, Ambrosia and Mount Kalaga Rockstar has not said, so we show the closest real-world look-alikes and label them as guesses. And a mountain in Florida? The state's highest point is 105 m. What's your theory? Release date: 19 November 2026.
+GTA 6 is set in Leonida, which is Florida. Major outlets report that Vice City is Miami, the Leonida Keys are the Florida Keys and Grassrivers is the Everglades (BBC, Game Informer, GamesRadar+). For Port Gellhorn, Ambrosia and Mount Kalaga no real-world basis has been reported, so we show the closest real-world look-alikes and label them as guesses. And a mountain in Florida? The state's highest point is 105 m. What's your theory? Release date: 19 November 2026.
 
 All game-style images and clips are AI concept art, NOT game footage. Real places are shown on real satellite imagery.
 

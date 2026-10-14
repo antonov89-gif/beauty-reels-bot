@@ -45,3 +45,6 @@ Own map engine (Esri satellite + Natural Earth) for the real side; AI frames for
 - 1 test frame, Nano Banana 2.1, 9:16, 2K: $0.04
 - 7 more frames: ~$0.28; optionally 3 Veo 3.1 Fast clips for the hook and twist: ~$0.54
 - Voice Lumean (ElevenLabs): ~0.5 RUB
+
+## Wording rule (added after QC)
+Do NOT write "Rockstar says/confirmed" for the Miami/Keys/Everglades pairings: they are reported by BBC, Game Informer and GamesRadar+ (via Wikipedia). Use "widely reported". The Short on-screen text "3 CONFIRMED BY ROCKSTAR" should be changed to "3 WIDELY REPORTED" in the next version.
