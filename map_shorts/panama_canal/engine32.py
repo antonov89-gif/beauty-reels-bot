@@ -159,8 +159,8 @@ MAPS = {
  "panama": dict(a=(-79.7, 9.0, 40.0), b=(-79.75, 9.1, 3.2)),
  "horn": dict(a=(-88.0, -14.0, 285.0), b=(-88.0, -14.0, 265.0)),
  "colon": dict(a=(-79.92, 9.37, 0.9), b=(-79.9, 9.38, 0.45)),
- "east": dict(a=(-79.74, 9.12, 1.15), b=(-79.74, 9.12, 0.95)),
- "detour": dict(a=(30.0, 12.0, 250.0), b=(28.0, 12.0, 235.0)),
+ "east": dict(a=(-79.74, 9.14, 1.7), b=(-79.74, 9.14, 1.45)),
+ "detour": dict(a=(22.0, 12.0, 280.0), b=(20.0, 12.0, 265.0)),
  "rioindio": dict(a=(-79.95, 9.1, 1.9), b=(-80.0, 9.05, 1.3)),
 }
 
@@ -271,8 +271,8 @@ def render_map(key, t0, t1, t, i):
         ka = ease((lt - 0.5) / 0.8); kp = ease((lt - 2.0) / 0.8)
         if ka > 0: d.line([(xa, 0), (xa, H * ka)], fill=CYAN + (230,), width=5)
         if kp > 0: d.line([(xp, 0), (xp, H * kp)], fill=GRN + (230,), width=5)
-        pin(img, *cam.xy(-79.92, 9.39), "ATLANTIC ENTRANCE · 79.9° W", CYAN, ka, size=34)
-        pin(img, *cam.xy(-79.55, 8.89), "PACIFIC ENTRANCE · 79.5° W", GRN, kp, up=False, size=34)
+        pin(img, *cam.xy(-79.92, 9.39), "ATLANTIC ENTRANCE · 79.9° W", CYAN, ka, up=False, size=34)
+        pin(img, *cam.xy(-79.55, 8.89), "PACIFIC ENTRANCE · 79.5° W", GRN, kp, up=True, size=34)
         try: tt = WT(i, "southeast")
         except KeyError: tt = t0 + 8
         if t >= tt - 0.8:
@@ -283,7 +283,8 @@ def render_map(key, t0, t1, t, i):
     elif key == "detour":
         x, y = cam.xy(-79.7, 9.1); k = ease((lt - 0.3) / 0.4)
         if k > 0:
-            f = font(POPX, int(110 * k)); text_stroke(d, (x, y), "✕", f, RED, stroke=8)
+            r = 34 * k
+            for w_, c_ in ((16, WHT), (9, RED)): d.line([(x - r, y - r), (x + r, y + r)], fill=c_, width=w_); d.line([(x - r, y + r), (x + r, y - r)], fill=c_, width=w_)
             pin(img, x, y, "PANAMA: SLOTS CUT", RED, k, up=False, size=34)
         ks = ease((lt - 1.0) / 3.0); ka = ease((lt - 2.5) / 3.5)
         glow_line(img, partial(smooth(ipath(cam, SUEZ), 6), ks), ORG, 8, dash=(24, 14), phase=t * 60)
