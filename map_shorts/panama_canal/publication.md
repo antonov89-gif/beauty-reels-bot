@@ -42,7 +42,7 @@ Facts and sources (approximate; check the links)
 
 Credits
 - Maps: NASA GIBS Blue Marble Shaded Relief; Esri World Imagery (Esri, Maxar, Earthstar Geographics).
-- Voiceover: AI (ElevenLabs via Lumean). AI scenes: Nano Banana 2.1 (keyframes) + Veo 3.1 Fast (motion) via APIpod.
+- Voiceover: AI (ElevenLabs via Lumean). AI scenes: Nano Banana 2.1 (keyframes) + Veo 3.1 Fast (motion) via APIpod. Thumbnail images AI-generated (Nano Banana 2.1).
 
 ## Tags
 panama canal, panama canal explained, panama canal locks, gatun lake, culebra cut, agua clara locks, cocoli locks, panama canal drought, canal toll, shipping, container ship, geography, engineering documentary, global trade
@@ -53,5 +53,7 @@ Would you pay $4,000,000 to skip a line? And which giant shortcut should we foll
 ## Settings
 Category Education. Not made for kids. Altered or synthetic content: Yes (AI voice, AI-generated video scenes, AI reconstructions of historical scenes).
 
-## Thumbnails
-To be generated after approval (paid; ask first).
+## Thumbnails (1280x720, in this folder)
+- A: thumbnail_panama_A.jpg "$4,000,000 TO SKIP THE LINE" (ship inside a lock at sunrise)
+- B: thumbnail_panama_B.jpg "$1,000,000 FOR JUST 82 KM" (ship queue off Panama)
+Base images: Nano Banana 2.1 via APIpod; text added by hand. Use YouTube Test & Compare (desktop Studio).
