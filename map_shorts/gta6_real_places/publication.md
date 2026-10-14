@@ -1,6 +1,6 @@
-# Short (0:50, 9:16): GTA 6 Map = REAL Florida (what is real, what is not)
+# Short (0:52, 9:16): GTA 6 Map = REAL Florida (what is real, what is not)
 Reference: GU1H_GAMES (game-style stills, cutscene subtitles, countdown). We take the look and pace only; our content is honest: AI frames are labelled, real side is real satellite imagery.
-File: /home/claude/v33/gta6_real_places.mp4 (1080x1920, 50 s). Chat preview: gta6_real_places_chat.mp4.
+File: /home/claude/v33/gta6_real_places.mp4 (1080x1920, 52 s). Chat preview: gta6_real_places_chat.mp4.
 
 ## Title (pick one)
 1. GTA 6 Map = REAL Florida 🌴 (3 places are widely reported)
@@ -32,4 +32,4 @@ Which GTA 6 place do YOU think is based on a real spot? Drop your theory 👇
 Category Gaming (or Education). Not made for kids. Altered or synthetic content: Yes (AI voice and AI-generated game-style imagery).
 
 ## Cost
-Frames $0.36 + Grok clips $0.864 (8 clips, 3 tests included) + Lumean 0.34 RUB. Failed: Veo 3.1 Lite (server error, not charged).
+Frames $0.36 + Grok clips $0.864 (8 clips, 3 tests included) + Lumean 0.34 + 0.37 RUB (voice re-recorded with 'reportedly' wording). Failed: Veo 3.1 Lite (server error, not charged).
