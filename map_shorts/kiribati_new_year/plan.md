@@ -74,7 +74,7 @@ Tags: kiribati, date line, international date line, new year, time zones, utc+14
 ## Cover plan (after the render, free from keyframes or $0.04 at 2K; same mechanics as the Gold cube / Suez covers)
 Big contrast: a party table under an empty calendar hook with a huge red strike through "31", title "NO NEW YEAR'S EVE?" (Titan One, yellow + white), small "AI CONCEPT" tag, a map strip of the Pacific with the date line on top.
 
-## Cost (spent 2026-10-15: 6 keyframes at 1K = $0.12 + 6 Grok clips $0.648; voice and cover still to do)
+## Cost (spent 2026-10-15: 6 keyframes at 1K = $0.12 + 6 Grok clips $0.648; voice 0.23 RUB; cover still to do)
 6 keyframes at 1K = $0.12 + 6 Grok clips = $0.648 + Lumean voice ~0.25 RUB + cover free = about $0.77.
 
 ## Checks before delivery (standard QC)
