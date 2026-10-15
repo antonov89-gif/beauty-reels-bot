@@ -32,3 +32,9 @@ Category Education/Entertainment. Not made for kids. Altered or synthetic conten
 - 286,000 t ÷ 8.3 billion = 34.5 g → edge 1.2 cm.
 - "Gold still buried" means known reserves (USGS), not all gold in the crust.
 - The Eiffel Tower is much taller (330 m) than the cube; scale in the video is stylised.
+
+## Cover (1080x1920, in this folder; free, recomposed from the already generated keyframes)
+- thumbnail_gold_B.jpg 'YOUR SHARE OF ALL THE GOLD?' - the punchline frame (Nugget's palm, tiny gold cube next to a sugar cube) with a ring + arrow and 'ONLY 35 g'. Recommended: strongest curiosity gap and a face.
+- thumbnail_gold_A.jpg 'ALL THE GOLD EVER MINED?' - the cube under the Eiffel Tower with 'ONLY 22.5 m WIDE'. Alternative for A/B test.
+Lettering: Titan One (OFL, fonts/titan-one.ttf), gold gradient, white edge, black outline. Script: thumb_cover.py (the PIL font paths expect titan-one.ttf and Poppins-ExtraBold.ttf in the working folder).
+Cover cost: $0 (no new generation).
