@@ -33,4 +33,7 @@ Format 1080x1920 30 fps H.264 + AAC; -13.7 LUFS; no silent gaps; overlays word-s
 Soft spots to know: (1) the line "Pumps emptied the ship" is loose: the sources say fuel and about 9,000 tonnes of ballast water were removed and pumps shifted weight (the description says it exactly); re-recording that line costs about 0.23 RUB. (2) The final pull is described with 14 tugs (one Wikipedia page says 8). (3) K4 looks like open water rather than a narrow canal. (4) The supermoon "king tide" wording on Wikipedia is awkward; the VO only says "a supermoon, and an extra-high tide".
 
 ## Cost
-Keyframes 6 x $0.02 (1K) = $0.12 + Grok clips 6 x $0.108 = $0.648 + Lumean voice 0.23 RUB = about $0.77. Cover not made yet (about $0.04 at 2K, or free from the keyframes).
+Keyframes 6 x $0.02 (1K) = $0.12 + Grok clips 6 x $0.108 = $0.648 + Lumean voice 0.23 RUB = about $0.77. Cover: free, recomposed from keyframe K3.
+
+## Cover (1080x1920, in this folder)
+thumbnail_suez.jpg: 'THE MOON FIXED IT?' (Titan One, yellow + white, black outline), red-glow '$400 M / HOUR', the supermoon over the stuck ship with the engineer pointing up (keyframe K3), 'AI CONCEPT' tag. Free (no new generation). Script: thumb_cover.py (expects titan-one.ttf and Poppins-ExtraBold.ttf in the working folder).
