@@ -99,7 +99,7 @@ Tags: snake island, ilha da queimada grande, brazil banned island, golden lanceh
 ## Cover plan (free from keyframes, or $0.04 at 2K)
 Aerial island + golden snake macro, red-glow "0 VISITORS" or "BANNED BY BRAZIL", title "BRAZIL BANNED IT!" (Titan One, yellow + white), small "AI CONCEPT" tag; K1/K10 as the base.
 
-## Cost (nothing spent yet; each paid step needs a "yes")
+## Cost (spent 2026-10-15: 12 keyframes at 1K = $0.24 + $0.02 for re-generating K12 after a failed download = $0.26; the rest needs a "yes")
 Option A (recommended, 12 scenes): 12 keyframes at 1K = $0.24 + 12 Grok clips = $1.296 + Lumean voice ~0.6 RUB = about $1.54; cover free.
 Option B (8 scenes: merge 2+3, 5+6, 10+11, 8+9): 8 keyframes $0.16 + 8 clips $0.864 = about $1.03; less variety, slower pace.
 
