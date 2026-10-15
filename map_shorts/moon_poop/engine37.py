@@ -47,7 +47,7 @@ TL = [
  (B[3], 19.4, "V5", 0.0, 1.0, 1.0, 1.05, 0.5, 1),
  (19.4, B[4], "V5", 3.2, 1.0, 1.0, 1.1, 0.5, 0),
  (B[4], 23.9, "V6", 0.0, 1.0, 1.0, 1.04, 0.5, 1),
- (23.9, B[5], "V6", 3.0, 1.0, 1.0, 1.04, 0.5, 0),
+ (23.9, B[5], "V6", 5.0, 1.0, 1.0, 1.0, 0.5, 0),
  (B[5], 29.0, "V7", 0.0, 1.05, 1.0, 1.0, 0.5, 1),
  (29.0, B[6], "V7", 3.8, 1.0, 1.0, 1.0, 0.5, 0),
  (B[6], 33.9, "V8", 0.0, 1.0, 1.0, 1.0, 0.5, 1),
@@ -138,8 +138,8 @@ def overlays(img, t):
             label(img, "380+ KG", 540, 270, t, WT(3, "three") - 0.1, 124, YEL)
             label(img, "OF MOON ROCKS", 540, 390, t, WT(3, "three") + 0.1, 70, WHT)
     if B[4] <= t < B[5]:
-        if t >= WT(4, "moon") - 0.1: label(img, "MOON: POOP", 540, 230, t, WT(4, "moon") - 0.1, 90, WHT)
-        if t >= WT(4, "earth") - 0.1: label(img, "EARTH: ROCKS", 540, 1230, t, WT(4, "earth") - 0.1, 90, YEL)
+        if WT(4, "moon") - 0.1 <= t < TL[10][0]: label(img, "MOON: POOP", 380, 250, t, WT(4, "moon") - 0.1, 90, WHT)
+        if t >= max(TL[10][0], WT(4, "earth") - 0.1): label(img, "EARTH: ROCKS", 540, 280, t, max(TL[10][0], WT(4, "earth") - 0.1), 96, YEL)
     if B[5] <= t < B[6]:
         if t >= WT(5, "fifty") - 0.1: label(img, "50+ YEARS LATER", 540, 270, t, WT(5, "fifty") - 0.1, 78, WHT)
         if t >= WT(5, "survived") - 0.1: label(img, "STILL ALIVE?", 540, 390, t, WT(5, "survived") - 0.1, 104, GRN)
