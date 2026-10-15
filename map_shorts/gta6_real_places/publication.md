@@ -34,5 +34,7 @@ Category Gaming (or Education). Not made for kids. Altered or synthetic content:
 ## Cover (1080x1920, in this folder)
 thumbnail_gta6.jpg: 'GTA 6 = REAL FLORIDA?' split cover. Left: AI neon Miami illustration (Nano Banana 2.1, tag 'AI CONCEPT'); right triangle: real Esri World Imagery of Miami Beach with a map pin (tag 'REAL'); pink badge 'VICE CITY = MIAMI?'. Text and composition by thumb_cover.py (own PIL code). Base: thumb_base.jpg. Variant plan and scoring: cover_plan.md.
 
+Cover v2 (closer to the GTA 6 trailer look, free: recomposed from the already generated in-engine frames): thumbnail_gta6_v2a.jpg (G01, bright Florida sun, pink convertible - recommended), _v2b.jpg (G07, sunset rooftop), _v2c.jpg (G00, neon dusk). Sunset-gradient title, round real Esri inset of Miami Beach. Script: thumb_cover_v2.py.
+
 ## Cost
 Frames $0.36 + Grok clips $0.864 (8 clips, 3 tests included) + Lumean 0.34 + 0.37 RUB (voice re-recorded with 'reportedly' wording). Cover base image $0.04. Failed: Veo 3.1 Lite (server error, not charged).
