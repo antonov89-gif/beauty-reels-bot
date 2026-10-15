@@ -33,4 +33,7 @@ Format 1080x1920 30 fps H.264 + AAC; -13.8 LUFS; no silent gaps; overlays and da
 Soft spots: (1) "half of this country" means the eastern half by territory (Phoenix and Line Islands); most people live in the Gilbert Islands, so the description says "its eastern islands". (2) "No New Year's Eve party in 1994" is a joke about the missing date, not a fact about events. (3) The claim "first to greet each new year" rests on a Wikipedia sentence flagged "needs citation"; the description names UTC+14. (4) In K3 only one official moves. (5) The video is short (30.9 s) by design.
 
 ## Cost
-Keyframes 6 x $0.02 (1K) = $0.12 + Grok clips 6 x $0.108 = $0.648 + Lumean voice 0.23 RUB = about $0.77. Cover not made yet (free from the keyframes or $0.04 at 2K).
+Keyframes 6 x $0.02 (1K) = $0.12 + Grok clips 6 x $0.108 = $0.648 + Lumean voice 0.23 RUB = about $0.77. Cover: free, recomposed from keyframe K6.
+
+## Cover (1080x1920, in this folder)
+thumbnail_kiribati.jpg: 'THEY DELETED NEW YEAR'S EVE!' (Titan One, yellow + white, black outline), a big red-and-white calendar page 'DEC 31' crossed out (own drawing), the disappointed family around the untouched cake with the torn page on the post (keyframe K6), 'AI CONCEPT' tag. Free (no new generation). Script: thumb_cover.py (expects titan-one.ttf and Poppins-ExtraBold.ttf in the working folder).
