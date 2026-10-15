@@ -41,11 +41,17 @@ Runner-up: C as a second cover for A/B testing later (it sells the Mount Kalaga 
 - Badge on the seam: "VICE CITY = MIAMI?" (pink pill, rotated -6).
 - The base AI image has no text in it; every letter is added by hand (PIL), same pipeline as the Samoa covers.
 
-## Prompt for the AI half (Nano Banana 2.1, 9:16, 2K) - ready to paste
-> Illustrated-looking but richly rendered open-world crime game key art, NOT a photograph, in the spirit of a modern sun-drenched Miami-style open-world game loading screen: low angle from the asphalt of a neon-lit boulevard at dusk, a glossy purple sports car drifting toward the camera with white tyre smoke, tall palm trees on both sides, a pastel art deco hotel with pink and cyan neon glowing on the left, a police helicopter high in a hot pink-orange-purple sunset sky, wet asphalt reflecting the neon, small generic pedestrians in the distance, litter and tyre marks on the road. Saturated colours, strong rim light, cinematic depth of field, clean bold shapes readable at thumbnail size. Composition: all the action in the lower-left two thirds, the upper-right third is open sky and glow with free space; the car is the single focal point. No text, no letters, no numbers, no signs with words, no logos, no brand names, no real people, no recognisable game characters, no watermarks. Vertical 9:16.
+## Prompt for the AI half (v2, filter-safe) - ready to paste
+Why v1 was rejected (likely): "crime game", "police helicopter", "drifting", "tyre marks", "recognisable game characters", and the brand words GTA / Rockstar in the negative prompt. Filters read those as violence/crime plus trademark. v2 describes only a sunny retro Miami street scene: no crime, no police, no game or brand names, no negative list.
 
-Negative prompt (when the model supports it): text, letters, logo, watermark, Rockstar, GTA logo, recognisable character, celebrity face, blurry, low contrast, cluttered, extra limbs, deformed car, photo of a real street.
-Continuity with the video: same look as keyframes G00/G01 (neon dusk Vice City), so the cover feels like the same world. Reference image option: pass G00 (keyframes/G00.jpg URL) as `image_urls` to keep the car and hotel style; the grid sheet shows G00 as the best match.
+Main (short, positive only):
+> Vertical 9:16 stylized digital illustration of a retro neon Miami Beach boulevard at sunset: a glossy purple convertible sports car driving toward the camera, tall palm trees on both sides, pastel art deco hotels with pink and cyan neon lights, a hot pink, orange and purple sky, a small helicopter far away, wet road reflecting the neon glow, a few tiny pedestrians in the distance. Saturated vivid colours, strong rim light, clean bold shapes, one clear focal point (the car) in the lower left, open glowing sky in the upper right. No text, no letters, no logos.
+
+Fallback if it is still refused (even plainer, no vehicle action):
+> Vertical 9:16 stylized digital illustration of a sunny retro Miami Beach street at sunset: pastel art deco hotels with glowing pink and cyan neon, tall palm trees, a vintage pink convertible parked at the curb, a pink, orange and purple sky, calm ocean at the end of the road. Vivid colours, soft glow, clean shapes, open sky in the upper part for a title. No text, no logos, no people.
+
+Rules that keep it passing: no "crime", "police", "gun", "drift", "chase", "GTA", "Rockstar", "game", "character"; no negative-prompt list if the tool refuses it; keep it under about 120 words; say "illustration" not "screenshot". The GTA feel comes from colour (pink/orange/purple sunset + neon + palms) and my overlay, not from naming the game.
+Continuity with the video: same dusk Vice City mood as keyframes G00/G01; reference image option G00 as `image_urls`.
 
 ## Prompt for variant C (only if tested later)
 > Game-style render, NOT a photograph: a forested granite mountain rising out of a flat Florida swamp, cypress trees with Spanish moss in the foreground water, low golden fog, one tiny wooden cabin, dramatic god-rays from a hot orange sunset, an unreal "too tall for Florida" feeling. Clear single focal point (the mountain peak) in the upper-middle, free space above for a title. No text, no letters, no numbers, no logos, no people. Vertical 9:16.
