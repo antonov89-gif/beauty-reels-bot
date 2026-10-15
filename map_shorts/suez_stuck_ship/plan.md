@@ -75,8 +75,13 @@ Tags: suez canal, ever given, ship stuck suez canal, supermoon, world trade, shi
 ## Cover plan (after the render, $0.04, same mechanic as the Wallace's Line / Gold cube covers)
 Big contrast: tiny tugboat vs the giant ship wedged in the canal; red-glow "$400 M / HOUR" with arrows, yellow/white title "STUCK!"? Better "THE MOON FIXED IT?" (curiosity). Real NASA/Esri strip of the Suez Canal (free) at the top.
 
-## Cost (spent 2026-10-15: 6 keyframes at 1K = $0.12; the rest needs a "yes")
+## Cost (spent 2026-10-15: 6 keyframes at 1K = $0.12 + 6 Grok clips $0.648; voice and cover still to do)
 Keyframes are made at 1K ($0.02 each) because Grok returns 704x1280 clips; 2K would not add detail. Remaining: 6 Grok clips $0.648 + Lumean voice ~0.25 RUB + cover $0.04 (2K, optional) = about $0.77 in total with the cover
 
 ## Checks before delivery (standard QC)
 1080x1920 30 fps, -14 LUFS, caption sync, frame sheet over the whole timeline, numbers match the VO (400 m, 12 %, $400 M/h, 6 days, 14 tugs, 400+ ships, $540 M), no readable text or real company marks in AI frames, chat copy under 30 MiB, no secrets in the repo.
+
+## Clip QC notes (2026-10-15)
+- K1: the ship starts to creep forward after ~3.5 s; use only the first ~3.5 s (lower playback rate) so it still looks stuck.
+- K6: small real-looking national flags appear at the very top from ~2 s; crop with zoom 1.15 and cy 0.6 in the engine so they are out of frame.
+- K4 and K5 are the strongest clips (the ship moving free; the queue).
