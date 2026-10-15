@@ -36,7 +36,7 @@ thumbnail_gta6.jpg: 'GTA 6 = REAL FLORIDA?' split cover. Left: AI neon Miami ill
 
 Cover v2 (closer to the GTA 6 trailer look, free: recomposed from the already generated in-engine frames): thumbnail_gta6_v2a.jpg (G01, bright Florida sun, pink convertible - recommended), _v2b.jpg (G07, sunset rooftop), _v2c.jpg (G00, neon dusk). Sunset-gradient title, round real Esri inset of Miami Beach. Script: thumb_cover_v2.py.
 
-Cover v3 (hero shot, closest to the GTA 6 key-art look): thumbnail_gta6_v3_hero.jpg - generic anonymous woman in sunglasses on a pink convertible at golden hour (no likeness of any game character), sunset-gradient title, round real Esri inset of Miami Beach, 'AI CONCEPT' tag. Base thumb_base_hero.jpg (gen_hero.py), composition thumb_cover_hero.py.
+Cover v3 (hero shot, closest to the GTA 6 key-art look): thumbnail_gta6_v3_hero.jpg - generic anonymous woman in sunglasses on a pink convertible at golden hour (no likeness of any game character), title lettered in a chunky GTA 6-style face (Titan One, OFL, fonts/titan-one.ttf) with sunset gradient, white inner edge and thick black outline (inspired by the look, not a copy of the official logo), round real Esri inset of Miami Beach, 'AI CONCEPT' tag. Base thumb_base_hero.jpg (gen_hero.py), composition thumb_cover_hero.py.
 
 ## Cost
 Frames $0.36 + Grok clips $0.864 (8 clips, 3 tests included) + Lumean 0.34 + 0.37 RUB (voice re-recorded with 'reportedly' wording). Cover base image $0.04 (first, not used) + hero cover base $0.04 (v3). Failed: Veo 3.1 Lite (server error, not charged).

@@ -14,19 +14,28 @@ def grade(im, warm=0.10, sat=1.18, con=1.10):
     # vignette
     yy, xx = np.mgrid[0:H, 0:W]; v = 1 - 0.32 * (((xx - W / 2) / (W / 2)) ** 2 + ((yy - H / 2) / (H / 2)) ** 2) / 2
     return Image.fromarray(np.clip(a * v[..., None], 0, 255).astype(np.uint8))
-def grad_text(img, txt, cy, size, maxw=W - 110, sw=14, stops=((255, 190, 40), (255, 70, 120), (170, 60, 220))):
-    f = font(size)
-    while f.getlength(txt) > maxw: f = font(f.size - 2)
+def grad_text(img, txt, cy, size, maxw=W - 110, sw=16, stops=((255, 214, 64), (255, 132, 52), (255, 52, 140), (150, 50, 210))):
+    """GTA 6-style lettering: chunky Pricedown-like face, sunset gradient, white inner edge, thick black outline, drop glow."""
+    f = ImageFont.truetype("fonts/titan-one.ttf", int(size))
+    while f.getlength(txt) > maxw: f = ImageFont.truetype("fonts/titan-one.ttf", f.size - 2)
     m = Image.new("L", (W, H), 0); ImageDraw.Draw(m).text((W / 2, cy), txt, font=f, fill=255, anchor="mm")
-    sh = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ImageDraw.Draw(sh).text((W / 2 + 6, cy + 14), txt, font=f, fill=(0, 0, 0, 220), anchor="mm", stroke_width=sw + 6, stroke_fill=(0, 0, 0, 220))
-    img.alpha_composite(sh.filter(ImageFilter.GaussianBlur(10)))
-    ImageDraw.Draw(img).text((W / 2, cy), txt, font=f, fill=(0, 0, 0, 255), anchor="mm", stroke_width=sw, stroke_fill=WHT)
+    # warm outer glow
+    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ImageDraw.Draw(glow).text((W / 2, cy), txt, font=f, fill=(255, 90, 160, 200), anchor="mm", stroke_width=sw + 10, stroke_fill=(255, 90, 160, 200))
+    img.alpha_composite(glow.filter(ImageFilter.GaussianBlur(16)))
+    sh = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ImageDraw.Draw(sh).text((W / 2 + 5, cy + 14), txt, font=f, fill=(0, 0, 0, 230), anchor="mm", stroke_width=sw + 4, stroke_fill=(0, 0, 0, 230))
+    img.alpha_composite(sh.filter(ImageFilter.GaussianBlur(6)))
+    d = ImageDraw.Draw(img)
+    d.text((W / 2, cy), txt, font=f, fill=(0, 0, 0, 255), anchor="mm", stroke_width=sw, stroke_fill=(0, 0, 0, 255))   # black outline
+    d.text((W / 2, cy), txt, font=f, fill=WHT, anchor="mm", stroke_width=5, stroke_fill=WHT)                           # white inner edge
     bb = m.getbbox(); y0, y1 = bb[1], bb[3]
     g = np.zeros((H, W, 3), np.uint8)
     for y in range(y0, y1 + 1):
         t = (y - y0) / max(1, y1 - y0); k = t * (len(stops) - 1); i = min(int(k), len(stops) - 2); u = k - i
         g[y] = [int(stops[i][c] * (1 - u) + stops[i + 1][c] * u) for c in range(3)]
-    layer = Image.fromarray(g).convert("RGBA"); layer.putalpha(m); img.alpha_composite(layer)
+    inner = m.filter(ImageFilter.MinFilter(9))                                     # gradient sits inside the white edge
+    layer = Image.fromarray(g).convert("RGBA"); layer.putalpha(inner); img.alpha_composite(layer)
+    hi = Image.new("RGBA", (W, H), (255, 255, 255, 0)); hm = np.zeros((H, W), np.uint8); hm[y0:y0 + int((y1 - y0) * 0.32)] = 70
+    hl = Image.fromarray(hm); hl = Image.composite(hl, Image.new("L", (W, H), 0), inner); hi.putalpha(hl); img.alpha_composite(hi)
 def pill(img, txt, cx, cy, sz, bg, rot=0):
     f = font(sz); pw, ph = int(f.getlength(txt) + sz), int(sz * 1.7)
     lay = Image.new("RGBA", (pw + 40, ph + 40), (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
@@ -58,7 +67,7 @@ def make_hero(src, out):
     img = grade(cover(src), warm=0.06, sat=1.22, con=1.12).convert("RGBA")
     a = np.asarray(img.convert("RGB")).astype(np.float32); g = np.clip(1 - np.linspace(0.62, 0, 640), 0, 1); a[:640] *= g[:, None, None]
     img = Image.fromarray(a.astype(np.uint8)).convert("RGBA")
-    grad_text(img, "GTA 6 =", 165, 190); grad_text(img, "REAL FLORIDA?", 345, 160)
+    grad_text(img, "GTA 6", 170, 230, sw=18); grad_text(img, "REAL FLORIDA?", 360, 150, sw=14)
     inset(img, 805, 1560, 185)
     pill(img, "AI CONCEPT", 175, 1810, 34, (30, 30, 50), 0)
     img.convert("RGB").save(out, quality=93)
