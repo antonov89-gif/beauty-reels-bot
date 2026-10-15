@@ -74,8 +74,14 @@ Tags: kiribati, date line, international date line, new year, time zones, utc+14
 ## Cover plan (after the render, free from keyframes or $0.04 at 2K; same mechanics as the Gold cube / Suez covers)
 Big contrast: a party table under an empty calendar hook with a huge red strike through "31", title "NO NEW YEAR'S EVE?" (Titan One, yellow + white), small "AI CONCEPT" tag, a map strip of the Pacific with the date line on top.
 
-## Cost (spent 2026-10-15: 6 keyframes at 1K = $0.12; the rest needs a "yes")
+## Cost (spent 2026-10-15: 6 keyframes at 1K = $0.12 + 6 Grok clips $0.648; voice and cover still to do)
 6 keyframes at 1K = $0.12 + 6 Grok clips = $0.648 + Lumean voice ~0.25 RUB + cover free = about $0.77.
 
 ## Checks before delivery (standard QC)
 1080x1920 30 fps, -14 LUFS, caption sync, frame sheet over the whole timeline, dates/numbers match the VO (1994, Friday 30 December, Sunday 1 January, four days, UTC+14, ~1,000 km), no readable text in AI frames, no flags with emblems, chat copy under 30 MiB, no secrets in the repo.
+
+## Clip QC notes (2026-10-15)
+- K1 clock ticks to midnight, the family cheers, a blank page drops and covers the frame (good transition into scene 2).
+- K3: only the left official moves (he waves); the right one is almost static. Use a light zoom to hide it.
+- K6: the first 2 s are wide; from ~3.5 s it is a close-up of the girl and the cake (she may look like she blows the candles). Use the 2-5 s range at the engine level.
+- K2, K4, K5: clean, strongest clips (the line lights up, the page flies away, sunrise + firework).
