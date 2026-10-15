@@ -31,5 +31,8 @@ Which GTA 6 place do YOU think is based on a real spot? Drop your theory 👇
 ## Settings
 Category Gaming (or Education). Not made for kids. Altered or synthetic content: Yes (AI voice and AI-generated game-style imagery).
 
+## Cover (1080x1920, in this folder)
+thumbnail_gta6.jpg: 'GTA 6 = REAL FLORIDA?' split cover. Left: AI neon Miami illustration (Nano Banana 2.1, tag 'AI CONCEPT'); right triangle: real Esri World Imagery of Miami Beach with a map pin (tag 'REAL'); pink badge 'VICE CITY = MIAMI?'. Text and composition by thumb_cover.py (own PIL code). Base: thumb_base.jpg. Variant plan and scoring: cover_plan.md.
+
 ## Cost
-Frames $0.36 + Grok clips $0.864 (8 clips, 3 tests included) + Lumean 0.34 + 0.37 RUB (voice re-recorded with 'reportedly' wording). Failed: Veo 3.1 Lite (server error, not charged).
+Frames $0.36 + Grok clips $0.864 (8 clips, 3 tests included) + Lumean 0.34 + 0.37 RUB (voice re-recorded with 'reportedly' wording). Cover base image $0.04. Failed: Veo 3.1 Lite (server error, not charged).
