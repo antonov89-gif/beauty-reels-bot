@@ -9,11 +9,11 @@ Palmerston: 35 people / 1 surname / 400 km to the airport / 1863 / 3 wives / "no
 Yap: 11,000 people / money = stone wheels / 400 km to the quarry / centuries ago / rafts that sank / "you never move the money" / "money at the bottom of the ocean".
 Channel fit: geography + money.
 
-## Voiceover (12 lines, 191 words; Kokoro test 67 s at speed 1.0)
+## Voiceover (12 lines, 191 words; final Lumean take 64.8 s)
 1. If you look at the western Pacific, and zoom in closer, you'll find the island of Yap.
 2. About eleven thousand people live here, and their money is giant stone wheels.
 3. The smallest are the size of a coin, but the biggest weighs about four tons.
-4. And there is no such stone on Yap. It all came from Palau, about four hundred kilometers away.
+4. And there is no such stone on Yap. It all came from Palau, over four hundred kilometers away.
 5. So how did a stone wheel become money?
 6. Centuries ago, Yapese sailors crossed the open ocean in canoes to cut stones from the cliffs of Palau.
 7. They towed them home on bamboo rafts, and many stones sank on the way.
