@@ -99,9 +99,15 @@ Tags: snake island, ilha da queimada grande, brazil banned island, golden lanceh
 ## Cover plan (free from keyframes, or $0.04 at 2K)
 Aerial island + golden snake macro, red-glow "0 VISITORS" or "BANNED BY BRAZIL", title "BRAZIL BANNED IT!" (Titan One, yellow + white), small "AI CONCEPT" tag; K1/K10 as the base.
 
-## Cost (spent 2026-10-15: 12 keyframes at 1K = $0.24 + $0.02 for re-generating K12 after a failed download = $0.26; the rest needs a "yes")
+## Cost (spent 2026-10-15: 12 keyframes at 1K = $0.24 + $0.02 for re-generating K12 after a failed download = $0.26; 12 Grok clips $1.296; total so far $1.556; voice and cover still to do)
 Option A (recommended, 12 scenes): 12 keyframes at 1K = $0.24 + 12 Grok clips = $1.296 + Lumean voice ~0.6 RUB = about $1.54; cover free.
 Option B (8 scenes: merge 2+3, 5+6, 10+11, 8+9): 8 keyframes $0.16 + 8 clips $0.864 = about $1.03; less variety, slower pace.
 
 ## Checks before delivery (standard QC)
 1080x1920 30 fps, -14 LUFS, caption sync, frame sheet over the whole timeline, dates/numbers match the VO (33 km, 43 ha, 2,400-2,900, 1909, 1920s, 2008, $30,000, < 3,000), no readable text or flags in the AI frames, no person being bitten, chat copy under 30 MiB, no secrets in the repo.
+
+## Clip QC notes (2026-10-15)
+- All 12 clips generated (704x1280, 6.04 s). The first download attempt failed on 7 clips because the container disk was full; they were already paid, so they were re-downloaded from the saved result URLs (size checked against the server, decode checked). Lesson: check free disk before long jobs and keep result URLs.
+- K4: the snake rises tall beside the scientist (cobra-like); use the first ~3 s.
+- K5: the land strip turns into a surf-washed beach rather than being fully covered; acceptable, use a darker overlay text.
+- K12 is the comic clip (sunglasses slip). K11: lighthouse beam turns on. K6: the bird flies off, snake watches.
