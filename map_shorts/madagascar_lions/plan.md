@@ -75,7 +75,7 @@ Tags: madagascar, madagascar animals, lemur, fossa, why no lions in madagascar, 
 ## Cover plan (after the render, $0.04, same mechanics as the Wallace's Line cover)
 Split composition: lion + zebra on a rock left, lemur + fossa right, red-glow "400 KM" with arrows, title "NO LIONS HERE?" (yellow/white, black outline), map strip with the red dashed line on top. Use K1 as the base (free recomposition) or a new 2K frame ($0.04).
 
-## Cost (keyframes spent: $0.24 on 2026-10-15; the rest needs a "yes")
+## Cost (spent 2026-10-15: keyframes $0.24 + 6 Grok clips $0.648 = $0.888; voice and cover still to do)
 - 6 keyframes: $0.24
 - 6 Grok clips: $0.648
 - Lumean voice: ~0.5 RUB
