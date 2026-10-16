@@ -7,12 +7,21 @@ LINES = [l.strip() for l in open(f"ml/{LANG}.txt", encoding="utf-8") if l.strip(
 assert len(LINES) == E.N, (len(LINES), E.N)
 rows = list(csv.DictReader(open(f"{D0}/alignment.csv", encoding="utf-8")))
 chars = [(r["char"], float(r["start"]), float(r["end"])) for r in rows]
+import re
 def norm(s): return "".join(c for c in s.lower() if c.isalnum())
+CJK = LANG == "zh"
+def toks(line):                     # Chinese has no spaces: one token per character, Latin words kept whole
+    return re.findall(r"[A-Za-z0-9][A-Za-z0-9'\-]*[,.!?:;，。！？：；、]?|[\u4e00-\u9fff][，。！？：；、》]?|[《“”]", line) if CJK else line.split()
+def join(ws):
+    if not CJK: return " ".join(ws)
+    out = ""
+    for w in ws: out += (" " if out and out[-1].isascii() and out[-1].isalnum() and w[0].isascii() else "") + w
+    return out
 alnum = [(i, c.lower()) for i, (c, _, _) in enumerate(chars) if c.isalnum()]
 k = 0; starts, D, T = [], [], []
 for line in LINES:
     wt = []; first = last = None
-    for w in line.split():
+    for w in toks(line):
         n = norm(w)
         if not n: continue
         j = k
@@ -46,12 +55,13 @@ def ts(x):
     h = int(x // 3600); m = int(x % 3600 // 60); s = x % 60; return f"{h:02d}:{m:02d}:{int(s):02d},{int(round((s - int(s)) * 1000)) % 1000:03d}"
 out = []; n = 1
 for i, l in enumerate(LINES):
-    w = l.split(); tw = [x / tempos[i] for x in T[i]]
+    w = toks(l); tw = [x / tempos[i] for x in T[i]]
     if len(tw) != len([x for x in w if norm(x)]): tw = None
     ws = [x for x in w if norm(x)]
-    for c in range(0, len(ws), 7):
-        if tw: a0 = place_st[i] + tw[c]; b0 = place_st[i] + (tw[c + 7] - 0.05 if c + 7 < len(ws) else D[i] / tempos[i] + 0.1)
-        out.append(f"{n}\n{ts(a0)} --> {ts(b0)}\n{' '.join(ws[c:c + 7])}\n"); n += 1
+    K = 16 if CJK else 7
+    for c in range(0, len(ws), K):
+        if tw: a0 = place_st[i] + tw[c]; b0 = place_st[i] + (tw[c + K] - 0.05 if c + K < len(ws) else D[i] / tempos[i] + 0.1)
+        out.append(f"{n}\n{ts(a0)} --> {ts(b0)}\n{join(ws[c:c + K])}\n"); n += 1
 open(f"ml/gta6_vice_city_vs_miami_{LANG}.srt", "w", encoding="utf-8").write("\n".join(out))
 # mix with the same music + sfx as the English master
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"ml/voice_{LANG}.wav", "-i", "music.wav", "-i", "sfx.wav", "-filter_complex",
