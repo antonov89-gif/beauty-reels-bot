@@ -18,7 +18,9 @@ Optional stronger tag (some generators block it, remove if refused): "in the vis
 
 ## Animation prompts (6 s; append: " Cinematic trailer camera, smooth realistic motion, no cuts, no text, no logos.")
 - A0: Fast drone fly-forward over the coastline toward the skyline, the pink sports car speeds along the causeway, the helicopter banks behind it, sun flare sweeps across the lens.
-- A1: Slow dolly along the avenue at dusk, neon signs flicker on one by one, a rollerblader glides past the camera, the convertible's headlights turn on, palm leaves sway.
+- A1 (v2, main): Camera glides forward at car height down a beachfront avenue at dusk, the white 1980s convertible cruises slowly past the lens from left to right with its headlights on, pastel art deco hotels with glowing pink and teal neon line the left side, tourists stroll and a rollerblader skates by in the background, palm fronds sway gently in the sea breeze, warm sunset flare, wet asphalt reflections.
+- A1 (v2, alt: driver's view): Smooth forward cruise along the same avenue seen from just above the hood of a convertible, neon hotel facades and palm trees slide past on both sides, pedestrians cross far ahead, the sunset glows at the end of the street, light film grain.
+- A1 (v2, alt: drone reveal): The camera rises slowly from street level to a low aerial view over the avenue, the neon-lit art deco hotels and the beach come into view, the convertible drives away along the street below, seagulls cross the frame, golden dusk light.
 - A2: Low drone tracks forward fast along the causeway, the red sports car overtakes two cars and pulls away, a cruise ship horn steam puff, heat shimmer over the road.
 - A3: Slow drone orbit around the glowing arena at night, the LED screen pulses, crowds stream across the plaza, a yacht passes in the bay, light trails on the road.
 - A4: The little people-mover train glides smoothly along the elevated track toward the camera and passes overhead, the camera tilts up to follow it, reflections slide across the glass towers.
@@ -26,4 +28,5 @@ Optional stronger tag (some generators block it, remove if refused): "in the vis
 - A6: Slow aerial glide along the causeway from island to island, the drawbridge lowers after the sailboat passes, speedboats cut white wakes, golden light.
 
 Avoid in prompts (filter): gun, weapon, shooting, crash, blood, kill, drugs, real team or brand names.
+Why A1 was changed: one clear camera move and one hero object; the first version stacked four events (flicker, rollerblader, headlights, palms), which makes the generator blur them. Keep ONE main motion per clip.
 Tips from ep.1: avoid "slow-motion splash" type wording (it created lace-like AI artifacts); 6-second clips are enough.
