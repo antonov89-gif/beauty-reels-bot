@@ -1,4 +1,4 @@
-# Publication package: GTA 6 ep.2 "Guess the REAL Vice City spot" (1:26, 9:16)
+# Publication package: GTA 6 ep.2 "Guess the REAL Vice City spot" (1:25, 9:16)
 
 ## Title (pick one)
 1. Can you guess these 6 GTA 6 places in real Miami? 🎮  (recommended)
@@ -11,7 +11,7 @@ Six places from the GTA 6 trailers look a lot like real Miami. You get 2 seconds
 1. Ocean Drive, Miami Beach: about 800 historic buildings in the Art Deco District, on the National Register since 1979.
 2. MacArthur Causeway: about 3.5 miles long, open since 1920.
 3. Kaseya Center, home of the Miami Heat: 19,600 seats for basketball.
-4. Metromover: a driverless people mover, free to ride since 1986.
+4. Metromover: a driverless people mover, free to ride since 2002 (the 25-cent fare was dropped after the 2002 transit tax vote).
 5. Wynwood: old warehouses turned into an open-air street art district (Wynwood Walls, 2009).
 6. Venetian Causeway: 12 bridges, two of them lift for boats.
 
@@ -37,7 +37,7 @@ Category Gaming. Not made for kids. Altered or synthetic content: Yes (AI visual
 - Art Deco District: National Register of Historic Places, 14 May 1979, about 800 buildings (Miami Design Preservation League; Greater Miami CVB).
 - MacArthur Causeway: about 3.5 miles, opened Feb 1920 (Wikipedia; Big Bus Tours).
 - Kaseya Center: opened 31 Dec 1999, 19,600 seats for basketball (Wikipedia; Stadium Journey).
-- Metromover: free to ride since opening in 1986 (Wikipedia).
+- Metromover: opened 1986; the 25-cent fare was eliminated after the November 2002 half-cent transit tax (People's Transportation Plan), free since then (Miami Today 2018; Jon Bell transit page; Miami-Dade County fares page).
 - Wynwood Walls: created by Tony Goldman in 2009 (Wynwood Walls; Bisnow).
 - Venetian Causeway: 12 bridges, two bascule (lifting) spans over the Intracoastal (FDOT; Wikipedia).
 - Trailer link per place: Dexerto, New Times Broward-Palm Beach, Sportskeeda, Kotaku (reported, not confirmed by Rockstar).

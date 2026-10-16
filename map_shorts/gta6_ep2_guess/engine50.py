@@ -13,11 +13,11 @@ TM = json.load(open("timing.json")); D, TW, V0 = TM["D"], TM["T"], TM["starts"]
 SPOTS = json.load(open("spots.json")); ROUTES = json.load(open("routes.json"))
 N = len(LINES)
 LEAD = 0.25
-GAP = {1: 1.8, 3: 2.6, 5: 2.6, 7: 2.6, 9: 2.6, 11: 2.6}      # animated interludes inserted BEFORE line i
+GAP = {1: 1.8, 3: 3.2, 5: 3.2, 7: 3.2, 9: 3.2, 11: 3.2}      # animated interludes inserted BEFORE line i
 ST, acc = [], 0.0
 for i in range(N):
     acc += GAP.get(i, 0.0); ST.append(LEAD + V0[i] + acc)
-END_CARD = 2.6
+END_CARD = 3.4
 TOTAL = ST[-1] + D[-1] + 1.0 + END_CARD
 NF = int(TOTAL * FPS)
 exec(open("helpers_raw.py").read())
@@ -46,7 +46,8 @@ CLUE = {1: ("A1", 0.0), 3: ("A2", 0.0), 5: ("A3", 0.0), 7: ("A4", 0.0), 9: ("A5"
 NAME = {2: "OCEAN DRIVE", 4: "MACARTHUR CAUSEWAY", 6: "KASEYA CENTER", 8: "METROMOVER", 10: "WYNWOOD", 12: "VENETIAN CAUSEWAY"}
 SUB = {2: "MIAMI BEACH", 4: "DOWNTOWN TO SOUTH BEACH", 6: "HOME OF THE MIAMI HEAT", 8: "DOWNTOWN MIAMI", 10: "STREET ART DISTRICT", 12: "BISCAYNE BAY"}
 PIN = {2: (0.38, 0.50), 4: (0.50, 0.37), 6: (0.50, 0.52), 8: (0.50, 0.50), 10: (0.50, 0.50), 12: (0.50, 0.50)}
-GC = {"A3": (1.22, 0.62, 0.30)}   # crop: hides the AI-made game HUD and the LED text on the arena clip
+GC = {"A3": (1.22, 0.62, 0.30)}
+RATE = {"A3": 0.6}   # stay inside the clean part of the arena clip (LED text comes back later)   # crop: hides the AI-made game HUD and the LED text on the arena clip
 SATK = {2: "S1", 4: "S2", 6: "S3", 8: "S4", 10: "S5", 12: "S6"}
 
 
@@ -144,13 +145,14 @@ def hook_frame(t):
 def clue_frame(i, t):
     n = SP[i]; a, b = LB(i); name, s0 = CLUE[i]
     zb, cxx, cyy = GC.get(name, (1.0, 0.5, 0.5))
-    img = cover(clip_frame(name, s0 + (t - a) * 1.0), zb + 0.05 * (t - a) / max(0.1, b - a), cxx, cyy).convert("RGBA")
+    img = cover(clip_frame(name, s0 + (t - a) * RATE.get(name, 1.0)), zb + 0.05 * (t - a) / max(0.1, b - a), cxx, cyy).convert("RGBA")
     shade(img, 520, 130)
     badge(img, n, t)
     left = max(0.0, 2.0 - (t - a - 0.15)); frac = left / 2.0
     label(img, "GUESS?", 540, 330, t, a + 0.05, 120, WHT, glow=PINK)
     ring(img, 540, 560, 100, frac if t > a + 0.15 else 1.0, YEL)
-    ImageDraw.Draw(img).text((540, 560), f"{left:0.1f}", font=font(POPX, 66), fill=WHT, anchor="mm", stroke_width=4, stroke_fill=BLK)
+    if left > 0: ImageDraw.Draw(img).text((540, 560), f"{left:0.1f}", font=font(POPX, 66), fill=WHT, anchor="mm", stroke_width=4, stroke_fill=BLK)
+    else: label(img, "TIME!", 540, 560, t, a + 2.15, 70, RED, glow=BLK)
     return img
 
 
@@ -170,7 +172,7 @@ def reveal_frame(i, t):
     wipe = ease((t - a) / 0.9)
     if wipe < 1.0:
         zb, cxx, cyy = GC.get(name, (1.0, 0.5, 0.5))
-        gm = cover(clip_frame(name, s0 + (LB(i - 1)[1] - LB(i - 1)[0]) + (t - a)), zb + 0.08, cxx, cyy).convert("RGBA")
+        gm = cover(clip_frame(name, s0 + ((LB(i - 1)[1] - LB(i - 1)[0]) + (t - a)) * RATE.get(name, 1.0)), zb + 0.08, cxx, cyy).convert("RGBA")
         xw = int(W * wipe); img = gm.copy(); img.paste(sat.crop((0, 0, xw, H)), (0, 0))
         d = ImageDraw.Draw(img); d.rectangle((xw - 5, 0, xw + 5, H), fill=WHT + (255,))
         if 0 < xw < W - 60: pill(img, "REAL", max(100, xw - 90), 960, 40, (20, 150, 90))
@@ -197,7 +199,7 @@ def reveal_frame(i, t):
 def facts(img, i, t):
     if i == 2:
         counter(img, 0, 800, "~{:0.0f} BUILDINGS", 540, 1180, t, WT(2, "eight") - 0.2, 1.2, 90, WHT, GRN)
-        label(img, "PROTECTED SINCE 1979", 540, 1300, t, WT(2, "1979") - 0.2, 64, YEL)
+        label(img, "HISTORIC DISTRICT \u00b7 1979", 540, 1300, t, WT(2, "1979") - 0.2, 64, YEL)
     elif i == 4:
         counter(img, 0, 3.5, "{:0.1f} MILES", 540, 1180, t, WT(4, "three") - 0.2, 1.1, 110, WHT, GRN)
         label(img, "OPEN SINCE 1920", 540, 1300, t, WT(4, "1920") - 0.2, 70, YEL)
@@ -206,7 +208,7 @@ def facts(img, i, t):
         label(img, "MIAMI HEAT ARENA", 540, 1300, t, WT(6, "heat") - 0.2, 64, YEL)
     elif i == 8:
         label(img, "FREE TO RIDE", 540, 1180, t, WT(8, "free") - 0.2, 100, WHT, glow=GRN)
-        label(img, "SINCE 1986", 540, 1310, t, WT(8, "1986") - 0.2, 90, YEL)
+        label(img, "SINCE 2002", 540, 1310, t, WT(8, "2002") - 0.2, 90, YEL)
     elif i == 10:
         label(img, "WYNWOOD WALLS", 540, 1180, t, WT(10, "2009") - 0.4, 84, WHT, glow=PINK)
         label(img, "2009 · STREET ART GALLERY", 540, 1300, t, WT(10, "2009") - 0.2, 56, YEL)

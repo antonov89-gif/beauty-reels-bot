@@ -9,7 +9,7 @@ def place(buf, s, t, g=1.0):
     i = int(t * SR)
     if i < 0: s = s[-i:]; i = 0
     if i < N: e = min(N, i + len(s)); buf[i:e] += s[:e - i] * g
-subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", "lumean/result.mp3", "-ar", str(SR), "-ac", "1", "voice_44.wav"], check=True)
+subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", "lumean/combined.wav", "-ar", str(SR), "-ac", "1", "voice_44.wav"], check=True)
 a, _ = sf.read("voice_44.wav"); voice = np.zeros(N)
 V0, DD = E.V0, E.D
 mids = [0.0] + [(V0[i] + DD[i] + V0[i + 1]) / 2 for i in range(E.N - 1)] + [len(a) / SR]
@@ -91,7 +91,7 @@ for i in E.NAME:
 place(sfx, pop(), WT(2, "eight") - 0.2, 0.8); place(sfx, ding(), WT(2, "1979") - 0.2, 0.6)
 place(sfx, pop(), WT(4, "three") - 0.2, 0.8); place(sfx, ding(), WT(4, "1920") - 0.2, 0.6)
 place(sfx, pop(), WT(6, "nineteen") - 0.2, 0.8); place(sfx, pop(), WT(6, "heat") - 0.2, 0.6)
-place(sfx, pop(), WT(8, "free") - 0.2, 0.8); place(sfx, ding(), WT(8, "1986") - 0.2, 0.7)
+place(sfx, pop(), WT(8, "free") - 0.2, 0.8); place(sfx, ding(), WT(8, "2002") - 0.2, 0.7)
 place(sfx, pop(), WT(10, "2009") - 0.3, 0.8); place(sfx, pop(), WT(12, "twelve") - 0.2, 0.8); place(sfx, boing(), WT(12, "two") - 0.1, 0.5)
 for i in (3, 5, 7, 9, 11):
     a, b = IB(i)
