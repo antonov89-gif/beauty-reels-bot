@@ -11,7 +11,7 @@ If the generator refuses the game name, replace the first sentence with: "In-eng
 ### GTA DNA checklist (each frame should have at least 4)
 1. Telephoto or helicopter angle (the trailer camera).
 2. A hero vehicle with chrome and reflections.
-3. One "Florida Man" weird detail (flamingo float, pet iguana, airboat, shirtless guy on a jet ski, alligator, pelican on a car roof).
+3. One "Florida Man" weird detail (flamingo float, pet iguana, airboat, guy in a neon life vest on a jet ski, alligator, pelican on a car roof).
 4. Hot pink + electric teal accent against an orange sky.
 5. Crowd in the background, nobody looking at the camera.
 6. Haze, heat shimmer or wet reflections.
@@ -22,7 +22,7 @@ text, letters, numbers, subtitles, logo, watermark, signature, HUD, minimap, UI,
 ## Frames (16:9)
 ### Hook
 - **V0**: Epic helicopter shot at golden hour over the whole of Vice City: a wall of glass towers at a river mouth, a bay crowded with white yachts, a long causeway running to a barrier island lined with pastel art deco hotels and a white beach, four giant cruise ships docked on a port island in between, the sun sinking behind the skyline into a magenta-orange sky, a news helicopter in the foreground, long-lens haze compressing the city, trailer-opening scale.
-- **V1**: Night after rain, bumper-height shot on a neon beachfront avenue: a low wedge supercar idling at a red traffic light, its chrome reflecting hot pink and teal neon, puddles mirroring palm silhouettes, steam rising from a storm drain, a shirtless man on a scooter with a pet iguana on his shoulder rolling past in soft focus, crowd under a hotel awning.
+- **V1**: Night after rain, bumper-height shot on a neon beachfront avenue: a low wedge supercar idling at a red traffic light, its chrome reflecting hot pink and teal neon, puddles mirroring palm silhouettes, steam rising from a storm drain, a man in a loud tropical shirt on a scooter with a pet iguana on his shoulder rolling past in soft focus, crowd under a hotel awning.
 
 ### Ch.1 Ocean Beach
 - **V2**: Telephoto shot down a beachfront avenue at dusk: a row of pastel art deco hotels in mint, peach and lilac (rounded corners, horizontal racing stripes, porthole windows, tall vertical fin signs glowing in pink and teal with no letters), a white 1980s convertible with chrome wheels cruising, rollerbladers in neon shorts, a guy carrying an inflatable flamingo, heat shimmer off the asphalt, the ocean glowing orange across the street.
