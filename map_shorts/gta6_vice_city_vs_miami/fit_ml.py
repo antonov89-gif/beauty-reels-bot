@@ -66,6 +66,6 @@ open(f"ml/gta6_vice_city_vs_miami_{LANG}.srt", "w", encoding="utf-8").write("\n"
 # mix with the same music + sfx as the English master
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"ml/voice_{LANG}.wav", "-i", "music.wav", "-i", "sfx.wav", "-filter_complex",
                 "[0:a]asplit=2[v][vsc];[1:a]volume=0.5[m];[m][vsc]sidechaincompress=threshold=0.04:ratio=7:attack=8:release=350[md];"
-                "[2:a]lowpass=f=9000,volume=0.6[s];[v][md][s]amix=inputs=3:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=9,alimiter=limit=0.9,aresample=44100[a]",
+                "[2:a]lowpass=f=9000,volume=0.6[s];[v][md][s]amix=inputs=3:normalize=0,loudnorm=I=-14:TP=-2:LRA=9,alimiter=limit=0.7:level=0,aresample=44100[a]",
                 "-map", "[a]", "-t", str(E.TOTAL), "-c:a", "aac", "-b:a", "192k", f"ml/audio_{LANG}.m4a"], check=True)
 print("done", LANG, "max tempo", round(max(tempos), 2), "mean", round(sum(tempos) / len(tempos), 3))

@@ -1,6 +1,6 @@
 # Multi-language package (ES, PT-BR, HI, RU, FR, ZH)
 
-Files per language: `audio_<lang>.m4a` (full mix: dubbed voice + the same music and SFX, 8:26, about -13 LUFS), `gta6_vice_city_vs_miami_<lang>.srt`, script `<lang>.txt`.
+Files per language: `audio_<lang>.m4a` (full mix: dubbed voice + the same music and SFX, 8:26, about -14.5 LUFS, true peak below 0 dBFS), `gta6_vice_city_vs_miami_<lang>.srt`, script `<lang>.txt`.
 Voice: the same AI voice (ElevenLabs via Lumean), each line placed on the English line's timing; long lines sped up at most x1.19 (ES), x1.29 (PT, Keys line), x1.17 (HI), x1.30 (FR, mean x1.10), x1.30 (ZH, mean x1.07).
 RU: script `ru.txt` is ready, recording is waiting for a Lumean top-up (the API returned 402 Payment Required).
 
