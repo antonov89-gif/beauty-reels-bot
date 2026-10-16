@@ -187,14 +187,16 @@ def map_frame(t):
     for yy in range(H): d.line([(0, yy), (W, yy)], fill=(6 + int(10 * yy / H), 6, 20 + int(26 * yy / H), 255))
     img.paste(Image.fromarray(arr.astype(np.uint8)).convert("RGBA"), (0, 660))
     d = ImageDraw.Draw(img); d.rectangle((0, 656, W, 660), fill=PINK + (255,)); d.rectangle((0, 1260, W, 1264), fill=PINK + (255,))
-    zones = int(round(24 * p)); bx0 = 90; bw = (W - 180) / 24
-    for q in range(24):
-        c = (255, 70, 170, 255) if q < zones else (40, 40, 70, 255)
+    hrs = int(round(19 * p)); bx0 = 90; bw = (W - 180) / 19
+    for q in range(19):
+        c = (255, 70, 170, 255) if q < hrs else (40, 40, 70, 255)
         d.rounded_rectangle((bx0 + q * bw + 2, 1380, bx0 + (q + 1) * bw - 2, 1440), 6, fill=c)
-    label(img, f"TIME ZONES LAUNCHED  {zones} / 24", 540, 1340, t, a + 0.3, 46, WHT)
+    label(img, f"LOCAL MIDNIGHT ROLLS WEST  +{hrs} H", 540, 1330, t, a + 0.3, 44, WHT)
+    label(img, "NEW ZEALAND FIRST", 300, 1490, t, a + 0.5, 34, YEL)
+    label(img, "~19 HOURS LATER: LAST", 790, 1490, t, b - 1.6, 34, YEL)
     label(img, "LAUNCH WAVE", 540, 330, t, a + 0.05, 112, WHT, glow=PINK)
     label(img, "MIDNIGHT, TIME ZONE BY TIME ZONE", 540, 470, t, WT(1, "millions") - 0.1, 50, YEL)
-    pill(img, "REAL DATA \u00b7 NASA VIIRS NIGHT LIGHTS", 540, 1790, 28, (20, 90, 160))
+    pill(img, "NASA NIGHT LIGHTS \u00b7 ROLLOUT AS REPORTED FROM STORE LISTINGS", 540, 1790, 24, (20, 90, 160))
     return img
 
 

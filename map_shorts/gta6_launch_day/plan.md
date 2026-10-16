@@ -21,4 +21,9 @@ Video 1:25 (gta6_launch_day_tg.mp4), cover_ep3.jpg, SRT, publication.md. Origina
 QC: Whisper transcript matches script; loudness -13.7 LUFS; decode OK.
 Clip notes: K1 great (night dive); K2 crowd, K7 servers, K10 console good; K8 first 3 s upside-down (skipped); K3 shows a cartoon-style game on the TV plus a garbled "pre-alpha footage" caption and poster text, so it is cropped to the hood and blurred TV glow; K5 (cash) good, duplicate files K1a=K1b and K5=K5b.
 Engine51 extras: night-lights launch wave with 24 time-zone bar, calendar blast zone, counters, mission HUD + own-design radar, whip-pan cuts, grain, chromatic aberration, shake on impacts.
-Used ep.2 clips: A1, A0, A6 (A2 only as K2/L6 traffic shot).
+Used ep.2 clips: A2 (traffic, start of the Leonida montage), A1, A0, A6.
+
+## QC pass 2 (16 Oct 2026)
+- Launch-wave graphic: the 24-time-zone bar was a simplification; replaced with the reported rollout: local midnight, New Zealand first, last region ~19 h later (PlayStation Store listings as reported by GamesRadar/Kotaku; Rockstar has not announced an hour). Pill: "NASA NIGHT LIGHTS · ROLLOUT AS REPORTED FROM STORE LISTINGS".
+- Credits fixed (A2 is used). Description now states that the launch hour is not official.
+- Full 1-second sweep of the delivery file checked: no text artifacts, no black frames, labels and captions do not overlap.
