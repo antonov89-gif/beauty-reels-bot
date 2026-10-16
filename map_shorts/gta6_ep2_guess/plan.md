@@ -16,3 +16,9 @@ Ocean Drive -> MacArthur Causeway -> Kaseya Center -> Metromover (downtown) -> W
 - Wynwood Walls: created by Tony Goldman in 2009 in old warehouses (Wynwood Walls; Bisnow).
 - Venetian Causeway: 12 bridges, 2 bascule (lifting) spans; about 2.5-2.8 miles; built 1925-1927 (FDOT; Wikipedia).
 - Trailer links are reported by outlets (Dexerto, New Times, Sportskeeda, Kotaku), not confirmed by Rockstar: wording "look exactly like".
+
+## Progress (16 Oct 2026)
+- Clips received from the owner: A0 (hook), A1 Ocean Drive, A2 MacArthur, A3 arena, A4 Metromover, A6 Venetian. Missing: A5 (Wynwood).
+- Used windows: A0 0-6 s (later the skyline turns into generic towers); A1/A2/A4/A6 first 3.8-4 s; A3 from 1.4 s with a crop (zoom 1.22, x 0.62, y 0.30) that hides the AI-made game HUD in the bottom-left corner and the "P3 ARENA" text on the LED wall; A4 after 5.5 s tilts into a black train underside (not used).
+- Clips contain car shapes close to real sports cars (no logos visible); fine for concept art.
+- Engine50: hook with 3-2-1, clue (GUESS ring 2.0 s), reveal with GAME/REAL wipe + Esri satellite + pin + counters, route interludes with mileage counter, final map with 6 pins. Total 86 s, voice re-placed on the gapped timeline, loudness -14.1 LUFS.
