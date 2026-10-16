@@ -36,11 +36,13 @@ def WT(i, word, nth=0):
 
 
 B = [0.0] + [ST[i] - 0.12 for i in range(1, N)] + [TOTAL]
+CUT0 = WT(0, "and") - 0.1      # hook: monster truck -> aerial reveal of "this place"
 CUT1 = WT(1, "all") - 0.1       # line 2: ATV clip -> muddy crowd
 CUT2 = WT(2, "fans") - 0.15     # line 3: pickup still -> real satellite map
 # shots: (t0, t1, kind, name, s0, use, z0, z1, cy)  kind: clip | still | map
 RAW = [
-    (B[0], B[1], "clip", "M1", 0.0, 3.3, 1.10, 1.18, 0.42),
+    (B[0], CUT0, "clip", "M1", 0.0, 2.4, 1.10, 1.18, 0.42),
+    (CUT0, B[1], "clip", "M4b", 0.0, 3.0, 1.38, 1.06, 0.5),
     (B[1], CUT1, "clip", "M2", 0.0, 4.9, 1.0, 1.06, 0.5),
     (CUT1, B[2], "clip", "M3", 0.0, 2.8, 1.0, 1.06, 0.5),
     (B[2], CUT2, "clip", "M5", 0.0, 3.2, 1.0, 1.08, 0.5),

@@ -69,15 +69,15 @@ def crackle(d=3.0):
     for q in range(int(d * 14)):
         p = int(rng.random() * (d - 0.05) * SR); x = tt(0.03); b = rng.normal(0, 1, len(x)) * np.exp(-x * 120) * (0.15 + 0.35 * rng.random()); s[p:p + len(b)] += b[:len(s) - p]
     return s
-place(sfx, engine(4.5, 38), 0.1, 0.8); place(sfx, water(1.6), TL[0][0] + 1.4, 0.9); place(sfx, rumble(2.5), TL[0][0] + 1.3, 0.7); place(sfx, cheer(3.0), 0.5, 0.5)
+place(sfx, engine(4.5, 38), 0.1, 0.8); place(sfx, water(1.6), 2.1, 0.9); place(sfx, rumble(2.5), 2.0, 0.7); place(sfx, whoosh(0.9), E.CUT0 - 0.15, 0.6); place(sfx, cheer(3.0), 0.5, 0.5)
 place(sfx, pop(), WT(0, "thirtyfour") - 0.1, 0.8); place(sfx, ding(), WT(0, "real") - 0.3, 0.6)
-place(sfx, engine(4.5, 70), TL[1][0] + 0.1, 0.7); place(sfx, water(1.8), TL[1][0] + 0.3, 0.7); place(sfx, pop(), WT(1, "thrillbilly") - 0.1, 0.8); place(sfx, pop(), WT(1, "atvs") - 0.1, 0.6)
+place(sfx, engine(4.5, 70), TL[2][0] + 0.1, 0.7); place(sfx, water(1.8), TL[2][0] + 0.3, 0.7); place(sfx, pop(), WT(1, "thrillbilly") - 0.1, 0.8); place(sfx, pop(), WT(1, "atvs") - 0.1, 0.6)
 place(sfx, cheer(2.5), E.CUT1 + 0.1, 0.9); place(sfx, pop(), WT(1, "covered") - 0.1, 0.7)
-place(sfx, engine(3.0, 42), TL[3][0] + 0.1, 0.7); place(sfx, water(1.5), TL[3][0] + 0.2, 0.8); place(sfx, pop(), WT(2, "hasnt") - 0.1, 0.7); place(sfx, boing(), WT(2, "based") - 0.1, 0.5)
+place(sfx, engine(3.0, 42), TL[4][0] + 0.1, 0.7); place(sfx, water(1.5), TL[4][0] + 0.2, 0.8); place(sfx, pop(), WT(2, "hasnt") - 0.1, 0.7); place(sfx, boing(), WT(2, "based") - 0.1, 0.5)
 place(sfx, whoosh(0.8), E.CUT2 - 0.1, 0.7); place(sfx, ping(), E.CUT2 + 0.35, 0.8); place(sfx, pop(), WT(2, "redneck") - 0.1, 0.7); place(sfx, ding(), WT(2, "punta") - 0.1, 0.6)
-place(sfx, whoosh(1.2), TL[5][0] + 0.2, 0.4); place(sfx, pop(), WT(3, "eight") - 0.15, 0.9); place(sfx, ding(), WT(3, "events") - 0.1, 0.5)
-place(sfx, crickets(5.0), TL[6][0] + 0.1, 1.0); place(sfx, waves(5.0), TL[6][0] + 0.2, 0.25); place(sfx, pop(), WT(4, "grassrivers") - 0.1, 0.8); place(sfx, ding(), WT(4, "everglades") - 0.1, 0.7)
-place(sfx, crackle(4.0), TL[7][0] + 0.1, 0.9); place(sfx, crickets(3.0), TL[7][0] + 0.3, 0.7); place(sfx, pop(), WT(5, "which") - 0.1, 0.8); place(sfx, ding(), WT(5, "trailer") - 0.1, 0.8)
+place(sfx, whoosh(1.2), TL[6][0] + 0.2, 0.4); place(sfx, pop(), WT(3, "eight") - 0.15, 0.9); place(sfx, ding(), WT(3, "events") - 0.1, 0.5)
+place(sfx, crickets(5.0), TL[7][0] + 0.1, 1.0); place(sfx, waves(5.0), TL[7][0] + 0.2, 0.25); place(sfx, pop(), WT(4, "grassrivers") - 0.1, 0.8); place(sfx, ding(), WT(4, "everglades") - 0.1, 0.7)
+place(sfx, crackle(4.0), TL[8][0] + 0.1, 0.9); place(sfx, crickets(3.0), TL[8][0] + 0.3, 0.7); place(sfx, pop(), WT(5, "which") - 0.1, 0.8); place(sfx, ding(), WT(5, "trailer") - 0.1, 0.8)
 for c in E.CUTS: place(sfx, whoosh(0.3), c - 0.1, 0.25)
 t = np.arange(N) / SR; beat = 60 / 96; mus = np.zeros(N)
 prog = [[220.0, 261.6, 329.6], [196.0, 246.9, 293.7], [174.6, 220.0, 261.6], [196.0, 246.9, 293.7]]
