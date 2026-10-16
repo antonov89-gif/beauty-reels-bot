@@ -28,6 +28,8 @@ gta 6, gta vi, gta 6 real life locations, vice city, miami, ocean drive, macarth
 What's your score out of 6? 👇 Which GTA 6 place should I check next?
 
 ## Cover
+Recommended: `cover_ep2_split.jpg` (1080x1920): diagonal split, top = AI game-style Ocean Drive frame (tag GTA 6), bottom = real Esri satellite of Ocean Drive with a pin (tag REAL MIAMI), title "GAME OR REAL?". It shows the quiz idea in one glance.
+Alternative:
 `cover_ep2.jpg` (1080x1920): frame from the opening drone clip, GTA 6-style lettering "GUESS THE REAL SPOT", pills "GTA 6 · MIAMI", "6 PLACES · CAN YOU?", "AI CONCEPT".
 
 ## Settings
