@@ -15,3 +15,10 @@ Voice (Lumean "David", 193 words, 79.1 s, 0.52 RUB, Whisper check OK).
 Real: NASA GIBS VIIRS Black Marble night-lights map (launch wave across time zones). Engine graphics: counters (90,421,491 views; $800M / $1B bars; 200M copies), calendar "blast zone", HUD mission box, mini-radar, hype meter (own design, no Rockstar UI copies).
 AI clips by the owner: K1,K2,K3,K5,K7,K8,K10 + reuse A0,A1,A2,A6.
 Cinematic upgrades in engine51: film grain, vignette, chromatic aberration on cuts, whip-pan transitions, speed ramps, screen shake on impacts, light leaks, letterbox-style color grade, 3 s cold-open title card.
+
+## Status (16 Oct 2026): DONE
+Video 1:25 (gta6_launch_day_tg.mp4), cover_ep3.jpg, SRT, publication.md. Original synthwave score (score.py), no third-party music.
+QC: Whisper transcript matches script; loudness -13.7 LUFS; decode OK.
+Clip notes: K1 great (night dive); K2 crowd, K7 servers, K10 console good; K8 first 3 s upside-down (skipped); K3 shows a cartoon-style game on the TV plus a garbled "pre-alpha footage" caption and poster text, so it is cropped to the hood and blurred TV glow; K5 (cash) good, duplicate files K1a=K1b and K5=K5b.
+Engine51 extras: night-lights launch wave with 24 time-zone bar, calendar blast zone, counters, mission HUD + own-design radar, whip-pan cuts, grain, chromatic aberration, shake on impacts.
+Used ep.2 clips: A1, A0, A6 (A2 only as K2/L6 traffic shot).
