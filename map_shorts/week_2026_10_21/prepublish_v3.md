@@ -18,7 +18,7 @@ Loudness is −15 LUFS ±0.5 after AAC encoding (target −14); peaks are below 
 ## Judge A (viewer) / Judge B (producer)
 - A: in every Short, the topic is clear from frame 0 thanks to the title plus the map. Baarle starts with a generic town view, so the curiosity only arrives when the house and enclaves appear (8–30 s). HYPOTHESIS.
 - B: script-to-video matching works in every scene: each number named in the voice-over is shown on screen at that moment. One check flagged: in Egypt, the "5% OF THE LAND" counter animates 0→5 within 0.8 s, so a still at 3 s shows "2%". It is a transition, not an error (verified at 4.2 s). FACT.
-- Consensus: no blocking problems. The main risk is a weaker frame 0 in Baarle. If Baarle's stayed share falls more than 5 pp below the batch median, the next border Shorts start on the most unusual visual (the cut house / the white crosses on the pavement).
+- Consensus: no blocking problems. The main risk is a weaker frame 0 in Baarle. If Baarle's 24 h views fall below half the batch median, the next border Shorts start on the most unusual visual (the cut house / the white crosses on the pavement).
 
 ## Risk report (Module 11, 1 = low, 5 = high)
 | Group | Score | Reason |

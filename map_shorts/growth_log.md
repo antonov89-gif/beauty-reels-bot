@@ -1,6 +1,8 @@
 # Growth Learning Log — Mr. Buck (Module 15, V3.0 PRO)
 
-How to use it: after each publish batch, Studio screenshot or audit, fill in the results, the extracted principle and the confidence level. Commit every update. Sources: vidIQ (V), YouTube Studio screenshots from the user (S), Metricool (M).
+How to use it: after each publish batch or audit, fill in the results, the extracted principle and the confidence level. Commit every update. Sources: vidIQ (V), YouTube Studio screenshots from the user (S, only those already received; not requested further), Metricool (M).
+
+Main metrics (no per-video stayed/swiped data): views at 24 h and 72 h vs the channel median, relative retention from vidIQ, likes and comments per 1k views.
 
 ## 1. Baseline (17.10.2026)
 | Metric | Value | Source / tag |
@@ -15,10 +17,10 @@ How to use it: after each publish batch, Studio screenshot or audit, fill in the
 | Visual pace vs views | Amazon ~2 events/10 s → 290 views; Wallace 7–8 → 2,302; Geo Spark (competitor) ~14 → 4.8M | V watch + count, HYPOTHESIS (correlation) |
 
 ## 2. Video log
-Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | stayed % | result / principle | confidence.
+Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
 ### Scheduled in Metricool (YouTube + TikTok), batch 18–23.10
-| Date | Video | Format | Hook | Cost | 24 h | Stayed | Principle |
+| Date | Video | Format | Hook | Cost | 24 h | 72 h | Principle |
 |---|---|---|---|---|---|---|---|
 | 18.10 10:00 | GTA 6 Vice City vs REAL Miami | long 8:26 | — | — | | | |
 | 18.10 12:00 | Madagascar has no lions | Short | | | | | |
@@ -38,7 +40,7 @@ Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | vie
 
 ### New batch 21–24.10 (engine60, control group for E1, test group for E2)
 Production: Lumean voice ≈2.14 ₽ for all 7, Esri imagery and render free. Rule applied: key visual and title on frame 0, counters show the final number at 0.0 s.
-| Date | Video | Hook (frame 0) | 24 h | Stayed | Principle |
+| Date | Video | Hook (frame 0) | 24 h | 72 h | Principle |
 |---|---|---|---|---|---|
 | 21.10 10:00 | Pheasant Island | island + ES/FR flags + title | | | |
 | 21.10 14:00 | Baarle | enclaves map + title | | | |
@@ -49,11 +51,11 @@ Production: Lumean voice ≈2.14 ₽ for all 7, Esri imagery and render free. Ru
 | 24.10 10:00 | Diomede | TODAY / TOMORROW pins | | | |
 
 ## 3. Experiment cards
-**E1 — Visual density.** HYPOTHESIS: ≥ 10 events/10 s and no pause > 2.5 s lower the swipe share. EVIDENCE: pace vs views above (correlation only). VARIABLE: number of pop-ups, zooms, highlights. CONTROL: batch 21–24.10 (6–7.7 events/10 s). METRIC: stayed %, 24 h views. WINDOW: 7 Shorts per variant. LIMITATIONS: different topics, compare medians. RESULT: — . NEXT DECISION: — .
+**E1 — Visual density.** HYPOTHESIS: ≥ 10 events/10 s and no pause > 2.5 s lower the swipe share. EVIDENCE: pace vs views above (correlation only). VARIABLE: number of pop-ups, zooms, highlights. CONTROL: batch 21–24.10 (6–7.7 events/10 s). METRIC: median of 24 h / 72 h views vs control, vidIQ relative retention. WINDOW: 7 Shorts per variant. LIMITATIONS: different topics, compare medians. RESULT: — . NEXT DECISION: — .
 
-**E2 — Answer on frame 0.** HYPOTHESIS: a number or contrast visible at 0.0 s lowers swipes vs a title over satellite imagery. CONTROL: Shorts 18–20.10 (pop-in hooks). TEST: batch 21–24.10. METRIC: stayed % vs baseline 55.6%, target 65%+. RESULT: — .
+**E2 — Answer on frame 0.** HYPOTHESIS: a number or contrast visible at 0.0 s lowers swipes vs a title over satellite imagery. CONTROL: Shorts 18–20.10 (pop-in hooks). TEST: batch 21–24.10. METRIC: median of 24 h views vs the 18–20.10 Shorts and vs the channel median ≈1.2k; vidIQ relative retention in the first quarter (baseline 0.46–0.6). RESULT: — .
 
-**E3 — Niche title convention.** VARIABLE: "number-contrast + #geography #map" vs our style. METRIC: search share, stayed %. LIMITATIONS: no A/B for Shorts, sequential only. RESULT: — .
+**E3 — Niche title convention.** VARIABLE: "number-contrast + #geography #map" vs our style. METRIC: search share (vidIQ traffic_sources), 24 h views. LIMITATIONS: no A/B for Shorts, sequential only. RESULT: — .
 
 **E4 — GTA series.** HYPOTHESIS: GTA Shorts reach another audience and don't hurt geography. METRIC: 24 h views of 4 GTA Shorts 18–20.10 vs geography Shorts on the same days. DECISION 20.10: if GTA median < 50% of geography median, no new GTA until 19.11. RESULT: — .
 

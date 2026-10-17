@@ -23,12 +23,12 @@ The full prompt is `map_shorts/prompts/youtube_growth_engine_v3_pro.md`. Read it
 - vidIQ: `vidiq_channel_analytics` (top_videos, traffic_sources, shorts_vs_longform_split, audience_geography, audience_retention, daily), `vidiq_video_stats`, `vidiq_watch_shortform_content` (10 credits) + `vidiq_job_poll`, `vidiq_outliers`, `vidiq_update_video`.
 - Nexlev: `search_shorts_niche_finder_channels`, `faceless_outliers_videos`, `youtube_channel_shorts`; `watch_youtube_video_and_ask` is 1/day on the free plan.
 - Metricool: `getScheduledPosts`, `createScheduledPost` / `updateScheduledPost`, `getBestTimeToPostByNetwork`.
-- Stayed/swiped, AVD and relative retention per Short exist only in YouTube Studio → ask the user for screenshots, mark DATA MISSING until received.
+- Do not ask the user for Studio screenshots (decided 18.10.2026: the user works without them). The per-video stayed/swiped share is unavailable, so use these proxies: views at 24 h and 72 h vs the channel median (vidIQ `vidiq_video_stats` / `top_videos`), relative retention and the first-quarter drop (vidIQ `audience_retention`), likes and comments per 1k views. Screenshots the user sends on their own are a bonus.
 
 ## Honesty rules
 - Tag every significant claim FACT / HYPOTHESIS / ESTIMATE / DATA MISSING, with source, date and sample size.
 - Never invent CTR, retention, revenue, impressions or demographics. Never promise a view count.
-- Shorts views count every start, so compare stayed % and 24 h views against the channel median, not single videos.
+- Shorts views count every start, so compare 24 h / 72 h views and retention against the channel median, not single videos.
 - Consecutive uploads are not an A/B test: compare medians of batches, one main variable per experiment.
 
 ## Standing production rules (from the audits)
@@ -38,7 +38,7 @@ The full prompt is `map_shorts/prompts/youtube_growth_engine_v3_pro.md`. Read it
 - Never print or commit API keys; never put video files in the repository.
 
 ## Growth Learning Log (Module 15)
-- File: `map_shorts/growth_log.md`. After every publish batch, Studio screenshot or audit, add the results and the extracted principle there and commit it. Do not claim something is saved unless the commit exists.
+- File: `map_shorts/growth_log.md`. After every publish batch or audit, add the results and the extracted principle there and commit it. Do not claim something is saved unless the commit exists.
 - Experiment cards E1–E4 live in the log; update RESULT and NEXT DECISION when the observation window closes.
 
 ## Answer format
