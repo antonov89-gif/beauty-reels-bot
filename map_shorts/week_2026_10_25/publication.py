@@ -4,7 +4,7 @@ import json
 from scripts import SHORTS
 
 DISCLOSE = ("Satellite imagery: Esri World Imagery (Esri, Maxar, Earthstar Geographics, and the GIS User Community); "
-            "country borders: Natural Earth. Maps and diagrams are drawn for this video; route lines and the Bir Tawil lines are simplified. "
+            "country borders: Natural Earth. Maps and diagrams are drawn for this video; route lines and small border markers are simplified or illustrative. "
             "Voice-over is AI (ElevenLabs via Lumean).")
 
 META = {
@@ -36,7 +36,8 @@ def build():
     out = []
     for k, s in SHORTS.items():
         m = META[k]
-        text = "\n".join(s["lines"][:2]) + "\n\n" + s["facts"] + "\n\n" + DISCLOSE + "\n\n" + m["hashtags"]
+        note = " The 1899 and 1902 lines are schematic, not surveyed." if k == "birtawil" else ""
+        text = "\n".join(s["lines"][:2]) + "\n\n" + s["facts"] + "\n\n" + DISCLOSE + note + "\n\n" + m["hashtags"]
         out.append(dict(key=k, title=s["title"], description=text, tags=m["tags"], slot=m["slot"], file=f"{k}/{k}.mp4"))
     return out
 

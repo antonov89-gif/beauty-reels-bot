@@ -309,7 +309,7 @@ def build(short, S, O, WT, ST, D):
         O("pin", ll[0], ll[1], "LLÍVIA · SPAIN", ST[7])
         flags("ES", "FR", ST[7], 700)
         O("counter", 1.6, 1.6, "{:.1f} KM FROM SPAIN", 540, 520, ST[7], 0.1, 62, YEL, BLK)
-        big("ONE WORD", 830, WT(7, "word") - 0.3, 120, WHT, PINK)
+        big("ONE WORD", 1080, WT(7, "word") - 0.3, 120, WHT, PINK)
         return ("A SPANISH TOWN", "INSIDE FRANCE")
 
     if short == "angle":
@@ -334,7 +334,7 @@ def build(short, S, O, WT, ST, D):
         O("route", [lake_nw, (-97.5, 49.38)], WT(3, "west") - 0.2, 0.9, CYAN, 8, False)
         O("route", [lake_nw, itasca], WT(3, "far") - 0.2, 1.2, ORG, 8, True)
         O("pin", itasca[0], itasca[1], "MISSISSIPPI SOURCE", WT(3, "river") - 0.2, ORG)
-        big("THE RIVER STARTS FAR SOUTH", 540, WT(3, "far") - 0.3, 52, WHT, PINK)
+        big("THE RIVER STARTS FAR SOUTH", 1300, WT(3, "far") - 0.3, 52, WHT, PINK)
         S(ST[4] - 0.1, "sat", "ANG", 1.3, 1.0, (-95.05, 49.35), 0)
         O("flag", "US", 540, 740, 240, WT(4, "American") - 0.1)
         big("TREATIES FIXED THE LINE", 520, WT(4, "fixed") - 0.3, 54)
@@ -353,7 +353,7 @@ def build(short, S, O, WT, ST, D):
         O("pin", nwa[0], nwa[1], "NORTHWEST ANGLE", ST[7])
         flags("US", "CA", ST[7], 700)
         O("counter", 149, 149, "~{:.0f} PEOPLE", 540, 520, ST[7], 0.1, 76, YEL, BLK)
-        big("THROUGH CANADA", 830, WT(7, "Canada") - 0.2, 74, WHT, PINK)
+        big("THROUGH CANADA", 1000, WT(7, "Canada") - 0.2, 74, WHT, PINK)
         return ("AMERICA POKES", "INTO CANADA")
 
     raise SystemExit("unknown short " + short)
