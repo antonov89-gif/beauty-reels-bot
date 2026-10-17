@@ -36,7 +36,7 @@
 - 23.10 — How the UAE Is Building a Backup Road Around the Strait of Hormuz (5:21).
 
 ## Отложить до сезона
-- Kiribati («This Country Deleted New Year's Eve») и «Who Celebrates New Year FIRST and LAST?» — выложить 29–31 декабря, когда тема на пике поиска.
+- Kiribati уже вышел 15.10 («This Country Deleted A Whole Day», 7KSp-AU8sRI). «Who Celebrates New Year FIRST and LAST?» — выложить 29–31 декабря, когда тема на пике поиска.
 
 ## После каждой публикации
 - Shorts про GTA → Related video: Vice City vs REAL Miami. Shorts про деньги → $100B (после 20.10). Географические → Panama Canal.
