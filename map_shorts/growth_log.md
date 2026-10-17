@@ -1,0 +1,69 @@
+# Growth Learning Log — Mr. Buck (Module 15, V3.0 PRO)
+
+How to use it: after each publish batch, Studio screenshot or audit, fill in the results, the extracted principle and the confidence level. Commit every update. Sources: vidIQ (V), YouTube Studio screenshots from the user (S), Metricool (M).
+
+## 1. Baseline (17.10.2026)
+| Metric | Value | Source / tag |
+|---|---|---|
+| Views, 28 days | 25.4k, 93% Shorts | V, FACT |
+| Traffic from the Shorts feed | 88% | V, FACT |
+| Stayed / swiped (all Shorts, 28 days) | 55.6% / 44.4% | S, FACT |
+| Best Short, 28 days | Wallace Line, 2,302 views | V, FACT |
+| Median Short | ≈1.2k views | V, ESTIMATE |
+| Gambia | 2,118 views, stayed 46.2%, AVD 0:26 (42.7%), +2 subs | S, FACT |
+| Wallace audience | 99.9% non-subscribers; US 13.1%, IN 9.8%, PH 8.3% | S, FACT |
+| Visual pace vs views | Amazon ~2 events/10 s → 290 views; Wallace 7–8 → 2,302; Geo Spark (competitor) ~14 → 4.8M | V watch + count, HYPOTHESIS (correlation) |
+
+## 2. Video log
+Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | stayed % | result / principle | confidence.
+
+### Scheduled in Metricool (YouTube + TikTok), batch 18–23.10
+| Date | Video | Format | Hook | Cost | 24 h | Stayed | Principle |
+|---|---|---|---|---|---|---|---|
+| 18.10 10:00 | GTA 6 Vice City vs REAL Miami | long 8:26 | — | — | | | |
+| 18.10 12:00 | Madagascar has no lions | Short | | | | | |
+| 18.10 14:00 | GTA s3 Tisha-Wocka | Short (E4) | | | | | |
+| 18.10 15:00 | GTA s1 port slogan | Short (E4) | | | | | |
+| 18.10 16:00 | Hannibal | Short | | | | | |
+| 19.10 10:00 | GTA s2 Miami Circle | Short (E4) | | | | | |
+| 19.10 12:00 | Suez / moon | Short | | | | | |
+| 19.10 14:00 | €1 coin zoom | Short | | | | | |
+| 19.10 16:00 | Libya river | Short | | | | | |
+| 20.10 10:00 | GTA ep.2 guess | Short (E4) | | | | | |
+| 20.10 12:00 | Aral Sea | Short | | | | | |
+| 20.10 14:00 | Gold cube | Short | | | | | |
+| 20.10 15:00 | Could You Spend $100 Billion? | long | — | | | | |
+| 20.10 16:00 | $100B | Short | | | | | |
+| 23.10 15:00 | Hormuz bypass | long 5:21 | — | | | | |
+
+### New batch 21–24.10 (engine60, control group for E1, test group for E2)
+Production: Lumean voice ≈2.14 ₽ for all 7, Esri imagery and render free. Rule applied: key visual and title on frame 0, counters show the final number at 0.0 s.
+| Date | Video | Hook (frame 0) | 24 h | Stayed | Principle |
+|---|---|---|---|---|---|
+| 21.10 10:00 | Pheasant Island | island + ES/FR flags + title | | | |
+| 21.10 14:00 | Baarle | enclaves map + title | | | |
+| 22.10 10:00 | Bolivia navy | coast lost + title | | | |
+| 22.10 14:00 | Egypt 95% / 5% | Nile strip + "95%" | | | |
+| 23.10 10:00 | Chile long and thin | Chile over Europe + km | | | |
+| 23.10 14:00 | Canberra | SYDNEY? / MELBOURNE? pins | | | |
+| 24.10 10:00 | Diomede | TODAY / TOMORROW pins | | | |
+
+## 3. Experiment cards
+**E1 — Visual density.** HYPOTHESIS: ≥ 10 events/10 s and no pause > 2.5 s lower the swipe share. EVIDENCE: pace vs views above (correlation only). VARIABLE: number of pop-ups, zooms, highlights. CONTROL: batch 21–24.10 (6–7.7 events/10 s). METRIC: stayed %, 24 h views. WINDOW: 7 Shorts per variant. LIMITATIONS: different topics, compare medians. RESULT: — . NEXT DECISION: — .
+
+**E2 — Answer on frame 0.** HYPOTHESIS: a number or contrast visible at 0.0 s lowers swipes vs a title over satellite imagery. CONTROL: Shorts 18–20.10 (pop-in hooks). TEST: batch 21–24.10. METRIC: stayed % vs baseline 55.6%, target 65%+. RESULT: — .
+
+**E3 — Niche title convention.** VARIABLE: "number-contrast + #geography #map" vs our style. METRIC: search share, stayed %. LIMITATIONS: no A/B for Shorts, sequential only. RESULT: — .
+
+**E4 — GTA series.** HYPOTHESIS: GTA Shorts reach another audience and don't hurt geography. METRIC: 24 h views of 4 GTA Shorts 18–20.10 vs geography Shorts on the same days. DECISION 20.10: if GTA median < 50% of geography median, no new GTA until 19.11. RESULT: — .
+
+## 4. Principles (confirmed / rejected)
+| Date | Principle | Evidence | Confidence |
+|---|---|---|---|
+| 17.10 | Daily views follow uploads: no upload → views drop ~40× (7.10: 4,376 vs 11.10: 100) | V daily | FACT (pattern), cause HYPOTHESIS |
+| 17.10 | Peak window 10–16 MSK | user observation + Metricool best time | ESTIMATE |
+
+## 5. Decision journal
+| Date | Hypothesis | Change | Result | Conclusion |
+|---|---|---|---|---|
+| 17.10 | First 3 s are the main leak (44.4% swipe) | 7 new Shorts rebuilt with key visual on frame 0 | pending (21–24.10) | |
