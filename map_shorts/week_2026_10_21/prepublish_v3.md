@@ -11,7 +11,7 @@ Date: 18.10.2026. Each file was checked: stills at 0, 1, 3, 8, 15, 25, 35 s; EBU
 | Egypt 95/5 | 41.34 s | −15.5 / −2.5 | Nile strip, "95% OF PEOPLE", flag, title | READY |
 | Chile | 47.21 s | −15.4 / −2.4 | whole of Chile highlighted, "~4270 KM LONG" | READY |
 | Canberra | 42.67 s | −15.3 / −2.6 | Australia, SYDNEY? / MELBOURNE? pins, flag, title | READY (minor: at 8–15 s the SYDNEY pin sits at the right edge and touches the "1901 · FEDERATION" caption) |
-| Diomede | | | | pending render |
+| Diomede | 40.66 s | −15.1 / −2.5 | both islands, TOMORROW / TODAY pins, title | READY after a fix: the US and Russian flags stood on the wrong sides (US on the left, over Russia). Swapped and re-rendered |
 
 Loudness is −15 LUFS ±0.5 after AAC encoding (target −14); peaks are below −2 dBFS. Acceptable for Shorts. FACT.
 
@@ -43,3 +43,6 @@ This is an editorial opinion, not a view-count forecast.
 | Egypt | 22.10 14:00 | 398808552 |
 | Chile | 23.10 10:00 | 398809023 |
 | Canberra | 23.10 14:00 | 398809547 |
+| Diomede | 24.10 10:00 | 398811311 |
+
+All 7 Metricool copies are byte-for-byte identical to the originals (checked by size after the copy to static.metricool.com).
