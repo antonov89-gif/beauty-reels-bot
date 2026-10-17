@@ -162,3 +162,9 @@ vidIQ подключён к аккаунту с другим каналом (AYN
 | N0U5OgVv7_4 Amazon bridges | название (убраны #elonmusk #3dvisual #business) |
 
 Осталось вручную в Studio (vidIQ это не меняет): категории роликов (Education / Gaming), субтитры SRT, «Altered or synthetic content», ссылки и почта канала.
+
+## 8. Второй раунд через vidIQ 17.10.2026 (теги)
+Добавлены теги роликам, где их не было: 7KSp-AU8sRI Kiribati, FTa1ieDUqmk Yap, 61MfuK0tc3A Palmerston, iwJJS6uPRY4 Greenland, LSQwkc7KD3I Highest bridge, A6574WF_Myw Silver, JCwDtSJPTGk One building.
+RL750ELBWo4 Mud Club: удалены вводящие в заблуждение теги (leak, leaked gameplay, trailer 3, netflix), поставлены тематические.
+
+Наблюдение по времени: ролики, вышедшие вечером/ночью МСК (Ocean floor 23:25 — 52 просмотра, Real Life vs GTA 19:25 — 110), набирают меньше дневных (Mud Club 13:42 — 1152). Подтверждено данными Metricool: пик 10–18 МСК.
