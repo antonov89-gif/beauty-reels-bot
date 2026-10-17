@@ -590,8 +590,8 @@ def overlays(img, t, k, km):
 def hook(img, t):
     a, b = HOOK
     if t <= 3.0:
-        grad_title(img, a, 540, 250, 96, t, 0.0)
-        grad_title(img, b, 540, 370, 96, t, 0.2)
+        grad_title(img, a, 540, 250, 96, t, -0.3)
+        grad_title(img, b, 540, 370, 96, t, -0.3)
     elif t < TOTAL - 0.5:
         txt = f"{a} {b}"
         d = ImageDraw.Draw(img)
