@@ -414,7 +414,7 @@ def enclaves(img, t, t_be, t_nl):
         k = ease((t - t_nl) / 0.4)
         big = sorted(pieces, key=lambda p: -p[2] * p[3])[:3]
         for px, py, w, h in big:
-            iw, ih = w * 0.38 * k, h * 0.38 * k
+            iw, ih = max(20, w * 0.38 * k), max(20, h * 0.38 * k)
             cx, cy = px + w / 2, py + h / 2
             d.rounded_rectangle((cx - iw / 2, cy - ih / 2, cx + iw / 2, cy + ih / 2), 8, fill=(240, 140, 40, 255), outline=WHT + (255,), width=3)
     pill(img, "SCHEMATIC · NOT TO SCALE", 540, y1 + 50, 22, (40, 40, 50))
