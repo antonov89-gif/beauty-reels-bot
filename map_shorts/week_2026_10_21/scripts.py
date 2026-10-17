@@ -86,7 +86,7 @@ SHORTS = {
             "Parliament finally moved there in 1927.",
             "A capital built from scratch, because two cities couldn't agree.",
         ],
-        facts="Federation 1901; Constitution s.125: seat of government in NSW, at least 100 miles from Sydney, Parliament to sit in Melbourne until then; site chosen 1908; Griffin design won the international competition (1912); Parliament opened in Canberra 9 May 1927.",
+        facts="Federation 1901; Constitution s.125: seat of government in NSW, at least 100 miles from Sydney, Parliament to sit in Melbourne until then; site chosen 1908, about 280 km from Sydney by road (about 235 km in a straight line); Griffin design won the international competition (1912); Parliament opened in Canberra 9 May 1927.",
     ),
     "diomede": dict(
         title="You Can See Tomorrow From This Island 🇺🇸🇷🇺",
