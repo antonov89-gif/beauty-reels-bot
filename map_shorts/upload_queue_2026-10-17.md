@@ -48,10 +48,12 @@
 
 | Дата | 10:00 | 12:00 | 14:00 | 15:00 (длинный) | 16:00 |
 |---|---|---|---|---|---|
-| 18.10 | GTA s1 | Madagascar | GTA s3 | Vice City vs REAL Miami | Hannibal |
+| 18.10 | Vice City vs REAL Miami (длинный) | Madagascar | GTA s3 | GTA s1 | Hannibal |
 | 19.10 | GTA s2 | Suez | €1 coin | — | Libya |
 | 20.10 | GTA ep.2 | Aral | Gold cube | Could You Spend $100 Billion? | $100B Short |
 | 23.10 | — | — | — | Hormuz bypass | — |
 
 Вручную после выхода: обложки (Vice City cover_a, $100B spend100b_A, Hormuz A), закреплённые комментарии, Related video.
+18.10 Vice City поставлен на 10:00, а GTA s1 на 15:00: так все GTA-Shorts выходят после длинного ролика, и ссылка «Related video» на него сразу работает.
+Проверка 17.10 22:15: все 15 постов в Metricool в статусе Pending, файлы совпадают с оригиналами байт в байт (длительность, разрешение, размер), TikTok mr.buck222 и YouTube UCFphFU69Tgz3LyHoZzODdWw подключены.
 Очередь Shorts заканчивается 20.10 — с 21.10 нужны новые ролики.
