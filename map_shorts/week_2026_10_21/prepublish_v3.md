@@ -45,4 +45,4 @@ This is an editorial opinion, not a view-count forecast.
 | Canberra | 23.10 14:00 | 398809547 |
 | Diomede | 24.10 10:00 | 398811311 |
 
-All 7 Metricool copies are byte-for-byte identical to the originals (checked by size after the copy to static.metricool.com).
+All 7 Metricool copies (static.metricool.com) match the originals in file size, to the byte.
