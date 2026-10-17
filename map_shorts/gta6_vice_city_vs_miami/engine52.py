@@ -326,7 +326,7 @@ O("pinf", 0.563, 0.648, "THE MIAMI CIRCLE TODAY", WT(12, "perfect"))
 O("credit")
 S(WT(12, "thirty") - 0.2, "circ")
 S(WT(12, "So") - 0.2, "clip", "V7", 4.0, 0.6, 1.05, 1.15, 0.5, 0.5)
-O("big", "TEQUESTA → TEQUESTA", 960, 200, WT(12, "named") - 0.3, 76, YEL, PINK)
+O("big", "NAMED AFTER THE TEQUESTA", 960, 200, WT(12, "named") - 0.3, 70, YEL, PINK)
 S(BL[13], "clip", "V6", 3.0, 0.7, 1.0, 1.1, 0.5, 0.5)
 O("big", "TODAY: A FINANCIAL DISTRICT", 960, 180, ST[13] + 0.3, 62, WHT, PINK)
 O("counter", 0, 40000, "~{:,.0f} RESIDENTS", 960, 290, WT(13, "forty") - 0.2, 1.3, 64, YEL, BLK)
@@ -354,9 +354,9 @@ vs(WT(17, "small") - 0.6, "V10", 2.0, "OPA", 1.0, 0.47, 0.5, "TISHA-WOCKA", "OPA
 S(WT(17, "founded") - 0.3, "clip", "V10", 3.0, 0.65, 1.0, 1.12, 0.5, 0.5)
 O("big", "FOUNDED 1926 · GLENN CURTISS", 960, 180, WT(17, "founded") - 0.1, 58, YEL, BLK)
 O("tags", [("DOMES", WT(17, "domes") - 0.1), ("MINARETS", WT(17, "minarets") - 0.1), ("ARCHES", WT(17, "arches") - 0.1)], y0=320)
-S(WT(17, "City") - 0.25, "sat", "OPA", 1.0, 1.3, 0.5, 0.5)
-O("pinf", 0.47, 0.5, "OPA-LOCKA", WT(17, "City"))
-O("big", "A CITY HALL LIKE A PALACE", 960, 170, WT(17, "City") - 0.1, 62, WHT, PINK)
+S(WT(17, "City", 1) - 0.25, "sat", "OPA", 1.0, 1.3, 0.5, 0.5)
+O("pinf", 0.47, 0.5, "OPA-LOCKA", WT(17, "City", 1))
+O("big", "A CITY HALL LIKE A PALACE", 960, 170, WT(17, "City", 1) - 0.1, 62, WHT, PINK)
 O("big", "~20 BUILDINGS ON THE NATIONAL REGISTER", 960, 270, WT(17, "twenty") - 0.2, 46, YEL, BLK)
 O("credit")
 S(WT(17, "flea", 1) - 0.4, "clip", "V11", 4.0, 0.7, 1.05, 1.12, 0.5, 0.5)
@@ -445,7 +445,7 @@ O("big", "NO RAILROAD, NO MIAMI", 960, 200, WT(28, "Without"), 76, WHT, PINK)
 S(BL[29], "clip", "V21", 0.0, 0.75, 1.0, 1.12, 0.5, 0.5)
 O("big", "GTA 6 · 19 NOVEMBER 2026", 960, 190, ST[29] + 0.1, 66, YEL, BLK)
 O("big", "WHICH PLACE WOULD YOU VISIT FIRST?", 960, 300, WT(29, "Which") - 0.2, 56, WHT, PINK)
-O("big", "TELL ME IN THE COMMENTS ↓", 960, 820, WT(29, "Tell") - 0.2, 52, YEL, BLK)
+O("big", "TELL ME IN THE COMMENTS", 960, 820, WT(29, "Tell") - 0.2, 52, YEL, BLK)
 CHAP.update({0: "INTRO", 28: "FINALE"})
 CUTS = [s[0] for s in SH[1:]]
 SHAKES = [REAL[i] + 0.25 for i in range(len(REAL))] + [s[0] + 0.5 for s in SH if s[1] == "card"]
@@ -626,7 +626,7 @@ def score_scene(t, k):
         a = ease((t - ts) / 0.25); x = (1 - a) * -200
         d.rounded_rectangle((90 + x, y - 34, 1830 + x, y + 34), 14, fill=(12, 10, 28, int(210 * a)))
         d.text((130 + x, y), g, font=font(POPX, 36), fill=WHT + (int(255 * a),), anchor="lm")
-        d.text((560 + x, y), "→", font=font(POPX, 36), fill=PINK + (int(255 * a),), anchor="mm")
+        d.polygon([(546 + x, y - 12), (546 + x, y + 12), (572 + x, y)], fill=PINK + (int(255 * a),))
         d.text((620 + x, y), r, font=fit(POPX, 36, r, 640), fill=YEL + (int(255 * a),), anchor="lm")
         txt, c = BADGE[kind]; f = font(POPX, 22); pw = f.getlength(txt) + 30
         d.rounded_rectangle((1810 - pw + x, y - 22, 1810 + x, y + 22), 12, fill=c + (int(230 * a),)); d.text((1810 - pw / 2 + x, y), txt, font=f, fill=WHT + (int(255 * a),), anchor="mm")
@@ -797,6 +797,6 @@ if __name__ == "__main__":
     elif cmd == "video":
         a, b, out = int(sys.argv[2]), int(sys.argv[3]), sys.argv[4]
         p = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS),
-                              "-i", "-", "-c:v", "libx264", "-preset", "fast", "-crf", "21", "-pix_fmt", "yuv420p", out], stdin=subprocess.PIPE)
+                              "-i", "-", "-c:v", "libx264", "-preset", "fast", "-b:v", "8M", "-maxrate", "10M", "-bufsize", "16M", "-pix_fmt", "yuv420p", out], stdin=subprocess.PIPE)
         for fi in range(a, b): p.stdin.write(frame(fi).tobytes())
         p.stdin.close(); p.wait()
