@@ -95,12 +95,20 @@ Production: Lumean voice 2.02 RUB for all 7, Esri imagery and render free. Topic
 
 Metrics here (no per-video stayed/swiped): 24 h / 72 h views vs the 21–24.10 batch median and vs channel median (~1.2k), vidIQ relative retention, likes and comments per 1k views. Baarle (21.10) is the one with a weak frame 0: if its 24 h views are below half of the 21–24.10 median, start border Shorts with the most unusual visual.
 
+### Single Short 24.10 14:00 — strict remake of a reference (engine63, E5)
+Reference: MapTrail "Spain: The Hidden Superpower" (5wEVWjvaX2k, 196k views), DNA report `map_shorts/turkey_2026_10_24/dna_5wEVWjvaX2k.md`. Production: Lumean voice 0.49 RUB, Esri / Natural Earth / AWS terrain free, render free. Metricool id 399259968 (YouTube + TikTok), copy size matches the original.
+| Date | Video | Events/10 s | Hook (frame 0) | 24 h | 72 h | Principle |
+|---|---|---|---|---|---|---|
+| 24.10 14:00 | Turkey: two continents | ~5-6 (reference style) | flag-filled Turkey + pin, "not just an ordinary country"; flexing character at 2 s | | | |
+
 ## 3. Experiment cards
 **E1 — Visual density.** HYPOTHESIS: ≥ 10 events/10 s and no pause > 2.5 s lower the swipe share. EVIDENCE: pace vs views above (correlation only). VARIABLE: number of pop-ups, zooms, highlights. CONTROL: batch 21–24.10 (6–7.7 events/10 s). METRIC: median of 24 h / 72 h views vs control, vidIQ relative retention. WINDOW: 7 Shorts per variant. LIMITATIONS: different topics, compare medians. RESULT: — . NEXT DECISION: — .
 
 **E2 — Answer on frame 0.** HYPOTHESIS: a number or contrast visible at 0.0 s lowers swipes vs a title over satellite imagery. CONTROL: Shorts 18–20.10 (pop-in hooks). TEST: batch 21–24.10. METRIC: median of 24 h views vs the 18–20.10 Shorts and vs the channel median ≈1.2k; vidIQ relative retention in the first quarter (baseline 0.46–0.6). RESULT: — .
 
 **E3 — Niche title convention.** VARIABLE: "number-contrast + #geography #map" vs our style. METRIC: search share (vidIQ traffic_sources), 24 h views. LIMITATIONS: no A/B for Shorts, sequential only. RESULT: — .
+
+**E5 — Strict reference remake / continuous camera.** HYPOTHESIS: copying a working channel's system (virtual camera across scales, character on the country at 2 s, textured fills, 1-2-word captions, ~2 SFX/10 s) gives at least the median of our cut-heavy batch. CONTROL: median 24 h / 72 h of batch 25-28.10 (10-13 events/10 s). METRIC: 24 h / 72 h views, vidIQ relative retention, likes per 1k. LIMITATIONS: n = 1, different topic. RESULT: — . NEXT DECISION: if >= control median, 2-3 more Shorts in engine63.
 
 **E4 — GTA series.** HYPOTHESIS: GTA Shorts reach another audience and don't hurt geography. METRIC: 24 h views of 4 GTA Shorts 18–20.10 vs geography Shorts on the same days. DECISION 20.10: if GTA median < 50% of geography median, no new GTA until 19.11. RESULT: — .
 
