@@ -34,6 +34,13 @@ Main metrics (no per-video stayed/swiped data): views at 24 h and 72 h vs the ch
 - Madagascar 12:00 (first TikTok copy), GTA s3 14:00, GTA s1 15:00, Hannibal 16:00 still Pending at 09:58. Not yet verified as published.
 - Not done through the API: "Related video" link and the pinned comment (manual in Studio).
 
+### 18.10 12:17 MSK check of the published long video (Vice City vs REAL Miami, nij4WjfDKeY)
+- Published 10:04 MSK, public, 8:27, title/description/chapters/tags as planned; auto-transcript matches the script; cover_a applied (visually confirmed on i.ytimg.com). FACT.
+- Views at 2 h 12 min per vidIQ: 0 (Madagascar, published 12:03, also 0 at 13 min). vidIQ lags by hours, so DATA MISSING until the 17:00 check. 
+- Risks (HYPOTHESIS): cover text "IT'S REAL" vs the video's own mixed verdict (official vs fan matches) can read as clickbait; the channel's audience comes from the Shorts feed (88%), so a long video may get little reach (counter-hypothesis: new topic/cover). Test: Studio Test & Compare cover_a vs cover_b ("SAME PLACE?"), desktop only.
+- Master loudness −13.8 LUFS, peak 0.0 dBFS: slight clipping risk after YouTube re-encode; fix for next long videos (limiter at −1 dBTP).
+- Still manual: Related video links on the GTA Shorts, pinned comment.
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
