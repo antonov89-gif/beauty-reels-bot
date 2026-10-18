@@ -58,6 +58,10 @@ Main metrics (no per-video stayed/swiped data): views at 24 h and 72 h vs the ch
 - YouTube queue now geography/general only: 19.10 12:00 Suez, 14:00 coin, 16:00 Libya; 20.10 12:00 Aral, 14:00 gold cube, 15:00 long $100B, 16:00 $100B short. No GTA on YouTube until the H6 test result (check 22.10-23.10: do geography Shorts get a feed push again?).
 - E4 rule (GTA < 50% of geography median -> pause until 19.11) replaced by the H6 test: success = at least 2 of the next 5 geography Shorts reach ~1k views at 24 h.
 
+### TikTok monitoring set up 19.10 00:10 MSK (user request)
+- Source: Metricool analytics (brand 7486051), connector `posts` (TKPO07 views, TKPO08-10 likes/comments/shares, TKPO11 reach, TKPO13 full-watch rate, TKPO15 avg watch time, TKPO16 For You share) and `evolution` (TKEV02/07/08). Routine "Mr. Buck monitoring" (9:56 and 21:56 MSK) now reports a TikTok block and, once a day, runs a niche outlier search (vidIQ, 5 credits).
+- First read (1-19.10): Metricool sees only 2 TikTok videos, both of 16.10 (gta6_ep2_tg 3 views, gta6_real_places_chat 0 views), followers 0, new followers 0. None of the Metricool-published TikTok copies of 18.10 (Madagascar, GTA s3, GTA s1, Hannibal) appear. DATA MISSING: the API may lag, or the account is personal/limited. Check on the 21:56 run; if still missing, the user opens TikTok Studio analytics or connects a Business account. FACT for what is visible, cause UNKNOWN.
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
