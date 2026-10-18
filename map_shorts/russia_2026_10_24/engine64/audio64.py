@@ -250,7 +250,7 @@ if __name__ == "__main__":
     sf.write(f"{tag}/sfx.wav", np.clip(sfx, -1, 1), SR)
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{tag}/voice.wav", "-i", f"{tag}/music.wav", "-i", f"{tag}/sfx.wav",
                     "-filter_complex",
-                    "[0:a]asplit=2[v][vsc];[1:a]volume=0.42[m];[m][vsc]sidechaincompress=threshold=0.04:ratio=7:attack=8:release=300[md];"
+                    "[0:a]highpass=f=85,deesser=i=0.3,equalizer=f=250:t=q:w=1:g=-1.5,equalizer=f=3500:t=q:w=1.1:g=1.8,acompressor=threshold=-21dB:ratio=2:attack=15:release=140:makeup=2,aecho=0.9:0.9:34|68:0.09|0.05,asplit=2[v][vsc];[1:a]volume=0.42[m];[m][vsc]sidechaincompress=threshold=0.04:ratio=7:attack=8:release=300[md];"
                     "[2:a]lowpass=f=10000,volume=0.65[s];[v][md][s]amix=inputs=3:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=9,alimiter=limit=0.84:level=0,aresample=44100[a]",
                     "-map", "[a]", "-t", str(V.TOTAL), f"{tag}/mix.wav"], check=True)
     print("mix", tag, round(V.TOTAL, 2))

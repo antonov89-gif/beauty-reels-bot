@@ -36,6 +36,7 @@ The full prompt is `map_shorts/prompts/youtube_growth_engine_v3_pro.md`. Read it
 - Publish window 10–16 MSK, Shorts duplicated to TikTok (isAigc true, madeForKids false).
 - Ask before any paid generation and name the cost. No copyrighted music, no leaks; hedge unconfirmed facts; label AI visuals "AI CONCEPT · NOT GAME FOOTAGE"; disclose AI voice and image sources in the description.
 - Never print or commit API keys; never put video files in the repository.
+- Voice-over must sound like a real person: follow `map_shorts/prompts/voiceover_naturalness_rules.md` (write for the ear, natural delivery settings, transcribe-and-check, light mix chain). The AI-voice disclosure stays in every description and platform toggle.
 
 ## Growth Learning Log (Module 15)
 - File: `map_shorts/growth_log.md`. After every publish batch or audit, add the results and the extracted principle there and commit it. Do not claim something is saved unless the commit exists.
