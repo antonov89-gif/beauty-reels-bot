@@ -9,7 +9,7 @@ SEA_T = (38, 198, 218)
 
 TR = (35.2, 39.2)                        # Turkey framing centre
 FACE = (34.4, 38.9)
-SH_L, SH_R = (26.5, 41.15), (44.6, 39.55)   # shoulders on the west and east borders
+SH_L, SH_R = (27.0, 40.95), (43.8, 39.8)    # shoulders just inside the west and east borders (arms stay on screen)
 IST = (28.98, 41.01)
 NARROW = ((29.0568, 41.0874), (29.0658, 41.0874))   # Rumelihisari, measured on Esri imagery
 OTTOMAN = ["Turkey", "Greece", "Bulgaria", "North Macedonia", "Albania", "Kosovo", "Republic of Serbia", "Bosnia and Herzegovina",
@@ -27,7 +27,7 @@ def build(short, K, O, TILT, WT, ST, D):
 
     # L1 purple glow + angry flexing character (the country is the body)
     O("fill", ST[1], WT(8, "Istanbul") - 0.3, name="Turkey", col=PURPLE, alpha=0.7)
-    O("char", WT(1, "actually") - 0.1, ST[2] + 0.05, mood="angry", arms=True, lon=FACE[0], lat=FACE[1], left=SH_L, right=SH_R, s=44, arm_s=100)
+    O("char", WT(1, "actually") - 0.1, ST[2] + 0.05, mood="angry", arms=True, lon=FACE[0], lat=FACE[1], left=SH_L, right=SH_R, s=44, arm_s=72)
     K(ST[2] - 0.05, TR[0], TR[1], 20.0)
 
     # L2 tilted world card: cyan arcs from Istanbul
