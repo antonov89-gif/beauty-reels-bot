@@ -356,9 +356,9 @@ def cfill(img, v, o, t):
         x0, y0, x1, y1 = bb[0] * 2, bb[1] * 2, min(v.w, bb[2] * 2), min(v.h, bb[3] * 2)
         sub = np.asarray(img.crop((x0, y0, x1, y1)).convert("RGB")).astype(np.float32)
         lum = (0.3 * sub[..., 0] + 0.59 * sub[..., 1] + 0.11 * sub[..., 2]) / 255.0
-        lum = (lum - lum.mean()) * 1.6 + 0.5
+        lum = np.clip((lum - lum.mean()) * 1.3 + 0.5, 0, 1)            # relief only, independent of desert/forest brightness
         col = np.array(o["col"], np.float32)
-        out = np.clip(col * (0.45 + 0.85 * lum[..., None]), 0, 255)
+        out = np.clip(col * (0.55 + 0.6 * lum[..., None]), 0, 255)
         mk = np.asarray(m.resize((v.w, v.h), Image.BILINEAR).crop((x0, y0, x1, y1))).astype(np.float32) / 255.0
         lay = np.dstack([out, mk * 255 * o.get("alpha", 0.88) * a]).astype(np.uint8)
         img.alpha_composite(Image.fromarray(lay, "RGBA"), (x0, y0))
