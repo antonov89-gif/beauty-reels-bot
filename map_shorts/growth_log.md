@@ -113,6 +113,13 @@ Reference: MapTrail "Spain: The Hidden Superpower" (5wEVWjvaX2k, 196k views), DN
 |---|---|---|---|---|---|---|
 | 24.10 14:00 | Turkey: two continents | ~5-6 (reference style) | flag-filled Turkey + pin, "not just an ordinary country"; flexing character at 2 s | | | |
 
+### Single Short 19.10 16:00 - Russia, 58 years (engine64, system of OneCriticalMoment q6L_j157rGo, E6)
+Reference: OneCriticalMoment "How the Mongols Conquered Russia (Part 2)" (93.8k views, 24.7 likes/1k, 153 comments), DNA report `map_shorts/russia_2026_10_24/dna_q6L_j157rGo.md`. Production: Lumean voice 0.50 RUB, imagery/render free. Metricool id 399429455 (YouTube + TikTok), voice transcribed back 181/183 words.
+| Date | Video | Events/10 s | Hook (frame 0) | 24 h | 72 h | Principle |
+|---|---|---|---|---|---|---|
+| 19.10 16:00 | Russia crossed a continent in 58 years | 10.8 | globe, gold Russia, "11 TIME ZONES" on frame 0 | | | |
+Same minute as Libya (16:00) in the queue: flagged to the user.
+
 ## 3. Experiment cards
 **E1 — Visual density.** HYPOTHESIS: ≥ 10 events/10 s and no pause > 2.5 s lower the swipe share. EVIDENCE: pace vs views above (correlation only). VARIABLE: number of pop-ups, zooms, highlights. CONTROL: batch 21–24.10 (6–7.7 events/10 s). METRIC: median of 24 h / 72 h views vs control, vidIQ relative retention. WINDOW: 7 Shorts per variant. LIMITATIONS: different topics, compare medians. RESULT: — . NEXT DECISION: — .
 
@@ -121,6 +128,8 @@ Reference: MapTrail "Spain: The Hidden Superpower" (5wEVWjvaX2k, 196k views), DN
 **E3 — Niche title convention.** VARIABLE: "number-contrast + #geography #map" vs our style. METRIC: search share (vidIQ traffic_sources), 24 h views. LIMITATIONS: no A/B for Shorts, sequential only. RESULT: — .
 
 **E5 — Strict reference remake / continuous camera.** HYPOTHESIS: copying a working channel's system (virtual camera across scales, character on the country at 2 s, textured fills, 1-2-word captions, ~2 SFX/10 s) gives at least the median of our cut-heavy batch. CONTROL: median 24 h / 72 h of batch 25-28.10 (10-13 events/10 s). METRIC: 24 h / 72 h views, vidIQ relative retention, likes per 1k. LIMITATIONS: n = 1, different topic. RESULT: — . NEXT DECISION: if >= control median, 2-3 more Shorts in engine63.
+
+**E6 — Dense globe + dated campaign (OneCriticalMoment system).** HYPOTHESIS: ~10 events/10 s, number on frame 0, dated banner and a map that changes season hold attention better than the calmer MapTrail system (E5). CONTROL: Turkey (E5, 24.10) and batch 25-28.10. METRIC: 24 h / 72 h views, vidIQ relative retention, comments per 1k. LIMITATIONS: n = 1, new topic, queue of 19.10 is geography-only (H6 test) so the result also depends on H6. RESULT: - . NEXT DECISION: pick the system with the higher median for the next batch.
 
 **E4 — GTA series.** HYPOTHESIS: GTA Shorts reach another audience and don't hurt geography. METRIC: 24 h views of 4 GTA Shorts 18–20.10 vs geography Shorts on the same days. DECISION 20.10: if GTA median < 50% of geography median, no new GTA until 19.11. RESULT: — .
 
