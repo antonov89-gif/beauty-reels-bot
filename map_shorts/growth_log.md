@@ -122,7 +122,7 @@ Reference: OneCriticalMoment "How the Mongols Conquered Russia (Part 2)" (93.8k 
 | Date | Video | Events/10 s | Hook (frame 0) | 24 h | 72 h | Principle |
 |---|---|---|---|---|---|---|
 | 19.10 16:00 | Russia crossed a continent in 58 years | 10.8 | globe, gold Russia, "11 TIME ZONES" on frame 0 | | | |
-Same minute as Libya (16:00) in the queue: flagged to the user.
+Libya moved to 15:00 on 19.10 (user: yes). Voice regenerated 19.10 00:05 (0.49 RUB: 'Moskvitin' only, softer settings); Metricool post replaced (id 399439229), copy size matches, loudness -15.0 LUFS / -1.6 dBTP, 179 of 182 words heard back.
 
 ## 3. Experiment cards
 **E1 — Visual density.** HYPOTHESIS: ≥ 10 events/10 s and no pause > 2.5 s lower the swipe share. EVIDENCE: pace vs views above (correlation only). VARIABLE: number of pop-ups, zooms, highlights. CONTROL: batch 21–24.10 (6–7.7 events/10 s). METRIC: median of 24 h / 72 h views vs control, vidIQ relative retention. WINDOW: 7 Shorts per variant. LIMITATIONS: different topics, compare medians. RESULT: — . NEXT DECISION: — .
