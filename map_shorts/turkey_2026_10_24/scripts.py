@@ -1,33 +1,36 @@
-"""Turkey country-profile Short (reference: MapTrail 'Spain' Short, continuous-camera style). E5 test."""
+"""Turkey country-profile Short, a strict remake of the reference structure and style
+(MapTrail 'Spain: The Hidden Superpower', 5wEVWjvaX2k): line-by-line beats follow the reference, facts are ours."""
 
 SHORTS = {
     "turkey": {
-        "title": "Turkey Sits on TWO Continents 🗺️ #geography #map",
-        "hook": ("1 COUNTRY", "2 CONTINENTS"),
+        "title": "Turkey: The Country on TWO Continents 🗺️ | Map Animation",
         "lines": [
-            "Turkey is one country on two continents.",
-            "Ninety-seven percent of it is in Asia, and just three percent is in Europe.",
-            "Look around it. Greece and Bulgaria are to the west.",
-            "Georgia, Armenia and Iran to the east. Iraq and Syria to the south.",
-            "And a tiny border with Azerbaijan, less than twenty kilometres long.",
-            "Four seas wrap around it: the Black Sea, the Mediterranean, the Aegean and the Sea of Marmara.",
-            "But here's the real surprise.",
-            "In Istanbul, Europe and Asia are split by the Bosphorus, at its narrowest only about seven hundred metres wide.",
-            "Every day, people commute from Asia to Europe just to get to work.",
-            "And Turkey is huge: about seven hundred and eighty thousand square kilometres, more than twice the size of Germany.",
-            "In the far east rises Mount Ararat, over five thousand metres high, where Noah's Ark is said to have landed.",
-            "From this land, the Ottoman Empire once ruled parts of three continents.",
-            "Europe, Asia and Africa, for over six hundred years.",
-            "And it all started here, on the bridge between two worlds.",
+            "Turkey is not just an ordinary country.",                                              # flag fill, pin
+            "It is actually a giant that sits on two continents at once,",                          # purple + flexing character
+            "and once ruled a huge part of the world.",                                             # tilted world card, arcs
+            "Today it quietly guards the gate between Europe and Asia.",                            # back, happy eyes
+            "Notice this. To the west lie Greece and Bulgaria,",                                    # pan west
+            "to the east Georgia, Armenia, Azerbaijan and Iran,",                                   # pan east
+            "and to the south Iraq and Syria.",                                                     # pan south
+            "To the north stretches the Black Sea, and to the south, the Mediterranean.",            # sea fills, curved text
+            "But here's the real surprise. In Istanbul, Europe and Asia are only about seven hundred metres apart.",  # punch-in, ruler
+            "Yes, people cross between two continents just to get to work.",                        # commute
+            "In size, Turkey is massive, more than three hundred thousand square miles.",           # counter
+            "And do you know the most astonishing part? Turkey is actually a very mountainous country.",  # orange elevation
+            "Its highest peak, Mount Ararat, rises almost seventeen thousand feet, where Noah's Ark is said to have landed.",
+            "This very land was the heart of the Ottoman Empire, which ruled parts of three continents for over six hundred years.",  # world card, red
+            "Even today, English words like coffee, yogurt and kiosk came through Turkish.",        # speech bubbles
+            "And that is exactly why this bridge between two worlds still matters so much.",
         ],
         "facts": {
-            "3% in Europe": "East Thrace ~23,800 km2 of 783,562 km2 = 3.0% (FACT)",
-            "8 neighbours": "Greece, Bulgaria, Georgia, Armenia, Azerbaijan (Nakhchivan), Iran, Iraq, Syria (FACT)",
-            "Azerbaijan border": "CIA World Factbook ~17 km; other sources ~9-11 km -> 'less than twenty' (hedged)",
-            "Bosphorus": "narrowest ~700 m near Rumelihisari/Anadoluhisari (FACT, 'about')",
-            "area": "783,562 km2; Germany 357,588 km2 -> 2.19x (FACT)",
-            "Ararat": "5,137 m; Ark landing is a tradition -> 'is said to' (hedged)",
-            "Ottoman": "1299-1922, held land in Europe, Asia and Africa (FACT); arcs on the map are illustrative, not borders",
+            "two continents": "East Thrace (Europe) ~3% of 783,562 km2, Anatolia (Asia) ~97% (FACT)",
+            "neighbours": "Greece, Bulgaria, Georgia, Armenia, Azerbaijan (Nakhchivan), Iran, Iraq, Syria (FACT)",
+            "Bosphorus": "narrowest ~700 m near Rumelihisari / Anadoluhisari (FACT, 'about'); ~750 m E-W on Esri imagery",
+            "area": "783,562 km2 = 302,535 sq mi (FACT)",
+            "mountainous": "mean elevation ~1,132 m (CIA World Factbook) (FACT)",
+            "Ararat": "5,137 m = 16,854 ft (FACT); Ark landing is a tradition -> 'is said to' (hedged)",
+            "Ottoman": "1299-1922, held land in Europe, Asia and Africa (FACT). Red fill = modern countries largely under Ottoman rule at its peak, simplified; on-screen note 'SIMPLIFIED'",
+            "words": "coffee (Dutch koffie < Ottoman Turkish kahve < Arabic qahwa), yogurt (Turkish yogurt), kiosk (French kiosque < Turkish kosk) (FACT, etymology dictionaries)",
         },
     }
 }
