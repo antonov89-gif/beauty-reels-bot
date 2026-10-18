@@ -46,6 +46,13 @@ Main metrics (no per-video stayed/swiped data): views at 24 h and 72 h vs the ch
 - 16–17.10: 2 of 5 Shorts got the feed push, 3 stuck at 68–134 (Real Life vs GTA, Pangaea, GTA Launch Day). All 3 published 18:47–23:25 MSK, vague or textless first frame. HYPOTHESIS (H2, H3); tested by the 10–16 MSK queue from 18.10.
 - Browse traffic 265/day (4–8.10) → 19/day (9–15.10). FACT.
 
+### Monitoring 18.10 21:57 MSK (vidIQ public counts; Analytics still ends 15.10)
+- Queue of 18.10 published on time by Metricool (+3-4 min): Madagascar 12:03, GTA s3 14:03, GTA s1 15:03, Hannibal 16:04, Vice City long 10:04. FACT.
+- Views at 6-12 h: GTA s1 (slogan) 265 / 7 h; GTA s3 (flea market) 50 / 8 h; Madagascar 8 / 10 h; Hannibal 6 / 6 h; Vice City long 2 / 12 h. FACT.
+- 16-17.10 Shorts now: Launch Day 281, Real Life vs GTA 232, ocean floor 80; Thrillbilly 1,235, Snake Island 1,294. FACT.
+- Reading: two geography Shorts in the 10-16 MSK window got no feed push in the first hours, so timing alone (H3) does not explain the flops. HYPOTHESIS, check at 24 h (trigger 19.10 17:00). GTA Shorts today beat geography Shorts today (E4 signal, n = 2 vs 2).
+- Metadata: no errors found in the 5 new videos (titles, tags, descriptions match publication files). No edits made.
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
