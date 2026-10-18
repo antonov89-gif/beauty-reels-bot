@@ -20,10 +20,14 @@ def build(short, K, O, GK, GLOBE, SN, FLASH, WT, ST, D):
     GK(0, 95, 56, 560)
     GK(ST[3] - 0.05, 100, 58, 660)
     SN(0, 0.0)
-    O("banner", -1, ST[3] - 0.02, scene="both", pill="RUSSIA", name="11 TIME ZONES")
+    O("banner", -1, 1.5, scene="both", pill="RUSSIA", name="LARGEST COUNTRY")
+    O("banner", 1.5, ST[3] - 0.02, scene="both", pill="RUSSIA", name="1581 - 1639")
+    O("counter", -1.3, WT(1, "fifty-eight") - 0.15, scene="both", x=540, y=1000, v0=0, v1=11, fmt="{:.0f} TIME ZONES", dur=1.0, size=104, col=WHT)
     O("fill", -1, ST[3] - 0.02, scene="globe", name="Russia", col=GOLD, alpha=0.2, glow=GOLD, border=GOLD, bw=5)
     O("arrow", WT(1, "Crossing") - 0.1, ST[3] - 0.02, scene="globe", pts=PATH, dur=2.4, w=12, keephead=True)
     O("counter", WT(1, "fifty-eight") - 0.1, ST[3] - 0.02, scene="both", x=540, y=1000, v0=0, v1=58, fmt="{:.0f} YEARS", dur=1.1, size=118, col=YEL, shake=True)
+    O("pin", WT(1, "just") + 0.2, ST[3] - 0.02, scene="globe", lon=60.0, lat=58.5, txt="Urals", len=190, size=80)
+    O("pin", WT(2, "huge") + 0.1, ST[3] - 0.02, scene="globe", lon=143.0, lat=59.4, txt="Pacific", len=190, size=80)
     O("units", WT(2, "Cossacks") - 0.2, ST[3] - 0.02, scene="globe", pts=PATH, dur=2.6, n=4, size=84)
     O("label", WT(2, "Cossacks") + 0.1, ST[3] - 0.02, scene="both", x=540, y=1130, txt="A FEW HUNDRED COSSACKS", font=OSWB, size=58, col=WHT)
 
@@ -32,6 +36,8 @@ def build(short, K, O, GK, GLOBE, SN, FLASH, WT, ST, D):
     K(end(3) + 0.2, 61.2, 58.3, 3.0)
     O("banner", ST[3] - 0.02, WT(4, "sledges") - 0.05, pill=(1500, 1581), name="YERMAK", icon="sun", roll=0.75)
     O("label", ST[3] + 0.3, end(3) + 0.2, lon=59.0, lat=59.5, txt="URAL MOUNTAINS", size=56, col=WHT)
+    O("rivers", ST[3] + 3.0, ST[4] - 0.1, names=["Chusovaya", "Tura"], w=6, step=1)
+    O("label", ST[3] + 2.3, end(3) + 0.2, x=540, y=700, txt="~540 MEN (REPORTED)", font=OSWB, size=72, col=WHT, shake=True)
     O("arrow", ST[3] + 0.1, end(3) + 0.5, pts=PATH[:5], dur=2.6, w=14)
     O("units", ST[3] + 0.1, end(3) + 0.5, pts=PATH[:5], dur=2.6, n=4, size=88)
 
@@ -89,6 +95,8 @@ def build(short, K, O, GK, GLOBE, SN, FLASH, WT, ST, D):
     O("fort", WT(9, "Krasnoyarsk") - 0.05, WT(9, "Yakutsk") - 0.2, lon=KRAS[0], lat=KRAS[1], txt="Krasnoyarsk", year=1628, size=52, side=1)
     O("fort", WT(9, "Yakutsk") + 0.1, end(9) + 0.4, lon=YAKUTSK[0], lat=YAKUTSK[1], txt="Yakutsk", year=1632, size=58, side=1)
     O("rivers", ST[9], ST[10], names=["Yenisey", "Lena", "Angara"], w=6, step=1)
+    O("label", WT(9, "Yenisei") + 0.2, WT(9, "Yakutsk") - 0.3, lon=KRAS[0] - 0.4, lat=KRAS[1] + 1.1, txt="YENISEI", font=OSWB, size=60, col=CYAN)
+    O("label", WT(9, "Lena") + 0.1, end(9) + 0.4, lon=YAKUTSK[0] - 1.5, lat=YAKUTSK[1] + 1.0, txt="LENA", font=OSWB, size=60, col=CYAN)
     O("arrow", ST[9] + 0.1, end(9) + 0.3, pts=PATH[7:13], dur=4.8, w=14)
 
     # ---------------- L10: brutal winter, thermometer to -60
@@ -98,6 +106,7 @@ def build(short, K, O, GK, GLOBE, SN, FLASH, WT, ST, D):
     SN(ST[10] + 0.7, 1.0)
     FLASH.append(WT(10, "brutal") - 0.05)
     O("banner", ST[10] - 0.02, ST[11] - 0.05, pill="YAKUTIA", name="WINTER", icon="snow")
+    O("label", WT(10, "minus") - 0.3, ST[11] - 0.05, x=620, y=760, txt="RECORD ~ −68 °C (REPORTED)", font=OSWB, size=66, col=(150, 215, 255), shake=True)
     O("thermo", WT(10, "brutal") - 0.2, ST[11] - 0.05, x=170, y=500, v0=18, v1=-62, dur=2.0)
 
     # ---------------- L11: 1639 Moskvitin reaches the Sea of Okhotsk (cut, snow melts)
@@ -107,15 +116,20 @@ def build(short, K, O, GK, GLOBE, SN, FLASH, WT, ST, D):
     SN(ST[11] + 1.2, 0.0)
     O("banner", ST[11] - 0.02, ST[12] + 1.0, pill=(1632, 1639), name="MOSKVITIN", icon="sun", roll=0.8)
     O("arrow", ST[11] + 0.1, end(11) + 0.6, pts=PATH[12:], dur=3.0, w=14, keephead=True)
+    O("units", ST[11] + 0.1, end(11) + 0.3, pts=PATH[12:], dur=3.0, n=4, size=84)
+    O("label", WT(11, "Ivan") - 0.1, WT(11, "Okhotsk") - 0.2, x=540, y=640, txt="IVAN MOSKVITIN", font=OSWB, size=70, col=WHT)
+    O("stamp", WT(11, "Okhotsk") + 0.2, ST[12] - 0.05, x=540, y=520, txt="REACHED THE SEA", col=YEL, size=100, angle=-4)
     O("pin", WT(11, "Okhotsk") - 0.1, WT(12, "four") - 0.15, lon=OKHOTSK[0], lat=OKHOTSK[1], txt="Sea of Okhotsk", len=200, size=72)
 
     # ---------------- L12: Pacific, HUD card with years after 1581, straight-line distance
     K(ST[12] - 0.05, OKHOTSK[0], OKHOTSK[1], 2.6)
+    K(WT(12, "kilometres") - 0.3, OKHOTSK[0] - 1.6, OKHOTSK[1] + 0.2, 3.6)
     K(end(12) + 0.4, OKHOTSK[0] - 4.0, OKHOTSK[1] + 0.5, 5.0)
     O("stamp", ST[12] + 0.05, WT(12, "four") - 0.3, x=540, y=420, txt="PACIFIC OCEAN", col=(60, 170, 255), size=112, angle=-4)
     O("hudcard", WT(12, "four") - 0.1, ST[13] - 0.05, x=540, y=830, title="YEARS AFTER 1581", rows=[
         ("TYUMEN", "+5", 5 / 58, YEL), ("TOBOLSK", "+6", 6 / 58, YEL), ("TOMSK", "+23", 23 / 58, YEL),
         ("KRASNOYARSK", "+47", 47 / 58, YEL), ("YAKUTSK", "+51", 51 / 58, YEL), ("SEA OF OKHOTSK", "+58", 1.0, RED)])
+    O("label", WT(12, "fifty-eight") - 0.15, ST[13] - 0.05, x=540, y=1380, txt="58 YEARS", font=OSWB, size=96, col=YEL, shake=True)
     O("counter", WT(12, "four") + 0.2, ST[13] - 0.05, x=540, y=1260, v0=0, v1=4500, fmt="~{:,.0f} KM", dur=1.4, size=96, col=YEL, shake=True)
 
     # ---------------- L13: honest cost, calm pull-out
@@ -123,14 +137,18 @@ def build(short, K, O, GK, GLOBE, SN, FLASH, WT, ST, D):
     K(end(13) + 0.3, OKHOTSK[0] - 8.0, OKHOTSK[1] + 1.0, 9.0)
     SN(ST[13], 0.0)
     O("label", ST[13] + 0.1, end(13) + 0.3, x=540, y=700, txt="LOST LAND · FORCED TRIBUTE", font=OSWB, size=70, col=WHT)
+    O("label", WT(13, "land") + 0.2, end(13) + 0.3, x=540, y=830, txt="PEOPLES OF SIBERIA", size=66, col=(255, 140, 130), font=OSWB)
+    K(WT(13, "land") - 0.2, OKHOTSK[0] - 6.0, OKHOTSK[1] + 0.8, 7.0)
 
     # ---------------- L14-L15: back to the globe, gold Russia (loop frame), 17.1M km2
     GLOBE(ST[14] - 0.05, 1e9)
     GK(ST[14] - 0.05, 95, 56, 700)
     GK(end(15) + 0.3, 95, 56, 560)
     SN(ST[14] - 0.05, 0.0)
-    O("banner", ST[14] - 0.05, 1e9, scene="both", pill="RUSSIA", name="11 TIME ZONES")
+    O("banner", ST[14] - 0.05, 1e9, scene="both", pill="RUSSIA", name="LARGEST COUNTRY")
     O("fill", ST[14] - 0.05, 1e9, scene="globe", name="Russia", col=GOLD, alpha=0.2, glow=GOLD, border=GOLD, bw=5)
+    O("label", WT(14, "largest") - 0.1, WT(14, "seventeen") - 0.15, scene="both", x=540, y=1000, txt="LARGEST COUNTRY ON EARTH", font=OSWB, size=74, col=WHT, shake=True)
     O("counter", WT(14, "seventeen") - 0.1, end(14) + 0.3, scene="both", x=540, y=1000, v0=0, v1=17.1, fmt="{:.1f}M KM²", dur=1.2, size=118, col=YEL, shake=True)
-    O("label", WT(15, "Eleven") - 0.05, end(15) + 0.3, scene="both", x=540, y=1000, txt="11 ZONES · 58 YEARS", font=OSWB, size=96, col=WHT)
+    O("label", WT(15, "Eleven") - 0.05, WT(15, "Fifty-eight") - 0.05, scene="both", x=540, y=1000, txt="11 TIME ZONES", size=110, col=WHT, font=OSWB, shake=True)
+    O("label", WT(15, "Fifty-eight") - 0.05, 1e9, scene="both", x=540, y=1000, txt="58 YEARS", size=130, col=YEL, font=OSWB, shake=True)
     return None
