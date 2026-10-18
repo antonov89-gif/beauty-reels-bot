@@ -53,6 +53,11 @@ Main metrics (no per-video stayed/swiped data): views at 24 h and 72 h vs the ch
 - Reading: two geography Shorts in the 10-16 MSK window got no feed push in the first hours, so timing alone (H3) does not explain the flops. HYPOTHESIS, check at 24 h (trigger 19.10 17:00). GTA Shorts today beat geography Shorts today (E4 signal, n = 2 vs 2).
 - Metadata: no errors found in the 5 new videos (titles, tags, descriptions match publication files). No edits made.
 
+### Decision 18.10 22:15 MSK (user: "GTA только на ТТ")
+- GTA s2 (19.10 10:00) and GTA ep.2 (20.10 10:00): YouTube removed in Metricool, TikTok kept (new ids 399363806, 399363880; uuids unchanged). FACT (response shows providers = tiktok only).
+- YouTube queue now geography/general only: 19.10 12:00 Suez, 14:00 coin, 16:00 Libya; 20.10 12:00 Aral, 14:00 gold cube, 15:00 long $100B, 16:00 $100B short. No GTA on YouTube until the H6 test result (check 22.10-23.10: do geography Shorts get a feed push again?).
+- E4 rule (GTA < 50% of geography median -> pause until 19.11) replaced by the H6 test: success = at least 2 of the next 5 geography Shorts reach ~1k views at 24 h.
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
