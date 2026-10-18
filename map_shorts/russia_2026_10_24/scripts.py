@@ -17,7 +17,7 @@ SHORTS = {
             "Local peoples were forced to pay tribute in furs.",
             "Krasnoyarsk, on the Yenisei, in 1628. Yakutsk, on the Lena, in 1632.",
             "And winter there is brutal. In Yakutia it can fall below minus sixty degrees.",
-            "In 1639, a Cossack party led by Ivan Moskvitin reached the Sea of Okhotsk.",
+            "In 1639, a Cossack party led by Moskvitin reached the Sea of Okhotsk.",
             "The Pacific Ocean, about four thousand five hundred kilometres from the Urals, in fifty-eight years.",
             "For the peoples of Siberia, it meant lost land and forced tribute.",
             "That journey laid the foundation of the largest country on Earth, seventeen million square kilometres.",

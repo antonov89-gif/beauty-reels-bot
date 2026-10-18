@@ -117,7 +117,7 @@ def build(short, K, O, GK, GLOBE, SN, FLASH, WT, ST, D):
     O("banner", ST[11] - 0.02, ST[12] + 1.0, pill=(1632, 1639), name="MOSKVITIN", icon="sun", roll=0.8)
     O("arrow", ST[11] + 0.1, end(11) + 0.6, pts=PATH[12:], dur=3.0, w=14, keephead=True)
     O("units", ST[11] + 0.1, end(11) + 0.3, pts=PATH[12:], dur=3.0, n=4, size=84)
-    O("label", WT(11, "Ivan") - 0.1, WT(11, "Okhotsk") - 0.2, x=540, y=640, txt="IVAN MOSKVITIN", font=OSWB, size=70, col=WHT)
+    O("label", WT(11, "Moskvitin") - 0.1, WT(11, "Okhotsk") - 0.2, x=540, y=640, txt="IVAN MOSKVITIN", font=OSWB, size=70, col=WHT)
     O("stamp", WT(11, "Okhotsk") + 0.2, ST[12] - 0.05, x=540, y=520, txt="REACHED THE SEA", col=YEL, size=100, angle=-4)
     O("pin", WT(11, "Okhotsk") - 0.1, WT(12, "four") - 0.15, lon=OKHOTSK[0], lat=OKHOTSK[1], txt="Sea of Okhotsk", len=200, size=72)
 
