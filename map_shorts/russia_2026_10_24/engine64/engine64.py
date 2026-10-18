@@ -1239,7 +1239,22 @@ def snowfall(img, t, f):
         d.ellipse((x - sz[i], y - sz[i], x + sz[i], y + sz[i]), fill=(255, 255, 255, 200))
 
 
-DRAW.update({"arrow": arrow, "units": units, "fort": fort, "fire": fire, "banner": banner, "stamp": stamp, "thermo": thermo,
+_label0 = label
+
+
+def label(img, v, o, t):
+    if "lon" in o and not isinstance(v, GlobeView) and t >= o["t0"]:
+        X, Y = v.xy(o["lon"], o["lat"])
+        w_ = font(o.get("font", OSW), o.get("size", 60) * (1.2 if o.get("font", OSW) == OSW else 1.0)).getlength(o["txt"]) / 2 + 24
+        if X < w_ or X > W - w_:
+            o2 = dict(o)
+            o2.pop("lon"); o2.pop("lat")
+            o2["x"], o2["y"] = min(max(X, w_), W - w_), Y
+            return _label0(img, v, o2, t)
+    return _label0(img, v, o, t)
+
+
+DRAW.update({"label": label, "arrow": arrow, "units": units, "fort": fort, "fire": fire, "banner": banner, "stamp": stamp, "thermo": thermo,
              "hudcard": hudcard, "rivers": rivers})
 ORDER = ["fill", "rivers", "arrow", "units", "fort", "fire", "pin", "curved", "label", "counter", "stamp", "thermo", "hudcard", "banner"]
 

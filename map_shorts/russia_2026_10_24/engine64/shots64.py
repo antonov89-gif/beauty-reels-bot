@@ -24,7 +24,7 @@ def build(short, K, O, GK, GLOBE, SN, FLASH, WT, ST, D):
     O("fill", -1, ST[3] - 0.02, scene="globe", name="Russia", col=GOLD, alpha=0.2, glow=GOLD, border=GOLD, bw=5)
     O("arrow", WT(1, "Crossing") - 0.1, ST[3] - 0.02, scene="globe", pts=PATH, dur=2.4, w=12, keephead=True)
     O("counter", WT(1, "fifty-eight") - 0.1, ST[3] - 0.02, scene="both", x=540, y=1000, v0=0, v1=58, fmt="{:.0f} YEARS", dur=1.1, size=118, col=YEL, shake=True)
-    O("units", WT(2, "Cossacks") - 0.2, ST[3] - 0.02, scene="globe", pts=PATH, dur=2.6, n=4, size=62)
+    O("units", WT(2, "Cossacks") - 0.2, ST[3] - 0.02, scene="globe", pts=PATH, dur=2.6, n=4, size=84)
     O("label", WT(2, "Cossacks") + 0.1, ST[3] - 0.02, scene="both", x=540, y=1130, txt="A FEW HUNDRED COSSACKS", font=OSWB, size=58, col=WHT)
 
     # ---------------- L3: 1581 Yermak, Ural Mountains (hard cut to the flat map, beat hit)
@@ -33,7 +33,7 @@ def build(short, K, O, GK, GLOBE, SN, FLASH, WT, ST, D):
     O("banner", ST[3] - 0.02, WT(4, "sledges") - 0.05, pill=(1500, 1581), name="YERMAK", icon="sun", roll=0.75)
     O("label", ST[3] + 0.3, end(3) + 0.2, lon=59.0, lat=59.5, txt="URAL MOUNTAINS", size=56, col=WHT)
     O("arrow", ST[3] + 0.1, end(3) + 0.5, pts=PATH[:5], dur=2.6, w=14)
-    O("units", ST[3] + 0.1, end(3) + 0.5, pts=PATH[:5], dur=2.6, n=4, size=66)
+    O("units", ST[3] + 0.1, end(3) + 0.5, pts=PATH[:5], dur=2.6, n=4, size=88)
 
     # ---------------- L4: rivers are the roads; boats in summer, sledges over ice (snow arrives)
     K(ST[4] - 0.05, 63.8, 57.9, 3.4)
@@ -56,16 +56,17 @@ def build(short, K, O, GK, GLOBE, SN, FLASH, WT, ST, D):
     O("stamp", WT(5, "took") + 0.1, end(5) + 0.1, x=540, y=560, txt="CAPITAL TAKEN", size=104, angle=-5)
 
     # ---------------- L6: forts, banner year odometer, camera pan east
-    SN(ST[6], 1.0)
+    SN(ST[6] - 0.05, 0.6)
+    SN(ST[6] + 1.4, 0.0)
     K(ST[6] - 0.05, 66.2, 57.7, 2.4, cut=True)
     K(WT(6, "Tyumen") + 0.3, TYUMEN[0], TYUMEN[1], 1.7)
     K(WT(6, "Tobolsk") + 0.3, TOBOLSK[0], TOBOLSK[1], 1.7)
     K(WT(6, "Tomsk") - 0.2, 77.0, 57.5, 5.0)
     K(WT(6, "Tomsk") + 0.9, TOMSK[0], TOMSK[1], 2.4)
     K(end(6) + 0.3, 88.0, 56.4, 3.2)
-    O("banner", ST[6] - 0.02, WT(6, "Tobolsk") - 0.05, pill=(1582, 1586), name="TYUMEN", icon="snow", roll=0.5)
-    O("banner", WT(6, "Tobolsk") - 0.05, WT(6, "Tomsk") - 0.05, pill=(1586, 1587), name="TOBOLSK", icon="snow", roll=0.4)
-    O("banner", WT(6, "Tomsk") - 0.05, ST[8], pill=(1587, 1604), name="TOMSK", icon="snow", roll=0.8)
+    O("banner", ST[6] - 0.02, WT(6, "Tobolsk") - 0.05, pill=(1582, 1586), name="TYUMEN", icon="sun", roll=0.5)
+    O("banner", WT(6, "Tobolsk") - 0.05, WT(6, "Tomsk") - 0.05, pill=(1586, 1587), name="TOBOLSK", icon="sun", roll=0.4)
+    O("banner", WT(6, "Tomsk") - 0.05, ST[8], pill=(1587, 1604), name="TOMSK", icon="sun", roll=0.8)
     O("fort", WT(6, "Tyumen") - 0.05, ST[7] + 0.5, lon=TYUMEN[0], lat=TYUMEN[1], txt="Tyumen", year=1586, size=56, side=-1)
     O("fort", WT(6, "Tobolsk") - 0.05, ST[7] + 0.5, lon=TOBOLSK[0], lat=TOBOLSK[1], txt="Tobolsk", year=1587, size=56, side=1)
     O("fort", WT(6, "Tomsk") - 0.05, ST[8] + 0.5, lon=TOMSK[0], lat=TOMSK[1], txt="Tomsk", year=1604, size=60, side=1)
@@ -83,8 +84,8 @@ def build(short, K, O, GK, GLOBE, SN, FLASH, WT, ST, D):
     K(WT(9, "Yakutsk") - 0.5, KRAS[0] + 3, KRAS[1] + 0.5, 3.6)
     K(WT(9, "Yakutsk") + 0.6, YAKUTSK[0], YAKUTSK[1], 3.0)
     K(end(9) + 0.2, YAKUTSK[0], YAKUTSK[1], 2.6)
-    O("banner", ST[9] - 0.02, WT(9, "Yakutsk") - 0.3, pill=(1604, 1628), name="KRASNOYARSK", icon="snow", roll=0.7)
-    O("banner", WT(9, "Yakutsk") - 0.3, ST[10], pill=(1628, 1632), name="YAKUTSK", icon="snow", roll=0.5)
+    O("banner", ST[9] - 0.02, WT(9, "Yakutsk") - 0.3, pill=(1604, 1628), name="KRASNOYARSK", icon="sun", roll=0.7)
+    O("banner", WT(9, "Yakutsk") - 0.3, ST[10], pill=(1628, 1632), name="YAKUTSK", icon="sun", roll=0.5)
     O("fort", WT(9, "Krasnoyarsk") - 0.05, WT(9, "Yakutsk") - 0.2, lon=KRAS[0], lat=KRAS[1], txt="Krasnoyarsk", year=1628, size=52, side=1)
     O("fort", WT(9, "Yakutsk") + 0.1, end(9) + 0.4, lon=YAKUTSK[0], lat=YAKUTSK[1], txt="Yakutsk", year=1632, size=58, side=1)
     O("rivers", ST[9], ST[10], names=["Yenisey", "Lena", "Angara"], w=6, step=1)
@@ -93,19 +94,20 @@ def build(short, K, O, GK, GLOBE, SN, FLASH, WT, ST, D):
     # ---------------- L10: brutal winter, thermometer to -60
     K(ST[10] - 0.05, YAKUTSK[0], YAKUTSK[1], 2.6)
     K(end(10) + 0.2, YAKUTSK[0] + 1.0, YAKUTSK[1] - 0.3, 3.2)
-    SN(ST[10], 1.0)
+    SN(ST[10] - 0.4, 0.0)
+    SN(ST[10] + 0.7, 1.0)
     FLASH.append(WT(10, "brutal") - 0.05)
     O("banner", ST[10] - 0.02, ST[11] - 0.05, pill="YAKUTIA", name="WINTER", icon="snow")
-    O("thermo", WT(10, "brutal") - 0.2, ST[11] - 0.05, x=170, y=900, v0=18, v1=-62, dur=2.0)
+    O("thermo", WT(10, "brutal") - 0.2, ST[11] - 0.05, x=170, y=500, v0=18, v1=-62, dur=2.0)
 
     # ---------------- L11: 1639 Moskvitin reaches the Sea of Okhotsk (cut, snow melts)
     K(ST[11] - 0.05, 141.0, 59.9, 5.2, cut=True)
     K(end(11) + 0.3, OKHOTSK[0], OKHOTSK[1], 2.6)
-    SN(ST[11], 1.0)
-    SN(WT(11, "Okhotsk") + 0.3, 0.15)
-    O("banner", ST[11] - 0.02, ST[12] + 1.0, pill=(1632, 1639), name="MOSKVITIN", icon="snow", roll=0.8)
+    SN(ST[11] - 0.05, 1.0)
+    SN(ST[11] + 1.2, 0.0)
+    O("banner", ST[11] - 0.02, ST[12] + 1.0, pill=(1632, 1639), name="MOSKVITIN", icon="sun", roll=0.8)
     O("arrow", ST[11] + 0.1, end(11) + 0.6, pts=PATH[12:], dur=3.0, w=14, keephead=True)
-    O("pin", WT(11, "Okhotsk") - 0.1, end(12) + 0.3, lon=OKHOTSK[0], lat=OKHOTSK[1], txt="Sea of Okhotsk", len=200, size=72)
+    O("pin", WT(11, "Okhotsk") - 0.1, WT(12, "four") - 0.15, lon=OKHOTSK[0], lat=OKHOTSK[1], txt="Sea of Okhotsk", len=200, size=72)
 
     # ---------------- L12: Pacific, HUD card with years after 1581, straight-line distance
     K(ST[12] - 0.05, OKHOTSK[0], OKHOTSK[1], 2.6)
@@ -119,7 +121,7 @@ def build(short, K, O, GK, GLOBE, SN, FLASH, WT, ST, D):
     # ---------------- L13: honest cost, calm pull-out
     K(ST[13] - 0.05, OKHOTSK[0] - 4.0, OKHOTSK[1] + 0.5, 5.0)
     K(end(13) + 0.3, OKHOTSK[0] - 8.0, OKHOTSK[1] + 1.0, 9.0)
-    SN(ST[13], 0.15)
+    SN(ST[13], 0.0)
     O("label", ST[13] + 0.1, end(13) + 0.3, x=540, y=700, txt="LOST LAND · FORCED TRIBUTE", font=OSWB, size=70, col=WHT)
 
     # ---------------- L14-L15: back to the globe, gold Russia (loop frame), 17.1M km2
