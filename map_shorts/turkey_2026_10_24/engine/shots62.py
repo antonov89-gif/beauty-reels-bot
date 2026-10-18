@@ -91,7 +91,7 @@ def build(short, S, O, WT, ST, D):
     S(ST[5] - 0.15, "sat", "NBR", 3.4, 1.1, ((44.6, 39.6), (33.0, 38.5)), 0, "cont")
     turkey(-1, 0.3)
     O("counter", 0, 4, "{:.0f} SEAS", 540, 470, WT(5, "Four") - 0.1, 0.6, 84, CYAN, BLK)
-    O("geolabel", 34.5, 43.4, "BLACK SEA", WT(5, "Black"), 54, CYAN)
+    O("geolabel", 36.0, 43.3, "BLACK SEA", WT(5, "Black"), 54, CYAN)
     O("geolabel", 31.0, 34.3, "MEDITERRANEAN", WT(5, "Mediterranean"), 50, CYAN)
     O("geolabel", 25.0, 38.3, "AEGEAN", WT(5, "Aegean"), 50, CYAN)
     O("geolabel", 28.0, 40.25, "MARMARA", WT(5, "Marmara"), 40, CYAN)
