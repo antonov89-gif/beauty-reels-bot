@@ -41,6 +41,11 @@ Main metrics (no per-video stayed/swiped data): views at 24 h and 72 h vs the ch
 - Master loudness −13.8 LUFS, peak 0.0 dBFS: slight clipping risk after YouTube re-encode; fix for next long videos (limiter at −1 dBTP).
 - Still manual: Related video links on the GTA Shorts, pinned comment.
 
+### 18.10 views-drop analysis (map_shorts/views_drop_analysis_2026-10-18.md)
+- Daily views follow the number of new Shorts (r = 0.91, 4–15.10). Per-video median did not fall. FACT.
+- 16–17.10: 2 of 5 Shorts got the feed push, 3 stuck at 68–134 (Real Life vs GTA, Pangaea, GTA Launch Day). All 3 published 18:47–23:25 MSK, vague or textless first frame. HYPOTHESIS (H2, H3); tested by the 10–16 MSK queue from 18.10.
+- Browse traffic 265/day (4–8.10) → 19/day (9–15.10). FACT.
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
