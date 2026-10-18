@@ -23,6 +23,10 @@
       "env": {
         "FIRECRAWL_API_KEY": "${FIRECRAWL_API_KEY}"
       }
+    },
+    "buffer": {
+      "type": "http",
+      "url": "https://mcp.buffer.com/mcp"
     }
   }
 }
