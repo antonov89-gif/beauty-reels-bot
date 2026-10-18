@@ -29,6 +29,11 @@ Main metrics (no per-video stayed/swiped data): views at 24 h and 72 h vs the ch
 - Nothing new published since 17.10 evening. Views: Thrillbilly 1,152, Snake Island 1,288, Kiribati 1,595, Moon 1,451, Yap 1,228, Palmerston 1,760; 16–17.10 GTA/ocean Shorts 64–129 (young). 28-day totals unchanged (25,367).
 - Metadata fix: Amazon bridges (N0U5OgVv7_4): removed another channel's name ("geography by geoff") and an irrelevant "united states" tag; set 10 relevant tags. FACT (vidIQ update confirmed).
 
+### 18.10 10:21 MSK check-in
+- Vice City vs REAL Miami (long, 8:27) published by Metricool at 10:04 MSK, public, title and tags as planned (nij4WjfDKeY). Cover cover_a.jpg set via vidIQ (status updated). FACT.
+- Madagascar 12:00 (first TikTok copy), GTA s3 14:00, GTA s1 15:00, Hannibal 16:00 still Pending at 09:58. Not yet verified as published.
+- Not done through the API: "Related video" link and the pinned comment (manual in Studio).
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
