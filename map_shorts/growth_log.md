@@ -16,6 +16,14 @@ Main metrics (no per-video stayed/swiped data): views at 24 h and 72 h vs the ch
 | Wallace audience | 99.9% non-subscribers; US 13.1%, IN 9.8%, PH 8.3% | S, FACT |
 | Visual pace vs views | Amazon ~2 events/10 s → 290 views; Wallace 7–8 → 2,302; Geo Spark (competitor) ~14 → 4.8M | V watch + count, HYPOTHESIS (correlation) |
 
+## 1a. Baseline snapshot 18.10.2026 03:00 MSK (vidIQ, before the scheduled batch starts)
+- 28 days (20.09–18.10): 25,367 views, engaged views 12,790 (50.4%), 465 likes, 21 comments, 31 subscribers, 9,197 min watched. FACT.
+- Shorts published 4–15.10 and at least 2 days old (n = 18): views min 290, median 1,245, mean 1,226, max 2,305 (Wallace). FACT.
+- Split by publish date: 4–7.10 (n = 10) median 1,095; 12–15.10 (n = 8) median 1,350. Different topics, ages and hours: HYPOTHESIS of a ~+20% drift, not proof.
+- Life curve (Wallace, hourly/daily data): 70% of lifetime views within the first 13 h, 88% by day 2, plateau from day 3–4. So 24 h views are the main metric, 72 h confirms. FACT (n = 1, check on more videos).
+- Shorts of 16–17.10 are too young: Thrillbilly 1,151 (38 h), Real Life vs GTA 119, ocean floor 62, GTA launch day 49. Panama (long, 6:34): 14 views.
+- Nothing from the scheduled batch has been published yet (first post 18.10 10:00 MSK).
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
