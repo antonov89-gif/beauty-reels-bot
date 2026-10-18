@@ -50,6 +50,21 @@ Production: Lumean voice ≈2.14 ₽ for all 7, Esri imagery and render free. Ru
 | 23.10 14:00 | Canberra | SYDNEY? / MELBOURNE? pins | | | |
 | 24.10 10:00 | Diomede | TODAY / TOMORROW pins | | | |
 
+
+### New batch 25–28.10 (engine61: E1 test group, >= 10 visual events / 10 s; first frame carries the answer, E2)
+Production: Lumean voice 2.02 RUB for all 7, Esri imagery and render free. Topics from Module 14 (`ideas_v3_2026-10-18.md`), demand from other channels' videos (FACT), our result UNVERIFIED.
+| Date | Video | Events/10 s | Hook (frame 0) | 24 h | 72 h | Principle |
+|---|---|---|---|---|---|---|
+| 25.10 10:00 | Point Roberts | 13.2 | peninsula, US + CA flags, "4 BORDER CROSSINGS" | | | |
+| 25.10 14:00 | France's longest border = Brazil | 13.1 | French Guiana highlighted, "~730 KM BORDER" | | | |
+| 26.10 10:00 | Peñón, 85 m border | 10.8 | rock + red border line, "BORDER: 85 m" | | | |
+| 26.10 14:00 | South Africa, 3 capitals | 13.4 | 3 pins + "3 CITIES · 1 COUNTRY" | | | |
+| 27.10 10:00 | Llívia | 10.5 | town, ES + FR flags, "1.6 KM FROM SPAIN" | | | |
+| 27.10 14:00 | Bir Tawil | 11.4 | desert, EG + SD flags, "0 COUNTRIES CLAIM IT" | | | |
+| 28.10 10:00 | Northwest Angle | 10.9 | NW Angle pin, US + CA flags, "~149 PEOPLE" | | | |
+
+Metrics here (no per-video stayed/swiped): 24 h / 72 h views vs the 21–24.10 batch median and vs channel median (~1.2k), vidIQ relative retention, likes and comments per 1k views. Baarle (21.10) is the one with a weak frame 0: if its 24 h views are below half of the 21–24.10 median, start border Shorts with the most unusual visual.
+
 ## 3. Experiment cards
 **E1 — Visual density.** HYPOTHESIS: ≥ 10 events/10 s and no pause > 2.5 s lower the swipe share. EVIDENCE: pace vs views above (correlation only). VARIABLE: number of pop-ups, zooms, highlights. CONTROL: batch 21–24.10 (6–7.7 events/10 s). METRIC: median of 24 h / 72 h views vs control, vidIQ relative retention. WINDOW: 7 Shorts per variant. LIMITATIONS: different topics, compare medians. RESULT: — . NEXT DECISION: — .
 
