@@ -1,0 +1,17 @@
+---
+name: video-dna-analyzer
+description: Use when the user sends a YouTube (or Shorts/TikTok) link and asks to analyse it ("Разбери по DNA", "анализ ролика", "разбери референс", camera/dynamics/hook breakdown) or wants a new video built from a reference. Forensic reverse engineering by the saved YOUTUBE VIDEO DNA ANALYZER V2.0 prompt.
+---
+
+# Video DNA Analyzer (V2.0)
+
+Full prompt: `map_shorts/prompts/video_dna_analyzer_v2.md`. Read it before every analysis and follow all 91 phases; the final answer ends with the 18 blocks of PHASE 91.
+
+## How to run it here
+1. **Data (PHASE 0):** vidIQ `vidiq_get_videos_by_ids` (stats, description), Nexlev `get_bulk_video_transcripts` (transcript with timecodes), vidIQ `vidiq_video_comments`, `vidiq_channel_videos` (channel context, outliers), thumbnail via `i.ytimg.com/vi/<id>/maxresdefault.jpg`.
+2. **Watching:** vidIQ `vidiq_watch_shortform_content` (10 credits) with a targeted prompt (0–10 s forensics by second, event counts, camera moves, colours/fonts, SFX per 10 s). One general pass plus one style pass is usually enough; Nexlev `watch_youtube_video_and_ask` only if vidIQ fails. The sandbox cannot open youtube.com directly.
+3. **Count, do not guess:** visual events per 10 s, cuts, words per minute (transcript words / duration), SFX per 10 s. Tag each claim VERIFIED / STRONG INFERENCE / HYPOTHESIS / UNKNOWN (PHASE 1). Never state retention, CTR or tools used without evidence.
+4. **Output:** save the report as `map_shorts/<project>/dna_<videoId>.md` (Russian, short sentences), commit and push. Reply in Russian with the summary and the 18 final blocks condensed.
+5. **Transfer:** when a new video is made from the reference, list the fixes to our video that come from the analysis (PHASE 72–75, 88–90) and apply them; copy principles, never phrases, characters, music or graphics (PHASE 89).
+
+Honesty rules of the channel still apply: hedge unconfirmed facts, label AI visuals, no copyrighted music.

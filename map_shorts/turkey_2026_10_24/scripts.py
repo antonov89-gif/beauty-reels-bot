@@ -16,11 +16,11 @@ SHORTS = {
             "But here's the real surprise. In Istanbul, Europe and Asia are only about seven hundred metres apart.",  # punch-in, ruler
             "Yes, people cross between two continents just to get to work.",                        # commute
             "In size, Turkey is massive, more than three hundred thousand square miles.",           # counter
-            "And do you know the most astonishing part? Turkey is actually a very mountainous country.",  # orange elevation
-            "Its highest peak, Mount Ararat, rises almost seventeen thousand feet, where Noah's Ark is said to have landed.",
-            "This very land was the heart of the Ottoman Empire, which ruled parts of three continents for over six hundred years.",  # world card, red
+            "And the most astonishing part? Turkey is a very mountainous country.",  # orange elevation
+            "Mount Ararat rises almost seventeen thousand feet, where Noah's Ark is said to have landed.",
+            "This land was the heart of the Ottoman Empire, which ruled parts of three continents for six centuries.",  # world card, red
             "Even today, English words like coffee, yogurt and kiosk came through Turkish.",        # speech bubbles
-            "And that is exactly why this bridge between two worlds still matters so much.",
+            "That is exactly why this bridge between two worlds still matters.",
         ],
         "facts": {
             "two continents": "East Thrace (Europe) ~3% of 783,562 km2, Anatolia (Asia) ~97% (FACT)",

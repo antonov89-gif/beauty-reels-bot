@@ -2,8 +2,9 @@
 K(t, lon, lat, span, cut=False)  camera keyframe (span = half-height in degrees of latitude); eased, span interpolated exponentially
 O(kind, t0, t1, ...)             overlay on the global timeline (see engine63.DRAW)
 TILT(t0, t1, ...)                tilted world card segment"""
-PURPLE, CYAN, YEL, WHT = (123, 31, 162), (0, 229, 255), (255, 230, 0), (255, 255, 255)
-SKY, MAGENTA, LIME, TEAL_F, AMBER, PINK = (2, 136, 209), (194, 24, 91), (205, 220, 57), (0, 191, 165), (255, 179, 0), (233, 30, 99)
+# colours sampled from the reference frame (thumbnail = frame at ~0:39): violet, magenta, cyan, lime
+PURPLE, CYAN, YEL, WHT = (112, 72, 255), (0, 229, 255), (255, 230, 0), (255, 255, 255)
+SKY, MAGENTA, LIME, TEAL_F, AMBER, PINK = (40, 196, 240), (214, 32, 228), (200, 240, 0), (0, 214, 170), (255, 170, 0), (255, 64, 129)
 SEA_T = (38, 198, 218)
 
 TR = (35.2, 39.2)                        # Turkey framing centre
@@ -25,7 +26,7 @@ def build(short, K, O, TILT, WT, ST, D):
     O("pin", 0.05, ST[1] + 0.1, lon=33.0, lat=39.6, txt="Turkey", len=230)
 
     # L1 purple glow + angry flexing character (the country is the body)
-    O("fill", ST[1], WT(8, "Istanbul") - 0.3, name="Turkey", col=PURPLE, alpha=0.7, glow=CYAN)
+    O("fill", ST[1], WT(8, "Istanbul") - 0.3, name="Turkey", col=PURPLE, alpha=0.7)
     O("char", WT(1, "actually") - 0.1, ST[2] + 0.05, mood="angry", arms=True, lon=FACE[0], lat=FACE[1], left=SH_L, right=SH_R, s=44, arm_s=100)
     K(ST[2] - 0.05, TR[0], TR[1], 20.0)
 
@@ -42,33 +43,33 @@ def build(short, K, O, TILT, WT, ST, D):
     # L4-L6 neighbours: one continuous camera, pans west -> east -> south
     K(WT(4, "west") - 0.15, TR[0], TR[1] - 0.2, 15.5)
     K(WT(4, "Bulgaria") + 0.3, 27.0, 40.6, 9.5)
-    O("fill", WT(4, "Greece") - 0.1, WT(8, "Istanbul") - 0.3, name="Greece", col=SKY, alpha=0.7, glow=CYAN)
+    O("fill", WT(4, "Greece") - 0.1, WT(8, "Istanbul") - 0.3, name="Greece", col=SKY, alpha=0.7)
     O("pin", WT(4, "Greece"), ST[5] + 0.3, lon=22.6, lat=39.9, txt="Greece", len=150)
-    O("fill", WT(4, "Bulgaria") - 0.1, WT(8, "Istanbul") - 0.3, name="Bulgaria", col=MAGENTA, alpha=0.75, glow=CYAN)
+    O("fill", WT(4, "Bulgaria") - 0.1, WT(8, "Istanbul") - 0.3, name="Bulgaria", col=MAGENTA, alpha=0.75)
     O("pin", WT(4, "Bulgaria"), ST[5] + 0.3, lon=25.3, lat=42.6, txt="Bulgaria", len=150)
 
     K(WT(5, "east") - 0.1, 27.0, 40.6, 9.5)
     K(WT(5, "Azerbaijan") + 0.2, 41.6, 40.3, 9.5)
     for word, name, col, lon, lat, ln in (("Georgia", "Georgia", LIME, 43.5, 42.0, 120), ("Armenia", "Armenia", AMBER, 44.9, 40.25, 200),
                                          ("Azerbaijan", "Azerbaijan", TEAL_F, 45.4, 39.3, 110), ("Iran", "Iran", PINK, 45.2, 37.4, 110)):
-        O("fill", WT(5, word) - 0.1, WT(8, "Istanbul") - 0.3, name=name, col=col, alpha=0.72, glow=CYAN)
+        O("fill", WT(5, word) - 0.1, WT(8, "Istanbul") - 0.3, name=name, col=col, alpha=0.72)
         O("pin", WT(5, word), ST[6] + 0.4, lon=lon, lat=lat, txt=name, len=ln)
 
     K(WT(6, "south") - 0.1, 41.6, 40.3, 9.5)
     K(WT(6, "Syria") + 0.2, 39.8, 36.9, 9.5)
-    O("fill", WT(6, "Iraq") - 0.1, WT(8, "Istanbul") - 0.3, name="Iraq", col=SKY, alpha=0.7, glow=CYAN)
+    O("fill", WT(6, "Iraq") - 0.1, WT(8, "Istanbul") - 0.3, name="Iraq", col=SKY, alpha=0.7)
     O("pin", WT(6, "Iraq"), ST[7] + 0.2, lon=43.6, lat=34.6, txt="Iraq", len=150)
-    O("fill", WT(6, "Syria") - 0.1, WT(8, "Istanbul") - 0.3, name="Syria", col=MAGENTA, alpha=0.72, glow=CYAN)
+    O("fill", WT(6, "Syria") - 0.1, WT(8, "Istanbul") - 0.3, name="Syria", col=MAGENTA, alpha=0.72)
     O("pin", WT(6, "Syria"), ST[7] + 0.2, lon=38.6, lat=35.3, txt="Syria", len=150)
 
     # L7 seas: turquoise fills + curved names, pan north then south-west
     K(WT(7, "north") - 0.1, 39.8, 36.9, 9.5)
     K(WT(7, "Black") + 0.3, 34.5, 42.4, 8.5)
-    O("fill", WT(7, "Black") - 0.1, ST[8] + 0.6, sea="Black Sea", col=SEA_T, alpha=0.38, glow=None, bw=2)
+    O("fill", WT(7, "Black") - 0.1, ST[8] + 0.6, sea="Black Sea", col=SEA_T, alpha=0.38, glow=None, bw=2, flat=True)
     O("curved", WT(7, "Black"), ST[8] + 0.6, lon=34.3, lat=43.25, txt="Black Sea", radius=1100, angle=-6, size=64)
     K(WT(7, "south") - 0.1, 34.5, 42.4, 8.5)
     K(WT(7, "Mediterranean") + 0.3, 31.5, 35.2, 8.5)
-    O("fill", WT(7, "Mediterranean") - 0.1, ST[8] + 0.6, sea="Mediterranean Sea", col=SEA_T, alpha=0.38, glow=None, bw=2)
+    O("fill", WT(7, "Mediterranean") - 0.1, ST[8] + 0.6, sea="Mediterranean Sea", col=SEA_T, alpha=0.38, glow=None, bw=2, flat=True)
     O("curved", WT(7, "Mediterranean"), ST[8] + 0.6, lon=31.0, lat=34.4, txt="Mediterranean Sea", radius=1000, angle=8, size=58)
 
     # L8 surprise: high-speed continuous push into the Bosphorus, ruler counting up
@@ -85,7 +86,7 @@ def build(short, K, O, TILT, WT, ST, D):
     K(ST[9] - 0.05, 29.061, 41.0874, 0.019)
     K(WT(9, "continents") + 0.2, 29.05, 41.1, 0.75)
     K(end(9) + 0.25, 29.05, 41.1, 0.7)
-    O("fill", WT(9, "cross") - 0.2, ST[10] + 0.5, name="Thrace10", col=(0, 184, 212), alpha=0.6, glow=CYAN)
+    O("fill", WT(9, "cross") - 0.2, ST[10] + 0.5, name="Thrace10", col=(0, 184, 212), alpha=0.6)
     O("fill", WT(9, "two") - 0.1, ST[10] + 0.5, name="Anatolia10", col=LIME, alpha=0.62, glow=YEL)
     O("pin", WT(9, "cross"), ST[10] + 0.3, lon=28.75, lat=41.25, txt="Europe", len=170)
     O("pin", WT(9, "continents") - 0.1, ST[10] + 0.3, lon=29.4, lat=40.95, txt="Asia", len=170)
@@ -95,7 +96,7 @@ def build(short, K, O, TILT, WT, ST, D):
     K(WT(10, "massive") + 0.2, TR[0], TR[1], 12.5)
     K(end(10) + 0.3, TR[0], TR[1], 12.0)
     O("fill", WT(10, "massive") - 0.3, WT(12, "Ararat") - 0.3, name="Turkey", col=PURPLE, alpha=0.7, glow=YEL, border=YEL, bw=4)
-    O("counter", WT(10, "more") - 0.1, end(10) + 0.3, lon=34.6, lat=39.0, v0=51074, v1=302535, fmt="{:,.0f} sq. miles", dur=1.4, size=70)
+    O("pin", WT(10, "Turkey") - 0.1, end(10) + 0.3, lon=34.6, lat=38.6, txt="Turkey", len=210, sub=(51074, 302535, "{:,.0f} sq. miles", 1.4), sub_t=WT(10, "more") - 0.1)
 
     # L11 mountains: orange elevation texture, pulsing glow
     K(WT(11, "Turkey") - 0.2, TR[0], TR[1], 12.0)
@@ -103,7 +104,7 @@ def build(short, K, O, TILT, WT, ST, D):
     O("elev", WT(11, "mountainous") - 0.4, WT(12, "Ararat") - 0.3, name="Turkey", min=1500)
 
     # L12 Ararat: continuous zoom to the peak, height counter
-    K(WT(12, "highest") - 0.1, 38.0, 39.3, 10.5)
+    K(ST[12] - 0.05, 38.0, 39.3, 10.5)
     K(WT(12, "Ararat") + 0.3, 44.298, 39.70, 0.32)
     K(end(12) + 0.3, 44.298, 39.70, 0.26)
     O("pin", WT(12, "Ararat") - 0.1, end(12) + 0.3, lon=44.2983, lat=39.7016, txt="Mount Ararat", len=200)
@@ -128,6 +129,6 @@ def build(short, K, O, TILT, WT, ST, D):
     # L15 loop: fly back to Turkey, happy face, flag fades in for the loop to frame 0
     K(ST[15] - 0.05, 23.9, 43.2, 7.0)
     K(end(15) + 0.2, TR[0], TR[1] + 0.3, 21.0)
-    O("fill", ST[15] + 0.4, end(15) + 0.4, name="Turkey", col=PURPLE, alpha=0.7, glow=CYAN)
+    O("fill", ST[15] + 0.4, end(15) + 0.4, name="Turkey", col=PURPLE, alpha=0.7)
     O("char", WT(15, "bridge") - 0.1, end(15) - 0.15, mood="happy", lon=FACE[0], lat=FACE[1], s=40)
     O("flagfill", end(15) - 0.15, end(15) + 2, name="Turkey", code="TR")

@@ -18,14 +18,14 @@ from scripts import SHORTS  # noqa: E402
 from sat63 import SP, size  # noqa: E402
 
 W, H, FPS = 1080, 1920, 30
-MB, MX, BANG = "assets/Montserrat-Black.ttf", "assets/Montserrat-ExtraBold.ttf", "assets/Bangers.ttf"
+MB, MX, BANG, OSW = "assets/Montserrat-Black.ttf", "assets/Montserrat-ExtraBold.ttf", "assets/Bangers.ttf", "assets/Oswald-Regular.ttf"
 WHT, BLK, YEL = (255, 255, 255), (0, 0, 0), (255, 214, 0)
 CYAN, PURPLE, GOLD = (0, 229, 255), (123, 31, 162), (255, 215, 0)
 
 SHORT = os.environ.get("SHORT", "turkey")
 LINES = SHORTS[SHORT]["lines"]
 TM = json.load(open(f"{SHORT}/timing.json"))
-LEAD = 0.3
+LEAD = 0.05                         # reference: voice starts on frame 0
 ST = [LEAD + s for s in TM["starts"]]
 D, TW = TM["D"], TM["T"]
 TOTAL = ST[-1] + D[-1] + 0.9
@@ -335,14 +335,43 @@ def flagfill(img, v, o, t):
 
 
 def cfill(img, v, o, t):
+    """Country highlight in the reference look: saturated colour that keeps the relief (colourise by luminance),
+    thin white border, optional glow. Seas stay translucent (o['flat'])."""
     a = fade(o, t, 0.3, 0.3)
     if a <= 0:
         return
     rings = COUNTRY[o["name"]] if "name" in o else SEA[o["sea"]]
-    lay = fill_layer(v, rings, o["col"], o.get("alpha", 0.7), o.get("glow", CYAN), o.get("border", WHT), o.get("bw", 3))
-    if a < 1:
-        lay.putalpha(lay.getchannel("A").point(lambda q: int(q * a)))
-    img.alpha_composite(lay)
+    if o.get("flat"):
+        lay = fill_layer(v, rings, o["col"], o.get("alpha", 0.4), o.get("glow"), o.get("border", WHT), o.get("bw", 2))
+        if a < 1:
+            lay.putalpha(lay.getchannel("A").point(lambda q: int(q * a)))
+        img.alpha_composite(lay)
+        return
+    m = Image.new("L", (v.w // 2, v.h // 2), 0)
+    dm = ImageDraw.Draw(m)
+    for r in rings_xy(v, rings, 0.5):
+        dm.polygon(r, fill=255)
+    bb = m.getbbox()
+    if bb:
+        x0, y0, x1, y1 = bb[0] * 2, bb[1] * 2, min(v.w, bb[2] * 2), min(v.h, bb[3] * 2)
+        sub = np.asarray(img.crop((x0, y0, x1, y1)).convert("RGB")).astype(np.float32)
+        lum = (0.3 * sub[..., 0] + 0.59 * sub[..., 1] + 0.11 * sub[..., 2]) / 255.0
+        lum = (lum - lum.mean()) * 1.6 + 0.5
+        col = np.array(o["col"], np.float32)
+        out = np.clip(col * (0.45 + 0.85 * lum[..., None]), 0, 255)
+        mk = np.asarray(m.resize((v.w, v.h), Image.BILINEAR).crop((x0, y0, x1, y1))).astype(np.float32) / 255.0
+        lay = np.dstack([out, mk * 255 * o.get("alpha", 0.88) * a]).astype(np.uint8)
+        img.alpha_composite(Image.fromarray(lay, "RGBA"), (x0, y0))
+    glow = o.get("glow")
+    d = ImageDraw.Draw(img)
+    if glow:
+        g = Image.new("RGBA", (v.w // 4, v.h // 4), (0, 0, 0, 0))
+        dg = ImageDraw.Draw(g)
+        for r in rings_xy(v, rings, 0.25):
+            dg.line(r + [r[0]], fill=glow + (int(220 * a),), width=3, joint="curve")
+        img.alpha_composite(g.filter(ImageFilter.GaussianBlur(2.5)).resize((v.w, v.h), Image.BILINEAR))
+    for r in rings_xy(v, rings):
+        d.line(r + [r[0]], fill=o.get("border", WHT) + (int(255 * a),), width=o.get("bw", 3), joint="curve")
 
 
 def elev(img, v, o, t):
@@ -385,9 +414,15 @@ def pin(img, v, o, t):
     d = ImageDraw.Draw(img)
     d.line((X + 2, Y + 2, X + 2, Y - L + 2), fill=(0, 0, 0, int(150 * a)), width=4)
     d.line((X, Y, X, Y - L), fill=WHT + (int(255 * a),), width=4)
-    d.ellipse((X - 8, Y - 8, X + 8, Y + 8), fill=WHT + (int(255 * a),), outline=BLK + (int(200 * a),), width=2)
-    lay = text_layer(o["txt"], font(MX, o.get("size", 80)), WHT, 6, True, a)
-    put(img, lay, X, Y - L - lay.height / 2 + 26, k)
+    if not o.get("sub"):
+        d.ellipse((X - 8, Y - 8, X + 8, Y + 8), fill=WHT + (int(255 * a),), outline=BLK + (int(200 * a),), width=2)
+    lay = text_layer(o["txt"], font(OSW, o.get("size", 78)), WHT, 2, True, a)
+    put(img, lay, X, Y - L - lay.height / 2 + 24, k)
+    if o.get("sub") and t >= o.get("sub_t", o["t0"]):
+        v0, v1, fmt, dur = o["sub"]
+        val = v0 + (v1 - v0) * clamp((t - o.get("sub_t", o["t0"])) / dur) ** 0.6
+        sl = text_layer(fmt.format(val), font(OSW, o.get("size", 78) * 0.85), WHT, 2, True, a)
+        put(img, sl, X, Y + sl.height / 2 - 14, back((t - o.get("sub_t", o["t0"])) / 0.3), -4)
 
 
 def curved(img, v, o, t):
@@ -453,7 +488,8 @@ def label(img, v, o, t):
         return
     a = clamp((o["t1"] - t) / 0.25)
     X, Y = v.xy(o["lon"], o["lat"]) if "lon" in o else (o["x"], o["y"])
-    lay = text_layer(o["txt"], fit(o.get("font", MX), o.get("size", 60), o["txt"], 1000), o.get("col", WHT), 5, True, a)
+    fnt = o.get("font", OSW)
+    lay = text_layer(o["txt"], fit(fnt, o.get("size", 60) * (1.2 if fnt == OSW else 1.0), o["txt"], 1000), o.get("col", WHT), 2 if fnt == OSW else 5, True, a)
     put(img, lay, X, Y, back((t - o["t0"]) / 0.3))
 
 
@@ -708,7 +744,7 @@ for _i, _line in enumerate(LINES):
     _chunks, _cur = [], []
     for _j, _w in enumerate(_ws):
         _cur.append(_j)
-        if len(_cur) == 3 or _w[-1] in ",.?!:" or _j == len(_ws) - 1:
+        if len(_cur) == 2 or _w[-1] in ",.?!:" or _j == len(_ws) - 1 or len(_w) >= 9:
             _chunks.append(_cur)
             _cur = []
     for _c in _chunks:
@@ -727,7 +763,7 @@ def caption(img, t):
                 cur = j
         chunk = next(c for (ii, jj, c) in WORDS if ii == i and jj == cur)
         txts = [ws[j].upper().strip() for j in chunk]
-        f = fit(MB, 100, " ".join(txts), 1000)
+        f = fit(MB, 72, " ".join(txts), 960)
         sp = f.getlength(" ") * 1.7
         widths = [f.getlength(x) * 1.04 for x in txts]
         x = 540 - (sum(widths) + sp * (len(txts) - 1)) / 2
@@ -737,8 +773,8 @@ def caption(img, t):
             if on:
                 k = 1.0 + 0.15 * clamp(1 - (t - ST[i] - TW[i][j]) / 0.12) + 0.0
                 k = max(1.0, min(1.15, 1.15 - 0.15 * clamp((t - ST[i] - TW[i][j] - 0.12) / 0.2)))
-            lay = text_layer(txt, f, YEL if on else WHT, 8, True)
-            put(img, lay, x + wd / 2, 1344, k)
+            lay = text_layer(txt, f, YEL if on else WHT, 7, True)
+            put(img, lay, x + wd / 2, 1382, k)
             x += wd + sp
         return
 

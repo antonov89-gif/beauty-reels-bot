@@ -143,15 +143,15 @@ def build():
             continue
         ratio = max(a[3], b[3]) / min(a[3], b[3])
         dist = abs(a[1] - b[1]) + abs(a[2] - b[2])
-        if ratio > 1.6 or dist > 3:
+        if ratio > 4 or dist > 8:
             place(sfx, whoosh(min(0.9, max(0.35, (b[0] - a[0]) * 0.6))), a[0] + 0.05, 0.45 if ratio < 20 else 0.7)
     nb = 0
     for o in V.OV:
         k, t0 = o["kind"], o["t0"]
         if t0 < 0:
             continue
-        if k in ("pin", "label", "fill", "curved"):
-            place(sfx, pop(), t0, 0.35 if k == "fill" else 0.45)
+        if k in ("pin", "label"):                     # reference: ~2 SFX per 10 s, pops on labels only
+            place(sfx, pop(), t0, 0.45)
         elif k == "char":
             place(sfx, pop(1.3), t0, 0.5)
             if o.get("arms"):
