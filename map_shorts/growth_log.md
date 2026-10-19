@@ -62,6 +62,23 @@ Main metrics (no per-video stayed/swiped data): views at 24 h and 72 h vs the ch
 - Source: Metricool analytics (brand 7486051), connector `posts` (TKPO07 views, TKPO08-10 likes/comments/shares, TKPO11 reach, TKPO13 full-watch rate, TKPO15 avg watch time, TKPO16 For You share) and `evolution` (TKEV02/07/08). Routine "Mr. Buck monitoring" (9:56 and 21:56 MSK) now reports a TikTok block and, once a day, runs a niche outlier search (vidIQ, 5 credits).
 - First read (1-19.10): Metricool sees only 2 TikTok videos, both of 16.10 (gta6_ep2_tg 3 views, gta6_real_places_chat 0 views), followers 0, new followers 0. None of the Metricool-published TikTok copies of 18.10 (Madagascar, GTA s3, GTA s1, Hannibal) appear. DATA MISSING: the API may lag, or the account is personal/limited. Check on the 21:56 run; if still missing, the user opens TikTok Studio analytics or connects a Business account. FACT for what is visible, cause UNKNOWN.
 
+### Monitoring 19.10 09:57 MSK (vidIQ + Metricool TikTok)
+**YouTube (vidIQ public counts / Analytics 16-19.10).**
+- 18.10 uploads at ~20 h: GTA "slogan" 450 views (7 likes), GTA flea market 70, Hannibal 15, Madagascar 18, Vice City long 3. Earlier: GTA launch-day 537 (48 likes), Thrillbilly 1,241, Snake Island 1,304 (the only Short with 76% avg view and 6 subs in 3 days).
+- Analytics 16-19.10: Shorts feed 3,650 of ~3,850 views (95%), 1,716 engaged (47% vs baseline ~52%), avg view 67.5% (baseline 62%), search 119. Top: Snake Island 1,237 (610 engaged, 76% viewed, +6 subs), Thrillbilly 1,181 (441 engaged, 35.9% viewed, 0 subs), moon bags 622 (67%, +3 subs).
+- Reading: the two geography Shorts of 18.10 (Madagascar 18, Hannibal 15) got no feed push while the GTA Shorts of the same day did (450, 70). Consistent with H6 (the feed now treats the channel as a GTA/gaming audience), not proof; the geography-only queue from 19.10 is the test. Thrillbilly (GTA) has the weakest retention of the top group (35.9%): views without subscribers.
+**TikTok (Metricool, 12-19.10).** The 18.10 copies are visible now (earlier DATA MISSING was lag). Account views on 18.10: 1,558. Times in Metricool are UTC.
+| Video (18.10) | Dur | Views | Likes | Likes/1k views | Comments/shares |
+|---|---|---|---|---|---|
+| Hannibal elephants | 62 s | 497 | 20 | 40 | 0 / 0 |
+| Madagascar no lions | 39 s | 443 | 13 | 29 | 0 / 0 |
+| GTA slogan (cruise capital) | 33 s | 433 | 14 | 32 | 0 / 0 |
+| GTA flea market (Opa-locka) | 32 s | 185 | 2 | 11 | 0 / 0 |
+- Median of the TikTok copies of the last 7 days (6 videos incl. two old ones with 3 and 0 views) = ~309; nothing reaches 3x (~930), so no video has "taken off" yet. Fastest: Hannibal (497 in ~6 h after posting). Highest interest by likes per 1k: Hannibal (40), then GTA slogan (32) and Madagascar (29). Weakest: Opa-locka (11).
+- Observation (FACT): on TikTok geography/history (Hannibal 497, Madagascar 443) did as well as GTA (433), while on YouTube the same two geography Shorts got 15-18 views. So the TikTok audience is not GTA-biased; the YouTube feed is. Hypothesis only, n = 4, 6 h of data per video. The longest (62 s) history Short leads on both views and likes.
+- DATA MISSING: TKPO13/15/16/21 (full-watch rate, avg watch time, For You share, search) are empty for every post; comments and shares are 0. The 17.10 launch-day Short and the 18.10 Vice City long have no TikTok copy in Metricool. Outlier search runs in the evening run only.
+- Not touched: tag "space documentary / asia / europe" on the ocean-floor Short (hUNAthRmw1w) looks misleading; no publication.md for it, left for the user to confirm.
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
