@@ -121,6 +121,9 @@ Older: Madagascar 35, Hannibal 19, GTA slogan 478, GTA flea 80, Vice City long 6
 - Not copied: content. Use as a pattern for TikTok only: our TikTok copies are 32-85 s, so length is not the gap; frame-0 question/contrast text is.
 - Not touched: the misleading tags of the ocean-floor Short (hUNAthRmw1w: "space documentary", "asia", "europe") still wait for the user's OK.
 
+### Russia Short cover changed 19.10 ~23:15 MSK (user request)
+New YouTube cover on uonb7oq7ttw: question "HOW DID RUSSIA GET SO BIG?" + route globe with "58 YEARS" (frame from the video, 1080x1920). Set via vidIQ (5 credits). The Short had 5 views at ~6 h before the change; compare 24 h views (20.10 ~16:00) with this note, n = 1, no A/B (covers show on the channel page and in search, not in the Shorts feed). TikTok cover not changed.
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
