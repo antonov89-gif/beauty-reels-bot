@@ -97,6 +97,30 @@ Main metrics (no per-video stayed/swiped data): views at 24 h and 72 h vs the ch
 - Likes per 1k are meaningless for videos under 100 views (n < 5 likes). Coin's 2 likes/1k on 494 views means weak liking, probably passive replays: watch retention and subscribers before copying it.
 - Next: Libya and coin at 24 h (20.10 15:00), Russia (E6) at 20.10 17:00. Test success remains: at least 2 of the next 5 geography Shorts near 1k at 24 h.
 
+### Monitoring 19.10 22:00 MSK (vidIQ + Metricool + niche outlier search; ~20 vidIQ credits)
+**YouTube (vidIQ public counts; Analytics for 17-19.10 returned no rows, data lag, so no retention/traffic split this run).**
+| Video (19.10) | Age | Views | % of 1,245 median | Likes |
+|---|---|---|---|---|
+| Libya river (68 s) | ~7 h | 1,075 | 86% | 13 |
+| Euro coin loop (25 s) | ~8 h | 1,012 | 81% | 5 |
+| Suez / Moon (37 s) | ~10 h | 3 | 0.2% | 1 |
+| Russia 58 years (85 s, E6) | ~6 h | 5 | 0.4% | 1 |
+Older: Madagascar 35, Hannibal 19, GTA slogan 478, GTA flea 80, Vice City long 6, launch-day 772.
+- FACT: two non-GTA Shorts (Libya, coin) took a feed push of ~1k views in 7-8 h, while two others posted the same day (Suez, Russia) got a handful. So "geography = no push" is wrong, and "GTA = push" is not the rule either (GTA flea 80). H6 as "GTA audience poisons geography" is weakened further; the difference is per-video. Not yet explained.
+- HYPOTHESIS (n = 4, unproven): Libya and coin have a strong hook question / visual loop; Suez has a long title statement with emoji, Russia opens on a globe with a number. Need retention (vidIQ relative retention, 24 h) before any conclusion. Russia (E6) has a weak start (5 views at ~6 h): judge at 24 h on 20.10 ~16:00.
+**TikTok (Metricool 12-19.10).** Numbers identical to the 09:57 run (Hannibal 497, Madagascar 443, GTA slogan 433, GTA flea 185; account views 18.10: 1,558). DATA MISSING for every 19.10 post (GTA s2 10:00, Suez, coin, Libya, Russia): Metricool shows none of them yet, probably sync lag (the 18.10 copies appeared ~half a day later). TKPO13/15/16/21 empty again. No video above the 3x-median threshold.
+**Niche outliers (vidIQ, TikTok, last 7 days, English geography/map/history, 5 results).** 627k-1.3M views, 10-50x creator median:
+| Creator | Views | x median | Length | Format |
+|---|---|---|---|---|
+| theglobefacts | 628k | 10x | 79 s | "oldest country wins" map battle simulation |
+| rilttoril | 768k | 50x | 162 s | straight line drawn across the map, countries highlighted |
+| 3dspectra | 1.3M | 13x | 161 s | 3D explainer, Great Wall |
+| kirkiimad | 660k | 35x | 5 s | green screen, "why no bridge Italy-Albania" |
+| historyproductions.v2 | 858k | 10x | 35 s | map animation + archive footage, Korean War |
+- Repeating: (1) a question or contrast as on-screen text on frame 0 (4 of 5); (2) music or voice from the first second, no intro (5 of 5); (3) a visible map device, not a still: moving line, VS graphic, front-line animation (4 of 5); (4) high cut rate (3 of 5 "fast"); (5) 3 of 5 are 79-162 s, only one under 40 s. Instagram twin results (Italy closest-neighbour map, Canada-USA border oddities, "cities on a vanished beach") use the same recipe: a counter-intuitive anomaly with one map device.
+- Not copied: content. Use as a pattern for TikTok only: our TikTok copies are 32-85 s, so length is not the gap; frame-0 question/contrast text is.
+- Not touched: the misleading tags of the ocean-floor Short (hUNAthRmw1w: "space documentary", "asia", "europe") still wait for the user's OK.
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
