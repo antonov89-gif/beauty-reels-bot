@@ -79,6 +79,24 @@ Main metrics (no per-video stayed/swiped data): views at 24 h and 72 h vs the ch
 - DATA MISSING: TKPO13/15/16/21 (full-watch rate, avg watch time, For You share, search) are empty for every post; comments and shares are 0. The 17.10 launch-day Short and the 18.10 Vice City long have no TikTok copy in Metricool. Outlier search runs in the evening run only.
 - Not touched: tag "space documentary / asia / europe" on the ocean-floor Short (hUNAthRmw1w) looks misleading; no publication.md for it, left for the user to confirm.
 
+### Checkpoint 1: 19.10 17:00 MSK (vidIQ public counts; baseline median 1,245)
+| Video | Published | Age | Views | % of median | Likes/1k | Comments/1k |
+|---|---|---|---|---|---|---|
+| Madagascar no lions | 18.10 12:03 | ~29 h | 20 | 1.6% | 200 | 0 |
+| Hannibal elephants | 18.10 16:04 | ~25 h | 18 | 1.4% | 167 | 56 |
+| GTA slogan (s3) | 18.10 15:03 | ~26 h | 470 | 38% | 19 | 0 |
+| GTA flea market (s1) | 18.10 14:03 | ~27 h | 76 | 6% | 53 | 0 |
+| Vice City vs Miami (long) | 18.10 10:04 | ~31 h | 3 | n/a (long) | 667 | 0 |
+| Euro coin zoom loop (25 s) | 19.10 14:03 | ~3 h | 494 | 40% in 3 h | 2 | 0 |
+| Libya river | 19.10 15:03 | ~2 h | 72 | 6% | 56 | 0 |
+| Suez / Moon | 19.10 12:03 | ~5 h | 2 | 0.2% | 0 | 0 |
+| Russia 58 years | 19.10 16:05 | <1 h | 1 | - | - | - |
+(Later-than-listed: GTA launch-day 17.10 reached 701 views, 80 likes/1k, 10 comments/1k at ~70 h; Thrillbilly 1,244.)
+- FACT: none of the 18.10 Shorts reached the 1,245 median in 24 h. Both geography/history Shorts (Madagascar 20, Hannibal 18) stayed under 2% of it; GTA s3 reached 38%, GTA s1 6%.
+- FACT: the coin loop (non-GTA, 25 s, seamless loop) collected 494 views in ~3 h, while Suez, published 2 h earlier, stands at 2 views. HYPOTHESIS (n = 1): the feed push depends on the format/runtime (short loop with replays) rather than only on "GTA vs geography", so H6 is narrowed further; the geography-only test is not yet decisive (Suez 2, Libya 72 so far).
+- Likes per 1k are meaningless for videos under 100 views (n < 5 likes). Coin's 2 likes/1k on 494 views means weak liking, probably passive replays: watch retention and subscribers before copying it.
+- Next: Libya and coin at 24 h (20.10 15:00), Russia (E6) at 20.10 17:00. Test success remains: at least 2 of the next 5 geography Shorts near 1k at 24 h.
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
