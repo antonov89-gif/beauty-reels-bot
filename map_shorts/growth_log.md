@@ -140,6 +140,39 @@ New YouTube cover on uonb7oq7ttw: question "HOW DID RUSSIA GET SO BIG?" + route 
 **TikTok (Metricool 13-20.10).** Identical to 19.10 (Hannibal 497, Madagascar 443, GTA slogan 433, GTA flea 185). DATA MISSING for all 19.10 posts (GTA s2, Suez, coin, Libya, Russia), now >24 h after posting; Metricool analytics ends 18.10 (TKEV02 has no 19.10 row), so this is a reporting lag of at least a day, not missing posts. TKPO13/15/16/21 empty, comments/shares 0. If still absent on 21.10, ask the user for TikTok Studio numbers or a Business-account connection.
 - Not touched: ocean-floor Short tags still wait for the user's OK. Pinned comments: vidIQ cannot post or pin (reply only); three draft texts given to the user to post manually.
 
+### Monitoring 20.10 22:00 MSK (vidIQ + Metricool + niche outliers; ~15 vidIQ credits)
+**YouTube (vidIQ public counts; baseline median 1,245; Analytics for 18-20.10 still returns no rows, so no retention/traffic split).**
+| Video | Published (MSK) | Age | Views | % of median |
+|---|---|---|---|---|
+| Aral Sea | 20.10 12:03 | ~10 h | 1,713 | 138% (best of the week) |
+| $100B Short | 20.10 16:03 | ~6 h | 975 | 78% and rising |
+| Gold cube | 20.10 14:02 | ~8 h | 437 | 35% |
+| $100B long (13 min) | 20.10 15:07 | ~7 h | 1 | n/a |
+| Russia 58 years (new cover 19.10 ~23:15) | 19.10 16:05 | ~30 h | 1,057 | 85% (was 23 at 09:57 today) |
+| Libya | 19.10 15:03 | ~31 h | 1,261 | 101% |
+| Euro coin loop | 19.10 14:03 | ~32 h | 1,043 | 84% |
+| Suez / Moon | 19.10 12:03 | ~34 h | 10 | 0.8% |
+- FACT: since GTA left YouTube (19.10), 4 of 7 non-GTA Shorts reached ~1k views (coin, Libya, Russia, Aral); the $100B Short is at 975 after 6 h; gold cube 437; Suez 10 is the one dud. The H6 test criterion (>= 2 of the next 5 geography Shorts near 1k at 24 h) is MET. The 18.10 geography/history Shorts that ran alongside GTA (Madagascar 44, Hannibal 65) got no push. Consistent with H6 ("GTA/gaming audience on the YouTube feed suppresses non-GTA Shorts"), n = 7 vs 2, not proof. Decision: GTA stays off YouTube (TikTok only) for now; re-test with one GTA Short only after >= 10 more non-GTA Shorts, one at a time.
+- E6 (Russia): rose from 23 to 1,057 views within one day, 85% of the median. The rise began after the cover change (19.10 ~23:15) but the push could equally be the normal delayed one (Libya/coin also surged); correlation only, n = 1, no A/B. Verdict: E6 is at the level of the other geography Shorts, not above. Not enough to prefer the dense-globe system over the others. E5 Turkey (24.10) will decide.
+- Long video $100B has 1 view at 7 h: expected for a 13-min long with no feed push; check at 72 h, do not publish another long this week (rule: <= 1 per week).
+**TikTok (Metricool 14-20.10): 19.10 posts are visible now (lag was ~1.5 days).** Account views: 18.10 1,702; 19.10 1,036; 20.10 66 so far (partial day).
+| Video | Dur | Views | Likes/1k | Shares |
+|---|---|---|---|---|
+| Hannibal (18.10) | 62 s | 545 | 37 | 0 |
+| Madagascar (18.10) | 39 s | 465 | 28 | 0 |
+| GTA slogan (18.10) | 33 s | 465 | 30 | 0 |
+| Libya (19.10) | 67 s | 346 | 43 | 0 |
+| Euro coin (19.10) | 24 s | 299 | 27 | 0 |
+| Russia (19.10) | 84 s | 282 | 35 | 1 |
+| GTA flea (18.10) | 32 s | 227 | 9 | 0 |
+| Suez (19.10) | 36 s | 109 | 9 | 0 |
+| GTA "Six places" ep.2 (20.10 10:02) | 85 s | 66 | 0 | 0 |
+| GTA Tequesta (19.10 10:02) | 46 s | 0 | - | 0 |
+- Median of the 10 recent TikTok copies = ~290; 3x = ~870; nobody "took off". Highest interest by likes per 1k: Libya (43), Hannibal (37), Russia (35, the only share). On TikTok the long map stories (62-84 s) lead on views and likes; the 24 s loop is mid; the 85 s GTA quiz is weak (66 in ~12 h). Account views fell from 1,702 (18.10) to 1,036 (19.10).
+- Still DATA MISSING: 20.10 12:00 Aral, 14:00 gold cube, 16:00 $100B Short (not yet in Metricool); TKPO13/15/16/21 empty; comments 0.
+**Niche outliers (vidIQ, TikTok, last 7 days, 5 new creators, excluding yesterday's).** 617k-1.3M views, 4-308x creator median: Romans-name-your-country map (68 s), window tax 3D (32 s), Nepal meme green screen (9 s), "strangers redrew US borders" screen recording (126 s), top-producing countries list (74 s). Instagram: Italy nearest-neighbour map, Canada-US border, Amazon scale, Fall Line cities.
+- Repeating over two days of searches (10 outliers): (1) the hook addresses the viewer or their own place ("your country", "from where you stand", "which neighbour", "every state border strangers drew"): 5 of 10; (2) a question or contrast as text on frame 0 (7 of 10); (3) sound from the first second (10 of 10); (4) one visible map device (zoom, line, circle with arrows); (5) lengths mostly 32-126 s, only 2 of 10 under 35 s. Content is not copied. Test idea for TikTok: a second-person hook ("Which country is closest to yours?") with a question on frame 0, 40-70 s.
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
