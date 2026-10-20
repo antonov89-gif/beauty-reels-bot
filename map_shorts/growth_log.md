@@ -173,6 +173,9 @@ New YouTube cover on uonb7oq7ttw: question "HOW DID RUSSIA GET SO BIG?" + route 
 **Niche outliers (vidIQ, TikTok, last 7 days, 5 new creators, excluding yesterday's).** 617k-1.3M views, 4-308x creator median: Romans-name-your-country map (68 s), window tax 3D (32 s), Nepal meme green screen (9 s), "strangers redrew US borders" screen recording (126 s), top-producing countries list (74 s). Instagram: Italy nearest-neighbour map, Canada-US border, Amazon scale, Fall Line cities.
 - Repeating over two days of searches (10 outliers): (1) the hook addresses the viewer or their own place ("your country", "from where you stand", "which neighbour", "every state border strangers drew"): 5 of 10; (2) a question or contrast as text on frame 0 (7 of 10); (3) sound from the first second (10 of 10); (4) one visible map device (zoom, line, circle with arrows); (5) lengths mostly 32-126 s, only 2 of 10 under 35 s. Content is not copied. Test idea for TikTok: a second-person hook ("Which country is closest to yours?") with a question on frame 0, 40-70 s.
 
+### Decision 20.10 ~22:30 MSK (user)
+GTA Shorts stay in the TikTok queue as planned (user: "Для тик ток пусть будут"). No pause. GTA stays off YouTube until 19.11 (E4 rule). Re-check TikTok GTA vs geography medians on the next monitoring runs (E4 TikTok: GTA ~146 vs geography ~322, 45%).
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
