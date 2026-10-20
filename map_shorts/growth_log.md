@@ -124,6 +124,22 @@ Older: Madagascar 35, Hannibal 19, GTA slogan 478, GTA flea 80, Vice City long 6
 ### Russia Short cover changed 19.10 ~23:15 MSK (user request)
 New YouTube cover on uonb7oq7ttw: question "HOW DID RUSSIA GET SO BIG?" + route globe with "58 YEARS" (frame from the video, 1080x1920). Set via vidIQ (5 credits). The Short had 5 views at ~6 h before the change; compare 24 h views (20.10 ~16:00) with this note, n = 1, no A/B (covers show on the channel page and in search, not in the Shorts feed). TikTok cover not changed.
 
+### Monitoring 20.10 09:57 MSK (vidIQ + Metricool; ~15 vidIQ credits)
+**YouTube (vidIQ public counts; baseline median 1,245).** Analytics for 17-20.10 lags (only 390 Shorts-feed views in the window, data ends ~18.10), so no retention/traffic split this run.
+| Video | Age | Views | % of median | Change since 22:00 |
+|---|---|---|---|---|
+| Libya river (19.10 15:03) | ~19 h | 1,244 | 100% | +169 |
+| Euro coin loop (19.10 14:03) | ~20 h | 1,032 | 83% | +20 |
+| Russia 58 years, new cover from ~23:15 (19.10 16:05) | ~18 h | 23 | 1.8% | +18 |
+| Suez / Moon (19.10 12:03) | ~22 h | 8 | 0.6% | +5 |
+| Madagascar / Hannibal (18.10) | ~45 h | 39 / 21 | 3% / 2% | +4 / +2 |
+| GTA slogan / flea (18.10) | ~45 h | 493 / 79 | 40% / 6% | +15 / -1 |
+- FACT: Libya and the coin loop each got a ~7-8 h push (about 1k views) and then flattened; Libya ended exactly at the median, coin at 83%. Neither exceeded the median, so by the E-rule they are "median, not growth". Suez and Russia got no push.
+- FACT: Russia (E6) at ~18 h has 23 views, 1.8% of the median. The 18 views gained since the cover change (~23:15) are not attributable to it (n = 1, no A/B, covers sit on the channel page/search, not in the feed). E6 verdict at 24 h (20.10 ~16:00); if still below 5% of the median, the dense-globe system is rejected for the Shorts feed.
+- H6 status: 2 of 4 geography Shorts of 19.10 got a push (Libya, coin), none of the geography/history Shorts of 18.10 (Madagascar, Hannibal). Test criterion (2 of the next 5 near 1k at 24 h) is currently 2 of 4 close, so provisional "partly met"; not enough to conclude. Judge after Aral (12:00), gold cube (14:00), $100B Shorts today.
+**TikTok (Metricool 13-20.10).** Identical to 19.10 (Hannibal 497, Madagascar 443, GTA slogan 433, GTA flea 185). DATA MISSING for all 19.10 posts (GTA s2, Suez, coin, Libya, Russia), now >24 h after posting; Metricool analytics ends 18.10 (TKEV02 has no 19.10 row), so this is a reporting lag of at least a day, not missing posts. TKPO13/15/16/21 empty, comments/shares 0. If still absent on 21.10, ask the user for TikTok Studio numbers or a Business-account connection.
+- Not touched: ocean-floor Short tags still wait for the user's OK. Pinned comments: vidIQ cannot post or pin (reply only); three draft texts given to the user to post manually.
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
