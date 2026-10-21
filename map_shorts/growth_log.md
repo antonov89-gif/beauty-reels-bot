@@ -223,6 +223,9 @@ Report: `map_shorts/ref_geoglobetales_2026_10_22/dna_XpYfmHoPEAs.md` (cost: ~25 
 ### Time zones Short (E7, structure of the GeoGlobeTales DNA report) - production 22.10
 Voice: Lumean (ElevenLabs), 0.46 RUB (user approved the price), 67.7 s, 175 words = ~155 wpm; transcribed back with faster-whisper small.en: 175/175 words, 96% match (only digit-vs-word differences and "Wallis" heard as "Wallace", accepted). Engine65 (copy of engine64 + new overlays "chips" and "ring"); imagery Esri (WLD, FRA, MON) + Natural Earth. Render in /home/claude/v62 (not in the repo). Source: `map_shorts/timezones_2026_10_22/` (scripts.py, engine65/, timing65.json, recording_brief.md for the human-voice option, not used).
 
+**E7 card - time zones Short (structure and look of the GeoGlobeTales reference, our topic).** HYPOTHESIS: question hook + obvious answer -> "wrong" + one retracted absurd line (Monaco) + answer at the end gets at least the median of the 19-21.10 geography Shorts (~1.1k at 24 h). CONTROL: Aral 2,147, Libya 1,351, Russia 1,111, coin 1,147, Pheasant 1,098 (median ~1.15k). TEST: this Short (68 s). METRIC: 24 h / 72 h views, vidIQ relative retention, comments per 1k (the reference had 0.25 comments per 1k views). LIMITATIONS: n = 1, new topic, voice 155 wpm vs 188 in the reference (voice not sped up on purpose: natural delivery first). RESULT: - . NEXT DECISION: if >= control median, 3 more Shorts in this structure.
+Production notes: engine66 = engine65 + reference look (space plate with teal nebula and drifting dust, isometric map opening with rising pins, tracked neon title, red triangle markers, magnifier lens, red X, white captions). v2 render QC: 68.2 s, 1080x1920 30 fps, -15.2 LUFS, peak -1.4 dBFS, 177/177 words heard back (99.4%, only "Wallis" heard as "Wallace"). Voice cost 0.46 RUB.
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
