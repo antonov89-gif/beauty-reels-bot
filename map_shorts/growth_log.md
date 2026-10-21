@@ -329,3 +329,6 @@ User asked to re-read the master prompt and match the reference. Conformity chec
 
 ### 22.10 Lofoten Short built (E9, awaiting publish go)
 User: keep the Maldives Short, make another one like the reference with real drone. Lofoten (north of the Arctic Circle): real Pexels portrait drone clips found via vidIQ generate_broll (about 8 credits in total), 7 cuts on the 124 BPM grid, globe zoom with one white text block, music only (A minor, own melody), 0 RUB, no AI footage, no AI voice. LUFS -15.7. Last shot is steeply down, not a true nadir (no such clip). Source: map_shorts/lofoten_2026_10_22. Not uploaded or scheduled.
+
+### 22.10 Lofoten Short: closer zoom like the reference
+User: zoom must come closer, as in the reference. Before: globe zoom stopped at continent scale and cut to the drone. Now: globe 0-1.35 s, 0.2 s crossfade to a flat satellite map that falls at constant zoom rate from the region (span 25 deg) down to the coast at Reine (span 0.022 deg, about 2.4 km), imagery NOR/LOF/LO2/MID/REI from Esri, then the hard cut to the drone shot of Reine at 2.85 s. Same hook text. Maldives left as is (its globe zoom is shorter; offer to deepen it the same way).

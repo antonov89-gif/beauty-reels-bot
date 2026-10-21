@@ -104,7 +104,7 @@ def sat(key):
     if not os.path.exists(p):
         os.makedirs("sat65g", exist_ok=True)
         g_ = grade(Image.open(f"sat65/{key}.jpg").convert("RGB")).convert("RGB")
-        if key == "MAL":                                    # the wide archipelago view is very dark: lift shadows so the atolls read on a phone
+        if key in ("MAL", "LOF", "NOR", "REI", "LO2", "MID"):                                    # the wide archipelago view is very dark: lift shadows so the atolls read on a phone
             g_ = Image.fromarray(np.clip(255 * (np.asarray(g_).astype(np.float32) / 255) ** 0.6 * 1.15, 0, 255).astype(np.uint8))
         g_.save(p, quality=94)
     return Image.open(p).convert("RGB")
@@ -1565,6 +1565,9 @@ def obl_overflow(t):
     return m
 
 
+BLEND = []      # (t0, t1) crossfade window from the globe to the flat map
+
+
 def hook_text(img, t):
     """The reference text: ONE white sans-serif block at the top, thin soft shadow, no outline, no glow, visible ~3 s, then gone."""
     for (t0, t1, lines, flag) in HOOK:
@@ -1601,7 +1604,7 @@ def hook_text(img, t):
 
 import shots69  # noqa: E402
 
-shots69.build(SHORT, K, O, GK, GLOBE, OB, OBL, HOOK, ST, D)
+shots69.build(SHORT, K, O, GK, GLOBE, OB, OBL, HOOK, ST, D, BLEND)
 CUTS = sorted({k[0] for k in CAM if k[4]} | {a for a, b in SCN} | {b for a, b in SCN} | {b for a, b in ISOS})
 SHAKES = sorted([o["t0"] for o in OV if o["kind"] == "stamp"] + [o["t0"] for o in OV if o.get("shake")])
 
@@ -1615,7 +1618,13 @@ def frame(fi):
     t = fi / FPS
     f = season(t)
     glob = in_globe(t) or in_iso(t)
-    if in_obl(t):
+    bw = next((b for b in BLEND if b[0] <= t < b[1]), None)
+    if bw:                                                     # globe -> flat map handoff: short crossfade, matched scale
+        u = ease((t - bw[0]) / (bw[1] - bw[0]))
+        vg, vf = GlobeView(*globe_cam(t)), View(*camera(t))
+        img = Image.blend(globe_img(vg, f, t), winterize(render_map64(vf), vf, f), u)
+        v = vf
+    elif in_obl(t):
         v = None
         img = obl_frame(t)
     elif in_iso(t):
