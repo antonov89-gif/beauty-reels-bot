@@ -317,3 +317,6 @@ Libya moved to 15:00 on 19.10 (user: yes). Voice regenerated 19.10 00:05 (0.49 R
 | Date | Hypothesis | Change | Result | Conclusion |
 |---|---|---|---|---|
 | 17.10 | First 3 s are the main leak (44.4% swipe) | 7 new Shorts rebuilt with key visual on frame 0 | pending (21–24.10) | |
+
+### 21.10 Nexlev check for reference jTJ2UFF3B0I
+rajography is a creator-owned drone channel (137K subs, avg ~806k views, no 3x outliers). Copies of its "tsunami couldn't destroy this temple" claim got tiny views, and the small-channel "satellite" search returned nothing. Conclusion: the reference's reach is footage- and channel-driven, not claim-driven; a satellite Maldives Short is a low-confidence experiment (HYPOTHESIS), awaiting user go (animation approval).
