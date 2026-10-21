@@ -215,6 +215,11 @@ GTA Shorts stay in the TikTok queue as planned (user: "Для тик ток пу
 - Repeating: (1) on-screen text hook on frame 0: 10 of 10; (2) sound from the first second: 10 of 10; (3) a hook that makes a claim, a myth or a "right now" question: 5 of 10 (e.g. "People say Turkey isn't in Europe", "What's happening in France right now", "Reportedly France is"); (4) lengths on TikTok mostly under 70 s (median 45 s); (5) a map zoom plus one icon/highlight on the first frame (4 of 10).
 - Useful for E5 (Turkey, 24.10): a Turkey myth-vs-data reel (799k, 35x median on Instagram) used the hook "People say Turkey isn't in Europe" with a red X on the map. Our Turkey Short is already scheduled; not changed. Content not copied.
 
+### DNA analysis 22.10 (user request): GeoGlobeTales "Which Country Is Closest to Space?" (XpYfmHoPEAs)
+Report: `map_shorts/ref_geoglobetales_2026_10_22/dna_XpYfmHoPEAs.md` (cost: ~25 vidIQ credits: video data 5, watch 10, comments 5, channel Shorts 5, transcript 5). Reference: 30.3M views, 21.9 likes/1k, 85 s; the channel's 50 top Shorts are all 11.8-61M.
+- Measured: 267 words in 85 s = ~188 wpm (our Russia ~130 wpm); ~4.9 events/10 s, 12 cuts in 84 s (STRONG INFERENCE); 18 of 25 top comment threads (72%) are about one mid-video fake-out ("our planet is flat... just kidding"), top three by likes.
+- Principles to test (not copied): question-superlative hook; obvious answer -> "that's wrong" -> true answer; one absurd retracted line at ~35% of the length; mechanism + one number; end on the answer, ideally as a loop. Experiment idea E7 (after user approval): one Short in this structure vs the batch median.
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
