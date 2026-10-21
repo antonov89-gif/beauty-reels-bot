@@ -320,3 +320,6 @@ Libya moved to 15:00 on 19.10 (user: yes). Voice regenerated 19.10 00:05 (0.49 R
 
 ### 21.10 Nexlev check for reference jTJ2UFF3B0I
 rajography is a creator-owned drone channel (137K subs, avg ~806k views, no 3x outliers). Copies of its "tsunami couldn't destroy this temple" claim got tiny views, and the small-channel "satellite" search returned nothing. Conclusion: the reference's reach is footage- and channel-driven, not claim-driven; a satellite Maldives Short is a low-confidence experiment (HYPOTHESIS), awaiting user go (animation approval).
+
+### 21.10 Maldives Short built (E8, awaiting publish go)
+Silent 17 s Short from the rajography DNA report: globe zoom + 3 s text hook, 5 hard cuts on the beat (124 BPM), pan along the airport runway, number card (1.5 m vs adult ~1.7 m), pull-out to globe, loop. Esri imagery, synthesized music, 0 RUB, no AI voice. LUFS about -16.7 (mean -13.5 dB, peak -1.6 dB). Source: map_shorts/maldives_2026_10_21. Facts hedged: only the average elevation is shown because the highest-point sources conflict. Not yet uploaded or scheduled: free slots 28.10 14:00/16:00 (suggested), user go pending.
