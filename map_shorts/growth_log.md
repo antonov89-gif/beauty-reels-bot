@@ -176,6 +176,23 @@ New YouTube cover on uonb7oq7ttw: question "HOW DID RUSSIA GET SO BIG?" + route 
 ### Decision 20.10 ~22:30 MSK (user)
 GTA Shorts stay in the TikTok queue as planned (user: "Для тик ток пусть будут"). No pause. GTA stays off YouTube until 19.11 (E4 rule). Re-check TikTok GTA vs geography medians on the next monitoring runs (E4 TikTok: GTA ~146 vs geography ~322, 45%).
 
+### Monitoring 21.10 09:58 MSK (vidIQ + Metricool; ~10 vidIQ credits)
+**YouTube (public counts; baseline median 1,245).**
+| Video | Age | Views | % of median |
+|---|---|---|---|
+| Aral Sea (20.10 12:03) | ~22 h | 2,089 | 168% (best since the audit) |
+| $100B Short (20.10 16:03) | ~18 h | 1,094 | 88% |
+| Russia (19.10 16:05) | ~42 h | 1,089 | 87% |
+| Libya (19.10 15:03) | ~43 h | 1,277 | 103% |
+| Euro coin (19.10 14:03) | ~44 h | 1,068 | 86% |
+| Gold cube (20.10 14:02) | ~20 h | 480 | 39% |
+| Suez / Moon (19.10 12:03) | ~46 h | 10 | 0.8% |
+| $100B long (20.10 15:07) | ~19 h | 3 | n/a |
+- FACT: since GTA left YouTube (19.10), 5 of 7 non-GTA Shorts are at ~1k or more (Aral 2,089, Libya, $100B, Russia, coin); gold cube 480 and Suez 10 are the weak ones. H6 test criterion remains met; the strongest result is Aral (168% of the median, the first Short clearly above the baseline). No new GTA on YouTube.
+- Analytics 18-21.10 (lags to ~19.10): launch-day GTA (17.10) 478 views, 253 engaged (53%), 43.8% viewed, +3 subs, 36 likes; GTA slogan 462 views, 134 engaged (29%), 60% viewed. FACT: the GTA slogan has the lowest engaged share of the batch, which supports "views without interest" for that Short. Traffic sources not re-pulled (lag).
+**TikTok (Metricool): DATA MISSING for everything.** The query for 15-21.10 returned no post rows and zero views for 16-21.10; a second query from 12.10 returned only a 21.10 row. Yesterday the same account returned 10 posts with views and likes. So the posts did not vanish: the Metricool TikTok analytics feed is empty or disconnected (cause UNKNOWN: API glitch, expired TikTok authorization, or a Metricool change). No TikTok numbers were invented. Next step: user checks Metricool > Connections > TikTok (reconnect if needed) or sends TikTok Studio numbers; I retry on the 21:56 run.
+- Not touched: ocean-floor Short tags (user OK pending); no niche outlier search (evening run only).
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
