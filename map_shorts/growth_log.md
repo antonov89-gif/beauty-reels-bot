@@ -220,6 +220,9 @@ Report: `map_shorts/ref_geoglobetales_2026_10_22/dna_XpYfmHoPEAs.md` (cost: ~25 
 - Measured: 267 words in 85 s = ~188 wpm (our Russia ~130 wpm); ~4.9 events/10 s, 12 cuts in 84 s (STRONG INFERENCE); 18 of 25 top comment threads (72%) are about one mid-video fake-out ("our planet is flat... just kidding"), top three by likes.
 - Principles to test (not copied): question-superlative hook; obvious answer -> "that's wrong" -> true answer; one absurd retracted line at ~35% of the length; mechanism + one number; end on the answer, ideally as a loop. Experiment idea E7 (after user approval): one Short in this structure vs the batch median.
 
+### Time zones Short (E7, structure of the GeoGlobeTales DNA report) - production 22.10
+Voice: Lumean (ElevenLabs), 0.46 RUB (user approved the price), 67.7 s, 175 words = ~155 wpm; transcribed back with faster-whisper small.en: 175/175 words, 96% match (only digit-vs-word differences and "Wallis" heard as "Wallace", accepted). Engine65 (copy of engine64 + new overlays "chips" and "ring"); imagery Esri (WLD, FRA, MON) + Natural Earth. Render in /home/claude/v62 (not in the repo). Source: `map_shorts/timezones_2026_10_22/` (scripts.py, engine65/, timing65.json, recording_brief.md for the human-voice option, not used).
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
