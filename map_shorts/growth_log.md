@@ -193,6 +193,28 @@ GTA Shorts stay in the TikTok queue as planned (user: "Для тик ток пу
 **TikTok (Metricool): DATA MISSING for everything.** The query for 15-21.10 returned no post rows and zero views for 16-21.10; a second query from 12.10 returned only a 21.10 row. Yesterday the same account returned 10 posts with views and likes. So the posts did not vanish: the Metricool TikTok analytics feed is empty or disconnected (cause UNKNOWN: API glitch, expired TikTok authorization, or a Metricool change). No TikTok numbers were invented. Next step: user checks Metricool > Connections > TikTok (reconnect if needed) or sends TikTok Studio numbers; I retry on the 21:56 run.
 - Not touched: ocean-floor Short tags (user OK pending); no niche outlier search (evening run only).
 
+### Monitoring 21.10 22:00 MSK (vidIQ + Metricool + niche outliers; ~10 vidIQ credits)
+**YouTube (public counts; baseline median 1,245).**
+| Video (published, MSK) | Age | Views | % of median |
+|---|---|---|---|
+| Pheasant Island (21.10 10:02) | ~12 h | 1,098 | 88% (strong start) |
+| Baarle double borders (21.10 14:03) | ~8 h | 325 | 26% |
+| Aral Sea (20.10 12:03) | ~34 h | 2,147 | 172% (+58 since morning: plateau) |
+| Libya | ~2 d | 1,351 | 109% |
+| Euro coin | ~2 d | 1,147 | 92% |
+| Russia | ~2 d | 1,111 | 89% |
+| $100B Short | ~30 h | 1,123 | 90% |
+| Gold cube (title now "What If You Melted All The World's Gold?") | ~35 h | 779 | 63% (+299 since morning, likes 15 -> 38) |
+| Suez / $100B long | - | 11 / 3 | - |
+- FACT: the title of the gold-cube Short was changed between the 09:58 and 22:00 reads ("All Gold Ever Mined = One Cube. How Big?" -> "What If You Melted All The World's Gold? 🪙 #whatif #gold #money"); I did not make this change (user or YouTube Studio). Its views rose +299 and likes 15 -> 38 in the same window. HYPOTHESIS only (n = 1, timing overlaps with a normal late push): the "What if" framing helps; test once more on the next scale/comparison Short.
+- Baarle is the Short flagged in the plan as having a weak frame 0: 26% of the median at 8 h. Decision rule stays: if its 24 h views < 50% of the median (22.10 ~14:00), border Shorts get the most unusual visual on frame 0.
+- H6: from 19.10, 6 of 9 non-GTA Shorts reached ~1k or more (Aral, Libya, $100B, Russia, coin, Pheasant), gold cube 779 and Baarle 325 pending; Suez the only dud. Still consistent with H6, GTA stays off YouTube.
+- Analytics (traffic sources/retention) not re-pulled; lag of ~2 days.
+**TikTok and Instagram (Metricool): DATA MISSING.** TikTok: no post rows, zeros for 14-21.10 (same as the morning run); Instagram (account tiger.91353485 is connected to the brand): followers and reels empty. User is checking the connections in Metricool (21.10). Nothing invented.
+**Niche outliers (TikTok + Instagram, 14-21.10, 10 creators, none repeated from before).** TikTok 690k-1.3M views (4.7-22x median), lengths 12/27/45/60/69 s; Instagram 0.8-15M views (11-716x).
+- Repeating: (1) on-screen text hook on frame 0: 10 of 10; (2) sound from the first second: 10 of 10; (3) a hook that makes a claim, a myth or a "right now" question: 5 of 10 (e.g. "People say Turkey isn't in Europe", "What's happening in France right now", "Reportedly France is"); (4) lengths on TikTok mostly under 70 s (median 45 s); (5) a map zoom plus one icon/highlight on the first frame (4 of 10).
+- Useful for E5 (Turkey, 24.10): a Turkey myth-vs-data reel (799k, 35x median on Instagram) used the hook "People say Turkey isn't in Europe" with a red X on the map. Our Turkey Short is already scheduled; not changed. Content not copied.
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
