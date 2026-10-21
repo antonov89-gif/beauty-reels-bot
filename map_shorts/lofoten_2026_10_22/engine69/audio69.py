@@ -275,5 +275,5 @@ if __name__ == "__main__":
     m = m / (np.abs(m).max() + 1e-9) * 0.8
     sf.write(f"{tag}/music.wav", m, SR)
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{tag}/music.wav", "-af",
-                    "loudnorm=I=-14:TP=-1.5:LRA=9,alimiter=limit=0.9:level=0,aresample=44100", "-t", str(V.TOTAL), f"{tag}/mix.wav"], check=True)
+                    "loudnorm=I=-12.8:TP=-1.2:LRA=9,alimiter=limit=0.9:level=0,aresample=44100", "-t", str(V.TOTAL), f"{tag}/mix.wav"], check=True)
     print("mix", tag, round(V.TOTAL, 2), "(music only, no voice, no sound effects)")

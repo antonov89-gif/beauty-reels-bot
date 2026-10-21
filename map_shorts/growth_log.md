@@ -335,3 +335,8 @@ User: zoom must come closer, as in the reference. Before: globe zoom stopped at 
 
 ### 22.10 Lofoten v3: camera moves and look like the reference
 User: camera movement and visuals like the reference. Re-watched the reference with vidIQ (10 credits). Changes: zoom dives to ~0.9 km (RE2 imagery) instead of 2.4 km; shot lengths 4/3/4/1/1/4 s with the described moves (ascend, lateral pan, high forward drift, 1 s close-up, 1 s sweep, downward finish); footage grade saturation +14% / contrast +5%; audio accents on every cut. Limit: no true nadir descent clip for Lofoten.
+
+### 22.10 QC pass ("Проверь") on Lofoten v3 and Maldives v2
+Measured with ffmpeg (scene detect, ebur128, freeze/black detect) and a per-shot motion metric.
+Found and fixed: (1) Lofoten cuts were 2-3 frames ahead of the kick (cut times were beat minus 0.05 s plus rounding) -> cuts now on exact beat frames 87/203/290/406/435/465, measured offset +20...50 ms incl. detector bias; (2) harbour shot almost static (motion 0.77) -> digital push-in 1.08x->1.25x with slight counter-clockwise yaw on the 4K source (no upscaling); (3) zoom end too abrupt -> short settle in the last 0.3 s, ends ~1.2 km top-down; (4) Lofoten loudness -15.9 LUFS mono -> -13.6 LUFS stereo, peak -1.3 dBFS; (5) Maldives audio shifted 35 ms earlier so its cuts sit on the kick, -14.8 LUFS.
+No black frames, no freezes, durations 19.78 s, 1080x1920 30 fps. Remaining limits: no true nadir finish for Lofoten; Esri mosaic seams visible for a few frames at the end of the satellite dive.
