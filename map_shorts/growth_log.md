@@ -326,3 +326,6 @@ Silent 17 s Short from the rajography DNA report: globe zoom + 3 s text hook, 5 
 
 ### 22.10 Maldives Short rebuilt to the reference (v2)
 User asked to re-read the master prompt and match the reference. Conformity check found v1 broke six rules (neon title, text all video long, SFX, 5 cuts, flat top-down only, no top-down finish). v2: engine68 (oblique pseudo-drone camera), single white text hook, 8 cuts on the beat (124 BPM, 19.8 s), 7 Maldives places (archipelago, Malé, Velana, Thulusdhoo, Fuvahmulah, Gan, Fuvahmulah top-down), music only, LUFS -14.8. Table in map_shorts/ref_geoglobetales_2026_10_22/dna_jTJ2UFF3B0I.md. Not uploaded or scheduled; user go pending.
+
+### 22.10 Lofoten Short built (E9, awaiting publish go)
+User: keep the Maldives Short, make another one like the reference with real drone. Lofoten (north of the Arctic Circle): real Pexels portrait drone clips found via vidIQ generate_broll (about 8 credits in total), 7 cuts on the 124 BPM grid, globe zoom with one white text block, music only (A minor, own melody), 0 RUB, no AI footage, no AI voice. LUFS -15.7. Last shot is steeply down, not a true nadir (no such clip). Source: map_shorts/lofoten_2026_10_22. Not uploaded or scheduled.
