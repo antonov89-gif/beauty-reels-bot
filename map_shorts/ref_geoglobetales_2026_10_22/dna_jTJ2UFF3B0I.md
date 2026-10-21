@@ -93,3 +93,9 @@
 | No speech, no AI voice | OK | OK |
 | Do not copy (phrase, temple, footage, music) | OK | OK |
 Not reproducible (stated openly): real 4K drone footage and the channel's audience; satellite imagery is less striking (HYPOTHESIS: it reaches fewer views than the reference).
+
+## Camera and visual re-check (22.10, second vidIQ watch, 10 credits; AI estimate, details marked as inferred there)
+- Globe zoom ~3 s, exponential (slow start, fast dive, slight settle), Google-Earth-like imagery with atmosphere glow, ends top-down at rooftop altitude (~100-200 m). Text top-centre, white, dark drop shadow.
+- Shots (hard cuts only, motion resets at every cut): ~4 s drone ascend (pedestal up) on the tower, near horizontal; ~4 s low telephoto lateral pan from the sea; ~3 s high forward push with slight counter-clockwise yaw, 45-55 deg down; ~1 s close-up; ~1 s wide counter-clockwise sweep; ~4 s top-down nadir descent with slow clockwise rotation.
+- Look: high saturation (turquoise sea, terracotta roofs), moderately high contrast, warm daylight, sharp 4K, no grain, no vignette, no flare.
+- Note: the first analysis counted 8 cuts of ~2.5 s; this one counts 6 cuts with two 1 s shots. The two AI readings disagree (UNKNOWN which is right); Lofoten v3 follows the detailed one (variable lengths), Maldives follows the first.

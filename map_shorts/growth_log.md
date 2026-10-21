@@ -332,3 +332,6 @@ User: keep the Maldives Short, make another one like the reference with real dro
 
 ### 22.10 Lofoten Short: closer zoom like the reference
 User: zoom must come closer, as in the reference. Before: globe zoom stopped at continent scale and cut to the drone. Now: globe 0-1.35 s, 0.2 s crossfade to a flat satellite map that falls at constant zoom rate from the region (span 25 deg) down to the coast at Reine (span 0.022 deg, about 2.4 km), imagery NOR/LOF/LO2/MID/REI from Esri, then the hard cut to the drone shot of Reine at 2.85 s. Same hook text. Maldives left as is (its globe zoom is shorter; offer to deepen it the same way).
+
+### 22.10 Lofoten v3: camera moves and look like the reference
+User: camera movement and visuals like the reference. Re-watched the reference with vidIQ (10 credits). Changes: zoom dives to ~0.9 km (RE2 imagery) instead of 2.4 km; shot lengths 4/3/4/1/1/4 s with the described moves (ascend, lateral pan, high forward drift, 1 s close-up, 1 s sweep, downward finish); footage grade saturation +14% / contrast +5%; audio accents on every cut. Limit: no true nadir descent clip for Lofoten.

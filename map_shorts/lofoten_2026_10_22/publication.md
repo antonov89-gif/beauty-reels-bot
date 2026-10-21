@@ -21,11 +21,11 @@ lofoten, lofoten islands, norway, norway drone, arctic circle, drone footage, ae
 - YouTube isAiGeneratedContent: false (real footage; globe and text are graphics, no AI voice, no AI footage)
 - TikTok isAigc: false; Instagram: same file, same caption
 
-## Segments (all footage labelled Lofoten on Pexels)
-Globe zoom 0-2.85 s (engine69) | Reine fjord village (Loic Van Montagu 34425904 @6.5) | turquoise lagoon and mountain (Deek 35466636 @6.0) | harbour with red boats (Deek 34509933 @22) | algae rocks and beach (Deek 35466391 @15) | stockfish racks by the harbour (Deek 34509933 @36) | Reine islets (34425904 @10.5) | racks looking down at the sea (34509933 @96)
+## Segments (all footage labelled Lofoten on Pexels; shot lengths and moves from the second vidIQ breakdown of the reference)
+Globe zoom with satellite dive 0-2.85 s (engine69, down to ~0.9 km, top-down) | 3.9 s ascend over the Reine ridge (Loic Van Montagu 34425904 @0) | 2.9 s lateral pan over the turquoise lagoon (Deek 35466636 @12.5) | 3.9 s high forward drift over the harbour with red boats (Deek 34509933 @8) | 1 s close-up of the peak (Deek 34434951 @13) | 1 s wide sweep over Reine (34425904 @11.5) | 4.3 s looking down on stockfish racks and the sea (34509933 @94). Grade: saturation +14%, contrast +5%, hard cuts only, no vignette on footage.
 
 ## Cover
-Frame 5.5 s (harbour with red boats) or 6.4 s (Reine); pick after the first 24 h.
+Frame 10.5 s (harbour with red boats) or 14.9 s (Reine); pick after the first 24 h.
 
 ## Experiment E9 (control = median of the channel's last Shorts ~1.15k views)
 Hypothesis (unconfirmed): real drone footage in the reference format beats our map-animation Shorts. This is the closest we can get to the reference's production (real 4K drone). Check 24 h and 72 h.

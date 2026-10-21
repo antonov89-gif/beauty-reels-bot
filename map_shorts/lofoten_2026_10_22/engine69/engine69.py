@@ -104,7 +104,7 @@ def sat(key):
     if not os.path.exists(p):
         os.makedirs("sat65g", exist_ok=True)
         g_ = grade(Image.open(f"sat65/{key}.jpg").convert("RGB")).convert("RGB")
-        if key in ("MAL", "LOF", "NOR", "REI", "LO2", "MID"):                                    # the wide archipelago view is very dark: lift shadows so the atolls read on a phone
+        if key in ("MAL", "LOF", "NOR", "REI", "LO2", "MID", "RE2"):                                    # the wide archipelago view is very dark: lift shadows so the atolls read on a phone
             g_ = Image.fromarray(np.clip(255 * (np.asarray(g_).astype(np.float32) / 255) ** 0.6 * 1.15, 0, 255).astype(np.uint8))
         g_.save(p, quality=94)
     return Image.open(p).convert("RGB")
@@ -1605,7 +1605,7 @@ def hook_text(img, t):
 import shots69  # noqa: E402
 
 shots69.build(SHORT, K, O, GK, GLOBE, OB, OBL, HOOK, ST, D, BLEND)
-CUTS = sorted({k[0] for k in CAM if k[4]} | {a for a, b in SCN} | {b for a, b in SCN} | {b for a, b in ISOS})
+CUTS = sorted({k[0] for k in CAM if k[4]} | {a for a, b in SCN} | {b for a, b in SCN} | {b for a, b in ISOS} | {a for a, b in OBS} | {b for a, b in OBS})
 SHAKES = sorted([o["t0"] for o in OV if o["kind"] == "stamp"] + [o["t0"] for o in OV if o.get("shake")])
 
 
