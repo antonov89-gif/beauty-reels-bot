@@ -226,6 +226,12 @@ Voice: Lumean (ElevenLabs), 0.46 RUB (user approved the price), 67.7 s, 175 word
 **E7 card - time zones Short (structure and look of the GeoGlobeTales reference, our topic).** HYPOTHESIS: question hook + obvious answer -> "wrong" + one retracted absurd line (Monaco) + answer at the end gets at least the median of the 19-21.10 geography Shorts (~1.1k at 24 h). CONTROL: Aral 2,147, Libya 1,351, Russia 1,111, coin 1,147, Pheasant 1,098 (median ~1.15k). TEST: this Short (68 s). METRIC: 24 h / 72 h views, vidIQ relative retention, comments per 1k (the reference had 0.25 comments per 1k views). LIMITATIONS: n = 1, new topic, voice 155 wpm vs 188 in the reference (voice not sped up on purpose: natural delivery first). RESULT: - . NEXT DECISION: if >= control median, 3 more Shorts in this structure.
 Production notes: engine66 = engine65 + reference look (space plate with teal nebula and drifting dust, isometric map opening with rising pins, tracked neon title, red triangle markers, magnifier lens, red X, white captions). v2 render QC: 68.2 s, 1080x1920 30 fps, -15.2 LUFS, peak -1.4 dBFS, 177/177 words heard back (99.4%, only "Wallis" heard as "Wallace"). Voice cost 0.46 RUB.
 
+### Time zones Short scheduled 21.10 23:54 MSK (user: "Ставь")
+Metricool id 402553525 (uuid -3423952026791228371), YouTube Short + TikTok, **22.10 16:00 MSK** (best free slot: Metricool benchmark YouTube Thu 16:00 = 11,979, TikTok 1,118; free in the queue, 2 h after Egypt 14:00). AI flags on (YouTube isAiGeneratedContent, TikTok isAigc). Higgsfield media 17c... -> public copy; Metricool copy size checked against the local file. Check 24 h / 72 h on 23.10 ~16:00 and 25.10 ~16:00 against E7 control median ~1.15k.
+| Date | Video | Events/10 s | Hook (frame 0) | 24 h | 72 h | Principle |
+|---|---|---|---|---|---|---|
+| 22.10 16:00 | Which country has the most time zones? | ~5-6 | isometric map tilting + pins on Russia/USA, "MOST TIME ZONES" | | | question hook, obvious answer -> wrong, retracted joke, answer at the end (E7) |
+
 ## 2. Video log
 Columns: date (MSK) | video | format | hook (frame 0) | events/10 s | cost | views 24 h | views 72 h | result / principle | confidence.
 
