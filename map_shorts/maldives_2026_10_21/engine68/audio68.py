@@ -6,7 +6,7 @@ import subprocess
 import numpy as np
 import soundfile as sf
 
-import engine67 as V
+import engine68 as V
 
 SR = 44100
 N = int(V.TOTAL * SR) + SR
@@ -70,27 +70,55 @@ def pad(fs, d):
     return x * env * 0.035
 
 
+def vocal(f0, d, vib=5.5):
+    """Wordless sung-vowel lead (original melody, our own synthesis): glottal-ish saw through two formants, vibrato, soft attack."""
+    t = tt(d)
+    ph = 2 * np.pi * np.cumsum(f0 * (1 + 0.012 * np.sin(2 * np.pi * vib * t) * np.minimum(1, t / 0.25))) / SR
+    x = sum(np.sin(h * ph) / h ** 1.1 for h in range(1, 14))
+    sp = np.fft.rfft(x)
+    fr = np.fft.rfftfreq(len(x), 1 / SR)
+    form = 1.0 * np.exp(-((fr - 700) / 220) ** 2) + 0.7 * np.exp(-((fr - 1200) / 300) ** 2) + 0.25 * np.exp(-((fr - 2600) / 500) ** 2) + 0.12
+    x = np.fft.irfft(sp * form, len(x))
+    return x * np.minimum(1, t / 0.06) * np.minimum(1, (d - t) / 0.12) * 0.09
+
+
+def crash():
+    t = tt(0.9)
+    x = rng.normal(0, 1, len(t))
+    x = x - lp(x, 4)
+    return x * np.exp(-t * 5) * 0.16
+
+
 def music():
+    """124 BPM, D phrygian-dominant (our own melody): kick every beat, clap on 2 and 4, offbeat hats, rolling bass, plucked arpeggio, sung-vowel lead.
+    Cuts sit on beats; drum accents (extra kick + clap + soft crash) mark every cut, so the rhythm carries the edit (reference: no effects)."""
     m = np.zeros(N)
-    # A minor - F - C - G, one chord per bar
-    roots = [55.0, 55.0, 43.65, 49.0]
-    chords = [[220, 261.6, 329.6], [220, 261.6, 329.6], [174.6, 220, 261.6], [196, 246.9, 293.7]]
-    arp = [[440, 523.3, 659.3, 523.3], [440, 523.3, 659.3, 784], [349.2, 440, 523.3, 440], [392, 493.9, 587.3, 493.9]]
+    sc = [146.83, 155.56, 185.0, 196.0, 220.0, 233.08, 261.63, 293.66]       # D Eb F# G A Bb C D
+    hz = lambda deg, octv=0: sc[deg % 7] * (2 ** (deg // 7 + octv))          # noqa: E731
     nb = int(V.TOTAL / BEAT) + 4
+    cuts_b = {int(round((c) / BEAT)) for c in V.CUTS if 0 < c < V.TOTAL}
+    mel = [4, 4, 5, 4, 2, 0, 0, 1, 2, 4, 5, 7, 5, 4, 2, 1,                    # degrees, 2 beats each, 16 notes = 8 bars loop
+           4, 5, 7, 8, 7, 5, 4, 2, 4, 2, 1, 0, 1, 2, 0, 0]
     for b in range(nb):
         t0 = b * BEAT
-        bar = (b // 4) % 4
-        place(m, kick(), t0, 1.0)
-        if b % 2 == 1:
-            place(m, clap(), t0, 1.0)
+        place(m, kick(), t0, 1.0 if b in cuts_b else 0.85)
+        if b % 2 == 1 or b in cuts_b:
+            place(m, clap(), t0, 1.1 if b in cuts_b else 0.9)
+        if b in cuts_b:
+            place(m, crash(), t0, 0.9)
         place(m, hat(), t0 + BEAT / 2, 1.0)
-        place(m, hat(b % 4 == 3), t0 + BEAT * 0.75, 0.7)
-        place(m, bass(roots[bar], BEAT * 0.48), t0, 1.0)
-        place(m, bass(roots[bar], BEAT * 0.4), t0 + BEAT / 2, 0.8)
+        place(m, hat(b % 4 == 3), t0 + BEAT * 0.75, 0.6)
+        root = hz(0, -1) if (b // 8) % 2 == 0 else hz(3, -1)
+        place(m, bass(root, BEAT * 0.45), t0, 1.0)
+        place(m, bass(root * (1.5 if b % 4 == 2 else 1.0), BEAT * 0.4), t0 + BEAT / 2, 0.8)
         for q in range(2):
-            place(m, pluck(arp[bar][(b * 2 + q) % 4]), t0 + q * BEAT / 2, 1.0)
-        if b % 4 == 0:
-            place(m, pad(chords[bar], BEAT * 4), t0, 1.0)
+            deg = [0, 2, 4, 2, 0, 3, 5, 3][(b * 2 + q) % 8] + (3 if (b // 8) % 2 else 0)
+            place(m, pluck(hz(deg, 1)), t0 + q * BEAT / 2, 1.0)
+        if b % 2 == 0:
+            deg = mel[(b // 2) % len(mel)]
+            place(m, vocal(hz(deg, 1), BEAT * 1.9), t0, 1.0)
+        if b % 8 == 0:
+            place(m, pad([hz(0, 0), hz(4, 0), hz(7, 0)], BEAT * 8), t0, 1.0)
     return m
 
 
@@ -242,28 +270,10 @@ def build():
 
 if __name__ == "__main__":
     tag = V.SHORT
-    voice = np.zeros(N)
-    vp = f"{tag}/lumean/result.mp3"
-    if os.path.exists(vp):
-        raw, sr = sf.read(vp)
-        raw = raw.mean(axis=1) if raw.ndim > 1 else raw
-        if sr != SR:
-            import scipy.signal as ss
-            raw = ss.resample_poly(raw, SR, sr)
-        i0 = int(V.LEAD * SR)
-        seg = raw[:N - i0]
-        voice[i0:i0 + len(seg)] = seg
-    else:
-        print("no voice: preview mix")
     m = music()
-    m *= np.minimum(1, np.arange(N) / (0.2 * SR)) * np.clip((V.TOTAL - np.arange(N) / SR) / 1.0, 0, 1)
-    sfx = build()
-    sf.write(f"{tag}/voice.wav", voice, SR)
-    sf.write(f"{tag}/music.wav", m / (np.abs(m).max() + 1e-9) * 0.8, SR)
-    sf.write(f"{tag}/sfx.wav", np.clip(sfx, -1, 1), SR)
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{tag}/voice.wav", "-i", f"{tag}/music.wav", "-i", f"{tag}/sfx.wav",
-                    "-filter_complex",
-                    "[0:a]highpass=f=85,deesser=i=0.3,equalizer=f=250:t=q:w=1:g=-1.5,equalizer=f=3500:t=q:w=1.1:g=1.8,acompressor=threshold=-21dB:ratio=2:attack=15:release=140:makeup=2,aecho=0.9:0.9:34|68:0.09|0.05,asplit=2[v][vsc];[1:a]volume=0.42[m];[m][vsc]sidechaincompress=threshold=0.04:ratio=7:attack=8:release=300[md];"
-                    "[2:a]lowpass=f=10000,volume=0.65[s];[v][md][s]amix=inputs=3:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=9,alimiter=limit=0.8:level=0,aresample=44100[a]",
-                    "-map", "[a]", "-t", str(V.TOTAL), f"{tag}/mix.wav"], check=True)
-    print("mix", tag, round(V.TOTAL, 2))
+    m *= np.minimum(1, np.arange(N) / (0.15 * SR)) * np.clip((V.TOTAL - np.arange(N) / SR) / 0.6, 0, 1)
+    m = m / (np.abs(m).max() + 1e-9) * 0.8
+    sf.write(f"{tag}/music.wav", m, SR)
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{tag}/music.wav", "-af",
+                    "loudnorm=I=-14:TP=-1.5:LRA=9,alimiter=limit=0.9:level=0,aresample=44100", "-t", str(V.TOTAL), f"{tag}/mix.wav"], check=True)
+    print("mix", tag, round(V.TOTAL, 2), "(music only, no voice, no sound effects)")

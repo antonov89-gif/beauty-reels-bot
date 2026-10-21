@@ -5,7 +5,7 @@ Principles only; no footage, music or wording of the reference. 'LINES' are scen
 SHORTS = {
     "maldives": {
         "title": "The Country Lower Than You Are Tall 🇲🇻 Maldives From Space",
-        "lines": ["globe", "atolls", "male", "airport", "height", "loop"],
+        "lines": ["globe", "archipelago", "male", "runway", "thulusdhoo", "fuvahmulah", "gan", "topdown"],
         "facts": {
             "average elevation": "Maldives: average ground elevation about 1.5 m above sea level, commonly cited as the lowest-lying country (FACT, CIA World Factbook / Wikipedia); highest natural point is reported as 2.4 m in some sources and about 5 m in others, so the video shows only the average",
             "1,190 islands": "about 1,190 coral islands in 26 atolls (FACT, widely cited, UNESCO / Wikipedia)",

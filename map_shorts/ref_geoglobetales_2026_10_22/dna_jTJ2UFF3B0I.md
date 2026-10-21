@@ -79,3 +79,17 @@
 - Похожие ролики с тем же утверждением («even tsunami couldn't destroy this temple») собрали мизерные просмотры. Значит, успех определяют кадры и канал, а не формулировка утверждения.
 - Поиск «satellite» среди малых каналов с вирусными роликами: пусто. Ниша спутниковых Shorts без речи не подтверждена данными, это ГИПОТЕЗА.
 - Вывод: копировать формат (15–20 с, зум, музыка, вид сверху) можно, но обещать просмотры «как у референса» нельзя. Ролик по Мальдивам запускать как эксперимент E8 с контролем по медиане канала.
+
+## Conformity check of our Short (22.10, v2 vs the reference and PHASE 90)
+| Rule from the DNA report | v1 (first build) | v2 (rebuilt) |
+|---|---|---|
+| Length 15–20 s | 17 s OK | 19.8 s OK |
+| Globe zoom ~3 s + ONE text block | globe 2.9 s OK, but neon blue-glow title, two blocks | globe 2.85 s, one white block, thin shadow, 3 s, 8 words, flag in place of the emoji |
+| No text after the hook | FAIL: banner, labels, pins, card, stamp | OK: no text after the hook (only the tiny imagery credit) |
+| 8 cuts, ~2.5 s, on the beat | FAIL: 5 cuts, 3.4 s | OK: 8 cuts, 5 beats (2.42 s), cut times on 124 BPM beats |
+| Varied drone angles (rise, orbit, push-in, top-down) | FAIL: flat top-down only | OK: oblique pseudo-drone camera (tilt up to 0.6, orbit ±14°, push-in, runway pan) over Esri imagery |
+| Ends top-down, loops to globe | FAIL: ended on a globe with a question | OK: last shot straight down, hard cut to the globe |
+| No sound effects, rhythm from music, 120–128 BPM | FAIL: whooshes, booms, ticks, pops | OK: music only (124 BPM, kicks on every beat, accents on cuts, wordless sung-vowel lead, our own melody) |
+| No speech, no AI voice | OK | OK |
+| Do not copy (phrase, temple, footage, music) | OK | OK |
+Not reproducible (stated openly): real 4K drone footage and the channel's audience; satellite imagery is less striking (HYPOTHESIS: it reaches fewer views than the reference).

@@ -1,14 +1,14 @@
 #!/bin/bash
-# Render one engine67 Short: audio + SRT, 6 parallel video parts, concat, mux, encode.  ./render67.sh turkey
+# Render one engine68 Short: audio + SRT, 6 parallel video parts, concat, mux, encode.  ./render68.sh turkey
 cd /home/claude/v62
 k=$1
 export SHORT=$k
-python3 audio67.py > $k/audio.log 2>&1 || { echo "AUDIO FAIL $k"; exit 1; }
-python3 srt67.py >> $k/audio.log 2>&1
-NF=$(python3 engine67.py info | head -1 | awk '{print $3}')
+python3 audio68.py > $k/audio.log 2>&1 || { echo "AUDIO FAIL $k"; exit 1; }
+python3 srt68.py >> $k/audio.log 2>&1
+NF=$(python3 engine68.py info | head -1 | awk '{print $3}')
 for i in 0 1 2 3 4 5; do
   a=$((NF*i/6)); b=$((NF*(i+1)/6))
-  python3 engine67.py video $a $b $k/p$i.mp4 > $k/p$i.log 2>&1 &
+  python3 engine68.py video $a $b $k/p$i.mp4 > $k/p$i.log 2>&1 &
 done
 wait
 printf "file 'p0.mp4'\nfile 'p1.mp4'\nfile 'p2.mp4'\nfile 'p3.mp4'\nfile 'p4.mp4'\nfile 'p5.mp4'\n" > $k/list.txt

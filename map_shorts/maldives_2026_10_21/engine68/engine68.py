@@ -158,7 +158,16 @@ def crop(key, v):
     w, h = size(key)
     a0, a1, c0, c1 = v.geo_bbox()
     box = ((a0 - l0) / (l1 - l0) * w, (b1 - c1) / (b1 - b0) * h, (a1 - l0) / (l1 - l0) * w, (b1 - c0) / (b1 - b0) * h)
-    return sat(key).resize((v.w, v.h), Image.BILINEAR, box=box, reducing_gap=2.0)
+    if box[0] >= 0 and box[1] >= 0 and box[2] <= w and box[3] <= h:
+        return sat(key).resize((v.w, v.h), Image.BILINEAR, box=box, reducing_gap=2.0)
+    # view reaches past the image (oblique canvases): resize the overlapping part and pad with the image's edge colour
+    ib = (max(0, box[0]), max(0, box[1]), min(w, box[2]), min(h, box[3]))
+    out = Image.new("RGB", (v.w, v.h), tuple(int(x) for x in np.asarray(sat(key).resize((8, 8))).reshape(-1, 3).mean(axis=0)))
+    if ib[2] - ib[0] > 2 and ib[3] - ib[1] > 2:
+        sx, sy = v.w / (box[2] - box[0]), v.h / (box[3] - box[1])
+        part = sat(key).resize((max(1, int((ib[2] - ib[0]) * sx)), max(1, int((ib[3] - ib[1]) * sy))), Image.BILINEAR, box=ib, reducing_gap=2.0)
+        out.paste(part, (int((ib[0] - box[0]) * sx), int((ib[1] - box[1]) * sy)))
+    return out
 
 
 def covers(key, v, margin=0.0):
@@ -1484,9 +1493,107 @@ DRAW.update({"neon": neon, "tri": tri, "xmark": xmark, "lens": lens})
 ORDER = ["fill", "rivers", "arrow", "units", "fort", "fire", "ring", "pin", "tri", "lens", "curved", "label", "neon", "counter", "chips", "xmark", "stamp", "thermo", "hudcard", "banner"]
 
 # ------------------------------------------------------------------ build
-import shots67  # noqa: E402
+# ================================================================== v68 additions (Maldives Short, reference jTJ2UFF3B0I):
+# pseudo-drone oblique camera over satellite imagery (tilt + orbit + push-in), single white text hook with thin shadow, no overlays/SFX
+OBK = []        # (t, lon, lat, span, tilt, rot, cut, lin)
+OBS = []        # (t0, t1) oblique scenes
+HOOK = []       # (t0, t1, [lines], flag)
 
-shots67.build(SHORT, K, O, GK, GLOBE, SN, FLASH, WT, ST, D, ISO=ISO, ISO_PINS=ISO_PINS)
+
+def OB(t, lon, lat, span, tilt=0.0, rot=0.0, cut=False, lin=False):
+    OBK.append((t, lon, lat, span, tilt, rot, cut, lin))
+
+
+def OBL(t0, t1):
+    OBS.append((t0, t1))
+
+
+def in_obl(t):
+    return any(a <= t < b for a, b in OBS)
+
+
+def obl_cam(t):
+    ks = sorted(OBK, key=lambda k: k[0])
+    if t <= ks[0][0]:
+        return ks[0][1:6]
+    for a, b in zip(ks, ks[1:]):
+        if a[0] <= t < b[0]:
+            if b[6]:
+                return a[1:6]
+            u = (t - a[0]) / max(1e-3, b[0] - a[0])
+            u = u if b[7] else ease(u)
+            span = math.exp(math.log(a[3]) + (math.log(b[3]) - math.log(a[3])) * u)
+            return (a[1] + (b[1] - a[1]) * u, a[2] + (b[2] - a[2]) * u, span, a[4] + (b[4] - a[4]) * u, a[5] + (b[5] - a[5]) * u)
+    return ks[-1][1:6]
+
+
+SRC_K = 2.3                       # source canvas = SRC_K x the screen, same pixels per degree as the screen
+
+
+def obl_frame(t):
+    """Oblique 'drone' look from a flat satellite image: render a big top-down canvas, then rotate and warp a trapezoid
+    (far edge wider and taller = foreshortening) onto the screen."""
+    lon, lat, span, tilt, rot = obl_cam(t)
+    sw, sh = int(W * SRC_K) // 2 * 2, int(H * SRC_K) // 2 * 2
+    v = View(lon, lat, span * SRC_K, sw, sh)
+    vc = View(lon, lat, span * (1 + 1.3 * tilt) * 1.15)            # coverage test on the visible trapezoid only (not the whole canvas)
+    ok = [k for k in MAP_KEYS if covers(k, vc)] or ["WLD"]
+    src = crop(ok[0], v).convert("RGBA")
+    if src.mode != "RGBA":
+        src = src.convert("RGBA")
+    c = (sw / 2, sh / 2)
+    hwb, hwt = 540 * (1 - 0.30 * tilt), 540 * (1 + 1.1 * tilt)
+    hb, ht = 960 * (1 - 0.25 * tilt), 960 * (1 + 1.3 * tilt)
+    quad = [(-hwt, -ht), (hwt, -ht), (hwb, hb), (-hwb, hb)]
+    a = math.radians(rot)
+    pts = [(c[0] + x * math.cos(a) - y * math.sin(a), c[1] + x * math.sin(a) + y * math.cos(a)) for x, y in quad]
+    co = persp_coeffs(pts, [(0, 0), (W, 0), (W, H), (0, H)])
+    return src.transform((W, H), Image.PERSPECTIVE, co, Image.BICUBIC)
+
+
+def obl_overflow(t):
+    """Largest distance (px) by which the warped quad leaves the source canvas (0 = fully inside)."""
+    lon, lat, span, tilt, rot = obl_cam(t)
+    sw, sh = W * SRC_K, H * SRC_K
+    hwb, hwt = 540 * (1 - 0.30 * tilt), 540 * (1 + 1.1 * tilt)
+    hb, ht = 960 * (1 - 0.25 * tilt), 960 * (1 + 1.3 * tilt)
+    a = math.radians(rot)
+    m = 0.0
+    for x, y in [(-hwt, -ht), (hwt, -ht), (hwb, hb), (-hwb, hb)]:
+        X, Y = sw / 2 + x * math.cos(a) - y * math.sin(a), sh / 2 + x * math.sin(a) + y * math.cos(a)
+        m = max(m, -X, X - sw, -Y, Y - sh)
+    return m
+
+
+def hook_text(img, t):
+    """The reference text: ONE white sans-serif block at the top, thin soft shadow, no outline, no glow, visible ~3 s, then gone."""
+    for (t0, t1, lines, flag) in HOOK:
+        if not (t0 <= t < t1):
+            continue
+        a = clamp((t - t0) / 0.18) * clamp((t1 - t) / 0.25)
+        f = font(MX, 62)
+        y = 250
+        for ln in lines:
+            lay = Image.new("RGBA", (1000, 110), (0, 0, 0, 0))
+            sh = Image.new("RGBA", (1000, 110), (0, 0, 0, 0))
+            ImageDraw.Draw(sh).text((503, 58), ln, font=f, fill=(0, 0, 0, int(200 * a)), anchor="mm")
+            lay.alpha_composite(sh.filter(ImageFilter.GaussianBlur(3)))
+            ImageDraw.Draw(lay).text((500, 55), ln, font=f, fill=(255, 255, 255, int(255 * a)), anchor="mm")
+            img.alpha_composite(lay, (40, y - 55))
+            y += 84
+        if flag:
+            fl = Image.new("RGBA", (96, 64), (0, 0, 0, 0))
+            d = ImageDraw.Draw(fl)
+            d.rounded_rectangle((0, 0, 95, 63), 8, fill=(213, 28, 58, int(255 * a)))
+            d.rectangle((20, 14, 75, 49), fill=(0, 122, 61, int(255 * a)))
+            d.ellipse((38, 20, 60, 42), fill=(255, 255, 255, int(255 * a)))
+            d.ellipse((44, 18, 66, 40), fill=(0, 122, 61, int(255 * a)))
+            img.alpha_composite(fl, (540 - 48, y + 4))
+
+
+import shots68  # noqa: E402
+
+shots68.build(SHORT, K, O, GK, GLOBE, OB, OBL, HOOK, ST, D)
 CUTS = sorted({k[0] for k in CAM if k[4]} | {a for a, b in SCN} | {b for a, b in SCN} | {b for a, b in ISOS})
 SHAKES = sorted([o["t0"] for o in OV if o["kind"] == "stamp"] + [o["t0"] for o in OV if o.get("shake")])
 
@@ -1500,7 +1607,10 @@ def frame(fi):
     t = fi / FPS
     f = season(t)
     glob = in_globe(t) or in_iso(t)
-    if in_iso(t):
+    if in_obl(t):
+        v = None
+        img = obl_frame(t)
+    elif in_iso(t):
         v = GlobeView(0, 0, 560)
         img = iso_frame(t)
     elif glob:
@@ -1509,7 +1619,10 @@ def frame(fi):
     else:
         v = View(*camera(t))
         img = winterize(render_map64(v), v, f)
-    live = [o for o in OV if o["t0"] - 0.01 <= t <= o["t1"] + 0.01 and (o.get("scene", "flat") in (("globe", "both") if glob else ("flat", "both")))]
+    if in_obl(t):
+        live = []
+    else:
+        live = [o for o in OV if o["t0"] - 0.01 <= t <= o["t1"] + 0.01 and (o.get("scene", "flat") in (("globe", "both") if glob else ("flat", "both")))]
     for kind in ORDER:
         for o in live:
             if o["kind"] == kind:
@@ -1518,6 +1631,7 @@ def frame(fi):
         snowfall(img, t, f)
     credit(img)
     caption(img, t)
+    hook_text(img, t)
     arr = np.asarray(img.convert("RGB")).astype(np.float32)
     for fl in FLASH:
         if 0 <= t - fl < 0.16:

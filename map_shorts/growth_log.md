@@ -323,3 +323,6 @@ rajography is a creator-owned drone channel (137K subs, avg ~806k views, no 3x o
 
 ### 21.10 Maldives Short built (E8, awaiting publish go)
 Silent 17 s Short from the rajography DNA report: globe zoom + 3 s text hook, 5 hard cuts on the beat (124 BPM), pan along the airport runway, number card (1.5 m vs adult ~1.7 m), pull-out to globe, loop. Esri imagery, synthesized music, 0 RUB, no AI voice. LUFS about -16.7 (mean -13.5 dB, peak -1.6 dB). Source: map_shorts/maldives_2026_10_21. Facts hedged: only the average elevation is shown because the highest-point sources conflict. Not yet uploaded or scheduled: free slots 28.10 14:00/16:00 (suggested), user go pending.
+
+### 22.10 Maldives Short rebuilt to the reference (v2)
+User asked to re-read the master prompt and match the reference. Conformity check found v1 broke six rules (neon title, text all video long, SFX, 5 cuts, flat top-down only, no top-down finish). v2: engine68 (oblique pseudo-drone camera), single white text hook, 8 cuts on the beat (124 BPM, 19.8 s), 7 Maldives places (archipelago, Malé, Velana, Thulusdhoo, Fuvahmulah, Gan, Fuvahmulah top-down), music only, LUFS -14.8. Table in map_shorts/ref_geoglobetales_2026_10_22/dna_jTJ2UFF3B0I.md. Not uploaded or scheduled; user go pending.
