@@ -45,3 +45,7 @@ Legend: YES = matches, PART = partly, NO = missing.
 - Lofoten v5 around ONE subject, Reine village: search Pexels for more Reine clips (vidIQ broll, ~1 credit per search), all shots of Reine from different angles; hook with tension, e.g. "Winter here: weeks without sunrise. They stay." (check the polar-night fact for Reine before use); zoom down to ~200 m with extra Esri imagery and a final tilt (oblique engine) for a 3D feel, add a light cloud layer on the globe; remove the vignette on the globe part; one golden-hour shot if a Reine clip exists.
 - Music: a licensed or royalty-free recorded track (no copyrighted or trending music without a licence), or the user adds a trending sound inside TikTok.
 - Maldives: keep as is (user decision); it cannot match the drone look without real footage.
+
+## v5 status (22.10, after the user's "делай все недочеты как у референса")
+Fixed: one hero subject (all shots Reine) | hook with tension + colour emoji | clouds on the globe, dive to the rooftops (~350 m view), top-down | dusk/golden shot (ascend reveal) | ascend reveal as the first drone shot | real recorded music (Mixkit, 125 BPM, cuts on its beats) | no vignette | comment trigger (debatable "sea doesn't freeze", hedged in the description) | real forward drift (no digital push).
+Still different: finale is satellite rooftops, not a drone nadir; no low telephoto shot from the sea level; no 3D terrain in the zoom; channel/audience effect.

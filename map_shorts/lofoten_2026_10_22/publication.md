@@ -1,18 +1,17 @@
-# Lofoten Short (silent, 19.8 s, real drone footage) — publication package
+# Lofoten Short v5 (no voice, 19.8 s, real drone footage of Reine) — publication package
 
 Video file is NOT in the repo (session workspace; upload to Higgsfield media for Metricool after the user's go).
 
 ## Title (YouTube)
-Above the Arctic Circle 🇳🇴 This Is Lofoten, Norway #shorts #lofoten
+Above the Arctic Circle, Yet the Sea Doesn't Freeze 🌊 Reine, Lofoten #shorts #lofoten #norway
 
 ## Description
-The Lofoten islands in Norway lie north of the Arctic Circle (about 68 degrees north), yet the coast is lined with fishing villages, white beaches and turquoise water.
-The wooden frames in the last shots are stockfish racks (hjell), where cod is dried in the cold air.
+Reine, a fishing village in the Lofoten islands of Norway, lies north of the Arctic Circle (about 68 degrees north). Yet the sea around Lofoten usually stays ice-free in winter, warmed by the North Atlantic Current (the northern branch of the Gulf Stream).
 
-Drone footage (Pexels licence, free to use): Loic Van Montagu, Deek Van der aa (links below). Globe animation: NASA Blue Marble and Natural Earth, drawn by us. Music is synthesized by us. No voice.
-Footage: https://www.pexels.com/video/breathtaking-aerial-view-of-lofoten-islands-norway-34425904/ · https://www.pexels.com/video/aerial-view-of-scenic-fjord-in-lofoten-35466636/ · https://www.pexels.com/video/scenic-aerial-view-of-lofoten-coastline-35466391/ · https://www.pexels.com/video/aerial-view-of-lofoten-fishing-racks-norway-34509933/
+Drone footage (Pexels licence, free to use): Clément Proust, Loic Van Montagu (links below). Satellite imagery: Esri World Imagery (Esri, Maxar, Earthstar Geographics); globe and clouds drawn by us. Music: "Epical Drums 04" by Grigoriy Nuzhny (Mixkit Stock Music Free License). No voice.
+Footage: https://www.pexels.com/video/aerial-sunset-hike-on-reinebringen-ridge-39810267/ · https://www.pexels.com/video/breathtaking-aerial-view-of-lofoten-islands-norway-34425904/ · https://www.pexels.com/video/scenic-aerial-view-of-reinebringen-fjord-39835660/ · https://www.pexels.com/video/aerial-view-of-reine-lofoten-islands-39835662/
 
-#lofoten #norway #drone #arcticcircle #shorts
+#reine #lofoten #norway #arcticcircle #drone #shorts
 
 ## Tags
 lofoten, lofoten islands, norway, norway drone, arctic circle, drone footage, aerial view, fjord, reine, stockfish, travel norway, scenic
@@ -21,8 +20,10 @@ lofoten, lofoten islands, norway, norway drone, arctic circle, drone footage, ae
 - YouTube isAiGeneratedContent: false (real footage; globe and text are graphics, no AI voice, no AI footage)
 - TikTok isAigc: false; Instagram: same file, same caption
 
-## Segments (all footage labelled Lofoten on Pexels; shot lengths and moves from the second vidIQ breakdown of the reference)
-Globe zoom with satellite dive 0-2.85 s (engine69, down to ~0.9 km, top-down) | 3.9 s ascend over the Reine ridge (Loic Van Montagu 34425904 @0) | 2.9 s lateral pan over the turquoise lagoon (Deek 35466636 @12.5) | 3.9 s high forward drift over the harbour with red boats (Deek 34509933 @8) | 1 s close-up of the peak (Deek 34434951 @13) | 1 s wide sweep over Reine (34425904 @11.5) | 4.3 s looking down on stockfish racks and the sea (34509933 @94). Grade: saturation +14%, contrast +5%, hard cuts only, no vignette on footage.
+## Segments v5 (ONE subject: Reine; reference = one temple from all angles)
+0-2.87 s globe -> clouds -> satellite dive to Reine's rooftops (~350 m view, top-down), hook "Above the Arctic Circle. / Yet the sea doesn't freeze 🌊" | 3.9 s ascend over the Reinebringen ridge, Reine revealed at dusk (Clément Proust 39810267 @12) | 2.9 s pan over the Reine fjord, daylight (Loic Van Montagu 34425904 @6) | 3.8 s forward drift toward Reine (Clément Proust 39835660 @5) | 1 s tele close-up of the red cabins (39835662 @2.5, crop) | 1 s wide sweep over the islets (34425904 @12.5) | 4.5 s straight down on Reine's rooftops with a slow clockwise turn (Esri satellite, engine69), hard cut back to the globe.
+Cuts on the 125 BPM grid of the track (beats 6/14/20/28/30/32); measured onset offset -50...+95 ms (real recording, busy percussion). -14.0 LUFS, peak -1.3 dBFS. No vignette, hard cuts only.
+Honest notes: the finale is satellite imagery, not a drone nadir shot (no Reine nadir clip on Pexels); the hook claim is hedged in the description ("usually ice-free").
 
 ## Cover
 Frame 10.5 s (harbour with red boats) or 14.9 s (Reine); pick after the first 24 h.
