@@ -70,7 +70,7 @@ def s2_scenes(b, lat, years=(2023, 2024, 2025), cloud=35, limit=300):
     return first + rest
 
 
-def s2_mosaic(b, w, h, lat, max_scenes=40):
+def s2_mosaic(b, w, h, lat, max_scenes=40, water_ref=None):
     """Cloud-masked mosaic with the Sentinel-2 scene classification (SCL): cloud, shadow, snow and no-data pixels are filled from other scenes."""
     import rasterio
     from rasterio.enums import Resampling
@@ -78,6 +78,8 @@ def s2_mosaic(b, w, h, lat, max_scenes=40):
     from rasterio.vrt import WarpedVRT
     l0, b0, l1, b1 = b
     s2_mosaic.__dict__.pop("water_ref", None)
+    if water_ref is not None:
+        s2_mosaic.water_ref = np.asarray(water_ref, np.float32)
     dst = from_bounds(l0, b0, l1, b1, w, h)
     acc = np.zeros((h, w, 3), np.uint8)
     filled = np.zeros((h, w), bool)
