@@ -3,10 +3,10 @@
 
 SHORTS = {
     "turkey": {
-        "title": "Turkey: The Country on TWO Continents 🗺️ | Map Animation",
+        "title": "People Say Turkey Isn't in Europe. Here's the Map 🗺️",
         "lines": [
-            "Turkey is not just an ordinary country.",                                              # flag fill, pin
-            "It is actually a giant that sits on two continents at once,",                          # purple + flexing character
+            "People say Turkey isn't in Europe.",                                              # flag fill, pin
+            "But about three percent of its land is, so it is actually a giant on two continents at once,",                          # purple + flexing character
             "and once ruled a huge part of the world.",                                             # tilted world card, arcs
             "Today it quietly guards the gate between Europe and Asia.",                            # back, happy eyes
             "Notice this. To the west lie Greece and Bulgaria,",                                    # pan west

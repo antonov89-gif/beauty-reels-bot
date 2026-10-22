@@ -30,6 +30,11 @@ def build(short, K, O, TILT, WT, ST, D):
     O("char", WT(1, "actually") - 0.1, ST[2] + 0.05, mood="angry", arms=True, lon=FACE[0], lat=FACE[1], left=SH_L, right=SH_R, s=44, arm_s=72)
     K(ST[2] - 0.05, TR[0], TR[1], 20.0)
 
+    # myth hook (v2): first spoken words as text, then the 3% of Turkey that lies in Europe (East Thrace) lights up
+    O("label", 0.15, end(0) + 0.15, x=540, y=470, txt="NOT IN EUROPE?", size=76, col=YEL)
+    O("fill", WT(1, "three") - 0.1, ST[2] + 0.1, name="Thrace10", col=(0, 184, 212), alpha=0.8, glow=YEL)
+    O("counter", WT(1, "three") - 0.05, ST[2] + 0.1, x=540, y=470, v0=0, v1=3, fmt="{:.0f}% IN EUROPE", dur=0.8, size=84)
+
     # L2 tilted world card: cyan arcs from Istanbul
     TILT(ST[2] - 0.05, ST[3] - 0.05, cam=(22.0, 36.0, 16.0), origin=IST, s0=2.6, s1=1.0, roll=-5,
          arcs=[((19.04, 47.50), WT(2, "once")), ((31.24, 30.04), WT(2, "ruled")), ((44.37, 33.31), WT(2, "huge")),
