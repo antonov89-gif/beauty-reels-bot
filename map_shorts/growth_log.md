@@ -363,3 +363,6 @@ No black frames, no freezes, durations 19.78 s, 1080x1920 30 fps. Remaining limi
 
 ### 22.10 Lofoten v7: two AI shots (user approved Veo 3.1 Lite, chose WaveSpeed)
 APIpod: "insufficient quota" (nothing charged). WaveSpeed: Nano Banana 2.1 Edit keyframe $0.038 + 2 x Veo 3.1 Lite 4 s $0.20 = $0.44 (balance 3.297 -> 2.860; price was higher than the APIpod quote of ~$0.18 because WaveSpeed charges $0.20 per 4 s clip; still within the user's go for Veo 3.1 Lite, noted for the user). AI flags (YouTube isAiGeneratedContent, TikTok isAigc) must be ON for this Short. Source: map_shorts/lofoten_2026_10_22/engine69_v7.
+
+### 22.10 Authenticity audit (user: "Проверяй на Аутентичность") - Lofoten v7b
+Report: map_shorts/lofoten_2026_10_22/authenticity_audit_2026_10_22.md. Verified: Arctic Circle claim, footage identity (3 of 4 clips titled Reine/Reinebringen, 1 titled Lofoten), no identifiable people in the used segments, Pexels credits. Partly verified: "sea doesn't freeze" (no measured ice statistic), Mixkit music licence (text not read, Content ID unconfirmed), Esri terms (not verified). Fixed: on-screen "AI-GENERATED SHOT" labels on both AI shots (+ Esri credit on the finale), description wording. YouTube inauthentic-content risk assessed moderate for monetisation (stock-heavy), low for removal.
