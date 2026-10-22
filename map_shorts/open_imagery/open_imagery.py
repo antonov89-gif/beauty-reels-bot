@@ -126,12 +126,14 @@ def s2_mosaic(b, w, h, lat, max_scenes=40, water_ref=None):
     return Image.fromarray(acc), filled, used
 
 
-def build(lon, lat, d, w, h, out, quality=94):
+def build(lon, lat, d, w, h, out, quality=94, sea=True):
     m_per_px = 2 * d * 111320 / h
     if m_per_px < 6:                                                        # finer than Sentinel-2 can give: build at ~8 m/px and upscale smoothly (no pixel blocks)
         f = max(2, int(8 // m_per_px))
-        info = build(lon, lat, d, w // f, h // f, out, quality)
-        Image.open(out).convert("RGB").resize((w, h), Image.LANCZOS).save(out, quality=quality)
+        info = build(lon, lat, d, w // f, h // f, out, quality, sea=False)
+        Image.open(out).convert("RGB").resize((w, h), Image.BICUBIC).save(out, quality=quality)
+        if sea and info["source"] == "gibs+sentinel2":
+            fix_sea(out)
         info["upscaled_x"] = f
         return info
     b = bbox_of(lon, lat, d, w, h)
@@ -146,7 +148,7 @@ def build(lon, lat, d, w, h, out, quality=94):
             base = Image.fromarray(arr)
             info.update(source="gibs+sentinel2", s2_cover=round(float(filled.mean()), 3), scenes=used)
     base.save(out, quality=quality)
-    if info["source"] == "gibs+sentinel2":
+    if sea and info["source"] == "gibs+sentinel2":
         fix_sea(out)
     return info
 
