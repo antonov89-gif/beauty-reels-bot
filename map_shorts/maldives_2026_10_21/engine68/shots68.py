@@ -12,7 +12,7 @@ def build(short, K, O, GK, GLOBE, OB, OBL, HOOK, ST, D):
     GLOBE(0, cut(1))
     GK(0, 5, 22, 520)
     GK(cut(1), 73.2, 3.5, 2300)
-    HOOK.append((0.1, cut(1), ["The sea is rising.", "Maldives: 1.5 m high"], True))
+    HOOK.append((0.1, cut(1), ["The sea is rising.", "Maldives: 1.5 m on average"], True))
 
     OBL(cut(1), end)
     # S1 whole archipelago from high up, tilting in
