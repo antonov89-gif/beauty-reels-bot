@@ -49,3 +49,7 @@ Legend: YES = matches, PART = partly, NO = missing.
 ## v5 status (22.10, after the user's "делай все недочеты как у референса")
 Fixed: one hero subject (all shots Reine) | hook with tension + colour emoji | clouds on the globe, dive to the rooftops (~350 m view), top-down | dusk/golden shot (ascend reveal) | ascend reveal as the first drone shot | real recorded music (Mixkit, 125 BPM, cuts on its beats) | no vignette | comment trigger (debatable "sea doesn't freeze", hedged in the description) | real forward drift (no digital push).
 Still different: finale is satellite rooftops, not a drone nadir; no low telephoto shot from the sea level; no 3D terrain in the zoom; channel/audience effect.
+
+## v6 status (22.10, "Делай все отличия")
+Fixed now: 3D look in the dive (terrain relief from AWS Terrain Tiles baked into the imagery as hillshade + oblique camera that tilts like a Google-Earth fly-in and levels to straight down on the roofs); cuts snapped to the measured drum hits (offset <= 12 ms).
+Searched and not available for free: a drone nadir clip of Reine and a sea-level telephoto shot of Reine (Pexels: none; Wikimedia Commons: API rate-limited from this network). Only AI generation could add them (paid, waits for the user's approval; would be labelled AI).
