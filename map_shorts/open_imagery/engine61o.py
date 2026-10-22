@@ -724,7 +724,7 @@ def frame(fi):
         img = whip(base(k - 1, t)[0], img, (t - SH[k][0]) / 0.12)
     overlays(img, t, k, km)
     uses_ne = any(fn in ("country",) for fn, _ in SH[k][3])
-    credit(img, "NASA Blue Marble · Contains modified Copernicus Sentinel data 2023-2026" + (" · Borders: Natural Earth" if uses_ne else ""))
+    credit(img, "NASA Blue Marble · Contains modified Copernicus Sentinel data 2023-2026" + os.environ.get("CREDIT_EXTRA", "") + (" · Borders: Natural Earth" if uses_ne else ""))
     hook(img, t)
     caption(img, t)
     return Image.fromarray(post(img, t))

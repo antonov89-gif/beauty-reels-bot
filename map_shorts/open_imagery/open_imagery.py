@@ -30,8 +30,16 @@ def bbox_of(lon, lat, d, w, h):
 def gibs_image(b, w, h, layer="BlueMarble_NextGeneration"):
     """GIBS limits the request size; fetch in horizontal bands of <= 2048 rows and stack."""
     l0, b0, l1, b1 = b
+    if (l1 - l0) < 0.0999 or (b1 - b0) < 0.0999:                               # GIBS refuses tiny boxes: fetch a 0.1-deg box and crop
+        k = max(0.1 / (l1 - l0), 0.1 / (b1 - b0))
+        cl, cb = (l0 + l1) / 2, (b0 + b1) / 2
+        big = gibs_image((cl - (l1 - l0) * k / 2, cb - (b1 - b0) * k / 2, cl + (l1 - l0) * k / 2, cb + (b1 - b0) * k / 2),
+                         min(int(w * k), 2048), min(int(h * k), 2048), layer)
+        bw, bh = big.size
+        cx0, cy0 = bw / 2 - bw / k / 2, bh / 2 - bh / k / 2
+        return big.crop((int(cx0), int(cy0), int(cx0 + bw / k), int(cy0 + bh / k))).resize((w, h), Image.BICUBIC)
     out = Image.new("RGB", (w, h))
-    band = 1024
+    band = -(-h // -(-h // 1024))                                         # equal bands (no tiny remainder band)
     tmp = f"/tmp/_gibs_{os.getpid()}.jpg"
     for y0 in range(0, h, band):
         hh = min(band, h - y0)
@@ -106,6 +114,10 @@ def s2_mosaic(b, w, h, lat, max_scenes=40, water_ref=None):
             a[wat] = np.clip(a[wat] + sh, 0, 255)
             a = a.astype(np.uint8)
         good = (a.sum(axis=2) > 12) & np.isin(c, (4, 5, 6, 7))             # vegetation, bare, water, unclassified
+        ov = good & filled                                                     # tone-match this scene to what is already in the mosaic (median shift on the overlap)
+        if ov.sum() > 3000:
+            sh = np.median(acc[ov].astype(np.float32), axis=0) - np.median(a[ov].astype(np.float32), axis=0)
+            a = np.clip(a.astype(np.float32) + sh, 0, 255).astype(np.uint8)
         m = good & ~filled
         if m.mean() > 0.002:
             acc[m] = a[m]
@@ -115,8 +127,14 @@ def s2_mosaic(b, w, h, lat, max_scenes=40, water_ref=None):
 
 
 def build(lon, lat, d, w, h, out, quality=94):
-    b = bbox_of(lon, lat, d, w, h)
     m_per_px = 2 * d * 111320 / h
+    if m_per_px < 6:                                                        # finer than Sentinel-2 can give: build at ~8 m/px and upscale smoothly (no pixel blocks)
+        f = max(2, int(8 // m_per_px))
+        info = build(lon, lat, d, w // f, h // f, out, quality)
+        Image.open(out).convert("RGB").resize((w, h), Image.LANCZOS).save(out, quality=quality)
+        info["upscaled_x"] = f
+        return info
+    b = bbox_of(lon, lat, d, w, h)
     base = gibs_image(b, w, h, "BlueMarble_ShadedRelief_Bathymetry" if m_per_px > 60 else "BlueMarble_NextGeneration")
     info = {"m_per_px": round(m_per_px), "source": "gibs"}
     if m_per_px <= 260 and d <= 2.5:                                      # Sentinel-2 is sharper than Blue Marble here
