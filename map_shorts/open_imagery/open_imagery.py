@@ -32,18 +32,19 @@ def gibs_image(b, w, h, layer="BlueMarble_NextGeneration"):
     l0, b0, l1, b1 = b
     out = Image.new("RGB", (w, h))
     band = 1024
+    tmp = f"/tmp/_gibs_{os.getpid()}.jpg"
     for y0 in range(0, h, band):
         hh = min(band, h - y0)
         t = b1 - (b1 - b0) * y0 / h
         bt = b1 - (b1 - b0) * (y0 + hh) / h
         u = GIBS.format(layer=layer, b=f"{l0},{bt},{l1},{t}", w=w, h=hh)
         for attempt in range(4):
-            r = subprocess.run(["curl", "-sSf", "--max-time", "120", "-o", "/tmp/_gibs.jpg", u])
-            if r.returncode == 0 and os.path.getsize("/tmp/_gibs.jpg") > 2000:
+            r = subprocess.run(["curl", "-sSf", "--max-time", "120", "-o", tmp, u])
+            if r.returncode == 0 and os.path.getsize(tmp) > 2000:
                 break
         else:
             raise SystemExit("GIBS failed " + u)
-        out.paste(Image.open("/tmp/_gibs.jpg").convert("RGB").resize((w, hh)), (0, y0))
+        out.paste(Image.open(tmp).convert("RGB").resize((w, hh)), (0, y0))
     return out
 
 
@@ -129,13 +130,6 @@ def build(lon, lat, d, w, h, out, quality=94):
         fix_sea(out)
     return info
 
-
-if __name__ == "__main__":
-    import sys
-    lon, lat, d, w, h = float(sys.argv[1]), float(sys.argv[2]), float(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5])
-    print(build(lon, lat, d, w, h, sys.argv[6]))
-
-
 def fix_sea(path, sea=(14, 40, 62)):
     """Sentinel-2 open sea is near-black with tile seams: replace water (blue >= green, dark) by a smooth sea tone, keep shore detail."""
     from scipy.ndimage import gaussian_filter
@@ -149,3 +143,9 @@ def fix_sea(path, sea=(14, 40, 62)):
     tone = np.array(sea, np.float32) + (lum[..., None] - 14) * 0.6 * 0                # flat tone
     out = a * (1 - wm[..., None]) + tone * wm[..., None]
     Image.fromarray(np.clip(out, 0, 255).astype(np.uint8)).save(path, quality=94)
+
+
+if __name__ == "__main__":
+    import sys
+    lon, lat, d, w, h = float(sys.argv[1]), float(sys.argv[2]), float(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5])
+    print(build(lon, lat, d, w, h, sys.argv[6]))
