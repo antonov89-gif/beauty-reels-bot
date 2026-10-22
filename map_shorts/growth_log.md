@@ -215,6 +215,26 @@ GTA Shorts stay in the TikTok queue as planned (user: "Для тик ток пу
 - Repeating: (1) on-screen text hook on frame 0: 10 of 10; (2) sound from the first second: 10 of 10; (3) a hook that makes a claim, a myth or a "right now" question: 5 of 10 (e.g. "People say Turkey isn't in Europe", "What's happening in France right now", "Reportedly France is"); (4) lengths on TikTok mostly under 70 s (median 45 s); (5) a map zoom plus one icon/highlight on the first frame (4 of 10).
 - Useful for E5 (Turkey, 24.10): a Turkey myth-vs-data reel (799k, 35x median on Instagram) used the hook "People say Turkey isn't in Europe" with a red X on the map. Our Turkey Short is already scheduled; not changed. Content not copied.
 
+### Monitoring 22.10 10:00 MSK (vidIQ + Metricool; ~15 vidIQ credits)
+**YouTube (public counts, 12 h change since 21.10 22:00; baseline median 1,245).**
+| Video (published, MSK) | Age | Views | 12 h change | % of median |
+|---|---|---|---|---|
+| Pheasant Island (21.10 10:02) | ~24 h | 1,141 | +43 | 92% (24 h, slowing) |
+| Baarle double borders (21.10 14:03) | ~20 h | 688 | +363 | 55% (late push) |
+| Gold cube "What If You Melted..." (20.10 14:02) | ~44 h | 1,016 | +237 | 82% (still growing after the title change) |
+| Libya (19.10 15:03) | ~3 d | 1,478 | +127 | 119% |
+| Aral Sea (20.10 12:03) | ~46 h | 2,173 | +26 | 175% (plateau) |
+| $100B Short (20.10 16:03) | ~42 h | 1,169 | +46 | 94% |
+| Euro coin (19.10 14:03) | ~3 d | 1,190 | +43 | 96% |
+| Russia (19.10 16:05) | ~3 d | 1,129 | +18 | 91% |
+| Suez / $100B long | - | 11 / 3 | 0 | - |
+- Baarle rule (24 h < 50% of median -> border Shorts get the most unusual visual on frame 0): at 20 h it is already 55% (688 > 622), so the rule is NOT triggered; it recovered from 26% at 8 h. Final 24 h read at ~14:00 in the evening run.
+- Gold cube: +237 in 12 h after +299 the previous 12 h; the only older Short still climbing fast. "What if" title hypothesis stays open (n = 1).
+- vidIQ analytics 19-22.10 (data lag ~2 days, so it covers 19-20.10 mostly): Shorts feed 2,476 of 2,713 views (91%); feed average view percentage 67.3% (baseline 62%); engaged/views 50% (baseline 52%), so about half of feed viewers swipe away. Leaders by engaged share: Libya 52% (AVP 73.4%), coin 48% (63.3%). Weakest: Russia 42% engaged and AVP 33% at 85 s (the longest Short: length probably hurts). Search 141 views (5%).
+- Today's queue in Metricool: Bolivia 10:00 (status PENDING at read time), Egypt 14:00, time zones 16:00 (E7). Tomorrow: Chile 10:00, Australia 14:00, Hormuz long 15:00.
+- Metadata: no errors on new uploads (Pheasant, Baarle). Ocean-floor tag fix still waits for the user's go. Nothing changed.
+**TikTok (Metricool): DATA MISSING.** Post rows empty; TKEV02/07/08 return 0 or null for 16-22.10. No TikTok video is visible (Pheasant, Baarle, Aral, Libya and the rest), so no ranking. Nothing invented. User was checking the connection on 21.10.
+
 ### DNA analysis 22.10 (user request): GeoGlobeTales "Which Country Is Closest to Space?" (XpYfmHoPEAs)
 Report: `map_shorts/ref_geoglobetales_2026_10_22/dna_XpYfmHoPEAs.md` (cost: ~25 vidIQ credits: video data 5, watch 10, comments 5, channel Shorts 5, transcript 5). Reference: 30.3M views, 21.9 likes/1k, 85 s; the channel's 50 top Shorts are all 11.8-61M.
 - Measured: 267 words in 85 s = ~188 wpm (our Russia ~130 wpm); ~4.9 events/10 s, 12 cuts in 84 s (STRONG INFERENCE); 18 of 25 top comment threads (72%) are about one mid-video fake-out ("our planet is flat... just kidding"), top three by likes.
