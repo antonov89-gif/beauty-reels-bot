@@ -53,6 +53,12 @@ def build(lon, lat, d, w, h, out, srcs):
         m = a[..., 3] > 0
         if m.mean() < 0.005:
             continue
+        hi = a[..., :3].astype(np.float32)
+        mf = m.astype(np.float32)
+        den = gaussian_filter(mf, 60) + 1e-4                                  # large-scale tone of the orthophoto -> tone of the open base
+        ratio = np.stack([(gaussian_filter(base[..., c] * mf, 60) / den + 1) / (gaussian_filter(hi[..., c] * mf, 60) / den + 1) for c in range(3)], -1)
+        a = a.copy()
+        a[..., :3] = np.clip(hi * np.clip(ratio, 0.6, 1.6), 0, 255).astype(np.uint8)
         al = gaussian_filter(m.astype(np.float32), 2.0)[..., None]
         al = np.where(m[..., None], np.maximum(al, 0.0) ** 0.5, al * 0)
         base = base * (1 - al) + a[..., :3].astype(np.float32) * al
