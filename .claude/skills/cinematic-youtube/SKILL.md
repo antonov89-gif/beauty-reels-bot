@@ -8,6 +8,8 @@ description: Use when making a faceless YouTube video for this channel (long-for
 Built from our own v10-v13 engines and distilled ideas from OpenMontage, Video Shotcraft and AI Shortfilm Prompts.
 Reply to the user in Russian, briefly. Video text and publication package are in English.
 
+**MANDATORY GATE:** every video (Short or long) passes the `authenticity-check` skill on the final file before it is delivered, uploaded or scheduled (user rule 22.10.2026).
+
 ## 1. Pipeline (in this order)
 1. **Script**: list of `(text, card)` lines, one card per country or scene (`map_shorts/v13/script13.py`).
 2. **Voice**: ElevenLabs "David" through Lumean (`tts_lumean.py go`, needs `.lumean_key`, never commit it). If the key is dead use Kokoro (`tts_kokoro.py`). Then `timing_from_align.py` builds `timing.json` word timings. Check every line has matching word counts.

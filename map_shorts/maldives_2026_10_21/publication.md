@@ -6,11 +6,11 @@ Video file is NOT in the repo (kept in the session workspace, uploaded to Higgsf
 This Country Is Only 1.5 Meters High 🇲🇻 #shorts #maldives
 
 ## Description
-The Maldives has an average ground elevation of about 1.5 m above sea level, which is commonly cited as the lowest of any country.
+The Maldives has an average ground elevation of about 1.5 m above sea level (some sources give about 1.8 m), which is commonly cited as the lowest of any country.
 
 Visuals: satellite imagery (Esri World Imagery, Maxar, Earthstar Geographics) with a virtual camera, coastlines (Natural Earth). Places shown: the whole archipelago, Malé, Velana Airport, Thulusdhoo, Fuvahmulah, Gan (Addu Atoll).
 Music is synthesized by us. No voice.
-Facts: average elevation about 1.5 m (CIA World Factbook); about 1,190 islands in 26 atolls; global sea level is rising (IPCC).
+Facts: average elevation about 1.5 m (encyclopedic sources; the exact CIA Factbook wording was not opened); about 1,190 islands in 26 atolls; global sea level is rising (IPCC).
 
 #maldives #geography #map #satellite #shorts
 

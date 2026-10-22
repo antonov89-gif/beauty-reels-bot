@@ -15,7 +15,7 @@ The full prompt is `map_shorts/prompts/youtube_growth_engine_v3_pro.md`. Read it
 
 ## Which mode
 - No mode given → MODE 2 DEEP AUDIT.
-- New Short rendered, before scheduling → MODE 3 PRE-PUBLISH: Module 10 (stages A–D), 11 (risk 1–5 per group), 12 (QC + script-to-video table), Judge A/B, consensus, then verdict READY / REVISE / REWORK / INSUFFICIENT DATA. Watch the actual file (extract stills at 0.0 s, 1 s, 3 s and each scene; check loudness), never judge by title only.
+- New Short rendered, before scheduling → MODE 3 PRE-PUBLISH: Module 10 (stages A–D), 11 (risk 1–5 per group), 12 (QC + script-to-video table), Judge A/B, consensus, then verdict READY / REVISE / REWORK / INSUFFICIENT DATA. Watch the actual file (extract stills at 0.0 s, 1 s, 3 s and each scene; check loudness), never judge by title only. Also run the `authenticity-check` skill: a READY verdict is impossible without its PASS/FIXED.
 - 24–72 h after publishing, or on a monitoring run → MODE 4 CONTINUOUS OPTIMIZATION: compare with the log, update the experiment cards.
 - "quick" → MODE 1.
 
