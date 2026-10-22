@@ -9,7 +9,7 @@ File: chile_open.mp4, 1080x1920 30 fps, 47.2 s, 36 MB, -15.4 LUFS, true peak -2.
 | AI | AI voice (ElevenLabs via Lumean) disclosed; flags isAiGeneratedContent / isAigc ON. No AI visuals. |
 | People/logos | None. |
 | Sound | Music and effects synthesised by us. |
-| Imagery | NASA GIBS Blue Marble (+ shaded relief/bathymetry), Copernicus Sentinel-2 (Atacama, Patagonian icefield), Natural Earth borders. Credit on screen and in the description. No Esri in the file. Sentinel water tone smoothed, snow is bright (icefield over-exposed): cosmetic. |
+| Imagery | NASA GIBS Blue Marble (+ shaded relief/bathymetry), Copernicus Sentinel-2 (Atacama, Patagonian icefield; scenes 2025-2026, credit reads 2023-2026), Natural Earth borders. Credit on screen and in the description. No Esri in the file. Sentinel water tone smoothed, snow is bright (icefield over-exposed): cosmetic. |
 | Platform policy | Original graphics, research and commentary. Removal LOW, monetisation LOW. |
 | Metadata | Esri credit replaced in the description. |
 
