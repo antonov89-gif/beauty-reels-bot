@@ -53,3 +53,7 @@ Still different: finale is satellite rooftops, not a drone nadir; no low telepho
 ## v6 status (22.10, "Делай все отличия")
 Fixed now: 3D look in the dive (terrain relief from AWS Terrain Tiles baked into the imagery as hillshade + oblique camera that tilts like a Google-Earth fly-in and levels to straight down on the roofs); cuts snapped to the measured drum hits (offset <= 12 ms).
 Searched and not available for free: a drone nadir clip of Reine and a sea-level telephoto shot of Reine (Pexels: none; Wikimedia Commons: API rate-limited from this network). Only AI generation could add them (paid, waits for the user's approval; would be labelled AI).
+
+## v7 status (22.10, "Делай Veo 3.1 Lite через WaveSpeed")
+Added with AI (labelled): low telephoto shot from the sea level (reference shot 3) and a top-down descent finale with a clockwise turn (reference shot 7). Cost $0.44 via WaveSpeed (APIpod had no balance: "insufficient quota"; WaveSpeed Veo 3.1 Lite cost $0.20 per 4 s clip, not the $0.08 of APIpod).
+Remaining differences: the finale is a generated top-down descent, not real drone footage (rotation subtle, corners cropped); two shots of the video are AI, so the AI flag is on (may reduce the 'real drone' effect); channel/audience.
