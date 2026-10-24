@@ -19,3 +19,11 @@ QC (final render 25.10 00:19 MSK): 62.9 s, 87 MB, -14.3 LUFS integrated, peak -1
 
 Verdict: PASS (VERIFIED or PARTLY with the stated, accepted wording risks; nothing BLOCK). Open items for the owner: none blocking; optional AI shots (ai_prompts.md) only after the owner's go and a price check.
 Scheduled (read back from Zernio 25.10 00:25 MSK): post 6add21655a8f1bccdd189772, 29.10 14:00 MSK, YouTube + TikTok, YouTube containsSyntheticMedia true, TikTok video_made_with_ai true. Media: Zernio moved the upload from temp/ to media.zernio.com/media/... when the post was created (read back), so it stays until publishing.
+
+
+## Re-render with AI inserts (25.10, owner chose 4 WaveSpeed clips, $0.80: balance 2.8595 -> 2.0595 USD)
+| Section | Finding |
+|---|---|
+| AI shots | 4 Veo 3.1 Lite text-to-video clips (4 s, 720p upscaled to 1080x1920), each used 1.2-1.7 s: outback road at "So is it just about size?", Greenland ice edge at "stays the world's largest island", 16th-century cartographer at "Mercator projection", 16th-century ship with compass at "made for sailors in 1569". Every insert carries the on-screen label "AI-GENERATED ILLUSTRATION"; the description lists all four and says they are not real footage; YouTube containsSyntheticMedia and TikTok video_made_with_ai stay ON. The cartographer is an unnamed generic scholar seen from behind, not presented as a portrait of Mercator (no name on screen over him). Clip audio discarded. |
+| AI inventions | Ship chart contained illegible pseudo-writing in the lower right: blurred in every frame. Cartographer's globe and map are generic; no readable text. Outback and ice are generic landscapes, not named places. |
+| People | One AI figure (generic, face not shown): no real person. |

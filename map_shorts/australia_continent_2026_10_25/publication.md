@@ -9,7 +9,7 @@ On many world maps Greenland even looks bigger than Australia. Slide it down to 
 
 Facts and sources: Australia 7,688,287 km² (Geoscience Australia); Greenland about 2.16 million km² (Wikipedia); Australia nearly 4,000 km (about 2,500 mi) from Steep Point to Cape Byron (ABS); no strict criteria for continents (Oxford English Dictionary, National Geographic); Greenland on the North American Plate (NASA SVS; Wikipedia "Greenland plate"); Mercator projection, Gerardus Mercator, 1569. The true-size slide moves Greenland's outline along a great circle and re-projects it on a Mercator map; outlines are simplified.
 
-Imagery: NASA Blue Marble shaded relief and bathymetry (NASA GIBS); country borders: Natural Earth; plate boundaries: PB2002 model by Peter Bird (2003), digital data by Hugo Ahlenius / Nordpil, Open Data Commons Attribution License (ODC-By 1.0). Maps, icons and animation are made for this video; music and sound effects are synthesised for it. Voice-over is AI (ElevenLabs via Lumean).
+Imagery: NASA Blue Marble shaded relief and bathymetry (NASA GIBS); country borders: Natural Earth; plate boundaries: PB2002 model by Peter Bird (2003), digital data by Hugo Ahlenius / Nordpil, Open Data Commons Attribution License (ODC-By 1.0). Maps, icons and animation are made for this video; music and sound effects are synthesised for it. Four short scenes are AI-generated illustrations, labelled on screen (a 16th-century cartographer, a 16th-century ship with a compass, the Greenland ice edge and the Australian outback; Veo 3.1 Lite via WaveSpeed): they are not real footage. Voice-over is AI (ElevenLabs via Lumean).
 
 #geography #maps #australia #greenland #continents #mercator #mapanimation #facts #shorts
 
