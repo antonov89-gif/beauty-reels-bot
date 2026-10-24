@@ -478,3 +478,8 @@ Experiment to read: do the 13-18 s "looks fake but is real" format and the AI-la
 
 ### 25.10 02:45 MSK Cinema Short v2 (owner: "Прям как референс но другая анимация чтоб не прям копия")
 Reworked the AI cinema clip closer to the reference's structure (selfie framing with a water bottle, pan to the screen, quiet build, breach at ~3-4 s, foam in the rows, soaked viewer laughing) with a different animation (humpback whale instead of the ship; all content new AI, no copied shots). Veo 3.1 Lite, 8 s, $0.40 (WaveSpeed balance 0.8595 -> 0.4595 USD; top-up needed for further generations; Fast $1.20 not affordable). Same labels and flags, Zernio post 6add30643701db83e5246486 updated in place (still 29.10 14:00 MSK). Limit of the model: the whale stays on the screen instead of flying into the room; the foam and the reaction match the reference. Audit v2 PASS with accepted risks.
+
+## 24.10 (поздно): кино-Short, второй разбор референса
+- v2 (кит) снят с графика (draft в Zernio). Причина: кит не вылетает в зал, слабый реализм.
+- Второй просмотр референса (vidIQ, 10 кредитов): разрыв v2 против референса описан в `map_shorts/cinema_ai_2026_10_25/reference_vs_v2.md`.
+- План v3: два клипа Veo 3.1 Fast по 6 с (t2v + i2v с последнего кадра), ≈ $1,80. Баланс WaveSpeed $0,4595, нужно пополнение ≥ $1,40. Ничего не генерируется до подтверждения владельца.
