@@ -6,6 +6,7 @@ notice 'Contains modified Copernicus Sentinel data <year>') for close views.
 Attribution to use: 'NASA Blue Marble; Contains modified Copernicus Sentinel data 2025; Natural Earth'."""
 import math
 import os
+import threading
 import json
 import subprocess
 import urllib.request
@@ -40,7 +41,7 @@ def gibs_image(b, w, h, layer="BlueMarble_NextGeneration"):
         return big.crop((int(cx0), int(cy0), int(cx0 + bw / k), int(cy0 + bh / k))).resize((w, h), Image.BICUBIC)
     out = Image.new("RGB", (w, h))
     band = -(-h // -(-h // 1024))                                         # equal bands (no tiny remainder band)
-    tmp = f"/tmp/_gibs_{os.getpid()}.jpg"
+    tmp = f"/tmp/_gibs_{os.getpid()}_{threading.get_ident()}.jpg"   # threads share the pid
     for y0 in range(0, h, band):
         hh = min(band, h - y0)
         t = b1 - (b1 - b0) * y0 / h
