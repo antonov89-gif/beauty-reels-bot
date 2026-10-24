@@ -24,5 +24,5 @@ TikTok settings that Zernio accepts (top-level `tiktokSettings`): privacy_level,
 | 29.10 10:00 | Australia | YT+TT |
 | 02.11 10:00 | Diomede | YT+TT |
 The Metricool copies of all 11 were set to DRAFT (not deleted) so nothing posts twice. When the Metricool limit is lifted: re-schedule from the drafts only for videos NOT already published through Zernio. The Hormuz Metricool draft holds only a placeholder text; the full package is in map_shorts/hormuz_bypass/publication.md and in Zernio.
-| 29.10 14:00 | Australia vs Greenland (new, engine70, audited PASS 25.10) | YT+TT |
+| 25.10 06:00 | Australia vs Greenland (new, engine70, audited PASS 25.10; moved from 29.10 at the owner's request) | YT+TT |
 Own uploads: POST /media/presign -> PUT the file to uploadUrl -> use publicUrl (media.zernio.com/temp/...). Zernio moves the file from temp/ to media/ when the post is created (seen 25.10).

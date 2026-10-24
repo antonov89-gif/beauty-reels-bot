@@ -467,3 +467,6 @@ Built on the DNA of GeoGlobeTales xGmyqt_Ild0 (Caspian, 1.32M): name-flip hook w
 
 ### 25.10 00:58 MSK Australia Short: AI inserts added (owner: "предлагай анимацию через апипод", then chose 4 clips via WaveSpeed)
 APIpod was not used: the owner pointed to WaveSpeed ("проверь через вавесптд"). Veo 3.1 Lite text-to-video, 4 clips x 4 s 720p: $0.80 (balance 2.8595 -> 2.0595 USD, quote $0.05 per second, as before). Used 1.2-1.7 s each at "just size?" (outback), "largest island" (Greenland ice), "Mercator projection" (cartographer) and "made for sailors" (ship), all labelled "AI-GENERATED ILLUSTRATION"; the ship's illegible pseudo-writing was blurred. Re-rendered, audited, Zernio post updated in place (29.10 14:00 MSK). Next: read the 29.10 result at 24 h against Egypt (1,462 views) and the TikTok median 284; note that this is the first Short in the "name-flip + true-size + loop" format.
+
+### 25.10 01:00 MSK Australia Short moved to 25.10 06:00 MSK (owner: "Ставь сегодня в 6 утра")
+Zernio post 6add21655a8f1bccdd189772 rescheduled from 29.10 14:00 to 25.10 06:00 MSK (03:00 UTC), YouTube + TikTok, read back. 06:00 MSK is outside the usual 10-16 MSK window (owner's choice; early morning in Europe, late evening in the US Pacific). Point Roberts still goes at 10:00 the same day; the 29.10 10:00 slot is free again.
