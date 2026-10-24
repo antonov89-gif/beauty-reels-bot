@@ -42,19 +42,19 @@ def build(SEGMENT, K, O, WT, ST, D, G):
 
     # L2 Mercator world: Greenland looks bigger than Australia
     O("flash", 7.6, 7.75)
-    K("merc", 7.6, 40, 15, 4.0)
-    K("merc", 9.2, 40, 15, 4.6)
-    K("merc", 11.6, 42, 14, 4.7)
+    K("merc", 7.6, 48, 15, 3.9)
+    K("merc", 9.2, 48, 15, 4.3)
+    K("merc", 11.6, 48, 14, 4.35)
     O("pill", 7.75, 11.6, xy=(540, 230), txt="A COMMON WORLD MAP", size=46)
     O("fill", WT(2, "Greenland"), 18.6, rings=grl, col=CYAN, alpha=0.5, glow=CYAN, border=WHT, bw=3)
-    O("label", WT(2, "Greenland") + 0.1, 11.6, lon=-41, lat=64, txt="GREENLAND", size=52)
+    O("label", WT(2, "Greenland") + 0.1, 11.6, lon=-38, lat=62, txt="GREENLAND", size=46)
     O("fill", WT(2, "Australia"), 22.5, rings=aus, col=YEL, alpha=0.45, glow=YEL, border=WHT, bw=3)
-    O("label", WT(2, "Australia") + 0.05, 11.6, lon=134, lat=-12, txt="AUSTRALIA", size=52)
+    O("label", WT(2, "Australia") + 0.05, 11.6, lon=132, lat=-12, txt="AUSTRALIA", size=46)
     O("label", WT(2, "bigger") - 0.05, 11.6, xy=(540, 1240), txt="LOOKS BIGGER?", size=96, col=YEL)
     O("badge", WT(2, "looks"), 11.6, xy=(230, 1000), icon="q", col=RED, r=52)
 
     # L3 true-size slide: Greenland moved along a great circle onto Australia, shrinking on the Mercator map
-    K("merc", 11.7, 42, 14, 4.7)
+    K("merc", 11.7, 48, 14, 4.35)
     K("merc", 14.4, 134, -26, 13.5)
     O("truesize", 11.75, 18.6, src=GRL, dst=(137.0, -24.0), ta=WT(3, "slide"), tb=WT(3, "shrink") + 0.3, col=CYAN, alpha=0.55, glow=WHT,
       rings=grl)
