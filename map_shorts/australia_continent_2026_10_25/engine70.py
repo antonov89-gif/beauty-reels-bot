@@ -839,8 +839,13 @@ def clip(img, v, o, t):
         return
     im = Image.open(os.path.join(o["dir"], files[min(fi, len(files) - 1)])).convert("RGBA").resize((W, H))
     img.alpha_composite(im)
-    ImageDraw.Draw(img).text((W / 2, 250), "AI-GENERATED ILLUSTRATION", font=font(MX, 34), fill=(255, 255, 255, 230), anchor="mm",
-                             stroke_width=3, stroke_fill=(0, 0, 0, 200))
+    k = clamp((t - o["t0"]) / 0.2)
+    if k < 1:                                                   # quick punch-in from 108 % so the cut lands with energy
+        z = 1.08 - 0.08 * ease(k)
+        im = im.resize((int(W * z), int(H * z)), Image.BILINEAR).crop((int(W * (z - 1) / 2), int(H * (z - 1) / 2), int(W * (z - 1) / 2) + W, int(H * (z - 1) / 2) + H))
+        img.alpha_composite(im)
+    ImageDraw.Draw(img).text((W / 2, 140), "AI-GENERATED ILLUSTRATION", font=font(MX, 30), fill=(255, 255, 255, 235), anchor="mm",
+                             stroke_width=3, stroke_fill=(0, 0, 0, 210))
 
 
 DRAW = dict(fill=fill, plates=plates, continents=continents, truesize=truesize, graticule=graticule, pin=pin, measure=measure,
@@ -898,6 +903,8 @@ def frame(fi):
     v = view_at(t)
     img = v.render()
     live = [o for o in OV if o["t0"] - 0.01 <= t <= o["t1"] + 0.01]
+    if any(o["kind"] == "clip" for o in live):                 # on an AI clip only screen-space overlays stay (no map overlays on the clip)
+        live = [o for o in live if o["kind"] in ("clip", "label", "pill", "badge", "counter", "strike", "flash")]
     for kind in ORDER:
         for o in live:
             if o["kind"] == kind:

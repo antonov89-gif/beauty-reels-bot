@@ -5,6 +5,7 @@ O(kind, t0, t1, ...)      overlay (see engine70.DRAW); every overlay start becom
 YEL, RED, CYAN, WHT, GRN, BLUE, ORANGE = (255, 214, 0), (229, 57, 53), (0, 229, 255), (255, 255, 255), (60, 220, 90), (30, 136, 229), (255, 152, 0)
 AUS, GRL = (134.0, -25.5), (-41.0, 72.0)
 STEEP, BYRON = (113.15, -26.15), (153.64, -28.64)
+AI = "/home/claude/v70/ai/frames/"
 
 
 def build(SEGMENT, K, O, WT, ST, D, G):
@@ -79,6 +80,7 @@ def build(SEGMENT, K, O, WT, ST, D, G):
     K("merc", 22.7, 133.4, -26.5, 23.0)
     K("merc", 24.6, 125, -20, 9.0)
     K("merc", 26.0, 122, -18, 8.0, lin=True)
+    O("clip", ST[6] - 0.02, WT(6, "size") + 0.35, dir=AI + "b2_outback")                    # AI insert (labelled on screen)
     O("label", WT(6, "just"), 26.0, xy=(540, 420), txt="JUST SIZE?", size=120, col=WHT)
     O("badge", WT(6, "not"), 26.0, xy=(540, 640), icon="x", col=RED, r=70)
     O("label", WT(6, "not") + 0.1, 26.0, xy=(540, 800), txt="NOT QUITE", size=90, col=RED)
@@ -127,6 +129,7 @@ def build(SEGMENT, K, O, WT, ST, D, G):
     O("fill", WT(11, "Greenland"), 46.2, plate="NA", col=CYAN, alpha=0.18, glow=None, border=WHT, bw=2)
     O("label", WT(11, "belongs"), 46.0, xy=(540, 300), txt="PART OF NORTH AMERICA", size=70, col=CYAN)
     O("arrow", WT(11, "belongs") + 0.1, 46.0, axy=(540, 360), blon=-90, blat=55, bend=0.3)
+    O("clip", WT(11, "and") - 0.05, WT(11, "island") - 0.03, dir=AI + "b1_ice")                 # AI insert (labelled on screen)
     O("badge", WT(11, "largest"), 48.1, xy=(540, 300), icon="trophy", col=YEL, r=62, txt="WORLD'S LARGEST ISLAND")
     O("label", WT(11, "island"), 48.1, xy=(540, 1220), txt="≈ 2.2 MILLION km²", size=74, col=WHT)
 
@@ -143,7 +146,9 @@ def build(SEGMENT, K, O, WT, ST, D, G):
     K("merc", 51.7, -30, 55, 6.5)
     K("merc", 53.4, 10, 15, 4.6)
     K("merc", 58.0, 15, 12, 4.4, lin=True)
-    O("graticule", WT(13, "Mercator"), 58.0)
+    O("clip", WT(13, "Mercator") - 0.05, WT(13, "made") - 0.02, dir=AI + "a1_cartographer")   # AI inserts (labelled on screen)
+    O("clip", WT(13, "made") - 0.02, WT(13, "which") - 0.55, dir=AI + "a2_ship")
+    O("graticule", WT(13, "which") - 0.55, 58.0)
     O("pill", WT(13, "Mercator"), 54.0, xy=(540, 230), txt="MERCATOR PROJECTION", size=56, col=YEL)
     O("badge", WT(13, "sailors"), 56.2, xy=(540, 1120), icon="compass", col=BLUE, r=60, txt="MADE FOR SAILORS")
     O("counter", WT(13, "1569") - 0.05, 56.2, xy=(540, 260), v0=1500, v1=1569, fmt="{:.0f}", dur=0.7, size=130)
