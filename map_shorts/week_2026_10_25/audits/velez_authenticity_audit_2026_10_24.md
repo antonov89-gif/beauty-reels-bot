@@ -1,0 +1,16 @@
+# Authenticity audit: Peñón de Vélez de la Gomera Short (24.10.2026)
+
+File checked: /home/claude/v61/velez/velez.mp4 (rendered 17.10; 1080x1920, 40.8 s, 32 MB, h264/aac, -14.8 LUFS, peak -2.8 dBFS, no black frames). Frames extracted every 3 s plus the last frame and read in full. Owner decision 23.10: publish with Esri imagery, remove or replace before the YPP application (map_shorts/esri_delete_before_ypp.md).
+
+| Section | Finding |
+|---|---|
+| Claims | "Border is 85 metres" PARTLY-VERIFIED (consistent across sources, official figure not opened). "Spanish since 1564" VERIFIED in Wikipedia summary. "In 1930 a huge storm joined the rock to the mainland": the VOICE and an on-screen card state 1930 as fact; sources disagree (a Wikipedia mirror says 1930, the Wikipedia-derived article and a Laughing Squid write-up say 1934, Lonely Planet says "the 1930s and 40s"). Marked PARTLY: wording is stronger than the sources. The description hedges ("about 1930, some sources say 1934"). "Nobody lives there except a small group of Spanish soldiers" PARTLY (matches Wikipedia; not independently confirmed). "Often called the shortest land border" (voice) is hedged; the end card "SHORTEST LAND BORDER" is not (the description says it is not formally ruled on by any body). |
+| Footage | Only satellite imagery and drawn graphics, no stock clips. The location markers match the rock; checked visually against the satellite frames (island fort, sand bridge, beach). The zoom to the rock is blurry at ~21 s ("NO CIVILIANS" card): a quality issue, not a falsehood. |
+| AI shots | No AI visuals. AI voice (ElevenLabs via Lumean) disclosed in the description; platform flags ON in Zernio (YouTube containsSyntheticMedia, TikTok video_made_with_ai). |
+| People/logos | National flags only. No people, logos or brands. |
+| Sound | Music = original bed synthesised for earlier Shorts (audio61.py reads /home/claude/v17/music.wav), SFX synthesised: own material, no third-party music. Content ID risk LOW. |
+| Imagery/data | Esri World Imagery (Esri, Maxar, Earthstar Geographics): attribution on screen (bottom credit line) and in the description. Licence for monetised use NOT VERIFIED (map_shorts/esri_licence_check_2026_10_22.md): PARTLY, accepted by the owner, must be removed before the YPP application. Natural Earth (public domain) for borders. |
+| Platform policy | Original graphics, research and voice-over commentary, not a repost. Removal risk LOW now (channel not monetised); monetisation risk MODERATE because of Esri. |
+| Metadata/flags | Title "The World's Shortest Border Is Just 85 Metres 🇪🇸🇲🇦" matches; tags match (no other-place tags); description has sources and credit line; made for kids false; AI flags ON. Music line ("music and sound effects are synthesised") is missing from the description: add it when publishing. |
+
+Verdict: PASS with accepted risks (PARTLY, none BLOCK). Open items for the owner: (1) the "1930" date is stated flatly in voice and on a card while sources say 1930 or 1934; fixing needs a re-voice of one line (paid Lumean, a few kopecks, owner's go) and a re-render; accepted as is for now because the description hedges; (2) the Esri licence for monetised use (delete or re-make before the YPP application); (3) the blurry zoom at ~21 s.
