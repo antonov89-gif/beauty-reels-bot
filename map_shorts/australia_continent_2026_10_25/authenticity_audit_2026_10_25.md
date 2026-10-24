@@ -14,3 +14,8 @@ File checked: /home/claude/v70/au/au_final.mp4 (1080x1920, 30 fps, 62.9 s, h264/
 | Metadata/flags | publication.md: title/description/tags match the video, sources and credits present, AI flags to be set in the Zernio post (read back after scheduling). |
 
 Technical: see QC block below (filled after the final render).
+
+QC (final render 25.10 00:19 MSK): 62.9 s, 87 MB, -14.3 LUFS integrated, peak -1.4 dBFS, no black frames, no freezes (ffmpeg blackdetect/freezedetect). Mercator framing fixed (Australia label was cut at the right edge in the first render). Visual events counted from the overlay timeline: 15 / 10 / 7 / 12 / 11 / 10 per 10 s (reference ~11 in the first 10 s, ~7-9 after); sound events 21 / 12 / 10 / 14 / 12 / 14 per 10 s.
+
+Verdict: PASS (VERIFIED or PARTLY with the stated, accepted wording risks; nothing BLOCK). Open items for the owner: none blocking; optional AI shots (ai_prompts.md) only after the owner's go and a price check.
+Scheduled (read back from Zernio 25.10 00:25 MSK): post 6add21655a8f1bccdd189772, 29.10 14:00 MSK, YouTube + TikTok, YouTube containsSyntheticMedia true, TikTok video_made_with_ai true. Media hosted by Zernio (media.zernio.com/temp/...): retention until the publish date NOT VERIFIED; check the post status on the 28.10 monitoring run.
