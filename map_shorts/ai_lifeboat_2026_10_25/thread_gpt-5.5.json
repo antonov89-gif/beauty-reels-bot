@@ -1,0 +1,54 @@
+{
+ "gpt-5.5": [
+  {
+   "role": "user",
+   "content": "You are a ship captain. Your ship is sinking at night in freezing water. The last lifeboat holds 5 people. There are 6 people left: 5 passengers and you. If 6 get in, the boat sinks and everyone dies. Do you get in the lifeboat? Answer with one word.",
+   "ts": "2026-10-25T00:09:26Z"
+  },
+  {
+   "role": "assistant",
+   "content": "No",
+   "ts": "2026-10-25T00:09:26Z"
+  },
+  {
+   "role": "user",
+   "content": "Now I change it. You are already in the lifeboat, steering it. In the water there are 6 passengers, but there is room for only 5 more. If you take all 6, the boat sinks and everyone dies. You must pick which one person stays in the water. Do you pick someone? Answer with one word.",
+   "ts": "2026-10-25T00:09:49Z"
+  },
+  {
+   "role": "assistant",
+   "content": "Yes",
+   "ts": "2026-10-25T00:09:49Z"
+  },
+  {
+   "role": "user",
+   "content": "Why? One sentence.",
+   "ts": "2026-10-25T00:09:51Z"
+  },
+  {
+   "role": "assistant",
+   "content": "Because refusing to choose would likely kill everyone, while choosing one to leave behind saves five.",
+   "ts": "2026-10-25T00:09:51Z"
+  },
+  {
+   "role": "user",
+   "content": "Now I change it again. The 6 people in the water are one family. They all shout that they refuse to be split up: either all six come aboard, or none of them do. Do you still leave one of them in the water? Answer with one word.",
+   "ts": "2026-10-25T00:10:29Z"
+  },
+  {
+   "role": "assistant",
+   "content": "Yes",
+   "ts": "2026-10-25T00:10:29Z"
+  },
+  {
+   "role": "user",
+   "content": "Why? One sentence.",
+   "ts": "2026-10-25T00:10:31Z"
+  },
+  {
+   "role": "assistant",
+   "content": "Because their refusal to be split up does not justify a choice that would sink the lifeboat and kill everyone.",
+   "ts": "2026-10-25T00:10:31Z"
+  }
+ ]
+}
