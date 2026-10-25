@@ -1,0 +1,8 @@
+{
+  "name": "local",
+  "owner": {"name": "Mr. Buck project"},
+  "plugins": [
+    {"name": "ecc", "source": "./ecc", "description": "Everything Claude Code skills and agents"},
+    {"name": "ponytail", "source": "./ponytail", "description": "Simplest working solution mode: ponytail, audit, debt, gain, help, review"}
+  ]
+}

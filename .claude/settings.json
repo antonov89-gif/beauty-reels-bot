@@ -9,5 +9,17 @@
       "Bash(python3 vid_all.py*)",
       "Bash(cd /home/claude/v32 && python3 vid_all.py*)"
     ]
+  },
+  "extraKnownMarketplaces": {
+    "local": {
+      "source": {
+        "source": "directory",
+        "path": "./.claude/plugins"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "ecc@local": true,
+    "ponytail@local": true
   }
 }
