@@ -15,3 +15,6 @@ Full prompt: `map_shorts/prompts/video_dna_analyzer_v2.md`. Read it before every
 5. **Transfer:** when a new video is made from the reference, list the fixes to our video that come from the analysis (PHASE 72–75, 88–90) and apply them; copy principles, never phrases, characters, music or graphics (PHASE 89).
 
 Honesty rules of the channel still apply: hedge unconfirmed facts, label AI visuals, no copyrighted music.
+
+## Replication protocol (PHASE 92-96)
+When the user asks for a video "по референсу", also run the protocol at the end of `map_shorts/prompts/video_dna_analyzer_v2.md`: (92) double watch, structure pass then frame-by-frame pass; (93) one-sentence "what surprises the viewer" test, reference vs ours; (94) per-second table reference / ours shown BEFORE any generation or paid call; (95) AI-clip checklist from a contact sheet (no burned-in text, no extra characters, natural colours, clean edges) before editing; (96) not-a-copy check recorded in the authenticity audit. Real facts and AI answers only, with date and log.
