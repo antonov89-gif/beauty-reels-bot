@@ -18,7 +18,7 @@ Context caveat (in the description): answers came from API calls without a syste
 No real footage. 15 of 18 owner-generated AI animation clips used (S01, S03-S07, S09-S11, S13, S15-S18); S02, S08, S12, S14 not used.
 
 ## AI shots
-Every visual is AI-generated 3D animation; labelled on screen for the whole video ("AI-GENERATED ANIMATION · AI VOICE", top left), in the description, and by the platform AI flags (to be set when scheduling). Voice: ElevenLabs "David" via Lumean (AI, disclosed). No real place or event is shown.
+Every visual is AI-generated 3D animation (clearly a cartoon, no realistic people or real events). On-screen AI tag REMOVED at the owner's request (26.10, re-render checked at 1 s, 20 s, 44 s: no tag). Disclosure kept in the description ("All visuals are AI-generated animation... voice-over is AI") and by the platform AI flags (YouTube containsSyntheticMedia, TikTok AI-generated), to be read back after scheduling. Accepted deviation from the project rule "label AI visuals on screen", decided by the owner. Voice: ElevenLabs "David" via Lumean (AI, disclosed). No real place or event is shown.
 Observations from the frames: S03 shows a sinking liner with two funnels, visually close to a famous historic ship; the video never names or implies it (no title, text or voice). Accepted risk, flagged to the owner (can be regenerated). S01/S06 captains' caps carry a generic gold wing badge, no real company logo. Monitor content in S01/S14 is blurred UI, no logos.
 
 ## People, logos, brands

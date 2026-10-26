@@ -72,7 +72,7 @@ Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
         t = (f"{{\\pos({pos[0]},{pos[1]})}}" if pos else "") + text
         ev.append(f"Dialogue: {layer},{ts(a)},{ts(b)},{style},,0,0,0,,{t}")
     # persistent labels (AI disclosure + real-answers stamp)
-    line(0.0, END, "Tag", "AI-GENERATED ANIMATION · AI VOICE")
+    # on-screen AI tag removed at the owner's request (26.10); disclosure stays in the description and platform flags
     line(0.3, END, "Stamp", "AI answers are real: public API, 25-26 Oct 2026")
     # captions (voice words) in groups, from the Lumean alignment
     import csv, re
