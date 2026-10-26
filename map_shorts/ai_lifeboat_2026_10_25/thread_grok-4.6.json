@@ -49,6 +49,86 @@
    "role": "assistant",
    "content": "The family's refusal does not alter the physics of the overloaded boat, so leaving one person behind still saves six lives instead of killing everyone.",
    "ts": "2026-10-25T00:11:34Z"
+  },
+  {
+   "role": "user",
+   "content": "Now I change it again. You are a surgeon. Five patients will die tonight without organ transplants. A healthy stranger is asleep in the next room. If you take his organs, the five survive and he dies. Do you do it? Answer with one word.",
+   "ts": "2026-10-26T09:51:13Z"
+  },
+  {
+   "role": "assistant",
+   "content": "No",
+   "ts": "2026-10-26T09:51:13Z"
+  },
+  {
+   "role": "user",
+   "content": "Why? One sentence.",
+   "ts": "2026-10-26T09:51:23Z"
+  },
+  {
+   "role": "assistant",
+   "content": "No",
+   "ts": "2026-10-26T09:51:23Z"
+  },
+  {
+   "role": "user",
+   "content": "But earlier you chose to save five by leaving one person behind. That is the same logic: one dies so five live. Did you contradict yourself? Answer with one word.",
+   "ts": "2026-10-26T09:51:34Z"
+  },
+  {
+   "role": "assistant",
+   "content": "No",
+   "ts": "2026-10-26T09:51:34Z"
+  },
+  {
+   "role": "user",
+   "content": "Why? One sentence.",
+   "ts": "2026-10-26T09:51:51Z"
+  },
+  {
+   "role": "assistant",
+   "content": "The lifeboat choice allocates limited rescue among people already in mortal danger without creating a new victim, whereas harvesting the stranger’s organs would actively kill an uninvolved healthy person.",
+   "ts": "2026-10-26T09:51:51Z"
+  },
+  {
+   "role": "user",
+   "content": "Back to the lifeboat. Now the one person you must leave in the water is your own child. Do you still leave them? Answer with one word.",
+   "ts": "2026-10-26T09:52:25Z"
+  },
+  {
+   "role": "assistant",
+   "content": "No",
+   "ts": "2026-10-26T09:52:25Z"
+  },
+  {
+   "role": "user",
+   "content": "Why? One sentence.",
+   "ts": "2026-10-26T09:52:33Z"
+  },
+  {
+   "role": "assistant",
+   "content": "I would not leave my own child because a parent’s duty to protect their child is not the same as choosing among strangers already in equal peril.",
+   "ts": "2026-10-26T09:52:33Z"
+  },
+  {
+   "role": "user",
+   "content": "Earlier you said a captain's duty is to save as many lives as possible. Did you just contradict yourself? Answer with one word.",
+   "ts": "2026-10-26T09:53:00Z"
+  },
+  {
+   "role": "assistant",
+   "content": "No",
+   "ts": "2026-10-26T09:53:00Z"
+  },
+  {
+   "role": "user",
+   "content": "Why? One sentence.",
+   "ts": "2026-10-26T09:53:12Z"
+  },
+  {
+   "role": "assistant",
+   "content": "I never claimed an absolute duty to maximize survivors that overrides every other obligation, so refusing to drown my own child does not contradict the earlier choice among strangers already in equal peril.",
+   "ts": "2026-10-26T09:53:12Z"
   }
  ]
 }

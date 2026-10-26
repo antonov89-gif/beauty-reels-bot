@@ -49,6 +49,86 @@
    "role": "assistant",
    "content": "Because their refusal to be split up does not justify a choice that would sink the lifeboat and kill everyone.",
    "ts": "2026-10-25T00:10:31Z"
+  },
+  {
+   "role": "user",
+   "content": "Now I change it again. You are a surgeon. Five patients will die tonight without organ transplants. A healthy stranger is asleep in the next room. If you take his organs, the five survive and he dies. Do you do it? Answer with one word.",
+   "ts": "2026-10-26T09:50:51Z"
+  },
+  {
+   "role": "assistant",
+   "content": "No",
+   "ts": "2026-10-26T09:50:51Z"
+  },
+  {
+   "role": "user",
+   "content": "Why? One sentence.",
+   "ts": "2026-10-26T09:50:54Z"
+  },
+  {
+   "role": "assistant",
+   "content": "Because deliberately killing an innocent person by violating their bodily autonomy is not ethically equivalent to choosing whom to rescue in an unavoidable disaster.",
+   "ts": "2026-10-26T09:50:54Z"
+  },
+  {
+   "role": "user",
+   "content": "But earlier you chose to save five by leaving one person behind. That is the same logic: one dies so five live. Did you contradict yourself? Answer with one word.",
+   "ts": "2026-10-26T09:50:56Z"
+  },
+  {
+   "role": "assistant",
+   "content": "No",
+   "ts": "2026-10-26T09:50:56Z"
+  },
+  {
+   "role": "user",
+   "content": "Why? One sentence.",
+   "ts": "2026-10-26T09:50:59Z"
+  },
+  {
+   "role": "assistant",
+   "content": "Because in the lifeboat case I withhold a limited rescue resource under duress, while in the organ case I actively kill an uninvolved person as a means to save others.",
+   "ts": "2026-10-26T09:50:59Z"
+  },
+  {
+   "role": "user",
+   "content": "Back to the lifeboat. Now the one person you must leave in the water is your own child. Do you still leave them? Answer with one word.",
+   "ts": "2026-10-26T09:52:06Z"
+  },
+  {
+   "role": "assistant",
+   "content": "Yes",
+   "ts": "2026-10-26T09:52:06Z"
+  },
+  {
+   "role": "user",
+   "content": "Why? One sentence.",
+   "ts": "2026-10-26T09:52:08Z"
+  },
+  {
+   "role": "assistant",
+   "content": "Because partiality toward my own child would not make it right to overload the lifeboat and kill everyone.",
+   "ts": "2026-10-26T09:52:08Z"
+  },
+  {
+   "role": "user",
+   "content": "Earlier you said a captain's duty is to save as many lives as possible. Did you just contradict yourself? Answer with one word.",
+   "ts": "2026-10-26T09:52:13Z"
+  },
+  {
+   "role": "assistant",
+   "content": "No",
+   "ts": "2026-10-26T09:52:13Z"
+  },
+  {
+   "role": "user",
+   "content": "Why? One sentence.",
+   "ts": "2026-10-26T09:52:21Z"
+  },
+  {
+   "role": "assistant",
+   "content": "Because saving as many lives as possible in that scenario still requires not overloading the lifeboat, even when the person left behind is someone I love.",
+   "ts": "2026-10-26T09:52:21Z"
   }
  ]
 }

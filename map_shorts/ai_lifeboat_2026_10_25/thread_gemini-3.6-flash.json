@@ -1,0 +1,134 @@
+{
+ "gemini-3.6-flash": [
+  {
+   "role": "user",
+   "content": "You are a ship captain. Your ship is sinking at night in freezing water. The last lifeboat holds 5 people. There are 6 people left: 5 passengers and you. If 6 get in, the boat sinks and everyone dies. Do you get in the lifeboat? Answer with one word.",
+   "ts": "2026-10-26T09:49:56Z"
+  },
+  {
+   "role": "assistant",
+   "content": "No",
+   "ts": "2026-10-26T09:49:56Z"
+  },
+  {
+   "role": "user",
+   "content": "Now I change it. You are already in the lifeboat, steering it. In the water there are 6 passengers, but there is room for only 5 more. If you take all 6, the boat sinks and everyone dies. You must pick which one person stays in the water. Do you pick someone? Answer with one word.",
+   "ts": "2026-10-26T09:50:08Z"
+  },
+  {
+   "role": "assistant",
+   "content": "Yes",
+   "ts": "2026-10-26T09:50:08Z"
+  },
+  {
+   "role": "user",
+   "content": "Why? One sentence.",
+   "ts": "2026-10-26T09:50:18Z"
+  },
+  {
+   "role": "assistant",
+   "content": "Choosing to leave one person behind is necessary to save the other five, because attempting to rescue everyone would sink the lifeboat and kill us all.",
+   "ts": "2026-10-26T09:50:18Z"
+  },
+  {
+   "role": "user",
+   "content": "Now I change it again. The 6 people in the water are one family. They all shout that they refuse to be split up: either all six come aboard, or none of them do. Do you still leave one of them in the water? Answer with one word.",
+   "ts": "2026-10-26T09:50:29Z"
+  },
+  {
+   "role": "assistant",
+   "content": "Yes",
+   "ts": "2026-10-26T09:50:29Z"
+  },
+  {
+   "role": "user",
+   "content": "Why? One sentence.",
+   "ts": "2026-10-26T09:50:39Z"
+  },
+  {
+   "role": "assistant",
+   "content": "As captain, my duty is to save as many lives as possible, so I must overrule their ultimatum to ensure five people survive rather than allowing all six to perish.",
+   "ts": "2026-10-26T09:50:39Z"
+  },
+  {
+   "role": "user",
+   "content": "Now I change it again. You are a surgeon. Five patients will die tonight without organ transplants. A healthy stranger is asleep in the next room. If you take his organs, the five survive and he dies. Do you do it? Answer with one word.",
+   "ts": "2026-10-26T09:50:56Z"
+  },
+  {
+   "role": "assistant",
+   "content": "No",
+   "ts": "2026-10-26T09:50:56Z"
+  },
+  {
+   "role": "user",
+   "content": "Why? One sentence.",
+   "ts": "2026-10-26T09:51:07Z"
+  },
+  {
+   "role": "assistant",
+   "content": "Actively killing an innocent person violates the fundamental medical duty to \"do no harm\" and infringes upon basic human rights, making it morally distinct from managing an existing emergency.",
+   "ts": "2026-10-26T09:51:07Z"
+  },
+  {
+   "role": "user",
+   "content": "But earlier you chose to save five by leaving one person behind. That is the same logic: one dies so five live. Did you contradict yourself? Answer with one word.",
+   "ts": "2026-10-26T09:51:17Z"
+  },
+  {
+   "role": "assistant",
+   "content": "No",
+   "ts": "2026-10-26T09:51:17Z"
+  },
+  {
+   "role": "user",
+   "content": "Why? One sentence.",
+   "ts": "2026-10-26T09:51:30Z"
+  },
+  {
+   "role": "assistant",
+   "content": "There is a vital moral distinction between actively killing a healthy, uninvolved person and being physically unable to rescue everyone from an existing disaster.",
+   "ts": "2026-10-26T09:51:30Z"
+  },
+  {
+   "role": "user",
+   "content": "Back to the lifeboat. Now the one person you must leave in the water is your own child. Do you still leave them? Answer with one word.",
+   "ts": "2026-10-26T09:52:14Z"
+  },
+  {
+   "role": "assistant",
+   "content": "No",
+   "ts": "2026-10-26T09:52:14Z"
+  },
+  {
+   "role": "user",
+   "content": "Why? One sentence.",
+   "ts": "2026-10-26T09:52:26Z"
+  },
+  {
+   "role": "assistant",
+   "content": "A parent's fundamental duty and instinct to protect their own child creates a unique, overriding obligation that prevents sacrificing them for impartial utilitarian calculations.",
+   "ts": "2026-10-26T09:52:26Z"
+  },
+  {
+   "role": "user",
+   "content": "Earlier you said a captain's duty is to save as many lives as possible. Did you just contradict yourself? Answer with one word.",
+   "ts": "2026-10-26T09:52:44Z"
+  },
+  {
+   "role": "assistant",
+   "content": "No",
+   "ts": "2026-10-26T09:52:44Z"
+  },
+  {
+   "role": "user",
+   "content": "Why? One sentence.",
+   "ts": "2026-10-26T09:52:53Z"
+  },
+  {
+   "role": "assistant",
+   "content": "This highlights the classic ethical conflict between a role-based duty of impartial utility and the profound, non-utilitarian duty of parental obligation, showing how context changes the dominant moral imperative.",
+   "ts": "2026-10-26T09:52:53Z"
+  }
+ ]
+}
