@@ -34,3 +34,7 @@ PASS with accepted risks: (1) "houses still standing" only partly sourced; (2) A
 - Every shot inspected at its midpoint (13 shots): no burned-in text from the clips, no logos, no ship name, hands and cuffs consistent, captions in sync. Captions regrouped inside each voice line.
 - Final numbers: 37.0 s, -15.0 LUFS, peak -1.4 dBFS, music 5.3 dB under speech, no black or frozen frames, voice ends at 36.0 s with a 1.0 s music tail.
 - Not verified: how the clips sound when played (no ears): music taste and foley are judged by measurements only.
+
+## v2 (26.10, owner: "дорабатывай, чтобы просмотры были от 10 000")
+Changes: stake in the first second ("264 PEOPLE · 1 NIGHT" + voice "Two hundred sixty-four people. One night. One volcano."), shorter (34.0 s, 17 shots, avg 2.0 s), "We counted two years", end card "WOULD YOU GO BACK?" for comments/replays, loop to the opening beach. Voice re-generated (Lumean Sarah, ~1 RUB), clips reused ($0 extra).
+Checks on /home/claude/v76/tr2_final.mp4: -14.7 LUFS, peak -1.4 dBFS, music 7.0 dB under speech, no black/frozen frames; speech-to-text of the voice matches the script word for word; key frames (hook, mid, end card) inspected. Facts unchanged (same VERIFIED set; "houses still standing" PARTLY). 10 000 views cannot be guaranteed: honest estimate in the chat (about 3-5% for >= 10k).
