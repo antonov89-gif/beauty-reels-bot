@@ -1,4 +1,4 @@
-# STATE v3 (youtube-cinematic-dna V5.1) - 26.10.2026
+# STATE v4 (youtube-cinematic-dna V5.1) - 26.10.2026
 PROJECT_ID: MB-SULLIVAN-01   MODE: SMART
 REFERENCE: c3aRLh3SoAs (Zack D.), 32.58 s | video L3 (frames 4 fps 0-10 s, 1 fps 10-33 s) | audio L2 (loudness only) | metrics vidIQ 26.10: 5.16M views
 COVERAGE: video 0-33 s sampled; audio: no listened analysis, BPM UNKNOWN
@@ -8,9 +8,8 @@ STYLE_BIBLE: SB-v1 (STYLE v2 game-engine CG + stormy Blue Ridge, white-violet bo
 SCENE_LOCKS: RANGER card (shots_sullivan.py), TRUCK = plain 1960s dark green pickup
 ORIGINAL_STORY: Roy Sullivan, 7 claimed strikes; script v2 (plan.md)
 SHOT_PLAN: s01-s13 (storyboard.md), each with an acceptance gate
-ARTIFACTS: frames /home/claude/v77/s01..s13.jpg - GENERATED, INSPECTED; 11 APPROVED, s03 + s12 SOFT
-QC_OPEN: s03 eyebrows (SOFT), s12 face drift (SOFT), optional final face close-up s14
-APPROVED: frames s01,s02,s04-s11,s13
-SPEND: APIpod $0.26
-NEXT_ACTION: pilot clip s01 (Veo 3.1 Fast i2v, $0.18), inspect on contact sheet, then 12 clips ($2.16) - needs owner go
+ARTIFACTS: frames /home/claude/v77/s01..s13.jpg APPROVED (s03,s12 SOFT); clips c01..c13 GENERATED+INSPECTED, used with trims; voice /home/claude/v78/lumean (v3 hook line); final /home/claude/v78/su_final.mp4 INSPECTED+APPROVED (self-check + authenticity PASS)
+QC_OPEN: SOFT only (c12 face, c09 FX, c03 eyebrows)
+SPEND: APIpod $2.60 (frames $0.26 + clips $2.34); Lumean voice x2 ~2 RUB
+NEXT_ACTION: owner review of preview_720.mp4; then cover + upload/schedule via Zernio
 BLOCKERS: none
