@@ -59,3 +59,11 @@ Files /home/claude/v77/s01..s13.jpg, sheet storyboard_sheet13.jpg.
 - SOFT: s03 eyebrows not visibly singed (smoke reads, beat holds); s12 face younger/softer than s02/s11 (identity drift, minor). Fix option: one redo each ($0.02) if the owner wants.
 - Reference side still NOT VERIFIED ON FRAMES (mp4 pending).
 Next: clips (Veo 3.1 Fast i2v, $0.18 x 13 = $2.34) after the owner's go; pilot clip first: s01.
+
+## MiniMax check (26.10, APIpod pages + free /v1/pricing/estimate)
+| Model | Clip length | Price | Notes |
+|--|--|--|--|
+| veo3-1-fast i2v (current) | fixed 8 s, 720p | $0.18 (estimate) | has audio; proven in Tristan/lifeboat |
+| minimax-h3-i2v | 4-15 s, 768P/2K | page $0.09/s -> min $0.36 (4 s); estimate returns $0 = NOT VERIFIED | first + last frame, audio, 2K; licence/commercial terms not stated |
+| minimax-h3-max-i2v (fal) | 5-15 s, 480P/768P | estimate $0.40 for 5-6 s (page says $0.05/s: mismatch) | first + last frame, "a few seconds" per clip; licence not stated |
+Verdict: 2x+ Veo Fast per clip; our shots use 2-3 s, so longer clips add no value. Use only as an A/B on 1-2 hard-physics shots (s01, s04) if Veo fails twice, or where first+last frame control is needed (loop end).
