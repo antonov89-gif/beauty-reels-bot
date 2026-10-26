@@ -146,7 +146,10 @@ def synth_audio(total, out):
     for j in range(3): tick(ST[9] + 0.15 * (j + 1), 520, 0.14)
     hit(ST[6] + T["T"][6][3])          # 'changed'
     hit(ST[10] - 0.05)
-    bed = ocean + pad + hb + sfx
+    import sys; sys.path.insert(0, str(Path(__file__).parent)); from music_lb import music
+    mus = music(total, ST, T['T'])[:n]
+    mus = np.pad(mus, (0, max(0, n - len(mus))))
+    bed = ocean * 0.6 + mus + hb * 0.5 + sfx
     return bed
 
 def write_wav(x, path):
@@ -162,8 +165,8 @@ if __name__ == "__main__":
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(W / "lb_video.mp4"), "-i", str(W / "lumean/result.mp3"), "-i", str(W / "bed.wav"),
         "-filter_complex",
         f"[0:v]ass={W / 'lb.ass'}:fontsdir=/home/claude/v38/fonts[v];"
-        "[1:a]aresample=44100,volume=1.0,asplit[vo][sc];[2:a]volume=1.0[bed];"
-        "[bed][sc]sidechaincompress=threshold=0.04:ratio=6:attack=15:release=250[duck];"
+        "[1:a]aresample=44100,volume=1.0,asplit[vo][sc];[2:a]volume=0.53[bed];"
+        "[bed][sc]sidechaincompress=threshold=0.06:ratio=3:attack=20:release=300[duck];"
         "[vo][duck]amix=inputs=2:duration=longest:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=9[a]",
         "-map", "[v]", "-map", "[a]", "-t", f"{min(total, END):.2f}", "-c:v", "libx264", "-crf", "17", "-preset", "medium", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(W / "lb_final.mp4")], check=True)
     print("done")
