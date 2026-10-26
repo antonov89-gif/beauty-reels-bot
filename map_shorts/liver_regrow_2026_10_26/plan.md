@@ -36,3 +36,10 @@ Not-a-copy: different organ, real procedure, no severed limb, no device, no show
 
 ## Production estimate (APIpod, prices checked 26.10)
 Frames Nano Banana 2.1 1K $0.02 x 10 = $0.20; clips Veo 3.1 Fast $0.18 x 10 = $1.80; voice Lumean ~1 RUB. Total ~ $2.0 (+ retries). Pilot first: 3 frames ($0.06) + 1 clip ($0.18).
+
+## Pilot (26.10): frames s01, s05, s07 ($0.06; s01 first try refused by the content filter, not charged; prompt changed to "abstract glass mannequin") + clip c07 ($0.18). Spent $0.24.
+- s01 APPROVED: liver on the body's right side, clean cyan, no gore.
+- s05 APPROVED: hexagonal lobules with central veins.
+- s07 SOFT: liver looks almost whole inside the outline; "half" not readable.
+- c07 FIX_REQUIRED (attempt 1): glow pulses at the cut face but the liver barely grows -> the payoff beat does not read.
+  Fix plan (attempt 2): regenerate s07 as a clearly half liver inside an empty dotted outline ($0.02) and re-run c07 ($0.18); in the edit add own "50% -> 100%" counter + week counter.
