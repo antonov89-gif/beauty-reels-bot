@@ -27,3 +27,18 @@ Evidence: frame_forensics on both files (reference /home/claude/v79/ref, ours /h
 
 ## Not gaps (deliberate)
 No blood, no severed limb, no cartoon clips, -14 LUFS, own music, sourced and hedged facts.
+
+## v2 applied (26.10) - /home/claude/v82/lv2_final.mp4 = liver_final_1080.mp4, 29.38 s, -14.6 LUFS, TP -1.3
+| Gap | Fix | Result (measured) |
+|--|--|--|
+| 1 static hook | opens on c02: glowing line, halves fly apart + "HALF YOUR LIVER" | first 2 s motion 4.3 / 7.3 (was 2 / 4); split visible at 0.75 s. Still below the reference's 17/14 (part of that gap is the reference's heavy filters at 360p) -> PARTLY |
+| 2 late payoff | L1+L2 merged, re-voiced (~1 RUB) | growth visible from 6.0 s; cell dive 8.4 s (ref 7.25 s); regrowth counters from 12.6 s (ref 11.5 s) -> FIXED in absolute time |
+| 3 dead ending | question over a 18% push-in on the glowing liver; music fade moved past the cut; tail 0.8 s | last 4 s motion 3-5 (was ~1); tail -24.9 dB (was -30) -> FIXED |
+| 4 low motion | push 0.12-0.18 on most shots | mean motion 7.3 (was 5.1; ref 10.3) -> PARTLY |
+| 5 beats | shorter shots (12 shots in 29.4 s) + 5 word accents | 4.1 shots / 10 s + accents (ref 5.7) -> PARTLY |
+| 6 repeated angle | "weird part" on a reversed cell dive (pull-out) | c07 2x (what's left + regrowth, continuous story), c01 2x (different parts) -> FIXED |
+| 7 glitch language | zoom punch + RGB glitch bands on half / grow / full / weird / same | visible on frames -> FIXED |
+| 8 grade | contrast 1.10, saturation 1.15 | FIXED |
+| 9 hook text | "HALF YOUR LIVER" 0-1.75 s | FIXED |
+New fault found in v2 self-check: 15% push cropped the right liver out of frame at 25-26 s -> push 0.03 on c09, re-checked on frames. FIXED.
+Open: stringy regrowth strands (~8 s and ~13 s), motion still below the reference.

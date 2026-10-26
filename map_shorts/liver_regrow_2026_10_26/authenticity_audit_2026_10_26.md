@@ -28,3 +28,6 @@ Original script with sources, own graphics (counters, tags, question), own music
 publication.md; destination = owner's other channel, uploaded by the owner. Flags to set at upload (altered/synthetic = yes). NOT VERIFIED until uploaded.
 
 ## Verdict: FIXED -> PASS.
+
+## Re-check after v2 re-edit (26.10): /home/claude/v82/lv2_final.mp4, 29.38 s
+Changed: voice line L1+L2 merged ("Surgeons take about half to save someone, and what's left starts to grow") - same sourced claim (UPMC ~50-60%); hook text "HALF YOUR LIVER"; counters moved with the new timing; same clips, no new AI material. STT matches the script. No black/freeze. Verdict unchanged: PASS.
