@@ -28,3 +28,9 @@ See publication.md. Not scheduled yet.
 PASS with accepted risks: (1) "houses still standing" only partly sourced; (2) APIpod commercial-use terms NOT VERIFIED; (3) 720p source clips upscaled; (4) a fictional retelling of a real event must stay clearly labelled as fiction.
 ## Open items for the owner
 1. Publish now or schedule (slot)? 2. Confirm APIpod terms allow monetised use. 3. TikTok too?
+
+## Re-check 26.10 (owner: "Проверь")
+- Voice verified by speech-to-text (faster-whisper base.en) on the Lumean file: the text matches the script word for word ("264", "Nightingale Island", "Dutch ship", "Cape Town", "Cal shot", "1963"). VERIFIED.
+- Every shot inspected at its midpoint (13 shots): no burned-in text from the clips, no logos, no ship name, hands and cuffs consistent, captions in sync. Captions regrouped inside each voice line.
+- Final numbers: 37.0 s, -15.0 LUFS, peak -1.4 dBFS, music 5.3 dB under speech, no black or frozen frames, voice ends at 36.0 s with a 1.0 s music tail.
+- Not verified: how the clips sound when played (no ears): music taste and foley are judged by measurements only.

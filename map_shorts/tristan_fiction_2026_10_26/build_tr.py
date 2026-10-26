@@ -3,7 +3,7 @@ Run: python3 build_tr.py -> /home/claude/v75/tr_final.mp4"""
 import json, subprocess, sys
 from pathlib import Path
 import numpy as np
-sys.path.insert(0, "/home/user/beauty-reels-bot/map_shorts/ai_lifeboat_2026_10_25")
+sys.path.insert(0, "/home/user/beauty-reels-bot/map_shorts/ai_lifeboat_2026_10_25"); sys.path.insert(0, "/home/user/beauty-reels-bot/map_shorts/tristan_fiction_2026_10_26")
 import build_lb as bl
 from music_lb import music
 W = Path("/home/claude/v75"); bl.W = W; bl.V = Path("/home/claude/v74")
@@ -43,9 +43,13 @@ Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
         if s0 is None: s0 = a
         cur += c; pb = b
     if cur: words.append((cur, s0, pb))
-    g = []
-    for i in range(0, len(words), 3):
-        grp = words[i:i + 3]; g.append((" ".join(w[0] for w in grp), grp[0][1], grp[-1][2]))
+    import math, script_tr
+    g, pos = [], 0
+    for ln in script_tr.LINES:                       # captions never straddle two sentences
+        n = len(ln.split()); lw = words[pos:pos + n]; pos += n
+        per = math.ceil(n / math.ceil(n / 3))
+        for i in range(0, n, per):
+            grp = lw[i:i + per]; g.append((" ".join(w[0] for w in grp), grp[0][1], grp[-1][2]))
     for k, (txt, a, b) in enumerate(g):
         nb = g[k + 1][1] if k + 1 < len(g) else END
         line(a, min(nb, b + 0.35), "Cap", txt.upper())
