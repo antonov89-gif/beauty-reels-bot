@@ -1,6 +1,6 @@
 # DNA: "The Last Doomsday Bunker 😟 (fiction)" (Zack D. Films, xcGZNNWPIA0), 26.10.2026
 
-Tags: V = verified from data, SI = strong inference, H = hypothesis. Visual analysis: NOT VERIFIED ON FRAMES (no mp4; vidIQ watch pass only; Nexlev video watch is closed on the FREE plan). Ask the owner for the mp4 before production.
+Tags: V = verified from data, SI = strong inference, H = hypothesis. Visual analysis: PARTLY VERIFIED on real frames (YouTube thumbnail + 3 preview frames: semi-realistic 3D render, realistic proportions, practical warm lights, shallow DOF; see ref_frames_*.jpg and prompts/style_zackd_3d_render.md). Timing and motion from the vidIQ watch pass only (no mp4; Nexlev video watch is closed on the FREE plan). Ask the owner for the mp4 for full frame forensics.
 
 ## PHASE 0. Data
 - 1:13, published 24.10.2026 14:30 UTC; 14.2M views in ~2 days, 632k likes (4.4%), 14.5k comments (0.10%), VPH 392k, outlier 2.14 (vidIQ). V
