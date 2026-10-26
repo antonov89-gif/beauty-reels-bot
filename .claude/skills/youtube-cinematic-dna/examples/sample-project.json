@@ -1,0 +1,19 @@
+{
+  "project_id": "EXAMPLE-UNSTARTED",
+  "reference": {
+    "url": null,
+    "access_level": "L0",
+    "coverage": []
+  },
+  "evidence": [],
+  "claims": [],
+  "principles": [],
+  "shots": [
+    {
+      "id": "S01-01",
+      "status": "SPECIFIED",
+      "principle_ids": [],
+      "attempts": []
+    }
+  ]
+}
