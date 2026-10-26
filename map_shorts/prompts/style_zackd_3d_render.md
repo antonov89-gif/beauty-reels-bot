@@ -20,3 +20,7 @@ Checklist before generating a whole batch
 1. Generate ONE test frame or clip, compare with ref_frames_*.jpg side by side.
 2. Faces: realistic proportions, no big eyes. Materials: real textures. If it looks like a cartoon, add "photorealistic" and remove any "stylized" words.
 3. Same character description, word for word, in every scene.
+
+## Update 26.10 (after the first test frame came out too photoreal)
+Reference is GAME-ENGINE CG, simpler than film: slightly plastic smooth skin, simple geometry, even soft light, little dirt. Use this STYLE v2 instead of the photoreal prefix:
+Game-engine real-time 3D render, mid-fidelity CG like a stylised video-game cutscene (not a film, not a photograph), realistic human proportions and normal-sized eyes, smooth slightly plastic skin without pores, simple clean geometry, simple fabric textures, even soft practical lighting, low contrast, muted natural colours, light depth of field, vertical 9:16. NOT photorealistic, NOT cartoon, NOT Pixar, NOT anime, NOT claymation, no exaggerated features, no big eyes, no film grain, no dramatic cinematic grading. No text, no letters, no logos, no watermarks.

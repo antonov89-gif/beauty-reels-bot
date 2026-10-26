@@ -2,7 +2,7 @@
 import sys, time
 sys.path.insert(0, "/home/claude/v51")
 import apipod
-STYLE = open("/home/user/beauty-reels-bot/map_shorts/prompts/style_zackd_3d_render.md").read().split("STYLE prefix (paste before every scene)\n")[1].split("\n\n")[0]
+STYLE = open("/home/user/beauty-reels-bot/map_shorts/prompts/style_zackd_3d_render.md").read().split("STYLE v2 instead of the photoreal prefix:\n")[1].split("\n")[0]
 out, scene = sys.argv[1], sys.argv[2]; q = sys.argv[3] if len(sys.argv) > 3 else "1K"
 r = apipod.submit("images", {"model": "nano-banana-2.1", "prompt": STYLE + " " + scene, "aspect_ratio": "9:16", "quality": q})
 print(r)

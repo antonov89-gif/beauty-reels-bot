@@ -40,3 +40,5 @@ Frames: Nano Banana 2.1 ($0.02 per 1K frame, $0.04 per 2K). Clips: Veo 3.1 i2v f
 Estimate for 12-14 shots: frames $0.56 + Veo 3.1 Fast $0.18 x 14 = $2.52 -> about $3.1, +20% retries ~ $3.7. Voice ~1 RUB.
 
 ## Test frame 26.10 (APIpod, Nano Banana 2.1, 1K): 2 calls = $0.04 (the first result was lost by a parsing bug in gen_frame.py, fixed: task id and status are now saved before download). Frame: /home/claude/v74/t01.jpg. Check vs reference: POV hands, wide lens, practical/dawn light, real materials = match; fidelity/drama MORE photoreal than the reference (game-CG, smoother skin, simpler geometry) = to decide with the owner.
+
+## Test frame 2 (26.10, STYLE v2 game-engine CG): /home/claude/v74/t02.jpg, $0.02. Compared with the reference frames and with t01: t02 is closer to the reference (smooth plastic skin, simple geometry, flat soft light). Total test spend $0.06. Waiting for the owner go for full production (~$3.7).
