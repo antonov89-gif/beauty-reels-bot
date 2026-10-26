@@ -47,3 +47,7 @@ Estimate for 12-14 shots: frames $0.56 + Veo 3.1 Fast $0.18 x 14 = $2.52 -> abou
 Files /home/claude/v74/s01..s12.jpg (sheet12.jpg). Self-check vs reference: game-engine CG look holds in all 12 (smooth skin, simple geometry, soft light); narrator hands/cuffs consistent in the 9 POV frames; no text/logos on clothes or ship.
 Issues found by me: s05 and s09 show a small boat with rails instead of a ship deck (script says "ship"); s11 volcano is distant and flatter than s01 (the loop to the first frame is weak); s03 faces slightly uncanny (acceptable, same as reference); s05 shows a flat-topped mountain city (generic, Cape Town fact is correct).
 Next (needs the owner's go + cost): clip test s01 via Veo 3.1 Fast ($0.18), then 11 more (~$2.0). Optional redo s05/s09/s11 = $0.06.
+
+## Redo + test clip (26.10): s05, s09, s11 redone ($0.06): s05 ship deck with lifebuoy, s09 ship bow, s11 bigger volcano + cottages (old versions in /home/claude/v74/old). Test clip c01 from s01 via veo3-1-fast 720p: $0.18, 8 s fixed length, 24 fps, 720x1280, has audio (-19.3 LUFS, not used). Total spent $0.54.
+Clip check: style v2 holds, characters consistent, glow/smoke escalate; flaws: ash flakes look like a flock at ~2 s, the narrator's left hand drops out of frame at times, camera zoom drifts. gen_clip.py hosts the frame on Zernio media and saves task id + status before download.
+Next (needs go): 11 more clips x $0.18 = $1.98.
