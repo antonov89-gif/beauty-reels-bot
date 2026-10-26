@@ -513,3 +513,4 @@ Reworked the AI cinema clip closer to the reference's structure (selfie framing 
 ## 26.10 ролик «3 AIs, one lifeboat»
 - Реальные ответы GPT-5.5, Gemini 3.6 Flash, Grok 4.6 (APIpod). Развилка: на вопросе «твой ребёнок» GPT оставил Yes, Gemini и Grok сменили на No; все трое отрицают противоречие.
 - Ролик 46 с, 15 из 18 клипов владельца, голос Lumean David (~1 ₽), аудит PASS с рисками (S03 похож на знаменитый лайнер, условия генератора клипов NOT VERIFIED). Не запланирован до решения владельца.
+- 26.10 опубликован «3 AIs, one lifeboat»: YouTube V5f5r4XKM4s, TikTok 7700920027515505934, обложка из кадра S10 (vidIQ, 5 кредитов).

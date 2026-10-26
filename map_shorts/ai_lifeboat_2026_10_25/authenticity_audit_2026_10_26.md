@@ -45,3 +45,8 @@ PASS with accepted risks: (1) S03 resembles a famous liner (not named); (2) gene
 1. Confirm the clip generator's licence allows monetised use.
 2. S03: keep, or regenerate with a less recognisable ship.
 3. Publication slot (suggest 27.10 or the next free morning slot) and whether to publish on TikTok too.
+
+## Published 26.10.2026 (owner: "сделай обложку и ставь сейчас")
+- Zernio post 6adf29fbd1ff1b274ae8c6fc, publishNow. YouTube V5f5r4XKM4s (published 10:23 UTC; read back: title, description, 11 tags match publication.md; containsSyntheticMedia = true). TikTok 7700920027515505934 (video_made_with_ai = true).
+- Cover: cover/cover_lifeboat.jpg, a real frame of clip S10 at 2.0 s (all eyes open), headline "3 AIs. 1 LIFEBOAT. LEAVE YOUR OWN CHILD?" and the real own-child answers GPT YES / GEMINI NO / GROK NO (match the logs). Set on YouTube via vidIQ (status updated). TikTok cover: not set (Zernio has no cover field used here), TikTok shows the first frame.
+- Open items accepted by publishing now: S03 ship resemblance, generator licence NOT VERIFIED.
