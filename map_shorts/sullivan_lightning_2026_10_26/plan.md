@@ -67,3 +67,13 @@ Next: clips (Veo 3.1 Fast i2v, $0.18 x 13 = $2.34) after the owner's go; pilot c
 | minimax-h3-i2v | 4-15 s, 768P/2K | page $0.09/s -> min $0.36 (4 s); estimate returns $0 = NOT VERIFIED | first + last frame, audio, 2K; licence/commercial terms not stated |
 | minimax-h3-max-i2v (fal) | 5-15 s, 480P/768P | estimate $0.40 for 5-6 s (page says $0.05/s: mismatch) | first + last frame, "a few seconds" per clip; licence not stated |
 Verdict: 2x+ Veo Fast per clip; our shots use 2-3 s, so longer clips add no value. Use only as an A/B on 1-2 hard-physics shots (s01, s04) if Veo fails twice, or where first+last frame control is needed (loop end).
+
+## Transfer after frame check (reference now L3 video). Changes to our edit
+1. Act 1 (0-~13 s) = continuous-camera feel: join s01->s02->s03->s04->s05 with speed-ramp whip/blur transitions, no hard cuts. Hard cut only at the reveal ("Now, this wasn't the first time").
+2. Own graphics (original value): glow outline on the truck on "his truck"; glow on the cliff edge on "cliff edge"; animated dashed arrow along the truck's roll toward the edge; in the montage a strike counter "1..7" (our addition, not in the reference).
+3. Captions: 1-3 words, white bold with shadow, ~77% height, ~0.5 s per group.
+4. Palette: reference is bright daylight; ours is a storm by story. Lift exposure, and use the lightning flash frames as bright beats.
+5. Ending: reference ends on a reaction close-up. Ours: s13 then a close-up of his calm face under the hat looking at the storm (one new frame, $0.02) - optional.
+6. Fall = tilted Dutch frames + blur -> truck roll (s04) with a slight tilt and blur.
+7. Loudness target: reference -12.3 LUFS; we keep -14 (YouTube normalises), music bed audible under the voice.
+Reference/ours table above stays valid except "Cuts": ours now = continuous act 1 + hard cuts in the montage (5 strikes x ~1.5 s).

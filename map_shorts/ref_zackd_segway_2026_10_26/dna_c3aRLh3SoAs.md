@@ -31,3 +31,34 @@ Mode: SMART (youtube-cinematic-dna V5.1 + DNA analyzer V2). Date 26.10.2026.
 
 ## Transfer limits (PHASE 89)
 Copy principles only. Not Heselden, not Segway, not a cliff fall, not the dog walker. Real people: no invented victims, no invented details; violence implied, no gore.
+
+## UPDATE 26.10: mp4 received -> SOURCE_ACCESS L3 for video (frame_forensics --dense 10: 4 fps 0-10 s, 1 fps 10-33 s), audio = loudness only
+File 360x640, 30 fps, 32.58 s. Sheets: sheets_dense_01..04.jpg, sheets_rest_01..02.jpg (this folder).
+
+### Second-by-second (OBSERVED on frames)
+| Time | On screen | Camera / transition | Graphics | Caption |
+|--|--|--|--|--|
+| 0.0-1.2 | man on Segway from behind on a cliff path over turquoise sea | high OTS, slow push | 0.5-1.0 s yellow glow OUTLINE on the Segway (on "his Segway") | "He rode" / "his Segway" |
+| 1.2-1.6 | - | whip/speed-ramp with heavy motion blur (no hard cut) | - | "right next" |
+| 1.7-2.8 | aerial wide: tiny rider on a rock ledge | drone orbit | 2.25-2.5 s white glow outline on the cliff EDGE (on "cliff edge") | "to the cliff edge" |
+| 3.0-3.3 | rider at rock wall | whip-blur into OTS | - | "but when he saw" |
+| 3.5-4.5 | woman + dog walking toward camera, his blurred shoulder in FG | OTS, shallow DOF | - | "a dog walker" / "coming toward him" |
+| 4.75-6.0 | top-down of the gorge path | crane up + blur | animated dashed white ARROW showing her path toward him | "coming toward him" / "well he slowed down" |
+| 6.25-9.0 | rear medium of rider, woman behind | blur into rear medium, slow push | - | "and started" / "to back up" |
+| 9.0-10.5 | he waves her past | handheld rear 3/4 | - | "so they could pass" / "on the safer side" |
+| 11-13 | low ground shot: wheels creep to the edge, sea below | low angle | - | "But" / "approached" / "the edge" |
+| 14-15 | front medium on the edge, sea behind | static low | - | "suddenly wobbled" |
+| 16-19 | falling backward, tilted Dutch frames, arms out, motion blur | tumbling camera | - | "fell backward" / "still on it" / "Now he was" |
+| ~19.5 | HARD CUT -> bright showroom, arms crossed, brand sign | reveal, location jump | in-scene sign text | "the owner" / "of the company" |
+| 22-24 | steps onto an "off-road model" on a display stand | dolly | in-scene label | "that made Segways" / "and was riding one" |
+| ~24.5 | CUT -> rides over rough rocky ground (proof) | side tracking low | - | "for rough ground" / "so it should have been safe" |
+| ~27.5 | CUT -> callback: OTS from the woman, he waves on the edge | OTS | - | "But one act" / "of kindness" |
+| ~29.6 | CUT -> woman on rocks, then close-up hand over mouth (last frame = reaction) | push-in | - | "was killed" / "by his own product" |
+
+### Corrections to the L1 hypotheses
+- CL-04 REJECTED: not ~13 cuts. 0-19 s is ONE continuous virtual camera with speed-ramp whip/blur transitions; hard cuts only after the reveal (~19.5, ~24.5, ~27.5, ~29.6). OBSERVED.
+- NEW CL-08: keyword graphics: glow outline on the object/edge exactly on its word + animated path arrow. OBSERVED.
+- NEW CL-09: captions 1-3 words, white bold sans with dark shadow, at ~77% frame height, change every ~0.5 s. OBSERVED.
+- NEW CL-10: palette bright daylight, saturated turquoise sea + warm rock; game-engine CG. OBSERVED.
+- NEW CL-11: ends on the witness's reaction close-up (hand over mouth), no loop. OBSERVED.
+- Audio: -12.3 LUFS integrated, LRA 2.4 LU (heavily compressed). Music BPM UNKNOWN (speech dominates the onset estimate; vidIQ "115-120" stays a HYPOTHESIS).
