@@ -12,9 +12,9 @@ SHOTS = {
  "s04": SB + "Close-up of the remaining left half of a glossy reddish-brown liver floating in the air, its flat cut face softly glowing white, clean and smooth, no blood.",
  "s05": SB + "Extreme macro inside liver tissue: a honeycomb of hexagonal liver lobules made of glossy reddish-brown cells, a small central vein in each hexagon, soft glow, shallow depth of field.",
  "s06": SB + "Extreme macro: one glossy round liver cell splitting into two cells, a pinched waist between them, warm glow, other cells around softly blurred.",
- "s07": SB + "Medium shot of a half liver floating in the air while new glossy reddish-brown tissue swells outward from its glowing cut face, a faint white ghost outline shows the full original liver size around it.",
+ "s07": SB + "Medium close shot of a single glossy reddish-brown HALF liver floating alone in the air on the left, clearly only one half with a flat glowing cut face on its right side; to its right an EMPTY space traced by a thin dotted white outline showing where the missing half used to be, so the outline is half empty.",
  "s08": SB + f"Medium shot of {BODY} on the right; inside it a small half liver glows and is growing larger, soft rings of light around it.",
- "s09": SB + "Two glossy reddish-brown livers floating side by side at the same size: the left one with the classic liver shape, the right one rounder and slightly different in shape, a thin white outline traced around each.",
+ "s09": SB + "Two glossy reddish-brown livers floating in empty cyan space side by side at exactly the same size, NO body, NO figure: the left one with the classic liver shape, the right one rounder and slightly different in shape, a thin white glowing outline traced around each.",
  "s10": SB + f"Wide shot of {BODY} standing; its full-size liver glows warmly; the camera is pulled back, a lot of cyan space above the head.",
 }
 def run(k):

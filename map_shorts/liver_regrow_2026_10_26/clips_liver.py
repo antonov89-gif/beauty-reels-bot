@@ -9,7 +9,7 @@ M = {
  "c04": "Slow orbit around the remaining half liver, its smooth cut face glows softly and gently pulses.",
  "c05": "The camera glides forward over the honeycomb of hexagonal liver lobules, cells inside gently shimmer, slow dive toward the central vein of one hexagon.",
  "c06": "The glossy liver cell slowly pinches in the middle and splits into two round cells that drift apart, warm glow, nearby cells start to divide too.",
- "c07": "Time-lapse growth: the liver smoothly swells and grows until it fills the dotted white outline of its original size, the glow increases as it grows, the camera holds steady.",
+ "c07": "Time-lapse growth: new glossy reddish-brown tissue grows out of the glowing cut face of the half liver and steadily fills the empty dotted outline until the liver is whole and full size, the camera holds steady.",
  "c08": "Time-lapse: the small half liver inside the right translucent figure smoothly grows to full size, soft rings of light pulse outward.",
  "c09": "The two livers slowly rotate side by side, the white outlines trace around them, showing the same size but a different shape.",
  "c10": "Slow camera pull-back from the translucent figure, its full-size liver glows warmly, lots of cyan space above.",
@@ -17,7 +17,10 @@ M = {
 def run(k):
     n = k[1:]
     r = subprocess.run([sys.executable, "gen_clip.py", f"/home/claude/v80/s{n}.jpg", f"/home/claude/v80/{k}.mp4", M[k] + TAIL], capture_output=True, text=True)
-    return k, "url http" in r.stdout, (r.stdout + r.stderr)[-300:]
+    import os
+    out = f"/home/claude/v80/{k}.mp4"
+    ok = os.path.exists(out) and os.path.getsize(out) > 100000   # a real clip, not the frame-url print
+    return k, ok, (r.stdout + r.stderr)[-300:]
 if __name__ == "__main__":
     ks = sys.argv[1:] or sorted(M)
     with ThreadPoolExecutor(4) as ex:
