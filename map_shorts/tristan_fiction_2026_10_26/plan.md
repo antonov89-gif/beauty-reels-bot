@@ -51,3 +51,5 @@ Next (needs the owner's go + cost): clip test s01 via Veo 3.1 Fast ($0.18), then
 ## Redo + test clip (26.10): s05, s09, s11 redone ($0.06): s05 ship deck with lifebuoy, s09 ship bow, s11 bigger volcano + cottages (old versions in /home/claude/v74/old). Test clip c01 from s01 via veo3-1-fast 720p: $0.18, 8 s fixed length, 24 fps, 720x1280, has audio (-19.3 LUFS, not used). Total spent $0.54.
 Clip check: style v2 holds, characters consistent, glow/smoke escalate; flaws: ash flakes look like a flock at ~2 s, the narrator's left hand drops out of frame at times, camera zoom drifts. gen_clip.py hosts the frame on Zernio media and saves task id + status before download.
 Next (needs go): 11 more clips x $0.18 = $1.98.
+
+## Final (26.10): 13 clips-shots, voice Lumean ~1 RUB, total APIpod spend $2.52 (frames $0.30 + redo $0.06 + 12 clips $2.16; 0.54 before the 11 clips + 1.98). Video /home/claude/v75/tr_final.mp4, audit PASS with risks. Not published.

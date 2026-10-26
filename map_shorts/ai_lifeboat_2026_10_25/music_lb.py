@@ -27,10 +27,10 @@ def env(n, a=0.01, r=0.2):
     e = np.ones(n); ia = max(1, int(a * SR)); ir = max(1, int(r * SR))
     e[:ia] = np.linspace(0, 1, ia); e[-ir:] *= np.linspace(1, 0, ir); return e
 
-def music(total, starts, T):
+def music(total, starts, T, dark=None, stings=None):
     n = int(total * SR) + SR; out = np.zeros(n)
     bar = 4 * BEAT
-    child0, child1 = starts[6], starts[8]          # 'Then I changed one thing' .. 'Two of three changed'
+    child0, child1 = dark or (starts[6], starts[8])  # lifeboat: 'Then I changed one thing' .. 'Two of three changed'
     def chord_at(t):
         if child0 <= t < child1: return DARK[int((t - child0) // bar) % 2]
         return PROG[int(t // bar) % 4]
@@ -82,7 +82,7 @@ def music(total, starts, T):
             if i0 + L >= n: continue
             tt = np.arange(L) / SR
             sting[i0:i0 + L] += (np.sin(2 * math.pi * hz(m) * tt) + 0.4 * np.sin(2 * math.pi * hz(m) * 2.76 * tt)) * np.exp(-tt * 5) * 0.22
-    for li, w in [(1, 9), (3, 13), (6, 9), (8, 9)]:
+    for li, w in (stings or [(1, 9), (3, 13), (6, 9), (8, 9)]):
         bell(starts[li] + T[li][min(w, len(T[li]) - 1)])
     # riser into the own-child line
     rise = np.zeros(n); i0 = int((child0 - 2 * BEAT) * SR); L = int(2 * BEAT * SR)
