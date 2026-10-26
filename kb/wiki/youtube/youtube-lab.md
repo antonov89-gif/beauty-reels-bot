@@ -12,6 +12,7 @@
 
 ## Образцы
 - GeoGlobeTales → Mr. Buck: [[channels/geoglobetales-mrbuck]]
+- Dr. Plants (природа/эксперименты, 5,95M, медиана ~80M) → канал не выбран: [[channels/dr-plants]]
 
 ## Страницы
 - [[youtube-lessons]] — уроки с уровнем доверия
