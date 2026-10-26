@@ -13,3 +13,4 @@ QC_OPEN: SOFT only (c12 face, c09 FX, c03 eyebrows)
 SPEND: APIpod $2.60 (frames $0.26 + clips $2.34); Lumean voice x2 ~2 RUB
 NEXT_ACTION: owner review of preview_720.mp4; then cover + upload/schedule via Zernio
 BLOCKERS: none
+DESTINATION (owner, 26.10): NOT for Mr. Buck - for another channel. Do not schedule on mr.buck000 / Mr. Buck TikTok. Files: sullivan_final_1080.mp4 (gitignored), cover/cover_sullivan.jpg, publication.md.
