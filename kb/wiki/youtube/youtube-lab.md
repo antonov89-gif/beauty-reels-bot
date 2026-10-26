@@ -7,7 +7,7 @@
 | Канал | Где | Статус |
 |---|---|---|
 | AYNRA (aynra-star) | YouTube, подключён к Zernio | ниша не задана |
-| Ben Still (benstill-q9q) | YouTube, подключён к Zernio | ниша не задана |
+| Ben Still (benstill-q9q) | YouTube, подключён к Zernio | Shorts в стиле Dr. Plants, ИИ-видео через APIPod (2026-10-26) |
 | Mr. Buck (@Mr.Buck000) | YouTube, карта-Shorts | пайплайн готов (скиллы map-shorts) |
 
 ## Образцы
@@ -20,4 +20,4 @@
 - [[youtube-experiments]] — каждый опубликованный ролик и его метрики
 
 ## Активные эксперименты
-Пока нет.
+- Ben Still: «Simulating a Swamp for 100 Days» — сценарий готов (`kb/output/2026-10-26-benstill-swamp-100-days.md`), ждёт ключ APIPod.

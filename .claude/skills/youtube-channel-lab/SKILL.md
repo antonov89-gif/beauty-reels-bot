@@ -59,6 +59,7 @@ description: >
 | Тренды, выбросы, ключи | vidIQ `vidiq_outliers`, `vidiq_trending_videos`, `vidiq_keyword_research`; Nexlev `search_viral_videos_small_channels`, `faceless_outliers_videos`, `get_similar_channels` | кредиты vidIQ |
 | Оценка заголовка/обложки | vidIQ `vidiq_score_title`, `vidiq_score_thumbnail`, `vidiq_similar_thumbnails` | кредиты |
 | Производство видео | OpenMontage (`~/OpenMontage`, если установлен), скиллы `remotion:*`, `anthropic-skills:map-shorts-*`, Higgsfield/cellcog для ИИ-видео | ИИ-генерация платная |
+| ИИ-видео по API | APIPod `https://api.apipod.ai/v1/videos/generations` (Bearer `$APIPOD_API_KEY`) → `GET /videos/status/{task_id}`; модели `veo3-1-fast` (9:16, 720p/1080p, со звуком), Kling, Seedance, WAN | платно, ключ только из переменной окружения, тратить после «да» |
 | Пакет публикации | `anthropic-skills:shorts-publication-package`, `claude-youtube` (`/youtube seo`, `/youtube shorts`) | — |
 | Публикация и аналитика | Zernio: `accounts_list`, `media_generate_upload_link`, `posts_create`, `analytics_get_analytics`, `analytics_get_post_timeline`, `analytics_get_best_time_to_post` | публикация — только после «да» пользователя |
 | YouTube из контейнера напрямую | закрыт сетью | транскрипты — через Nexlev/vidIQ |
