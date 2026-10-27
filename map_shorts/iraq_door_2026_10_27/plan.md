@@ -26,7 +26,7 @@ Transfer (principles only, our own graphics and wording):
 | F1 | Iraq coastline ≈ 58 km | Stratfor; Logistics Cluster port assessment (58 km, 1.6 % of borders). The Czech MFA says 48 km | VERIFIED as "about 58 km" |
 | F2 | ~9 in 10 barrels of 2025 crude exports loaded at Basra ports | SOMO data via Shafaq News: 1.114B of 1.243B bbl (computed 89.6 %) | VERIFIED (computed), say "about 9 in 10" |
 | F3 | Khor Abdullah = the only sea access for Umm Qasr; border on the median line (UNSC Res. 833, 1993); the navigable part is closer to Kuwait | Wikipedia Khawr Abd Allah; Stratfor | VERIFIED |
-| F4 | Kuwait's Mubarak Al-Kabeer port on Bubiyan sits ~1.6–2 km across the channel from Iraq's Grand Faw site | Stratfor (<1.6 km); Enterprise AM 2025 (~2 km) | VERIFIED as "about 2 km" |
+| F4 | Kuwait's Mubarak Al-Kabeer port (29.865N 48.318E) is on Bubiyan at the mouth of the same channel as Iraq's Grand Faw (29.915N 48.441E) | Wikipedia coordinates: ~13 km apart. Stratfor's "<1.6 km" and Enterprise's "~2 km" conflict with that | CORRECTED: do NOT say "2 km"; say "on the same channel" |
 | F5 | Iraq officially asked Kuwait to halt work (2011), saying it would block Iraq's access to the sea | Iraq Business News 2011; gCaptain | VERIFIED |
 | F6 | 2023: Iraq's Federal Supreme Court annulled the Khor Abdullah navigation agreement; 2026 new maps lodged at the UN, dispute open | Wikipedia Khawr Abd Allah | VERIFIED (1 source, add a 2nd) |
 | F7 | Iraq population ≈ 46 million (2024 census) | to check | CHECK |
@@ -39,7 +39,7 @@ Transfer (principles only, our own graphics and wording):
 4. Iraq's main port has one way out: a narrow channel called Khor Abdullah.
 5. The border runs down the middle, but the deep water that big ships need sits closer to Kuwait.
 6. Wait, a channel is still a channel, right? Sure, but then Kuwait started building a giant port right on it.
-7. On Bubiyan Island. About two kilometres across the water from where Iraq is building its own mega-port.
+7. On Bubiyan Island, on the same narrow channel where Iraq is building its own mega-port.
 8. Iraq says it could squeeze its only shipping lane. In 2023, an Iraqi court even scrapped the deal that governs the channel.
 9. So the fight over Iraq's front door is still open. Smart move by Kuwait, or a chokehold?
 
@@ -52,7 +52,7 @@ Transfer (principles only, our own graphics and wording):
 | 14–20 | zoom to Khor Abdullah | port cranes asset at Umm Qasr; channel glow |
 | 20–27 | median line dashed + deep-water lane hugging Kuwait | arrows; "DEEP WATER →" |
 | 27–33 | "Wait…" | tanker asset + green check, then red X stamp |
-| 33–40 | Bubiyan Island pin | Kuwait port cranes asset; measure "≈ 2 KM" to Grand Faw pin |
+| 33–40 | Bubiyan Island pin | Kuwait port cranes asset; pins: Mubarak (Kuwait) and Grand Faw (Iraq) on the same channel |
 | 40–48 | squeeze | gate/scissors asset closing; stamp "CHOKE POINT?" ; gavel asset + "2023 COURT: DEAL SCRAPPED" |
 | 48–55 | pull back to frame-0 framing | question "SMART MOVE OR CHOKEHOLD?" |
 

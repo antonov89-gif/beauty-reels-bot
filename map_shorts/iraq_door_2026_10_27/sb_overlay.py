@@ -11,7 +11,7 @@ YEL, WHT, RED, NAVY = (255, 214, 0), (255, 255, 255), (220, 30, 30), (12, 22, 48
 OV = {   # banner, [(kind, text, y)], caption, active word
     "s01": ("ONE 58 KM DOOR?!", [("chip", "≈ 9 OF 10 OIL BARRELS", 1180)], "Iraq ships about nine in ten", "nine"),
     "s02": (None, [("chip", "46,000,000 PEOPLE", 330), ("stamp", "TINY DOOR", 760)], "one tiny door to the sea", "tiny"),
-    "s03": (None, [("chip", "IRAN  ◄  IRAQ  ►  KUWAIT", 330), ("stamp", "SQUEEZED", 780)], "Iran on one side, Kuwait on the other", "Kuwait"),
+    "s03": (None, [("chip", "IRAN  ·  IRAQ  ·  KUWAIT", 330), ("stamp", "SQUEEZED", 780)], "Iran on one side, Kuwait on the other", "Kuwait"),
     "s04": (None, [("chip", "THE ONLY WAY OUT", 330)], "a narrow channel called Khor Abdullah", "Khor"),
     "s05": (None, [("chip", "BORDER: THE MIDDLE", 300), ("chip", "DEEP WATER: KUWAIT SIDE", 410)], "the deep water sits closer to Kuwait", "closer"),
     "s06": (None, [("stamp", "WAIT…", 700)], "a channel is still a channel, right?", "right?"),
