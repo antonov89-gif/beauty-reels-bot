@@ -11,4 +11,10 @@ Style: STYLE v2 game-engine CG (prompts/style_zackd_3d_render.md). Lock: Neolith
 | s07 | L6 | Welsh hills, smaller stone dragged | smaller stone; landscape hills; no road/fences |
 | s08 | L7 | Altar Stone lying flat in the centre | flat slab, reddish-grey; uprights around; no people |
 Pilot clips (veo3-1-fast, 720p, 8 s): c02 (dragging) and c05 (raising). Max 2 corrective attempts per shot.
+## Pilot result (27.10)
+- Frames s01–s08: GENERATED -> INSPECTED. All pass their gates. Soft issues: s07's stone is too saturated blue (grade down); s08's surrounding stones have no lintels (fine for a close mood shot).
+- c05 (raise): GENERATED -> INSPECTED, PASS. The stone rises from a lean to vertical against the A-frame, with dust and taut ropes, and stays one piece.
+- c02 (drag): GENERATED -> INSPECTED, HARD FAIL. The sledge reads as a wheeled cart, the stone barely moves, and the people mill around. Correction 1 = change method: animate s03 (sledge on timber rails, no wheels) as the drag shot instead.
+Spent: frames $0.16 + pilot clips $0.36 = $0.52.
+
 On screen: "AI RECONSTRUCTION" tag during all AI shots; numbers as chips (25 KM, 25 T, 220 KM, 700 KM).
