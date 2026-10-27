@@ -22,7 +22,7 @@ PROPS = {
     "s03": "Add small 3D flag-free country markers: a glowing pin on the yellow coastline; the neighbours on the left (purple) and right (blue) slightly darker.",
     "s04": "Add 3D container cranes and an oil terminal at the yellow pin; the cyan glowing channel is a narrow water lane leading out to sea.",
     "s05": "Show the white dashed line as a floating 3D dashed border in the middle of the channel and the cyan lane as a glowing deep-water route nearer the purple side.",
-    "s06": "Add a large 3D crude oil tanker sailing inside the narrow cyan channel, filling most of its width, wake behind it.",
+    "s06": "Add a large 3D crude oil tanker sailing exactly ON the glowing cyan line (the deep-water lane), its hull centred on that line in open water, bow pointing toward the open sea at the lower right, white wake behind it.",
     "s07": "Add big modern 3D port cranes and docks at the purple pin (on the island) and a second port under construction with cranes at the red pin across the water.",
     "s08": "Add a giant translucent 3D steel gate half-closing across the cyan channel between the two ports, dramatic lighting.",
     "s09": "Add the oil supertanker small at the head of the gulf, and a dramatic sunset sky over the whole region.",
