@@ -514,3 +514,8 @@ Reworked the AI cinema clip closer to the reference's structure (selfie framing 
 - Реальные ответы GPT-5.5, Gemini 3.6 Flash, Grok 4.6 (APIpod). Развилка: на вопросе «твой ребёнок» GPT оставил Yes, Gemini и Grok сменили на No; все трое отрицают противоречие.
 - Ролик 46 с, 15 из 18 клипов владельца, голос Lumean David (~1 ₽), аудит PASS с рисками (S03 похож на знаменитый лайнер, условия генератора клипов NOT VERIFIED). Не запланирован до решения владельца.
 - 26.10 опубликован «3 AIs, one lifeboat»: YouTube V5f5r4XKM4s, TikTok 7700920027515505934, обложка из кадра S10 (vidIQ, 5 кредитов).
+
+## 27.10 Monetisation progress (vidIQ YouTube Analytics, 27.09-27.10)
+- 50 subscribers total (+56 in 30 days), 45.9k views in 30 days (Shorts feed 90%), median 1,204 per video, engaged 49%, likes 1.99%, comments 0.98/1k, subs 1.22/1k.
+- YPP (YouTube Help, read 27.10): 1,000 subs + 10M Shorts views / 90 days, or 1,000 subs + 4,000 long-form hours / 12 months. Shorts gap ~74x (need ~111k views/day vs ~1.5k).
+- Decision: Mr. Buck = map STORIES (50-90 s) + LOOPS (6-12 s); 3D stories on the other channel. Details: strategy_summary_2026_10_27.md.
