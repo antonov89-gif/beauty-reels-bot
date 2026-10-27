@@ -25,6 +25,9 @@ SHOTS = {
     "s09": "A white hospital van with a police motorcycle escort drives along a coastal road lined with palm trees in the morning, seen from the side, two nurses and a police officer sit inside near the window, soft golden light, the baby not visible.",
     "s10": "Close on the mother's tense face in the courtroom, hands clasped near her mouth, tears in her eyes, the father blurred beside her, warm wood background, shallow depth of field, the judge's bench just visible out of focus.",
     "s11": "In the courtroom the mother takes the swaddled baby from a doctor in a white coat into her arms and presses her face to him, the father hugging both, the crowd softly blurred behind, warm golden light through the windows, emotional wide-medium shot.",
+    "s06b": "Hospital waiting room: three mothers sit in a row on a bench: one in a bright red sari wringing her hands and talking loudly, one in a blue sari holding a folded cloth, and the quiet mother in the dark-green sari with a thin gold border looking down; a nurse in white with a clipboard stands in front of them asking a question, cool light, camera at eye level.",
+    "s07b": "Warm close shot: the mother in the dark-green sari sits beside the iron cot with her eyes closed, humming softly, her hand gently touching the swaddled baby's cheek, the baby's crying face softening, warm golden window light, the rest of the ward blurred in cool blue.",
+    "s08b": "Very close shot: the swaddled baby's calm face with wide open eyes looking up at someone just out of frame, soft warm light on the face, a blurred dark-green sari edge at the frame border, shallow depth of field.",
 }
 G = os.path.join(os.path.dirname(os.path.abspath(__file__)), "gen_frame.py")
 if __name__ == "__main__":
