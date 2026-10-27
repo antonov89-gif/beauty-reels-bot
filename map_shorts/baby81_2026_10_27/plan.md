@@ -51,3 +51,8 @@ Frames already generated (12 incl. a courtroom s06 and a convoy s09 that this ve
 
 ## Cost (ask before)
 Storyboard: 12 frames $0.24 + 3 frames $0.06 = $0.30 (started on the owner's "first the storyboard"). After the OK: pilot of 3 clips $0.54, the other 7–8 clips ~$1.4, voice ~1 RUB: about $2.3 more. No paid clip is started before the owner's OK of the storyboard.
+
+## Storyboard check 27.10 (frames INSPECTED on the contact sheet, not yet APPROVED by the owner)
+Cost so far: 15 frames + 1 retry = about $0.32 (s08b was refused once by the content filter, $0 charged; wording softened).
+OK: same nurse, same green-sari mother, same yellow cloth in s03/s06b/s07b/s08b/s07/s11; three distinct mothers in s06b; bubble, tag and DNA UI are our own graphics; no AI text; no gore.
+Defects to fix before the pilot (each frame $0.02): (1) s07 lab frame contains a judge in a black robe, unneeded; (2) s10/s11 backgrounds look like a courtroom with a judge, the story has none; (3) the baby in s02 looks older than in s01; (4) s06b: the green mother already holds the baby, which spoils the reveal of line 7 (consider the baby in the cot).
