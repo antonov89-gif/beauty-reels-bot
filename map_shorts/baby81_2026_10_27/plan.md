@@ -56,3 +56,12 @@ Storyboard: 12 frames $0.24 + 3 frames $0.06 = $0.30 (started on the owner's "fi
 Cost so far: 15 frames + 1 retry = about $0.32 (s08b was refused once by the content filter, $0 charged; wording softened).
 OK: same nurse, same green-sari mother, same yellow cloth in s03/s06b/s07b/s08b/s07/s11; three distinct mothers in s06b; bubble, tag and DNA UI are our own graphics; no AI text; no gore.
 Defects to fix before the pilot (each frame $0.02): (1) s07 lab frame contains a judge in a black robe, unneeded; (2) s10/s11 backgrounds look like a courtroom with a judge, the story has none; (3) the baby in s02 looks older than in s01; (4) s06b: the green mother already holds the baby, which spoils the reveal of line 7 (consider the baby in the cot).
+
+## Storyboard v2 + pilot (27.10, owner: "делай")
+Frames s02, s06b, s07, s10, s11 regenerated ($0.10): no judge or courtroom, newborn in s02, baby in the cot in s06b. Sheet: storyboard/storyboard_b81_v2.jpg.
+Pilot clips (veo3-1-fast 720p 8 s, $0.54): c02 corridor follow, c07b lullaby, c11 reunion. Status: GENERATED + INSPECTED on a 1 fps sheet (storyboard/pilot_sheet.jpg), not APPROVED by the owner.
+- c02: PASS. Continuous tracking camera, no drift, crowd and doctors natural, baby stays in the nurse's arm.
+- c07b: PASS. The baby's crying face relaxes, the room warms from cool blue to golden (this is the colour code, intended; premium_gate flags it as drift from 3.4 s, a REVIEW item judged intentional).
+- c11: PASS with note. Faces stable, hug reads; the nurse leaves the frame and the father's hand merges with the baby's cloth from ~6 s: use about 0-6 s.
+premium_gate "spec FAIL" on raw clips is only the 720p size; the build upscales to 1080x1920.
+Next (needs the owner's OK, ~$1.4): the other 8-9 clips c01, c03, c05, c04, c06b, c08b, c07, c08, c10.
