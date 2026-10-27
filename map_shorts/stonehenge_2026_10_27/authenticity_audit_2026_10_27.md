@@ -17,7 +17,7 @@ Checked on: a 1 fps contact sheet of the final, dense forensics sheets, the clip
 
 ## AI content
 All 8 visuals are AI (Nano Banana 2.1 frames, Veo 3.1 fast clips) and the voice is AI (ElevenLabs via Lumean).
-- On-screen "AI RECONSTRUCTION" tag for the whole video.
+- On-screen tag removed at the owner's request (27.10, re-render v2; PROJECT_INTEGRATION override: "no on-screen tag unless asked"). Disclosure stays in the title "(AI Reconstruction)", in the description and in the platform AI flag (MUST be ON at upload). The re-checked frame 0 shows no tag; loudness is unchanged at −14.3 LUFS.
 - Description discloses AI visuals and AI voice. Platform flags: altered/synthetic = YES.
 - Invented details: the people, their clothes, the exact sledges, the A-frame and the crib. These are presented as a reconstruction, not footage.
 - c07 shows a bright blue stone (saturation lowered in the edit). The real bluestones are blue-grey: a soft visual issue.

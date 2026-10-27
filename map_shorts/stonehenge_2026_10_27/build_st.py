@@ -1,5 +1,5 @@
 """Stonehenge Short: AI reconstruction clips (/home/claude/v85/clips), voice (/home/claude/v85/lumean), 1-3 word captions at ~77 % height,
-number chips on the facts, small "AI RECONSTRUCTION" tag, own synth bed (music_lb) ducked under the voice. Output /home/claude/v85/st_final.mp4"""
+number chips on the facts, no on-screen AI tag (disclosed in title, description and platform flag), own synth bed (music_lb) ducked under the voice. Output /home/claude/v85/st_final.mp4"""
 import csv
 import json
 import subprocess
@@ -85,7 +85,7 @@ Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
     def line(a, b, st, tx, layer=0):
         ev.append(f"Dialogue: {layer},{ts(a)},{ts(b)},{st},,0,0,0,,{tx}")
     pop = "{\\fscx60\\fscy60\\t(0,120,\\fscx100\\fscy100)}"
-    line(0.0, END, "Tag", "AI RECONSTRUCTION")
+    # no on-screen AI tag (owner, 27.10): disclosure = title "(AI Reconstruction)" + description + platform AI flag
     w = words()
     lw, pos = [], 0
     for ln in script_st.LINES:
