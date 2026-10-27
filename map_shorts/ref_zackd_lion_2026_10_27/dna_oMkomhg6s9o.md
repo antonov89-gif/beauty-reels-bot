@@ -63,3 +63,70 @@ NOT a copy (PHASE 96): not the Saroo story, not his likeness, not the film's sce
 1. The mp4 of the reference for the frame check (`frame_forensics.py`), or confirm that we proceed on the L1 analysis.
 2. Which channel: Mr. Buck (a geography channel; the "map solves it" angle fits it) or the other channel (Zack D.-style stories)?
 3. Which idea (or your own)?
+
+---
+# L3 UPDATE: FRAME-VERIFIED (owner's mp4, 27.10.2026)
+File: 360x640, 29.97 fps, 43.1 s (a low-resolution copy). `frame_forensics.py --dense 10`: sheets in `forensics/`. Everything below is read from real frames and measured. Sound content (music, SFX) is NOT VERIFIED: only loudness was measured.
+
+## Corrections to the vidIQ AI description (L1 -> L3)
+- "11 hard cuts": WRONG. The scene detector finds **0 hard cuts** (scene > 0.3). The video is one continuous virtual camera; every change of place is made by camera motion (push-in, pull-out, a fly-through of the window, a whip, a morph). By the motion spikes (>= 38 on a 0-255 frame-difference scale at 10 fps) there are **16 shot changes = 3.7 per 10 s**, mean shot 2.4 s.
+- "Orchestral climax": NOT VERIFIED. "Voice slow ~130 wpm": WRONG, the transcript has 107 words / 43 s = **149 wpm**.
+- Right: the memory bubbles, "1,000 Miles", "Calcutta, INDIA", pins, the card "Waterfall, Khandwa / झरना, खंडवा", Gandhi's portrait, the "D" on the laptop (the channel's own brand).
+
+## Second-by-second table (what is on screen)
+| t, s | Shot | Camera | Text / graphic | Rhythm |
+|--|--|--|--|--|
+| 0.0–1.7 | a boy on a train seat, then his face | the camera pushes in from medium to a close-up in 0.75 s, then follows the head tilt as he falls asleep | caption "The boy" from frame 0 | continuous |
+| 1.7–4.7 | memory bubble (white glowing, torn outline): the older brother lifts a small boy onto a train | the bubble pops in, the camera inside it pushes forward; the sleeping boy stays in the lower frame | captions "thinking / his brother / was on / the same train" | inset-in-frame |
+| 4.7–6.5 | the boy wakes, eyes widen | the bubble dissolves, a whip back to a face close-up | "he woke up" | the first emotional beat |
+| 6.5–8.0 | he scrambles in an empty carriage | pull-out to a wide, an arc | "He was alone" | |
+| 8.0–10.7 | the train from outside, with a skyline and a big bridge (Howrah Bridge = Kolkata) at dusk | the camera flies through the window and tracks along the coach | "700 miles away from his family" | a location anchor in the picture |
+| 10.7–13.6 | a platform, the boy steps out alone | eye-level, a slow pan | "Now he was only five years old" | |
+| 13.6–16.1 | a policeman kneels and comforts him | a mid-shot, a small push | "Police found him / but nobody could figure out" | |
+| 16.1–17.6 | the police office, Gandhi's portrait | static | "where he had come from" | |
+| 17.6–19.7 | the adoption: a foreign couple kneels to the boy | a slow pan | "So he was eventually adopted" | warm light |
+| 19.7–22.7 | the adult walks down a suburban street, then sits on a chair with a laptop | a match morph (the pose is kept) | "on the other side of the world / Then decades later" | |
+| 22.7–25.0 | the adult at a desk, a blue room | mid-shot | "he discovered" | |
+| 25.0–28.6 | the laptop: a globe, then the satellite view of rails, a finger traces a yellow path | over-the-shoulder, a push into the screen | "Google Earth / following railway tracks" | the map beat |
+| 28.6–30.1 | the map UI: a red circle radius, "40 Miles", "Calcutta, INDIA" | zoom in the screen | "after night / thousands of miles" | |
+| 30.1–34.3 | pin clusters (cyan, yellow, purple), "1,000 Miles", a red line, then the card "Waterfall, Khandwa" glows | zoom, a card pop | "Until one familiar landmark" | the discovery |
+| 34.3–35.2 | a memory bubble: a child wading in the water (over the laptop) | pop | "appeared" | recognition |
+| 35.2–37.8 | a village, a villager walks with the adult | tracking walk | "Months later a villager brought him to" | |
+| 37.8–39.2 | a doorway, the mother in a pink sari | a push to the door | "And he hugged his mom" | |
+| 39.2–43.1 | the hug | a slow push, a static hold for the last ~3 s (motion 3.8–7.8, the calmest of the video) | "for the first time in 25 years" | silence in the picture, a quiet landing |
+
+## The numbers (measured, same method on our videos)
+| Metric | Reference | Our Iraq | Our Stonehenge |
+|--|--|--|--|
+| Mean frame difference (0-255) | **19.3** | 3.9 | 7.4 |
+| Shot-change spikes per 10 s | **3.7** | 1.4 | 2.4 |
+| Speech | 149 wpm | n/a | n/a |
+| Loudness | **−10.2 LUFS, LRA 1.8, peak +0.3 dBFS** (very loud, flat, clipped) | −14.3 | −14.3 |
+The picture is about **5x more active** than our Iraq: the camera is never still and each shot carries one story beat.
+
+## Camera DNA (L3)
+A virtual camera that is always moving: push-ins on faces, a pull-out to reveal the space, a window fly-through to leave a scene, tracking along the train, an over-the-shoulder push into a screen, a slow push on the final hug. Transitions are motion, not cuts. The camera inside a memory bubble moves on its own.
+
+## Visual DNA (L3)
+Game-engine 3D with realistic proportions and soft light. Colour is a code: cold blue for loneliness (the train interior, the blue room), warm pink dusk for the journey, neutral for the police, warm daylight for the village and the reunion. One costume per character across the whole video (boy: white tee and khaki shorts; adult: white tee and jeans; mother: pink sari). Cultural proof in the set: an Indian Railways "SLEEPER" coach with a number, an Indian flag decal on the coach, uniforms, a Gandhi portrait, Hindi on the map card. The location is also proven in the picture (the bridge skyline).
+
+## Editing DNA (L3)
+One shot per clause of the narration; the changes land on the start of each clause ("Now he was...", "Police found...", "So he was eventually adopted", "Then decades later", "he discovered...", "Months later", "And he hugged..."). The map beat is the only prop with a UI and takes 9.3 s of 43 (22 %). Memory bubbles (a white glowing, torn outline) are the inset device: they show the past inside the present.
+
+## Captions (L3)
+1–3 words per card (about 2), word-by-word sync, **white with a thin dark outline, no colour highlight, no pop**, centred at about 78 % of the height, constant size (~5 % of the height). Quiet and readable; the emotion comes from the picture.
+
+## Packaging (VERIFIED)
+Title = a promise with a famous tool, no names: "Google Earth Helped Him Find His Lost Family 😌" (one emoji). No description, no tags. No thumbnail text in the frames we saw. The comment section is the engine (see block 12). The "D" on the laptop is the channel's own mark. The outlier score is 2.0: it is about twice the channel's own norm, so the channel itself already has a huge baseline (we do not).
+
+## What we take / what we change (PHASE 94, updated)
+| Take (principle) | Change (our expression) |
+|--|--|
+| A continuous, always-moving camera; transitions as motion | our own camera moves in 3D; no cuts |
+| Memory-bubble inset with a glowing torn outline | our own bubble shape and colour |
+| One shot per clause; a beat lands on each clause start | a script written clause by clause |
+| Cold/warm colour code, one costume per character | our own palette and characters |
+| A device beat with a prop UI (22 % of the runtime) | the device of OUR story (see the lost-boy ideas) |
+| A proof of the place in the picture | our own location anchor |
+| 1–3 word white captions at ~78 % | same placement, our own font |
+| Loud, flat master | NOT copied: −14 LUFS stays (the platform normalises; clipping hurts) |
