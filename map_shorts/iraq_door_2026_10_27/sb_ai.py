@@ -18,7 +18,7 @@ STYLE = ("Use the input image as the exact map layout. Re-render it as a premium
          "No text, no letters, no numbers, no labels, no logos, no watermark. ")
 PROPS = {
     "s01": "Add one detailed 3D crude oil supertanker leaving the tiny yellow-glowing coastline at the head of the gulf, small compared with the country.",
-    "s02": "Add a dense miniature crowd of tiny stylised 3D people standing across the red country (no faces, generic), the coastline still glowing yellow.",
+    "s02": "Make it dusk: add a delicate network of warm glowing city lights and roads across the whole red country (population), the coastline at the head of the gulf still glowing yellow, no crowds, no people.",
     "s03": "Add small 3D flag-free country markers: a glowing pin on the yellow coastline; the neighbours on the left (purple) and right (blue) slightly darker.",
     "s04": "Add 3D container cranes and an oil terminal at the yellow pin; the cyan glowing channel is a narrow water lane leading out to sea.",
     "s05": "Show the white dashed line as a floating 3D dashed border in the middle of the channel and the cyan lane as a glowing deep-water route nearer the purple side.",
