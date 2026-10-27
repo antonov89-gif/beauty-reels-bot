@@ -1,3 +1,5 @@
+> ROUTING (27.10, owner's rule): this reference is a human story, NOT geography. It is for the STORIES channel, not Mr. Buck, and its style is not used on Mr. Buck. See map_shorts/channels.md.
+
 # DNA: oMkomhg6s9o, "Google Earth Helped Him Find His Lost Family 😌" (Zack D. Films), 27.10.2026
 Master prompt: map_shorts/prompts/video_dna_analyzer_v2.md (PHASE 91 blocks, condensed; replication protocol 92–96). Skill: video-dna-analyzer + youtube-cinematic-dna (V5.1).
 **Evidence level:** metadata, transcript and comments = VERIFIED (vidIQ). Visual breakdown = L1 HYPOTHESIS from the vidIQ AI watch (10 credits), confirmed only by 4 real images (3 YouTube frames + the cover: style, subject, caption look). **NOT VERIFIED ON FRAMES** for timings, cuts and camera: yt-dlp is blocked (HTTP 403), so the owner is asked for the mp4 to run frame_forensics.py (`--dense 10`).
@@ -28,7 +30,7 @@ Master prompt: map_shorts/prompts/video_dna_analyzer_v2.md (PHASE 91 blocks, con
 13. **Weak points:** viewers say the brother's death was cut; the "adoption without searching for the parents" logic is questioned; uses a Google logo (trademark); a real living person depicted; a retelling of a book and a film (originality risk, YPP).
 14. **How to improve (for us):** keep the emotional arc but add our own proof (a real map moment made with our Esri-free premium 3D maps), tell the omitted part on purpose or end on a question to drive comments, and use a story we can verify and that does not depend on a living person's likeness.
 15. **Replication blueprint:** hook with a child or a person in danger + a number; 5–6 beats of cause and effect; one "map/tech solves it" beat of 8–10 s with our UI; a quiet payoff; a pinned comment with the missing fact or a question.
-16. **New video blueprint:** see ideas below (a true story + the map moment + local pride).
+16. **New video blueprint:** see the lost-boy ideas for the STORIES channel (ideas_lost_boy_2026_10_27.md). The geography-ideas table below is kept for reference only; it is not the plan for this reference.
 17. **Facts vs inferences:** FACTS: the metadata, the transcript, the comments, the 4 images. INFERENCES: all timings, cuts, camera, SFX, retention, production method.
 18. **Score:** idea/story 9, emotion 9, packaging 8 (title with the emoji, no thumbnail text), visual 7, sound 8 (L1), originality 5 (a retelling) = ~78 / 100.
 
