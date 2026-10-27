@@ -24,15 +24,16 @@ wt = lambda l, w: ST[l] + TW[l][w]          # noqa: E731  absolute time of word 
 
 # (out_start, out_end, clip, src_in, src_out, push_in, saturation)
 EDL = [
-    (0.0,        ST[1],     "c01", 0.0, 5.0, False, 1.10),    # hook: fly-in to the 58 km coast
+    (0.0,        ST[1],     "c01", 0.0, 5.0, False, 1.10),    # hook: fly-in to the 58 km coast (first 5 s are geographically clean)
     (ST[1],      ST[2],     "c02", 0.0, 3.5, False, 1.10),    # 46 million people: city lights
-    (ST[2],      ST[3],     "c03", 0.5, 3.8, False, 1.10),    # Iran / Kuwait
-    (ST[3],      ST[4],     "c04", 0.0, 6.6, False, 1.10),    # the channel to Umm Qasr
+    (ST[2],      ST[3],     "c03", 0.3, 3.4, False, 1.10),    # Iran / Kuwait (cut before the AI invents a squiggle line, ~3.8 s)
+    (ST[3],      ST[4],     "c04", 0.0, 4.7, False, 1.10),    # the channel to Umm Qasr (cut before the layers vanish; slowed to fit)
     (ST[4],      ST[5],     "c05", 0.0, 5.0, False, 1.10),    # border in the middle, deep water near Kuwait
-    (ST[5],      wt(5, 8),  "c06", 0.0, 3.6, False, 1.10),    # "Wait, a channel is still a channel": tanker in the lane
-    (wt(5, 8),   ST[7],     "c07", 0.0, 8.0, False, 1.10),    # ports on the channel (stretched slightly: ~8 s)
+    (ST[5],      wt(5, 8),  "c06", 0.0, 3.8, False, 1.10),    # "Wait, a channel is still a channel": tanker in the lane
+    (wt(5, 8),   ST[6],     "c07", 0.0, 2.0, False, 1.10),    # Kuwait builds a port on it (Iraq starts turning pink after ~2.3 s: cut at 2.0)
+    (ST[6],      ST[7],     "c07k", 0.0, None, False, 1.10),  # same framing continues as a slow push on the last clean frame
     (ST[7],      ST[8],     "c08", 0.0, 8.0, False, 1.10),    # the gate closes
-    (ST[8],      END,       "c09", 0.0, 8.0, False, 1.10),    # sunset pull-back, question
+    (ST[8],      END,       "c09", 0.0, None, False, 1.10),    # sunset pull-back, question
 ]
 # overlays: (kind, text, y, t0, t1)
 OVL = [
@@ -53,11 +54,20 @@ OVL = [
 ]
 
 
+def make_kb(dur):
+    """c07k: slow push-in on the last clean frame of c07 (2.0 s), so the ports shot continues without the AI colour drift."""
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", "2.0", "-i", str(V / "c07.mp4"), "-frames:v", "1", str(V / "c07_last.png")], check=True)
+    n = int(dur * FPS) + 1
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(V / "c07_last.png"), "-vf",
+                    f"scale=2160:3840,zoompan=z='1+0.12*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={n}:s={WD}x{HT}:fps={FPS}",
+                    "-frames:v", str(n), "-c:v", "libx264", "-crf", "12", "-pix_fmt", "yuv420p", str(V / "c07k.mp4")], check=True)
+
+
 def build_base(out):
     inputs, chains = [], []
     for i, (a, b, c, s0, s1, push, sat) in enumerate(EDL):
         inputs += ["-i", str(V / f"{c}.mp4")]
-        d = b - a; k = d / (s1 - s0)
+        d = b - a; s1 = (s0 + d) if s1 is None else s1; k = d / (s1 - s0)
         f = (f"[{i}:v]trim={s0}:{s1},setpts=PTS-STARTPTS,scale={WD}:{HT}:force_original_aspect_ratio=increase,crop={WD}:{HT},setsar=1,"
              f"setpts={k:.4f}*PTS,fps={FPS},trim=duration={d:.4f}")
         f += f",eq=contrast=1.05:saturation={sat}"
@@ -158,7 +168,8 @@ def write_wav(x, path):
 
 if __name__ == "__main__":
     for a, b, c, s0, s1, *_ in EDL:
-        assert b > a and s1 <= 8.0, (c, a, b)
+        assert b > a and (s1 is None or s1 <= 8.0) and (b - a <= 8.05 or s1 is not None), (c, a, b)
+    make_kb(ST[7] - ST[6] + 0.3)
     build_base(W / "iq_base.mp4"); build_ass(W / "iq.ass")
     sr = 44100; n = int(END * sr) + sr
     bed = music(END, ST, TW, dark=(ST[7], ST[8]), stings=[(1, 4), (7, 5), (8, 10)])[:n]
@@ -174,7 +185,7 @@ if __name__ == "__main__":
         fc.append(f"[{last}][o{k}]overlay=enable='between(t,{a:.2f},{b:.2f})':shortest=1[v{k}]"); last = f"v{k}"
     fc.append(f"[{last}]ass={W / 'iq.ass'}[v]")
     fc.append("[1:a]aresample=44100,asplit[vo][sc];[2:a]volume=0.62[bed];[bed][sc]sidechaincompress=threshold=0.06:ratio=3:attack=20:release=300[duck];"
-              "[vo][duck]amix=inputs=2:duration=longest:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=9[a]")
+              "[vo][duck]amix=inputs=2:duration=longest:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=9,apad=whole_dur=" + f"{END:.2f}" + "[a]")
     subprocess.run(["ffmpeg", "-v", "error", "-y", *inputs, "-filter_complex", ";".join(fc), "-map", "[v]", "-map", "[a]", "-t", f"{END:.2f}",
                     "-r", str(FPS), "-c:v", "libx264", "-crf", "17", "-preset", "medium", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k",
                     "-movflags", "+faststart", str(W / "iq_final.mp4")], check=True)
