@@ -17,6 +17,7 @@ Rule (CLAUDE.md): references are routed by niche; styles are never mixed; say th
 - Visual identity (its own, never used on Mr. Buck): game-engine 3D characters (STYLE v2 in `prompts/style_zackd_3d_render.md`), a continuous always-moving camera, motion transitions instead of cuts, memory-bubble insets with a glowing torn outline, a cold/warm colour code, one costume per character, white 1–3 word captions at ~78 % height, cultural accuracy of the set.
 - Production: youtube-cinematic-dna V5.1 (frames -> pilot -> batch), AI disclosed.
 - Publishing: needs the channel's own accounts connected to Zernio; until then files are delivered to the owner only.
+- **Fiction allowed (owner, 27.10):** original invented stories are fine on this channel. Fiction audit instead of the facts audit: (1) the description says "a fictional story"; nothing is claimed as true, as news or as a real case; (2) no real person's name, likeness or brand; a real disaster is not retold with invented details as if real; (3) AI disclosed + flags ON; (4) no gore, no violence against children, not made for kids; (5) originality: not a copy of a reference's characters, scenes or wording (PHASE 96); (6) the premium_gate.py report. Real events may only be used with checked facts and "inspired by".
 
 ## 3. Routing log
 | Date | Reference | Niche | Routed to |
