@@ -8,6 +8,8 @@ SRC, DST = (118.0, -2.5), (263.0, 37.0)              # Indonesia centre -> centr
 US = (263.0, 37.0, 1150, 860)
 MID = (190.0, 22.0, 600, 860)                        # pulled out over the Pacific during the slide
 ID = (118.0, -1.0, 980, 860)
+K_BAR = [(2.8, 1.0), (2.85, 0.0), (7.0, 0.0), (7.7, 1.0)]       # full -> (invisible reset) -> grows back before the loop point
+A_BAR = [(2.3, 1.0), (2.75, 0.0), (6.95, 0.0), (7.0, 1.0)]      # fades out at full value
 
 
 def build(SEGMENT, K, O, G):
@@ -26,8 +28,9 @@ def build(SEGMENT, K, O, G):
     O("truesize", -1, 99, name="Indonesia", src=SRC, dst=DST, north=True, col=ORANGE, alpha=0.75, glow=YEL, ghost=True,
       legs=[(-99, -98, 1.0), (2.5, 4.5, -1.0), (5.6, 7.4, 1.0)])
 
-    O("title", -1, 99, lines=[("INDONESIA IS WIDER", ORANGE), ("THAN THE USA", WHT)], size=96, y=150, scrim=360)
-    O("pill", 4.3, 5.7, xy=(540, 1330), txt="SAME SHAPE · SAME SIZE · REAL PLACE", size=46, col=YEL)
+    O("title", -1, 99, lines=[("INDONESIA IS WIDER", ORANGE), ("THAN THE USA", WHT)], size=96, y=150, scrim=430)
+    O("label", -1, 99, xy=(540, 352), txt="(WITHOUT ALASKA & HAWAII)", size=42, stroke=6, col=WHT)     # claim = the 48 contiguous states
+    O("pill", 4.3, 5.7, xy=(540, 1330), txt="SAME SHAPE · SAME SIZE · REAL PLACE", size=52, col=YEL)
     O("bars", -1, 99, y=1330, gap=150, x0=100, maxw=820, h=66, vmax=5600, fmt="{:,.0f} KM", vsize=44,
-      items=[dict(txt="USA · COAST TO COAST", val=4500, col=BLUE, k=[(2.3, 1.0), (2.8, 0.0), (7.0, 0.0), (7.7, 1.0)]),
-             dict(txt="INDONESIA · EAST TO WEST", val=5120, col=ORANGE, k=[(2.3, 1.0), (2.8, 0.0), (7.0, 0.0), (7.7, 1.0)])])
+      items=[dict(txt="USA · COAST TO COAST", val=4500, col=BLUE, k=K_BAR, ak=A_BAR),
+             dict(txt="INDONESIA · EAST TO WEST", val=5120, col=ORANGE, k=K_BAR, ak=A_BAR)])

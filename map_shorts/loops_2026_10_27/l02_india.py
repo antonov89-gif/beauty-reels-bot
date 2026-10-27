@@ -37,4 +37,4 @@ def build(SEGMENT, K, O, G):
     O("title", -1, 99, lines=[("INDIA HAS", ORANGE), ("MORE PEOPLE THAN", WHT), ("ALL THE BLUE", (90, 170, 255))], size=86, y=140, scrim=430)
     O("bars", -1, 99, y=1330, gap=150, x0=100, maxw=820, h=66, vmax=1.5, fmt="{:.2f} BILLION", vsize=44,
       items=[dict(txt="EUROPE + USA + CANADA", val=1.13, col=BLUE, k=[(0, 1.0)]),
-             dict(txt="INDIA", val=1.45, col=ORANGE, k=[(2.9, 0.0), (4.4, 1.0), (6.2, 1.0), (6.9, 0.0)])])
+             dict(txt="INDIA", val=1.45, col=ORANGE, k=[(2.9, 0.0), (4.4, 1.0), (6.8, 1.0), (6.85, 0.0)], ak=[(6.2, 1.0), (6.7, 0.0), (6.9, 0.0), (6.95, 1.0)])])

@@ -1058,17 +1058,22 @@ def bars(img, v, o, t):
     y = o.get("y", 1180)
     for it in o["items"]:
         p = clamp(env(it["k"], t), 0, 1.2)
-        a = clamp(p / 0.08)
+        a = clamp(p / 0.08) * clamp(env(it.get("ak", [(0, 1.0)]), t))      # 'ak': fade a full bar out instead of counting it down
         if a <= 0:
             y += gap
             continue
         lab = text_layer(it["txt"], fit(MX, o.get("lsize", 40), it["txt"], maxw), WHT, 5, True, a)
         img.alpha_composite(lab, (int(x0 - 30), int(y - h / 2 - lab.height + 22)))
-        d = ImageDraw.Draw(img)
+        bl = Image.new("RGBA", (W, H), (0, 0, 0, 0))            # own layer: drawing straight on img would not blend the alpha
+        d = ImageDraw.Draw(bl)
         d.rounded_rectangle((x0, y - h / 2, x0 + maxw, y + h / 2), radius=h // 2, fill=(10, 16, 32, int(150 * a)))
         bw = max(h, maxw * it["val"] / o["vmax"] * min(1.0, p))
         d.rounded_rectangle((x0 + 3, y - h / 2 + 4, x0 + bw, y + h / 2 + 4), radius=h // 2, fill=(0, 0, 0, int(110 * a)))
         d.rounded_rectangle((x0, y - h / 2, x0 + bw, y + h / 2), radius=h // 2, fill=it["col"] + (int(255 * a),), outline=WHT + (int(230 * a),), width=3)
+        img.alpha_composite(bl)
+        if p < 0.15:                                           # no "52 KM" flashes while a bar starts growing
+            y += gap
+            continue
         txt = o.get("fmt", "{:.2f}B").format(it["val"] * min(1.0, p))
         vl = text_layer(txt, font(MB, o.get("vsize", 50)), WHT, 6, True, a)
         vx = x0 + bw - vl.width / 2 + 10 if bw > vl.width + 20 else x0 + bw + vl.width / 2 - 10
