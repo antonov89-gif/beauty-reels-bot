@@ -519,3 +519,9 @@ Reworked the AI cinema clip closer to the reference's structure (selfie framing 
 - 50 subscribers total (+56 in 30 days), 45.9k views in 30 days (Shorts feed 90%), median 1,204 per video, engaged 49%, likes 1.99%, comments 0.98/1k, subs 1.22/1k.
 - YPP (YouTube Help, read 27.10): 1,000 subs + 10M Shorts views / 90 days, or 1,000 subs + 4,000 long-form hours / 12 months. Shorts gap ~74x (need ~111k views/day vs ~1.5k).
 - Decision: Mr. Buck = map STORIES (50-90 s) + LOOPS (6-12 s); 3D stories on the other channel. Details: strategy_summary_2026_10_27.md.
+
+## 27.10.2026: format pivot and first premium AI-map Short
+- Owner rejected explainers and the engine-only loops (expected ~1.2-1.5k views) and asked for premium visuals made by generation. Market check (vidIQ, this month, channels < 100k): flag/compare loops reach 0.6-2.1M, the AI-reconstruction Shorts 0.4-0.7M; the reference jPCF80Bte8s (Congo's 23-mile coast) is 18.6k in 1 day, 10.7x its channel's norm.
+- Published: "Iraq Sells Oil Through a 58 km Door" (YouTube mGq45TanV5c, TikTok 7701304822636530957): real Esri-free map layout restyled to a 3D look + Veo clips + own graphics. Cost ~$2.2 (11 frames, 9 clips) + ~2 RUB voice. Authenticity audit FIXED (see iraq_door_2026_10_27/).
+- Also made, not published: Stonehenge AI reconstruction (stonehenge_2026_10_27), 3 engine loops (loops_2026_10_27: engine-only, owner judged them weaker).
+- YPP progress: not measured today; subscribers/views check at 48 h. Next in the series: Croatia and Neum, Bolivia, Slovenia (topics in ref_globecurio_congo_2026_10_27).
