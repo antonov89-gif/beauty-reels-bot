@@ -23,6 +23,6 @@ Rule (CLAUDE.md): references are routed by niche; styles are never mixed; say th
 | Date | Reference | Niche | Routed to |
 |--|--|--|--|
 | 27.10 | jPCF80Bte8s Congo's 23-mile coast | geography | Mr. Buck (made: Iraq) |
-| 27.10 | uIC4AZP3wx4 crafter duck, wooden orthopedic shoes (real footage, 660M views) | DIY craft process, no voice | No channel yet; NOT Mr. Buck. Only principles may be used (see dna_uIC4AZP3wx4.md) |
+| 27.10 | uIC4AZP3wx4 crafter duck, wooden orthopedic shoes (real footage, 660M views) | DIY craft process, no voice | Another channel (owner, 27.10); parked, not Mr. Buck, no questions needed (see dna_uIC4AZP3wx4.md) |
 | 27.10 | oMkomhg6s9o Zack D., Saroo / Google Earth | a human story (the map is only a prop) | Stories channel; its style is NOT taken by Mr. Buck |
 | 26.10 | c3aRLh3SoAs, JUni9wxjZcU (Zack D. style) | story / science | Stories channel (Sullivan, liver) |

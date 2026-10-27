@@ -1,4 +1,4 @@
-> ROUTING (27.10, owner's rule): a real-footage DIY craft video. NOT geography. It is not for Mr. Buck and its look is not taken by Mr. Buck. No channel for it exists yet (see the questions at the end).
+> ROUTING (27.10, owner's rule): a real-footage DIY craft video. NOT geography. It is not for Mr. Buck and its look is not taken by Mr. Buck. Owner confirmed (27.10): it is for another channel, not geography. Nothing is asked about it again.
 
 # DNA: uIC4AZP3wx4, "How Handmade Wooden Orthopedic Shoes Are Made" (crafter duck - DIY), 27.10.2026
 Skill: video-dna-analyzer V2.0 (PHASE 91 blocks, condensed). Evidence: metadata, comments, channel list = VERIFIED (vidIQ, today). Visual breakdown = **L1 HYPOTHESIS, NOT VERIFIED ON FRAMES** (vidIQ/Gemini watch, 10 credits; we do not have the mp4, YouTube blocks yt-dlp here). Transcript: none (no voice).
@@ -50,7 +50,5 @@ NOT a copy (PHASE 96): we do not remake the shoe, the workshop, the woman or the
 - Whether the footage is staged, and any YouTube policy risk: unknown.
 - Retention, CTR, traffic sources: unknown (not our channel).
 
-## Questions for the owner
-1. Which channel is this for? Mr. Buck is geography only; no craft channel exists. A craft channel would need real hands-on footage (not AI) to pass the YPP review.
-2. Do you want only the principles taken into the geography Shorts (silent or music-only format, one action per shot, foley, comment bait)?
-3. Send the mp4 if you want the frame-verified table.
+## Routing (owner, 27.10)
+For another (non-geography) channel. It is parked in this report with its principles; no production, no questions. The geography channel takes nothing from it unless the owner says so.
