@@ -38,3 +38,13 @@ All frames are AI-generated and look photoreal: AI disclosure stays mandatory.
 ## Video model (owner, 27.10: "more realistic model")
 Prices from the APIpod model page (27.10, may change; billing follows the console): Veo 3.1 fast 720p $0.18/clip (used so far); Veo 3.1 quality 720p $0.80, 1080p $1.00; Kling 4.0 i2v 720p $0.145/s (5 s = $0.73, 8 s = $1.16), 1080p $0.2175/s; Seedance 2.5 720p $0.22/s; Sora 2 Pro $0.50/clip (it often refuses photoreal people as input: risk). Higgsfield has 0.1 credits: not usable.
 Realism of each model on OUR shots is NOT VERIFIED: it is decided by an A/B pilot on the hardest shot (b01, cutter + bruised wrist + hands): Veo 3.1 quality 720p $0.80 vs Kling 4.0 720p 5 s $0.73 = $1.53. The winner makes the other ~6 clips (one 8 s or 5 s take covers 2-3 shots): about $4.4-4.8 more. Total for the video about $6.5, about 5x the Veo-fast plan ($1.1). Needs the owner's OK.
+
+## Pilot b01, three models (27.10, owner: "делай. Seedance 2.0"), same start frame and prompt
+Cost (from the API usage field): Veo 3.1 quality 720p 8 s $0.80, Seedance 2.0 i2v 720p 5 s with native audio $0.63, Kling 4.0 i2v 720p 5 s $0.725. Total $2.155 (project so far: frames $0.40 + pilot $2.155 = $2.555).
+Status: GENERATED + INSPECTED on a 1.5 fps row sheet and one 4 s frame, NOT APPROVED by the owner. Realism judged by my eye on ONE shot (not proof).
+- Veo quality: realistic, but the camera hardly moves; less skin detail; sparse gold dust.
+- Seedance 2.0: the sharpest skin pores and hand detail, keeps the hammered bangle with the dotted rim, vivid purple-blue bruise, gold dust falls on the wrist, a clear push-in; cheapest after Veo-fast. 5 s, 720x1280, 24 fps, audio track present.
+- Kling 4.0: equally detailed, stronger push-in, gold dust on the cloth, 716x1280 (not exactly 720), audio track present.
+Raw clips fail premium_gate "spec/loudness" by design (720p, quiet native audio); drift flags = the bruise darkening and the camera push (REVIEW, not a defect).
+Not yet seen in the pilot: whether the bangle is actually cut within 5 s (the clip ends before the break), so b02/b03 must carry the cut.
+Correction of my earlier estimate: one clip per shot is needed (different start frames), so the remaining 12 shots cost: Kling 3 s clips $0.435 each = $5.2; Seedance 4 s (minimum) $0.504 each = $6.1; Veo quality $0.80 each = $9.6. (Earlier "about $4.4-4.8" assumed 6 clips and was too low.)
