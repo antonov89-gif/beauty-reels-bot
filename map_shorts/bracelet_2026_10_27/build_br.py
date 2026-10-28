@@ -11,13 +11,13 @@ EDL = [
     (W / "pilot/seedance_b01.mp4", 0.0, 2.4),   # 1 the cutter on the bangle (hook)
     (W / "clips/b02.mp4", 0.5, 1.8),            # 2 cutter, gold dust
     (W / "clips/b03_k.mp4", 1.1, 2.0),          # 3 cut through (Kling 4.0, wider shot, bare skin in the gap; Seedance v1/v2 showed a stripe)
-    (W / "clips/b04.mp4", 1.4, 2.2),            # 4 pliers, bangle off (it slides off after ~3 s in the clip)
+    (W / "clips/b04_k.mp4", 1.0, 2.2),          # 4 pliers, open bangle lifted off (Kling 4.0; ends before the pressure groove on the wrist shows at ~3.1 s)
     (W / "clips/b05.mp4", 0.0, 2.0),            # 5 crucible + flux
     (W / "clips/b06.mp4", 0.0, 3.6),            # 6 torch melt
     (W / "clips/b07.mp4", 0.0, 3.0),            # 7 pour
     (W / "clips/b08.mp4", 0.0, 3.0),            # 8 quench
     (W / "clips/b09.mp4", 0.0, 3.0),            # 9 rolling mill
-    (W / "clips/b10.mp4", 0.0, 3.0),            # 10 strip
+    (W / "clips/b10.mp4", 1.0, 3.0),            # 10 strip (starts at 1.0 s: the first second shows a ring/loop on the bench)
     (W / "clips/b11.mp4", 0.0, 3.0),            # 11 hammer on the mandrel
     (W / "clips/b12.mp4", 0.0, 2.0),            # 12 polish
     (W / "clips/b13.mp4", 0.0, 3.4),            # 13 she wears the cuff
@@ -43,7 +43,7 @@ def two_pass(out):
     tmp, wav = Path(str(out) + ".tmp.mp4"), Path(str(out) + ".tmp.wav")
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(out), "-vn", "-ar", "44100", "-ac", "2", "-af", af, str(wav)], check=True)
     lim = Path(str(out) + ".lim.wav")                        # a separate true-peak safety limiter (inside the same chain it did not hold)
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(wav), "-af", "alimiter=limit=0.7:attack=3:release=60:level=false", str(lim)], check=True)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(wav), "-af", "alimiter=limit=0.5:attack=1:release=50:level=false", str(lim)], check=True)
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(out), "-i", str(lim), "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(tmp)], check=True)
     tmp.replace(out); wav.unlink(); lim.unlink()
 
