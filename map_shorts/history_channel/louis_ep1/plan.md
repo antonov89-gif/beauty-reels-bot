@@ -64,3 +64,7 @@ Description: "A comedy reconstruction of the morning ritual at Versailles around
 - SH01 foreground intrusion: a courtier's hat plume brushes the lens for 0.3 s at the start (our "phone mistake"; not a thumb).
 - SH01 + SH02 share one framing (king in bed, same angle) so that the join of two clips can pass as one 16-s take; the gag in SH03 gets a wide vignetted view then a swing to the king's reaction; SH04 closes with the mirror flash.
 - Episode 2 (dinner in public): a 6-9 cut micro-burst of the table (whip pans) as the reward moment.
+
+## Look update from card v2 (28.10, owner: hype, extravagant, documentary like Elizabeth's)
+Character lock = A2_face.jpg: towering dark-chestnut wig, powdered pale skin with rouge, painted brows, black beauty patch, thin curled moustache, scarlet velvet coat embroidered with gold suns, jewelled sun brooch, a ring on every finger. Day set = the Hall of Mirrors (SH04) and the state bedchamber (SH01-SH03) in raw documentary-vlog frames: phone front camera, ultra-wide, handheld, window and candle light, visible pores and powder. Morning wardrobe (SH01-SH02): smaller curled wig, gold silk dressing gown over a lace nightshirt (D2_morning.jpg), three wigs on stands.
+Frame style prefix for SH01-SH04 = the v2 documentary STYLE in gen_card2.py. SH01 may open with the plume brushing the lens; keep the mirror flash. New catchphrase available for SH04: "The sun is never late."

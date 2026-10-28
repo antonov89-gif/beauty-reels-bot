@@ -70,7 +70,7 @@
     ],
     "core": {
       "channel_name": "UNDECIDED",
-      "palette": "Parchment cream captions with a gold key word; deep burgundy, gilded and candle-warm sets; no white-on-black captions",
+      "palette": "Scarlet, gold and cream; parchment cream captions with a gold key word; no white-on-black captions",
       "typography": "Provisional: serif display for chips and title cards, high-contrast sans for captions, mobile-legible; exact fonts not chosen",
       "motifs": [
         "fact chip in the top third (icon + claim + source tag)",
@@ -81,11 +81,11 @@
       "voice": "Character-led comedy, checked facts; Louis XIV is obsessed with his looks: vain, self-loving, arrogant, mirror-checking (owner 28.10); own music and foley only"
     },
     "cinema": {
-      "realism": "Proposed: photoreal AI period reconstruction, disclosed as AI",
+      "realism": "Owner 28.10: raw documentary-vlog look like the Elizabeth channel (phone front camera, ultra-wide, handheld, visible skin detail), extravagant and hype character; photoreal AI, disclosed",
       "camera": "Proposed: handheld vlog framing by an off-screen page, MCU to the lens, arm and body in frame, backward walks",
       "lighting": "Proposed: candle and window practicals, warm key and cool fill",
       "sound": "Proposed: low harpsichord/strings bed (own), room tone, footsteps on parquet, fabric, door latches",
-      "evidence_level": "PROVISIONAL: no owned video, creative brief only"
+      "evidence_level": "OWNER_DIRECTION + REF03 frames (Vlog 1 forensics)"
     },
     "must_keep": [
       "AI mark on screen + description + platform flag",
@@ -256,10 +256,11 @@
     ],
     "recommended_id": "A",
     "character_card": {
-      "status": "GENERATED_INSPECTED_NOT_APPROVED",
-      "path": "map_shorts/history_channel/louis_card/louis_xiv_character_card.png",
-      "face_reference": "map_shorts/history_channel/louis_card/A_face.jpg",
-      "spend_usd": 0.1
+      "status": "V2_GENERATED_INSPECTED_NOT_APPROVED",
+      "path": "map_shorts/history_channel/louis_card/louis_xiv_character_card_v2.png",
+      "face_reference": "map_shorts/history_channel/louis_card/A2_face.jpg",
+      "spend_usd": 0.18,
+      "v1": "louis_xiv_character_card.png (polished cinematic, superseded by owner direction)"
     }
   },
   "scenes": {
@@ -342,10 +343,11 @@
     "approval_evidence": null
   },
   "state": {
-    "next_action": "Owner: approve or correct the character card; then 4 shot frames SH01-SH04 ($0.08) and 4 Veo clips ($0.72) on 'да'",
+    "next_action": "Owner: approve or correct card v2; then re-write the ep.1 plan for the scarlet-and-gold look (done in plan.md), 4 shot frames SH01-SH04 ($0.08) and 4 Veo clips ($0.72) on 'да'",
     "verified_completed": [
       "REF03 Vlog 1 frame forensics from the owner mp4 (camera analysis), TR11-TR12 added",
       "character card for Louis XIV generated (5 images, $0.10) and inspected; awaiting owner approval",
+      "character card v2 (hype, extravagant, documentary look) generated and inspected, $0.08 more",
       "character set by owner 28.10: vain, self-loving, arrogant, obsessed with his looks; script and prompts rewritten; vanity facts checked (heels, hair loss 1655, 1653 Apollo, Rigaud 1701)",
       "competitor metadata, comments and 2 L1 watches collected",
       "owner screenshot 28.10 read: thumbnails + vidIQ panel (REF05), TR10 added",
