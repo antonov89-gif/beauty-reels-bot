@@ -8,8 +8,8 @@ W = Path("/home/claude/v90")
 FPS, WD, HT = 24, 1080, 1920
 # (clip file, src_in, duration)
 EDL = [
-    (W / "pilot/seedance_b01.mp4", 0.0, 2.4),   # 1 the cutter on the bangle (hook)
-    (W / "clips/b02.mp4", 0.5, 1.8),            # 2 cutter, gold dust
+    (W / "clips/b01n_k.mp4", 0.0, 2.4),         # 1 the cutter on the bangle (hook; Kling 4.0, start frame b01n: one arm of hers only)
+    (W / "clips/b02n_k.mp4", 0.5, 1.8),         # 2 cutter wheel, gold dust (Kling 4.0, start frame b02n: one arm of hers only)
     (W / "clips/b03c_k.mp4", 0.8, 2.0),         # 3 cutters clamp and snap (Kling 4.0, start frame b03c, strong prompt: one arm, bangle stays one piece, no loose gold)
     (W / "clips/b04_k.mp4", 1.0, 2.2),          # 4 pliers, open bangle lifted off (Kling 4.0; ends before the pressure groove on the wrist shows at ~3.1 s)
     (W / "clips/b05.mp4", 0.0, 2.0),            # 5 crucible + flux
@@ -23,7 +23,9 @@ EDL = [
     (W / "clips/b13.mp4", 0.0, 3.4),            # 13 she wears the cuff
 ]
 FADE = 0.04
-ROOM = {2: -6.0}   # shot 3: the Kling clip is near silent apart from the snap, so a quiet workshop room tone (brown noise) fills the 2 s gap
+ROOM = {2: -6.0}
+# audio taken from another take of the same action: the Kling shot-1 audio, boosted, trips the speech detector (VAD); the Seedance take of the same cutter action is clean
+AUDIO = {0: (W / "pilot/seedance_b01.mp4", 0.0)}   # shot 3: the Kling clip is near silent apart from the snap, so a quiet workshop room tone (brown noise) fills the 2 s gap
 
 
 def seg_gain(f, s0, d, target=-24.0, cap=15.0):
@@ -38,9 +40,9 @@ def two_pass(out):
     """EBU R128 in two passes on the finished mix (-14 LUFS, true peak -1.5), then remux with the untouched video."""
     import json
     import re
-    raw = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(out), "-vn", "-af", "loudnorm=I=-14:TP=-2.3:LRA=9:print_format=json", "-f", "null", "-"], capture_output=True, text=True).stderr
+    raw = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(out), "-vn", "-af", "loudnorm=I=-13:TP=-2.3:LRA=9:print_format=json", "-f", "null", "-"], capture_output=True, text=True).stderr
     j = json.loads(re.search(r"\{[^{}]*\"input_i\"[^{}]*\}", raw, re.S).group(0))
-    af = (f"loudnorm=I=-14:TP=-2.3:LRA=9:measured_I={j['input_i']}:measured_TP={j['input_tp']}:measured_LRA={j['input_lra']}:measured_thresh={j['input_thresh']}:offset={j['target_offset']}:linear=true")
+    af = (f"loudnorm=I=-13:TP=-2.3:LRA=9:measured_I={j['input_i']}:measured_TP={j['input_tp']}:measured_LRA={j['input_lra']}:measured_thresh={j['input_thresh']}:offset={j['target_offset']}:linear=true")
     tmp, wav = Path(str(out) + ".tmp.mp4"), Path(str(out) + ".tmp.wav")
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(out), "-vn", "-ar", "44100", "-ac", "2", "-af", af, str(wav)], check=True)
     lim = Path(str(out) + ".lim.wav")                        # a separate true-peak safety limiter (inside the same chain it did not hold)
@@ -53,10 +55,15 @@ def main(out=W / "br_final.mp4"):
     inputs, vf, af = [], [], []
     for i, (f, s0, d) in enumerate(EDL):
         inputs += ["-i", str(f)]
+    extra = {}
+    for i, (af_file, a0) in AUDIO.items():
+        extra[i] = len(inputs) // 2; inputs += ["-i", str(af_file)]
+    for i, (f, s0, d) in enumerate(EDL):
         vf.append(f"[{i}:v]trim=start={s0}:duration={d + 0.05:.3f},setpts=PTS-STARTPTS,scale={WD}:{HT}:flags=lanczos,setsar=1,fps={FPS},trim=duration={d:.3f},setpts=PTS-STARTPTS,"
                   f"eq=contrast=1.04:saturation=1.04,unsharp=5:5:0.5[v{i}]")
-        g = seg_gain(f, s0, d)
-        af.append(f"[{i}:a]atrim=start={s0}:duration={d:.3f},asetpts=PTS-STARTPTS,aresample=44100,aformat=channel_layouts=stereo,volume={g:.1f}dB,"
+        src, a0 = (AUDIO[i][0], AUDIO[i][1]) if i in AUDIO else (f, s0)
+        g = seg_gain(src, a0, d)
+        af.append(f"[{extra.get(i, i)}:a]atrim=start={a0}:duration={d:.3f},asetpts=PTS-STARTPTS,aresample=44100,aformat=channel_layouts=stereo,volume={g:.1f}dB,"
                   f"afade=t=in:st=0:d={FADE},afade=t=out:st={d - FADE:.3f}:d={FADE}" + ("[p%d]" % i if i in ROOM else f"[a{i}]"))
         if i in ROOM:
             af.append(f"anoisesrc=d={d:.3f}:c=brown:r=44100:a=0.2,highpass=f=80,lowpass=f=2500,volume={ROOM[i]}dB,aformat=channel_layouts=stereo,"
