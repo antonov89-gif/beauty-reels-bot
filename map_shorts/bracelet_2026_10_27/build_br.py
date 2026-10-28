@@ -10,7 +10,7 @@ FPS, WD, HT = 24, 1080, 1920
 EDL = [
     (W / "pilot/seedance_b01.mp4", 0.0, 2.4),   # 1 the cutter on the bangle (hook)
     (W / "clips/b02.mp4", 0.5, 1.8),            # 2 cutter, gold dust
-    (W / "clips/b03_v2.mp4", 1.4, 2.0),         # 3 cut through (v2: thin groove between the cut ends instead of a tan band; the gap opens after ~1.8 s)
+    (W / "clips/b03_k.mp4", 1.1, 2.0),          # 3 cut through (Kling 4.0, wider shot, bare skin in the gap; Seedance v1/v2 showed a stripe)
     (W / "clips/b04.mp4", 1.4, 2.2),            # 4 pliers, bangle off (it slides off after ~3 s in the clip)
     (W / "clips/b05.mp4", 0.0, 2.0),            # 5 crucible + flux
     (W / "clips/b06.mp4", 0.0, 3.6),            # 6 torch melt
@@ -40,9 +40,12 @@ def two_pass(out):
     raw = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(out), "-vn", "-af", "loudnorm=I=-14:TP=-2.3:LRA=9:print_format=json", "-f", "null", "-"], capture_output=True, text=True).stderr
     j = json.loads(re.search(r"\{[^{}]*\"input_i\"[^{}]*\}", raw, re.S).group(0))
     af = (f"loudnorm=I=-14:TP=-2.3:LRA=9:measured_I={j['input_i']}:measured_TP={j['input_tp']}:measured_LRA={j['input_lra']}:measured_thresh={j['input_thresh']}:offset={j['target_offset']}:linear=true")
-    tmp = Path(str(out) + ".tmp.mp4")
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(out), "-c:v", "copy", "-af", af, "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(tmp)], check=True)
-    tmp.replace(out)
+    tmp, wav = Path(str(out) + ".tmp.mp4"), Path(str(out) + ".tmp.wav")
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(out), "-vn", "-ar", "44100", "-ac", "2", "-af", af, str(wav)], check=True)
+    lim = Path(str(out) + ".lim.wav")                        # a separate true-peak safety limiter (inside the same chain it did not hold)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(wav), "-af", "alimiter=limit=0.7:attack=3:release=60:level=false", str(lim)], check=True)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(out), "-i", str(lim), "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(tmp)], check=True)
+    tmp.replace(out); wav.unlink(); lim.unlink()
 
 
 def main(out=W / "br_final.mp4"):
