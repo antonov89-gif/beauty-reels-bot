@@ -2,19 +2,20 @@
 
 ## One-screen STATE capsule (<=350 words; versioned)
 ```
-PROJECT_ID: YT-DNA-001   MODE: SMART
+PROJECT_ID: YT-DNA-001   ROUTE: ONE_LINK_STUDIO   DETAIL_MODE: SMART   STAGE: ORIGINAL_PITCHES
 REFERENCE: url/file | media access L0-L4 | duration when verified
 COVERAGE: AV ranges / sampled ranges / unseen ranges
 EVIDENCE_INDEX: REF-E01.. | last audited range | source/as-of for metrics
 TOP_DNA: DNA-01..07 with claim IDs and confidence
 STYLE_BIBLE: SB-v1 (camera/light/color/motion/edit/audio in one compact blob)
 SCENE_LOCKS: SC01-v1 ... | characters, objects, location, weather, lighting, voice
-ORIGINAL_STORY: premise + story beat IDs
+ORIGINAL_STORY: PITCH-A/B/C (distinct) → RECOMMENDED PITCH → premise + story beat IDs
 SHOT_PLAN: shot ID → intended beat/camera delta + DNA principle
 ARTIFACTS: real generated ID/path ONLY, attempt and review status
 QC_OPEN: issue IDs + priority + planned fixes
 APPROVED: inspected approved shot IDs/sequence IDs
 NEXT_ACTION: single highest-value concrete next action
+COST_AUTH: not_requested / awaiting_approval / approved_for_batch (amount/model if known)
 BLOCKERS: inaccessible source, missing tool, failed attempts, etc.
 ```
 

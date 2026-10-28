@@ -1,12 +1,16 @@
-# Commands — V5.1 (Evidence-gated iterative mode)
+# Example triggers (the user need not type commands)
 
-- `Разбери по DNA: [YouTube URL]` — source gate, coverage, evidence-supported visual/audio analysis, short scene map and STYLE_BIBLE. Supplemental vidIQ/Nexlev if available.
-- `Разбери по DNA, SMART, подробно камеру и анимацию: [URL]` — selective technical deep dives with evidence tags, no repetition.
-- `FULL: каждый проверяемый кадр и аудио, с таймкодами` — extensive coverage only where actual video/audio is accessible; say what is uninspected.
-- `Создай новый сценарий по этой визуальной ДНК` — original characters, causality and hooks; trace beats to transferable DNA principles.
-- `Сделай пилот: хук, крупный план, экшен` — generation-ready shot deltas, acceptance criteria and first previews if tools exist.
-- `Проверь эти 3 клипа; исправляй до QC` — inspect actual outputs, timecoded defect ledger, minimal repairs and verified reinspection, up to sensible limits.
-- `REFERENCE vs OUR VIDEO: найди расхождения` — compare confirmed footage, not just prompts; rank camera/light/motion/sound/continuity discrepancies and plan targeted corrections.
-- `Продолжи SHOT S02-04, экономь токены` — read STATE and relevant shot/scene versions only; no rebuilding previous stages unless evidence changed.
-- `Покажи доказательства для DNA-03` — source IDs, exact inspected ranges, observed vs estimated explanation.
-- `Какие кадры реально готовы, а какие только запланированы?` — separate SPECIFIED/GENERATED/INSPECTED/APPROVED/BLOCKED honestly.
+| Input | Expected |
+| --- | --- |
+| `https://youtube.com/watch?v=abc123` | ONE_LINK_STUDIO: evidence, 3 original stories, best concept, look, 20–40s continuous pilot plan |
+| `https://youtu.be/abc123` | Same as above, no clarifying mode question |
+| `https://youtube.com/shorts/abc123` | Same; preserve vertical/mobile legibility if appropriate |
+| `https://youtu.be/A and https://youtu.be/B` | MULTI_REF: grounded principle fusion |
+| `Вот референс, хочу свой фильм с таким визуалом` | CREATE with original story, then pilot spec |
+| `Сколько стоит на Seedance/Kling?` | BUDGET with current verifiable prices and conditional cost |
+| `Исправь зум на 00:12` | REPAIR actual clip, local diagnosis and patch |
+| `Сравни наш ролик с исходным` | COMPARE; user output file needed for factual visual comparison |
+| `Дальше` | CONTINUE saved latest verified state |
+| `Только анализ без сценария` | ANALYZE |
+
+All production routes stop before new chargeable actions until authorized. Do not confuse literary proposals with generated media.

@@ -5,15 +5,19 @@
     "access_level": "L0",
     "coverage": []
   },
+  "references": [],
+  "route": "ONE_LINK_STUDIO",
+  "active_stage": "SOURCE_GATE",
+  "story_status": "not_started",
+  "style_bible_id": null,
+  "scene_locks": [],
+  "shot_deltas": [],
+  "cost_authorization": {"approved": false},
   "evidence": [],
   "claims": [],
   "principles": [],
-  "shots": [
-    {
-      "id": "S01-01",
-      "status": "SPECIFIED",
-      "principle_ids": [],
-      "attempts": []
-    }
-  ]
+  "shots": [{"id": "P01", "status": "SPECIFIED", "principle_ids": [], "attempts": []}],
+  "render_jobs": [],
+  "blockers": [],
+  "next_action": "verify reference audio/video access and draft 3 independent original story options"
 }

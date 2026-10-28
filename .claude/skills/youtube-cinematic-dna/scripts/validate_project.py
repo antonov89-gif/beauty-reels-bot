@@ -123,6 +123,34 @@ def validate(data):
             unresolved = [issue for issue in qc.get("issues", []) if issue.get("severity") in {"HARD", "CRITICAL"} and issue.get("status") != "RESOLVED"]
             if unresolved:
                 fail(at, f"APPROVED has {len(unresolved)} unresolved hard/critical issues")
+    # V5.4 paid-render and state consistency gates.
+    allowed_job_statuses = {"SPECIFIED", "AWAITING_APPROVAL", "STARTED", "GENERATED", "INSPECTED", "APPROVED", "FAILED", "BLOCKED"}
+    auth = data.get("cost_authorization", {})
+    for j, job in enumerate(data.get("render_jobs", [])):
+        at = f"render_jobs[{j}]"
+        status = job.get("status", "SPECIFIED")
+        if status not in allowed_job_statuses:
+            fail(at, "invalid render job status")
+        if job.get("paid") is True and status in {"STARTED", "GENERATED", "INSPECTED", "APPROVED"}:
+            if auth.get("approved") is not True:
+                fail(at, "paid render started without explicitly approved budget")
+            if not auth.get("approval_source"):
+                fail(at, "paid render authorization requires explicit approval_source")
+            if not isinstance(auth.get("budget_cap"), (int, float)) or auth.get("budget_cap", 0) <= 0:
+                fail(at, "paid render needs positive approved budget_cap")
+            for f in ("provider", "model", "resolution"):
+                if job.get(f) and auth.get(f) != job[f]:
+                    fail(at, f"paid render {f} differs from approved scope")
+        if status in {"GENERATED", "INSPECTED", "APPROVED"} and not job.get("artifact_ref"):
+            fail(at, "completed render job requires real artifact_ref")
+        if status in {"INSPECTED", "APPROVED"} and not job.get("qc_evidence_ids"):
+            fail(at, "inspected job needs actual output QC evidence IDs")
+        if status == "APPROVED" and job.get("qc_verdict") != "PASS":
+            fail(at, "APPROVED job needs explicit PASS verdict")
+    stage = data.get("active_stage")
+    if stage in {"PILOT_GENERATED", "PILOT_INSPECTED", "PILOT_QC", "BATCH_GENERATED", "SEQUENCE_QC"}:
+        if not any(s.get("status") in {"GENERATED", "INSPECTED", "FIX_REQUIRED", "APPROVED"} and s.get("attempts") for s in data.get("shots", [])) and not any(job.get("status") in {"GENERATED", "INSPECTED", "APPROVED"} and job.get("artifact_ref") for job in data.get("render_jobs", [])):
+            fail("active_stage", f"{stage} claims generated media but ledger has no verified artifact record")
     return errors
 
 
