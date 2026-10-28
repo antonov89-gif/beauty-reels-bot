@@ -3,22 +3,69 @@
   "project_id": "history_pov_channel",
   "phase": "PILOT_SPEC",
   "sources": [
-    {"id": "OWN01", "owner": "OWN", "kind": "brief", "location": "map_shorts/ref_chloe_2026_10_28/ (royal_characters.md, louis_xiv_ep1_pilot_spec.md, forecast_history_channel.md)", "access": "INSPECTED", "modality": [], "evidence": "Owner decisions in session 28.10.2026: history POV channel, not Mr. Buck; Louis XIV chosen as first character; real-monarch exception recorded. No channel, banner, avatar or video exists yet."},
-    {"id": "REF01", "owner": "COMPETITOR", "kind": "channel", "location": "https://youtube.com/@tudor.with.elizabeth", "access": "METADATA_ONLY", "modality": [], "evidence": "vidIQ + Nexlev 28.10: UCplL9gRf7en_MIhSAeujgWA, 67k subs, 16 videos since 10.10, not monetized, Shorts 86 % of views, About link to an AI course"},
-    {"id": "REF02", "owner": "COMPETITOR", "kind": "video", "location": "https://www.youtube.com/watch?v=7w0m_Ba8-bI", "access": "METADATA_ONLY", "modality": [], "evidence": "Kitchen tour: vidIQ AI watch text (L1), 6 shots, ASL ~23 s; no mp4, not viewed by us"},
-    {"id": "REF03", "owner": "COMPETITOR", "kind": "video", "location": "https://www.youtube.com/watch?v=LjfGP7wpjVs", "access": "METADATA_ONLY", "modality": [], "evidence": "Vlog 1: vidIQ AI watch text (L1), 12 shots, ASL ~11.6 s; no mp4, not viewed by us"},
-    {"id": "REF04", "owner": "COMPETITOR", "kind": "analytics", "location": "vidIQ comments + Nexlev daily/short-vs-long", "access": "METADATA_ONLY", "modality": [], "evidence": "Top comments of Vlog 6 (25 threads), Nexlev daily growth and 86/14 split"}
+    {
+      "id": "OWN01",
+      "owner": "OWN",
+      "kind": "brief",
+      "location": "map_shorts/ref_chloe_2026_10_28/ (royal_characters.md, louis_xiv_ep1_pilot_spec.md, forecast_history_channel.md)",
+      "access": "INSPECTED",
+      "modality": [],
+      "evidence": "Owner decisions in session 28.10.2026: history POV channel, not Mr. Buck; Louis XIV chosen as first character; real-monarch exception recorded. No channel, banner, avatar or video exists yet."
+    },
+    {
+      "id": "REF01",
+      "owner": "COMPETITOR",
+      "kind": "channel",
+      "location": "https://youtube.com/@tudor.with.elizabeth",
+      "access": "METADATA_ONLY",
+      "modality": [],
+      "evidence": "vidIQ + Nexlev 28.10: UCplL9gRf7en_MIhSAeujgWA, 67k subs, 16 videos since 10.10, not monetized, Shorts 86 % of views, About link to an AI course"
+    },
+    {
+      "id": "REF02",
+      "owner": "COMPETITOR",
+      "kind": "video",
+      "location": "https://www.youtube.com/watch?v=7w0m_Ba8-bI",
+      "access": "METADATA_ONLY",
+      "modality": [],
+      "evidence": "Kitchen tour: vidIQ AI watch text (L1), 6 shots, ASL ~23 s; no mp4, not viewed by us"
+    },
+    {
+      "id": "REF03",
+      "owner": "COMPETITOR",
+      "kind": "video",
+      "location": "https://www.youtube.com/watch?v=LjfGP7wpjVs",
+      "access": "METADATA_ONLY",
+      "modality": [],
+      "evidence": "Vlog 1: vidIQ AI watch text (L1), 12 shots, ASL ~11.6 s; no mp4, not viewed by us"
+    },
+    {
+      "id": "REF04",
+      "owner": "COMPETITOR",
+      "kind": "analytics",
+      "location": "vidIQ comments + Nexlev daily/short-vs-long",
+      "access": "METADATA_ONLY",
+      "modality": [],
+      "evidence": "Top comments of Vlog 6 (25 threads), Nexlev daily growth and 86/14 split"
+    }
   ],
   "brand": {
     "status": "DRAFT",
     "version": "0.1-draft",
     "approval_evidence": null,
-    "source_ids": ["OWN01"],
+    "source_ids": [
+      "OWN01"
+    ],
     "core": {
       "channel_name": "UNDECIDED",
       "palette": "Parchment cream captions with a gold key word; deep burgundy, gilded and candle-warm sets; no white-on-black captions",
       "typography": "Provisional: serif display for chips and title cards, high-contrast sans for captions, mobile-legible; exact fonts not chosen",
-      "motifs": ["fact chip in the top third (icon + claim + source tag)", "year/place title card", "AI mark in a corner on every frame", "gilded hand mirror as the character's transition prop"],
+      "motifs": [
+        "fact chip in the top third (icon + claim + source tag)",
+        "year/place title card",
+        "AI mark in a corner on every frame",
+        "gilded hand mirror as the character's transition prop"
+      ],
       "voice": "UNOBSERVED, creative direction: dry, theatrical, character-led comedy with checked facts; own music and foley only"
     },
     "cinema": {
@@ -28,49 +75,239 @@
       "sound": "Proposed: low harpsichord/strings bed (own), room tone, footsteps on parquet, fabric, door latches",
       "evidence_level": "PROVISIONAL: no owned video, creative brief only"
     },
-    "must_keep": ["AI mark on screen + description + platform flag", "one checked fact per scene shown as a chip", "next episode named at the end", "no modern items in frame"],
-    "can_vary": ["era and monarch per series", "episode ritual", "shot size", "music instrument"],
-    "forbidden": ["Elizabeth I or her scripts, 'peasants' greeting, 'Kate'", "Chloe's presenter, tattoos, 'I time travelled to' titles", "white-on-black competitor caption template", "Mr. Buck geography look (maps, stamps, banner)", "unverified smell/hygiene claims", "real tragedies played for laughs"]
+    "must_keep": [
+      "AI mark on screen + description + platform flag",
+      "one checked fact per scene shown as a chip",
+      "next episode named at the end",
+      "no modern items in frame"
+    ],
+    "can_vary": [
+      "era and monarch per series",
+      "episode ritual",
+      "shot size",
+      "music instrument"
+    ],
+    "forbidden": [
+      "Elizabeth I or her scripts, 'peasants' greeting, 'Kate'",
+      "Chloe's presenter, tattoos, 'I time travelled to' titles",
+      "white-on-black competitor caption template",
+      "Mr. Buck geography look (maps, stamps, banner)",
+      "unverified smell/hygiene claims",
+      "real tragedies played for laughs"
+    ]
   },
   "competitor": {
-    "reference_ids": ["REF01", "REF02", "REF03", "REF04"],
+    "reference_ids": [
+      "REF01",
+      "REF02",
+      "REF03",
+      "REF04"
+    ],
     "transfer_matrix": [
-      {"id": "TR01", "ref_evidence": "REF02/REF03 L1: opening line in the first 2 s with a character greeting; comments quote the greeting", "mechanic": "A recognisable character address in the first 2-3 seconds that sets attitude toward the viewer", "why_effective": "Hypothesis: instant character, quotable line, comment bait", "decision": "TRANSLATE_TO_BRAND", "brand_native": "Louis opens with 'Bow. Lower. Good.' in shot 1; no thumb gag, no 'peasants'", "originality_change": "Different monarch, line, setting and gesture", "cost_risk": "simple"},
-      {"id": "TR02", "ref_evidence": "REF01 titles VERIFIED (loo, kitchen, wardrobe, Tower); REF02/REF03 L1", "mechanic": "A modern vlog format (day in the life / room tour) set in a historical palace, one topic per episode", "why_effective": "Hypothesis: contrast between modern format and period setting, easy series engine", "decision": "TRANSLATE_TO_BRAND", "brand_native": "'A Morning with Louis XIV' = one ritual per episode with fact chips and a Hall-of-Mirrors geography", "originality_change": "Rituals of court life instead of rooms of a palace; chips with sources", "cost_risk": "medium"},
-      {"id": "TR03", "ref_evidence": "REF04 comments VERIFIED: 'Kate, film me' quoted widely", "mechanic": "An off-screen camera person who takes orders and gets deadpan insults", "why_effective": "Hypothesis: gives the star a foil and recurring jokes", "decision": "TRANSLATE_TO_BRAND", "brand_native": "A fictional page 'Marcel' takes the king's orders; the camera is the page's POV", "originality_change": "Different name, role (page, not assistant) and jokes", "cost_risk": "simple"},
-      {"id": "TR04", "ref_evidence": "REF04 comments VERIFIED: teeth/hygiene disgust and 'did not know I wanted' threads", "mechanic": "One surprising or gross fact per scene as the comment engine", "why_effective": "Hypothesis: shareable shock plus curiosity", "decision": "TRANSLATE_TO_BRAND", "brand_native": "Only facts with 2 sources, shown as a gold-number chip with a source tag; unverified smell claims are banned", "originality_change": "Our fact list per episode; no copied facts or lines", "cost_risk": "medium"},
-      {"id": "TR05", "ref_evidence": "REF02 L1 ending names Tower of London; newest Short 'Tower of London' VERIFIED on 28.10", "mechanic": "End each episode by naming the next topic and then publish it (series chain)", "why_effective": "Hypothesis: return reason and subscription reason", "decision": "KEEP_AS_PRINCIPLE", "brand_native": "Shot 4: 'Tonight I dine in public. Do not stare.' + chip 'NEXT: DINNER, IN PUBLIC'", "originality_change": "Own topic order", "cost_risk": "simple"},
-      {"id": "TR06", "ref_evidence": "REF02 L1: pie pushed into the lens, handkerchief over the lens as final cut", "mechanic": "One physical gag per episode and a signature prop that doubles as the transition", "why_effective": "Hypothesis: a memorable beat and a clean cut device", "decision": "TRANSLATE_TO_BRAND", "brand_native": "A courtier bows too low and drops his hat; the king's gilded hand mirror flashes over the lens as the cut", "originality_change": "Different gag, different prop, different transition", "cost_risk": "medium"},
-      {"id": "TR07", "ref_evidence": "REF01 Nexlev: Shorts 3.305M views (86 %) vs long 0.523M (14 %); long videos 7,150 views/h", "mechanic": "Shorts as the audience funnel, a 10-min vlog of the same character as the watch-time layer", "why_effective": "Hypothesis: Shorts bring reach, long gives watch hours", "decision": "KEEP_AS_PRINCIPLE", "brand_native": "After 4-6 Shorts, an 8-12 min 'A Day at Versailles' compilation with new scenes", "originality_change": "Own episodes, not a recut", "cost_risk": "high"},
-      {"id": "TR08", "ref_evidence": "REF01: real queen, 'peasants', Kate, white-on-black captions, AI status undisclosed on the page", "mechanic": "Competitor identifiers and ambiguous AI disclosure", "why_effective": "n/a", "decision": "REJECT", "brand_native": "n/a", "originality_change": "Own character, name, captions and an always-visible AI mark", "cost_risk": "simple"},
-      {"id": "TR09", "ref_evidence": "UNVERIFIED: no mp4; vidIQ verdicts contradict (kitchen 'live', vlog 1 'AI')", "mechanic": "Camera, lens, shot rhythm and lip-sync method of the competitor", "why_effective": "unknown", "decision": "UNKNOWN", "brand_native": "Own camera grammar is a proposal until frames are seen", "originality_change": "n/a", "cost_risk": "medium"}
+      {
+        "id": "TR01",
+        "ref_evidence": "REF02/REF03 L1: opening line in the first 2 s with a character greeting; comments quote the greeting",
+        "mechanic": "A recognisable character address in the first 2-3 seconds that sets attitude toward the viewer",
+        "why_effective": "Hypothesis: instant character, quotable line, comment bait",
+        "decision": "TRANSLATE_TO_BRAND",
+        "brand_native": "Louis opens with 'Bow. Lower. Good.' in shot 1; no thumb gag, no 'peasants'",
+        "originality_change": "Different monarch, line, setting and gesture",
+        "cost_risk": "simple"
+      },
+      {
+        "id": "TR02",
+        "ref_evidence": "REF01 titles VERIFIED (loo, kitchen, wardrobe, Tower); REF02/REF03 L1",
+        "mechanic": "A modern vlog format (day in the life / room tour) set in a historical palace, one topic per episode",
+        "why_effective": "Hypothesis: contrast between modern format and period setting, easy series engine",
+        "decision": "TRANSLATE_TO_BRAND",
+        "brand_native": "'A Morning with Louis XIV' = one ritual per episode with fact chips and a Hall-of-Mirrors geography",
+        "originality_change": "Rituals of court life instead of rooms of a palace; chips with sources",
+        "cost_risk": "medium"
+      },
+      {
+        "id": "TR03",
+        "ref_evidence": "REF04 comments VERIFIED: 'Kate, film me' quoted widely",
+        "mechanic": "An off-screen camera person who takes orders and gets deadpan insults",
+        "why_effective": "Hypothesis: gives the star a foil and recurring jokes",
+        "decision": "TRANSLATE_TO_BRAND",
+        "brand_native": "A fictional page 'Marcel' takes the king's orders; the camera is the page's POV",
+        "originality_change": "Different name, role (page, not assistant) and jokes",
+        "cost_risk": "simple"
+      },
+      {
+        "id": "TR04",
+        "ref_evidence": "REF04 comments VERIFIED: teeth/hygiene disgust and 'did not know I wanted' threads",
+        "mechanic": "One surprising or gross fact per scene as the comment engine",
+        "why_effective": "Hypothesis: shareable shock plus curiosity",
+        "decision": "TRANSLATE_TO_BRAND",
+        "brand_native": "Only facts with 2 sources, shown as a gold-number chip with a source tag; unverified smell claims are banned",
+        "originality_change": "Our fact list per episode; no copied facts or lines",
+        "cost_risk": "medium"
+      },
+      {
+        "id": "TR05",
+        "ref_evidence": "REF02 L1 ending names Tower of London; newest Short 'Tower of London' VERIFIED on 28.10",
+        "mechanic": "End each episode by naming the next topic and then publish it (series chain)",
+        "why_effective": "Hypothesis: return reason and subscription reason",
+        "decision": "KEEP_AS_PRINCIPLE",
+        "brand_native": "Shot 4: 'Tonight I dine in public. Do not stare.' + chip 'NEXT: DINNER, IN PUBLIC'",
+        "originality_change": "Own topic order",
+        "cost_risk": "simple"
+      },
+      {
+        "id": "TR06",
+        "ref_evidence": "REF02 L1: pie pushed into the lens, handkerchief over the lens as final cut",
+        "mechanic": "One physical gag per episode and a signature prop that doubles as the transition",
+        "why_effective": "Hypothesis: a memorable beat and a clean cut device",
+        "decision": "TRANSLATE_TO_BRAND",
+        "brand_native": "A courtier bows too low and drops his hat; the king's gilded hand mirror flashes over the lens as the cut",
+        "originality_change": "Different gag, different prop, different transition",
+        "cost_risk": "medium"
+      },
+      {
+        "id": "TR07",
+        "ref_evidence": "REF01 Nexlev: Shorts 3.305M views (86 %) vs long 0.523M (14 %); long videos 7,150 views/h",
+        "mechanic": "Shorts as the audience funnel, a 10-min vlog of the same character as the watch-time layer",
+        "why_effective": "Hypothesis: Shorts bring reach, long gives watch hours",
+        "decision": "KEEP_AS_PRINCIPLE",
+        "brand_native": "After 4-6 Shorts, an 8-12 min 'A Day at Versailles' compilation with new scenes",
+        "originality_change": "Own episodes, not a recut",
+        "cost_risk": "high"
+      },
+      {
+        "id": "TR08",
+        "ref_evidence": "REF01: real queen, 'peasants', Kate, white-on-black captions, AI status undisclosed on the page",
+        "mechanic": "Competitor identifiers and ambiguous AI disclosure",
+        "why_effective": "n/a",
+        "decision": "REJECT",
+        "brand_native": "n/a",
+        "originality_change": "Own character, name, captions and an always-visible AI mark",
+        "cost_risk": "simple"
+      },
+      {
+        "id": "TR09",
+        "ref_evidence": "UNVERIFIED: no mp4; vidIQ verdicts contradict (kitchen 'live', vlog 1 'AI')",
+        "mechanic": "Camera, lens, shot rhythm and lip-sync method of the competitor",
+        "why_effective": "unknown",
+        "decision": "UNKNOWN",
+        "brand_native": "Own camera grammar is a proposal until frames are seen",
+        "originality_change": "n/a",
+        "cost_risk": "medium"
+      }
     ]
   },
   "stories": {
     "options": [
-      {"id": "A", "premise": "A Morning with Louis XIV: the Sun King films his own wake-up ritual at Versailles, 1685; series of court rituals"},
-      {"id": "B", "premise": "What Did It Cost? A modern guide shops in Rome, 301 AD under the Edict on Maximum Prices; prices as hours of work"},
-      {"id": "C", "premise": "The Queen's Taster: a fictional food taster in a Tudor-era kitchen; each episode a dish (no real monarch on screen)"}
+      {
+        "id": "A",
+        "premise": "A Morning with Louis XIV: the Sun King films his own wake-up ritual at Versailles, 1685; series of court rituals"
+      },
+      {
+        "id": "B",
+        "premise": "What Did It Cost? A modern guide shops in Rome, 301 AD under the Edict on Maximum Prices; prices as hours of work"
+      },
+      {
+        "id": "C",
+        "premise": "The Queen's Taster: a fictional food taster in a Tudor-era kitchen; each episode a dish (no real monarch on screen)"
+      }
     ],
     "recommended_id": "A"
   },
   "scenes": {
     "S01": {
-      "setting": "royal bedchamber at Versailles, c. 1685, canopied bed, gilded wall, window light and candles",
+      "setting": "state bedchamber at Versailles (Salon de Mercure was the king's ceremonial bedchamber 1682-1701), c. 1685: gilded panelling, painted ceiling, canopied bed, tall windows and candles",
       "wardrobe": "king: embroidered night robe then court dress; court: period dress only",
       "light": "warm candle key, cool window fill, no modern light sources",
-      "weather": "winter morning, soft overcast through tall windows",
+      "weather": "not specified; soft daylight through tall windows",
       "shot_axis": "camera POV from the page standing at the foot of the bed, king screen-left, doors screen-right",
       "sound_bed": "murmur, wax candles, parquet footsteps, fabric, door latches, own low harpsichord bed"
+    },
+    "S02": {
+      "setting": "threshold of the Grande Galerie / Hall of Mirrors (built 1678-1684), arched windows one side, mirror panels the other",
+      "wardrobe": "king in embroidered court coat and full curled wig; courtiers in period dress",
+      "light": "daylight from arched windows, no modern light sources",
+      "weather": "soft daylight",
+      "shot_axis": "camera ahead of the king, walking backwards; king facing the lens",
+      "sound_bed": "footsteps on parquet, murmur, distant door, own harpsichord sting"
     }
   },
   "shots": {
-    "SH01": {"scene_id": "S01", "duration_s": 8, "purpose": "hook: character and attitude", "shot_size": "medium close-up", "camera": "handheld page POV, slight sway, arm in frame", "subject_action": "king propped in bed: 'Good morning, Versailles. I have not stood up. And already the room is full.'", "transition": "cut on the wig being lifted into frame", "transfer_id": "TR01"},
-    "SH02": {"scene_id": "S01", "duration_s": 8, "purpose": "fact 1: doctor and surgeon enter first", "shot_size": "medium", "camera": "handheld pan to the bedside", "subject_action": "first valet shows three wigs; doctor and surgeon at the bed", "transition": "cut on door opening", "transfer_id": "TR04"},
-    "SH03": {"scene_id": "S01", "duration_s": 8, "purpose": "physical gag: the court enters by rank", "shot_size": "medium wide", "camera": "handheld, king foreground, doors background", "subject_action": "courtiers bow; one bows too low and drops his hat; 'Bow. Lower. Good... lower. That is a hat.'", "transition": "gilded hand mirror flashes over the lens", "transfer_id": "TR06"},
-    "SH04": {"scene_id": "S01", "duration_s": 8, "purpose": "payoff and series chain", "shot_size": "wide to medium close-up", "camera": "step back from the window, Hall of Mirrors visible", "subject_action": "'Tonight I dine in public. You may watch. Do not stare. Next time: dinner with the Sun King.'", "transition": "hard cut to black on a harpsichord sting", "transfer_id": "TR05"}
+    "SH01": {
+      "scene_id": "S01",
+      "duration_s": 8,
+      "purpose": "hook: character and attitude",
+      "shot_size": "medium close-up",
+      "camera": "handheld page POV, slight sway, arm in frame",
+      "subject_action": "king propped in bed: 'Good morning, Versailles. I have not stood up. And already the room is full.'",
+      "transition": "cut on the wig being lifted into frame",
+      "transfer_id": "TR01"
+    },
+    "SH02": {
+      "scene_id": "S01",
+      "duration_s": 8,
+      "purpose": "fact 1: doctor and surgeon enter first",
+      "shot_size": "medium",
+      "camera": "handheld pan to the bedside",
+      "subject_action": "first valet shows three wigs; doctor and surgeon at the bed",
+      "transition": "cut on door opening",
+      "transfer_id": "TR04"
+    },
+    "SH03": {
+      "scene_id": "S01",
+      "duration_s": 8,
+      "purpose": "physical gag: the court enters by rank",
+      "shot_size": "medium wide",
+      "camera": "handheld, king foreground, doors background",
+      "subject_action": "courtiers bow; one bows too low and drops his hat; 'Bow. Lower. Good... lower. That is a hat.'",
+      "transition": "gilded hand mirror flashes over the lens",
+      "transfer_id": "TR06"
+    },
+    "SH04": {
+      "scene_id": "S02",
+      "duration_s": 8,
+      "purpose": "payoff and series chain",
+      "shot_size": "wide to medium close-up",
+      "camera": "step back from the window, Hall of Mirrors visible",
+      "subject_action": "king in court dress strides along the gallery threshold: 'Tonight, I dine in public. You may watch. Do not stare. Next time: dinner with the Sun King.'",
+      "transition": "hard cut to black on a harpsichord sting",
+      "transfer_id": "TR05"
+    }
   },
-  "pilot": {"status": "SPECIFIED", "shot_ids": ["SH01", "SH02", "SH03", "SH04"], "duration_s": 32, "actual_media_path": null, "inspected_evidence": [], "qc": {}},
-  "cost_approval": {"approved": false, "scope": null, "budget_cap": null, "approval_evidence": null},
-  "state": {"next_action": "Owner: approve or edit the DRAFT brand (name, avatar, banner, caption look) and approve the pilot spend (~$0.80, cap ~$2.4); optional: send an Elizabeth mp4 for frame verification", "verified_completed": ["skill installed and 14 tests pass", "competitor metadata, comments and 2 L1 watches collected", "transfer matrix TR01-TR09", "pilot SPECIFIED"], "pending": ["brand approval", "cost approval", "mp4 of the reference", "second-source fact check for the Louis XIV episode"], "updated": "2026-10-28"}
+  "pilot": {
+    "status": "SPECIFIED",
+    "shot_ids": [
+      "SH01",
+      "SH02",
+      "SH03",
+      "SH04"
+    ],
+    "duration_s": 32,
+    "actual_media_path": null,
+    "inspected_evidence": [],
+    "qc": {}
+  },
+  "cost_approval": {
+    "approved": false,
+    "scope": null,
+    "budget_cap": null,
+    "approval_evidence": null
+  },
+  "state": {
+    "next_action": "Owner: say 'да' to start the pilot (frames $0.08 first, then 4 clips $0.72; planned $0.80, cap $2.4); brand approval is separate",
+    "verified_completed": [
+      "competitor metadata, comments and 2 L1 watches collected",
+      "pilot SPECIFIED",
+      "production plan with prompts: map_shorts/history_channel/louis_ep1/plan.md",
+      "second-source fact check done 28.10 (lever order, bedchamber, 100 attendees secondary)",
+      "skill installed and 14 tests pass",
+      "transfer matrix TR01-TR09"
+    ],
+    "pending": [
+      "brand approval",
+      "cost approval",
+      "mp4 of the reference",
+      "second-source fact check for the Louis XIV episode"
+    ],
+    "updated": "2026-10-28"
+  }
 }
