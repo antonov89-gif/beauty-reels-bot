@@ -1,0 +1,4 @@
+# Optional project AGENTS.md section
+
+## Channel content — automatic style guardian
+Use the installed `channel-style-dna` skill whenever I share my own YouTube channel, banner, avatar, approved brand videos, or a competitor reference for my channel. Inputs may arrive in different messages. Once an explicitly approved brand bible exists in `.channel-style-dna/project.json`, new competitor URLs should automatically generate original channel-native story options + visual direction and a pilot storyboard. Do not ask me to supply a master prompt. Never confuse competitor's look for my brand. Use `youtube-cinematic-dna` for evidenced shot-by-shot camera/animation/sound forensics and output QC. Do not launch unapproved paid video generation/publishing; persist actual verified states so 'дальше' resumes work.

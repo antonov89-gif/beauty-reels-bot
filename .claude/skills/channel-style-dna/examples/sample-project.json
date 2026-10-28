@@ -1,0 +1,90 @@
+{
+  "skill_version": "1.0.0",
+  "project_id": "example_channel_project",
+  "phase": "PILOT_SPEC",
+  "sources": [
+    {
+      "id": "OWN01",
+      "owner": "OWN",
+      "kind": "banner",
+      "location": "assets/my_channel_banner.png",
+      "access": "UNVERIFIED",
+      "modality": [],
+      "evidence": "Illustrative placeholder; actual banner not accessed"
+    },
+    {
+      "id": "REF01",
+      "owner": "COMPETITOR",
+      "kind": "video",
+      "location": "https://www.youtube.com/watch?v=EXAMPLE",
+      "access": "UNVERIFIED",
+      "modality": [],
+      "evidence": "No claim of actual video inspection"
+    }
+  ],
+  "brand": {
+    "status": "PROPOSED",
+    "version": "0.1-draft",
+    "approval_evidence": null,
+    "source_ids": ["OWN01"],
+    "core": {
+      "channel_name": "Example Channel (placeholder)",
+      "palette": "Provisional off-white / charcoal / one amber accent",
+      "typography": "Provisional large bold sans-serif, high mobile contrast",
+      "motifs": ["minimal title card", "small amber story marker"],
+      "voice": "UNOBSERVED, creative direction pending"
+    },
+    "cinema": {
+      "realism": "Proposed photoreal cinematic short film",
+      "camera": "Proposed restrained tracking with purposeful close reaction shots",
+      "lighting": "Proposed physically motivated practical light",
+      "sound": "Proposed natural conversational VO and grounded Foley",
+      "evidence_level": "PROVISIONAL: no owned video source"
+    },
+    "must_keep": ["mobile-legible titles", "simple brand palette"],
+    "can_vary": ["location-specific lighting", "shot size", "genre", "music energy"],
+    "forbidden": ["competitor logo", "competitor characters", "random artificial zoom"]
+  },
+  "competitor": {
+    "reference_ids": ["REF01"],
+    "transfer_matrix": [
+      {
+        "id": "TR01",
+        "ref_evidence": "UNVERIFIED",
+        "mechanic": "Reveal a significant consequence only after a short premise setup",
+        "why_effective": "Hypothesis: creates curiosity and delayed payoff",
+        "decision": "TRANSLATE_TO_BRAND",
+        "brand_native": "Understated brand title card and motivated tracking reveal",
+        "originality_change": "Completely new setting, protagonist and consequence"
+      }
+    ]
+  },
+  "stories": {
+    "options": [
+      {"id": "A", "premise": "A courier finds a message dated tomorrow"},
+      {"id": "B", "premise": "An abandoned lighthouse emits a personal distress call"},
+      {"id": "C", "premise": "A city wakes up one minute out of sync"}
+    ],
+    "recommended_id": "B"
+  },
+  "scenes": {
+    "S01": {
+      "setting": "isolated lighthouse, storm at dusk",
+      "wardrobe": "one dark waxed jacket throughout",
+      "light": "window dusk and single practical flashlight",
+      "weather": "consistent wind and rain",
+      "shot_axis": "camera predominantly east of protagonist's movement line",
+      "sound_bed": "wind, distant surf, rattling window"
+    }
+  },
+  "shots": {
+    "SH01": {"scene_id": "S01", "duration_s": 6, "purpose": "establish location and danger", "shot_size": "wide", "camera": "slow lateral move, physically stabilized", "subject_action": "a lighthouse light sweeps wet cliffs", "transition": "cut on beam passing frame", "transfer_id": "TR01"},
+    "SH02": {"scene_id": "S01", "duration_s": 5, "purpose": "introduce person", "shot_size": "medium", "camera": "restrained follow tracking", "subject_action": "courier climbs stairs, grips rail", "transition": "cut on hand movement", "transfer_id": "TR01"},
+    "SH03": {"scene_id": "S01", "duration_s": 4, "purpose": "information detail", "shot_size": "insert close-up", "camera": "locked frame", "subject_action": "radio dial switches itself on", "transition": "sound prelap", "transfer_id": "TR01"},
+    "SH04": {"scene_id": "S01", "duration_s": 6, "purpose": "emotional reaction", "shot_size": "close-up", "camera": "very subtle motivated push", "subject_action": "courier freezes on hearing own voice", "transition": "hard cut", "transfer_id": "TR01"},
+    "SH05": {"scene_id": "S01", "duration_s": 7, "purpose": "short payoff", "shot_size": "wide reveal", "camera": "dolly back revealing empty room beyond", "subject_action": "radio says one line; distant lighthouse lamp goes dark", "transition": "cut to black on physical sound tail", "transfer_id": "TR01"}
+  },
+  "pilot": {"status": "SPECIFIED", "shot_ids": ["SH01", "SH02", "SH03", "SH04", "SH05"], "duration_s": 28, "actual_media_path": null, "inspected_evidence": [], "qc": {}},
+  "cost_approval": {"approved": false, "scope": null, "budget_cap": null, "approval_evidence": null},
+  "state": {"next_action": "Ask user for brand bible approval before permanence; prepare pilot spec without paid generation", "verified_completed": ["EXAMPLE_DATA_ONLY"], "pending": ["real OWN source", "competitor audiovisual access"], "updated": "2026-10-28"}
+}

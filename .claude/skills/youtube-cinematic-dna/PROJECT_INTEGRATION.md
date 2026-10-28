@@ -29,3 +29,6 @@ Every YouTube link the owner sends (youtube.com, youtu.be, /shorts/) runs this s
 - Replies to the owner in Russian and brief; video text in English. Format 9:16 Shorts unless the project says otherwise.
 - Copy principles, never frames, characters, music or graphics (not-a-copy check).
 - Only Mr. Buck is connected to Zernio; another channel's video is delivered as a file.
+
+## Channel Style DNA V1.0 (installed 28.10.2026, `.claude/skills/channel-style-dna`)
+Owner's upload channel-style-dna-v1.0.zip, applied to @tudor.with.elizabeth. Use when the owner gives a competitor link for a channel that has (or needs) its own brand: BRAND_LOCK first, competitor mechanics second (TRANSFER matrix KEEP / TRANSLATE / REJECT / UNKNOWN), then three original stories and a 4-8 shot pilot. Per-channel state lives in `map_shorts/<channel>/project.json` (history channel: `map_shorts/history_channel/project.json`); validate with `python3 .claude/skills/channel-style-dna/scripts/validate_channel_project.py <json>`. Brand status stays DRAFT until the owner approves it; brand approval is not spend approval (cost_approval.approved stays false until "да/делай" with the price). Mr. Buck's geography look is never used for another channel, and no other channel's look is used for Mr. Buck.

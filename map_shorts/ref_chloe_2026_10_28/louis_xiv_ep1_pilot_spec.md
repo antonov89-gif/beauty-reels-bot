@@ -1,4 +1,5 @@
 # Louis XIV vlog: series bible + episode 1 pilot spec (28.10.2026)
+Brand lock (DRAFT) and transfer matrix from the Elizabeth channel: map_shorts/history_channel/project.json (channel-style-dna V1.0). Prop and cut device: the king's gilded hand mirror flashes over the lens at the end of shot 3.
 Channel: the history POV channel (not Mr. Buck). STATE: PILOT_SPEC. Nothing generated, nothing spent.
 Decision log: the owner picked Louis XIV (a real monarch, died 1715) on 28.10. Treated as an owner exception to "no real person's likeness" for THIS channel, with safeguards: dead 150+ years, facts from 2 sources, comedy framed as a vlog, AI disclosed on screen + description + platform flag, no real descendants/living persons, no real tragedy played for laughs. CLAUDE.md fiction rule is for the stories channel; the history channel keeps checked facts.
 
@@ -36,7 +37,7 @@ Beats: hook (0-8) -> doctor and surgeon watch (8-16) -> the court floods in, bow
 |--|--|--|--|--|--|--|
 | 1 | 0-8 | selfie-style MCU, the king propped in a canopied bed, golden light | handheld, page's POV, slight sway | "Good morning, Versailles. It is morning. I have not stood up. And already, the room is full." | chip "VERSAILLES, c. 1685"; murmur, wax candles, door | one face, no modern items, bed canopy not garbled |
 | 2 | 8-16 | the first valet presents three wigs; doctor and surgeon at the bedside | handheld pan to the bedside | "The doctor watches me wake. The surgeon watches the doctor. Nobody asks how I slept." | chip "THE DOCTOR AND SURGEON ENTER FIRST"; fabric, whispers | exactly one doctor, one surgeon, two hands each |
-| 3 | 16-24 | the doors open, courtiers file in and bow, one bows too low and drops his hat | handheld, king's reaction in foreground | "Bow. Lower. Good... lower. That is a hat. Pick it up." | chip "THE COURT ENTERS BY RANK"; door latches, boots on parquet | background QC: all in period clothes, no modern items, no metal roof |
+| 3 | 16-24 | the doors open, courtiers file in and bow, one bows too low and drops his hat | handheld, king's reaction in foreground | "Bow. Lower. Good... lower. That is a hat. Pick it up." | chip "THE COURT ENTERS BY RANK"; door latches, boots on parquet; cut: gilded hand mirror flashes over the lens | background QC: all in period clothes, no modern items, no metal roof |
 | 4 | 24-32 | the king stands in the window light, the Hall of Mirrors visible behind | step back, wide-to-MCU | "Tonight, I dine in public. You may watch. Do not stare. Next time: dinner with the Sun King." | chip "NEXT: DINNER, IN PUBLIC"; harpsichord sting, cut | mirror reflections plausible; ending frame clean |
 Text on screen (chips/captions) is our overlay, not AI-rendered text. No numeric claims in the lines except verified ones.
 
