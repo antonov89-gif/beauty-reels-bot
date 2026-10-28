@@ -1,0 +1,12 @@
+arthur cost RUB 0.23
+george cost RUB 0.23
+jon cost RUB 0.23
+adam cost RUB 0.23
+david cost RUB 0.23
+std cost RUB 0.23
+arthur completed ['arthur.mp3']
+george completed ['george.mp3', 'arthur.mp3']
+jon completed ['george.mp3', 'jon.mp3', 'arthur.mp3']
+adam completed ['george.mp3', 'adam.mp3', 'jon.mp3', 'arthur.mp3']
+david completed ['george.mp3', 'david.mp3', 'adam.mp3', 'jon.mp3', 'arthur.mp3']
+std completed ['std.mp3', 'george.mp3', 'david.mp3', 'adam.mp3', 'jon.mp3', 'arthur.mp3']

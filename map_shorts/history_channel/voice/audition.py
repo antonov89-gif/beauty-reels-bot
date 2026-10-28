@@ -25,7 +25,8 @@ def api(m, p, b=None):
     for a in range(4):
         try:
             d = json.load(urllib.request.urlopen(r, timeout=120)); break
-        except urllib.error.HTTPError:
+        except urllib.error.HTTPError as e:
+            print("HTTP", e.code, e.read().decode()[:700], flush=True)
             raise
         except Exception:
             if a == 3:
@@ -55,7 +56,7 @@ orders = {}
 for n in names:
     vid, owner = VOICES[n]
     ts = {"model_id": "eleven_v3", "voice_id": vid, "language_code": "en", "advanced_voice_settings": True,
-          "voice_settings": {"stability": 0.3, "similarity_boost": 0.75, "style": 0.5, "use_speaker_boost": True, "speed": 0.95}}
+          "voice_settings": {"stability": 0.5, "similarity_boost": 0.75, "style": 0.5, "use_speaker_boost": True, "speed": 0.95}}
     if owner and len(owner) > 20:
         ts["public_owner_id"] = owner
     body = {"template_id": tpl, "input_text": TEXT, "config_override": {"tts_settings": ts}, "name": "louis voice audition " + n}
