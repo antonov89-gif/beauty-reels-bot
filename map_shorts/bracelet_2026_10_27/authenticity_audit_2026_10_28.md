@@ -47,3 +47,10 @@ b03_k.mp4: Kling 4.0 i2v 720p, 4 s, $0.58 (cost field), wider shot (camera pulls
 - FOUND shot 2 (1.8 s, crop at 3.3 s): under her wrist, a fragment of a second hand (fingertips) appears without an arm: the same defect as the old shot 3, smaller. A viewer may read it as an extra hand.
 - FOUND shot 1 (2.4 s): her second hand lies at the right edge of the frame on the cloth with no visible forearm (the wrist goes off frame behind the bench edge): ambiguous, plausible for an out-of-frame arm.
 - Fix proposal (not done, needs the owner's go): one-arm start frames for shots 1 and 2 ($0.04) and new clips: Kling 3 s for shot 1 ($0.435) and Kling 4 s for shot 2 ($0.58), about $1.06.
+
+## Shot 3 redone again (owner pointed at the "floating piece" moment; "Делай и усиль промт"), 28.10
+- FOUND on the owner's screenshot: in b03n_k the cut bangle looked like two pieces, the upper end hovering as a separate gold block; and the jeweller's cutters were not on the bangle when it was already cut (no cause and effect).
+- FIX: new start frame b03c (Nano Banana 2.1, $0.02): one arm only, the cutter jaws clamped ON the closed bangle. Kling 4.0 4 s with a strengthened prompt (continuous single shot; the bangle stays ONE continuous C-shaped piece around the wrist; no loose or floating pieces, no chips, no extra rings; exactly one arm of hers and two hands of the jeweller; no strap or line on the skin). Two provider failures ("task id is blank", "upload timeout", no cost field = not charged), third run completed, $0.58.
+- INSPECTED: frames 0.5-3.9 s of the clip, close crops at 2.2, 3.0, 3.8 s, and the final at 4.4, 5.2, 6.0 s: one arm and one hand of hers, two hands of the jeweller, the cutters on the bangle and squeezing, the bangle stays one piece, no floating gold, no band on the skin, bruise visible. LIMIT: the gap itself is not visible in this shot (it is at the top under the jaws); shot 4 shows the opened C-shaped bangle being lifted off.
+- Rebuilt: 1080x1920 @ 24 fps, 34.42 s, -15.0 LUFS, TP -3.5 dBTP, 0 black frames, no drift, 12 cuts, speech 0 segments. premium_gate PASS (script checks only).
+- Total about $11.5 for the video (this fix $0.60).
