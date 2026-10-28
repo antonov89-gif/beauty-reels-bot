@@ -69,5 +69,13 @@ What this changes in our plan (story A, "The Queen's Taster", other channel):
 - Plan a long version after 5-6 Shorts: "A day as the queen's taster" ~8-10 min, chapters by rooms; this is the watch-hours route for the new channel's YPP.
 - Lesson for Mr. Buck (principle only, our geography look stays): end each Short by naming the next country, then publish it; test a long compilation of the best Shorts for watch hours.
 
+## Nexlev check (28.10, free plan; Nexlev video watch is not on the FREE plan -> ACCESS DENIED)
+- About (VERIFIED): channel link "Learn realistic AI: cosminacreates.shop". The author sells an AI course -> STRONG INFERENCE the videos are AI-made (fits the commenters; contradicts the vidIQ "live action" verdict on the kitchen tour). Still not seen on frames.
+- Monetization (VERIFIED, Nexlev API): NOT monetized at 67k subscribers. Reason UNKNOWN (pending review, not applied, or rejected).
+- Not a new channel (VERIFIED, Nexlev daily): created 25.03.2026; May 2026 already 1.13M views and 8.6k subs from other content; 12,000 subs and 1.65M views on 13.10. Between 13.10 and 23.10 total views fell by 378k (old videos removed or hidden) while subs jumped to 31.8k. So the Elizabeth series started on a channel with 12k subs; growth +55k subs and +2.2M views in about 15 days (24.10: +1.0M views, +15k subs in one day).
+- Shorts vs long (VERIFIED, Nexlev): Shorts 3.305M views (86 %), long 0.523M (14 %). Correction to the deep-dive: long videos have a high views-per-hour rate but bring only 14 % of views; Shorts are the engine, long videos are the watch-hours layer.
+- Audience (Nexlev estimate): 62 % male; ages spread 18-65+ (65+ = 14 %). Estimated RPM long $2, Shorts $0.03 (category estimate, not real revenue).
+Lesson for us: a 12k-sub base plus a strong recurring character took it to 67k in two weeks, but the channel is still not in YPP; for our goal, monetisation needs a clean original/AI-disclosed package, not just views.
+
 ## STATE
 stage: PILOT_SPEC; reference access: L1 (no mp4); next action: owner picks A/B/C (the channel is another one, not Mr. Buck, already routed); optional: send the mp4 of Vlog 6 for frame verification; then a 2-shot pilot (shots 1 and 4) with the price named.
