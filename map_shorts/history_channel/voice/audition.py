@@ -44,8 +44,8 @@ VOICES = {  # name: (voice_id, public_owner_id or None)
     "david": ("cCYjmrGZaI86GUJ7F2Nn", "fd99b11504e8c1aac6e847ea61616cd450db4e2b1b8aaa196c35d58c85fd9f28"),
     "std": ("O25OBJSCm417f6WHn13t", "64cbc624eb"),
 }
-TEXT = ("[smug] Marcel. The ceiling is lovely. I am lower. DOWN. [haughty, sneering] Good morning, Versailles. "
-        "Every morning, a hundred people watch me wake up. The French call it the lever. [arrogant] I call it a premiere.")
+TEXT = ("[smug] Marcel, down! [haughty] Bow. Lower. Good. Welcome to Versailles. [admiringly] Yes, I am that handsome. [sneering] Try not to faint. "
+        "[smug] A hundred people watch me wake up. The French call it the lever. I call it a premiere. [admiringly] Look at me. Magnificent. [arrogant] The sun is never late.")
 OUT = "/home/user/beauty-reels-bot/map_shorts/history_channel/voice/audition/"
 os.makedirs(OUT, exist_ok=True)
 tpl = next(t["id"] for t in api("GET", "/templates") if t["service_key"] == "elevenlabs")

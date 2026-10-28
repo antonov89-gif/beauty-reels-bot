@@ -89,9 +89,11 @@
     },
     "must_keep": [
       "AI mark on screen + description + platform flag",
-      "one checked fact per scene shown as a chip",
+      "a self-praise line every 15-20 s ('what a handsome man I am')",
       "next episode named at the end",
-      "no modern items in frame"
+      "no modern items in frame",
+      "one checked fact per scene shown as a chip",
+      "signature opener at the start and signature outro at the end of EVERY video"
     ],
     "can_vary": [
       "era and monarch per series",
@@ -308,7 +310,7 @@
       "purpose": "C01 hook: tilt down from the ceiling, plume brushes the lens, character and attitude",
       "shot_size": "medium close-up",
       "camera": "phone POV starting on the painted ceiling, tilt down, plume brush, slight wobble, ultra-wide",
-      "subject_action": "'Marcel. The ceiling is lovely. I am lower. DOWN. Good morning, Versailles.'",
+      "subject_action": "'Marcel — down! Bow. Lower. Good. Welcome to Versailles. Yes, I am that handsome. Try not to faint.' (signature opener)",
       "transition": "continuous (same take)",
       "transfer_id": "TR11"
     },
@@ -318,7 +320,7 @@
       "purpose": "C02 premise: the lever as a premiere",
       "shot_size": "medium",
       "camera": "static propped, eye level, head upper-left third",
-      "subject_action": "'Every morning, a hundred people watch me wake up. The French call it the lever. I call it a premiere.'",
+      "subject_action": "'A hundred people watch me wake up. The French call it the lever. I call it a premiere.'",
       "transition": "continuous (same take)",
       "transfer_id": "TR12"
     },
@@ -328,7 +330,7 @@
       "purpose": "C03 fact: doctor and surgeon present, vanity beat",
       "shot_size": "medium",
       "camera": "static propped, slow imperceptible drift",
-      "subject_action": "'The doctor is here. The surgeon is here. Nobody is here to look at the doctor. Look at me.'",
+      "subject_action": "'The doctor is here. The surgeon is here. Nobody came for them. Look at me. Magnificent.'",
       "transition": "hard cut to the wig table",
       "transfer_id": "TR04"
     },
@@ -376,6 +378,7 @@
       "pilot SPECIFIED",
       "production plan with prompts: map_shorts/history_channel/louis_ep1/plan.md",
       "second-source fact check done 28.10 (lever order, bedchamber, 100 attendees secondary)",
+      "series rules: signature opener/outro + self-praise bank (louis_series_bible.md); ep.1 lines updated",
       "skill installed and 14 tests pass",
       "transfer matrix TR01-TR09"
     ],

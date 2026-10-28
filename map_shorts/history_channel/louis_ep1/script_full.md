@@ -14,36 +14,39 @@ Fact tags: [2S] two sources checked 28.10; [1S] one source or secondary, hedge; 
 | 4 | 88-104 s | C12-C13 | walking selfie, backward walk, then a halt at a mirror | Hall of Mirrors |
 | end | 104-120 s | C14-C15 | static propped eye-level medium, glance off camera, gilded mirror flash over the lens | gallery threshold |
 
+## Series rules (owner 28.10)
+Every video starts with the SAME signature opener and ends with the SAME outro; the king praises his own looks every 15-20 s. Bank, rules and fixed cast: ../louis_series_bible.md. One TTS voice for all lines (the clips' native speech is muted).
+
 ## Scenes
 ### TAKE 1 (0-24 s), state bedchamber, canopied bed, morning light
-C01 (0-8) CAMERA: opens on the painted ceiling (phone pointed up), a hat plume brushes the lens, tilt down to the king's face in the bed, a small wobble. ACTION: he looks into the lens, tilts his chin, a smirk. LINE: "Marcel. The ceiling is lovely. I am lower. DOWN. ... Good morning, Versailles." CHIP: title card "VERSAILLES, c. 1685".
-C02 (8-16) CAMERA: static propped medium (same framing as the end of C01), eye level to slightly low, head upper-left third, bed curtains behind. ACTION: he adjusts a curl with a ringed hand, glances at his hand mirror. LINE: "Every morning, a hundred people watch me wake up. The French call it the lever. I call it a premiere." CHIP: "THE LEVER: UP TO ~100 AT THE GRAND LEVER" [1S, secondary].
-C03 (16-24) CAMERA: same framing, slow imperceptible drift. ACTION: the doctor and surgeon stand at the bedside, he ignores them and looks at himself in the mirror. LINE: "The doctor is here. The surgeon is here. Nobody is here to look at the doctor. Look at me." CHIP: "DOCTOR + SURGEON IN THE ROOM BEFORE HE GETS UP" [2S].
+C01 (0-8) CAMERA: opens on the painted ceiling (phone pointed up), a hat plume brushes the lens, tilt down to the king's face in the bed, a small wobble. ACTION: he looks into the lens, tilts his chin, a smirk. LINE: "Marcel — down! [signature opener] Bow. Lower. Good. Welcome to Versailles. Yes, I am that handsome. Try not to faint." CHIP: title card "VERSAILLES, c. 1685".
+C02 (8-16) CAMERA: static propped medium (same framing as the end of C01), eye level to slightly low, head upper-left third, bed curtains behind. ACTION: he adjusts a curl with a ringed hand, glances at his hand mirror. LINE: "A hundred people watch me wake up. The French call it the lever. I call it a premiere." CHIP: "THE LEVER: UP TO ~100 AT THE GRAND LEVER" [1S, secondary].
+C03 (16-24) CAMERA: same framing, slow imperceptible drift. ACTION: the doctor and surgeon stand at the bedside, he ignores them and looks at himself in the mirror. LINE: "The doctor is here. The surgeon is here. Nobody came for them. Look at me. Magnificent." CHIP: "DOCTOR + SURGEON IN THE ROOM BEFORE HE GETS UP" [2S].
 SOUND: murmur, candles, fabric, a distant door; no music.
 
 ### TAKE 2 (24-48 s), the wig table (hard cut at 24 s)
 C04 (24-32) CAMERA: table height, rolled ~20 degrees, very close, the king's face in profile at the top, wigs on stands and a powder puff in the lower frame, a pink valet finger enters the lower right. ACTION: he lifts the dark wig to the lens. LINE: "Now. The wig. At seventeen my hair started leaving. I took it personally. So I took a wig." CHIP: "HAIR LOSS FROM ~1655 (AGE ~17) → WIGS" [2S].
-C05 (32-40) CAMERA: slow tilt up from the table to his face, wide-angle distortion on the nose. ACTION: he strokes the tall wig. LINE: "It makes me taller. The Louvre says so. I did not ask." CHIP: "THE WIG MAKES HIM LOOK TALLER (LOUVRE)" [1S].
+C05 (32-40) CAMERA: slow tilt up from the table to his face, wide-angle distortion on the nose. ACTION: he strokes the tall wig. LINE: "It makes me taller. The Louvre says so. I did not ask. What a face, though. Honestly." CHIP: "THE WIG MAKES HIM LOOK TALLER (LOUVRE)" [1S].
 C06 (40-48) CAMERA: he thrusts the white-grey wig toward the lens (the wig fills the frame, like the jar in Elizabeth's take), rack focus from wig to face. ACTION: he considers it, sniffs, hands it back. LINE: "White. Grey. Powdered. Everyone will wear it one day. I am simply early." [C] He puts it on at the end of the clip.
 SOUND: wig stand creak, powder puff, a small cough.
 
 ### TAKE 3 (48-80 s), the court enters (hard cut at 48 s)
-C07 (48-56) CAMERA: the camera is on the floor looking up at the king standing in his dressing gown, chandelier and ceiling behind, doors opening at the back; a hand sweeps in from the top (the page re-aims the phone). ACTION: the court floods in and bows. LINE: "Bow. Lower. Good." CHIP: "THE COURT ENTERS BY RANK" [2S].
-C08 (56-64) CAMERA: slow push toward an extreme close-up of the king's face while the bows go on behind him. ACTION: the king mouths along with their bowing, bored. LINE: "Look at that. A hundred people and only one of them is worth looking at."
+C07 (48-56) CAMERA: the camera is on the floor looking up at the king standing in his dressing gown, chandelier and ceiling behind, doors opening at the back; a hand sweeps in from the top (the page re-aims the phone). ACTION: the court floods in and bows. LINE: "Bow. Lower. Good. Yes, white suits me. Everything suits me." CHIP: "THE COURT ENTERS BY RANK" [2S].
+C08 (56-64) CAMERA: slow push toward an extreme close-up of the king's face while the bows go on behind him. ACTION: the king mouths along with their bowing, bored. LINE: "A hundred people, and only one worth looking at. Me. Obviously."
 C09 (64-72) CAMERA: wide vignetted view from low (peephole look): a courtier bows too low, his plumed hat falls and rolls; swing back to the king's smug face. LINE: "Lower... that is a hat. Eyes on me, not the hat."
-C10 (72-80) CAMERA: foreground foot with a red heel and the buckle in focus, rack focus up to the king's face. ACTION: he turns his foot to show it. LINE: "Red heels. A privilege of nobles. Only the ones I like." CHIP: "RED HEELS: A COURT PRIVILEGE, 1670s" [2S].
+C10 (72-80) CAMERA: foreground foot with a red heel and the buckle in focus, rack focus up to the king's face. ACTION: he turns his foot to show it. LINE: "Red heels. A privilege of nobles. Only the ones I like. Look at that ankle." CHIP: "RED HEELS: A COURT PRIVILEGE, 1670s" [2S].
 SOUND: door latches, boots on parquet, plume brush, a small laugh from the court.
 
 ### BURST (80-88 s), dressing montage = 8 macro stills (about 1 s each), whip pans and motion blur
 1 red heel and buckle  2 ring-covered hand  3 powder puff  4 gilded hand mirror  5 sun brooch  6 lace cravat knot  7 wig comb  8 gold embroidered cuff. No dialogue; swoosh + click per cut; harpsichord rhythm in. Chip at the end: "~10 MINUTES OF GLORY, EVERY DAY" is NOT used (no source). Optional chip: "AT 14 HE DANCED THE SUN GOD APOLLO (1653)" [2S] over frame 5.
 
 ### TAKE 4 (88-104 s), Hall of Mirrors (cut)
-C12 (88-96) CAMERA: backward walk, the king strides toward the lens, mirrors and chandeliers left, arched windows right, courtiers trailing. LINE: "Venice sold mirrors. So France made its own. Three hundred and fifty-seven. I am in all of them." CHIP: "357 MIRRORS · 1678-1684" [2S].
-C13 (96-104) CAMERA: handheld halt, the king stops in front of a mirror panel (we see his back and the lens-side face), a courtier tries to pass. LINE: "Do not stand behind me. You ruin the reflection."
+C12 (88-96) CAMERA: backward walk, the king strides toward the lens, mirrors and chandeliers left, arched windows right, courtiers trailing. LINE: "Venice sold mirrors. France made 357. I am in all of them. Lucky mirrors." CHIP: "357 MIRRORS · 1678-1684" [2S].
+C13 (96-104) CAMERA: handheld halt, the king stops in front of a mirror panel (we see his back and the lens-side face), a courtier tries to pass. LINE: "Do not stand behind me. You ruin the reflection. Ah... what a profile."
 
 ### END (104-120 s), gallery threshold, propped eye-level medium, static
-C14 (104-112) ACTION: he straightens a curl, glances at the page. LINE: "Tonight, I dine in public. You may watch. Do not stare." [2S rule: onlookers were not allowed to stare] CHIP: "NEXT: DINNER, IN PUBLIC".
-C15 (112-120) ACTION: sideways glance off camera at 112 s. LINE: "Marcel. Did you get my good side? ... The sun is never late." The gilded mirror swings up over the lens (flash) = cut to black.
+C14 (104-112) ACTION: he straightens a curl, glances at the page. LINE: "Tonight, I dine in public. You may watch. Do not stare. Well... a little." [2S rule: onlookers were not allowed to stare] CHIP: "NEXT: DINNER, IN PUBLIC".
+C15 (112-120) ACTION: sideways glance off camera at 112 s. LINE: "Marcel. Did you get my good side? They are all good. [signature outro] The sun is never late." The gilded mirror swings up over the lens (flash) = cut to black.
 SOUND: a short harpsichord sting.
 
 ## Captions and graphics
