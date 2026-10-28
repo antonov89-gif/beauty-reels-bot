@@ -54,3 +54,9 @@ b03_k.mp4: Kling 4.0 i2v 720p, 4 s, $0.58 (cost field), wider shot (camera pulls
 - INSPECTED: frames 0.5-3.9 s of the clip, close crops at 2.2, 3.0, 3.8 s, and the final at 4.4, 5.2, 6.0 s: one arm and one hand of hers, two hands of the jeweller, the cutters on the bangle and squeezing, the bangle stays one piece, no floating gold, no band on the skin, bruise visible. LIMIT: the gap itself is not visible in this shot (it is at the top under the jaws); shot 4 shows the opened C-shaped bangle being lifted off.
 - Rebuilt: 1080x1920 @ 24 fps, 34.42 s, -15.0 LUFS, TP -3.5 dBTP, 0 black frames, no drift, 12 cuts, speech 0 segments. premium_gate PASS (script checks only).
 - Total about $11.5 for the video (this fix $0.60).
+
+## Re-check after the shot 3 fix (owner: "Проверь"), 28.10
+- Picture: shot 3 at 9 moments incl. the cuts 2->3 and 3->4: one arm and one hand of hers, two hands of the jeweller, the cutters on the bangle, the bangle one piece, no floating gold, no band on the skin; a small transparent object lies on the bench at the lower left (harmless). Shots 1 and 2 still carry the hand fragments recorded earlier (fix pending the owner's word).
+- FOUND audio: shot 3 was nearly silent (RMS -30.8 dB vs -13..-23 dB in the other shots): the Kling clip has only the snap. FIX (no cost): a quiet workshop room tone (brown noise, 80-2500 Hz, faded in and out) under shot 3 only; shot 3 now -26.9 dB, the snap peak at 5.82 s matches the squeeze on screen. This is our own synthesized sound, not the model's.
+- Sample-to-sample jumps up to 0.95 occur in several shots (5.25, 7.44, 19.06, 23.17, 25.80 s): they alternate in sign over several samples, which points to high-frequency metal content, not isolated clicks (INFERENCE, not verified by listening).
+- Final: 1080x1920 @ 24 fps, 34.42 s, audio 34.37 s, -15.0 LUFS, true peak -3.9 dBTP, 0 black frames, no drift, 12 cuts, speech 0 segments; premium_gate PASS (script checks only).

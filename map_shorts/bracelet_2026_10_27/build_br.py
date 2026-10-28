@@ -23,6 +23,7 @@ EDL = [
     (W / "clips/b13.mp4", 0.0, 3.4),            # 13 she wears the cuff
 ]
 FADE = 0.04
+ROOM = {2: -6.0}   # shot 3: the Kling clip is near silent apart from the snap, so a quiet workshop room tone (brown noise) fills the 2 s gap
 
 
 def seg_gain(f, s0, d, target=-24.0, cap=15.0):
@@ -56,7 +57,10 @@ def main(out=W / "br_final.mp4"):
                   f"eq=contrast=1.04:saturation=1.04,unsharp=5:5:0.5[v{i}]")
         g = seg_gain(f, s0, d)
         af.append(f"[{i}:a]atrim=start={s0}:duration={d:.3f},asetpts=PTS-STARTPTS,aresample=44100,aformat=channel_layouts=stereo,volume={g:.1f}dB,"
-                  f"afade=t=in:st=0:d={FADE},afade=t=out:st={d - FADE:.3f}:d={FADE}[a{i}]")
+                  f"afade=t=in:st=0:d={FADE},afade=t=out:st={d - FADE:.3f}:d={FADE}" + ("[p%d]" % i if i in ROOM else f"[a{i}]"))
+        if i in ROOM:
+            af.append(f"anoisesrc=d={d:.3f}:c=brown:r=44100:a=0.2,highpass=f=80,lowpass=f=2500,volume={ROOM[i]}dB,aformat=channel_layouts=stereo,"
+                      f"afade=t=in:st=0:d=0.15,afade=t=out:st={d - 0.15:.3f}:d=0.15[n{i}];[p{i}][n{i}]amix=inputs=2:normalize=0:duration=first[a{i}]")
     n = len(EDL)
     cat = "".join(f"[v{i}]" for i in range(n)) + f"concat=n={n}:v=1:a=0[v];" + "".join(f"[a{i}]" for i in range(n)) + f"concat=n={n}:v=0:a=1,acompressor=threshold=-22dB:ratio=3:attack=10:release=150:makeup=2,alimiter=limit=0.84[a]"
     subprocess.run(["ffmpeg", "-v", "error", "-y", *inputs, "-filter_complex", ";".join(vf + af + [cat]), "-map", "[v]", "-map", "[a]", "-r", str(FPS),
