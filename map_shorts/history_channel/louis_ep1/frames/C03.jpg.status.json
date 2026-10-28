@@ -1,0 +1,15 @@
+{
+ "code": 200,
+ "message": "success",
+ "data": {
+  "task_id": "e8df3af7-366d-4746-a71b-f8071f33ac45",
+  "status": "completed",
+  "result": [
+   "https://s.apipod.ai/images/2026/10/28/383fb880-8ad0-46df-a500-967071f3162e.jpg"
+  ],
+  "completed_at": 1793229838,
+  "usage": {
+   "cost": 0.02
+  }
+ }
+}

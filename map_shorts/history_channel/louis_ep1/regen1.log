@@ -1,0 +1,6 @@
+C01 SUBMIT FAILED {'http_error': 429, 'body': '{"code":429,"message":"You have reached your async task concurrency limit: 5 in progress, limit 5. Wait for an existing task to finish before submitting another request.","data":{"type":"rate_limit_error","error_code":"rate_limit_exceeded"}}'}
+C02 SUBMIT FAILED {'http_error': 429, 'body': '{"code":429,"message":"You have reached your async task concurrency limit: 5 in progress, limit 5. Wait for an existing task to finish before submitting another request.","data":{"type":"rate_limit_error","error_code":"rate_limit_exceeded"}}'}
+C05 SUBMIT FAILED {'http_error': 429, 'body': '{"code":429,"message":"You have reached your async task concurrency limit: 5 in progress, limit 5. Wait for an existing task to finish before submitting another request.","data":{"type":"rate_limit_error","error_code":"rate_limit_exceeded"}}'}
+C04 done 0.02 883428
+C03 done 0.02 922233
+total 0.04 for 5
