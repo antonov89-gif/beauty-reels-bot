@@ -1,0 +1,3 @@
+{'code': 200, 'message': 'success', 'data': {'task_id': '4720e83f-32fa-48ae-a3ca-e2d0310cf0a5'}}
+{"code": 200, "message": "success", "data": {"task_id": "4720e83f-32fa-48ae-a3ca-e2d0310cf0a5", "status": "completed", "result": ["https://s.apipod.ai/images/2026/10/28/25b05b01-2cb0-42db-9d2c-cc9be944e1f0.jpg"], "completed_at": 1793228454, "usage": {"cost": 0.02}}}
+url https://s.apipod.ai/images/2026/10/28/25b05b01-2cb0-42db-9d2c-cc9be944e1f0.jpg

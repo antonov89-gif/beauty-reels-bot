@@ -254,7 +254,13 @@
         "premise": "The Queen's Taster: a fictional food taster in a Tudor-era kitchen; each episode a dish (no real monarch on screen)"
       }
     ],
-    "recommended_id": "A"
+    "recommended_id": "A",
+    "character_card": {
+      "status": "GENERATED_INSPECTED_NOT_APPROVED",
+      "path": "map_shorts/history_channel/louis_card/louis_xiv_character_card.png",
+      "face_reference": "map_shorts/history_channel/louis_card/A_face.jpg",
+      "spend_usd": 0.1
+    }
   },
   "scenes": {
     "S01": {
@@ -336,9 +342,10 @@
     "approval_evidence": null
   },
   "state": {
-    "next_action": "Owner: say 'да' to start the pilot (frames $0.08 first, then 4 clips $0.72; planned $0.80, cap $2.4); brand approval is separate",
+    "next_action": "Owner: approve or correct the character card; then 4 shot frames SH01-SH04 ($0.08) and 4 Veo clips ($0.72) on 'да'",
     "verified_completed": [
       "REF03 Vlog 1 frame forensics from the owner mp4 (camera analysis), TR11-TR12 added",
+      "character card for Louis XIV generated (5 images, $0.10) and inspected; awaiting owner approval",
       "character set by owner 28.10: vain, self-loving, arrogant, obsessed with his looks; script and prompts rewritten; vanity facts checked (heels, hair loss 1655, 1653 Apollo, Rigaud 1701)",
       "competitor metadata, comments and 2 L1 watches collected",
       "owner screenshot 28.10 read: thumbnails + vidIQ panel (REF05), TR10 added",
