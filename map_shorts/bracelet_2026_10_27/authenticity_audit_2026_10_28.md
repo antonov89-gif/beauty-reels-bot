@@ -40,3 +40,10 @@ b03_k.mp4: Kling 4.0 i2v 720p, 4 s, $0.58 (cost field), wider shot (camera pulls
 - FIX: new start frame b03n (Nano Banana 2.1, $0.02): one arm of hers only, the other arm out of frame; new Kling 4.0 clip b03n_k.mp4 (4 s, $0.58, cost field). INSPECTED at 0.4-3.6 s, a close crop at 3.0 s and in the final at 4.9, 5.6, 6.2 s: hers = one arm and one hand, the jeweller = two hands; gold bangle ends separated with bare skin, no strap or band; the bruise reads as a pink-purple swelling around the wrist (not a stripe). A gold ring on the jeweller's finger appears in the clip (harmless).
 - Rebuilt: 1080x1920 @ 24 fps, 34.42 s, -15.0 LUFS, true peak -3.5 dBTP, 0 black frames, no drift, 12 cuts, speech 0 segments (VAD). premium_gate PASS (script checks only).
 - Total cost of the video about $10.9: frames $0.42, pilot $2.155, 12 Seedance clips $6.05, Seedance shot-3 attempt $0.504, Kling shot 3 (first) $0.58, Kling shot 4 $0.58, Kling shot 3 (arm fix) $0.58.
+
+## Full re-check of the current cut (owner: "Проверь"), 28.10: 3 frames per shot (13 shots, 39 frames at 400x711) plus crops of shots 1 and 2
+- OK by hand count: shots 3-8, 10-13 (hers: one arm and one hand in shot 3, 4, one or two hands in 13; the jeweller: two hands; shot 7 the gloved hand and the other arm).
+- Shot 9 (rolling mill): from the second frame on, a hand hangs at the right edge, most likely the jeweller's other arm; ambiguous but plausible.
+- FOUND shot 2 (1.8 s, crop at 3.3 s): under her wrist, a fragment of a second hand (fingertips) appears without an arm: the same defect as the old shot 3, smaller. A viewer may read it as an extra hand.
+- FOUND shot 1 (2.4 s): her second hand lies at the right edge of the frame on the cloth with no visible forearm (the wrist goes off frame behind the bench edge): ambiguous, plausible for an out-of-frame arm.
+- Fix proposal (not done, needs the owner's go): one-arm start frames for shots 1 and 2 ($0.04) and new clips: Kling 3 s for shot 1 ($0.435) and Kling 4 s for shot 2 ($0.58), about $1.06.
