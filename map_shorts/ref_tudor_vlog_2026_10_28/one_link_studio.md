@@ -45,5 +45,29 @@ Dialogue with lip sync is the hard part. Options: Veo 3.1 (native speech; voice 
 ## Integrity
 Fictional characters, real historical setting; facts checked; AI disclosed and flags ON; no real person's likeness; not a copy (no queen, no "peasants" greeting, no "Kate", no room-tour of a palace).
 
+## Channel deep-dive (28.10, vidIQ; 55 credits in total on this channel)
+Data (VERIFIED, vidIQ 28.10): "Queen Elizabeth I", created 25.03.2026, first upload 10.10.2026; 67,100 subscribers, 3,827,958 views, 16 videos in 18 days (12 Shorts + 3 long + 1 music video).
+- Long-form grows fastest: "Good morrow, peasants! (Queen Elizabeth I Vlog)" 10:52, 346,267 views since 23.10 (1,536 views/h); "Get ready with me (Queen Elizabeth I Vlog)" 10:38, 265,825 since 26.10 (7,150 views/h, the best rate on the channel). The long videos are the same character and format at 10 min, i.e. watch hours for YPP.
+- "Elizabeth I - Married to England (Official Music Video)" 2:18, 97,470: the character spun into a song.
+- Newest Short "Tower of London" (28.10) 50,024 views, 13.4 % likes, 6,253 views/h. It was announced at the end of "Kitchen tour" ("Next time: the Tower of London and the rack. Stay tuned.").
+
+L1 watch of two Shorts (vidIQ AI, NOT VERIFIED ON FRAMES):
+- "Kitchen tour. Disgusting." 2:19, 6 shots, ASL ~23 s. Rooms as chapters: corridor -> great kitchen (spit boy) -> boiling house -> pastry (venison pie "coffin") -> confectionery -> fish larder (live eels) -> exit corridor. Gags: the cook pushes the pie into the lens ("Too close!"); a handkerchief to the nose as her signature prop, then wiped over the lens as the final cut. Facts: kitchen fed hundreds twice a day, spit boys, pie crust called a "coffin". Ending: names the next episode.
+- "Elizabeth I - vlog 1" 2:08, 12 shots, ASL ~11.6 s. Hook "Why am I upside down?" (phone held wrong), then the premise "a queen must be seen by her people". Beauty-vlogger framing (ceruse jar held to the lens), smallpox scars, sugar teeth, the Bishop Aylmer tooth story, marchpane. Physical gag: a servant drops a tray of sweets, she laughs. CTA in period speech: "keep an eye on my... profile". Ending: names the next episode.
+- CONFLICT on method: the vidIQ watch called the kitchen tour "100 % live action" and vlog 1 "100 % AI". Same tool, opposite verdicts: production method stays UNKNOWN until we see frames (mp4).
+
+New DNA rules from the deep-dive (provisional, L1):
+8. Series chain: every episode ends by naming the next topic, and that video then comes out (VERIFIED for kitchen -> Tower of London by titles).
+9. One physical gag per episode (pie into the lens, dropped tray) next to the facts.
+10. A signature prop that doubles as the transition (handkerchief over the lens).
+11. Short -> long: the same character in 10-min vlogs within 2 weeks; long videos outpace Shorts in views per hour.
+
+What this changes in our plan (story A, "The Queen's Taster", other channel):
+- Keep the ending "Tuesday: the sugar castle. Follow if I'm alive." and actually make the sugar-castle episode next (rule 8).
+- Add one physical gag: the steward shoves the next dish into the lens (our own variant: the platter of eels) at 20-26 s.
+- Her own signature prop: a small silver tasting spoon; she taps it on the lens as the cut (not a handkerchief).
+- Plan a long version after 5-6 Shorts: "A day as the queen's taster" ~8-10 min, chapters by rooms; this is the watch-hours route for the new channel's YPP.
+- Lesson for Mr. Buck (principle only, our geography look stays): end each Short by naming the next country, then publish it; test a long compilation of the best Shorts for watch hours.
+
 ## STATE
-stage: PILOT_SPEC; reference access: L1 (no mp4); next action: owner picks A/B/C and channel; optional: send the mp4 of Vlog 6 for frame verification; then a 2-shot pilot (shots 1 and 4) with the price named.
+stage: PILOT_SPEC; reference access: L1 (no mp4); next action: owner picks A/B/C (the channel is another one, not Mr. Buck, already routed); optional: send the mp4 of Vlog 6 for frame verification; then a 2-shot pilot (shots 1 and 4) with the price named.
