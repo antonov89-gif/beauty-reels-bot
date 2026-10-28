@@ -1,6 +1,6 @@
 # Louis XIV, ep. 1 "My Morning": full scene script (about 2:00, Short), 28.10.2026
 Format and camera grammar from the frame check of Elizabeth's Vlog 1 (frames_vlog1_LjfGP7wpjVs.md): three long takes with a hand-held phone camera that moves inside the shot, one burst of micro-cuts at the reward moment, a gag beat with a wide vignetted view, a lens-cover cut at the end. Our own character, set, lines and graphics.
-Look: card v2 (louis_card/louis_xiv_character_card_v2.png, face reference A2_face.jpg): raw documentary-vlog frames, phone front camera, ultra-wide (~16-18 mm eq), window and candle light, pores and powder. Wig: DARK wig worn all episode; the white-grey wig appears only as a gag (C06). Change that one line if the owner picks the white wig as the main.
+Look: card v2 (louis_card/louis_xiv_character_card_v2.png, face reference A2_face.jpg): raw documentary-vlog frames, phone front camera, ultra-wide (~16-18 mm eq), window and candle light, pores and powder. Wig (owner 28.10: WHITE-GREY is the main look): he wakes in a short dark curled night wig and a gold silk dressing gown (C01-C05), rejects a tall dark wig (C04), puts on the tall white-grey powdered wig at C06 and keeps it to the end (C07-C15; scarlet gold-sun coat after the dressing burst). A white powdered wig is an anachronism for 1685 and is played as a joke ("I am simply early"); the description says the styling is exaggeration.
 Audio: native Veo speech first (voice may drift: then one TTS voice for all lines), own harpsichord sting, room tone, foley. AI mark in the corner all the time.
 Fact tags: [2S] two sources checked 28.10; [1S] one source or secondary, hedge; [C] comedy, not a claim.
 
@@ -24,7 +24,7 @@ SOUND: murmur, candles, fabric, a distant door; no music.
 ### TAKE 2 (24-48 s), the wig table (hard cut at 24 s)
 C04 (24-32) CAMERA: table height, rolled ~20 degrees, very close, the king's face in profile at the top, wigs on stands and a powder puff in the lower frame, a pink valet finger enters the lower right. ACTION: he lifts the dark wig to the lens. LINE: "Now. The wig. At seventeen my hair started leaving. I took it personally. So I took a wig." CHIP: "HAIR LOSS FROM ~1655 (AGE ~17) → WIGS" [2S].
 C05 (32-40) CAMERA: slow tilt up from the table to his face, wide-angle distortion on the nose. ACTION: he strokes the tall wig. LINE: "It makes me taller. The Louvre says so. I did not ask." CHIP: "THE WIG MAKES HIM LOOK TALLER (LOUVRE)" [1S].
-C06 (40-48) CAMERA: he thrusts the white-grey wig toward the lens (the wig fills the frame, like the jar in Elizabeth's take), rack focus from wig to face. ACTION: he considers it, sniffs, hands it back. LINE: "And this one. White. Grey. Powdered. Hm. Too early. In twenty years everyone will want it. Not yet." [C]
+C06 (40-48) CAMERA: he thrusts the white-grey wig toward the lens (the wig fills the frame, like the jar in Elizabeth's take), rack focus from wig to face. ACTION: he considers it, sniffs, hands it back. LINE: "White. Grey. Powdered. Everyone will wear it one day. I am simply early." [C] He puts it on at the end of the clip.
 SOUND: wig stand creak, powder puff, a small cough.
 
 ### TAKE 3 (48-80 s), the court enters (hard cut at 48 s)
@@ -53,6 +53,7 @@ Cream captions with a gold key word, 1-3 words, lower third, about 78 % of the f
 - Pilot = C01-C04 (32 s, one take + the first clip of take 2). Cost: 4 frames $0.08 + 4 clips $0.72 = $0.80, cap $2.4.
 - Full episode: 14 Veo 3.1 fast clips (C01-C10, C12-C15) = 14 x $0.18 = $2.52, 14 start frames = $0.28, 8 burst stills = $0.16. Raw $2.96, planned with rerolls about $7, cap $9. Stop and ask beyond the cap.
 - Chained takes: each next clip starts from the last frame of the previous one (same framing, hidden seam); check hands (count, arms), the face against A2_face.jpg, no modern items, the hat physics, the heel colour.
+- Start frames: 22 storyboard frames generated and inspected 28.10 (frames/, storyboard_*.jpg); spend $0.60 of the $0.80 cap (22 first run $0.44, regens C01-C05, C10 x2, B8 $0.16). Status GENERATED + INSPECTED by us, NOT APPROVED by the owner.
 - Gates before delivery: contact sheet per clip, mouth/voice consistency, premium_gate.py, authenticity-check audit (fiction with real history), then the owner approves.
 
 ## Open decisions

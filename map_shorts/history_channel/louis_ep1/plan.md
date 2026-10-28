@@ -70,3 +70,6 @@ Description: "A comedy reconstruction of the morning ritual at Versailles around
 ## Look update from card v2 (28.10, owner: hype, extravagant, documentary like Elizabeth's)
 Character lock = A2_face.jpg: towering dark-chestnut wig, powdered pale skin with rouge, painted brows, black beauty patch, thin curled moustache, scarlet velvet coat embroidered with gold suns, jewelled sun brooch, a ring on every finger. Day set = the Hall of Mirrors (SH04) and the state bedchamber (SH01-SH03) in raw documentary-vlog frames: phone front camera, ultra-wide, handheld, window and candle light, visible pores and powder. Morning wardrobe (SH01-SH02): smaller curled wig, gold silk dressing gown over a lace nightshirt (D2_morning.jpg), three wigs on stands.
 Frame style prefix for SH01-SH04 = the v2 documentary STYLE in gen_card2.py. SH01 may open with the plume brushing the lens; keep the mirror flash. New catchphrase available for SH04: "The sun is never late."
+
+## Wig decision (owner 28.10): white-grey is the main look
+Publication note: the description states that the powdered white-grey wig and the styling (patch, rouge, tower wig) are comedic exaggeration; white powdered wigs became fashionable later.

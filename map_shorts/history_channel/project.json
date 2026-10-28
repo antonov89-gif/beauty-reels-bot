@@ -261,6 +261,18 @@
       "face_reference": "map_shorts/history_channel/louis_card/A2_face.jpg",
       "spend_usd": 0.18,
       "v1": "louis_xiv_character_card.png (polished cinematic, superseded by owner direction)"
+    },
+    "storyboard_frames": {
+      "status": "GENERATED_INSPECTED_NOT_APPROVED",
+      "path": "map_shorts/history_channel/louis_ep1/frames/",
+      "sheets": [
+        "storyboard_1_takes1-3.jpg",
+        "storyboard_2_takes3-end.jpg",
+        "storyboard_3_burst.jpg"
+      ],
+      "count": 22,
+      "spend_usd": 0.6,
+      "wig": "white-grey main (owner 28.10); dark short night wig C01-C05"
     }
   },
   "scenes": {
@@ -351,8 +363,9 @@
     "approval_evidence": null
   },
   "state": {
-    "next_action": "Owner: approve card v2 and the full script (wig and voice decisions); then pilot C01-C04: 4 frames $0.08 + 4 clips $0.72 on 'да'",
+    "next_action": "Owner: approve or correct the 22 storyboard frames (3 sheets); then clips: pilot C01-C04 = 4 Veo 3.1 fast clips $0.72 on 'да', full episode later with a cap",
     "verified_completed": [
+      "22 storyboard frames for the full script generated and inspected ($0.60); wig decision: white-grey main",
       "REF03 Vlog 1 frame forensics from the owner mp4 (camera analysis), TR11-TR12 added",
       "character card for Louis XIV generated (5 images, $0.10) and inspected; awaiting owner approval",
       "character card v2 (hype, extravagant, documentary look) generated and inspected, $0.08 more",
