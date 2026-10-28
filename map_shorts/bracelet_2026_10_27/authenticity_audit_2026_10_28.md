@@ -13,3 +13,9 @@ File: /home/claude/v90/br_final.mp4 (34.4 s, 1080x1920 upscaled from 720p clips,
 | 9 | Licences | Generated with Nano Banana 2.1 / Seedance 2.0 via APIpod: commercial-use terms of the providers NOT VERIFIED (owner's plan). No third-party footage or music |
 | 10 | Text safe zone / overlap | Not applicable: there is no text on screen |
 Cost: frames 20 x $0.02 = $0.40, pilot clips $2.155, 12 Seedance clips $6.05 ($0.504 each) = about $8.6 for the video.
+
+## Re-check at full resolution (28.10, owner: "Проверь"): frames 1.0, 3.0, 5.2, 5.9, 7.2, 22.5, 25.0, 32.0, 34.0 s opened at 1080x1920
+- PASS: spec 1080x1920 / 24 fps / h264 + aac, video 34.42 s, audio 34.50 s (0.08 s); every shot shows its action (cutter, cut, pliers, melt, pour, quench, rollers, strip, hammer, polish, cuff on the wrist); the bruise is visible in shots 1-4 and absent in shot 13; no text or logos in any opened frame; hands look natural in the opened frames (five fingers each).
+- FOUND (shot 3, 4.9-6.2 s, close-up): between the cut ends of the bangle there is a flat tan band that reads like a leather strap (most likely the pressed groove of the skin, but it looks like an object). A viewer can notice it. Not fixed yet: a re-generation of b03 costs $0.50 (Seedance 2.0, 4 s) and is up to the owner.
+- FOUND (shot 4, 7.2 s): her relaxed hand hangs slightly elongated; acceptable at phone size.
+- Unchanged from the first audit: shot 4 bangle slides off like a ring; shot 10 a loop of strip on the bench; pattern drift on the bangle.
