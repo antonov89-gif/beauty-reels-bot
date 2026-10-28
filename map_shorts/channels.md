@@ -19,6 +19,11 @@ Rule (CLAUDE.md): references are routed by niche; styles are never mixed; say th
 - Publishing: needs the channel's own accounts connected to Zernio; until then files are delivered to the owner only.
 - **Fiction allowed (owner, 27.10):** original invented stories are fine on this channel. Fiction audit instead of the facts audit: (1) the description says "a fictional story"; nothing is claimed as true, as news or as a real case; (2) no real person's name, likeness or brand; a real disaster is not retold with invented details as if real; (3) AI disclosed + flags ON; (4) no gore, no violence against children, not made for kids; (5) originality: not a copy of a reference's characters, scenes or wording (PHASE 96); (6) the premium_gate.py report. Real events may only be used with checked facts and "inspired by".
 
+## 2b. History POV channel (other channel; NOT Mr. Buck; account not connected yet; brand DRAFT)
+- Project: map_shorts/history_channel/project.json (channel-style-dna). First series: Louis XIV vlog (character card v2, white-grey wig main, documentary-vlog look, camera grammar from the Elizabeth reference).
+- **Voice rule (owner, 28.10.2026): ONE voice on all videos of this channel; nasty (smarmy), arrogant, haughty.** So the voice is TTS (one fixed ElevenLabs v3 voice_id + settings, saved in map_shorts/history_channel/voice/voice_lock.json once the owner picks it), not the generator's native speech (it drifts between clips). The clips' own speech is muted; ambience and foley stay.
+- Facts allowed for real monarchs (owner exception, 28.10): dead 150+ years, two sources, comedy framed, AI disclosed.
+
 ## 3. Routing log
 | Date | Reference | Niche | Routed to |
 |--|--|--|--|

@@ -78,7 +78,7 @@
         "AI mark in a corner on every frame",
         "gilded hand mirror as the character's transition prop"
       ],
-      "voice": "Character-led comedy, checked facts; Louis XIV is obsessed with his looks: vain, self-loving, arrogant, mirror-checking (owner 28.10); own music and foley only"
+      "voice": "ONE fixed TTS voice for every video (owner 28.10): nasty, arrogant, haughty; ElevenLabs v3 via Lumean, voice_id saved in voice/voice_lock.json after the owner picks one of the audition samples; the generator's native speech is muted"
     },
     "cinema": {
       "realism": "Owner 28.10: raw documentary-vlog look like the Elizabeth channel (phone front camera, ultra-wide, handheld, visible skin detail), extravagant and hype character; photoreal AI, disclosed",
@@ -363,7 +363,7 @@
     "approval_evidence": null
   },
   "state": {
-    "next_action": "Owner: approve or correct the 22 storyboard frames (3 sheets); then clips: pilot C01-C04 = 4 Veo 3.1 fast clips $0.72 on 'да', full episode later with a cap",
+    "next_action": "Owner: yes to the voice audition (6 samples, 1.38 RUB); then pick one voice; approve the storyboard frames; then Veo clips",
     "verified_completed": [
       "22 storyboard frames for the full script generated and inspected ($0.60); wig decision: white-grey main",
       "REF03 Vlog 1 frame forensics from the owner mp4 (camera analysis), TR11-TR12 added",
@@ -383,7 +383,8 @@
       "brand approval",
       "cost approval",
       "mp4 of the reference",
-      "second-source fact check for the Louis XIV episode"
+      "second-source fact check for the Louis XIV episode",
+      "voice audition (6 samples, 1.38 RUB ~ $0.017): needs the owner's explicit yes"
     ],
     "updated": "2026-10-28"
   }
