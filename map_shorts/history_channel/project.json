@@ -47,6 +47,15 @@
       "access": "METADATA_ONLY",
       "modality": [],
       "evidence": "Top comments of Vlog 6 (25 threads), Nexlev daily growth and 86/14 split"
+    },
+    {
+      "id": "REF05",
+      "owner": "COMPETITOR",
+      "kind": "thumbnail",
+      "location": "owner screenshot 28.10 (channel Videos tab + vidIQ panel, 3 thumbnails)",
+      "access": "INSPECTED",
+      "modality": [],
+      "evidence": "3 still thumbnails seen directly: 'Get ready with me' 10:38, 'Married to England' 2:18, 'Good morrow, peasants!' 10:52; vidIQ panel text read. Stills only: no motion, audio or AI-status proof."
     }
   ],
   "brand": {
@@ -101,7 +110,8 @@
       "REF01",
       "REF02",
       "REF03",
-      "REF04"
+      "REF04",
+      "REF05"
     ],
     "transfer_matrix": [
       {
@@ -193,6 +203,16 @@
         "brand_native": "Own camera grammar is a proposal until frames are seen",
         "originality_change": "n/a",
         "cost_risk": "medium"
+      },
+      {
+        "id": "TR10",
+        "ref_evidence": "REF05: all 3 thumbnails show the same character in the same costume (white face, red-orange hair, ruff), face-forward, no text overlay; 2 of 3 with open mouth/teeth or a direct stare; titles end with the series tag '(Queen Elizabeth I Vlog)'",
+        "mechanic": "Packaging: one iconic, instantly recognisable face as the identity anchor, an exaggerated trait, no text on the thumbnail, a series tag in the title",
+        "why_effective": "Hypothesis: a recognisable character on the shelf, curiosity from the grotesque detail; outlier scores 60.9x/71.8x are outcomes, not proof",
+        "decision": "TRANSLATE_TO_BRAND",
+        "brand_native": "Louis: the heavy-lidded haughty face, curled wig and gilded hand mirror in the frame, no text on the thumbnail, title tag '(Louis XIV Vlog)'; no grotesque teeth gag",
+        "originality_change": "Different face, costume, trait and framing; not a close-up of rotten teeth",
+        "cost_risk": "simple"
       }
     ]
   },
@@ -296,6 +316,7 @@
     "next_action": "Owner: say 'да' to start the pilot (frames $0.08 first, then 4 clips $0.72; planned $0.80, cap $2.4); brand approval is separate",
     "verified_completed": [
       "competitor metadata, comments and 2 L1 watches collected",
+      "owner screenshot 28.10 read: thumbnails + vidIQ panel (REF05), TR10 added",
       "pilot SPECIFIED",
       "production plan with prompts: map_shorts/history_channel/louis_ep1/plan.md",
       "second-source fact check done 28.10 (lever order, bedchamber, 100 attendees secondary)",

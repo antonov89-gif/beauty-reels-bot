@@ -77,5 +77,12 @@ What this changes in our plan (story A, "The Queen's Taster", other channel):
 - Audience (Nexlev estimate): 62 % male; ages spread 18-65+ (65+ = 14 %). Estimated RPM long $2, Shorts $0.03 (category estimate, not real revenue).
 Lesson for us: a 12k-sub base plus a strong recurring character took it to 67k in two weeks, but the channel is still not in YPP; for our goal, monetisation needs a clean original/AI-disclosed package, not just views.
 
+## Owner screenshot (28.10, evening): Videos tab + vidIQ quick stats (VERIFIED from the image)
+- vidIQ panel: subscribers 64.4k (vidIQ lags Nexlev's 67k), est. monthly earnings $644 (vidIQ ESTIMATE; Nexlev said ~$149; the channel is not monetized, so both are model numbers), avg video length 3.3 min, upload frequency ~4 per week, 7-day views gained +3,717,082 (a different window from Nexlev's 2.55M). About link visible: cosminacreates.shop.
+- Similar channels listed by vidIQ (names partly cut off): "Anne Back in Time", "Chronos Paradigm", "The MacroFrame" -> copycat channels already exist two weeks after the launch; our originality (own character, chips, no "peasants") is not optional.
+- Long videos: "Get ready with me" 271k in 2 days, 7.2K VPH, 60.9x outlier; "Good morrow, peasants!" 347k in 4 days, 1.5K VPH, 71.8x; the music video 98k, 572 VPH, 15.2x.
+- Thumbnails (stills only): the same character and costume in all three; face-forward; no text overlay; open-mouth grotesque teeth close-up (GRWM), a posed ruff portrait with a blurred crowd (music video), a portrait with an attendant looking down and a jewellery table (Good morrow). Titles carry the series tag "(Queen Elizabeth I Vlog)". AI status cannot be proven from stills.
+- Applied: TR10 (packaging principle) in map_shorts/history_channel/project.json.
+
 ## STATE
 stage: PILOT_SPEC; reference access: L1 (no mp4); next action: owner picks A/B/C (the channel is another one, not Mr. Buck, already routed); optional: send the mp4 of Vlog 6 for frame verification; then a 2-shot pilot (shots 1 and 4) with the price named.
