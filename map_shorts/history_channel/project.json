@@ -35,9 +35,12 @@
       "owner": "COMPETITOR",
       "kind": "video",
       "location": "https://www.youtube.com/watch?v=LjfGP7wpjVs",
-      "access": "METADATA_ONLY",
-      "modality": [],
-      "evidence": "Vlog 1: vidIQ AI watch text (L1), 12 shots, ASL ~11.6 s; no mp4, not viewed by us"
+      "access": "INSPECTED",
+      "modality": [
+        "video_frames",
+        "audio_levels"
+      ],
+      "evidence": "Owner mp4 28.10 (360x640, 128.27 s): every second viewed on 14 contact sheets + 2 crops, cut scan at 4 thresholds, loudness measured; see map_shorts/ref_tudor_vlog_2026_10_28/frames_vlog1_LjfGP7wpjVs.md. Music and voice quality not assessed."
     },
     {
       "id": "REF04",
@@ -213,6 +216,26 @@
         "brand_native": "Louis: the heavy-lidded haughty face, curled wig and gilded hand mirror in the frame, no text on the thumbnail, title tag '(Louis XIV Vlog)'; no grotesque teeth gag",
         "originality_change": "Different face, costume, trait and framing; not a close-up of rotten teeth",
         "cost_risk": "simple"
+      },
+      {
+        "id": "TR11",
+        "ref_evidence": "REF03 frames: thumb at the left edge 0-3 s, pink thumb 26-34 s, hand sweeps in 53-55 s, fingers and toothpick 76-81 s, thumb over the lens 1:51-1:53 (5 events in 128 s)",
+        "mechanic": "Deliberate foreground 'phone mistakes' that make a generated shot feel like a real phone vlog",
+        "why_effective": "Hypothesis: authenticity cue and in-shot transitions",
+        "decision": "TRANSLATE_TO_BRAND",
+        "brand_native": "A courtier's hat plume or a wax candle brushes the lens in shot 1; the gilded mirror flash is the closing transition; no thumb on the lens",
+        "originality_change": "Different intruding objects and a different cut device",
+        "cost_risk": "medium"
+      },
+      {
+        "id": "TR12",
+        "ref_evidence": "REF03 frames: 3 takes of 24-30 s (64 % of the runtime), one 6-s burst of 9 cuts, median shot 1.9 s, mean 9.2 s",
+        "mechanic": "Long moving takes with a camera that is handled inside the shot, plus one burst of micro-cuts at the reward moment",
+        "why_effective": "Hypothesis: intimacy and flow in the long takes, a jolt in the burst",
+        "decision": "TRANSLATE_TO_BRAND",
+        "brand_native": "Chain 2-3 clips with the same framing for a 16-24 s take; a 6-9 cut burst for the dinner in episode 2; ultra-wide front-camera look (~18 mm eq)",
+        "originality_change": "Own rooms, blocking, props and cut order",
+        "cost_risk": "high"
       }
     ]
   },
@@ -315,6 +338,7 @@
   "state": {
     "next_action": "Owner: say 'да' to start the pilot (frames $0.08 first, then 4 clips $0.72; planned $0.80, cap $2.4); brand approval is separate",
     "verified_completed": [
+      "REF03 Vlog 1 frame forensics from the owner mp4 (camera analysis), TR11-TR12 added",
       "competitor metadata, comments and 2 L1 watches collected",
       "owner screenshot 28.10 read: thumbnails + vidIQ panel (REF05), TR10 added",
       "pilot SPECIFIED",

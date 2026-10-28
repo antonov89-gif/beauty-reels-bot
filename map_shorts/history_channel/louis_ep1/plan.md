@@ -30,7 +30,7 @@ S02 gallery threshold: tall arched windows on one side, mirror panels on the oth
 Character lock (face reference = the approved SH01 frame): man aged ~46, dark shoulder-length curled wig, thin moustache, heavy-lidded haughty eyes, fine linen nightshirt in S01 then an embroidered coat in S02.
 
 ## Prompts (model-ready; frames Nano Banana 2.1 $0.02 each, clips Veo 3.1 fast $0.18 each)
-Frame style prefix (all): "Photorealistic vertical 9:16 vlog-style frame, handheld 24mm wide-angle lens, natural candle and window light, true-to-life fabrics, skin and wax, 17th-century French court, no text, no logos, no watermark, no modern objects."
+Frame style prefix (all): "Photorealistic vertical 9:16 vlog-style frame, handheld ultra-wide front-camera lens (about 18 mm equivalent, mild perspective distortion at close range), natural candle and window light, true-to-life fabrics, skin and wax, 17th-century French court, no text, no logos, no watermark, no modern objects."
 SH01 frame: "Medium close-up selfie-style view from the foot of a canopied state bed: a haughty man of about 46 with a short curled wig, thin moustache and heavy-lidded eyes sits propped on pillows in a fine linen nightshirt, looking straight into the lens. Bed curtains drawn back, gilded panelling, painted ceiling, blurred waiting courtiers in period dress at the edge of the room."
 SH01 motion: "Handheld, slight sway. He looks into the lens and says in a haughty, theatrical, slightly amused voice: 'Good morning, Versailles. I have not stood up. And already... the room is full.' On the last words a valet's gloved hand lifts a curled wig into the frame. Quiet room tone, a murmur, candle flicker."
 SH02 frame: "Medium shot, handheld, king in bed, a first valet holds three curled wigs on his forearm and a stand, a physician in a dark robe and a surgeon with a small case stand at the bedside, gilded state bedchamber, candle and window light."
@@ -54,3 +54,9 @@ Native Veo speech first (voice may drift between clips: if so, re-voice the 4 li
 ## Publication draft (not published; no Zernio account for this channel yet)
 Title: "A Morning with Louis XIV: 100 People Watch Him Wake Up"  [check the "100" once more before use; fallback: "A Morning with Louis XIV (AI Comedy)"]
 Description: "A comedy reconstruction of the morning ritual at Versailles around 1685, in the voice of Louis XIV. The visuals and voice are AI-generated; the dialogue is invented for comedy. Facts: the lever had a small petit lever and a larger grand lever; the doctor and surgeon were present at the start; up to about a hundred courtiers attended the grand lever (secondary sources). Sources: Wikipedia 'Levée (ceremony)'; Shannon Selin 'Watching French Kings Rise'; earlymodernfrance.org 'The Lever du Roy'. Next: dinner in public. #history #versailles #louisxiv". Platform flags: altered/synthetic content ON.
+
+## Camera update from the Vlog 1 frame check (28.10)
+- Ultra-wide front-camera look (about 18 mm eq), mild distortion at close range; low angles allowed (bed-level looking up at the king).
+- SH01 foreground intrusion: a courtier's hat plume brushes the lens for 0.3 s at the start (our "phone mistake"; not a thumb).
+- SH01 + SH02 share one framing (king in bed, same angle) so that the join of two clips can pass as one 16-s take; the gag in SH03 gets a wide vignetted view then a swing to the king's reaction; SH04 closes with the mirror flash.
+- Episode 2 (dinner in public): a 6-9 cut micro-burst of the table (whip pans) as the reward moment.
