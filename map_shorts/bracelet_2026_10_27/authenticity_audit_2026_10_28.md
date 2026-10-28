@@ -19,3 +19,6 @@ Cost: frames 20 x $0.02 = $0.40, pilot clips $2.155, 12 Seedance clips $6.05 ($0
 - FOUND (shot 3, 4.9-6.2 s, close-up): between the cut ends of the bangle there is a flat tan band that reads like a leather strap (most likely the pressed groove of the skin, but it looks like an object). A viewer can notice it. Not fixed yet: a re-generation of b03 costs $0.50 (Seedance 2.0, 4 s) and is up to the owner.
 - FOUND (shot 4, 7.2 s): her relaxed hand hangs slightly elongated; acceptable at phone size.
 - Unchanged from the first audit: shot 4 bangle slides off like a ring; shot 10 a loop of strip on the bench; pattern drift on the bangle.
+
+## Fix of shot 3 (28.10, owner: "Да делай"): re-generated b03 as clips/b03_v2.mp4 (Seedance 2.0, 4 s, $0.504, prompt: no strap, no band; first corrective attempt)
+Now a thin pink pressure groove (about 2 mm) between the cut ends instead of a wide tan band; it reads as a skin mark. Not perfect (a faint line is still visible), accepted as one corrective attempt; a second attempt ($0.50) is possible. Rebuilt: 1080x1920 @ 24 fps, 34.42 s, loudness -14.4 LUFS / TP -1.3 dBTP, 0 black frames, no drift, 12 cuts; speech check again 0 segments (VAD). Total cost of the video now about $9.1 (frames $0.40, pilot $2.155, 12 clips $6.05, fix $0.504).

@@ -10,7 +10,7 @@ FPS, WD, HT = 24, 1080, 1920
 EDL = [
     (W / "pilot/seedance_b01.mp4", 0.0, 2.4),   # 1 the cutter on the bangle (hook)
     (W / "clips/b02.mp4", 0.5, 1.8),            # 2 cutter, gold dust
-    (W / "clips/b03.mp4", 1.6, 2.0),            # 3 cut through (the gap opens after ~2 s in the clip)
+    (W / "clips/b03_v2.mp4", 1.4, 2.0),         # 3 cut through (v2: thin groove between the cut ends instead of a tan band; the gap opens after ~1.8 s)
     (W / "clips/b04.mp4", 1.4, 2.2),            # 4 pliers, bangle off (it slides off after ~3 s in the clip)
     (W / "clips/b05.mp4", 0.0, 2.0),            # 5 crucible + flux
     (W / "clips/b06.mp4", 0.0, 3.6),            # 6 torch melt

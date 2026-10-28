@@ -3,7 +3,7 @@
 |--|--|--|
 | spec | PASS | 1080x1920 @ 24.00 fps, 34.50 s |
 | audio length | PASS | audio 34.50 s vs video 34.42 s (diff 0.08) |
-| loudness | PASS | -14.4 LUFS, true peak -1.0 dBTP |
+| loudness | PASS | -14.4 LUFS, true peak -1.3 dBTP |
 | first frame | PASS | mean luma 101 (a dark frame 0 hurts the hook) |
 | last frame | PASS | mean luma 87 |
 | black frames | PASS | 0 of 275 |
