@@ -10,35 +10,39 @@ Brand: DRAFT 0.1 (map_shorts/history_channel/project.json). Channel: history POV
 - Number at the grand lever: "about a hundred" in two secondary sources (the same French teaching document may be behind both): chip says "UP TO ~100 AT THE GRAND LEVER" with the tag "secondary sources".
 - Time of day: sources give 8:00 / 8:15 / 8:30: no time on screen.
 
-## Script (VO = on-camera lines, English)
-SH01 (0-8 s) "Good morning, Versailles. I have not stood up. And already... the room is full."
-SH02 (8-16 s) "The doctor watches me wake. The surgeon watches the doctor. Nobody asks how I slept."
-SH03 (16-24 s) "Bow. Lower. Good... lower. That is a hat. Pick it up."
-SH04 (24-32 s) "Tonight, I dine in public. You may watch. Do not stare. Next time: dinner with the Sun King."
+## Character (owner 28.10): obsessed with his looks, vain, self-loving, arrogant
+Louis lives for the mirror. Mannerisms: chin tilt, a smirk at his own reflection, checks the gilded hand mirror before speaking, treats the page ("Marcel") as a lighting technician, speaks of himself in superlatives, never apologises, looks down the nose even when lying in bed. Catchphrases: "Look. Do not stare." / "Bow. Lower. Good." / "Marcel, my left side. MY left." Comedy rule: the vanity is the engine, the facts are the anchor; no mockery of illness or the body beyond what the sources say (hair loss and wigs only as a fact chip).
+Verified vanity facts usable on screen (28.10 search): he wore heels until the end of his life and is shown in them in Rigaud's 1701 state portrait; red heels were a court privilege restricted to nobles in the 1670s; hair loss from about 1655 (age ~17), wigs followed (cause not stated: do not mention); the Louvre notes the wig makes him look taller; at age 14 (1653) he danced as the sun god Apollo in the Ballet royal de la Nuit. NOT used: "1,000 wigs", "48 wigmakers", syphilis, any exact wig count.
+
+## Script (on-camera lines, English; about 20 words per 8-s clip)
+SH01 (0-8 s) "Good morning, Versailles. Marcel, my left side. No. MY left. The room is already full. They came to look."
+SH02 (8-16 s) "The doctor is here. The surgeon is here. Three wigs, and I am still the best-looking thing in the room."
+SH03 (16-24 s) "Bow. Lower. Good... lower. Eyes on me, not the hat."
+SH04 (24-32 s) "Tonight, I dine in public. Look as much as you like. Do not stare. Next time: dinner with the Sun King."
 
 ## Overlay (our graphics, not AI text)
 - Corner mark all 32 s: "AI-GENERATED" (small, high contrast, top-left under the safe zone).
-- SH01: title card "VERSAILLES, c. 1685" (serif, cream, gold year).
+- SH01: title card "VERSAILLES, c. 1685".
 - SH02: chip "DOCTOR + SURGEON ARE IN THE ROOM BEFORE HE GETS UP" [2 sources].
 - SH03: chip "UP TO ~100 COURTIERS AT THE GRAND LEVER" [secondary sources].
-- SH04: chip "NEXT: DINNER, IN PUBLIC".
+- SH04: chip "RED HEELS: A COURT PRIVILEGE, 1670s" then "NEXT: DINNER, IN PUBLIC".
 - Captions: cream, 1-3 word pop-ins, gold on the key word, lower third; no white-on-black.
 
 ## Scene locks
 S01 state bedchamber: gilded panelling, painted ceiling, canopied bed with the curtains drawn back, tall windows (cool fill) + wax candles (warm key); period dress only; camera = the page standing at the foot of the bed, king screen-left, doors screen-right.
 S02 gallery threshold: tall arched windows on one side, mirror panels on the other, daylight, polished parquet; the king walks ahead of the camera.
-Character lock (face reference = the approved SH01 frame): man aged ~46, dark shoulder-length curled wig, thin moustache, heavy-lidded haughty eyes, fine linen nightshirt in S01 then an embroidered coat in S02.
+Character lock (haughty heavy-lidded eyes, a permanent faint smirk, chin lifted; face reference = the approved SH01 frame): man aged ~46, dark shoulder-length curled wig, thin moustache, heavy-lidded haughty eyes, fine linen nightshirt in S01 then an embroidered coat in S02.
 
 ## Prompts (model-ready; frames Nano Banana 2.1 $0.02 each, clips Veo 3.1 fast $0.18 each)
 Frame style prefix (all): "Photorealistic vertical 9:16 vlog-style frame, handheld ultra-wide front-camera lens (about 18 mm equivalent, mild perspective distortion at close range), natural candle and window light, true-to-life fabrics, skin and wax, 17th-century French court, no text, no logos, no watermark, no modern objects."
 SH01 frame: "Medium close-up selfie-style view from the foot of a canopied state bed: a haughty man of about 46 with a short curled wig, thin moustache and heavy-lidded eyes sits propped on pillows in a fine linen nightshirt, looking straight into the lens. Bed curtains drawn back, gilded panelling, painted ceiling, blurred waiting courtiers in period dress at the edge of the room."
-SH01 motion: "Handheld, slight sway. He looks into the lens and says in a haughty, theatrical, slightly amused voice: 'Good morning, Versailles. I have not stood up. And already... the room is full.' On the last words a valet's gloved hand lifts a curled wig into the frame. Quiet room tone, a murmur, candle flicker."
+SH01 motion: "Handheld, slight sway. A plume brushes the lens for a moment. The king admires himself in a gilded hand mirror, tilts his chin, then looks into the lens with a smirk and says in a haughty, theatrical voice: 'Good morning, Versailles. Marcel, my left side. No. MY left. The room is already full. They came to look.' Quiet room tone, murmur, candle flicker."
 SH02 frame: "Medium shot, handheld, king in bed, a first valet holds three curled wigs on his forearm and a stand, a physician in a dark robe and a surgeon with a small case stand at the bedside, gilded state bedchamber, candle and window light."
-SH02 motion: "Handheld pan from the valet to the bedside. The king, deadpan, says: 'The doctor watches me wake. The surgeon watches the doctor. Nobody asks how I slept.' He lazily points at the middle wig. Fabric rustle, whispers."
+SH02 motion: "Handheld pan from the valet to the bedside. The king, deadpan and self-satisfied, glances at the three wigs and says: 'The doctor is here. The surgeon is here. Three wigs, and I am still the best-looking thing in the room.' He points lazily at the tallest wig. Fabric rustle, whispers."
 SH03 frame: "Medium wide handheld, king in the foreground in bed or sitting up, tall double doors open behind him and richly dressed courtiers in period court dress filing in and bowing in a line."
-SH03 motion: "The courtiers bow in turn. The king, unimpressed: 'Bow. Lower. Good... lower.' One courtier bows too low and his plumed hat tumbles to the floor. The king: 'That is a hat. Pick it up.' At the end a gilded hand mirror swings up into frame and flashes over the lens. Door latches, boots on parquet."
+SH03 motion: "The courtiers bow in turn. The king, unimpressed, chin raised: 'Bow. Lower. Good... lower. Eyes on me, not the hat.' One courtier bows too low and his plumed hat tumbles to the floor; wide vignetted view, then a swing back to the king's smug face. A gilded hand mirror swings up and flashes over the lens. Door latches, boots on parquet."
 SH04 frame: "Handheld view from ahead of the king as he walks along a gallery threshold: arched windows on the left, tall mirror panels on the right, polished parquet, daylight; the king in an embroidered coat and full curled wig faces the lens, a few courtiers trailing."
-SH04 motion: "Camera steps backwards, the king strides toward it and says with a raised eyebrow: 'Tonight, I dine in public. You may watch. Do not stare. Next time: dinner with the Sun King.' He turns away. Footsteps, a short harpsichord sting, hard cut."
+SH04 motion: "Low angle first: his red-heeled shoes click on the polished parquet. Camera steps backwards as the king strides toward it, glances at his reflection in a mirror panel, straightens a curl and says with a raised eyebrow: 'Tonight, I dine in public. Look as much as you like. Do not stare. Next time: dinner with the Sun King.' He turns away. Footsteps, a short harpsichord sting, hard cut."
 Negative (all): "no modern clothing, no metal roofs, no phones, no glasses, no extra fingers, no text overlays, no crosses held in odd ways, no watermark."
 
 ## Sound

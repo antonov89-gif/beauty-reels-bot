@@ -78,7 +78,7 @@
         "AI mark in a corner on every frame",
         "gilded hand mirror as the character's transition prop"
       ],
-      "voice": "UNOBSERVED, creative direction: dry, theatrical, character-led comedy with checked facts; own music and foley only"
+      "voice": "Character-led comedy, checked facts; Louis XIV is obsessed with his looks: vain, self-loving, arrogant, mirror-checking (owner 28.10); own music and foley only"
     },
     "cinema": {
       "realism": "Proposed: photoreal AI period reconstruction, disclosed as AI",
@@ -281,7 +281,7 @@
       "purpose": "hook: character and attitude",
       "shot_size": "medium close-up",
       "camera": "handheld page POV, slight sway, arm in frame",
-      "subject_action": "king propped in bed: 'Good morning, Versailles. I have not stood up. And already the room is full.'",
+      "subject_action": "king admires himself in a gilded hand mirror, then to the lens: 'Good morning, Versailles. Marcel, my left side. No. MY left. The room is already full. They came to look.'",
       "transition": "cut on the wig being lifted into frame",
       "transfer_id": "TR01"
     },
@@ -291,7 +291,7 @@
       "purpose": "fact 1: doctor and surgeon enter first",
       "shot_size": "medium",
       "camera": "handheld pan to the bedside",
-      "subject_action": "first valet shows three wigs; doctor and surgeon at the bed",
+      "subject_action": "valet shows three wigs, doctor and surgeon at the bed: 'The doctor is here. The surgeon is here. Three wigs, and I am still the best-looking thing in the room.'",
       "transition": "cut on door opening",
       "transfer_id": "TR04"
     },
@@ -301,17 +301,17 @@
       "purpose": "physical gag: the court enters by rank",
       "shot_size": "medium wide",
       "camera": "handheld, king foreground, doors background",
-      "subject_action": "courtiers bow; one bows too low and drops his hat; 'Bow. Lower. Good... lower. That is a hat.'",
+      "subject_action": "courtiers bow; one bows too low and drops his hat: 'Bow. Lower. Good... lower. Eyes on me, not the hat.'",
       "transition": "gilded hand mirror flashes over the lens",
       "transfer_id": "TR06"
     },
     "SH04": {
       "scene_id": "S02",
       "duration_s": 8,
-      "purpose": "payoff and series chain",
+      "purpose": "payoff: vanity beat and series chain",
       "shot_size": "wide to medium close-up",
       "camera": "step back from the window, Hall of Mirrors visible",
-      "subject_action": "king in court dress strides along the gallery threshold: 'Tonight, I dine in public. You may watch. Do not stare. Next time: dinner with the Sun King.'",
+      "subject_action": "red-heeled shoes on parquet, then the king checks his reflection in a mirror panel: 'Tonight, I dine in public. Look as much as you like. Do not stare. Next time: dinner with the Sun King.'",
       "transition": "hard cut to black on a harpsichord sting",
       "transfer_id": "TR05"
     }
@@ -339,6 +339,7 @@
     "next_action": "Owner: say 'да' to start the pilot (frames $0.08 first, then 4 clips $0.72; planned $0.80, cap $2.4); brand approval is separate",
     "verified_completed": [
       "REF03 Vlog 1 frame forensics from the owner mp4 (camera analysis), TR11-TR12 added",
+      "character set by owner 28.10: vain, self-loving, arrogant, obsessed with his looks; script and prompts rewritten; vanity facts checked (heels, hair loss 1655, 1653 Apollo, Rigaud 1701)",
       "competitor metadata, comments and 2 L1 watches collected",
       "owner screenshot 28.10 read: thumbnails + vidIQ panel (REF05), TR10 added",
       "pilot SPECIFIED",
