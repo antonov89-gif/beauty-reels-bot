@@ -10,7 +10,7 @@ FPS, WD, HT = 24, 1080, 1920
 EDL = [
     (W / "pilot/seedance_b01.mp4", 0.0, 2.4),   # 1 the cutter on the bangle (hook)
     (W / "clips/b02.mp4", 0.5, 1.8),            # 2 cutter, gold dust
-    (W / "clips/b03_k.mp4", 1.1, 2.0),          # 3 cut through (Kling 4.0, wider shot, bare skin in the gap; Seedance v1/v2 showed a stripe)
+    (W / "clips/b03n_k.mp4", 1.0, 2.0),         # 3 cut through (Kling 4.0, new start frame b03n: ONE arm of hers only, bare skin in the gap)
     (W / "clips/b04_k.mp4", 1.0, 2.2),          # 4 pliers, open bangle lifted off (Kling 4.0; ends before the pressure groove on the wrist shows at ~3.1 s)
     (W / "clips/b05.mp4", 0.0, 2.0),            # 5 crucible + flux
     (W / "clips/b06.mp4", 0.0, 3.6),            # 6 torch melt
