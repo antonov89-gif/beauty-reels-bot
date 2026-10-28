@@ -525,3 +525,14 @@ Reworked the AI cinema clip closer to the reference's structure (selfie framing 
 - Published: "Iraq Sells Oil Through a 58 km Door" (YouTube mGq45TanV5c, TikTok 7701304822636530957): real Esri-free map layout restyled to a 3D look + Veo clips + own graphics. Cost ~$2.2 (11 frames, 9 clips) + ~2 RUB voice. Authenticity audit FIXED (see iraq_door_2026_10_27/).
 - Also made, not published: Stonehenge AI reconstruction (stonehenge_2026_10_27), 3 engine loops (loops_2026_10_27: engine-only, owner judged them weaker).
 - YPP progress: not measured today; subscribers/views check at 48 h. Next in the series: Croatia and Neum, Bolivia, Slovenia (topics in ref_globecurio_congo_2026_10_27).
+
+### 28.10 Checkpoint 5 (late run of "Views check 5: E1 test batch", fired 27.10 14:00 UTC, read 28.10 ~19:00 UTC; vidIQ user_videos, 5 credits)
+FACT (views NOW, not 24 h / 72 h; the 24 h / 72 h snapshots were not taken at the time, so the intended metric is NOT available):
+- Control batch 21-24.10 (6 Shorts): Pheasant 1,206; Baarle 758; Bolivia 526; Egypt 1,571; Chile 330; Time zones 1,465. Median 982.
+- E1 test batch 25-26.10 (+ France-Brazil, which only went out 28.10 11:00 UTC, <1 day old): Point Roberts 995; Peñón 1,293; South Africa 1,302; France-Brazil 1,076. Median of all four 1,185; of the three with 2-3 days of age 1,293.
+- Other recent: Australia vs Greenland 2,258 (3 days), Turkey myth hook 2,183 (3 days; the best two this week), NW Angle 544 (28.10), Bir Tawil 1,391 (27.10), Iraq premium AI Short 1,412 at ~25 h, Llívia 13 (dead), AI lifeboat dilemma 58 (no push), Time zones 1,465.
+- Likes stay at 0.7-1.2 % of views, comments 0-5. Likes on the Iraq Short 19 of 1,412 (1.3 %).
+HYPOTHESIS (not proven): E1 (>= 10 events per 10 s) gives a +20-30 % higher median than the control (1,185-1,293 vs 982), but the groups differ in topic (border topics vs mixed), age of the video (2-3 days vs 4-7 days) and publishing hour; n = 4 vs 6. Not supported, not refuted. The two best Shorts of the week are the two LONGER ones with a myth or paradox hook (Turkey 1:10, Australia 1:03), which points to the hook and topic rather than density.
+Against the baseline median 1,245 nothing is near 3x; the premium Iraq Short (the first with the full premium pipeline) is at 1.13x of the median after 25 h. The 48 h check of the Iraq Short is scheduled for 29.10 12:00 UTC. The formula v1 in views_playbook_2026_10_27.md stays a HYPOTHESIS.
+Not done: vidIQ retention (relative retention) for this batch was not pulled (credits), NOT VERIFIED.
+Decision for the next batch: keep E1 as a default style (no harm), do not claim an uplift; test the hook/topic variable (myth or paradox in the title) with 3 more Shorts; take 24 h and 72 h snapshots on the day.
