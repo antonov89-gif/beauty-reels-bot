@@ -279,48 +279,56 @@
       "weather": "soft daylight",
       "shot_axis": "camera ahead of the king, walking backwards; king facing the lens",
       "sound_bed": "footsteps on parquet, murmur, distant door, own harpsichord sting"
+    },
+    "S03": {
+      "setting": "wig table beside the canopied bed: three wigs on wooden stands, powder puff, hand mirror, candle and window light",
+      "wardrobe": "king in gold silk dressing gown over a lace nightshirt, dark curled wig then white-grey wig as a gag",
+      "light": "window and candle, no modern light",
+      "weather": "n/a",
+      "shot_axis": "camera at table height, king in profile at the top of the frame, valet hand entering lower right",
+      "sound_bed": "wig stand creak, powder puff, small cough, murmur"
     }
   },
   "shots": {
     "SH01": {
       "scene_id": "S01",
       "duration_s": 8,
-      "purpose": "hook: character and attitude",
+      "purpose": "C01 hook: tilt down from the ceiling, plume brushes the lens, character and attitude",
       "shot_size": "medium close-up",
-      "camera": "handheld page POV, slight sway, arm in frame",
-      "subject_action": "king admires himself in a gilded hand mirror, then to the lens: 'Good morning, Versailles. Marcel, my left side. No. MY left. The room is already full. They came to look.'",
-      "transition": "cut on the wig being lifted into frame",
-      "transfer_id": "TR01"
+      "camera": "phone POV starting on the painted ceiling, tilt down, plume brush, slight wobble, ultra-wide",
+      "subject_action": "'Marcel. The ceiling is lovely. I am lower. DOWN. Good morning, Versailles.'",
+      "transition": "continuous (same take)",
+      "transfer_id": "TR11"
     },
     "SH02": {
       "scene_id": "S01",
       "duration_s": 8,
-      "purpose": "fact 1: doctor and surgeon enter first",
+      "purpose": "C02 premise: the lever as a premiere",
       "shot_size": "medium",
-      "camera": "handheld pan to the bedside",
-      "subject_action": "valet shows three wigs, doctor and surgeon at the bed: 'The doctor is here. The surgeon is here. Three wigs, and I am still the best-looking thing in the room.'",
-      "transition": "cut on door opening",
-      "transfer_id": "TR04"
+      "camera": "static propped, eye level, head upper-left third",
+      "subject_action": "'Every morning, a hundred people watch me wake up. The French call it the lever. I call it a premiere.'",
+      "transition": "continuous (same take)",
+      "transfer_id": "TR12"
     },
     "SH03": {
       "scene_id": "S01",
       "duration_s": 8,
-      "purpose": "physical gag: the court enters by rank",
-      "shot_size": "medium wide",
-      "camera": "handheld, king foreground, doors background",
-      "subject_action": "courtiers bow; one bows too low and drops his hat: 'Bow. Lower. Good... lower. Eyes on me, not the hat.'",
-      "transition": "gilded hand mirror flashes over the lens",
-      "transfer_id": "TR06"
+      "purpose": "C03 fact: doctor and surgeon present, vanity beat",
+      "shot_size": "medium",
+      "camera": "static propped, slow imperceptible drift",
+      "subject_action": "'The doctor is here. The surgeon is here. Nobody is here to look at the doctor. Look at me.'",
+      "transition": "hard cut to the wig table",
+      "transfer_id": "TR04"
     },
     "SH04": {
-      "scene_id": "S02",
+      "scene_id": "S03",
       "duration_s": 8,
-      "purpose": "payoff: vanity beat and series chain",
-      "shot_size": "wide to medium close-up",
-      "camera": "step back from the window, Hall of Mirrors visible",
-      "subject_action": "red-heeled shoes on parquet, then the king checks his reflection in a mirror panel: 'Tonight, I dine in public. Look as much as you like. Do not stare. Next time: dinner with the Sun King.'",
-      "transition": "hard cut to black on a harpsichord sting",
-      "transfer_id": "TR05"
+      "purpose": "C04 wig take begins: hair loss fact",
+      "shot_size": "close",
+      "camera": "table height, rolled ~20 degrees, close, valet finger enters lower right",
+      "subject_action": "'Now. The wig. At seventeen my hair started leaving. I took it personally. So I took a wig.'",
+      "transition": "continuous into C05",
+      "transfer_id": "TR12"
     }
   },
   "pilot": {
@@ -343,13 +351,14 @@
     "approval_evidence": null
   },
   "state": {
-    "next_action": "Owner: approve or correct card v2; then re-write the ep.1 plan for the scarlet-and-gold look (done in plan.md), 4 shot frames SH01-SH04 ($0.08) and 4 Veo clips ($0.72) on 'да'",
+    "next_action": "Owner: approve card v2 and the full script (wig and voice decisions); then pilot C01-C04: 4 frames $0.08 + 4 clips $0.72 on 'да'",
     "verified_completed": [
       "REF03 Vlog 1 frame forensics from the owner mp4 (camera analysis), TR11-TR12 added",
       "character card for Louis XIV generated (5 images, $0.10) and inspected; awaiting owner approval",
       "character card v2 (hype, extravagant, documentary look) generated and inspected, $0.08 more",
       "character set by owner 28.10: vain, self-loving, arrogant, obsessed with his looks; script and prompts rewritten; vanity facts checked (heels, hair loss 1655, 1653 Apollo, Rigaud 1701)",
       "competitor metadata, comments and 2 L1 watches collected",
+      "full ep.1 script (2:00, 15 clips) in Elizabeth's camera grammar: louis_ep1/script_full.md; pilot re-cut to C01-C04",
       "owner screenshot 28.10 read: thumbnails + vidIQ panel (REF05), TR10 added",
       "pilot SPECIFIED",
       "production plan with prompts: map_shorts/history_channel/louis_ep1/plan.md",

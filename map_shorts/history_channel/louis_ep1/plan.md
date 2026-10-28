@@ -1,3 +1,5 @@
+> SUPERSEDED for script and shots by script_full.md (28.10): full 2:00 episode, pilot = C01-C04. The fact table, overlay rules, gates and publication draft below still apply.
+
 # Louis XIV, ep. 1 "My Morning" (Short, 32 s, 9:16) — production plan
 STATE: PILOT_SPEC locked, facts checked twice. Nothing generated. Cost approval: NOT given (needs "да").
 Brand: DRAFT 0.1 (map_shorts/history_channel/project.json). Channel: history POV channel, not Mr. Buck.

@@ -1,0 +1,61 @@
+# Louis XIV, ep. 1 "My Morning": full scene script (about 2:00, Short), 28.10.2026
+Format and camera grammar from the frame check of Elizabeth's Vlog 1 (frames_vlog1_LjfGP7wpjVs.md): three long takes with a hand-held phone camera that moves inside the shot, one burst of micro-cuts at the reward moment, a gag beat with a wide vignetted view, a lens-cover cut at the end. Our own character, set, lines and graphics.
+Look: card v2 (louis_card/louis_xiv_character_card_v2.png, face reference A2_face.jpg): raw documentary-vlog frames, phone front camera, ultra-wide (~16-18 mm eq), window and candle light, pores and powder. Wig: DARK wig worn all episode; the white-grey wig appears only as a gag (C06). Change that one line if the owner picks the white wig as the main.
+Audio: native Veo speech first (voice may drift: then one TTS voice for all lines), own harpsichord sting, room tone, foley. AI mark in the corner all the time.
+Fact tags: [2S] two sources checked 28.10; [1S] one source or secondary, hedge; [C] comedy, not a claim.
+
+## Structure (clip = 8 s, Veo 3.1 fast; the take = clips chained with the same framing so the seam is hidden)
+| Take | Time | Clips | Camera idea (from Elizabeth) | Place |
+|--|--|--|--|--|
+| 1 | 0-24 s | C01-C03 | tilt down from the ceiling, plume brushes the lens (phone mistake), then static propped medium | state bedchamber |
+| 2 | 24-48 s | C04-C06 | table-height, very close, rolled (dutch), slow sway, foreground hand + wig in the lens | wig table by the bed |
+| 3 | 48-80 s | C07-C10 | very low angle from the floor, hand sweeps in, slow push to an extreme face close-up, wide vignetted view for the gag, rack focus on the heels | bedchamber, doors open |
+| burst | 80-88 s | C11 | 8 macro stills in 8 s, whip pans, swoosh and click foley | dressing |
+| 4 | 88-104 s | C12-C13 | walking selfie, backward walk, then a halt at a mirror | Hall of Mirrors |
+| end | 104-120 s | C14-C15 | static propped eye-level medium, glance off camera, gilded mirror flash over the lens | gallery threshold |
+
+## Scenes
+### TAKE 1 (0-24 s), state bedchamber, canopied bed, morning light
+C01 (0-8) CAMERA: opens on the painted ceiling (phone pointed up), a hat plume brushes the lens, tilt down to the king's face in the bed, a small wobble. ACTION: he looks into the lens, tilts his chin, a smirk. LINE: "Marcel. The ceiling is lovely. I am lower. DOWN. ... Good morning, Versailles." CHIP: title card "VERSAILLES, c. 1685".
+C02 (8-16) CAMERA: static propped medium (same framing as the end of C01), eye level to slightly low, head upper-left third, bed curtains behind. ACTION: he adjusts a curl with a ringed hand, glances at his hand mirror. LINE: "Every morning, a hundred people watch me wake up. The French call it the lever. I call it a premiere." CHIP: "THE LEVER: UP TO ~100 AT THE GRAND LEVER" [1S, secondary].
+C03 (16-24) CAMERA: same framing, slow imperceptible drift. ACTION: the doctor and surgeon stand at the bedside, he ignores them and looks at himself in the mirror. LINE: "The doctor is here. The surgeon is here. Nobody is here to look at the doctor. Look at me." CHIP: "DOCTOR + SURGEON IN THE ROOM BEFORE HE GETS UP" [2S].
+SOUND: murmur, candles, fabric, a distant door; no music.
+
+### TAKE 2 (24-48 s), the wig table (hard cut at 24 s)
+C04 (24-32) CAMERA: table height, rolled ~20 degrees, very close, the king's face in profile at the top, wigs on stands and a powder puff in the lower frame, a pink valet finger enters the lower right. ACTION: he lifts the dark wig to the lens. LINE: "Now. The wig. At seventeen my hair started leaving. I took it personally. So I took a wig." CHIP: "HAIR LOSS FROM ~1655 (AGE ~17) → WIGS" [2S].
+C05 (32-40) CAMERA: slow tilt up from the table to his face, wide-angle distortion on the nose. ACTION: he strokes the tall wig. LINE: "It makes me taller. The Louvre says so. I did not ask." CHIP: "THE WIG MAKES HIM LOOK TALLER (LOUVRE)" [1S].
+C06 (40-48) CAMERA: he thrusts the white-grey wig toward the lens (the wig fills the frame, like the jar in Elizabeth's take), rack focus from wig to face. ACTION: he considers it, sniffs, hands it back. LINE: "And this one. White. Grey. Powdered. Hm. Too early. In twenty years everyone will want it. Not yet." [C]
+SOUND: wig stand creak, powder puff, a small cough.
+
+### TAKE 3 (48-80 s), the court enters (hard cut at 48 s)
+C07 (48-56) CAMERA: the camera is on the floor looking up at the king standing in his dressing gown, chandelier and ceiling behind, doors opening at the back; a hand sweeps in from the top (the page re-aims the phone). ACTION: the court floods in and bows. LINE: "Bow. Lower. Good." CHIP: "THE COURT ENTERS BY RANK" [2S].
+C08 (56-64) CAMERA: slow push toward an extreme close-up of the king's face while the bows go on behind him. ACTION: the king mouths along with their bowing, bored. LINE: "Look at that. A hundred people and only one of them is worth looking at."
+C09 (64-72) CAMERA: wide vignetted view from low (peephole look): a courtier bows too low, his plumed hat falls and rolls; swing back to the king's smug face. LINE: "Lower... that is a hat. Eyes on me, not the hat."
+C10 (72-80) CAMERA: foreground foot with a red heel and the buckle in focus, rack focus up to the king's face. ACTION: he turns his foot to show it. LINE: "Red heels. A privilege of nobles. Only the ones I like." CHIP: "RED HEELS: A COURT PRIVILEGE, 1670s" [2S].
+SOUND: door latches, boots on parquet, plume brush, a small laugh from the court.
+
+### BURST (80-88 s), dressing montage = 8 macro stills (about 1 s each), whip pans and motion blur
+1 red heel and buckle  2 ring-covered hand  3 powder puff  4 gilded hand mirror  5 sun brooch  6 lace cravat knot  7 wig comb  8 gold embroidered cuff. No dialogue; swoosh + click per cut; harpsichord rhythm in. Chip at the end: "~10 MINUTES OF GLORY, EVERY DAY" is NOT used (no source). Optional chip: "AT 14 HE DANCED THE SUN GOD APOLLO (1653)" [2S] over frame 5.
+
+### TAKE 4 (88-104 s), Hall of Mirrors (cut)
+C12 (88-96) CAMERA: backward walk, the king strides toward the lens, mirrors and chandeliers left, arched windows right, courtiers trailing. LINE: "Venice sold mirrors. So France made its own. Three hundred and fifty-seven. I am in all of them." CHIP: "357 MIRRORS · 1678-1684" [2S].
+C13 (96-104) CAMERA: handheld halt, the king stops in front of a mirror panel (we see his back and the lens-side face), a courtier tries to pass. LINE: "Do not stand behind me. You ruin the reflection."
+
+### END (104-120 s), gallery threshold, propped eye-level medium, static
+C14 (104-112) ACTION: he straightens a curl, glances at the page. LINE: "Tonight, I dine in public. You may watch. Do not stare." [2S rule: onlookers were not allowed to stare] CHIP: "NEXT: DINNER, IN PUBLIC".
+C15 (112-120) ACTION: sideways glance off camera at 112 s. LINE: "Marcel. Did you get my good side? ... The sun is never late." The gilded mirror swings up over the lens (flash) = cut to black.
+SOUND: a short harpsichord sting.
+
+## Captions and graphics
+Cream captions with a gold key word, 1-3 words, lower third, about 78 % of the frame height, 3.5 % of the height, words building up (Elizabeth's grammar, our colours). Chips in the top third (serif, coin/sun icon, source tag). AI mark top-left. No text generated by the model.
+
+## Production
+- Pilot = C01-C04 (32 s, one take + the first clip of take 2). Cost: 4 frames $0.08 + 4 clips $0.72 = $0.80, cap $2.4.
+- Full episode: 14 Veo 3.1 fast clips (C01-C10, C12-C15) = 14 x $0.18 = $2.52, 14 start frames = $0.28, 8 burst stills = $0.16. Raw $2.96, planned with rerolls about $7, cap $9. Stop and ask beyond the cap.
+- Chained takes: each next clip starts from the last frame of the previous one (same framing, hidden seam); check hands (count, arms), the face against A2_face.jpg, no modern items, the hat physics, the heel colour.
+- Gates before delivery: contact sheet per clip, mouth/voice consistency, premium_gate.py, authenticity-check audit (fiction with real history), then the owner approves.
+
+## Open decisions
+1. Wig: dark all the way with the white-grey gag (this script) or white as the main.
+2. Voice: Veo native or one TTS voice for all lines.
+3. Brand name, avatar and banner (still DRAFT).
