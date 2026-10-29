@@ -46,3 +46,4 @@
 - 29.10, C05 on Veo 3.1 quality: 2 takes x 1.00 (1 blocked by the filter, no charge shown). Confirmed total now about $36.4.
 - 29.10, C05 redo Seedance 2.5 i2v direct 1080p 4.336 (first frame not kept: join jump). Confirmed total now about $40.7.
 - 29.10, C06 draft 0.882. Confirmed total now about $41.6.
+- 29.10, C06 1080p final 4.877. Confirmed total now about $46.5.

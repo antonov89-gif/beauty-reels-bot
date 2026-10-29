@@ -246,3 +246,7 @@ Owner 29.10: "Нормально дальше" -> C05 = the jump-cut variant (fr
 | Lips | offset 0.10-0.20 s, 0.30 s on "One day" (soft) |
 | Face / wig / gown | face and brown wig match; the shirt front reads more ruffled than in C04 (lace already in C05): soft |
 Status: GENERATED + INSPECTED (draft). 1080p final about $4.88 = separate yes.
+
+## C06 FINAL 1080p (owner "Да"; usage.cost 4.87746, task 05e42d44): frames/C06_final.mp4, preview C05+C06 frames/C06_final_with_prev.mp4 (not committed)
+Checks: 1080x1920, 24 fps, 9.00 s, 0 duplicate frames; join C05 -> C06 frame diff 2.2 vs neighbours 0.2-1.4; reference-manner gates PASS (pick-up of the phone, hand-held sway, the white wig covers the lens at 3.5 s, lively motion); lips 0.10-0.21 s, 0.30 s on "One day" (soft, same as the draft); every word by ASR; -15.6 LUFS, TP -1.9; face/brown wig consistent (full-res crop); our voice only, no music, no subtitles.
+Status: GENERATED + INSPECTED, awaiting the owner's approval.
