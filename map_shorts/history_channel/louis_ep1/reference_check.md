@@ -265,3 +265,6 @@ Face check (crops at measured positions, frames/first_frames_v4_faces.jpg): C12,
 
 ## First frames v5 (owner "Да"; wig = the tall powdered wig of the old C09, owner "На с09"; 7 x 0.04 = 0.28, gen_frames_v5.py): frames/C07 C09 C10 C12 C13 C14 C15 _v5.jpg; sheets frames/first_frames_v5.jpg, frames/first_frames_v5_faces.jpg
 Wig: matches the C09 reference on all 7 (high wavy crown, side rolls, long curls to the chest). Face (crops at measured positions vs the master): same features on all 7 (narrow face, long straight nose, upturned waxed moustache, light eyes, beauty spot by the mouth); reads about 5 years older than the laughing master; a light pink flush on the cheeks in C09, C12, C13 despite "no rouge" (soft); C10 face small and a little broader (soft). NOT APPROVED by the owner yet; no video ordered.
+
+## First frames v6, close hand-held selfies (owner 29.10 "делай как референс: камера близко к лицу и ходит в руке"; "Да"): C09_v6, C10_v6 (2 x 0.04); C07 refused at submit by the content filter (no charge), prompt reworded, resubmit needs a separate yes.
+C09: close selfie, face and wig large, courtiers bowing behind, the plumed hat on the floor; C10: close face, the red heel and buckle in the foreground. Face matches the master, wig = C09 style. NOT APPROVED yet.
