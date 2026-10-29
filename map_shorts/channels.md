@@ -21,7 +21,7 @@ Rule (CLAUDE.md): references are routed by niche; styles are never mixed; say th
 
 ## 2b. History POV channel (other channel; NOT Mr. Buck; account not connected yet; brand DRAFT)
 - Project: map_shorts/history_channel/project.json (channel-style-dna). First series: Louis XIV vlog (character card v2, white-grey wig main, documentary-vlog look, camera grammar from the Elizabeth reference).
-- **Voice rule (owner, 28.10.2026): ONE voice on all videos of this channel; nasty (smarmy), arrogant, haughty.** So the voice is TTS (one fixed ElevenLabs v3 voice_id + settings, saved in map_shorts/history_channel/voice/voice_lock.json once the owner picks it), not the generator's native speech (it drifts between clips). The clips' own speech is muted; ambience and foley stay.
+- **Voice rule (owner, 28.10.2026): ONE voice on all videos of this channel; nasty (smarmy), arrogant, haughty.** So the voice is TTS (one fixed ElevenLabs v3 voice_id + settings, LOCKED 29.10 in map_shorts/history_channel/voice/voice_lock.json: ElevenLabs v3 'The Young Heir'), not the generator's native speech (it drifts between clips). The clips' own speech is muted; ambience and foley stay.
 - Facts allowed for real monarchs (owner exception, 28.10): dead 150+ years, two sources, comedy framed, AI disclosed.
 
 ## 3. Routing log

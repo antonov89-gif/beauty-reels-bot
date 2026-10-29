@@ -1,0 +1,15 @@
+{
+  "channel": "history POV channel (Louis XIV series)",
+  "locked": "2026-10-29",
+  "approved_by": "owner (audition 28.10: voice 7 'The Young Heir', 'вроде нормально')",
+  "provider": "ElevenLabs v3 via Lumean (pay-as-you-go)",
+  "voice_name": "The Young Heir (ElevenLabs voice library, aristocrat page)",
+  "voice_id": "AqRCwHAjbeFmvSwJvHll",
+  "public_owner_id": "779d91788b0d9e364d32e0a0e4273ec722b92887fa710d82f50b2d034a9fb97b",
+  "model_id": "eleven_v3",
+  "language_code": "en",
+  "voice_settings": {"stability": 0.5, "similarity_boost": 0.75, "style": 0.5, "use_speaker_boost": true, "speed": 0.95},
+  "tags_used": ["[smug]", "[haughty]", "[admiringly]", "[sneering]", "[arrogant]"],
+  "note": "ONE voice on every video of this channel. It is a designed (AI) voice: AI voice is disclosed in the description and platform flags. Owner still wants a natural human voice later if a performer is found; then this lock is replaced by a new version, never edited silently.",
+  "reference_sample": "map_shorts/history_channel/voice/heir_sample.mp3 (first 12 s of the approved audition, used as the voice reference for Kling `voices`)"
+}
