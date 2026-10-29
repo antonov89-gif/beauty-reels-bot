@@ -20,6 +20,9 @@ def dur(p): return float(subprocess.run(["ffprobe", "-v", "error", "-show_entrie
 
 subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", P2, "-vn", "-ac", "1", "-ar", "16000", SC + "p2v4.wav"], check=True)
 mv = words(SC + "p2v4.wav"); ov = words(OURS)
+if mv and mv[0][1] < 0.05:                                          # Whisper pins the first word to 0.0: use the energy onset of the model's speech
+    a = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-i", SC + "p2v4.wav", "-f", "f32le", "-"], capture_output=True, check=True).stdout, dtype=np.float32); e = np.array([np.sqrt((a[i:i + 160] ** 2).mean()) for i in range(0, len(a) - 160, 160)])
+    on = float(np.argmax(e > e.max() * 0.1)) * 0.01; mv[0] = (mv[0][0], on, max(on + 0.2, mv[0][2])); print("first-word onset by energy", on)
 print("model:", [(w, round(a, 2)) for w, a, _ in mv]); print("ours:", [w for w, _, _ in ov])
 assert len(mv) == len(ov) - 3, "model words do not match the line: check by ear before aligning"
 raw = subprocess.run(["ffmpeg", "-v", "error", "-i", OURS, "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout

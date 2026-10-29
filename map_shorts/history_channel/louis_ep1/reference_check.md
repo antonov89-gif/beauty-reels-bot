@@ -130,3 +130,18 @@ OPEN (not done, needs the owner or later steps):
 Method (build_c01_v3.py, 0 cost): hand-held opening cut at Kling 2.3 s (opening 4.0 s), our "Oops, the ceiling." placed at 0.45 s over the ceiling; part 2 = the Seedance 1080p final from 2.6 s (skips the model's own "Oops"), xfade 0.15 s; the other phrases aligned to the model's lips (residual max 0.19 s). 10.25 s.
 Check: "Oops" now over the ceiling = PASS. Join at about 3.9 s = FAIL: frame diffs 7.7-8.5 against the clip median 2.3, a dissolve ghost and a jump in expression (smirk -> mid-sentence) on frames 3.70/3.84/3.92/4.05 s. That breaks the owner's no-splice rule, so v3 is REJECTED and not shown.
 Clean fix (needs the owner's "да"): new Seedance 2.5 Draft image-only part 2 from the exact last frame of the 4.0 s opening, speech only "There. Welcome to Versailles. Yes, I'm that handsome. Try not to faint.", 7 s: draft about $0.69 + 1080p final about $3.79 = about $4.5.
+
+## C01 v4 DRAFT (owner "да" 29.10, about $4.5 total; draft usage.cost 0.686, task 8c3f3d4f): part 2 from the landed frame
+seedance25_part2_v4.py: image-only Seedance 2.5 Draft 480p, 7 s, first frame = frame 95 of C01_open_handheld.mp4 (camera landed at 3.7 s), speech "There. Welcome to Versailles. Yes, I'm that handsome. Try not to faint." Rough cut frames/C01_rough_v4.mp4 (not committed, build_c01_v4.py): opening 4.0 s + draft (upscaled for the check), plain concat.
+| Check | Result |
+|--|--|
+| "Oops, the ceiling" over the ceiling | PASS: our voice 0.53-1.8 s, camera still on the ceiling (tilt 1.7-3.7 s) |
+| Splice at the join (4.0 s) | PASS: frame diff 3.3 vs neighbours 2.9-3.7, no dissolve, same expression |
+| Speech starts after landing | PASS: the model's lips start at 0.58 s of part 2 (4.58 s), camera landed at 3.7 s |
+| Lips vs our voice | PASS: residual 0.00-0.13 s, tempo max 1.15x |
+| All words by ear (ASR on the cut) | PASS: every word incl. "I'm" |
+| Camera | FLAG: in 0.3-1.2 s of part 2 the phone re-centres him (pans and comes about 12 % closer, smooth, then steady). Reads as the arm settling the selfie on "There"; not the +74/141 % flight of the rejected takes. Owner's eye decides |
+| Face / wig / gown | stable on 8 frames |
+| Loudness | -15.1 LUFS, TP -1.9 (final mix normalises again) |
+| Format | 11.04 s, 24 fps, last frame luma 118 |
+Status: GENERATED + INSPECTED (draft). 1080p final (about $3.79) waits for the owner's look at the draft.
