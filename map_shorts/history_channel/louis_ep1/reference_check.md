@@ -70,3 +70,18 @@ Status: rough GENERATED + INSPECTED, shown to the owner as a lip-sync check, NOT
 ## Owner feedback on the C01 rough cut (29.10): "when he starts speaking the splice is visible" and "he holds the camera himself"
 Accepted: my seam fix (dissolve inside the landing motion) only reduced the join; at the moment he starts speaking the cut shows (Seedance first frame differs from part 1 last frame, 720p vs 1080p softness, colour/exposure shift). A real fix = ONE continuous generation (ceiling, tilt and speech in one clip), no join. He films himself (selfie arm in frame), so "Marcel" lines are wrong; he speaks only after the phone is pointed at him. Options and cost sent to the owner; nothing generated.
 Candidates: (1) Seedance 2.0 r2v single 12 s clip, ceiling image as reference, our audio with a silent lead (720p test $1.51, 1080p $3.78; first-frame and no-flight NOT guaranteed); (2) Kling i2v single 12 s with ceiling first frame (tilt proven) but its lips follow its own faster speech (0.4-0.9 s off our voice).
+
+## C01 single take, Seedance 2.5 DRAFT 480p, 12 s (owner "да"; usage.cost 1.176, task c13cddf7; first submit 3a34e802 failed with a generic error at progress 0, cost not shown)
+Voice for the new line "Oops, the ceiling. There. Welcome to Versailles. Yes, I'm that handsome. Try not to faint." made (0.23 RUB, 8.3 s, all words heard).
+| Check | Result |
+|--|--|
+| Opens on the ceiling (reference image 1) | PASS: the ceiling holds 0-2.0 s, plume at the right edge, small shake |
+| One take, no splice | PASS (single generation) |
+| Rotation only, no flight | FAIL: phone_move_check cumulative scale +73.8 %; the king grows from small (2.3 s) to face-filling (4.0 s): the camera flies in |
+| Landing frame matches C01 (reference image 2) | FAIL: lands on a tight selfie against the carved headboard, not the C01 framing |
+| Speech after the camera lands | PARTLY: first word at 3.6 s while the camera is still settling (settles at 4.4 s) |
+| Words | FAIL: "Yes, I'm that" is lost ("Hands-ansom"); the rest is clear |
+| Follows our audio timing | NO: speech starts 1.3 s later than our drive audio (3.62 vs 2.28 s) and drifts, so our voice would need phrase alignment again |
+| Faces / hands | face stable on model; no hands visible |
+Status: draft GENERATED + INSPECTED, REJECTED (not shown as good). The 1080p final from this draft is NOT ordered.
+Lesson: the one-take-with-audio route makes Seedance both re-time the speech and move the camera; the image-only route keeps first/last frames.

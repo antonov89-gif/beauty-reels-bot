@@ -1,16 +1,16 @@
 {
  "C01": {
-  "file": "tts_ep1/C01-C10.mp3",
+  "file": "tts_ep1/C01-C01.mp3",
   "start": 0.0,
-  "end": 8.46,
+  "end": 8.0,
   "speech_s": 8.46,
   "matched": "17/17",
   "clip_file": "tts_ep1/C01.mp3",
-  "clip_len_s": 8.8,
+  "clip_len_s": 8.3,
   "fits_8s": false,
   "mean_db": -20.3,
   "asr_ratio": 1.0,
-  "asr_text": "Marcel not the ceiling me good. Welcome to Versailles. Yes, I'm that handsome try not to faint"
+  "asr_text": "Oops, the ceiling. There, welcome to Versailles. Yes, I'm that handsome. Try not to faint."
  },
  "C02": {
   "file": "tts_ep1/C02-C04.mp3",

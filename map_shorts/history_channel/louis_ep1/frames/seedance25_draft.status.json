@@ -1,0 +1,18 @@
+{
+ "code": 200,
+ "message": "success",
+ "data": {
+  "task_id": "c13cddf7-586f-4f49-ad3e-2f8c12a802d5",
+  "status": "completed",
+  "progress": 100,
+  "result": [
+   "https://ark-acg-cn-beijing.tos-cn-beijing.volces.com/doubao-seedance-2-5/2130715718/Video/9ywxt-21013292016202-tgc_8ca63d2b6441caffff00000000000000000000241316682397120/cgt-20261029231012-txwy9.mp4?[signed query removed]"
+  ],
+  "completed_at": 1793286719,
+  "usage": {
+   "cost": 1.176,
+   "completion_tokens": 115690,
+   "total_tokens": 115690
+  }
+ }
+}
