@@ -273,3 +273,10 @@ C10_v6 leg check (owner: "проверь что за нога"): FAIL. The leg i
 
 ## Makeup standard v2 frames (owner "Да"; 5 x 0.04 = 0.20): C07_mk, C10_mk, C13_mk, C14_mk, C15_mk (+ C09_v6 and C12_v5 kept) = frames/first_frames_final_candidates.jpg, list in frames/FIRST_FRAMES_CURRENT.md
 Powder: all 7 now white-powdered with pink rouge (C09, C12 slightly stronger rouge). Wig: C09 style on all. Face: master features on all. C10 leg: now his own bent leg (knee by the armrest, shin down to the shoe by the lens), attached to the body: PASS; note the whole sole looks red, not only the heel (soft). NOT APPROVED by the owner yet.
+
+## CHECK of the 7 first frames vs each other and the reference (owner: "Проверь ещё раз и с референсом"), 29.10
+Reference DNA used: close hand-held selfie MCU with the arm visible, ultra-wide distortion, soft daylight + warm interior, the white-lead court makeup (Elizabeth), the face about 1/3 of the frame width (frames_vlog1_LjfGP7wpjVs.md, one_link_studio_lBkoOcM-r5k.md).
+PASS: framing (C07, C09, C12-C15 close selfies, the arm/hand visible in C07, C09, C10, C12; C10 a planned action shot); light and palette; makeup level; one face on all 7; one wig on all 7; hands (C07, C09, C13 ring hand cropped at full res: 5 fingers, rings sit on fingers); wardrobe logic (gold gown in take 3 before the dressing burst, scarlet sun coat in take 4 after it); background people without broken faces at preview size.
+FAIL (continuity, must fix): C07 has an OPEN shirt with no cravat, while C09 and C10 (same take 3) have a lace jabot: the cravat would appear from nowhere between C08 and C09.
+SOFT: C10 shows the whole sole red (a modern designer-shoe look); historically the red is on the heel; C13 and C14 are almost the same framing back to back (the reference changes the setup at every cut); rouge a little stronger in C09 and C12.
+Proposed: redo C07 (jabot), C10 (red heel only, sole dark leather), C14 (a different setup: a wider shot at the gallery doors pointing at the lens): 3 x 0.04, needs a yes.
