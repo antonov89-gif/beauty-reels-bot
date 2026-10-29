@@ -46,8 +46,8 @@ C13 (96-104) CAMERA: handheld halt, the king stops in front of a mirror panel (w
 
 ### END (104-120 s), gallery threshold, then the banquet table (owner 29.10: the CTA ending)
 C14 (104-112) ACTION: he straightens a curl, glances at the page, then points at the lens. LINE: "Tonight, I dine in public. You may watch. Do not stare. Well... a little. Subscribe to my stunning channel." [2S rule: onlookers were not allowed to stare] CHIP: "NEXT: DINNER, IN PUBLIC".
-C15 (112-120) ACTION: he commands the lens, bursts into a rich delighted laugh, waves the audience away with the back of his hand, turns and strides toward a long banquet table, a courtier bows; the gilded mirror swings up over the lens as the cut. LINE: "Like it. Ring the bell. [laughs] Anyway... do what you like. I am off to the table to feast!" Final title card (text, not voiced): "THE SUN IS NEVER LATE."
-SOUND: laugh, footsteps, cutlery and a harpsichord sting; hard cut to black.
+C15 (112-120) ACTION: he commands the lens, waves the audience away with the back of his hand ("do what you like"), then throws his chin up and laughs a cold, arrogant, haughty laugh down his nose, eyes half-closed, turns and strides toward a long banquet table, a courtier bows; the gilded mirror swings up over the lens as the cut. LINE: "Like it. Ring the bell. Anyway... do what you like. [haughty, arrogant laugh] I am off to the table to feast!" Final title card (text, not voiced): "THE SUN IS NEVER LATE."
+SOUND: the haughty laugh (after "do what you like"), footsteps, cutlery and a harpsichord sting; hard cut to black.
 The ending is the series OUTRO for every video (louis_series_bible.md).
 
 ## Captions and graphics

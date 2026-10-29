@@ -15,7 +15,7 @@ cap={
 "C12":("88-96 s","Venice sold mirrors. France made 357. I am in all of them.","backward-walk selfie, Hall of Mirrors"),
 "C13":("96-104 s","Do not stand behind me. You ruin the reflection.","handheld halt at a mirror"),
 "C14":("104-112 s","Tonight, I dine in public. You may watch. Do not stare. Well... a little. Subscribe to my stunning channel.","static propped medium, points at the lens"),
-"C15":("112-120 s","Like it. Ring the bell. [laughs] Anyway... do what you like. I am off to the table to feast!","he laughs, waves them off, strides to the table; mirror flash cut"),
+"C15":("112-120 s","Like it. Ring the bell. Anyway... do what you like. [haughty laugh] I am off to the table to feast!","haughty laugh, chin up, waves them off, strides to the table; mirror flash cut"),
 }
 F=lambda p,s: ImageFont.truetype(p,s)
 SB="/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf"; SR="/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf"; SI="/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf"

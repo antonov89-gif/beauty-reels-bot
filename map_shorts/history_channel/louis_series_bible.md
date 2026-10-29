@@ -6,8 +6,8 @@ Rule: every video STARTS with the same signature opener, ENDS with the same sign
 (The words "Bow. Lower. Good." come back as a call-back in the bowing scene of every episode.)
 
 ## Signature outro (fixed text, last ~16 s of EVERY video; owner 29.10)
-"Subscribe to my stunning channel. Like it. Ring the bell. [laughs] Anyway... do what you like. I am off to the table to feast!"
-He commands the audience, laughs, waves them off and walks away to a banquet table (mirror flash = cut). The title card "THE SUN IS NEVER LATE." is the on-screen sign-off (not voiced; the voiced "The sun is never late." is retired from the outro and may appear as a line inside an episode).
+"Subscribe to my stunning channel. Like it. Ring the bell. Anyway... do what you like. [haughty, arrogant laugh] I am off to the table to feast!"
+Laugh rule (owner 29.10): the laugh comes AFTER "do what you like" and is cold, arrogant and haughty (chin up, down the nose, eyes half-closed), not a warm giggle. He commands the audience, waves them off with the back of the hand, laughs at them and walks away to a banquet table (mirror flash = cut). The title card "THE SUN IS NEVER LATE." is the on-screen sign-off (not voiced; the voiced "The sun is never late." is retired from the outro and may appear as a line inside an episode).
 
 ## Self-praise lines (the "what a handsome man I am" tags)
 Rules: one tag every 15-20 s (6 per 2 minutes), never the same line twice in one episode, 2-8 words, always straight to the lens or to the mirror, delivered smugly, never apologetic; no jokes about illness or real people's bodies other than the king's own vanity.

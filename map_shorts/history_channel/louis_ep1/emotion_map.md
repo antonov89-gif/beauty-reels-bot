@@ -16,7 +16,7 @@ Rule for the whole series: the king is never flat. Every line carries a named em
 | C12 | showman grandeur, gleeful, soft laugh on "Lucky mirrors" | strides with open arms, delighted grin, glances left and right at his reflections | soft laugh |
 | C13 | snapped irritation, then swoon on "what a profile" | head snaps to the courtier, glare, then turns to the mirror and melts, hand to the cheek | breathy "Ah..." |
 | C14 | mock-generous, firm "Do not stare", sly conspiratorial "a little", then imperious "Subscribe to my stunning channel" | open palm, stern finger, a wink and a tiny smile, then a regal point at the lens | small laugh |
-| C15 | imperious commands ("Like it. Ring the bell."), a rich delighted villainous laugh, dismissive boredom ("do what you like"), gleeful hunger ("off to the table to feast") | commands with a finger, head thrown back laughing, waves the audience away with the back of the hand, turns and strides to the table with a look back over his shoulder | the laugh itself, footsteps, cutlery |
+| C15 | imperious commands ("Like it. Ring the bell."), dismissive boredom ("do what you like"), THEN a cold, arrogant, haughty laugh (owner 29.10: the laugh comes after "do what you like"), gleeful hunger ("off to the table to feast") | commands with a finger, waves the audience away with the back of the hand, then chin lifted, eyes half-closed, looks down his nose and laughs with contempt, turns and strides to the table with a look back over his shoulder | the laugh itself, footsteps, cutlery |
 
 ## Voice rules for emotion
 - Stability: Natural (0.5) is the safe default; Creative (0.0) gives the tags more effect but can hallucinate. Test both on C01-C05, pick one, lock it. (Lumean accepts only multiples of 0.5.)

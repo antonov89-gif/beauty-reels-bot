@@ -21,3 +21,6 @@
 9. Seams: chained clips match framing, light and wig state; no black or frozen frames.
 10. Audio: no clipping, room tone consistent, loudness in range.
 Status words stay GENERATED != INSPECTED != APPROVED; anything not verified is NOT VERIFIED.
+
+## Change 29.10.2026 (owner): the outro laugh
+The laugh now comes AFTER "do what you like" and is cold, arrogant, haughty (chin up, looks down the nose, eyes half-closed). Updated in the series bible, script, emotion map, tagged lines, recording sheet and the C15 frame prompt. The current C15 storyboard frame still shows a warm smile (old prompt): it is regenerated in the 2K pass (about $0.04, inside the $0.88) and inspected before approval. The emotion voice test must check that the laugh sounds haughty, not friendly.
