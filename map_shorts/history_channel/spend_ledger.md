@@ -56,3 +56,4 @@
 - 29.10, makeup v2 frames (5 x nano-banana-2.1 2K) 0.20. Confirmed total now about $47.7.
 - 29.10, first frames v7 (7 x nano-banana-2.1 2K) 0.28. Confirmed total now about $48.0.
 - 29.10, C12 redo 0.04. Confirmed total now about $48.0.
+- 29.10, C07 final (Seedance 2.5 i2v 720p) 1.764. Confirmed total now about $49.8.

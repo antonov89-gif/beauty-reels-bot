@@ -287,3 +287,7 @@ SOFT: C12 the "courtiers already wear copies of his tall wig" payoff is NOT visi
 NOT APPROVED by the owner yet.
 C12 redo (owner "Перерисуй C12", 0.04): two courtiers right behind his shoulders wear copies of his tall powdered wig, in focus: the spine payoff is now visible: PASS. Previous C12 kept as C12_v7a.jpg.
 Owner 29.10: "у придворных должны быть простые парики, звезда тут один" -> C12_v7.jpg (copies) REJECTED, C12_v7a.jpg (simple wigs) is the C12 first frame; the copies payoff removed from both scripts. No new generation.
+
+## C07 FINAL 720p (owner "Давай сразу чистовик на 720п"; Seedance 2.5 i2v direct 720p, usage.cost 1.764, task 7ae2a252): frames/C07_final.mp4 (upscaled to 1080x1920 for the edit), preview frames/C07_final_with_prev.mp4 (not committed)
+Hard cut from C06 (planned). Camera (camera_plan_ep1.md): PASS: the phone wobbles, swings with his shoulder as he turns to the court (1.2-3.8 s, we see the back of the wig while he says "Bow. Lower. Good."), turns back and comes far too close while he taps the wig (5.5-8 s); motion 4.7-14 per second, path 71/23 px; the +38 % scale = the motivated too-close re-centre (arm), frames 0.4-6.0 s inspected: smooth, no morph. Face, wig, makeup, jabot as the v7 frame. Lips 0.00-0.14 s. Words by ASR: see below.
+Status: GENERATED + INSPECTED, awaiting the owner's approval.
