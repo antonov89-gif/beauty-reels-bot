@@ -31,3 +31,6 @@ The per-clip cut used output seeking with a fade-out timed on the input timeline
 - C02: "ze rising" heard as "Z-Rising".
 - C04: "Now, ze wig. My 'air..." heard as "Now, is he wig? My air...".
 Respelling exceptions added for C02 ("the") and C04 ("the", "hair"); re-voice of C02 + C04 = 1 order (about 0.23 RUB) after the owner's yes.
+
+## Re-voice C02 + C04 (29.10, 0.23 RUB)
+C02 7.78 s, heard "...The ceremony is called The Rising..." (ratio 1.0); C04 6.84 s, heard "Now, the wig. My hair started falling out..." (ratio 0.95). Both clear by ear now; levels -22 dB mean.

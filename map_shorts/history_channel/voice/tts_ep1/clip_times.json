@@ -13,17 +13,17 @@
   "asr_text": "Marcel not the ceiling me good. Welcome to Versailles. Yes, I'm that handsome try not to faint"
  },
  "C02": {
-  "file": "audition_accent/heir_phon_eleven_v4.mp3",
-  "start": 10.16,
-  "end": 16.96,
+  "file": "tts_ep1/C02-C04.mp3",
+  "start": 0.0,
+  "end": 7.44,
   "speech_s": 6.8,
   "matched": "20/20",
   "clip_file": "tts_ep1/C02.mp3",
-  "clip_len_s": 7.21,
+  "clip_len_s": 7.78,
   "fits_8s": true,
-  "mean_db": -22.8,
-  "asr_ratio": 0.923,
-  "asr_text": "Some mornings, a hundred people watch me wake up. The ceremony is called Z-Rising. I call it opening night."
+  "mean_db": -22.1,
+  "asr_ratio": 1.0,
+  "asr_text": "Some mornings a hundred people watch me wake up. The ceremony is called The Rising. I call it Opening Night."
  },
  "C03": {
   "file": "tts_ep1/C01-C10.mp3",
@@ -39,17 +39,17 @@
   "asr_text": "The doctor's here, the surgeon's here, and nobody came to see them. Everyone came to see me, naturally."
  },
  "C04": {
-  "file": "audition_accent/heir_phon_eleven_v4.mp3",
-  "start": 23.98,
-  "end": 30.38,
+  "file": "tts_ep1/C02-C04.mp3",
+  "start": 8.04,
+  "end": 14.5,
   "speech_s": 6.4,
   "matched": "18/19",
   "clip_file": "tts_ep1/C04.mp3",
-  "clip_len_s": 6.82,
+  "clip_len_s": 6.84,
   "fits_8s": true,
-  "mean_db": -24.8,
-  "asr_ratio": 0.821,
-  "asr_text": "Now, is he wig? My air started falling out at 17. I took it personally, so I got a wig."
+  "mean_db": -22.1,
+  "asr_ratio": 0.947,
+  "asr_text": "Now, the wig. My hair started falling out at 17. I took it personally, so I got a wig."
  },
  "C05": {
   "file": "tts_ep1/C01-C10.mp3",

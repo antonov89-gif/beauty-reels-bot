@@ -17,6 +17,7 @@
 | C01 part 1 v1 REJECTED (camera flew) | $0.65 (already counted above) |
 | C01 ceiling frame v2 (same camera position), 2K | $0.04 |
 | C01 part 1 v2, Kling 4.0 i2v 1080p 3 s (usage.cost 0.6525) | $0.65 |
+| Re-voice C02 + C04 (respelling exceptions), 1 order | 0.23 RUB |
 | vidIQ credits (research of the Elizabeth and Chloe channels) | about 85 credits (balance 949 left) |
 | Video clips (Kling, Veo, Seedance) | $0.00: nothing generated yet |
 Dollar total on images: $0.82 (storyboard frames part $0.62, within the $0.80 cap set for that stage; the cards were approved separately). Next planned: C01 tests, see quality_standard.md.
