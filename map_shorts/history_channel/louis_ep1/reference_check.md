@@ -280,3 +280,8 @@ PASS: framing (C07, C09, C12-C15 close selfies, the arm/hand visible in C07, C09
 FAIL (continuity, must fix): C07 has an OPEN shirt with no cravat, while C09 and C10 (same take 3) have a lace jabot: the cravat would appear from nowhere between C08 and C09.
 SOFT: C10 shows the whole sole red (a modern designer-shoe look); historically the red is on the heel; C13 and C14 are almost the same framing back to back (the reference changes the setup at every cut); rouge a little stronger in C09 and C12.
 Proposed: redo C07 (jabot), C10 (red heel only, sole dark leather), C14 (a different setup: a wider shot at the gallery doors pointing at the lens): 3 x 0.04, needs a yes.
+
+## First frames v7 (owner "Да"; 7 x 0.04 = 0.28, gen_frames_v7.py): frames/first_frames_v7.jpg
+C07 jabot now present (continuity with C09/C10 PASS); C09 deliberately badly framed (half the face cut by the left edge), the hat gag fully visible: PASS; C10 red heel, sole dark leather, leg attached: PASS; C13 far too close, the wig cut at the top, courtier behind: PASS; C14 a new wider setup at the gallery doors, pointing at the lens: PASS (differs from C13); C15 the hand mirror covers the lower right, face off-centre: PASS. Face and makeup consistent on all 7.
+SOFT: C12 the "courtiers already wear copies of his tall wig" payoff is NOT visible (background courtiers wear ordinary small wigs); options: accept, or redo C12 (about $0.04).
+NOT APPROVED by the owner yet.
