@@ -78,7 +78,7 @@
         "AI mark in a corner on every frame",
         "gilded hand mirror as the character's transition prop"
       ],
-      "voice": "LOCKED v2 29.10 (owner): ElevenLabs v4 'The Young Heir' (voice_id AqRCwHAjbeFmvSwJvHll), see voice/voice_lock.json; one voice on all videos; AI voice disclosed; a natural human take + speech-to-speech or a human actor would replace it only by a new lock version"
+      "voice": "LOCKED v3 29.10 (owner): ElevenLabs v4 'The Young Heir' (voice_id AqRCwHAjbeFmvSwJvHll) with a French accent (tag + TTS-only respelling), see voice/voice_lock.json; one voice on all videos; AI voice disclosed; a natural human take + speech-to-speech or a human actor would replace it only by a new lock version"
     },
     "cinema": {
       "realism": "Owner 28.10: raw documentary-vlog look like the Elizabeth channel (phone front camera, ultra-wide, handheld, visible skin detail), extravagant and hype character; photoreal AI, disclosed",
@@ -383,7 +383,7 @@
       "skill installed and 14 tests pass",
       "transfer matrix TR01-TR09",
       "voice lock v2: Eleven v4 (owner picked B), new 12-s reference sample",
-      "voice locked: The Young Heir (voice 7), voice_lock.json + heir_sample.mp3"
+      "voice locked: The Young Heir (voice 7), voice_lock.json + heir_sample.mp3", "voice lock v3: French accent (tag + respelling), heir_fr_sample.mp3"
     ],
     "pending": [
       "brand approval",

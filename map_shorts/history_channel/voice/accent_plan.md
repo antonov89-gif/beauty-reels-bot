@@ -1,5 +1,5 @@
 # French accent for the king (owner 29.10.2026: "у него должен быть французский акцент")
-Status: PENDING a new voice lock (v3). Locked voice v2 (The Young Heir, Eleven v4) is a posh-British designed voice; the owner wants a French accent. Nothing is changed in `voice_lock.json` until a test is approved.
+Status: LOCKED as v3 on 29.10 (owner: "Да нормально" to test 2, variant B). Locked voice v2 (The Young Heir, Eleven v4) is a posh-British designed voice; the owner wants a French accent. Nothing is changed in `voice_lock.json` until a test is approved.
 
 ## Candidates (all found free through Lumean `voices/elevenlabs/library?accent=french&gender=male`, 27 voices; previews in `french_accent_voices.mp4`, metadata in `french_candidates.json`)
 1 Antonin (warm, unsettling, elegant) · 2 Cyril (French-accented narrator, confident) · 3 Henri (French-American narrator) · 4 JP (social media, classy) · 5 Marcel (charming native accent, strongest accent) · 6 Jamie (French accent, charismatic) · 7 Nicolas (French English male) · 8 Antoine (articulate, calm, bright) · 9 Jimmy (documentary). Dropped: Bacbuc, Mathis, Alex (their previews are French-language).
@@ -30,3 +30,6 @@ Accent proxy (Whisper language detection, probability "French" per 10 s): no-acc
 ## Test 2 result (29.10, owner said "да", 1 order 0.37 RUB)
 heir_phon_eleven_v4.mp3 (35.9 s): The Young Heir, Eleven v4, tag "[thick French accent]" plus TTS-only respelling (ze, zat, zem, zey, 'ere, 'undred, 'air, 'andsome). Listening file accent_test2_tag_vs_spelling.mp4 (A = tag only, B = respelling; not committed).
 Self-check: no tag read aloud; loudness -21.9 LUFS. The transcript shows the accent features landed in places: "here" heard as "ear" (dropped h), "taller, zey say" heard as "tall, as they say", "Bow" as "Bau". Clarity risk: "the doctor's 'ere" can read as "doctor's ear"; captions carry the normal spelling. French proxy still near 0 (Whisper normalises the words), so the owner's ear decides.
+
+## Decision 29.10
+Owner accepted variant B. voice_lock.json v3 = The Young Heir, Eleven v4, prefix "[thick French accent]", TTS-only respelling list, emotion tags; reference sample heir_fr_sample.mp3 (12.8 s). Next voice step: emotion test C06-C15 with the locked voice (one order per 5 lines, about 0.4 RUB each) after the owner's yes.

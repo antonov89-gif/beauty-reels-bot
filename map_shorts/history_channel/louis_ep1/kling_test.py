@@ -22,7 +22,7 @@ def host(path, ctype):
 
 mode = sys.argv[1] if len(sys.argv) > 1 else "estimate"
 imgs = [host(H0 + "louis_card/A3_white_wig.jpg", "image/jpeg"), host(H0 + "louis_card/D2_morning.jpg", "image/jpeg"), host(H0 + "louis_ep1/frames/C01.jpg", "image/jpeg")]
-voice = host(H0 + "voice/heir_sample.mp3", "audio/mpeg")
+voice = host(H0 + "voice/heir_fr_sample.mp3", "audio/mpeg")
 prompt = ("Raw documentary phone-vlog look, handheld ultra-wide front camera. @king (a vain 17th-century French king in a gold silk dressing gown and a short dark curled night wig, propped in a canopied state bed) "
           "starts on the painted ceiling, the phone tilts down to his face, a feather plume brushes the lens. He looks into the lens with a smug smirk and says in @king_voice, in a haughty, drawling, arrogant tone: "
           "\"Marcel, down! Bow. Lower. Good. Welcome to Versailles, my friends. Yes, I'm that handsome. Try not to faint.\" Natural lip sync, room tone and candle flicker, no music.")

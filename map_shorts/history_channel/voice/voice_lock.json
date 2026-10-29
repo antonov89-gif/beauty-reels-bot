@@ -1,9 +1,10 @@
 {
   "channel": "history POV channel (Louis XIV series)",
   "locked": "2026-10-29",
-  "approved_by": "owner 29.10: B (Eleven v4) accepted (reply 'Да б можно', read as 'yes, B is fine')",
-  "provider": "ElevenLabs v3 via Lumean (pay-as-you-go)",
-  "voice_name": "The Young Heir (ElevenLabs voice library, aristocrat page)",
+  "version": 3,
+  "approved_by": "owner 29.10: accent test 2, variant B (respelling) - 'Да нормально'",
+  "provider": "ElevenLabs via Lumean (pay-as-you-go)",
+  "voice_name": "The Young Heir (ElevenLabs voice library, aristocrat page) with a French accent",
   "voice_id": "AqRCwHAjbeFmvSwJvHll",
   "public_owner_id": "779d91788b0d9e364d32e0a0e4273ec722b92887fa710d82f50b2d034a9fb97b",
   "model_id": "eleven_v4",
@@ -15,20 +16,65 @@
     "use_speaker_boost": true,
     "speed": 0.95
   },
-  "tags_used": [
-    "[smug]",
-    "[haughty]",
-    "[admiringly]",
-    "[sneering]",
-    "[arrogant]"
-  ],
-  "note": "ONE voice on every video of this channel: The Young Heir on Eleven v4 via Lumean (the Lumean order accepted model_id eleven_v4 on 29.10). Stability must be a multiple of 0.5. It is a designed (AI) voice: AI voice is disclosed in the description and platform flags. Never edit silently: a better voice (speech-to-speech from a human take, a human actor) = a new lock version after the owner agrees.",
-  "reference_sample": "map_shorts/history_channel/voice/heir_sample.mp3 (first 12 s of the v4 test, audition/heir_eleven_v4.mp3; the v3 sample is kept as heir_sample_v3.mp3)",
-  "version": 2,
+  "accent": {
+    "text_prefix": "[thick French accent] ",
+    "respelling_tts_only": [
+      [
+        "\\bThe\\b",
+        "Ze"
+      ],
+      [
+        "\\bthe\\b",
+        "ze"
+      ],
+      [
+        "\\bthat\\b",
+        "zat"
+      ],
+      [
+        "\\bthem\\b",
+        "zem"
+      ],
+      [
+        "\\bthey\\b",
+        "zey"
+      ],
+      [
+        "\\bthis\\b",
+        "zis"
+      ],
+      [
+        "\\bhere\\b",
+        "'ere"
+      ],
+      [
+        "\\bhundred\\b",
+        "'undred"
+      ],
+      [
+        "\\bhair\\b",
+        "'air"
+      ],
+      [
+        "\\bhandsome\\b",
+        "'andsome"
+      ]
+    ],
+    "rule": "Apply the prefix and the respelling ONLY to the text sent to TTS (regex, word boundaries). Captions, subtitles and the script keep normal English spelling. Clarity check after each render: transcribe; if a respelled word turns into another word that changes the meaning (e.g. 'doctor's 'ere' heard as 'doctor's ear'), keep the burned-in caption in normal spelling and, if needed, drop that one respelling for that line."
+  },
+  "tags": "emotion tags per line from voice/lines_ep1_emotion.json (stability 0.5)",
+  "reference_sample": "map_shorts/history_channel/voice/heir_fr_sample.mp3 (0-12.8 s of audition_accent/heir_phon_eleven_v4.mp3: the opener + C02 start); used as the voice reference for Kling 'voices'",
+  "note": "ONE voice on every video of this channel. AI voice is disclosed in the description and platform flags. Never edit silently: any change = a new lock version after the owner agrees.",
   "supersedes": {
-    "version": 1,
-    "model_id": "eleven_v3",
-    "approved": "2026-10-29 (voice 7 'The Young Heir', 'вроде нормально')",
-    "sample": "heir_sample_v3.mp3"
+    "version": 2,
+    "model_id": "eleven_v4",
+    "accent": "none (posh British)",
+    "sample": "heir_sample.mp3",
+    "previous": {
+      "version": 1,
+      "model_id": "eleven_v3",
+      "approved": "2026-10-29 (voice 7 'The Young Heir', 'вроде нормально')",
+      "sample": "heir_sample_v3.mp3"
+    }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "voice_lock": "voice/voice_lock.json (v2: The Young Heir, Eleven v4; v3 = French accent is PENDING, see voice/accent_plan.md)",
+  "voice_lock": "voice/voice_lock.json v3 (The Young Heir, Eleven v4, French accent: prefix + respelling applied at TTS time, these lines stay in normal spelling)",
   "note": "Tags in [brackets] are ElevenLabs audio/emotion tags (not spoken). Pauses with {{pause=0.3}} as in the Lumean pipeline. Text rewritten 29.10 (owner: natural English for an English-speaking audience, no AI-sounding patterns, French accent). Tag support on v4 and the accent tag are UNTESTED: first test = C01-C05. Self-praise ('what a handsome man I am') ONCE per video, in the opener only (owner 29.10).",
   "lines": {
     "C01": "[irritated, sharp] Marcel, down! {{pause=0.3}} [haughty, regal] Bow. Lower. Good. {{pause=0.3}} [smug, drawling] Welcome to Versailles, my friends. [delighted, self-admiring] Yes, I'm that handsome. {{pause=0.4}} [sneering, amused] Try not to faint.",
@@ -16,9 +16,5 @@
     "C13": "[snapping, irritated] Don't stand behind me, you're ruining my reflection. {{pause=0.5}} [imperious, waving him off] Go. {{pause=0.2}} Over there. {{pause=0.2}} Further.",
     "C14": "[mock-generous] Tonight I dine in public. You may watch, {{pause=0.3}} [firm] but don't stare. {{pause=0.4}} [sly, conspiratorial] Well... a little. {{pause=0.5}} [imperious, grand] Subscribe to my stunning channel.",
     "C15": "[imperious, commanding] Hit like. {{pause=0.2}} Ring the bell. {{pause=0.4}} [dismissive, bored] Anyway, do what you like. {{pause=0.4}} [laughs, a cold, arrogant, haughty laugh, contemptuous] {{pause=0.4}} [gleeful, hungry] I'm off to the table to feast!"
-  },
-  "accent_tags_to_test": [
-    "[strong French accent]",
-    "[French accent, aristocratic]"
-  ]
+  }
 }
