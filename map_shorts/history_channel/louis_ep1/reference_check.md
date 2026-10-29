@@ -208,3 +208,11 @@ Status: GENERATED + INSPECTED, REJECTED (missing phrase). Corrective attempt 1 o
 ## C04 v2 (owner "Делай сразу 1080"): draft 0.882 (task 0e8e6c3c) auto-checked (every word present) -> 1080p final 4.87746 (task b30ad807): frames/C04_final.mp4, preview C03+C04 frames/C04_final_with_prev.mp4 (not committed)
 Checks: 1080x1920, 24 fps, 9.00 s; hard cut from C03 (planned scene change, frame diff 70.9 at the cut); camera -4.0 % (phone propped, still); every word by ASR ("Now the wig. My hair started falling out at 17. I took it personally so I got a wig"); lips offset max 0.09 s after a build_clip fix (word mode now spans the whole clip, so short phrases like "Now, the wig" are not dropped; C02/C03 offsets unchanged 0.18/0.22); -14.9 LUFS, TP -1.8; face, wig, gown match C01-C03; lifts the dark wig, hand on chest, mock-tragic brow; our voice only, no music, no subtitles.
 Status: GENERATED + INSPECTED, awaiting the owner's approval.
+
+## C05 on Veo 3.1 quality 1080p (owner 29.10: "сразу финальную" + "which model is cheaper"): APIpod live prices: Seedance 2.5 i2v 1080p $0.542/s (= our draft-route final), Kling 4.0 i2v $0.2175/s, Veo 3.1 quality about $0.8-1 per 8-s clip (charged 1.00), Veo 3.1 fast about $0.18+.
+veo_clip.py (new). First frame = last frame of C04 final.
+- try 1 (task 0ea5ad36, $1): REJECTED: the shirt turns into a ruffled jabot at 2.2-2.8 s and he laughs wide-mouthed (not "lofty, smug").
+- try 2 (task 5636e638): blocked by the provider's content filter (no charge shown); wording softened.
+- try 3 (task ad94e576, $1): KEPT, cut to 6.8 s (from 7.0 s he stands up and walks away). Lips offset 0.00 s; calm haughty half-smile; same face, wig, gown; the lace shirt front was already in C01-C04; camera +10 % = he leans in, phone still; -15.2 LUFS; ASR hears every word.
+build_clip.py fix: our voice is cut at word borders (a 0.10-s tail had copied the start of the next word: ASR heard "It makes, it makes"). C02-C05 rebuilt; offsets unchanged (0.18 / 0.22 / 0.09 / 0.00), every word heard once.
+Status C05: GENERATED + INSPECTED, awaiting the owner's approval. Note: Veo drifts wardrobe more than Seedance (2 of 2 takes changed the shirt); per clip cost about $1 vs $4.3-5.2.

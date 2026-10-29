@@ -1,0 +1,10 @@
+{
+ "code": 200,
+ "message": "success",
+ "data": {
+  "task_id": "5636e638-4655-4e2d-8c6e-f00d7734b6c7",
+  "status": "failed",
+  "progress": 100,
+  "error": "Your request did not pass content safety review. Please adjust your prompt or input files and try again."
+ }
+}

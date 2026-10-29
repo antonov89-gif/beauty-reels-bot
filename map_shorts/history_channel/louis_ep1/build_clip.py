@@ -77,7 +77,8 @@ else:
 
 rep = []
 for (a, b), m0, m1 in units:
-    seg = x[int(max(0, ov[a][1] - 0.06) * SR):int((ov[b - 1][2] + 0.10) * SR)]
+    s0 = max(0, ov[a][1] - 0.06, ov[a - 1][2] if a > 0 else 0); s1 = min(ov[b - 1][2] + 0.10, ov[b][1] - 0.02 if b < len(ov) else 1e9)   # cut at word borders: no piece of a neighbour word
+    seg = x[int(s0 * SR):int(s1 * SR)]
     our_d = ov[b - 1][2] - ov[a][1]; mod_d = m1 - m0; tempo = 1.0
     if our_d > mod_d * 1.05:
         tempo = min(MAXT, our_d / mod_d)

@@ -43,3 +43,4 @@
 - 29.10, C04 first frame (nano-banana-2.1 2K) 0.04.
 - 29.10, C04 draft 0.784 (rejected: model skipped a phrase). Confirmed total now about $28.6.
 - 29.10, C04 v2 draft 0.882 + 1080p final 4.877. Confirmed total now about $34.4.
+- 29.10, C05 on Veo 3.1 quality: 2 takes x 1.00 (1 blocked by the filter, no charge shown). Confirmed total now about $36.4.
