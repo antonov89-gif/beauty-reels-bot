@@ -58,3 +58,4 @@
 - 29.10, C12 redo 0.04. Confirmed total now about $48.0.
 - 29.10, C07 final (Seedance 2.5 i2v 720p) 1.764. Confirmed total now about $49.8.
 - 29.10, voice C08+C09 re-voice 0.23 RUB.
+- 29.10, C08 direct 720p 1.764 (rejected: join jump + phone visible). Confirmed total now about $51.6.

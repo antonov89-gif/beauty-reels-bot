@@ -291,3 +291,14 @@ Owner 29.10: "у придворных должны быть простые па�
 ## C07 FINAL 720p (owner "Давай сразу чистовик на 720п"; Seedance 2.5 i2v direct 720p, usage.cost 1.764, task 7ae2a252): frames/C07_final.mp4 (upscaled to 1080x1920 for the edit), preview frames/C07_final_with_prev.mp4 (not committed)
 Hard cut from C06 (planned). Camera (camera_plan_ep1.md): PASS: the phone wobbles, swings with his shoulder as he turns to the court (1.2-3.8 s, we see the back of the wig while he says "Bow. Lower. Good."), turns back and comes far too close while he taps the wig (5.5-8 s); motion 4.7-14 per second, path 71/23 px; the +38 % scale = the motivated too-close re-centre (arm), frames 0.4-6.0 s inspected: smooth, no morph. Face, wig, makeup, jabot as the v7 frame. Lips 0.00-0.14 s. Words by ASR: see below.
 Status: GENERATED + INSPECTED, awaiting the owner's approval.
+
+## C08 direct 720p (owner "Да, сразу чистовик 720п"; Seedance 2.5 i2v direct, usage.cost 1.764, task 1fe14524): frames/seedance25_c08_720.mp4, preview frames/C08_final_with_prev.mp4 (not committed)
+| Check | Result |
+|--|--|
+| Camera push-in (camera plan C08) | PASS: from a medium shot to the face filling the frame, the tall wig cut by the top edge, a jolt on the snort (3-8 s) |
+| Words | PASS by ASR: "All these people, and nobody may speak before me, I love listening to myself, mostly" |
+| Lips vs our voice | 0.00-0.03 s on most phrases, 0.55 s on "to myself" (soft) |
+| Join C07 -> C08 | FAIL: frame diff 60 vs 4-7 around it. C07 ends on a face close-up with the hand on the wig; C08 starts as a MEDIUM shot, standing back (the direct route did not keep the first frame, same as C05; my own warning, and the cause is the route, not the prompt) |
+| Phone in his hand | FAIL: for the first 3 s the model draws a phone with a lit screen in his raised hand (0-3 s): he is filming with that phone, it cannot be seen |
+| Face | same man; in the close-up (3-8 s) the rouge and the smile read a little stronger (soft) |
+Status: GENERATED + INSPECTED, REJECTED for the join and the phone. Free partial rescue is NOT possible (the first 3 s carry "All these people, and nobody may speak before me"). Corrective attempt 1: draft route from the exact last frame of the C07 take (draft 480p about $0.78, final 720p about $1.76 if the draft route allows 720p, otherwise 1080p about $4.34): needs the owner's yes.
