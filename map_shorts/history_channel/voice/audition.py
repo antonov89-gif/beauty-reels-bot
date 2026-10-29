@@ -53,16 +53,18 @@ TEXT = ("[smug] Marcel, down! [haughty] Bow. Lower. Good. Welcome to Versailles.
 OUT = "/home/user/beauty-reels-bot/map_shorts/history_channel/voice/audition/"
 os.makedirs(OUT, exist_ok=True)
 tpl = next(t["id"] for t in api("GET", "/templates") if t["service_key"] == "elevenlabs")
+MODEL = os.environ.get("EL_MODEL", "eleven_v3")
+SUFFIX = "" if MODEL == "eleven_v3" else "_" + MODEL
 mode = sys.argv[1] if len(sys.argv) > 1 else "preview"
 names = sys.argv[2:] or list(VOICES)
 orders = {}
 for n in names:
     vid, owner = VOICES[n]
-    ts = {"model_id": "eleven_v3", "voice_id": vid, "language_code": "en", "advanced_voice_settings": True,
+    ts = {"model_id": MODEL, "voice_id": vid, "language_code": "en", "advanced_voice_settings": True,
           "voice_settings": {"stability": 0.5, "similarity_boost": 0.75, "style": 0.5, "use_speaker_boost": True, "speed": 0.95}}
     if owner and len(owner) > 20:
         ts["public_owner_id"] = owner
-    body = {"template_id": tpl, "input_text": TEXT, "config_override": {"tts_settings": ts}, "name": "louis voice audition " + n}
+    body = {"template_id": tpl, "input_text": TEXT, "config_override": {"tts_settings": ts}, "name": "louis voice audition " + n + SUFFIX}
     pv = api("POST", "/orders/chunks/preview", {k: body[k] for k in ("template_id", "input_text")})
     print(n, "cost RUB", pv["summary"]["cost_display"]["amounts"]["rub"]["amount_formatted"], flush=True)
     if mode == "go":
@@ -80,7 +82,7 @@ if mode == "go":
             if o["status"] in ("completed", "result_delivered", "partially_completed"):
                 for p in o["result"]["files"]:
                     if p.endswith(".mp3"):
-                        urllib.request.urlretrieve(api("POST", "/storage/url", {"path": p})["url"], OUT + n + ".mp3")
+                        urllib.request.urlretrieve(api("POST", "/storage/url", {"path": p})["url"], OUT + n + SUFFIX + ".mp3")
                 print(n, o["status"], os.listdir(OUT), flush=True); break
             if o["status"] in ("failed", "cancelled", "compensated"):
                 print(n, "FAILED", o["status"], flush=True); break
