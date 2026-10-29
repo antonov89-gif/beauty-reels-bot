@@ -12,6 +12,8 @@
 | Ep.1 voice C06-C10 and C12-C15, locked voice v3 (2 orders x 0.31 RUB) | 0.62 RUB |
 | Ep.1 re-voice C01 (new opener), C03, C05, C10 (1 order) | 0.28 RUB |
 | C01 start frame: the ceiling, Nano Banana 2.1 2K (owner: "Делай") | $0.04 |
+| C01 part 1: Kling 4.0 i2v 1080p, 3 s (usage.cost 0.6525) | $0.65 |
+| C01 Kling r2v attempts x3 (voice reference rejected; no cost in the status, charge NOT VERIFIED) | $0 to $2.55 each, unknown |
 | vidIQ credits (research of the Elizabeth and Chloe channels) | about 85 credits (balance 949 left) |
 | Video clips (Kling, Veo, Seedance) | $0.00: nothing generated yet |
 Dollar total on images: $0.82 (storyboard frames part $0.62, within the $0.80 cap set for that stage; the cards were approved separately). Next planned: C01 tests, see quality_standard.md.

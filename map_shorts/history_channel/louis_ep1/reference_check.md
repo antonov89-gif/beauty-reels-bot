@@ -10,3 +10,20 @@ Attempt 2 (task dda11367): FAILED with the same message, voice ref heir_fr_ref_s
 No cost field in either failed status; APIpod has no balance endpoint, so "not charged" is NOT VERIFIED. Two corrective attempts used: method reassessment goes to the owner (no third attempt without a decision).
 Attempt 3 (task 7bf475e6, owner chose "C": same 23.7 s reference as WAV 44.1 kHz 16-bit mono): FAILED, same message. Kling r2v does not accept our synthetic French-accent voice as a voice reference (3 of 3). Also found in the official spec (docs.apipod.ai, kling-4.0-r2v.yaml): r2v `image_urls` are REFERENCE images (@image_N), not a first frame, so the ceiling would not have been the opening frame anyway.
 Method reassessment (to the owner): kling-4.0-i2v takes a real first frame, up to 8 keyframes and a last frame (3-30 s, about $0.145/s at 720p from the estimator; 1080p rate NOT VERIFIED). seedance-2.0-r2v takes `audio_urls` (needs an image) but no first frame; its lip-sync to a given audio is undocumented.
+
+## C01 part 1 (0-3 s), Kling 4.0 i2v, 1080p (owner said yes 29.10)
+File: frames/kling_i2v_part1.mp4 (1076x1924, 24 fps, 3.04 s, task 8440d148). ACTUAL COST $0.6525 (status usage.cost) = $0.2175/s at 1080p, so the 9-s part 2 is about $1.96 and the 12-s total about $2.61.
+Status: GENERATED, INSPECTED (contact sheet 6 fps + 3 full-res frames + motion curve + audio), not APPROVED by the owner.
+| Check | Result |
+|--|--|
+| Starts on the ceiling, one continuous tilt, no cut | PASS: no cut; ceiling hold 0-0.6 s, tilt 0.6-2.2 s, settle 2.2-3.0 s |
+| Lands on the C01 frame | PASS: last frame matches the storyboard frame (wig, moustache, gown, courtiers, window) |
+| Natural motion blur, focus hunt, exposure change | PASS: heavy blur 0.7-2.0 s, face sharpens at ~1.9 s, exposure drops to the warm bed |
+| Hand-held shake in the ceiling hold | SOFT FAIL: frames 0-0.4 s almost static (mean diff 5-6 vs 30 in the tilt); the plume moves a little. Add a measured micro-shake in the edit |
+| Ceiling hold length | SOFT FAIL: 0.6 s instead of the planned 1.3 s (3-s clip). Fix: stretch the first 0.4 s (frames 0-9 are near static) by a slow-down or a freeze-and-shake in the edit, or add silence before the tilt |
+| Camera is a pure tilt | SOFT: the camera also moves toward the bed (the king grows from small to large between 1.0 and 1.9 s), like a page stepping forward while tilting; acceptable for a phone move |
+| Face identity during the move | SOFT: at ~1.5 s the face is smeared by motion blur and the moustache looks thicker (blur); sharp and on-model from ~1.9 s and in the last frame |
+| Overshoot and settle | PASS: a rolled frame at ~2.0 s, then a settled landing |
+| Hands, props, modern objects | PASS: no hands in the first 2 s, no modern objects |
+| Last 0.8 s | HOLD: almost frozen (diff 2-3), no breathing or blink; part 2 starts from this frame, so trim the hold when joining |
+| Audio | A generated track exists (no speech, transcription empty): a swoosh at 0.75-1.75 s peaking about -9 dB, room tone about -46 dB. Keep as a base for our own foley or replace |
