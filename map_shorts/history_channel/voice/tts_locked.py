@@ -30,11 +30,17 @@ lock = json.load(open(os.path.join(HERE, "voice_lock.json")))
 lines = json.load(open(os.path.join(HERE, "lines_ep1_emotion.json")))["lines"]
 
 
-def tts_text(ids):
-    t = lock["accent"]["text_prefix"] + " ".join(lines[c] for c in ids)
+def tts_line(c):
+    t = lines[c]
+    skip = lock["accent"].get("respelling_exceptions", {}).get(c, [])
     for x, y in lock["accent"]["respelling_tts_only"]:
-        t = re.sub(x, y, t)
+        if x.replace("\\b", "").lower() not in skip:
+            t = re.sub(x, y, t)
     return t
+
+
+def tts_text(ids):
+    return lock["accent"]["text_prefix"] + " ".join(tts_line(c) for c in ids)
 
 
 mode = sys.argv[1]

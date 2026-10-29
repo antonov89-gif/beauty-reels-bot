@@ -60,7 +60,18 @@
         "'andsome"
       ]
     ],
-    "rule": "Apply the prefix and the respelling ONLY to the text sent to TTS (regex, word boundaries). Captions, subtitles and the script keep normal English spelling. Clarity check after each render: transcribe; if a respelled word turns into another word that changes the meaning (e.g. 'doctor's 'ere' heard as 'doctor's ear'), keep the burned-in caption in normal spelling and, if needed, drop that one respelling for that line."
+    "rule": "Apply the prefix and the respelling ONLY to the text sent to TTS (regex, word boundaries), line by line. The script and the platform SRT keep normal English spelling. There are NO burned-in subtitles (owner 29.10), so every line must be clear by ear: after each render transcribe it; a respelled word heard as a different word is added to respelling_exceptions for that clip and the clip is re-voiced.",
+    "respelling_exceptions": {
+      "C03": [
+        "here"
+      ],
+      "C05": [
+        "they"
+      ],
+      "C10": [
+        "the"
+      ]
+    }
   },
   "tags": "emotion tags per line from voice/lines_ep1_emotion.json (stability 0.5)",
   "reference_sample": "map_shorts/history_channel/voice/heir_fr_sample.mp3 (0-12.8 s of audition_accent/heir_phon_eleven_v4.mp3: the opener + C02 start); used as the voice reference for Kling 'voices'",

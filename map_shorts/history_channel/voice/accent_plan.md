@@ -11,7 +11,7 @@ Pick criteria: accent clearly French but every word intelligible to an English l
 After the owner picks: lock v3 in `voice_lock.json` (voice id, owner id, model, settings, a 10-12 s reference sample for the Kling `voices` input), re-run the emotion test on C06-C15 with the locked voice.
 
 ## Rules for the accent
-- Light-to-medium French accent, comic but clear. Captions and subtitles use ordinary English spelling (no phonetic "zis/zat").
+- Light-to-medium French accent, comic but clear. No burned-in subtitles (owner 29.10); the platform SRT uses ordinary English spelling. Every line must be clear by ear.
 - French words only the English audience knows: "my friends", "no?", "Magnifique", "Bon". At most one per clip.
 - AI voice stays disclosed (platform flag and description).
 

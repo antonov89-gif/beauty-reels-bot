@@ -70,8 +70,8 @@
     ],
     "core": {
       "channel_name": "UNDECIDED",
-      "palette": "Scarlet, gold and cream; parchment cream captions with a gold key word; no white-on-black captions",
-      "typography": "Provisional: serif display for chips and title cards, high-contrast sans for captions, mobile-legible; exact fonts not chosen",
+      "palette": "Scarlet, gold and cream; no burned-in captions (owner 29.10), chips and title cards only",
+      "typography": "Provisional: serif display for chips and title cards, mobile-legible; no on-screen captions; exact fonts not chosen",
       "motifs": [
         "fact chip in the top third (icon + claim + source tag)",
         "year/place title card",

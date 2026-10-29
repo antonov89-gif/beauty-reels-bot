@@ -6,7 +6,7 @@
 | Dialogue clips | kling-4.0-r2v, 1080p, character element + the locked voice reference | $0.2125/s basic at 1080p = about $1.70 per 8 s (720p $0.1428/s = $1.14) |
 | Alternative tiers to test on C01 | veo3-1-quality 1080p $1.00 per 8 s, veo3-1-quality-4k $1.20; seedance-2.0 1080p $0.315/s = $2.52 per 8 s, 4k $0.7245/s | no voice reference on Veo; Seedance audio_urls untested |
 | Voice | ElevenLabs v4 "The Young Heir" with a French accent (voice_lock v3: tag + TTS-only respelling) and emotion tags, stability 0.5, tested on C01-C05 | about $0.0005 per clip line |
-| Edit | master 1080x1920, 30 fps, our own caption/chip layer (not AI text), AI mark, x264 CRF 14-16 (no re-encode loss), AAC 192k, -14 LUFS, true peak <= -1.5 dBFS, premium_gate.py report | free |
+| Edit | master 1080x1920, 30 fps, our own chip layer (not AI text), no burned-in captions (owner 29.10), SRT for the platform only, AI mark, x264 CRF 14-16 (no re-encode loss), AAC 192k, -14 LUFS, true peak <= -1.5 dBFS, premium_gate.py report | free |
 | Gates | frame check -> clip check at full resolution -> sequence check -> authenticity audit -> owner approval | no automatic approvals |
 
 ## Per-clip checklist (every generated clip, frames inspected at full resolution, not thumbnails)

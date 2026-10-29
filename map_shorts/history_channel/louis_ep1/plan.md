@@ -28,7 +28,7 @@ SH04 (24-32 s) "Tonight, I dine in public. Look as much as you like. Do not star
 - SH02: chip "DOCTOR + SURGEON ARE IN THE ROOM BEFORE HE GETS UP" [2 sources].
 - SH03: chip "UP TO ~100 COURTIERS AT THE GRAND LEVER" [secondary sources].
 - SH04: chip "RED HEELS: A COURT PRIVILEGE, 1670s" then "NEXT: DINNER, IN PUBLIC".
-- Captions: cream, 1-3 word pop-ins, gold on the key word, lower third; no white-on-black.
+- Captions: NONE on screen (owner 29.10); platform closed captions (SRT) only.
 
 ## Scene locks
 S01 state bedchamber: gilded panelling, painted ceiling, canopied bed with the curtains drawn back, tall windows (cool fill) + wax candles (warm key); period dress only; camera = the page standing at the foot of the bed, king screen-left, doors screen-right.
@@ -53,7 +53,7 @@ Native Veo speech first (voice may drift between clips: if so, re-voice the 4 li
 ## Gates (per skill + CLAUDE.md)
 1. Frames first ($0.08), contact sheet, check: one face, same man across frames, hands/arms count, no modern items, bed/doors geometry. Max 2 corrective attempts per frame.
 2. Clips ($0.72), check frame by frame: hands (5 fingers, each with an arm), the hat physics, the mirror, background people (no modern clothes, no roof/lamp), mouth sync, voice consistency. GENERATED != INSPECTED != APPROVED.
-3. Edit: chips + captions + AI mark, own sting, loudness gate.
+3. Edit: chips + AI mark (no burned-in captions), own sting, loudness gate.
 4. authenticity-check audit for fiction-with-real-history (facts, AI labels, no real descendants, music, sources), saved as authenticity_audit_<date>.md before any delivery.
 5. Budget: planned $0.80; cap $2.4 (3 attempts per shot); stop and ask if more is needed.
 
