@@ -10,6 +10,7 @@
 | French-accent test: The Young Heir + accent tag, Eleven v3 and v4 (2 orders x 0.38 RUB) | 0.76 RUB |
 | French-accent test 2: respelling variant, Eleven v4 (1 order) | 0.37 RUB |
 | Ep.1 voice C06-C10 and C12-C15, locked voice v3 (2 orders x 0.31 RUB) | 0.62 RUB |
+| Ep.1 re-voice C01 (new opener), C03, C05, C10 (1 order) | 0.28 RUB |
 | vidIQ credits (research of the Elizabeth and Chloe channels) | about 85 credits (balance 949 left) |
 | Video clips (Kling, Veo, Seedance) | $0.00: nothing generated yet |
 Dollar total on images: $0.82 (storyboard frames part $0.62, within the $0.80 cap set for that stage; the cards were approved separately). Next planned: C01 tests, see quality_standard.md.

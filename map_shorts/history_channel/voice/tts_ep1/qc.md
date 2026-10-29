@@ -14,3 +14,11 @@ Source: C01-C05 = audition_accent/heir_phon_eleven_v4.mp3 (accent test 2, same l
 - C05: "taller, zey say" heard as "tall, as they say".
 - C10: "Mine are ze tallest" heard as "Mine is a tallest".
 Fix proposal: re-voice C03, C05, C10 in one order with the respelling switched off for those words only (about 0.25 RUB, needs the owner's yes). Until then the burned-in captions carry the right words.
+
+## Re-voice 29.10 (owner said yes, 1 order 0.28 RUB): C01 (new opener), C03, C05, C10
+Respelling switched off for "here" (C03), "they" (C05), "the" (C10); accent prefix and all other respellings kept.
+- C01 "Marcel, not the ceiling. Me. Good. Welcome to Versailles. Yes, I'm that handsome. Try not to faint.": 8.8 s, all 17 words heard; stays a 10 s clip (the opening tilt needs the room).
+- C03: heard "The doctor's here, the surgeon's here..." (no more "ear"); 6.45 s.
+- C05: heard "...I never looked down" (Whisper adds a "d" where "look" runs into "down"; meaning unchanged; owner's ear decides); 4.05 s.
+- C10: heard "Mine are the tallest, of course" (fixed); 5.98 s.
+clip_times.json and the per-clip files C01/C03/C05/C10 replaced; listening file rebuilt (louis_ep1_voice_all_clips.mp4, not committed).

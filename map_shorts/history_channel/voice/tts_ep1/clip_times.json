@@ -1,12 +1,12 @@
 {
  "C01": {
-  "file": "audition_accent/heir_phon_eleven_v4.mp3",
+  "file": "tts_ep1/C01-C10.mp3",
   "start": 0.0,
-  "end": 9.54,
-  "speech_s": 9.54,
-  "matched": "17/18",
+  "end": 8.46,
+  "speech_s": 8.46,
+  "matched": "17/17",
   "clip_file": "tts_ep1/C01.mp3",
-  "clip_len_s": 9.87,
+  "clip_len_s": 8.8,
   "fits_8s": false
  },
  "C02": {
@@ -20,13 +20,13 @@
   "fits_8s": true
  },
  "C03": {
-  "file": "audition_accent/heir_phon_eleven_v4.mp3",
-  "start": 17.5,
-  "end": 23.34,
-  "speech_s": 5.84,
+  "file": "tts_ep1/C01-C10.mp3",
+  "start": 9.1,
+  "end": 15.14,
+  "speech_s": 6.04,
   "matched": "16/18",
   "clip_file": "tts_ep1/C03.mp3",
-  "clip_len_s": 6.27,
+  "clip_len_s": 6.45,
   "fits_8s": true
  },
  "C04": {
@@ -40,9 +40,9 @@
   "fits_8s": true
  },
  "C05": {
-  "file": "audition_accent/heir_phon_eleven_v4.mp3",
-  "start": 30.88,
-  "end": 34.52,
+  "file": "tts_ep1/C01-C10.mp3",
+  "start": 15.74,
+  "end": 19.38,
   "speech_s": 3.64,
   "matched": "13/14",
   "clip_file": "tts_ep1/C05.mp3",
@@ -90,13 +90,13 @@
   "fits_8s": true
  },
  "C10": {
-  "file": "tts_ep1/C06-C10.mp3",
-  "start": 24.92,
-  "end": 29.96,
-  "speech_s": 5.04,
-  "matched": "14/16",
+  "file": "tts_ep1/C01-C10.mp3",
+  "start": 20.52,
+  "end": 26.08,
+  "speech_s": 5.56,
+  "matched": "16/16",
   "clip_file": "tts_ep1/C10.mp3",
-  "clip_len_s": 5.46,
+  "clip_len_s": 5.98,
   "fits_8s": true
  },
  "C12": {
