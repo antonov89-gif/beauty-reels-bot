@@ -22,6 +22,7 @@
 | C01 part 2 test: Seedance 2.0 r2v 720p 10 s (usage.cost 1.26) | $1.26 |
 | C01 opener voice (option B), 1 order | 0.23 RUB |
 | C01 single take: Seedance 2.5 draft 480p 12 s (usage.cost 1.176; a first submit failed, cost not shown) | $1.18 |
+| C01 part 2: Seedance 2.5 draft 480p image-only 9 s (usage.cost 0.882) | $0.88 |
 | vidIQ credits (research of the Elizabeth and Chloe channels) | about 85 credits (balance 949 left) |
 | Video clips (Kling, Veo, Seedance) | $0.00: nothing generated yet |
 Dollar total on images: $0.82 (storyboard frames part $0.62, within the $0.80 cap set for that stage; the cards were approved separately). Next planned: C01 tests, see quality_standard.md.

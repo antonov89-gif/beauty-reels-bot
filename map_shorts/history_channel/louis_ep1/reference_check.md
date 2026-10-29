@@ -90,3 +90,15 @@ Lesson: the one-take-with-audio route makes Seedance both re-time the speech and
 Built ceiling_handheld.py -> frames/C01_open_handheld.mp4 (1080x1920, 24 fps, 4.75 s, not committed): 1.7 s of the 2K ceiling still animated with a measured hand-held motion (drift +-30/52 px, roll +-0.7 deg, tremor; eased to rest at the junction) + Kling part 1 v2 from frame 0 (its tilt onto the king). Same 1.08 crop on both layers (no zoom change). Junction: frame differences 1.2, 1.1, 0.2, 2.0 (smooth, no pop); the first attempt cut at 0.4 s of Kling and popped (30 vs 1-2), fixed.
 Soft notes: the plate motion is a 2-D drift (a distant planar ceiling under a rotating phone), so it has no parallax; the plume stays fixed to the lens edge from the still (a plume would move with the hand: acceptable). phone_move_check flags -15.6 % on the whole clip because the tilt changes the ceiling's perspective scale (known false positive for large pitch; the king's size is the real test, see part 1 v2).
 Final delivery must be 1080p (owner). Part 2 plan: Seedance 2.5 Draft, image only (first frame = last frame of part 1 v2), draft 480p first, then the 1080p final from the approved draft; our voice aligned to its speech by phrase.
+
+## C01 part 2, Seedance 2.5 Draft 480p, IMAGE-ONLY, 9 s (owner "да"; usage.cost 0.882, task 1b3b4511)
+First frame = the last frame of the approved hand-held opening. Status: draft GENERATED + INSPECTED, good enough to order the 1080p final; NOT final.
+| Check | Result |
+|--|--|
+| First frame equals the end of the opening | PASS (frame diff 3.3 at 480p vs 1-3 between neighbours): no splice at the start of speech |
+| Camera flight | PASS: cumulative scale +0.3 %, mean frame diff 2.0 (steady, micro-shake only) |
+| All words | PASS: "Oops, the ceiling. There. Welcome to Versailles. Yes, I'm that handsome. Try not to faint." (the transcript hears "zad -ansom" in our voice because of the respelling, the model said "that handsome") |
+| Speech after the camera has landed | PASS: first word at 0.56 s of part 2 (the opening already holds still about 1 s) |
+| Lips vs our voice | our voice aligned phrase by phrase to the model's speech (rough_c01b.py): residual 0.00-0.06 s on 12 of 15 words, 0.15-0.28 s on "the ceiling" and 0.22 s on "handsome"; tempo 0.81x on "Oops the ceiling", 1.25-1.3x on "welcome to Versailles" and "I'm that handsome" (audible but mild) |
+| Face / identity | stable; expressions follow the prompt (startled, smug, smirk) |
+Rough cut frames/C01_rough_v2.mp4 (not committed): opening 4.75 s + draft part 2 (480p upscaled for the check), 24 fps. The 1080p final of part 2 is NOT ordered yet: price not shown by the service.
