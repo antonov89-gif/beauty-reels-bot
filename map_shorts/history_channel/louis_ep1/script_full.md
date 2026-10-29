@@ -1,7 +1,7 @@
 # Louis XIV, ep. 1 "My Morning": full scene script (about 2:06, Short), 28.10.2026
 Format and camera grammar from the frame check of Elizabeth's Vlog 1 (frames_vlog1_LjfGP7wpjVs.md): three long takes with a hand-held phone camera that moves inside the shot, one burst of micro-cuts at the reward moment, a gag beat with a wide vignetted view, a lens-cover cut at the end. Our own character, set, lines and graphics.
 Look: card v2 (louis_card/louis_xiv_character_card_v2.png, face reference A2_face.jpg): raw documentary-vlog frames, phone front camera, ultra-wide (~16-18 mm eq), window and candle light, pores and powder. Wig (owner 28.10: WHITE-GREY is the main look): he wakes in a short dark curled night wig and a gold silk dressing gown (C01-C05), rejects a tall dark wig (C04), puts on the tall white-grey powdered wig at C06 and keeps it to the end (C07-C15; scarlet gold-sun coat after the dressing burst). A white powdered wig is an anachronism for 1685 and is played as a joke ("I am simply early"); the description says the styling is exaggeration.
-Audio: native Veo speech first (voice may drift: then one TTS voice for all lines), own harpsichord sting, room tone, foley. AI mark in the corner all the time.
+Audio (owner 29.10: NO MUSIC at all): the locked TTS voice, room tone, foley (fabric, footsteps, doors, cutlery, swooshes, clicks). The clips' own generated audio is never used (it can contain music). AI mark in the corner all the time.
 Fact tags: [2S] two sources checked 28.10; [1S] one source or secondary, hedge; [C] comedy, not a claim.
 
 ## Structure (clip = 8 s, Veo 3.1 fast; the take = clips chained with the same framing so the seam is hidden)
@@ -43,7 +43,7 @@ C10 (76-84) CAMERA: foreground foot with a red heel and the buckle in focus, rac
 SOUND: door latches, boots on parquet, plume brush, a small laugh from the court.
 
 ### BURST (84-92 s), dressing montage = 8 macro stills (about 1 s each), whip pans and motion blur
-1 red heel and buckle  2 ring-covered hand  3 powder puff  4 gilded hand mirror  5 sun brooch  6 lace cravat knot  7 wig comb  8 gold embroidered cuff. No dialogue; swoosh + click per cut; harpsichord rhythm in. Chip at the end: "~10 MINUTES OF GLORY, EVERY DAY" is NOT used (no source). Optional chip: "AT 14 HE DANCED THE SUN GOD APOLLO (1653)" [2S] over frame 5.
+1 red heel and buckle  2 ring-covered hand  3 powder puff  4 gilded hand mirror  5 sun brooch  6 lace cravat knot  7 wig comb  8 gold embroidered cuff. No dialogue; swoosh + click per cut, fabric and buckle foley, NO music. Chip at the end: "~10 MINUTES OF GLORY, EVERY DAY" is NOT used (no source). Optional chip: "AT 14 HE DANCED THE SUN GOD APOLLO (1653)" [2S] over frame 5.
 
 ### TAKE 4 (92-108 s), Hall of Mirrors (cut)
 C12 (92-100) CAMERA: backward walk, the king strides toward the lens, mirrors and chandeliers left, arched windows right, courtiers trailing. LINE: "Venice sold us mirrors. Now we have 357 of our own, and I'm in every single one." CHIP: "HALL OF MIRRORS: 357 MIRRORS · 1678-1684" [2S].
@@ -52,7 +52,7 @@ C13 (100-108) CAMERA: handheld halt, the king stops in front of a mirror panel (
 ### END (108-126 s), gallery threshold, then the banquet table (owner 29.10: the CTA ending)
 C14 (108-116) ACTION: he straightens a curl, glances at the page, then points at the lens. LINE: "Tonight I dine in public. You may watch, but don't stare. Well... a little. Subscribe to my stunning channel." [2S rule: onlookers were not allowed to stare] CHIP: "NEXT: DINNER, IN PUBLIC".
 C15 (116-126) ACTION: he commands the lens, waves the audience away with the back of his hand ("do what you like"), then throws his chin up and laughs a cold, arrogant, haughty laugh down his nose, eyes half-closed, turns and strides toward a long banquet table, a courtier bows; the gilded mirror swings up over the lens as the cut. LINE: "Hit like. Ring the bell. Anyway, do what you like. [haughty, arrogant laugh] I'm off to the table to feast!" Final title card (text, not voiced): "THE SUN IS NEVER LATE."
-SOUND: the haughty laugh (after "do what you like"), footsteps, cutlery and a harpsichord sting; hard cut to black.
+SOUND: the haughty laugh (after "do what you like"), footsteps, cutlery, a mirror whoosh; hard cut to black. No music.
 The ending is the series OUTRO for every video (louis_series_bible.md).
 
 ## On-screen text and graphics (owner 29.10: "субтитры не нужны, делаем как референс")

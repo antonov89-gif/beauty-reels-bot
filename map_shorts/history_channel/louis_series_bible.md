@@ -18,3 +18,6 @@ Reserve bank (NOT used while the opener carries the line; a future episode may s
 
 ## Fixed cast and props
 Marcel the page (off screen, "my left side, MY left"), the gilded hand mirror (cut device), the plumed hat gag, the red heels, the white-grey wig.
+
+## Sound rule (owner 29.10)
+NO music in any video of the series: no score, no sting, no harpsichord. Only the locked voice, room tone and foley. The audio that the video models generate is always muted and replaced (it can contain music).

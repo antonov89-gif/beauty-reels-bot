@@ -84,7 +84,7 @@
       "realism": "Owner 28.10: raw documentary-vlog look like the Elizabeth channel (phone front camera, ultra-wide, handheld, visible skin detail), extravagant and hype character; photoreal AI, disclosed",
       "camera": "Proposed: handheld vlog framing by an off-screen page, MCU to the lens, arm and body in frame, backward walks",
       "lighting": "Proposed: candle and window practicals, warm key and cool fill",
-      "sound": "Proposed: low harpsichord/strings bed (own), room tone, footsteps on parquet, fabric, door latches",
+      "sound": "NO music (owner 29.10). Room tone, footsteps on parquet, fabric, door latches, the locked voice; generated clip audio never used",
       "evidence_level": "OWNER_DIRECTION + REF03 frames (Vlog 1 forensics)"
     },
     "must_keep": [
@@ -284,7 +284,7 @@
       "light": "warm candle key, cool window fill, no modern light sources",
       "weather": "not specified; soft daylight through tall windows",
       "shot_axis": "camera POV from the page standing at the foot of the bed, king screen-left, doors screen-right",
-      "sound_bed": "murmur, wax candles, parquet footsteps, fabric, door latches, own low harpsichord bed"
+      "sound_bed": "murmur, wax candles, parquet footsteps, fabric, door latches, no music"
     },
     "S02": {
       "setting": "threshold of the Grande Galerie / Hall of Mirrors (built 1678-1684), arched windows one side, mirror panels the other",
@@ -292,7 +292,7 @@
       "light": "daylight from arched windows, no modern light sources",
       "weather": "soft daylight",
       "shot_axis": "camera ahead of the king, walking backwards; king facing the lens",
-      "sound_bed": "footsteps on parquet, murmur, distant door, own harpsichord sting"
+      "sound_bed": "footsteps on parquet, murmur, distant door, no music"
     },
     "S03": {
       "setting": "wig table beside the canopied bed: three wigs on wooden stands, powder puff, hand mirror, candle and window light",

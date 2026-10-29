@@ -44,16 +44,16 @@ SH02 motion: "Handheld pan from the valet to the bedside. The king, deadpan and 
 SH03 frame: "Medium wide handheld, king in the foreground in bed or sitting up, tall double doors open behind him and richly dressed courtiers in period court dress filing in and bowing in a line."
 SH03 motion: "The courtiers bow in turn. The king, unimpressed, chin raised: 'Bow. Lower. Good... lower. Eyes on me, not the hat.' One courtier bows too low and his plumed hat tumbles to the floor; wide vignetted view, then a swing back to the king's smug face. A gilded hand mirror swings up and flashes over the lens. Door latches, boots on parquet."
 SH04 frame: "Handheld view from ahead of the king as he walks along a gallery threshold: arched windows on the left, tall mirror panels on the right, polished parquet, daylight; the king in an embroidered coat and full curled wig faces the lens, a few courtiers trailing."
-SH04 motion: "Low angle first: his red-heeled shoes click on the polished parquet. Camera steps backwards as the king strides toward it, glances at his reflection in a mirror panel, straightens a curl and says with a raised eyebrow: 'Tonight, I dine in public. Look as much as you like. Do not stare. Next time: dinner with the Sun King.' He turns away. Footsteps, a short harpsichord sting, hard cut."
+SH04 motion: "Low angle first: his red-heeled shoes click on the polished parquet. Camera steps backwards as the king strides toward it, glances at his reflection in a mirror panel, straightens a curl and says with a raised eyebrow: 'Tonight, I dine in public. Look as much as you like. Do not stare. Next time: dinner with the Sun King.' He turns away."
 Negative (all): "no modern clothing, no metal roofs, no phones, no glasses, no extra fingers, no text overlays, no crosses held in odd ways, no watermark."
 
 ## Sound
-Native Veo speech first (voice may drift between clips: if so, re-voice the 4 lines with one TTS voice and keep the Veo ambience). Own harpsichord sting (synthesised), room tone, wood and fabric foley. Loudness -15.5...-12.5 LUFS, TP <= -1 via premium_gate.py.
+Native Veo speech first (voice may drift between clips: if so, re-voice the 4 lines with one TTS voice and keep the Veo ambience). NO music (owner 29.10): room tone, wood and fabric foley only; the clips' own audio is not used. Loudness -15.5...-12.5 LUFS, TP <= -1 via premium_gate.py.
 
 ## Gates (per skill + CLAUDE.md)
 1. Frames first ($0.08), contact sheet, check: one face, same man across frames, hands/arms count, no modern items, bed/doors geometry. Max 2 corrective attempts per frame.
 2. Clips ($0.72), check frame by frame: hands (5 fingers, each with an arm), the hat physics, the mirror, background people (no modern clothes, no roof/lamp), mouth sync, voice consistency. GENERATED != INSPECTED != APPROVED.
-3. Edit: chips + AI mark (no burned-in captions), own sting, loudness gate.
+3. Edit: chips + AI mark (no burned-in captions), no music, loudness gate.
 4. authenticity-check audit for fiction-with-real-history (facts, AI labels, no real descendants, music, sources), saved as authenticity_audit_<date>.md before any delivery.
 5. Budget: planned $0.80; cap $2.4 (3 attempts per shot); stop and ask if more is needed.
 

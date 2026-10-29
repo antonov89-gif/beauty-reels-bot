@@ -33,3 +33,6 @@ For every phone-handled shot, from the contact sheet and motion curve: (1) C01 h
 
 ## Camera-flight rule (owner 29.10: "everything realistic, the camera must not fly")
 A phone-handled shot is a ROTATION (tilt, pan, roll) plus small shake, never a dolly or zoom unless the script says the page walks. Before generating a clip between two frames, both frames must share the same camera position (compare the scale of fixed objects: canopy, window, bed head). After generating: run `louis_ep1/phone_move_check.py <clip>` (a flag is a reason to look, not a verdict: a big pitch with an ultra-wide lens also changes the apparent scale) AND measure the subject's width (wig/face) in 4 frames next to the target frame; more than +/-10 % growth = FLY = reject; the subject's apparent size stays within +/-10 % except in a walk shot. Never write "acceptable" for a flying camera.
+
+## No-music gate (owner 29.10)
+The final mix contains no music. Check: every clip's generated audio track is muted in the edit (stream map shows only our voice and foley stems); a spectral listen of the final file for tonal/rhythmic content outside the voice; the authenticity audit states "music: none".
