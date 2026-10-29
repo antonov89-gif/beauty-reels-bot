@@ -234,3 +234,15 @@ Not done yet (edit layer): mono audio (stereo export option), AI mark, title chi
 Free variant built: frames/C05_final_jumpcut.mp4 = the same take from 2.6 s (5.4 s): it reads as a vlog jump cut into a closer shot, speech starts at once; the jump is still a visible edit.
 Status: GENERATED + INSPECTED; join FAIL against the no-visible-splice rule. Options for the owner: (a) keep the jump cut (free), (b) draft route draft + final (about $0.78 + $4.34, exact first frame proven), (c) back to the Veo take (different face).
 Owner 29.10: "Нормально дальше" -> C05 = the jump-cut variant (frames/C05_final.mp4, 5.4 s), accepted. C06 first frame = last frame of seedance25_c05_1080.mp4 (frames/C06_first.jpg).
+
+## C06 DRAFT, reference manner (owner "Да"; usage.cost 0.882, task 18f5f0ab): rough frames/C06_rough_with_prev.mp4 (not committed)
+| Gate | Result |
+|--|--|
+| Join C05 -> C06 | PASS: frame diff 2.7 vs neighbours 0.2-1.4 |
+| Camera moves (reference) | PASS: he picks the phone up from the table (0-2 s), then hand-held selfie with sway; camera path 130/88 px; motion per second 2.5-14 (reference calm 2-4, action higher) |
+| Flight check | FLAG: scale +46 % = the pick-up (the phone lifts from the table into his hand, the move is motivated and visible); owner's eye |
+| Phone mistake | PASS: the white wig fills the lens (2.5-4 s) |
+| Words | PASS: every word by ASR |
+| Lips | offset 0.10-0.20 s, 0.30 s on "One day" (soft) |
+| Face / wig / gown | face and brown wig match; the shirt front reads more ruffled than in C04 (lace already in C05): soft |
+Status: GENERATED + INSPECTED (draft). 1080p final about $4.88 = separate yes.
