@@ -24,11 +24,12 @@ mode = sys.argv[1] if len(sys.argv) > 1 else "estimate"
 imgs = [host(H0 + "louis_card/A3_white_wig.jpg", "image/jpeg"), host(H0 + "louis_card/D2_morning.jpg", "image/jpeg"), host(H0 + "louis_ep1/frames/C01.jpg", "image/jpeg")]
 voice = host(H0 + "voice/heir_fr_sample.mp3", "audio/mpeg")
 prompt = ("Raw documentary phone-vlog look, handheld ultra-wide front camera. @king (a vain 17th-century French king in a gold silk dressing gown and a short dark curled night wig, propped in a canopied state bed) "
-          "Shot on a phone held by a page. 0-1.7 s: the phone points straight up at the painted gilded ceiling, small natural hand-held shake and slight roll, the tip of a hat plume drifts across the lower edge of the lens. 1.7-3 s: one continuous downward tilt, no cut: motion blur, slight rolling-shutter wobble, exposure darkens from the bright ceiling to the warm bed, autofocus hunts then locks on his face, a small overshoot and correction. 3-10 s: he is framed from slightly below in the bed, the hand-held shake calms to micro-movements. He looks into the lens with a smug smirk and says in @king_voice, in a haughty, drawling, arrogant tone: "
+          "Shot on a phone held by a page. 0-1.3 s: the phone points straight up at the painted gilded ceiling, small natural hand-held shake and slight roll, the tip of a hat plume drifts across the lower edge of the lens, nobody speaks. 1.3-2.5 s: one continuous downward tilt, no cut: motion blur, slight rolling-shutter wobble, exposure darkens from the bright ceiling to the warm bed, autofocus hunts then locks on his face, a small overshoot and settle; he is already glaring into the lens. Only from 2.5 s does he speak. 2.5-12 s: framed from slightly below in the bed, the hand-held shake calms to micro-movements. He looks into the lens with a smug smirk and says in @king_voice, in a haughty, drawling, arrogant tone: "
           "\"Marcel, not the ceiling. Me. Good. Welcome to Versailles. Yes, I'm that handsome. Try not to faint.\" Natural lip sync, room tone and candle flicker, no music.")
-body = {"model": "kling-4.0-r2v", "prompt": prompt, "image_urls": [imgs[2]],
+start = host(H0 + "louis_ep1/frames/C01_ceiling.jpg", "image/jpeg")  # first frame = the ceiling (owner 29.10); generate it first (2K still, about $0.04)
+body = {"model": "kling-4.0-r2v", "prompt": prompt, "image_urls": [start],
         "kling_elements": [{"name": "king", "element_input_urls": imgs, "tag": "character", "description": "vain French king, smug smirk, rouged cheeks, beauty patch, thin curled moustache"}],
-        "voices": [{"name": "king_voice", "audio_url": voice}], "duration": 8, "resolution": "720p", "aspect_ratio": "9:16"}
+        "voices": [{"name": "king_voice", "audio_url": voice}], "duration": 12, "resolution": "1080p", "aspect_ratio": "9:16"}
 print(json.dumps({k: (v if k != "prompt" else v[:80] + "...") for k, v in body.items()}, indent=1)[:1500])
 if mode == "estimate":
     e = apipod._req("POST", "/v1/pricing/estimate", {"model_id": body["model"], "duration": body["duration"], "resolution": body["resolution"]})
