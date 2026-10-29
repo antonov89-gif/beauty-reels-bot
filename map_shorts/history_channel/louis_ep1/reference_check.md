@@ -31,3 +31,18 @@ Status: GENERATED, INSPECTED (contact sheet 6 fps + 3 full-res frames + motion c
 ## C01 part 1 v1: REJECTED by the owner (29.10): "we make everything realistic, but the camera flies"
 My earlier verdict "camera also moves toward the bed, acceptable" was WRONG. Measured with phone_move_check.py (feature tracking, new): scale grows 2-10 % per frame between 0.8 and 1.4 s, cumulative +141 % = the camera flies in (the king becomes about 2.4x larger in 0.7 s). A real tilt is a rotation: the king keeps his size. Cause: the first frame (ceiling) was generated from a different camera position than the last frame (C01, close), so the model had to travel between them. Status: GENERATED, INSPECTED, REJECTED. Spent $0.65.
 Fix plan: new first frame from the SAME camera position as C01, pitched up (gen_ceiling2.py), prompt "rotation only, the camera does not move forward"; gate = phone_move_check.py cumulative scale change below 12 % and the king's apparent size constant. Fallback if the model still flies: build the tilt in the edit from two plates (ceiling plate and C01 frame) with a measured rotation curve, motion blur and shake.
+
+## C01 part 1 v2 (29.10, owner said yes): frames/C01_ceiling2.jpg ($0.04) + frames/kling_i2v_part1_v2.mp4 ($0.6525, task eaf8522e)
+Method: first frame = the same camera position as C01 pitched up 60 degrees; prompt "rotation only, no dolly, no zoom, no flying, the king keeps his size". 1076x1924, 24 fps, 3.04 s.
+Status: GENERATED, INSPECTED (contact sheet 6 fps, 4 full-res frames next to the C01 target, motion tool, audio), not APPROVED by the owner.
+| Check | Result |
+|--|--|
+| Camera does not fly (owner rule) | PASS by eye and by manual measurement: the king's wig is 140 / 120 (blur) / 135 / 128 px wide at t=0.1 / 1.4 / 1.9 / 2.9 s on a 400-px-wide panel, the C01 target 130 px: within +/-10 %. The room slides through the frame, the king does not grow |
+| phone_move_check.py | FLAG (cumulative -21 %, per-frame scale 0.984-0.999). In v1 it measured +141 % with a visible dolly-in. With an ultra-wide lens a 60-degree pitch changes the apparent size of the ceiling and canopy by perspective, so the global-scale metric over-flags large pitches; the tool needs a subject-based variant (track the face/wig). Decision rests on the manual measurement above, stated as such |
+| One continuous tilt, no cut | PASS: hold 0-0.6 s, tilt 0.6-2.0 s, settle by 2.1 s |
+| Lands on the C01 frame | PASS: last frames match the storyboard frame (wig, moustache, gown, canopy, window, courtiers) |
+| Natural blur / exposure / focus hunt | PASS (blur 0.8-1.9 s, face smeared by blur and sharp at ~1.9 s) |
+| Ceiling hold and shake | SOFT: hold is 0.6 s (needs >= 1.3 s) and almost static; fix in the edit |
+| Last 1 s | HOLD frozen; trim when joining part 2 |
+| Audio | A continuous bed at about -25 dB, no speech (transcription empty); its content is NOT identified (possibly generated music/ambience). NOT USED: our own room tone and foley are laid instead (no unlicensed audio) |
+Cost of the camera-flight lesson: v1 $0.65 + v2 $0.04 + $0.65.
