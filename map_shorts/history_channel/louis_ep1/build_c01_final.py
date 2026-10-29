@@ -24,7 +24,7 @@ for a, b in PHR:
     s0 = max(0.0, ov[a][1] - 0.06); e0 = ov[b - 1][2] + 0.10; seg = x[int(s0 * SR):int(e0 * SR)]
     our_d = ov[b - 1][2] - ov[a][1]; mod_d = mv[b - 1][2] - mv[a][1]; tempo = 1.0
     if b - a > 1 and our_d > mod_d * 1.12:
-        tempo = min(1.3, our_d / mod_d)
+        tempo = min(1.15, our_d / mod_d)
         seg = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "-", "-af", f"atempo={tempo:.3f}", "-f", "f32le", "-"], input=seg.tobytes(), capture_output=True, check=True).stdout, dtype=np.float32)
     elif b - a > 1 and our_d < mod_d * 0.88:
         tempo = max(0.8, our_d / mod_d)

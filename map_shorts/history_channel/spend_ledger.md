@@ -24,6 +24,7 @@
 | C01 single take: Seedance 2.5 draft 480p 12 s (usage.cost 1.176; a first submit failed, cost not shown) | $1.18 |
 | C01 part 2: Seedance 2.5 draft 480p image-only 9 s (usage.cost 0.882) | $0.88 |
 | C01 part 2 final 1080p: Seedance 2.5 Draft -> final (usage.cost 4.87746; a first final submit failed, cost not shown) | $4.88 |
+| C01 re-voice with exceptions (that, handsome), 1 order | 0.23 RUB |
 | vidIQ credits (research of the Elizabeth and Chloe channels) | about 85 credits (balance 949 left) |
 | Video clips (Kling, Veo, Seedance) | $0.00: nothing generated yet |
 Dollar total on images: $0.82 (storyboard frames part $0.62, within the $0.80 cap set for that stage; the cards were approved separately). Next planned: C01 tests, see quality_standard.md.
