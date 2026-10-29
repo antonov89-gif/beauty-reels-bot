@@ -9,8 +9,7 @@ FM = "/home/user/beauty-reels-bot/map_shorts/history_channel/louis_card/face_mas
 K = open("/home/user/beauty-reels-bot/.zernio_key").read().strip(); H = {"Authorization": "Bearer " + K, "Content-Type": "application/json"}
 FACE = ("a man of about 35 with a pale complexion, light grey-hazel eyes, a long straight nose, a narrow face, a thin upturned waxed moustache, arched brows and a small dark beauty spot beside the mouth")
 KEEP = ("He has EXACTLY the same face as the man in the FIRST and SECOND reference images (same eyes, nose, moustache, age about 35 and skin): do not make him older. "
-        "Makeup (series standard, owner 29.10): a light, even layer of pale period face powder that makes the skin noticeably paler and matte, the skin texture still visible, only a very soft natural flush on the cheeks; NOT a heavy white mask and NOT strong pink rouge. "
-        "Expression: a smug, self-satisfied half-smile, relaxed, not stern, not tired. Only the wig and clothes change as described.")
+                "Makeup (series standard, owner 29.10: more powder): the heavy period makeup of the FIFTH reference image: the face whitened with pale powder (a matte white-pink complexion), clearly pink rouged cheeks and slightly pink lips, as at the court of Versailles; the face itself (features, age) stays the man of the first two reference images. Expression: a smug, self-satisfied half-smile, relaxed, not stern, not tired. Only the wig and clothes change as described.")
 BASE = "Vertical 9:16 phone photo, ultra-wide front camera look, hand-held, soft natural light, photorealistic, real skin texture with visible pores. No text, no modern objects. "
 WHITE = ("the tall grey-white powdered wig from the THIRD reference image: a high wavy crown standing up above the head, rows of rolled curls at the sides, and long grey curls falling over the shoulders to the chest")
 GOLD = "a gold embroidered silk dressing gown over a white lace shirt"
@@ -42,11 +41,11 @@ def find(x):
 
 
 def one(fid):
-    refs = [host(FM + "face_front_talking.jpg"), host(FM + "face_three_quarter.jpg"), host(FM + "tall_wig_ref.jpg"), host("frames/" + fid + ".jpg")]
+    refs = [host(FM + "face_front_talking.jpg"), host(FM + "face_three_quarter.jpg"), host(FM + "tall_wig_ref.jpg"), host("frames/" + fid + ".jpg"), host(FM + "makeup_ref_C09v6.jpg")]
     body = {"model": "nano-banana-2.1", "prompt": BASE + SC[fid] + " The room and the other people like the FOURTH reference image (not its camera distance); ignore the wig and the face in the fourth image. " + KEEP, "aspect_ratio": "9:16", "quality": "2K", "image_urls": refs}
     r = apipod.submit("images", body)
     if "data" not in r: print(fid, "SUBMIT FAILED", r); return
-    tid = r["data"]["task_id"]; out = f"frames/{fid}_v6.jpg"; open(out + ".task_id", "w").write(tid)
+    tid = r["data"]["task_id"]; out = f"frames/{fid}_mk.jpg"; open(out + ".task_id", "w").write(tid)
     res = apipod.wait("images", tid, timeout=400, every=4)
     open(out + ".status.json", "w").write(re.sub(r'(https://[^"?]+)\?[^"]*', r'\1?[signed query removed]', json.dumps(res, indent=1)))
     u = find(res.get("data") or {})
