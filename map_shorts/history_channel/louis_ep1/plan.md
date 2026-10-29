@@ -24,7 +24,7 @@ SH04 (24-32 s) "Tonight, I dine in public. Look as much as you like. Do not star
 
 ## Overlay (our graphics, not AI text)
 - Corner mark all 32 s: "AI-GENERATED" (small, high contrast, top-left under the safe zone).
-- SH01: title card "VERSAILLES, c. 1685".
+- SH01: title card "VERSAILLES, FRANCE · 1685".
 - SH02: chip "DOCTOR + SURGEON ARE IN THE ROOM BEFORE HE GETS UP" [2 sources].
 - SH03: chip "UP TO ~100 COURTIERS AT THE GRAND LEVER" [secondary sources].
 - SH04: chip "RED HEELS: A COURT PRIVILEGE, 1670s" then "NEXT: DINNER, IN PUBLIC".

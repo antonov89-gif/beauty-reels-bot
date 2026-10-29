@@ -3,10 +3,10 @@ Rule for the whole series: the king is never flat. Every line carries a named em
 
 | Clip | Voice emotion (tags, delivery) | Face and body (put into the Kling/Veo prompt) | Non-verbal beat |
 |--|--|--|--|
-| C01 | irritated and sharp "Marcel — down!", then regal command, drawling smug welcome, self-admiring "that handsome", sneering amusement on "faint" | eyes roll up to the ceiling, jaw tight, then chin lifts, slow smirk, one eyebrow up on "faint" | short exasperated exhale after "down" |
-| C02 | conspiratorial pride, a soft laugh into "premiere" | leans in toward the lens as if sharing a secret, eyes sparkle, tiny head tilt | small satisfied "hm" |
-| C03 | dry boredom for the doctor, mock puzzlement, then commanding and breathy, swooning on "Magnificent" | glances at the doctor and away, eyelids heavy, then eyes wide and shining at his own reflection, lips parted | a breath in before "Magnificent" |
-| C04 | brisk, mock-tragic sigh, wounded pride, dry resolve | hand on the chest, lower lip pushes out, brow knits, then lifts chin | a sigh on "leaving" |
+| C01 | irritated and sharp "Marcel, down!", then regal command, drawling smug welcome, self-admiring "that handsome", sneering amusement on "faint" | eyes roll up to the ceiling, jaw tight, then chin lifts, slow smirk, one eyebrow up on "faint" | short exasperated exhale after "down" |
+| C02 | conspiratorial pride, a soft laugh into "opening night" | leans in toward the lens as if sharing a secret, eyes sparkle, tiny head tilt | small satisfied "hm" |
+| C03 | dry boredom for the doctor, mock puzzlement, then commanding and breathy, swooning on "Magnificent, no?" | glances at the doctor and away, eyelids heavy, then eyes wide and shining at his own reflection, lips parted | a breath in before "Magnificent" |
+| C04 | brisk, mock-tragic sigh, wounded pride, dry resolve | hand on the chest, lower lip pushes out, brow knits, then lifts chin | a sigh on "falling out" |
 | C05 | smug, lofty, a soft sigh of delight | strokes the tall wig, closes his eyes for a moment, tastes the compliment, opens them to the lens | sigh of delight |
 | C06 | theatrical savouring of each word, prophetic, mock-modest chuckle | holds the white wig up like a relic, eyes shine, a modest lowered gaze on "early" with a sly smile | chuckle |
 | C07 | regal boredom, then delighted preening | slow blink, then a pleased little shimmy of the shoulders, admires his sleeve | delighted "mm" |
@@ -16,7 +16,7 @@ Rule for the whole series: the king is never flat. Every line carries a named em
 | C12 | showman grandeur, gleeful, soft laugh on "Lucky mirrors" | strides with open arms, delighted grin, glances left and right at his reflections | soft laugh |
 | C13 | snapped irritation, then swoon on "what a profile" | head snaps to the courtier, glare, then turns to the mirror and melts, hand to the cheek | breathy "Ah..." |
 | C14 | mock-generous, firm "Do not stare", sly conspiratorial "a little", then imperious "Subscribe to my stunning channel" | open palm, stern finger, a wink and a tiny smile, then a regal point at the lens | small laugh |
-| C15 | imperious commands ("Like it. Ring the bell."), dismissive boredom ("do what you like"), THEN a cold, arrogant, haughty laugh (owner 29.10: the laugh comes after "do what you like"), gleeful hunger ("off to the table to feast") | commands with a finger, waves the audience away with the back of the hand, then chin lifted, eyes half-closed, looks down his nose and laughs with contempt, turns and strides to the table with a look back over his shoulder | the laugh itself, footsteps, cutlery |
+| C15 | imperious commands ("Hit like. Ring the bell."), dismissive boredom ("do what you like"), THEN a cold, arrogant, haughty laugh (owner 29.10: the laugh comes after "do what you like"), gleeful hunger ("off to the table to feast") | commands with a finger, waves the audience away with the back of the hand, then chin lifted, eyes half-closed, looks down his nose and laughs with contempt, turns and strides to the table with a look back over his shoulder | the laugh itself, footsteps, cutlery |
 
 ## Voice rules for emotion
 - Stability: Natural (0.5) is the safe default; Creative (0.0) gives the tags more effect but can hallucinate. Test both on C01-C05, pick one, lock it. (Lumean accepts only multiples of 0.5.)

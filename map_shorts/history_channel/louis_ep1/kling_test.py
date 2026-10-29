@@ -25,7 +25,7 @@ imgs = [host(H0 + "louis_card/A3_white_wig.jpg", "image/jpeg"), host(H0 + "louis
 voice = host(H0 + "voice/heir_sample.mp3", "audio/mpeg")
 prompt = ("Raw documentary phone-vlog look, handheld ultra-wide front camera. @king (a vain 17th-century French king in a gold silk dressing gown and a short dark curled night wig, propped in a canopied state bed) "
           "starts on the painted ceiling, the phone tilts down to his face, a feather plume brushes the lens. He looks into the lens with a smug smirk and says in @king_voice, in a haughty, drawling, arrogant tone: "
-          "\"Marcel, down! Bow. Lower. Good. Welcome to Versailles. Yes, I am that handsome. Try not to faint.\" Natural lip sync, room tone and candle flicker, no music.")
+          "\"Marcel, down! Bow. Lower. Good. Welcome to Versailles, my friends. Yes, I'm that handsome. Try not to faint.\" Natural lip sync, room tone and candle flicker, no music.")
 body = {"model": "kling-4.0-r2v", "prompt": prompt, "image_urls": [imgs[2]],
         "kling_elements": [{"name": "king", "element_input_urls": imgs, "tag": "character", "description": "vain French king, smug smirk, rouged cheeks, beauty patch, thin curled moustache"}],
         "voices": [{"name": "king_voice", "audio_url": voice}], "duration": 8, "resolution": "720p", "aspect_ratio": "9:16"}

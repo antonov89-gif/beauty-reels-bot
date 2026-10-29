@@ -9,26 +9,26 @@ Quiet room with soft furniture (a closet full of clothes works), phone 15-20 cm 
 
 ## A. Reusable pack (record once)
 O1 "Marcel, down!"
-O2 "Bow. Lower. Good. Welcome to Versailles. Yes, I am that handsome. Try not to faint."   (the signature opener, 6-7 s)
+O2 "Bow. Lower. Good. Welcome to Versailles, my friends. Yes, I'm that handsome. Try not to faint."   (the signature opener, 6-7 s)
 O3 "Bow. Lower. Good."   (short call-back)
-Z1 "Subscribe to my stunning channel. Like it. Ring the bell. Anyway... do what you like." + (a cold, arrogant, haughty laugh, chin up, contempt, NOT a warm giggle) + "I am off to the table to feast!"   (the signature outro, 10 s, laugh after "do what you like")
-S1 "Look at me. Magnificent." / S2 "What a face, though. Honestly." / S3 "Handsome. Again. Every single morning." / S4 "I could cry. Look at that profile." / S5 "Yes, white suits me. Everything suits me." / S6 "Only one worth looking at. Me. Obviously." / S7 "Look at that ankle." / S8 "Lucky mirrors." / S9 "Ah... what a profile." / S10 "They are all good sides." / S11 "Magnifique. Me, I mean." / S12 "I am sorry. I cannot help it." / S13 "Even my shadow is handsome." / S14 "Do not touch. Admire." / S15 "Perfection takes no effort. Mine, I mean." / S16 "Well... a little."
+Z1 "Subscribe to my stunning channel. Hit like. Ring the bell. Anyway, do what you like." + (a cold, arrogant, haughty laugh, chin up, contempt, NOT a warm giggle) + "I'm off to the table to feast!"   (the signature outro, 10 s, laugh after "do what you like")
+S1 "Look at me. Magnificent, no?" / S2 "What a face, though." / S3 "Handsome again. Every single morning." / S4 "I could cry. Look at that profile." / S5 "White suits me. Everything does." / S6 "Only one worth looking at. Me, obviously." / S7 "Look at that ankle." / S8 "Lucky mirrors." / S9 "Ah... what a profile." / S10 "They're all my good side." / S11 "Magnifique. Me, I mean." / S12 "Sorry. I can't help it." / S13 "Even my shadow is handsome." / S14 "Don't touch. Just admire." / S15 "Perfection takes no effort. Mine, I mean." / S16 "Well... a little."
 
 ## B. Episode 1 "My Morning" (by clip)
 C01 = O1 + O2
-C02 "A hundred people watch me wake up. The French call it the lever. I call it a premiere."
-C03 "The doctor is here. The surgeon is here. Nobody came for them. Look at me. Magnificent."
-C04 "Now. The wig. At seventeen my hair started leaving. I took it personally. So I took a wig."
-C05 "It makes me taller. The Louvre says so. I did not ask. What a face, though. Honestly."
-C06 "White. Grey. Powdered. Everyone will wear it one day. I am simply early."
-C07 "Bow. Lower. Good. Yes, white suits me. Everything suits me."
-C08 "A hundred people, and only one worth looking at. Me. Obviously."
-C09 "Lower... that is a hat. Eyes on me, not the hat."
-C10 "Red heels. A privilege of nobles. Only the ones I like. Look at that ankle."
-C12 "Venice sold mirrors. France made 357. I am in all of them. Lucky mirrors."
-C13 "Do not stand behind me. You ruin the reflection. Ah... what a profile."
-C14 "Tonight, I dine in public. You may watch. Do not stare. Well... a little. Subscribe to my stunning channel."
-C15 "Like it. Ring the bell. Anyway... do what you like." + haughty arrogant laugh + "I am off to the table to feast!" (= Z1 without the first sentence)
+C02 "Some mornings, a hundred people watch me wake up. The ceremony is called the rising. I call it opening night."
+C03 "The doctor's here, the surgeon's here, and nobody came to see them. Look at me instead. Magnificent, no?"
+C04 "Now, the wig. My hair started falling out at seventeen. I took it personally, so I got a wig."
+C05 "It makes me look taller, they say. I wouldn't know. I never look down. What a face, though."
+C06 "White, grey, a little powder. One day, everybody will wear this. I'm just early."
+C07 "Bow. Lower. Good. White suits me, doesn't it? Everything does."
+C08 "A hundred people in this room, and only one worth looking at. Me, obviously."
+C09 "Lower. Lower. Careful, that's a hat. Eyes on me, not on the hat."
+C10 "Red heels. Nobles only, and only the ones I like. Look at that ankle."
+C12 "Venice sold us mirrors. Now we have 357 of our own, and I'm in every one. Lucky mirrors."
+C13 "Don't stand behind me, you're ruining my reflection. Ah... what a profile."
+C14 "Tonight I dine in public. You may watch, but don't stare. Well... a little. Subscribe to my stunning channel."
+C15 "Hit like. Ring the bell. Anyway, do what you like." + haughty arrogant laugh + "I'm off to the table to feast!" (= Z1 without the first sentence)
 
 About 4 minutes of finished audio in total; the pack A is about 1 minute.
 

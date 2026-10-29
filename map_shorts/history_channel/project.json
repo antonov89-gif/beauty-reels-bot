@@ -310,17 +310,17 @@
       "purpose": "C01 hook: tilt down from the ceiling, plume brushes the lens, character and attitude",
       "shot_size": "medium close-up",
       "camera": "phone POV starting on the painted ceiling, tilt down, plume brush, slight wobble, ultra-wide",
-      "subject_action": "'Marcel — down! Bow. Lower. Good. Welcome to Versailles. Yes, I am that handsome. Try not to faint.' (signature opener)",
+      "subject_action": "'Marcel, down! Bow. Lower. Good. Welcome to Versailles, my friends. Yes, I'm that handsome. Try not to faint.' (signature opener)",
       "transition": "continuous (same take)",
       "transfer_id": "TR11"
     },
     "SH02": {
       "scene_id": "S01",
       "duration_s": 8,
-      "purpose": "C02 premise: the lever as a premiere",
+      "purpose": "C02 premise: the rising ceremony as opening night",
       "shot_size": "medium",
       "camera": "static propped, eye level, head upper-left third",
-      "subject_action": "'A hundred people watch me wake up. The French call it the lever. I call it a premiere.'",
+      "subject_action": "'Some mornings, a hundred people watch me wake up. The ceremony is called the rising. I call it opening night.'",
       "transition": "continuous (same take)",
       "transfer_id": "TR12"
     },
@@ -330,7 +330,7 @@
       "purpose": "C03 fact: doctor and surgeon present, vanity beat",
       "shot_size": "medium",
       "camera": "static propped, slow imperceptible drift",
-      "subject_action": "'The doctor is here. The surgeon is here. Nobody came for them. Look at me. Magnificent.'",
+      "subject_action": "'The doctor's here, the surgeon's here, and nobody came to see them. Look at me instead. Magnificent, no?'",
       "transition": "hard cut to the wig table",
       "transfer_id": "TR04"
     },
@@ -340,7 +340,7 @@
       "purpose": "C04 wig take begins: hair loss fact",
       "shot_size": "close",
       "camera": "table height, rolled ~20 degrees, close, valet finger enters lower right",
-      "subject_action": "'Now. The wig. At seventeen my hair started leaving. I took it personally. So I took a wig.'",
+      "subject_action": "'Now, the wig. My hair started falling out at seventeen. I took it personally, so I got a wig.'",
       "transition": "continuous into C05",
       "transfer_id": "TR12"
     }

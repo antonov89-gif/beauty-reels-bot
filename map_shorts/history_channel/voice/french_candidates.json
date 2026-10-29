@@ -1,0 +1,110 @@
+[
+ {
+  "n": 1,
+  "name": "Antonin - Warm, Unsettling, Elegant",
+  "voice_id": "bObiIpcSB2feMOHORpee",
+  "public_owner_id": "7f1fdf37b4355b50d3580c190eff8960d5296dad4fb77306156bfa7d1c6f4960",
+  "descr": "confident",
+  "use": "conversational",
+  "cat": "professional",
+  "dur": 13.0,
+  "lang": "en",
+  "text": "Elegoons is a slow poison, a silk caress on cold skin, shadows dressed in light, a scent, deliciously haunting, the beauty of the fracture."
+ },
+ {
+  "n": 2,
+  "name": "Cyril - French-Accented Narrator",
+  "voice_id": "kiw9hkUW1gcPQwsQSs4e",
+  "public_owner_id": "cd5d69d8f50d13ba7e8de0bb17a5fa90f3fbdea89f02a381972d0e9e3f75479a",
+  "descr": "confident",
+  "use": "narrative_story",
+  "cat": "professional",
+  "dur": 9.7,
+  "lang": "en",
+  "text": "Hi there, I can do calm and conversational, the kind of tone you'd want for an explainer, but I can also lift it, bring energy a little spar"
+ },
+ {
+  "n": 3,
+  "name": "Henri - French-American Narrator",
+  "voice_id": "CKPSX8kOS9MJCGVaFNok",
+  "public_owner_id": "15fdf03d302ba8063c042033cae3ddee96c92320e17b8d832548020c8f1742f9",
+  "descr": "classy",
+  "use": "narrative_story",
+  "cat": "professional",
+  "dur": 5.0,
+  "lang": "en",
+  "text": "Festivals light up our hearts with joy and laughter."
+ },
+ {
+  "n": 5,
+  "name": "JP - Social media",
+  "voice_id": "eBAnahjDCcJXJUL16cEY",
+  "public_owner_id": "6d515e93f392895edae9c02daa4f46e7e906f7b74ad8e96a72b997d0de4dd042",
+  "descr": "classy",
+  "use": "social_media",
+  "cat": "professional",
+  "dur": 2.9,
+  "lang": "en",
+  "text": "Watching a good movie feels like a snow day adventure."
+ },
+ {
+  "n": 6,
+  "name": "Marcel - Charming Native Accent",
+  "voice_id": "I1T6PEfqPxl45yKRN4aS",
+  "public_owner_id": "62f39f065c89fa538eaac4d03850a03a9d08432157c6e1e44cba858b9de3a697",
+  "descr": "casual",
+  "use": "narrative_story",
+  "cat": "high_quality",
+  "dur": 6.1,
+  "lang": "fr",
+  "text": "Hi, vissis Marcel. What can I do for you today? For sure, I'll take care of it right away."
+ },
+ {
+  "n": 7,
+  "name": "Jamie - French Accent & Charismatic",
+  "voice_id": "K8nDX2f6wjv6bCh5UeZi",
+  "public_owner_id": "e0b730cdf914e6d32ba2344235d302782c648d3cefa4a6f6b77e1bdf2cf93910",
+  "descr": "cute",
+  "use": "narrative_story",
+  "cat": "professional",
+  "dur": 3.1,
+  "lang": "en",
+  "text": "Drama is the storm that clouds a peaceful sky."
+ },
+ {
+  "n": 9,
+  "name": "Nicolas - French English Male",
+  "voice_id": "1a6onbE6zC5AwIN3pEp0",
+  "public_owner_id": "c326d815ae4911b66f363ae55e5d23a94cc287812473b423cb84b177caf3bda7",
+  "descr": "serious",
+  "use": "narrative_story",
+  "cat": "professional",
+  "dur": 3.6,
+  "lang": "en",
+  "text": "Learning is an endless adventure like a solid campfire."
+ },
+ {
+  "n": 10,
+  "name": "Antoine - Articulate, Calm and Bright",
+  "voice_id": "xTZlmU8dKXdyk4XGYGFg",
+  "public_owner_id": "3825f0632c101f7e84c156d5342327a438505f05dbc337f47ba5f3a02efe0aa9",
+  "descr": "calm",
+  "use": "narrative_story",
+  "cat": "high_quality",
+  "dur": 3.5,
+  "lang": "en",
+  "text": "Movies are a celebration of dreams made visible."
+ },
+ {
+  "n": 11,
+  "name": "Jimmy - Documentary",
+  "voice_id": "A9dSk2qxoZwk6z1GrgWd",
+  "public_owner_id": "e0e6401fa93a870df140e50ff8dec669bbd22748a563ab68b0d75ca07a0c7c52",
+  "descr": "calm",
+  "use": "informative_educational",
+  "cat": "professional",
+  "dur": 4.7,
+  "lang": "en",
+  "text": "In the desert, every cactus has its own fan club of thirsty tourists."
+ }
+]

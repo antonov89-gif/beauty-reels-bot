@@ -2,26 +2,26 @@
 from PIL import Image, ImageDraw, ImageFont
 import textwrap
 cap={
-"C01":("0-8 s","Marcel. The ceiling is lovely. I am lower. DOWN. Good morning, Versailles.","tilt down from the ceiling, plume brushes the lens"),
-"C02":("8-16 s","A hundred people watch me wake up. The French call it the lever. I call it a premiere.","static propped medium"),
-"C03":("16-24 s","The doctor is here. The surgeon is here. Nobody is here to look at the doctor. Look at me.","same framing"),
-"C04":("24-32 s","Now. The wig. At seventeen my hair started leaving. I took it personally. So I took a wig.","table height, close, valet finger"),
-"C05":("32-40 s","It makes me taller. The Louvre says so. I did not ask.","tilt up, wide-angle distortion"),
-"C06":("40-48 s","White. Grey. Powdered. Everyone will wear it one day. I am simply early.","wig fills the lens, rack focus"),
-"C07":("48-56 s","Bow. Lower. Good.","floor-level low angle, a hand re-aims the phone"),
-"C08":("56-64 s","A hundred people and only one of them is worth looking at.","slow push to an extreme close-up"),
-"C09":("64-72 s","Lower... that is a hat. Eyes on me, not the hat.","wide vignetted view, swing to the reaction"),
-"C10":("72-80 s","Red heels. A privilege of nobles. Only the ones I like.","foreground heel, rack focus to the face"),
-"C12":("88-96 s","Venice sold mirrors. France made 357. I am in all of them.","backward-walk selfie, Hall of Mirrors"),
-"C13":("96-104 s","Do not stand behind me. You ruin the reflection.","handheld halt at a mirror"),
-"C14":("104-112 s","Tonight, I dine in public. You may watch. Do not stare. Well... a little. Subscribe to my stunning channel.","static propped medium, points at the lens"),
-"C15":("112-120 s","Like it. Ring the bell. Anyway... do what you like. [haughty laugh] I am off to the table to feast!","haughty laugh, chin up, waves them off, strides to the table; mirror flash cut"),
+"C01":("0-8 s","Marcel, down! Bow. Lower. Good. Welcome to Versailles, my friends. Yes, I'm that handsome. Try not to faint.","tilt down from the ceiling, plume brushes the lens"),
+"C02":("8-16 s","Some mornings, a hundred people watch me wake up. The ceremony is called the rising. I call it opening night.","static propped medium"),
+"C03":("16-24 s","The doctor's here, the surgeon's here, and nobody came to see them. Look at me instead. Magnificent, no?","same framing"),
+"C04":("24-32 s","Now, the wig. My hair started falling out at seventeen. I took it personally, so I got a wig.","table height, close, valet finger"),
+"C05":("32-40 s","It makes me look taller, they say. I wouldn't know. I never look down. What a face, though.","tilt up, wide-angle distortion"),
+"C06":("40-48 s","White, grey, a little powder. One day, everybody will wear this. I'm just early.","wig fills the lens, rack focus"),
+"C07":("48-56 s","Bow. Lower. Good. White suits me, doesn't it? Everything does.","floor-level low angle, a hand re-aims the phone"),
+"C08":("56-64 s","A hundred people in this room, and only one worth looking at. Me, obviously.","slow push to an extreme close-up"),
+"C09":("64-72 s","Lower. Lower. Careful, that's a hat. Eyes on me, not on the hat.","wide vignetted view, swing to the reaction"),
+"C10":("72-80 s","Red heels. Nobles only, and only the ones I like. Look at that ankle.","foreground heel, rack focus to the face"),
+"C12":("88-96 s","Venice sold us mirrors. Now we have 357 of our own, and I'm in every one. Lucky mirrors.","backward-walk selfie, Hall of Mirrors"),
+"C13":("96-104 s","Don't stand behind me, you're ruining my reflection. Ah... what a profile.","handheld halt at a mirror"),
+"C14":("104-112 s","Tonight I dine in public. You may watch, but don't stare. Well... a little. Subscribe to my stunning channel.","static propped medium, points at the lens"),
+"C15":("112-120 s","Hit like. Ring the bell. Anyway, do what you like. [haughty laugh] I'm off to the table to feast!","haughty laugh, chin up, waves them off, strides to the table; mirror flash cut"),
 }
 F=lambda p,s: ImageFont.truetype(p,s)
 SB="/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf"; SR="/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf"; SI="/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf"
 BG=(243,234,211); INK=(40,28,22); BURG=(110,28,40); GOLD=(176,133,38)
 def sheet(ids,name,cols,title,burst=False):
-    tw,th=400,711; ch=210 if not burst else 70
+    tw,th=400,711; ch=260 if not burst else 70
     rows=(len(ids)+cols-1)//cols
     W=cols*(tw+24)+24; H=90+rows*(th+ch+24)+24
     s=Image.new("RGB",(W,H),BG); d=ImageDraw.Draw(s)
@@ -34,7 +34,7 @@ def sheet(ids,name,cols,title,burst=False):
         if not burst:
             t,l,c=cap[i]; d.text((x,y+th+10),t,font=F(SB,26),fill=BURG)
             yy=y+th+44
-            for ln in textwrap.wrap("\u201c"+l+"\u201d",38)[:3]:
+            for ln in textwrap.wrap("\u201c"+l+"\u201d",35)[:4]:
                 d.text((x,yy),ln,font=F(SR,25),fill=INK); yy+=29
             yy=y+th+ch-66
             for ln in textwrap.wrap(c,40)[:2]:

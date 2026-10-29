@@ -1,20 +1,24 @@
 {
-  "voice_lock": "voice/voice_lock.json (v2: The Young Heir, Eleven v4)",
-  "note": "Tags in [brackets] are ElevenLabs audio/emotion tags (not spoken). Pauses with {{pause=0.3}} as in the Lumean pipeline. Tag support on v4 is UNTESTED: first test = C01-C05.",
+  "voice_lock": "voice/voice_lock.json (v2: The Young Heir, Eleven v4; v3 = French accent is PENDING, see voice/accent_plan.md)",
+  "note": "Tags in [brackets] are ElevenLabs audio/emotion tags (not spoken). Pauses with {{pause=0.3}} as in the Lumean pipeline. Text rewritten 29.10 (owner: natural English for an English-speaking audience, no AI-sounding patterns, French accent). Tag support on v4 and the accent tag are UNTESTED: first test = C01-C05.",
   "lines": {
-    "C01": "[irritated, sharp] Marcel — down! {{pause=0.3}} [haughty, regal] Bow. Lower. Good. {{pause=0.3}} [smug, drawling] Welcome to Versailles. [delighted, self-admiring] Yes, I am that handsome. {{pause=0.4}} [sneering, amused] Try not to faint.",
-    "C02": "[conspiratorial, proud] A hundred people watch me wake up. {{pause=0.2}} The French call it the lever. {{pause=0.4}} [smug, with a soft laugh] I call it a premiere.",
-    "C03": "[dry, bored] The doctor is here. The surgeon is here. {{pause=0.3}} [mock-puzzled] Nobody came for them. {{pause=0.4}} [commanding, then breathy with delight] Look at me. {{pause=0.5}} [swooning] Magnificent.",
-    "C04": "[brisk] Now. The wig. {{pause=0.3}} [mock-tragic, a small sigh] At seventeen my hair started leaving. {{pause=0.3}} [wounded pride] I took it personally. {{pause=0.3}} [dry, resolute] So I took a wig.",
-    "C05": "[smug] It makes me taller. {{pause=0.2}} The Louvre says so. {{pause=0.3}} [lofty] I did not ask. {{pause=0.5}} [soft sigh of delight] What a face, though. {{pause=0.3}} [admiring] Honestly.",
-    "C06": "[theatrical, savouring] White. {{pause=0.3}} Grey. {{pause=0.3}} Powdered. {{pause=0.4}} [prophetic, grandly] Everyone will wear it one day. {{pause=0.4}} [mock-modest, chuckles] I am simply early.",
-    "C07": "[regal, bored] Bow. Lower. Good. {{pause=0.4}} [delighted, preening] Yes, white suits me. {{pause=0.3}} [arrogant] Everything suits me.",
-    "C08": "[contemptuous] A hundred people, and only one worth looking at. {{pause=0.5}} [tender, adoring] Me. {{pause=0.3}} [snorts a laugh] Obviously.",
-    "C09": "[sharp, scandalised] Lower... {{pause=0.3}} [outraged whisper] that is a hat. {{pause=0.3}} [recovering haughtiness] Eyes on me, not the hat.",
-    "C10": "[flirtatious, teasing] Red heels. A privilege of nobles. {{pause=0.3}} [smug] Only the ones I like. {{pause=0.4}} [admiring sigh] Look at that ankle.",
-    "C12": "[grand, showman] Venice sold mirrors. France made three hundred and fifty-seven. {{pause=0.3}} [gleeful] I am in all of them. {{pause=0.3}} [laughs softly] Lucky mirrors.",
-    "C13": "[snapping, irritated] Do not stand behind me. {{pause=0.2}} You ruin the reflection. {{pause=0.5}} [swooning] Ah... {{pause=0.2}} what a profile.",
-    "C14": "[mock-generous] Tonight, I dine in public. You may watch. {{pause=0.3}} [firm] Do not stare. {{pause=0.4}} [sly, conspiratorial] Well... a little. {{pause=0.5}} [imperious, grand] Subscribe to my stunning channel.",
-    "C15": "[imperious, commanding] Like it. {{pause=0.2}} Ring the bell. {{pause=0.4}} [dismissive, bored] Anyway... do what you like. {{pause=0.4}} [laughs, a cold, arrogant, haughty laugh, contemptuous] {{pause=0.4}} [gleeful, hungry] I am off to the table to feast!"
-  }
+    "C01": "[irritated, sharp] Marcel, down! {{pause=0.3}} [haughty, regal] Bow. Lower. Good. {{pause=0.3}} [smug, drawling] Welcome to Versailles, my friends. [delighted, self-admiring] Yes, I'm that handsome. {{pause=0.4}} [sneering, amused] Try not to faint.",
+    "C02": "[conspiratorial, proud] Some mornings, a hundred people watch me wake up. {{pause=0.2}} The ceremony is called the rising. {{pause=0.4}} [smug, with a soft laugh] I call it opening night.",
+    "C03": "[dry, bored] The doctor's here, the surgeon's here, and nobody came to see them. {{pause=0.4}} [commanding, then breathy with delight] Look at me instead. {{pause=0.5}} [swooning] Magnificent, no?",
+    "C04": "[brisk] Now, the wig. {{pause=0.3}} [mock-tragic, a small sigh] My hair started falling out at seventeen. {{pause=0.3}} [wounded pride] I took it personally, {{pause=0.2}} [dry, resolute] so I got a wig.",
+    "C05": "[smug] It makes me look taller, they say. {{pause=0.3}} [lofty] I wouldn't know. I never look down. {{pause=0.5}} [soft sigh of delight] What a face, though.",
+    "C06": "[theatrical, savouring] White, grey, a little powder. {{pause=0.4}} [prophetic, grandly] One day, everybody will wear this. {{pause=0.4}} [mock-modest, chuckles] I'm just early.",
+    "C07": "[regal, bored] Bow. Lower. Good. {{pause=0.4}} [delighted, preening] White suits me, doesn't it? {{pause=0.3}} [arrogant] Everything does.",
+    "C08": "[contemptuous] A hundred people in this room, and only one worth looking at. {{pause=0.5}} [tender, adoring] Me, {{pause=0.3}} [snorts a laugh] obviously.",
+    "C09": "[sharp, scandalised] Lower. {{pause=0.3}} Lower. {{pause=0.2}} [outraged whisper] Careful, that's a hat. {{pause=0.3}} [recovering haughtiness] Eyes on me, not on the hat.",
+    "C10": "[flirtatious, teasing] Red heels. Nobles only, {{pause=0.3}} [smug] and only the ones I like. {{pause=0.4}} [admiring sigh] Look at that ankle.",
+    "C12": "[grand, showman] Venice sold us mirrors. Now we have three hundred and fifty-seven of our own, {{pause=0.3}} [gleeful] and I'm in every one. {{pause=0.3}} [laughs softly] Lucky mirrors.",
+    "C13": "[snapping, irritated] Don't stand behind me, you're ruining my reflection. {{pause=0.5}} [swooning] Ah... {{pause=0.2}} what a profile.",
+    "C14": "[mock-generous] Tonight I dine in public. You may watch, {{pause=0.3}} [firm] but don't stare. {{pause=0.4}} [sly, conspiratorial] Well... a little. {{pause=0.5}} [imperious, grand] Subscribe to my stunning channel.",
+    "C15": "[imperious, commanding] Hit like. {{pause=0.2}} Ring the bell. {{pause=0.4}} [dismissive, bored] Anyway, do what you like. {{pause=0.4}} [laughs, a cold, arrogant, haughty laugh, contemptuous] {{pause=0.4}} [gleeful, hungry] I'm off to the table to feast!"
+  },
+  "accent_tags_to_test": [
+    "[strong French accent]",
+    "[French accent, aristocratic]"
+  ]
 }
