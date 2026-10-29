@@ -268,3 +268,5 @@ Wig: matches the C09 reference on all 7 (high wavy crown, side rolls, long curls
 
 ## First frames v6, close hand-held selfies (owner 29.10 "делай как референс: камера близко к лицу и ходит в руке"; "Да"): C09_v6, C10_v6 (2 x 0.04); C07 refused at submit by the content filter (no charge), prompt reworded, resubmit needs a separate yes.
 C09: close selfie, face and wig large, courtiers bowing behind, the plumed hat on the floor; C10: close face, the red heel and buckle in the foreground. Face matches the master, wig = C09 style. NOT APPROVED yet.
+C07_v6 (resubmit after the owner's "Да", 0.04): close selfie, face matches, courtiers walking in behind: PASS (owner to approve).
+C10_v6 leg check (owner: "проверь что за нога"): FAIL. The leg in white stocking enters from the RIGHT edge at chest height and runs off-frame to the right; it does not connect to his hips (he sits in the centre), so it reads as someone else's leg. Prompt rewritten (his own bent leg rising from his lap, from the bottom centre); redo needs a separate yes (about $0.04).

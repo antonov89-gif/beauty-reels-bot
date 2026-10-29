@@ -52,3 +52,4 @@
 - 29.10, first frames v4 (6 x nano-banana-2.1 2K) 0.24; C09 refused at submit (no charge). Confirmed total now about $47.1.
 - 29.10, first frames v5 (7 x nano-banana-2.1 2K) 0.28. Confirmed total now about $47.4.
 - 29.10, first frames v6 (2 x nano-banana-2.1 2K) 0.08; C07 refused at submit (no charge). Confirmed total now about $47.5.
+- 29.10, C07_v6 0.04. Confirmed total now about $47.5.
