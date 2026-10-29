@@ -2,7 +2,7 @@
 from PIL import Image, ImageDraw, ImageFont
 import textwrap
 cap={
-"C01":("0-10 s","Marcel, down! Bow. Lower. Good. Welcome to Versailles, my friends. Yes, I'm that handsome. Try not to faint.","tilt down from the ceiling, plume brushes the lens"),
+"C01":("0-10 s","Marcel, not the ceiling. Me. Good. Welcome to Versailles. Yes, I'm that handsome. Try not to faint.","tilt down from the ceiling, plume brushes the lens"),
 "C02":("10-18 s","Some mornings, a hundred people watch me wake up. The ceremony is called the rising. I call it opening night.","static propped medium"),
 "C03":("18-26 s","The doctor's here, the surgeon's here, and nobody came to see them. Everyone came to see me. Naturally.","same framing"),
 "C04":("26-34 s","Now, the wig. My hair started falling out at seventeen. I took it personally, so I got a wig.","table height, close, valet finger"),

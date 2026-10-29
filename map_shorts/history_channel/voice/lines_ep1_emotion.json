@@ -2,7 +2,7 @@
   "voice_lock": "voice/voice_lock.json v3 (The Young Heir, Eleven v4, French accent: prefix + respelling applied at TTS time, these lines stay in normal spelling)",
   "note": "Tags in [brackets] are ElevenLabs audio/emotion tags (not spoken). Pauses with {{pause=0.3}} as in the Lumean pipeline. Text rewritten 29.10 (owner: natural English for an English-speaking audience, no AI-sounding patterns, French accent). Tag support on v4 and the accent tag are UNTESTED: first test = C01-C05. Self-praise ('what a handsome man I am') ONCE per video, in the opener only (owner 29.10).",
   "lines": {
-    "C01": "[irritated, sharp] Marcel, down! {{pause=0.3}} [haughty, regal] Bow. Lower. Good. {{pause=0.3}} [smug, drawling] Welcome to Versailles, my friends. [delighted, self-admiring] Yes, I'm that handsome. {{pause=0.4}} [sneering, amused] Try not to faint.",
+    "C01": "[irritated, sharp] Marcel, not the ceiling. {{pause=0.2}} Me. {{pause=0.3}} [satisfied] Good. {{pause=0.3}} [smug, drawling] Welcome to Versailles. [delighted, self-admiring] Yes, I'm that handsome. {{pause=0.4}} [sneering, amused] Try not to faint.",
     "C02": "[conspiratorial, proud] Some mornings, a hundred people watch me wake up. {{pause=0.2}} The ceremony is called the rising. {{pause=0.4}} [smug, with a soft laugh] I call it opening night.",
     "C03": "[dry, bored] The doctor's here, the surgeon's here, and nobody came to see them. {{pause=0.4}} [smug, pleased] Everyone came to see me. {{pause=0.4}} [soft, satisfied] Naturally.",
     "C04": "[brisk] Now, the wig. {{pause=0.3}} [mock-tragic, a small sigh] My hair started falling out at seventeen. {{pause=0.3}} [wounded pride] I took it personally, {{pause=0.2}} [dry, resolute] so I got a wig.",
