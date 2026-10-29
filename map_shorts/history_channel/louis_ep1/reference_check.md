@@ -166,3 +166,7 @@ seedance25_c02.py: image-only Seedance 2.5 Draft 480p, 9 s, first frame = the la
 | Loudness | -15.7 LUFS, TP -1.9 |
 | Pace note | silent beat 0-2.1 s (the curl gesture) before the first word: owner's call (the edit can keep it, it is an action beat) |
 Status: GENERATED + INSPECTED (draft). 1080p final about $4.88 after the owner's look.
+
+## C02 FINAL 1080p (owner "да"; usage.cost 4.87746, task d3c9695c): frames/C02_final.mp4, preview C01+C02 frames/C02_final_with_prev.mp4 (not committed)
+Checks: 1080x1920, 24 fps, 9.00 s, 0 duplicate frames; join C01 -> C02 frame diff 1.7 vs neighbours 0.5-1.7 (no cut visible); camera +4.5 % rotation-like (selfie steady, he leans in); lips offset max 0.18 s; ASR on C01+C02 hears every C02 word (and reads C01's "Oops, the ceiling" as "Oops, there's a ceiling": small-model slip, the single-file check heard "the ceiling"); -15.3 LUFS, TP -1.9; our voice only, no music, no subtitles; ringed hand on the curl, lean-in, pleased smile; face, wig, gown consistent with C01 (6 frames + full-res crop).
+Status: GENERATED + INSPECTED, awaiting the owner's approval.
