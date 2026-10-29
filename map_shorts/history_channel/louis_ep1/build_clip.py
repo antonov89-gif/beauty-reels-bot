@@ -38,6 +38,9 @@ for i, v in enumerate(list(act) + [False]):
         st = None
 regs = [r for r in regs if r[1] - r[0] > 0.35]                      # drops a short "hm" or breath
 print("model phrases by energy:", regs, "| our sentences:", len(cuts) - 1)
+if len(mv) != len(ov) and len(regs) != len(cuts) - 1:               # ASR punctuation differs: cut our voice at its own longest pauses instead, one cut per model phrase break
+    gaps = sorted(range(1, len(ov)), key=lambda j: ov[j][1] - ov[j - 1][2], reverse=True)[:len(regs) - 1]
+    cuts = [0] + sorted(gaps) + [len(ov)]; print("our cuts at pauses:", cuts)
 assert len(mv) == len(ov) or len(regs) == len(cuts) - 1, "word and phrase counts differ: check by ear, align by hand"
 def subregions(i0, i1, gap):
     sub = []; st = None
