@@ -250,3 +250,7 @@ Status: GENERATED + INSPECTED (draft). 1080p final about $4.88 = separate yes.
 ## C06 FINAL 1080p (owner "Да"; usage.cost 4.87746, task 05e42d44): frames/C06_final.mp4, preview C05+C06 frames/C06_final_with_prev.mp4 (not committed)
 Checks: 1080x1920, 24 fps, 9.00 s, 0 duplicate frames; join C05 -> C06 frame diff 2.2 vs neighbours 0.2-1.4; reference-manner gates PASS (pick-up of the phone, hand-held sway, the white wig covers the lens at 3.5 s, lively motion); lips 0.10-0.21 s, 0.30 s on "One day" (soft, same as the draft); every word by ASR; -15.6 LUFS, TP -1.9; face/brown wig consistent (full-res crop); our voice only, no music, no subtitles.
 Status: GENERATED + INSPECTED, awaiting the owner's approval.
+
+## C07 first frame (owner "Да", 0.04, task 27c95af6): frames/C07_v2.jpg, gen_c07_frame.py
+Hard cut into take 3 (court enters): low floor angle, the generated king in the tall white-grey wig and gold gown, a hand sweeping in from the top, courtiers entering at the back. Face matches C06 (identity ref = frames/C06_last.jpg). Inspected at preview size, not yet at full res: GENERATED + INSPECTED (preview), not approved.
+Page voice (line "The court, Sire."): free audition of 6 Lumean library voices built (voice/page_voices_audition.mp3, shortlist voice/page_voice_shortlist.json); no order placed, waiting for the owner's pick and a separate yes for the order (about 0.3 RUB).
