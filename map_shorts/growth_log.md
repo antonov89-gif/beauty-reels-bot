@@ -536,3 +536,10 @@ HYPOTHESIS (not proven): E1 (>= 10 events per 10 s) gives a +20-30 % higher medi
 Against the baseline median 1,245 nothing is near 3x; the premium Iraq Short (the first with the full premium pipeline) is at 1.13x of the median after 25 h. The 48 h check of the Iraq Short is scheduled for 29.10 12:00 UTC. The formula v1 in views_playbook_2026_10_27.md stays a HYPOTHESIS.
 Not done: vidIQ retention (relative retention) for this batch was not pulled (credits), NOT VERIFIED.
 Decision for the next batch: keep E1 as a default style (no harm), do not claim an uplift; test the hook/topic variable (myth or paradox in the title) with 3 more Shorts; take 24 h and 72 h snapshots on the day.
+
+### 29.10 Iraq premium Short, 48 h check (scheduled task "Iraq Short 48 h check", read 12:05 UTC; vidIQ 15 credits, Metricool)
+- FACT YouTube mGq45TanV5c: 1,563 views (1.30x median 1.2k), 19 likes (1.22 %), 0 comments, outlier 1.05; 600 views in 3 h, 1,107 by 8 h, then a slow tail (~7/h now).
+- FACT TikTok 7701304822636530957: 450 views (1.6x the old TikTok median ~284; best of the 27-28.10 batch), 8 likes (1.8 %), 0 comments, avg watch 16 s of 51 s (31 %), For You 98 %.
+- NOT AVAILABLE: engaged %, % viewed, subscribers, retention curve (YouTube Analytics lag ends 26.10; Nexlev retention is paid).
+- Formula v1 NOT SUPPORTED at n = 1 (1.3x, not 3x; 0 comments). Next: Croatia/Neum with a paradox hook, 35-40 s, 2-3 AI clips only; premium_gate before showing. Details: views_playbook_2026_10_27.md section 8.
+- YPP: still ~50 subscribers; Shorts views far from 10M/90 days (gap ~74x as of 27.10).
