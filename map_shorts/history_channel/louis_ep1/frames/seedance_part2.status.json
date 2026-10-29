@@ -1,0 +1,17 @@
+{
+ "code": 200,
+ "message": "success",
+ "data": {
+  "task_id": "a852fc92-93e2-47d3-a658-b8a54407f46d",
+  "status": "completed",
+  "progress": 100,
+  "result": [
+   "https://ark-acg-cn-beijing.tos-cn-beijing.volces.com/doubao-seedance-2-0/02179327552674200000000000000000000ffffac1802a32a12d4.mp4?[signed query removed: contains a provider credential]"
+  ],
+  "usage": {
+   "cost": 1.26,
+   "completion_tokens": 216900,
+   "total_tokens": 216900
+  }
+ }
+}
