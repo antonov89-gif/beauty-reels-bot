@@ -26,3 +26,7 @@ Need: photoreal documentary-vlog i2v from our start frames, ONE fixed voice on e
 3. In parallel the same C01 on Veo 3.1 fast ($0.18) for the price/quality comparison.
 4. Decide the model per shot type, then the pilot C01-C04.
 Nothing in this plan has been started or paid.
+
+## Test findings 29.10 (C01)
+- kling-4.0-r2v: the voice reference (`voices`) rejected our locked voice 3 times ("Not enough speech in the voice audio"), with 12.8 s, 23.7 s continuous mp3 and the same as WAV. The fixed-voice-by-reference route does not work for this voice. Its `image_urls` are reference images, NOT a first frame (official spec).
+- Next route: kling-4.0-i2v (first frame + keyframes + last frame, 3-30 s; prompt mentions @first_frame/@keyframe_N/@last_frame) for the camera and identity, model's own speech for lip movement, then our locked TTS laid over in the edit; or seedance-2.0-r2v with our audio in `audio_urls` (lip-sync to a given audio undocumented).
