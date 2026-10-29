@@ -7,7 +7,10 @@
   "matched": "17/17",
   "clip_file": "tts_ep1/C01.mp3",
   "clip_len_s": 8.8,
-  "fits_8s": false
+  "fits_8s": false,
+  "mean_db": -20.3,
+  "asr_ratio": 1.0,
+  "asr_text": "Marcel not the ceiling me good. Welcome to Versailles. Yes, I'm that handsome try not to faint"
  },
  "C02": {
   "file": "audition_accent/heir_phon_eleven_v4.mp3",
@@ -17,7 +20,10 @@
   "matched": "20/20",
   "clip_file": "tts_ep1/C02.mp3",
   "clip_len_s": 7.21,
-  "fits_8s": true
+  "fits_8s": true,
+  "mean_db": -22.8,
+  "asr_ratio": 0.923,
+  "asr_text": "Some mornings, a hundred people watch me wake up. The ceremony is called Z-Rising. I call it opening night."
  },
  "C03": {
   "file": "tts_ep1/C01-C10.mp3",
@@ -27,7 +33,10 @@
   "matched": "16/18",
   "clip_file": "tts_ep1/C03.mp3",
   "clip_len_s": 6.45,
-  "fits_8s": true
+  "fits_8s": true,
+  "mean_db": -20.2,
+  "asr_ratio": 1.0,
+  "asr_text": "The doctor's here, the surgeon's here, and nobody came to see them. Everyone came to see me, naturally."
  },
  "C04": {
   "file": "audition_accent/heir_phon_eleven_v4.mp3",
@@ -37,7 +46,10 @@
   "matched": "18/19",
   "clip_file": "tts_ep1/C04.mp3",
   "clip_len_s": 6.82,
-  "fits_8s": true
+  "fits_8s": true,
+  "mean_db": -24.8,
+  "asr_ratio": 0.821,
+  "asr_text": "Now, is he wig? My air started falling out at 17. I took it personally, so I got a wig."
  },
  "C05": {
   "file": "tts_ep1/C01-C10.mp3",
@@ -47,7 +59,10 @@
   "matched": "13/14",
   "clip_file": "tts_ep1/C05.mp3",
   "clip_len_s": 4.05,
-  "fits_8s": true
+  "fits_8s": true,
+  "mean_db": -21.1,
+  "asr_ratio": 1.0,
+  "asr_text": "It makes me look taller, they say. I wouldn't know. I never look down."
  },
  "C06": {
   "file": "tts_ep1/C06-C10.mp3",
@@ -57,7 +72,10 @@
   "matched": "13/14",
   "clip_file": "tts_ep1/C06.mp3",
   "clip_len_s": 7.39,
-  "fits_8s": true
+  "fits_8s": true,
+  "mean_db": -21.9,
+  "asr_ratio": 0.929,
+  "asr_text": "White gray a little powder one day everybody will wear this. I'm just early"
  },
  "C07": {
   "file": "tts_ep1/C06-C10.mp3",
@@ -67,7 +85,10 @@
   "matched": "11/11",
   "clip_file": "tts_ep1/C07.mp3",
   "clip_len_s": 5.36,
-  "fits_8s": true
+  "fits_8s": true,
+  "mean_db": -21.7,
+  "asr_ratio": 1.0,
+  "asr_text": "bow, lower. Good. Yes, this is the new wig. Take notes."
  },
  "C08": {
   "file": "tts_ep1/C06-C10.mp3",
@@ -77,7 +98,10 @@
   "matched": "16/16",
   "clip_file": "tts_ep1/C08.mp3",
   "clip_len_s": 6.45,
-  "fits_8s": true
+  "fits_8s": true,
+  "mean_db": -21.8,
+  "asr_ratio": 0.903,
+  "asr_text": "100 people here and none may speak before me. I love listening to myself mostly."
  },
  "C09": {
   "file": "tts_ep1/C06-C10.mp3",
@@ -87,7 +111,10 @@
   "matched": "13/13",
   "clip_file": "tts_ep1/C09.mp3",
   "clip_len_s": 5.07,
-  "fits_8s": true
+  "fits_8s": true,
+  "mean_db": -20.0,
+  "asr_ratio": 1.0,
+  "asr_text": "Lower, lower. Careful, that's a hat. Eyes on me, not on the hat."
  },
  "C10": {
   "file": "tts_ep1/C01-C10.mp3",
@@ -97,7 +124,10 @@
   "matched": "16/16",
   "clip_file": "tts_ep1/C10.mp3",
   "clip_len_s": 5.98,
-  "fits_8s": true
+  "fits_8s": true,
+  "mean_db": -20.8,
+  "asr_ratio": 1.0,
+  "asr_text": "Red heels, nobles only, and only the ones I like. Mine are the tallest, of course."
  },
  "C12": {
   "file": "tts_ep1/C12-C15.mp3",
@@ -107,7 +137,10 @@
   "matched": "16/20",
   "clip_file": "tts_ep1/C12.mp3",
   "clip_len_s": 7.18,
-  "fits_8s": true
+  "fits_8s": true,
+  "mean_db": -19.0,
+  "asr_ratio": 1.0,
+  "asr_text": "Venice sold us mirrors now we have 357 of our own and I'm in every single one"
  },
  "C13": {
   "file": "tts_ep1/C12-C15.mp3",
@@ -117,7 +150,10 @@
   "matched": "12/12",
   "clip_file": "tts_ep1/C13.mp3",
   "clip_len_s": 4.62,
-  "fits_8s": true
+  "fits_8s": true,
+  "mean_db": -19.0,
+  "asr_ratio": 1.0,
+  "asr_text": "Don't stand behind me! You're ruining my reflection! Go! Over there! Further!"
  },
  "C14": {
   "file": "tts_ep1/C12-C15.mp3",
@@ -127,7 +163,10 @@
   "matched": "19/19",
   "clip_file": "tts_ep1/C14.mp3",
   "clip_len_s": 7.47,
-  "fits_8s": true
+  "fits_8s": true,
+  "mean_db": -20.6,
+  "asr_ratio": 1.0,
+  "asr_text": "Tonight I dine in public. You may watch, but don't stare. Well, a little. Subscribe to my stunning channel."
  },
  "C15": {
   "file": "tts_ep1/C12-C15.mp3",
@@ -137,6 +176,9 @@
   "matched": "17/17",
   "clip_file": "tts_ep1/C15.mp3",
   "clip_len_s": 7.81,
-  "fits_8s": false
+  "fits_8s": false,
+  "mean_db": -20.7,
+  "asr_ratio": 1.0,
+  "asr_text": "Hit like. Ring the bell. Anyway, do what you like. I'm off to the table to feast!"
  }
 }

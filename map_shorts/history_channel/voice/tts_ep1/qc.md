@@ -22,3 +22,12 @@ Respelling switched off for "here" (C03), "they" (C05), "the" (C10); accent pref
 - C05: heard "...I never looked down" (Whisper adds a "d" where "look" runs into "down"; meaning unchanged; owner's ear decides); 4.05 s.
 - C10: heard "Mine are the tallest, of course" (fixed); 5.98 s.
 clip_times.json and the per-clip files C01/C03/C05/C10 replaced; listening file rebuilt (louis_ep1_voice_all_clips.mp4, not committed).
+
+## BUG found and fixed 29.10 (my error)
+The per-clip cut used output seeking with a fade-out timed on the input timeline, so every clip that did not start at 0 s of its source file came out SILENT (only C01, C06, C12 had sound). The listening file sent to the owner earlier was therefore broken. Fix: re-cut with atrim + asetpts; every clip checked for level (mean -19 to -25 dB) and transcribed one by one; the rebuilt listening file was checked segment by segment (14/14 with sound). Rule added: after any cut, measure each output file, not only the source.
+
+## Per-clip transcription (each file alone, Whisper small)
+14 clips; similarity to the script 0.82-1.0. Two more clarity flags that the group transcription had hidden:
+- C02: "ze rising" heard as "Z-Rising".
+- C04: "Now, ze wig. My 'air..." heard as "Now, is he wig? My air...".
+Respelling exceptions added for C02 ("the") and C04 ("the", "hair"); re-voice of C02 + C04 = 1 order (about 0.23 RUB) after the owner's yes.
