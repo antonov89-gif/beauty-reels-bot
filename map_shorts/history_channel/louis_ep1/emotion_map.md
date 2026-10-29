@@ -3,7 +3,7 @@ Rule for the whole series: the king is never flat. Every line carries a named em
 
 | Clip | Voice emotion (tags, delivery) | Face and body (put into the Kling/Veo prompt) | Non-verbal beat |
 |--|--|--|--|
-| C01 | irritated and sharp "Marcel, not the ceiling. Me.", satisfied "Good", then drawling smug welcome, self-admiring "that handsome", sneering amusement on "faint" | eyes roll up to the ceiling, jaw tight, then chin lifts, slow smirk, one eyebrow up on "faint" | short exasperated exhale after "the ceiling" |
+| C01 | startled-annoyed "Oops, the ceiling", satisfied "There", then drawling smug welcome, self-admiring "that handsome", sneering amusement on "faint" | eyes up at the ceiling then down at the lens, a small irritated sigh, chin lifts, slow smirk, one eyebrow up on "faint" | short exhale before "Oops" |
 | C02 | conspiratorial pride, a soft laugh into "opening night" | leans in toward the lens as if sharing a secret, eyes sparkle, tiny head tilt | small satisfied "hm" |
 | C03 | dry boredom for the doctor, then smug pleasure that everyone came for him, a satisfied "naturally" | glances at the doctor and away, eyelids heavy, then eyes shining at the crowd, a pleased smile | a satisfied breath before "Naturally" |
 | C04 | brisk, mock-tragic sigh, wounded pride, dry resolve | hand on the chest, lower lip pushes out, brow knits, then lifts chin | a sigh on "falling out" |
