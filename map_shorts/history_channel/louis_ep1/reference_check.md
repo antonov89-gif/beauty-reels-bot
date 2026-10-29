@@ -185,3 +185,7 @@ First frame = last frame of C02 final. build_clip.py now aligns by word index wh
 Status: GENERATED + INSPECTED (draft), not approved.
 Owner 29.10: C03 "как есть" (red cap accepted as is); 4K: no paid upscale chosen yet. C03 1080p final ordered.
 C03 final: the first submit died with RemoteDisconnected before a task id came back (a server-side task and charge are NOT VERIFIED); resubmitted once.
+
+## C03 FINAL 1080p (owner "как есть"; usage.cost 4.33552, task 10e5805d): frames/C03_final.mp4, preview C02+C03 frames/C03_final_with_prev.mp4 (not committed)
+Checks: 1080x1920, 24 fps, 8.00 s; join C02 -> C03 frame diff 1.7 vs neighbours 0.9-2.0; camera +4.3 % rotation-like; lips offset 0.22 / 0.11 / 0.00 s (the long first sentence has no pauses); ASR hears every word; -14.8 LUFS, TP -1.9; our voice only, no music, no subtitles; the doctor (red cap, accepted by the owner) and the surgeon walk in and stand behind; last 0.6 s is a slow settling smile (frame diff 0.2-0.5, not frozen; C04 is a hard cut anyway).
+Status: GENERATED + INSPECTED, awaiting the owner's approval.
