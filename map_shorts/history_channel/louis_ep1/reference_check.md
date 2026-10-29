@@ -285,3 +285,4 @@ Proposed: redo C07 (jabot), C10 (red heel only, sole dark leather), C14 (a diffe
 C07 jabot now present (continuity with C09/C10 PASS); C09 deliberately badly framed (half the face cut by the left edge), the hat gag fully visible: PASS; C10 red heel, sole dark leather, leg attached: PASS; C13 far too close, the wig cut at the top, courtier behind: PASS; C14 a new wider setup at the gallery doors, pointing at the lens: PASS (differs from C13); C15 the hand mirror covers the lower right, face off-centre: PASS. Face and makeup consistent on all 7.
 SOFT: C12 the "courtiers already wear copies of his tall wig" payoff is NOT visible (background courtiers wear ordinary small wigs); options: accept, or redo C12 (about $0.04).
 NOT APPROVED by the owner yet.
+C12 redo (owner "Перерисуй C12", 0.04): two courtiers right behind his shoulders wear copies of his tall powdered wig, in focus: the spine payoff is now visible: PASS. Previous C12 kept as C12_v7a.jpg.
