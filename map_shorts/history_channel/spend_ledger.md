@@ -35,3 +35,4 @@
 - NOT VERIFIED (cost not shown in the failed task statuses): 3 Kling r2v attempts (up to $2.55 each) and 2 failed Seedance 2.5 submits. Possible extra: up to about $8 + the failed 2.5 submits; if the provider charged them, the true total is higher.
 - Cost per clip going forward with the fixed method (8 s): draft about $0.8 + 1080p final about $4.3 = about $5; 13 clips about $65.
 - 29.10, C01 v4 (Oops over the ceiling): part 2 v4 draft 0.686. Confirmed total now about $13.1.
+- 29.10, C01 v4: part 2 v4 1080p final 3.794 (first submit failed, cost not shown: NOT VERIFIED). Confirmed total now about $16.9.

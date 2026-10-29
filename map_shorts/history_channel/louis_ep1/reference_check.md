@@ -145,3 +145,8 @@ seedance25_part2_v4.py: image-only Seedance 2.5 Draft 480p, 7 s, first frame = f
 | Loudness | -15.1 LUFS, TP -1.9 (final mix normalises again) |
 | Format | 11.04 s, 24 fps, last frame luma 118 |
 Status: GENERATED + INSPECTED (draft). 1080p final (about $3.79) waits for the owner's look at the draft.
+
+## C01 FINAL v4 1080p (owner "да" after the draft; first final submit 4a37025a failed with a generic error, cost not shown; retry f94ba318 usage.cost 3.79358): frames/C01_final_v4.mp4 (not committed)
+build_c01_v4.py: opening 4.0 s + Seedance 2.5 1080p final part 2 (frame 0 dropped: it repeated the opening's last frame), plain concat; our locked voice: "Oops, the ceiling" at 0.5-1.8 s over the ceiling, the rest aligned to the lips (residual max 0.13 s, tempo max 1.15x).
+Checks: 1080x1920, 24 fps, H.264 + AAC, 11.00 s; join frame diff 4.1 vs neighbours 2.9-3.4 (no splice, no repeated frame); near-duplicate frames only at 1.67 s (opening ease), 9.3-9.5 s (he holds still between phrases) and the last frame; ASR hears every word ("Oops, the ceiling! There, welcome to Versailles. Yes, I'm that handsome! Try not to faint."); -15.1 LUFS, TP -1.9; our voice only, no music, no subtitles; face, wig, gown consistent on 6 frames + full-res face crop; camera: the same re-centring of the selfie on "There" as the approved draft (+12 %, smooth, then steady).
+Status: GENERATED + INSPECTED, awaiting the owner's approval.
