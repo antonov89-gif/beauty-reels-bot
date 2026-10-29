@@ -21,3 +21,8 @@ Next, in order:
 1. The voice the owner already liked (No. 7 "The Young Heir") + the accent tag "[strong French accent]" on Eleven v3 and on Eleven v4, lines C01-C05: 0.4 RUB each, 0.8 RUB total (`python3 accent_test.py go heir_tag` with EL_MODEL=eleven_v3 and eleven_v4). Keeps the arrogant voice, adds the accent.
 2. If the tag does not give a clear accent: Voice Design (a new voice from a text description, "a haughty French king in his forties, strong Parisian accent in English, nasal, drawling, contemptuous") on ElevenLabs directly or Higgsfield `create_voice`; both need the owner's account or a top-up (Higgsfield balance 0.1 credits).
 3. Most natural: a human performer, a French native who speaks English, recorded with recording_sheet.md, written licence for AI processing.
+
+## Test 1 result (29.10, owner approved, 2 orders x 0.38 RUB = 0.76 RUB)
+Files: audition_accent/heir_tag_eleven_v3.mp3 (39.2 s), heir_tag_eleven_v4.mp3 (34.8 s); listening file accent_test_v3_v4.mp4 (not committed).
+Self-check: every word transcribed correctly (Whisper small), no tag read aloud, loudness -19.7 / -21.4 LUFS (normalised in the edit).
+Accent proxy (Whisper language detection, probability "French" per 10 s): no-accent heir 0.006, heir + tag v3 0.002, heir + tag v4 0.003, library Marcel (strong native accent) 0.884, library Cyril (accented narrator) 0.012. Reading: the tag did NOT measurably add a French accent; the proxy is crude (Cyril has an audible accent at 0.012), so the owner's ear decides.
