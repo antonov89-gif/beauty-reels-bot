@@ -14,3 +14,10 @@ After the owner picks: lock v3 in `voice_lock.json` (voice id, owner id, model, 
 - Light-to-medium French accent, comic but clear. Captions and subtitles use ordinary English spelling (no phonetic "zis/zat").
 - French words only the English audience knows: "my friends", "no?", "Magnifique", "Bon". At most one per clip.
 - AI voice stays disclosed (platform flag and description).
+
+## Owner verdict 29.10: the 9 library voices are rejected ("голоса не понравились")
+Wider free search (keywords: french king, aristocrat, villain, pompous, snobby, butler, chef, Louis, Napoleon, noble, haughty; use case characters_animation): no new English-speaking French-accent male character voice. Most hits speak French (narrators); "Gaston - Theatrical French Accent" speaks Spanish. Lumean offers only TTS (no voice design, no voice changer).
+Next, in order:
+1. The voice the owner already liked (No. 7 "The Young Heir") + the accent tag "[strong French accent]" on Eleven v3 and on Eleven v4, lines C01-C05: 0.4 RUB each, 0.8 RUB total (`python3 accent_test.py go heir_tag` with EL_MODEL=eleven_v3 and eleven_v4). Keeps the arrogant voice, adds the accent.
+2. If the tag does not give a clear accent: Voice Design (a new voice from a text description, "a haughty French king in his forties, strong Parisian accent in English, nasal, drawling, contemptuous") on ElevenLabs directly or Higgsfield `create_voice`; both need the owner's account or a top-up (Higgsfield balance 0.1 credits).
+3. Most natural: a human performer, a French native who speaks English, recorded with recording_sheet.md, written licence for AI processing.
