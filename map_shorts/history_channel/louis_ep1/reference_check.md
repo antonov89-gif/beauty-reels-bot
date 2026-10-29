@@ -125,3 +125,8 @@ OPEN (not done, needs the owner or later steps):
 5. Disk is full (166 MB free): large models/new clips need space; /home/claude holds about 21 GB of older projects (not touched, owner's decision).
 6. Storyboard frames (22) and card v2 still NOT approved by the owner; C13 and C15 frames need regeneration (new prompts).
 7. Cost of the remaining 13 clips with the fixed method about $65 (draft 0.8 + final 4.3 per 8 s): needs the owner's budget decision.
+
+## C01 v3 attempt (owner 29.10: "упс он должен говорить когда камера смотрит на потолок"), free re-assembly: frames/C01_final_v3.mp4 (not committed)
+Method (build_c01_v3.py, 0 cost): hand-held opening cut at Kling 2.3 s (opening 4.0 s), our "Oops, the ceiling." placed at 0.45 s over the ceiling; part 2 = the Seedance 1080p final from 2.6 s (skips the model's own "Oops"), xfade 0.15 s; the other phrases aligned to the model's lips (residual max 0.19 s). 10.25 s.
+Check: "Oops" now over the ceiling = PASS. Join at about 3.9 s = FAIL: frame diffs 7.7-8.5 against the clip median 2.3, a dissolve ghost and a jump in expression (smirk -> mid-sentence) on frames 3.70/3.84/3.92/4.05 s. That breaks the owner's no-splice rule, so v3 is REJECTED and not shown.
+Clean fix (needs the owner's "да"): new Seedance 2.5 Draft image-only part 2 from the exact last frame of the 4.0 s opening, speech only "There. Welcome to Versailles. Yes, I'm that handsome. Try not to faint.", 7 s: draft about $0.69 + 1080p final about $3.79 = about $4.5.
