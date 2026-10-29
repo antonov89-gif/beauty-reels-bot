@@ -31,3 +31,6 @@ Measured gaps of ep.1 0-42 s vs the reference (louis_ep1/reference_compare_0-42.
 5. Supporting cast react and may speak short lines (a page, a courtier, a guard); the king's deadpan line lands on them; one beat of silence after a gag. The king keeps the ONE locked voice; others use other voices, disclosed as AI.
 6. Sound: a full diegetic bed under everything (room tone of the palace, distant voices, footsteps on parquet, fabric, jewellery, doors, objects), never dead digital silence; still NO music; the video models' own audio stays muted.
 7. Personal hook per episode (a past humiliation turned into power, a secret, a rule only he may break) and one fact per setup.
+
+## Face lock v3 (owner 29.10: "почему лица разные ... плохо делаешь промты и фотокарточку")
+The face master is the king of the video clips: louis_card/face_master_v3/ (README there: descriptor block, ref order, side-by-side check before any video). Card v2 and the old storyboard frames C07+ are not used as identity sources. Every new first frame is made from the face master and checked against it before generation of video.
