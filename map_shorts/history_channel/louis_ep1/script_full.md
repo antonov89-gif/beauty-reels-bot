@@ -61,6 +61,5 @@ Cream captions with a gold key word, 1-3 words, lower third, about 78 % of the f
 - Gates before delivery: contact sheet per clip, mouth/voice consistency, premium_gate.py, authenticity-check audit (fiction with real history), then the owner approves.
 
 ## Open decisions
-1. Wig: dark all the way with the white-grey gag (this script) or white as the main.
-2. Voice: Veo native or one TTS voice for all lines.
-3. Brand name, avatar and banner (still DRAFT).
+Closed by the owner: wig = white-grey main look with the night wig (28.10); one voice for all videos = ElevenLabs v4 "The Young Heir" (29.10).
+Open: brand name, avatar and banner (still DRAFT); approval of the 22 storyboard frames; Russian script review (script_ru.md, sent 29.10).
