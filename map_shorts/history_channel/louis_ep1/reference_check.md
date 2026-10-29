@@ -217,3 +217,8 @@ veo_clip.py (new). First frame = last frame of C04 final.
 build_clip.py fix: our voice is cut at word borders (a 0.10-s tail had copied the start of the next word: ASR heard "It makes, it makes"). C02-C05 rebuilt; offsets unchanged (0.18 / 0.22 / 0.09 / 0.00), every word heard once.
 Status C05: GENERATED + INSPECTED, awaiting the owner's approval. Note: Veo drifts wardrobe more than Seedance (2 of 2 takes changed the shirt); per clip cost about $1 vs $4.3-5.2.
 Owner 29.10: "Перед генерации спрашивай всегда": every generation call needs its own yes (retries, re-takes, draft->final included). Rule added to CLAUDE.md. Earlier this day without a separate yes: C03 final resubmit after a network error, C04 v2 auto draft->final chain, C05 Veo re-takes (tries 2 and 3).
+
+## CHECK C04+C05 (owner: "проверяй"), frames/C05_final_with_prev.mp4, 15.8 s
+PASS: 1080x1920, 24 fps; join at 9.0 s invisible (3 frames around it inspected: same pose, wig, hand) and silent; no frozen frames; motion spikes only at 0.42 s and 7.96 s (fast gestures: wig lift, hand to chest; frames inspected, no glitches); -15.4 LUFS, TP -1.7, LRA 2.6; every word by ASR (the small model writes "looked down" for "look down"); lips: C04 0.09 s, C05 0.00 s.
+SOFT (owner's eye): the Veo face in C05 is a little rounder, with thinner brows and a softer moustache than the Seedance face of C01-C04 (full-res crops side by side). Same wig, gown, room; at phone size it reads as the same man, but it is a model difference.
+Not done yet (edit layer): mono audio (stereo export option), AI mark, title chip, authenticity audit on the full episode.
