@@ -2,20 +2,20 @@
 from PIL import Image, ImageDraw, ImageFont
 import textwrap
 cap={
-"C01":("0-8 s","Marcel, down! Bow. Lower. Good. Welcome to Versailles, my friends. Yes, I'm that handsome. Try not to faint.","tilt down from the ceiling, plume brushes the lens"),
-"C02":("8-16 s","Some mornings, a hundred people watch me wake up. The ceremony is called the rising. I call it opening night.","static propped medium"),
-"C03":("16-24 s","The doctor's here, the surgeon's here, and nobody came to see them. Everyone came to see me. Naturally.","same framing"),
-"C04":("24-32 s","Now, the wig. My hair started falling out at seventeen. I took it personally, so I got a wig.","table height, close, valet finger"),
-"C05":("32-40 s","It makes me look taller, they say. I wouldn't know. I never look down.","tilt up, wide-angle distortion"),
-"C06":("40-48 s","White, grey, a little powder. One day, everybody will wear this. I'm just early.","wig fills the lens, rack focus"),
-"C07":("48-56 s","Bow. Lower. Good. Yes, this is the new wig. Take notes.","floor-level low angle, a hand re-aims the phone"),
-"C08":("56-64 s","A hundred people here, and none may speak before me. I love listening. To myself, mostly.","slow push to an extreme close-up"),
-"C09":("64-72 s","Lower. Lower. Careful, that's a hat. Eyes on me, not on the hat.","wide vignetted view, swing to the reaction"),
-"C10":("72-80 s","Red heels. Nobles only, and only the ones I like. Mine are the tallest, of course.","foreground heel, rack focus to the face"),
-"C12":("88-96 s","Venice sold us mirrors. Now we have 357 of our own, and I'm in every single one.","backward-walk selfie, Hall of Mirrors"),
-"C13":("96-104 s","Don't stand behind me, you're ruining my reflection. Go. Over there. Further.","handheld halt at a mirror"),
-"C14":("104-112 s","Tonight I dine in public. You may watch, but don't stare. Well... a little. Subscribe to my stunning channel.","static propped medium, points at the lens"),
-"C15":("112-120 s","Hit like. Ring the bell. Anyway, do what you like. [haughty laugh] I'm off to the table to feast!","haughty laugh, chin up, waves them off, strides to the table; mirror flash cut"),
+"C01":("0-10 s","Marcel, down! Bow. Lower. Good. Welcome to Versailles, my friends. Yes, I'm that handsome. Try not to faint.","tilt down from the ceiling, plume brushes the lens"),
+"C02":("10-18 s","Some mornings, a hundred people watch me wake up. The ceremony is called the rising. I call it opening night.","static propped medium"),
+"C03":("18-26 s","The doctor's here, the surgeon's here, and nobody came to see them. Everyone came to see me. Naturally.","same framing"),
+"C04":("26-34 s","Now, the wig. My hair started falling out at seventeen. I took it personally, so I got a wig.","table height, close, valet finger"),
+"C05":("34-42 s","It makes me look taller, they say. I wouldn't know. I never look down.","tilt up, wide-angle distortion"),
+"C06":("42-50 s","White, grey, a little powder. One day, everybody will wear this. I'm just early.","wig fills the lens, rack focus"),
+"C07":("50-58 s","Bow. Lower. Good. Yes, this is the new wig. Take notes.","floor-level low angle, a hand re-aims the phone"),
+"C08":("58-66 s","A hundred people here, and none may speak before me. I love listening. To myself, mostly.","slow push to an extreme close-up"),
+"C09":("66-74 s","Lower. Lower. Careful, that's a hat. Eyes on me, not on the hat.","wide vignetted view, swing to the reaction"),
+"C10":("74-82 s","Red heels. Nobles only, and only the ones I like. Mine are the tallest, of course.","foreground heel, rack focus to the face"),
+"C12":("90-98 s","Venice sold us mirrors. Now we have 357 of our own, and I'm in every single one.","backward-walk selfie, Hall of Mirrors"),
+"C13":("98-106 s","Don't stand behind me, you're ruining my reflection. Go. Over there. Further.","handheld halt at a mirror"),
+"C14":("106-114 s","Tonight I dine in public. You may watch, but don't stare. Well... a little. Subscribe to my stunning channel.","static propped medium, points at the lens"),
+"C15":("114-124 s","Hit like. Ring the bell. Anyway, do what you like. [haughty laugh] I'm off to the table to feast!","haughty laugh, chin up, waves them off, strides to the table; mirror flash cut"),
 }
 F=lambda p,s: ImageFont.truetype(p,s)
 SB="/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf"; SR="/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf"; SI="/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf"
@@ -42,6 +42,6 @@ def sheet(ids,name,cols,title,burst=False):
         else:
             d.text((x,y+th+8),["red heel","ringed hand","powder puff","gilded mirror","sun brooch","lace cravat","wig comb","embroidered cuff"][k],font=F(SI,26),fill=INK)
     s.save(name,quality=90); print(name,s.size)
-sheet(["C01","C02","C03","C04","C05","C06","C07","C08"],"storyboard_1_takes1-3.jpg",4,"LOUIS XIV \u00b7 EP.1 \u201cMY MORNING\u201d \u00b7 storyboard 1/3 \u00b7 takes 1-3 (0-64 s)")
-sheet(["C09","C10","C12","C13","C14","C15"],"storyboard_2_takes3-end.jpg",3,"LOUIS XIV \u00b7 EP.1 \u00b7 storyboard 2/3 \u00b7 64-120 s")
-sheet(["B1","B2","B3","B4","B5","B6","B7","B8"],"storyboard_3_burst.jpg",4,"LOUIS XIV \u00b7 EP.1 \u00b7 storyboard 3/3 \u00b7 burst 80-88 s",burst=True)
+sheet(["C01","C02","C03","C04","C05","C06","C07","C08"],"storyboard_1_takes1-3.jpg",4,"LOUIS XIV \u00b7 EP.1 \u201cMY MORNING\u201d \u00b7 storyboard 1/3 \u00b7 takes 1-3 (0-66 s)")
+sheet(["C09","C10","C12","C13","C14","C15"],"storyboard_2_takes3-end.jpg",3,"LOUIS XIV \u00b7 EP.1 \u00b7 storyboard 2/3 \u00b7 66-124 s")
+sheet(["B1","B2","B3","B4","B5","B6","B7","B8"],"storyboard_3_burst.jpg",4,"LOUIS XIV \u00b7 EP.1 \u00b7 storyboard 3/3 \u00b7 burst 82-90 s",burst=True)
