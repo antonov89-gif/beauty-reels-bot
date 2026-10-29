@@ -183,3 +183,5 @@ First frame = last frame of C02 final. build_clip.py now aligns by word index wh
 | Words by ear | PASS: every word |
 | Loudness | -14.5 LUFS |
 Status: GENERATED + INSPECTED (draft), not approved.
+Owner 29.10: C03 "как есть" (red cap accepted as is); 4K: no paid upscale chosen yet. C03 1080p final ordered.
+C03 final: the first submit died with RemoteDisconnected before a task id came back (a server-side task and charge are NOT VERIFIED); resubmitted once.
