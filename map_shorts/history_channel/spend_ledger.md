@@ -49,3 +49,4 @@
 - 29.10, C06 1080p final 4.877. Confirmed total now about $46.5.
 - 29.10, C07 first frame (nano-banana-2.1 2K) 0.04. Page voice audition = free (Lumean library previews, no order).
 - 29.10, first frames v3 (7 x nano-banana-2.1 2K) 0.28. Confirmed total now about $46.9.
+- 29.10, first frames v4 (6 x nano-banana-2.1 2K) 0.24; C09 refused at submit (no charge). Confirmed total now about $47.1.
