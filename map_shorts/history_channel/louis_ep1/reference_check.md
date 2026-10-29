@@ -27,3 +27,7 @@ Status: GENERATED, INSPECTED (contact sheet 6 fps + 3 full-res frames + motion c
 | Hands, props, modern objects | PASS: no hands in the first 2 s, no modern objects |
 | Last 0.8 s | HOLD: almost frozen (diff 2-3), no breathing or blink; part 2 starts from this frame, so trim the hold when joining |
 | Audio | A generated track exists (no speech, transcription empty): a swoosh at 0.75-1.75 s peaking about -9 dB, room tone about -46 dB. Keep as a base for our own foley or replace |
+
+## C01 part 1 v1: REJECTED by the owner (29.10): "we make everything realistic, but the camera flies"
+My earlier verdict "camera also moves toward the bed, acceptable" was WRONG. Measured with phone_move_check.py (feature tracking, new): scale grows 2-10 % per frame between 0.8 and 1.4 s, cumulative +141 % = the camera flies in (the king becomes about 2.4x larger in 0.7 s). A real tilt is a rotation: the king keeps his size. Cause: the first frame (ceiling) was generated from a different camera position than the last frame (C01, close), so the model had to travel between them. Status: GENERATED, INSPECTED, REJECTED. Spent $0.65.
+Fix plan: new first frame from the SAME camera position as C01, pitched up (gen_ceiling2.py), prompt "rotation only, the camera does not move forward"; gate = phone_move_check.py cumulative scale change below 12 % and the king's apparent size constant. Fallback if the model still flies: build the tilt in the edit from two plates (ceiling plate and C01 frame) with a measured rotation curve, motion blur and shake.
