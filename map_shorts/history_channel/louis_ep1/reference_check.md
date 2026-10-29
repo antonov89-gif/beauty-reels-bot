@@ -195,3 +195,12 @@ PASS: 1080x1920, 24 fps, H.264 + AAC 48 kHz; joins at 11.0 s and 20.0 s invisibl
 FIXED: C02 is 9 s, not 8, so the timeline is +1 s from C03 on (C02 11-20, C03 20-28, ... C15 116-126, runtime about 2:06) in script_full, script_ru, make_storyboard (storyboards re-rendered).
 CONFIRMED RISK for C04: the storyboard frame C04.jpg shows a different face (older, darker, a beauty mark, thinner moustache) than the generated king of C01-C03 (side-by-side crops checked). C04 needs a new first frame made from the C03 face before any video.
 OPEN (edit layer at the end): the audio is mono (fine for Shorts; a stereo export is an option); the AI mark and the title chip are not on yet; authenticity audit on the finished episode.
+
+## C04 frame + DRAFT (owner "Да" 29.10): frame 0.04 (C04_v2.jpg, the C01-C03 king at the wig table, face/wig/gown match), draft usage.cost 0.784 (task f152c2d2)
+| Check | Result |
+|--|--|
+| Face / wig / gown vs C01-C03 | PASS (frame and 8 draft frames) |
+| Camera | PASS: -1.2 %, phone propped, still |
+| Action | PASS: lifts the dark wig, hand on chest, mock-tragic face |
+| Words | FAIL: the model skipped "I took it personally" (it says "Now, the wig. My hair started falling out at seventeen ... so I got a wig."): our full line cannot be lip-synced (1.1 s of words over a 0.3 s mouth movement) |
+Status: GENERATED + INSPECTED, REJECTED (missing phrase). Corrective attempt 1 of max 2: re-draft with the full line stressed (9 s, about $0.88) after the owner's yes.

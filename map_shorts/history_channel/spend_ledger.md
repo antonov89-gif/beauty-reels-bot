@@ -41,3 +41,4 @@
 - 29.10, C03 draft 0.784. Confirmed total now about $23.5.
 - 29.10, C03 1080p final 4.336 (an earlier submit died on a network error, no task id: NOT VERIFIED). Confirmed total now about $27.8.
 - 29.10, C04 first frame (nano-banana-2.1 2K) 0.04.
+- 29.10, C04 draft 0.784 (rejected: model skipped a phrase). Confirmed total now about $28.6.
