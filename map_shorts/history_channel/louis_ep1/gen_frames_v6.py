@@ -1,4 +1,4 @@
-"""v6 (owner 29.10: "делай как референс: камера близко к лицу и ходит в руке"): C07, C09, C10 redrawn as CLOSE hand-held selfies (face and shoulders large, his arm holding the phone), the gags kept in the background; C12-C15 v5 stay.
+"""v6.1 (owner 29.10: makeup standard "C10 more powder, C09 less" = one medium powder level for all frames). v6 (owner 29.10: "делай как референс: камера близко к лицу и ходит в руке"): C07, C09, C10 redrawn as CLOSE hand-held selfies (face and shoulders large, his arm holding the phone), the gags kept in the background; C12-C15 v5 stay.
 Based on v5 of the hard-cut first frames (owner 29.10: "Нет, нужен такой парик" = the tall grey powdered wig of the old storyboard C08/C09). Face from the face master, face larger, smug half-smile, no rouge.
 Refs, in this order: face_front_talking.jpg, face_three_quarter.jpg, tall_wig_ref.jpg (the wig only, cropped from the old C09 frame, face masked grey; owner 29.10 "На с09"), then the storyboard frame as the COMPOSITION reference.
 Nano Banana 2.1, 2K, about $0.04 each (7 = about $0.28). PAID: runs only after the owner's yes. Usage: python3 gen_frames_v6.py [ids]"""
@@ -8,7 +8,8 @@ import apipod
 FM = "/home/user/beauty-reels-bot/map_shorts/history_channel/louis_card/face_master_v3/"
 K = open("/home/user/beauty-reels-bot/.zernio_key").read().strip(); H = {"Authorization": "Bearer " + K, "Content-Type": "application/json"}
 FACE = ("a man of about 35 with a pale complexion, light grey-hazel eyes, a long straight nose, a narrow face, a thin upturned waxed moustache, arched brows and a small dark beauty spot beside the mouth")
-KEEP = ("He has EXACTLY the same face as the man in the FIRST and SECOND reference images (same eyes, nose, moustache, age about 35 and skin): do not make him older, no heavy makeup, no pink rouge, no powdered cheeks. "
+KEEP = ("He has EXACTLY the same face as the man in the FIRST and SECOND reference images (same eyes, nose, moustache, age about 35 and skin): do not make him older. "
+        "Makeup (series standard, owner 29.10): a light, even layer of pale period face powder that makes the skin noticeably paler and matte, the skin texture still visible, only a very soft natural flush on the cheeks; NOT a heavy white mask and NOT strong pink rouge. "
         "Expression: a smug, self-satisfied half-smile, relaxed, not stern, not tired. Only the wig and clothes change as described.")
 BASE = "Vertical 9:16 phone photo, ultra-wide front camera look, hand-held, soft natural light, photorealistic, real skin texture with visible pores. No text, no modern objects. "
 WHITE = ("the tall grey-white powdered wig from the THIRD reference image: a high wavy crown standing up above the head, rows of rolled curls at the sides, and long grey curls falling over the shoulders to the chest")
