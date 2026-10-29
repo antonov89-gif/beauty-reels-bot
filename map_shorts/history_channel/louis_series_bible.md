@@ -34,3 +34,12 @@ Measured gaps of ep.1 0-42 s vs the reference (louis_ep1/reference_compare_0-42.
 
 ## Face lock v3 (owner 29.10: "почему лица разные ... плохо делаешь промты и фотокарточку")
 The face master is the king of the video clips: louis_card/face_master_v3/ (README there: descriptor block, ref order, side-by-side check before any video). Card v2 and the old storyboard frames C07+ are not used as identity sources. Every new first frame is made from the face master and checked against it before generation of video.
+
+## Clumsy camera = character trait (owner 29.10, on a reference frame where the face is cut by the frame edge: "он не умеет профессионально держать, нужно показать это зрителям")
+Louis cannot hold a phone. The viewer must SEE it, the way the reference shows it (frame from "Tower of London": face pushed to the left edge and cut, far too close, the coin shoved at the lens, the horizon tilted). In every episode, 2-4 moments of bad framing, never the whole video:
+- the face slides off-centre and is cut by the frame edge (half a face, the top of the wig cut off);
+- far too close: the nose and one eye fill the frame, ultra-wide distortion;
+- tilted horizon, the camera sags while he talks, then he jerks it back;
+- an object shoved into the lens (coin, wig, heel, mirror), focus hunting;
+- he notices and fixes the framing mid-line, annoyed ("Marcel!" if the page gag is approved).
+The words must stay clear (the mouth may leave the frame for a moment, the voice continues). Not a camera flight: all of this is a hand moving within arm's reach.

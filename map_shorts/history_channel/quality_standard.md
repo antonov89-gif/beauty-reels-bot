@@ -46,3 +46,6 @@ The final mix contains no music. Check: every clip's generated audio track is mu
 | Sound bed | no gap of 1 s or more below -50 dB in the final mix; LRA 8-12 LU (reference 11.1) |
 | Framing | the face fills at least about 1/4 of the frame width in talking shots (wide-lens close-up), except planned wides |
 | Cuts | no jump cut inside a setup; hard cuts between setups allowed |
+
+## Clumsy-camera gate (owner 29.10)
+Per episode: at least 2 and at most 4 deliberate bad-framing moments (face cut by the edge, too close, tilted, object in the lens); first frames for hard cuts may start badly framed; every such moment is motivated by his hand (no teleporting camera) and never hides a key fact chip or the CTA.
