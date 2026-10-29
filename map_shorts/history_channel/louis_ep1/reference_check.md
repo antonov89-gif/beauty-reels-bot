@@ -270,3 +270,6 @@ Wig: matches the C09 reference on all 7 (high wavy crown, side rolls, long curls
 C09: close selfie, face and wig large, courtiers bowing behind, the plumed hat on the floor; C10: close face, the red heel and buckle in the foreground. Face matches the master, wig = C09 style. NOT APPROVED yet.
 C07_v6 (resubmit after the owner's "Да", 0.04): close selfie, face matches, courtiers walking in behind: PASS (owner to approve).
 C10_v6 leg check (owner: "проверь что за нога"): FAIL. The leg in white stocking enters from the RIGHT edge at chest height and runs off-frame to the right; it does not connect to his hips (he sits in the centre), so it reads as someone else's leg. Prompt rewritten (his own bent leg rising from his lap, from the bottom centre); redo needs a separate yes (about $0.04).
+
+## Makeup standard v2 frames (owner "Да"; 5 x 0.04 = 0.20): C07_mk, C10_mk, C13_mk, C14_mk, C15_mk (+ C09_v6 and C12_v5 kept) = frames/first_frames_final_candidates.jpg, list in frames/FIRST_FRAMES_CURRENT.md
+Powder: all 7 now white-powdered with pink rouge (C09, C12 slightly stronger rouge). Wig: C09 style on all. Face: master features on all. C10 leg: now his own bent leg (knee by the armrest, shin down to the shoe by the lens), attached to the body: PASS; note the whole sole looks red, not only the heel (soft). NOT APPROVED by the owner yet.
