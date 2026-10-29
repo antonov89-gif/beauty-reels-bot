@@ -85,3 +85,8 @@ Voice for the new line "Oops, the ceiling. There. Welcome to Versailles. Yes, I'
 | Faces / hands | face stable on model; no hands visible |
 Status: draft GENERATED + INSPECTED, REJECTED (not shown as good). The 1080p final from this draft is NOT ordered.
 Lesson: the one-take-with-audio route makes Seedance both re-time the speech and move the camera; the image-only route keeps first/last frames.
+
+## C01 opening, owner: "the camera must move over the ceiling like a phone in a hand" and "the final version in 1080p" (29.10)
+Built ceiling_handheld.py -> frames/C01_open_handheld.mp4 (1080x1920, 24 fps, 4.75 s, not committed): 1.7 s of the 2K ceiling still animated with a measured hand-held motion (drift +-30/52 px, roll +-0.7 deg, tremor; eased to rest at the junction) + Kling part 1 v2 from frame 0 (its tilt onto the king). Same 1.08 crop on both layers (no zoom change). Junction: frame differences 1.2, 1.1, 0.2, 2.0 (smooth, no pop); the first attempt cut at 0.4 s of Kling and popped (30 vs 1-2), fixed.
+Soft notes: the plate motion is a 2-D drift (a distant planar ceiling under a rotating phone), so it has no parallax; the plume stays fixed to the lens edge from the still (a plume would move with the hand: acceptable). phone_move_check flags -15.6 % on the whole clip because the tilt changes the ceiling's perspective scale (known false positive for large pitch; the king's size is the real test, see part 1 v2).
+Final delivery must be 1080p (owner). Part 2 plan: Seedance 2.5 Draft, image only (first frame = last frame of part 1 v2), draft 480p first, then the 1080p final from the approved draft; our voice aligned to its speech by phrase.
