@@ -233,3 +233,4 @@ Not done yet (edit layer): mono audio (stereo export option), AI mark, title chi
 | Pace | 3.0 s of silence (eyes closed, sigh) before the first word; the clip is very still (median frame diff 0.5) |
 Free variant built: frames/C05_final_jumpcut.mp4 = the same take from 2.6 s (5.4 s): it reads as a vlog jump cut into a closer shot, speech starts at once; the jump is still a visible edit.
 Status: GENERATED + INSPECTED; join FAIL against the no-visible-splice rule. Options for the owner: (a) keep the jump cut (free), (b) draft route draft + final (about $0.78 + $4.34, exact first frame proven), (c) back to the Veo take (different face).
+Owner 29.10: "Нормально дальше" -> C05 = the jump-cut variant (frames/C05_final.mp4, 5.4 s), accepted. C06 first frame = last frame of seedance25_c05_1080.mp4 (frames/C06_first.jpg).
