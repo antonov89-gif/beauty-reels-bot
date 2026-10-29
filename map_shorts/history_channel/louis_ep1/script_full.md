@@ -63,3 +63,6 @@ Cream captions with a gold key word, 1-3 words, lower third, about 78 % of the f
 ## Open decisions
 Closed by the owner: wig = white-grey main look with the night wig (28.10); one voice for all videos = ElevenLabs v4 "The Young Heir" (29.10).
 Open: brand name, avatar and banner (still DRAFT); approval of the 22 storyboard frames; Russian script review (script_ru.md, sent 29.10).
+
+## Voice timing (29.10, locked voice v3)
+Measured lines: C01 9.9 s and C15 7.8 s, so C01 and C15 are 10 s clips (Kling r2v); the rest fit 8 s (4.0-7.5 s). Runtime grows by about 4 s (about 2:04). QC: voice/tts_ep1/qc.md.

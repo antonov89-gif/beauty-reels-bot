@@ -1,0 +1,142 @@
+{
+ "C01": {
+  "file": "audition_accent/heir_phon_eleven_v4.mp3",
+  "start": 0.0,
+  "end": 9.54,
+  "speech_s": 9.54,
+  "matched": "17/18",
+  "clip_file": "tts_ep1/C01.mp3",
+  "clip_len_s": 9.87,
+  "fits_8s": false
+ },
+ "C02": {
+  "file": "audition_accent/heir_phon_eleven_v4.mp3",
+  "start": 10.16,
+  "end": 16.96,
+  "speech_s": 6.8,
+  "matched": "20/20",
+  "clip_file": "tts_ep1/C02.mp3",
+  "clip_len_s": 7.21,
+  "fits_8s": true
+ },
+ "C03": {
+  "file": "audition_accent/heir_phon_eleven_v4.mp3",
+  "start": 17.5,
+  "end": 23.34,
+  "speech_s": 5.84,
+  "matched": "16/18",
+  "clip_file": "tts_ep1/C03.mp3",
+  "clip_len_s": 6.27,
+  "fits_8s": true
+ },
+ "C04": {
+  "file": "audition_accent/heir_phon_eleven_v4.mp3",
+  "start": 23.98,
+  "end": 30.38,
+  "speech_s": 6.4,
+  "matched": "18/19",
+  "clip_file": "tts_ep1/C04.mp3",
+  "clip_len_s": 6.82,
+  "fits_8s": true
+ },
+ "C05": {
+  "file": "audition_accent/heir_phon_eleven_v4.mp3",
+  "start": 30.88,
+  "end": 34.52,
+  "speech_s": 3.64,
+  "matched": "13/14",
+  "clip_file": "tts_ep1/C05.mp3",
+  "clip_len_s": 4.05,
+  "fits_8s": true
+ },
+ "C06": {
+  "file": "tts_ep1/C06-C10.mp3",
+  "start": 0.0,
+  "end": 7.06,
+  "speech_s": 7.06,
+  "matched": "13/14",
+  "clip_file": "tts_ep1/C06.mp3",
+  "clip_len_s": 7.39,
+  "fits_8s": true
+ },
+ "C07": {
+  "file": "tts_ep1/C06-C10.mp3",
+  "start": 7.64,
+  "end": 12.58,
+  "speech_s": 4.94,
+  "matched": "11/11",
+  "clip_file": "tts_ep1/C07.mp3",
+  "clip_len_s": 5.36,
+  "fits_8s": true
+ },
+ "C08": {
+  "file": "tts_ep1/C06-C10.mp3",
+  "start": 13.12,
+  "end": 19.16,
+  "speech_s": 6.04,
+  "matched": "16/16",
+  "clip_file": "tts_ep1/C08.mp3",
+  "clip_len_s": 6.45,
+  "fits_8s": true
+ },
+ "C09": {
+  "file": "tts_ep1/C06-C10.mp3",
+  "start": 19.8,
+  "end": 24.44,
+  "speech_s": 4.64,
+  "matched": "13/13",
+  "clip_file": "tts_ep1/C09.mp3",
+  "clip_len_s": 5.07,
+  "fits_8s": true
+ },
+ "C10": {
+  "file": "tts_ep1/C06-C10.mp3",
+  "start": 24.92,
+  "end": 29.96,
+  "speech_s": 5.04,
+  "matched": "14/16",
+  "clip_file": "tts_ep1/C10.mp3",
+  "clip_len_s": 5.46,
+  "fits_8s": true
+ },
+ "C12": {
+  "file": "tts_ep1/C12-C15.mp3",
+  "start": 0.0,
+  "end": 6.84,
+  "speech_s": 6.84,
+  "matched": "16/20",
+  "clip_file": "tts_ep1/C12.mp3",
+  "clip_len_s": 7.18,
+  "fits_8s": true
+ },
+ "C13": {
+  "file": "tts_ep1/C12-C15.mp3",
+  "start": 7.42,
+  "end": 11.62,
+  "speech_s": 4.2,
+  "matched": "12/12",
+  "clip_file": "tts_ep1/C13.mp3",
+  "clip_len_s": 4.62,
+  "fits_8s": true
+ },
+ "C14": {
+  "file": "tts_ep1/C12-C15.mp3",
+  "start": 12.2,
+  "end": 19.24,
+  "speech_s": 7.04,
+  "matched": "19/19",
+  "clip_file": "tts_ep1/C14.mp3",
+  "clip_len_s": 7.47,
+  "fits_8s": true
+ },
+ "C15": {
+  "file": "tts_ep1/C12-C15.mp3",
+  "start": 19.6,
+  "end": 27.0,
+  "speech_s": 7.4,
+  "matched": "17/17",
+  "clip_file": "tts_ep1/C15.mp3",
+  "clip_len_s": 7.81,
+  "fits_8s": false
+ }
+}
