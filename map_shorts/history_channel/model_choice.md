@@ -30,3 +30,8 @@ Nothing in this plan has been started or paid.
 ## Test findings 29.10 (C01)
 - kling-4.0-r2v: the voice reference (`voices`) rejected our locked voice 3 times ("Not enough speech in the voice audio"), with 12.8 s, 23.7 s continuous mp3 and the same as WAV. The fixed-voice-by-reference route does not work for this voice. Its `image_urls` are reference images, NOT a first frame (official spec).
 - Next route: kling-4.0-i2v (first frame + keyframes + last frame, 3-30 s; prompt mentions @first_frame/@keyframe_N/@last_frame) for the camera and identity, model's own speech for lip movement, then our locked TTS laid over in the edit; or seedance-2.0-r2v with our audio in `audio_urls` (lip-sync to a given audio undocumented).
+
+## Lip sync to OUR voice (29.10, C01)
+- Kling 4.0 i2v speaks its own faster line: phrase starts match, words inside phrases are 0.4-0.9 s early vs our drawled voice -> FAIL with our voice laid over.
+- Owner 29.10: Wan is NOT acceptable for video quality (wan2.7-i2v has `audio_url`, rejected).
+- Candidates that take our audio: (1) APIpod seedance-2.0-r2v: `image_urls` + `audio_urls` references (no first-frame role in the spec; lip sync to a given audio undocumented), 720p $0.126/s, 1080p $0.315/s; (2) Higgsfield Seedance 2.0: start_image + end_image + audio_references roles (first-frame control), needs a credit top-up (balance 0.1, plan pro); (3) a dedicated lip-sync model on the Kling clip (not in APIpod or the first Higgsfield results); (4) re-voicing our line at the model's pace = x1.6-2.4 faster, rejected (kills the drawl).
