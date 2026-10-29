@@ -46,3 +46,15 @@ Status: GENERATED, INSPECTED (contact sheet 6 fps, 4 full-res frames next to the
 | Last 1 s | HOLD frozen; trim when joining part 2 |
 | Audio | A continuous bed at about -25 dB, no speech (transcription empty); its content is NOT identified (possibly generated music/ambience). NOT USED: our own room tone and foley are laid instead (no unlicensed audio) |
 Cost of the camera-flight lesson: v1 $0.65 + v2 $0.04 + $0.65.
+
+## C01 part 2 (speech), Kling 4.0 i2v 9 s 1080p (owner said yes; usage.cost 1.9575, task 2869894b)
+Status: GENERATED, INSPECTED, NOT APPROVED (failed the lip-sync check with our voice; not shown to the owner).
+| Check | Result |
+|--|--|
+| Camera does not fly | PASS: phone_move_check +0.1 %, framing steady, micro-shake only |
+| Identity / wig / gown vs first frame | PASS (frames 0-9 s and 3 full-res crops) |
+| Gesture "Me." finger to chest | PASS: hand at 1.7-2.0 s, five fingers, natural |
+| Expressions | PASS: irritated, smug, a broad grin at ~4.7 s, smirk at the end |
+| Lip sync with OUR voice (tts_ep1/C01.mp3) | FAIL: Kling speaks its own (faster) line. Phrase starts match within 0.1 s (Marcel 0.00/0.00, Me 1.68/1.68, Versailles 4.44/4.32, Yes 5.30/5.20, Try 7.20/7.12), but words inside phrases are early by 0.4-0.9 s (ceiling 0.84 vs 1.28, that 5.64 vs 6.28, handsome 5.78 vs 6.64, faint 7.72 vs 8.14). Our drawled voice would visibly lag the lips |
+| Audio of the clip | model speech in a generic voice; muted by rule |
+Fix route: Wan 2.7 i2v takes `audio_url` (official spec), so the lips are driven by OUR audio; first frame = the same frame (seamless join with part 1 v2). Prepared: wan_part2.py + voice/tts_ep1/C01_drive_10s.mp3 (0.15 s lead + C01 voice, padded to 10 s). Price not shown by the estimator (returns 0): NOT VERIFIED until the status reports usage.cost.
