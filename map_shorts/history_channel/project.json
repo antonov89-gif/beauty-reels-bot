@@ -89,7 +89,7 @@
     },
     "must_keep": [
       "AI mark on screen + description + platform flag",
-      "a self-praise line every 15-20 s ('what a handsome man I am')",
+      "a self-praise line ONCE per video, in the signature opener ('Yes, I'm that handsome'; owner 29.10)",
       "next episode named at the end",
       "no modern items in frame",
       "one checked fact per scene shown as a chip",
@@ -330,7 +330,7 @@
       "purpose": "C03 fact: doctor and surgeon present, vanity beat",
       "shot_size": "medium",
       "camera": "static propped, slow imperceptible drift",
-      "subject_action": "'The doctor's here, the surgeon's here, and nobody came to see them. Look at me instead. Magnificent, no?'",
+      "subject_action": "'The doctor's here, the surgeon's here, and nobody came to see them. Everyone came to see me. Naturally.'",
       "transition": "hard cut to the wig table",
       "transfer_id": "TR04"
     },

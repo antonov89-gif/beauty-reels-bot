@@ -24,3 +24,6 @@ Status words stay GENERATED != INSPECTED != APPROVED; anything not verified is N
 
 ## Change 29.10.2026 (owner): the outro laugh
 The laugh now comes AFTER "do what you like" and is cold, arrogant, haughty (chin up, looks down the nose, eyes half-closed). Updated in the series bible, script, emotion map, tagged lines, recording sheet and the C15 frame prompt. The current C15 storyboard frame still shows a warm smile (old prompt): it is regenerated in the 2K pass (about $0.04, inside the $0.88) and inspected before approval. The emotion voice test must check that the laugh sounds haughty, not friendly.
+
+## Change 29.10.2026 (owner): self-praise once per video
+"What a handsome man I am" is said ONCE per video, in the opener (C01). The other direct-praise lines were rewritten into situational jokes (C03, C05, C07, C08, C10, C12, C13). Start frame C13 changes from "swooning at the mirror" to "icy glare and a hand waving the courtier away": regenerated in the 2K pass (about $0.04, inside the $0.88) with the new prompt in frames_louis.py. The other frames still fit.
