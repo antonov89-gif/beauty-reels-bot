@@ -34,3 +34,8 @@ Respelling exceptions added for C02 ("the") and C04 ("the", "hair"); re-voice of
 
 ## Re-voice C02 + C04 (29.10, 0.23 RUB)
 C02 7.78 s, heard "...The ceremony is called The Rising..." (ratio 1.0); C04 6.84 s, heard "Now, the wig. My hair started falling out..." (ratio 0.95). Both clear by ear now; levels -22 dB mean.
+
+## C08 + C09 re-voice (29.10, owner "Да"; one order 350 chars, 0.23 RUB; C08-C09.mp3 split at 6.90 s)
+C08.mp3 6.95 s: ASR "All these people, and nobody may speak before me, I love listening to myself, mostly." PASS.
+C09.mp3 5.54 s: ASR "Lower lower and there goes a hat eyes on me not on the hat": the first "the hat" (respelled "ze") is heard as "a hat"; meaning unchanged, the second "the hat" is clear. Soft; fix = respelling exception [the] for C09 + re-voice (0.23 RUB), needs a yes.
+Old takes kept: C08_old.mp3, C09_old.mp3.
