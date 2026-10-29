@@ -46,3 +46,6 @@ seedance-2.5-draft (APIpod spec): stage 1 = 480p draft (any prompt/images/audio,
 - Third-party Topaz video upscale list prices seen: Evolink $0.055-0.088/s (4x = $0.088/s), Apiframe $0.02/s for 1080p. No account here.
 - YouTube Shorts: a secondary source (Hopper HQ) says Shorts accept 4K uploads but are served at max 1080p; NOT VERIFIED on YouTube Help.
 Decision pending with the owner.
+
+## Seedance 2.5 draft route: final only in 1080p (verified 29.10 on the API)
+The final step from a draft_task_id answers 400 "supports only 1080p resolution" for 720p (rejected at validation, no charge). So the draft route costs draft 0.098 $/s + final 0.542 $/s (about $5.2 per 8 s with the final at 1080p); the direct i2v route offers 720p at 0.2205 $/s (about $1.76 per 8 s) but does NOT keep the exact first frame (C05, C08 jumped). Use the draft route for continuations (no visible cut), the direct 720p route only for planned hard cuts.
