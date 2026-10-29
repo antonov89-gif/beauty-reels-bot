@@ -44,6 +44,9 @@ VOICES = {  # name: (voice_id, public_owner_id or None)
     "adam": ("eGSd0uV8dNQnZuEEX9lu", None),
     "david": ("cCYjmrGZaI86GUJ7F2Nn", "fd99b11504e8c1aac6e847ea61616cd450db4e2b1b8aaa196c35d58c85fd9f28"),
     "std": ("O25OBJSCm417f6WHn13t", "64cbc624eb"),
+    # ElevenLabs voice library, "aristocrat" page (28.10): designed character voices, posh British
+    "heir": ("AqRCwHAjbeFmvSwJvHll", "779d91788b0d9e364d32e0a0e4273ec722b92887fa710d82f50b2d034a9fb97b"),
+    "earl": ("Qe1cEPoB1FSt1SF25uq3", "779d91788b0d9e364d32e0a0e4273ec722b92887fa710d82f50b2d034a9fb97b"),
 }
 TEXT = ("[smug] Marcel, down! [haughty] Bow. Lower. Good. Welcome to Versailles. [admiringly] Yes, I am that handsome. [sneering] Try not to faint. "
         "[smug] A hundred people watch me wake up. The French call it the lever. I call it a premiere. [admiringly] Look at me. Magnificent. [arrogant] The sun is never late.")
