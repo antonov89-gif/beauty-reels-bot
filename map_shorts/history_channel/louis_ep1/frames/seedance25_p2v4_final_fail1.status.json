@@ -1,0 +1,10 @@
+{
+ "code": 200,
+ "message": "success",
+ "data": {
+  "task_id": "4a37025a-400f-4fe1-bf31-c0d5a62edc80",
+  "status": "failed",
+  "progress": 0,
+  "error": "Generation failed. Please try again later."
+ }
+}
