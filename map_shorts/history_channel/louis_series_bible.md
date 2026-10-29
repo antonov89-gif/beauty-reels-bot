@@ -12,7 +12,7 @@ He commands the audience, laughs, waves them off and walks away to a banquet tab
 ## Self-praise lines (the "what a handsome man I am" tags)
 Rules: one tag every 15-20 s (6 per 2 minutes), never the same line twice in one episode, 2-8 words, always straight to the lens or to the mirror, delivered smugly, never apologetic; no jokes about illness or real people's bodies other than the king's own vanity.
 Bank (extend freely): "Look at me. Magnificent." / "What a face, though. Honestly." / "Handsome. Again. Every single morning." / "I could cry. Look at that profile." / "Yes, white suits me. Everything suits me." / "Only one worth looking at. Me. Obviously." / "Look at that ankle." / "Lucky mirrors." / "Ah... what a profile." / "They are all good sides." / "Magnifique. Me, I mean." / "I am sorry. I cannot help it." / "Stunning. Who dressed him? Genius." / "Even my shadow is handsome." / "Do not touch. Admire." / "Perfection takes no effort. Mine, I mean."
-Use in ep.1: C03 (Magnificent), C05 (What a face), C07 (white suits me), C08 (Obviously), C10 (ankle), C12 (Lucky mirrors), C13 (what a profile), C15 (good sides).
+Use in ep.1: C03 (Magnificent), C05 (What a face), C07 (white suits me), C08 (Obviously), C10 (ankle), C12 (Lucky mirrors), C13 (what a profile), C14 (a little).
 
 ## Fixed cast and props
 Marcel the page (off screen, "my left side, MY left"), the gilded hand mirror (cut device), the plumed hat gag, the red heels, the white-grey wig.

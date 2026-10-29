@@ -1,0 +1,12 @@
+# Spend ledger, history channel, 28-29.10.2026 (nothing hidden)
+| Item | Cost |
+|--|--|
+| Character card v1: 5 frames at 1K (A, B, C, D, C v2) | $0.10 |
+| Character card v2: 4 frames (A2, B2, C2, D2) | $0.08 |
+| Wig test A3 | $0.02 |
+| Storyboard: 22 frames first run | $0.44 |
+| Storyboard regenerations: C03, C04, C01, C02, C05, C10 x2, B8, C15 | $0.18 |
+| Voice audition: 6 voices + 2 library voices + Eleven v4 test (9 orders x 0.23 RUB) | 2.07 RUB (about $0.026) |
+| vidIQ credits (research of the Elizabeth and Chloe channels) | about 85 credits (balance 949 left) |
+| Video clips (Kling, Veo, Seedance) | $0.00: nothing generated yet |
+Dollar total on images: $0.82 (storyboard frames part $0.62, within the $0.80 cap set for that stage; the cards were approved separately). Next planned: C01 tests, see quality_standard.md.
