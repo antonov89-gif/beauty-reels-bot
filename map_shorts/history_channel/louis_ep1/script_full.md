@@ -31,13 +31,13 @@ SOUND: murmur, candles, fabric, a distant door; no music.
 ### TAKE 2 (28-52 s), the wig table (hard cut at 28 s)
 C04 (28-36) CAMERA: table height, rolled ~20 degrees, very close, the king's face in profile at the top, wigs on stands and a powder puff in the lower frame, a pink valet finger enters the lower right. ACTION: he lifts the dark wig to the lens. LINE: "Now, the wig. My hair started falling out at seventeen. I took it personally, so I got a wig." CHIP: "HAIR LOSS FROM AGE ~17 (ABOUT 1655), THEN WIGS" [2S].
 C05 (36-44) CAMERA: slow tilt up from the table to his face, wide-angle distortion on the nose. ACTION: he strokes the tall wig. LINE: "It makes me look taller, they say. I wouldn't know. I never look down." CHIP: "TALL WIGS ADDED HEIGHT" [1S].
-C06 (44-52) CAMERA: he thrusts the white-grey wig toward the lens (the wig fills the frame, like the jar in Elizabeth's take), rack focus from wig to face. ACTION: he considers it, sniffs, hands it back. LINE: "White, grey, a little powder. One day, everybody will wear this. I'm just early." [C] He puts it on at the end of the clip.
-SOUND: wig stand creak, powder puff, a small cough.
+C06 (44-52) CAMERA: he thrusts the white-grey wig toward the lens (the wig fills the frame, like the jar in Elizabeth's take), rack focus from wig to face. ACTION: he considers it, sniffs, hands it back. LINE: "White, grey, a little powder. One day, everybody will wear this. I'm just early." [C] He puts it on at the end of the clip. HANDHELD (reference manner): he holds the phone in one hand at arm's length, the camera sways with his arm; the wig pushed into the lens = the phone mistake of take 2.
+SOUND: wig stand creak, powder puff, a small cough; under everything the palace room tone (distant voices, parquet creaks), no dead silence (reference manner).
 
 ### TAKE 3 (52-84 s), the court enters (hard cut at 52 s)
-C07 (52-60) CAMERA: the camera is on the floor looking up at the king standing in his dressing gown, chandelier and ceiling behind, doors opening at the back; a hand sweeps in from the top (the page re-aims the phone). ACTION: the court floods in and bows. LINE: "Bow. Lower. Good. Yes, this is the new wig. Take notes." CHIP: "THE COURT ENTERED IN ORDER OF RANK" [2S].
+C07 (52-60) CAMERA: the camera is on the floor looking up at the king standing in his dressing gown, chandelier and ceiling behind, doors opening at the back; a hand sweeps in from the top (the page re-aims the phone). ACTION: the court floods in and bows. LINE: "Bow. Lower. Good. Yes, this is the new wig. Take notes." CHIP: "THE COURT ENTERED IN ORDER OF RANK" [2S]. PAGE LINE (new, other voice): a page off-frame, "The court, Sire." before the doors open.
 C08 (60-68) CAMERA: slow push toward an extreme close-up of the king's face while the bows go on behind him. ACTION: the king mouths along with their bowing, bored. LINE: "A hundred people here, and none may speak before me. I love listening. To myself, mostly."
-C09 (68-76) CAMERA: wide vignetted view from low (peephole look): a courtier bows too low, his plumed hat falls and rolls; swing back to the king's smug face. LINE: "Lower. Lower. Careful, that's a hat. Eyes on me, not on the hat."
+C09 (68-76) CAMERA: wide vignetted view from low (peephole look): a courtier bows too low, his plumed hat falls and rolls; swing back to the king's smug face. LINE: "Lower. Lower. Careful, that's a hat. Eyes on me, not on the hat." COURTIER LINE (new, other voice): "Pardon, Sire!" as he grabs the hat; one beat of silence after the king's line.
 C10 (76-84) CAMERA: foreground foot with a red heel and the buckle in focus, rack focus up to the king's face. ACTION: he turns his foot to show it. LINE: "Red heels. Nobles only, and only the ones I like. Mine are the tallest, of course." CHIP: "RED HEELS: A COURT PRIVILEGE, 1670s" [2S].
 SOUND: door latches, boots on parquet, plume brush, a small laugh from the court.
 
@@ -46,7 +46,7 @@ SOUND: door latches, boots on parquet, plume brush, a small laugh from the court
 
 ### TAKE 4 (92-108 s), Hall of Mirrors (cut)
 C12 (92-100) CAMERA: backward walk, the king strides toward the lens, mirrors and chandeliers left, arched windows right, courtiers trailing. LINE: "Venice sold us mirrors. Now we have 357 of our own, and I'm in every single one." CHIP: "HALL OF MIRRORS: 357 MIRRORS · 1678-1684" [2S].
-C13 (100-108) CAMERA: handheld halt, the king stops in front of a mirror panel (we see his back and the lens-side face), a courtier tries to pass. LINE: "Don't stand behind me, you're ruining my reflection. Go. Over there. Further."
+C13 (100-108) CAMERA: handheld halt, the king stops in front of a mirror panel (we see his back and the lens-side face), a courtier tries to pass. LINE: "Don't stand behind me, you're ruining my reflection. Go. Over there. Further." COURTIER LINE (new, other voice): "Sire, I only..." cut off by the king.
 
 ### END (108-126 s), gallery threshold, then the banquet table (owner 29.10: the CTA ending)
 C14 (108-116) ACTION: he straightens a curl, glances at the page, then points at the lens. LINE: "Tonight I dine in public. You may watch, but don't stare. Well... a little. Subscribe to my stunning channel." [2S rule: onlookers were not allowed to stare] CHIP: "NEXT: DINNER, IN PUBLIC".

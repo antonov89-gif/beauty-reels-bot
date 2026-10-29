@@ -21,3 +21,13 @@ Marcel the page (off screen, "my left side, MY left"), the gilded hand mirror (c
 
 ## Sound rule (owner 29.10)
 NO music in any video of the series: no score, no sting, no harpsichord. Only the locked voice, room tone and foley. The audio that the video models generate is always muted and replaced (it can contain music).
+
+## Reference manner (owner 29.10: "Где мы отстаём: это учти далее и делай как референс")
+Measured gaps of ep.1 0-42 s vs the reference (louis_ep1/reference_compare_0-42.md) and the newer reference "Tower of London" (map_shorts/ref_tudor_vlog_2026_10_28/one_link_studio_lBkoOcM-r5k.md). From C06 on, every clip and every episode:
+1. Camera is a phone in a hand and never stands still: hand-held drift, small roll, walking bob, re-aims, tilt down/up to an object, push-in to the face. ONE locked (propped) shot per episode at most, used as a contrast beat. Still realistic: the phone stays within arm's reach (camera-flight rule).
+2. Framing close and wide-lens: face and hands fill the frame, real ultra-wide distortion at close range; the room behind.
+3. One clip = one setup of about 8 s; hard cuts between setups are fine (like the reference's 15 shots in 2 min); inside a setup no jump cuts.
+4. Phone mistakes: at least one per take (an object filling the lens, a hand re-aiming the phone, the lens brushing a shoulder or a door frame, the camera dropping to the feet, a hand reaching to stop the recording at the very end).
+5. Supporting cast react and may speak short lines (a page, a courtier, a guard); the king's deadpan line lands on them; one beat of silence after a gag. The king keeps the ONE locked voice; others use other voices, disclosed as AI.
+6. Sound: a full diegetic bed under everything (room tone of the palace, distant voices, footsteps on parquet, fabric, jewellery, doors, objects), never dead digital silence; still NO music; the video models' own audio stays muted.
+7. Personal hook per episode (a past humiliation turned into power, a secret, a rule only he may break) and one fact per setup.

@@ -36,3 +36,13 @@ A phone-handled shot is a ROTATION (tilt, pan, roll) plus small shake, never a d
 
 ## No-music gate (owner 29.10)
 The final mix contains no music. Check: every clip's generated audio track is muted in the edit (stream map shows only our voice and foley stems); a spectral listen of the final file for tonal/rhythmic content outside the voice; the authenticity audit states "music: none".
+
+## Reference-manner gates (owner 29.10: "делай как референс"), measured on every clip and on the cut
+| Gate | Pass |
+|--|--|
+| Camera moves | global camera path > 0 px over the clip (hand-held drift visible) and scale change < 12 % (no flight); a fully locked clip only if it is THE one contrast shot of the episode |
+| Calm motion | mean frame difference 2-4 per second in talking stretches; under 1.0 for more than 2 s = FAIL (reads frozen) |
+| Phone mistakes | at least 1 per take |
+| Sound bed | no gap of 1 s or more below -50 dB in the final mix; LRA 8-12 LU (reference 11.1) |
+| Framing | the face fills at least about 1/4 of the frame width in talking shots (wide-lens close-up), except planned wides |
+| Cuts | no jump cut inside a setup; hard cuts between setups allowed |
