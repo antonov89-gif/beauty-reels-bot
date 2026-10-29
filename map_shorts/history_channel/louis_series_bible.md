@@ -46,3 +46,6 @@ The words must stay clear (the mouth may leave the frame for a moment, the voice
 
 ## The king is the only star (owner 29.10)
 Courtiers, pages and guards wear simple period wigs and plain clothes; nobody copies his wig, coat or makeup. Only Louis has the tall powdered wig, the white court makeup and the scarlet sun coat.
+
+## Camera manner lock (owner 29.10: "больше внимания на камеру ... он не умеет держать камеру")
+Every video prompt starts with CAMERA_BASE from louis_ep1/camera_plan_ep1.md and adds the per-clip camera beats (0-2 / 2-5 / 5-8 s) with one clumsy moment per clip. A clip whose camera is calm or tripod-like fails the gate and is not shown.
