@@ -26,3 +26,7 @@ Next, in order:
 Files: audition_accent/heir_tag_eleven_v3.mp3 (39.2 s), heir_tag_eleven_v4.mp3 (34.8 s); listening file accent_test_v3_v4.mp4 (not committed).
 Self-check: every word transcribed correctly (Whisper small), no tag read aloud, loudness -19.7 / -21.4 LUFS (normalised in the edit).
 Accent proxy (Whisper language detection, probability "French" per 10 s): no-accent heir 0.006, heir + tag v3 0.002, heir + tag v4 0.003, library Marcel (strong native accent) 0.884, library Cyril (accented narrator) 0.012. Reading: the tag did NOT measurably add a French accent; the proxy is crude (Cyril has an audible accent at 0.012), so the owner's ear decides.
+
+## Test 2 result (29.10, owner said "да", 1 order 0.37 RUB)
+heir_phon_eleven_v4.mp3 (35.9 s): The Young Heir, Eleven v4, tag "[thick French accent]" plus TTS-only respelling (ze, zat, zem, zey, 'ere, 'undred, 'air, 'andsome). Listening file accent_test2_tag_vs_spelling.mp4 (A = tag only, B = respelling; not committed).
+Self-check: no tag read aloud; loudness -21.9 LUFS. The transcript shows the accent features landed in places: "here" heard as "ear" (dropped h), "taller, zey say" heard as "tall, as they say", "Bow" as "Bau". Clarity risk: "the doctor's 'ere" can read as "doctor's ear"; captions carry the normal spelling. French proxy still near 0 (Whisper normalises the words), so the owner's ear decides.

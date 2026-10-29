@@ -8,6 +8,7 @@
 | Storyboard regenerations: C03, C04, C01, C02, C05, C10 x2, B8, C15 | $0.18 |
 | Voice audition: 6 voices + 2 library voices + Eleven v4 test (9 orders x 0.23 RUB) | 2.07 RUB (about $0.026) |
 | French-accent test: The Young Heir + accent tag, Eleven v3 and v4 (2 orders x 0.38 RUB) | 0.76 RUB |
+| French-accent test 2: respelling variant, Eleven v4 (1 order) | 0.37 RUB |
 | vidIQ credits (research of the Elizabeth and Chloe channels) | about 85 credits (balance 949 left) |
 | Video clips (Kling, Veo, Seedance) | $0.00: nothing generated yet |
 Dollar total on images: $0.82 (storyboard frames part $0.62, within the $0.80 cap set for that stage; the cards were approved separately). Next planned: C01 tests, see quality_standard.md.
