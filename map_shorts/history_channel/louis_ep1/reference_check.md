@@ -302,3 +302,7 @@ Status: GENERATED + INSPECTED, awaiting the owner's approval.
 | Phone in his hand | FAIL: for the first 3 s the model draws a phone with a lit screen in his raised hand (0-3 s): he is filming with that phone, it cannot be seen |
 | Face | same man; in the close-up (3-8 s) the rouge and the smile read a little stronger (soft) |
 Status: GENERATED + INSPECTED, REJECTED for the join and the phone. Free partial rescue is NOT possible (the first 3 s carry "All these people, and nobody may speak before me"). Corrective attempt 1: draft route from the exact last frame of the C07 take (draft 480p about $0.78, final 720p about $1.76 if the draft route allows 720p, otherwise 1080p about $4.34): needs the owner's yes.
+
+## C08 DRAFT via the draft route (owner "Да"; usage.cost 0.784, task 52a589db): frames/seedance25_c08d_draft.mp4, rough frames/C08_rough_with_prev.mp4 (not committed)
+Join C07 -> C08: PASS (frame diff 7.7 vs neighbours 4-8; it starts from the exact last frame of the C07 take). No phone in his hand: PASS. Camera: PASS: he lets go of the wig, the room and the bowing court show behind him (1-2 s), then the phone creeps in until his face fills the frame and the wig is cut by the top edge (3-8 s), a jolt on the snort; scale +72 % = the push-in by his arm, motion 4-12 per second. Words PASS by ASR. Lips 0.00-0.04 s, 0.24 s on "to myself" (soft). Face same man; rouge and smile strong in the close-up (soft). 
+Status: GENERATED + INSPECTED (draft 480p). Final: 720p about $1.76 if the draft route accepts 720p, else 1080p about $4.34: SEPARATE yes.
