@@ -222,3 +222,14 @@ Owner 29.10: "Перед генерации спрашивай всегда": ev
 PASS: 1080x1920, 24 fps; join at 9.0 s invisible (3 frames around it inspected: same pose, wig, hand) and silent; no frozen frames; motion spikes only at 0.42 s and 7.96 s (fast gestures: wig lift, hand to chest; frames inspected, no glitches); -15.4 LUFS, TP -1.7, LRA 2.6; every word by ASR (the small model writes "looked down" for "look down"); lips: C04 0.09 s, C05 0.00 s.
 SOFT (owner's eye): the Veo face in C05 is a little rounder, with thinner brows and a softer moustache than the Seedance face of C01-C04 (full-res crops side by side). Same wig, gown, room; at phone size it reads as the same man, but it is a model difference.
 Not done yet (edit layer): mono audio (stereo export option), AI mark, title chip, authenticity audit on the full episode.
+
+## C05 redo on Seedance 2.5 i2v DIRECT 1080p (owner "Да, 2"; usage.cost 4.33552, task c4e682fa): frames/seedance25_c05_1080.mp4
+| Check | Result |
+|--|--|
+| Face vs C01-C04 | PASS: the Seedance face is back (full-res crops side by side) |
+| Words, lips | PASS: every word, offset 0.00 s |
+| Camera | PASS: +0.3 % |
+| FIRST FRAME | FAIL: the direct i2v route did NOT start on the given frame: frame 0 is re-framed (closer, lower, stands shifted, eyes closed), so C04 -> C05 is a visible jump (frame diff 26 vs 2-3). The draft route (seedance-2.5-draft, image-only) kept the exact first frame in C01-C04; I assumed the direct route behaves the same and did not verify it: my error, $4.34 |
+| Pace | 3.0 s of silence (eyes closed, sigh) before the first word; the clip is very still (median frame diff 0.5) |
+Free variant built: frames/C05_final_jumpcut.mp4 = the same take from 2.6 s (5.4 s): it reads as a vlog jump cut into a closer shot, speech starts at once; the jump is still a visible edit.
+Status: GENERATED + INSPECTED; join FAIL against the no-visible-splice rule. Options for the owner: (a) keep the jump cut (free), (b) draft route draft + final (about $0.78 + $4.34, exact first frame proven), (c) back to the Veo take (different face).
