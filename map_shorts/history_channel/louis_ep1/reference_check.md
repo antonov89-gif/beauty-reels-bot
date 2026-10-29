@@ -286,3 +286,4 @@ C07 jabot now present (continuity with C09/C10 PASS); C09 deliberately badly fra
 SOFT: C12 the "courtiers already wear copies of his tall wig" payoff is NOT visible (background courtiers wear ordinary small wigs); options: accept, or redo C12 (about $0.04).
 NOT APPROVED by the owner yet.
 C12 redo (owner "Перерисуй C12", 0.04): two courtiers right behind his shoulders wear copies of his tall powdered wig, in focus: the spine payoff is now visible: PASS. Previous C12 kept as C12_v7a.jpg.
+Owner 29.10: "у придворных должны быть простые парики, звезда тут один" -> C12_v7.jpg (copies) REJECTED, C12_v7a.jpg (simple wigs) is the C12 first frame; the copies payoff removed from both scripts. No new generation.

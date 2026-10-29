@@ -45,7 +45,7 @@ SOUND: door latches, boots on parquet, plume brush, a small laugh from the court
 1 red heel and buckle  2 ring-covered hand  3 powder puff  4 gilded hand mirror  5 sun brooch  6 lace cravat knot  7 wig comb  8 gold embroidered cuff. No dialogue; swoosh + click per cut, fabric and buckle foley, NO music. Chip at the end: "~10 MINUTES OF GLORY, EVERY DAY" is NOT used (no source). Optional chip: "AT 14 HE DANCED THE SUN GOD APOLLO (1653)" [2S] over frame 5.
 
 ### TAKE 4 (92-108 s), Hall of Mirrors (cut)
-C12 (92-100) CAMERA: backward walk, the king strides toward the lens, mirrors and chandeliers left, arched windows right, courtiers trailing. LINE: "Venice sold us mirrors. Now we have 357 of our own, and I'm in every single one." CHIP: "HALL OF MIRRORS: 357 MIRRORS · 1678-1684" [2S]. SPINE PAYOFF (review 29.10, owner yes): a few courtiers in the back already wear copies of his tall wig.
+C12 (92-100) CAMERA: backward walk, the king strides toward the lens, mirrors and chandeliers left, arched windows right, courtiers trailing. LINE: "Venice sold us mirrors. Now we have 357 of our own, and I'm in every single one." CHIP: "HALL OF MIRRORS: 357 MIRRORS · 1678-1684" [2S]. Courtiers wear simple wigs: the king is the only star (owner 29.10).
 C13 (100-108) CAMERA: handheld halt, the king stops in front of a mirror panel (we see his back and the lens-side face), a courtier tries to pass. LINE: "Don't stand behind me, you're ruining my reflection. Go. Over there. Further." COURTIER LINE (new, other voice): "Sire, I only..." cut off by the king.
 
 ### END (108-126 s), gallery threshold, then the banquet table (owner 29.10: the CTA ending)
@@ -74,4 +74,4 @@ Measured lines: C01 8.8 s (re-voiced) and C15 7.8 s. C01 is a 12 s clip (1.3 s c
 ## Built C01 (29.10, v4): the finished C01 is 11.0 s (hand-held ceiling opening cut at 4.0 s with "Oops, the ceiling" said over the ceiling, + Seedance 2.5 speech part from "There", 7.0 s), so C01 = 0-11 s and every later clip is -3 s vs the 13.8-s version; runtime about 2:06. Method: ceiling_handheld.py + Kling i2v tilt + Seedance 2.5 Draft image-only speech (first frame = the opening's last frame) + our voice aligned by phrase (build_c01_v4.py).
 
 
-## Throughline (screenwriter review 29.10, owner approved): the NEW WIG. C04 hair loss -> C06 white wig, "I'm just early" -> C07 presented to the court -> C09 the court bows to it, a hat falls -> C12 admired in 357 mirrors, courtiers already copy it -> end card "THE SUN IS NEVER LATE." answers "I'm just early". Review: screenwriter_review_ep1.md.
+## Throughline (screenwriter review 29.10, owner approved): the NEW WIG. C04 hair loss -> C06 white wig, "I'm just early" -> C07 presented to the court -> C09 the court bows to it, a hat falls -> C12 admired in 357 mirrors (courtiers keep simple wigs: he is the only star, owner 29.10) -> end card "THE SUN IS NEVER LATE." answers "I'm just early". Review: screenwriter_review_ep1.md.

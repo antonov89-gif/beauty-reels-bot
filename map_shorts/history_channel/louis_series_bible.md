@@ -43,3 +43,6 @@ Louis cannot hold a phone. The viewer must SEE it, the way the reference shows i
 - an object shoved into the lens (coin, wig, heel, mirror), focus hunting;
 - he notices and fixes the framing mid-line, annoyed ("Marcel!" if the page gag is approved).
 The words must stay clear (the mouth may leave the frame for a moment, the voice continues). Not a camera flight: all of this is a hand moving within arm's reach.
+
+## The king is the only star (owner 29.10)
+Courtiers, pages and guards wear simple period wigs and plain clothes; nobody copies his wig, coat or makeup. Only Louis has the tall powdered wig, the white court makeup and the scarlet sun coat.
