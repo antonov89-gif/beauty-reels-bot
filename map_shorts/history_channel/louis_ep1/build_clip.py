@@ -53,7 +53,7 @@ def subregions(i0, i1, gap):
 
 units = []
 if len(mv) == len(ov):                                              # same words: each energy phrase takes the model words whose middle falls in it, ours by the same index
-    sub = [r for r in subregions(int(regs[0][0] * 100), int(regs[-1][1] * 100), GAPW) if r[1] - r[0] > 0.12]
+    sub = [r for r in subregions(0, len(act), GAPW) if r[1] - r[0] > 0.12]   # whole clip: short phrases like "Now, the wig" count too
     owner = [min(range(len(sub)), key=lambda k: 0 if sub[k][0] <= (w[1] + w[2]) / 2 <= sub[k][1] else min(abs(sub[k][0] - (w[1] + w[2]) / 2), abs(sub[k][1] - (w[1] + w[2]) / 2))) for w in mv]
     for k in range(len(sub)):
         idx = [j for j, o in enumerate(owner) if o == k]

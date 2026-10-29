@@ -204,3 +204,7 @@ OPEN (edit layer at the end): the audio is mono (fine for Shorts; a stereo expor
 | Action | PASS: lifts the dark wig, hand on chest, mock-tragic face |
 | Words | FAIL: the model skipped "I took it personally" (it says "Now, the wig. My hair started falling out at seventeen ... so I got a wig."): our full line cannot be lip-synced (1.1 s of words over a 0.3 s mouth movement) |
 Status: GENERATED + INSPECTED, REJECTED (missing phrase). Corrective attempt 1 of max 2: re-draft with the full line stressed (9 s, about $0.88) after the owner's yes.
+
+## C04 v2 (owner "Делай сразу 1080"): draft 0.882 (task 0e8e6c3c) auto-checked (every word present) -> 1080p final 4.87746 (task b30ad807): frames/C04_final.mp4, preview C03+C04 frames/C04_final_with_prev.mp4 (not committed)
+Checks: 1080x1920, 24 fps, 9.00 s; hard cut from C03 (planned scene change, frame diff 70.9 at the cut); camera -4.0 % (phone propped, still); every word by ASR ("Now the wig. My hair started falling out at 17. I took it personally so I got a wig"); lips offset max 0.09 s after a build_clip fix (word mode now spans the whole clip, so short phrases like "Now, the wig" are not dropped; C02/C03 offsets unchanged 0.18/0.22); -14.9 LUFS, TP -1.8; face, wig, gown match C01-C03; lifts the dark wig, hand on chest, mock-tragic brow; our voice only, no music, no subtitles.
+Status: GENERATED + INSPECTED, awaiting the owner's approval.
