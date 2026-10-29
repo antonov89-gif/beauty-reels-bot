@@ -1,5 +1,5 @@
 # Emotion map, ep.1 "My Morning" (owner 29.10: "use emotions, this is important")
-Rule for the whole series: the king is never flat. Every line carries a named emotion in the VOICE (tags in voice/lines_ep1_emotion.json, pace, pauses, vowel stretching, small non-verbal sounds) AND in the FACE and body of the clip prompt. Emotional arc of the episode: irritated command -> smug welcome -> proud conspiracy -> swooning self-love -> mock-tragic wound -> prophetic joke -> bored regality -> petty outrage -> flirtation with his own ankle -> showman glee -> snapped irritation then swoon -> sly generosity -> serene finality.
+Rule for the whole series: the king is never flat. Every line carries a named emotion in the VOICE (tags in voice/lines_ep1_emotion.json, pace, pauses, vowel stretching, small non-verbal sounds) AND in the FACE and body of the clip prompt. Emotional arc of the episode: irritated command -> smug welcome -> proud conspiracy -> swooning self-love -> mock-tragic wound -> prophetic joke -> bored regality -> petty outrage -> flirtation with his own ankle -> showman glee -> snapped irritation then swoon -> sly generosity -> gleeful exit to the feast.
 
 | Clip | Voice emotion (tags, delivery) | Face and body (put into the Kling/Veo prompt) | Non-verbal beat |
 |--|--|--|--|
@@ -15,8 +15,8 @@ Rule for the whole series: the king is never flat. Every line carries a named em
 | C10 | flirtatious, teasing; admiring sigh at his ankle | turns the foot like a jewel, eyebrow raised, lip bitten in admiration | admiring sigh |
 | C12 | showman grandeur, gleeful, soft laugh on "Lucky mirrors" | strides with open arms, delighted grin, glances left and right at his reflections | soft laugh |
 | C13 | snapped irritation, then swoon on "what a profile" | head snaps to the courtier, glare, then turns to the mirror and melts, hand to the cheek | breathy "Ah..." |
-| C14 | mock-generous, firm, sly conspiratorial "a little" | open palm, then a stern finger, then a wink and a tiny smile | small laugh |
-| C15 | impatient to the page, pleased lingering "all good", serene finality | glances off camera, brow arched, then a calm half-smile into the lens | none, held silence before the last line |
+| C14 | mock-generous, firm "Do not stare", sly conspiratorial "a little", then imperious "Subscribe to my stunning channel" | open palm, stern finger, a wink and a tiny smile, then a regal point at the lens | small laugh |
+| C15 | imperious commands ("Like it. Ring the bell."), a rich delighted villainous laugh, dismissive boredom ("do what you like"), gleeful hunger ("off to the table to feast") | commands with a finger, head thrown back laughing, waves the audience away with the back of the hand, turns and strides to the table with a look back over his shoulder | the laugh itself, footsteps, cutlery |
 
 ## Voice rules for emotion
 - Stability: Natural (0.5) is the safe default; Creative (0.0) gives the tags more effect but can hallucinate. Test both on C01-C05, pick one, lock it. (Lumean accepts only multiples of 0.5.)

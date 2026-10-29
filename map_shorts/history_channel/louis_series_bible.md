@@ -1,12 +1,13 @@
 # Louis XIV series bible: signature phrases and self-praise rule (owner 28.10.2026)
-Rule: every video STARTS with the same signature opener, ENDS with the same signature outro, and all the way through the king admires himself ("what a handsome man I am"). One TTS voice for all lines (see channels.md section 2b). English lines, nasty, arrogant, haughty; ElevenLabs v3 tags per line: [smug], [haughty], [admiringly], [sneering].
+Rule: every video STARTS with the same signature opener, ENDS with the same signature outro (the CTA-and-feast ending), and all the way through the king admires himself ("what a handsome man I am"). One TTS voice for all lines (see channels.md section 2b). English lines, nasty, arrogant, haughty; ElevenLabs v3 tags per line: [smug], [haughty], [admiringly], [sneering].
 
 ## Signature opener (fixed text, first 6-7 s of EVERY video, right after "Marcel, down!" in ep.1)
 "Bow. Lower. Good. Welcome to Versailles. Yes, I am that handsome. Try not to faint."
 (The words "Bow. Lower. Good." come back as a call-back in the bowing scene of every episode.)
 
-## Signature outro (fixed, last line of EVERY video)
-"The sun is never late." (after the next-episode tease)
+## Signature outro (fixed text, last ~16 s of EVERY video; owner 29.10)
+"Subscribe to my stunning channel. Like it. Ring the bell. [laughs] Anyway... do what you like. I am off to the table to feast!"
+He commands the audience, laughs, waves them off and walks away to a banquet table (mirror flash = cut). The title card "THE SUN IS NEVER LATE." is the on-screen sign-off (not voiced; the voiced "The sun is never late." is retired from the outro and may appear as a line inside an episode).
 
 ## Self-praise lines (the "what a handsome man I am" tags)
 Rules: one tag every 15-20 s (6 per 2 minutes), never the same line twice in one episode, 2-8 words, always straight to the lens or to the mirror, delivered smugly, never apologetic; no jokes about illness or real people's bodies other than the king's own vanity.
