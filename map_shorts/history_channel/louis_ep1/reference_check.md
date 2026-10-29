@@ -152,3 +152,17 @@ Checks: 1080x1920, 24 fps, H.264 + AAC, 11.00 s; join frame diff 4.1 vs neighbou
 Status: GENERATED + INSPECTED, awaiting the owner's approval.
 
 Owner 29.10 after C01 v4 final: "дальше" -> C01 v4 taken as accepted (APPROVED by the owner's go-ahead); timeline shifted -3 s (C01 0-11, ... C15 115-125, runtime about 2:05) in script_full, script_ru, make_storyboard (storyboards re-rendered). Rejected/rough C01 renders deleted locally to free disk (192 MB free).
+
+## C02 DRAFT (owner "да" 29.10, about $5.8 total; draft usage.cost 0.882, task df6b6803)
+seedance25_c02.py: image-only Seedance 2.5 Draft 480p, 9 s, first frame = the last frame of the approved C01 (frames/C02_first.jpg). build_clip.py (new, generic): our C02 voice placed by sentence on the model's phrases found by energy (Whisper word times drift on this clip), tempo max 1.15x, centred when still longer. Rough frames/C02_rough.mp4 and preview C01+C02 frames/C02_rough_with_prev.mp4 (not committed).
+| Check | Result |
+|--|--|
+| Join C01 -> C02 | PASS: frame diff 2.7 vs neighbours 0.5-2.5, same framing, same expression |
+| Camera | PASS: +4.1 %, rotation-like (selfie stays put; he leans in on the secret, as planned) |
+| Action | PASS: touches a curl with the ringed hand (0.3-1.8 s), leans in, tiny head tilt, pleased smile at the end; the hand mirror is not shown (dropped, no loss) |
+| Lips vs our voice | offset max 0.18 s at sentence edges (C01 accepted 0.19), "The ceremony is called the rising" 0.00 |
+| Words by ear (ASR on the cut) | PASS: "Some mornings, a hundred people watch me wake up. The ceremony is called The Rising. I call it Opening Night." |
+| Face / wig / gown | consistent with C01 on 7 frames (480p) |
+| Loudness | -15.7 LUFS, TP -1.9 |
+| Pace note | silent beat 0-2.1 s (the curl gesture) before the first word: owner's call (the edit can keep it, it is an action beat) |
+Status: GENERATED + INSPECTED (draft). 1080p final about $4.88 after the owner's look.

@@ -36,3 +36,4 @@
 - Cost per clip going forward with the fixed method (8 s): draft about $0.8 + 1080p final about $4.3 = about $5; 13 clips about $65.
 - 29.10, C01 v4 (Oops over the ceiling): part 2 v4 draft 0.686. Confirmed total now about $13.1.
 - 29.10, C01 v4: part 2 v4 1080p final 3.794 (first submit failed, cost not shown: NOT VERIFIED). Confirmed total now about $16.9.
+- 29.10, C02 draft 0.882. Confirmed total now about $17.8.
