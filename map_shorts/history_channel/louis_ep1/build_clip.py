@@ -5,7 +5,7 @@ Usage: python3 build_clip.py <CID> <model.mp4> <out.mp4> [<previous_clip.mp4> fo
 import subprocess, sys, numpy as np
 from faster_whisper import WhisperModel
 CID, MODEL, OUT = sys.argv[1:4]; PREV = sys.argv[4] if len(sys.argv) > 4 else None
-SR = 48000; SKIP = 1 / 24; MAXT = 1.15; GAP = 0.4; GAP2 = 0.25
+SR = 48000; SKIP = 1 / 24; MAXT = 1.15; GAP = 0.4; GAP2 = 0.25; GAPW = 0.15
 SC = "/tmp/claude-0/-home-user-beauty-reels-bot/bb7f8515-f5d4-586a-94a3-df9db5a7e320/scratchpad/"
 OURS = f"../voice/tts_ep1/{CID}.mp3"
 m = WhisperModel("small", device="cpu", compute_type="int8")
@@ -38,21 +38,43 @@ for i, v in enumerate(list(act) + [False]):
         st = None
 regs = [r for r in regs if r[1] - r[0] > 0.35]                      # drops a short "hm" or breath
 print("model phrases by energy:", regs, "| our sentences:", len(cuts) - 1)
-assert len(regs) == len(cuts) - 1, "phrase counts differ: check by ear, align by hand"
-units = []                                                          # (our word range, model start, model end): a sentence is split further at the model's internal pauses
-for (a, b), (m0, m1) in zip(zip(cuts, cuts[1:]), regs):
-    sub = []; st = None; i0, i1 = int(m0 * 100), int(m1 * 100)
+assert len(mv) == len(ov) or len(regs) == len(cuts) - 1, "word and phrase counts differ: check by ear, align by hand"
+def subregions(i0, i1, gap):
+    sub = []; st = None
     for i in range(i0, i1 + 1):
         v = i < i1 and act[i]
         if v and st is None: st = i
         if not v and st is not None:
-            if sub and st / 100 - sub[-1][1] < GAP2: sub[-1][1] = i / 100
+            if sub and st / 100 - sub[-1][1] < gap: sub[-1][1] = i / 100
             else: sub.append([st / 100, i / 100])
             st = None
-    pauses = sorted(range(a + 1, b), key=lambda j: ov[j][1] - ov[j - 1][2], reverse=True)[:len(sub) - 1]
-    if len(sub) > 1 and len(pauses) == len(sub) - 1 and all(ov[j][1] - ov[j - 1][2] >= 0.08 for j in pauses):
-        edges = [a] + sorted(pauses) + [b]; units += [((p, q), r0, r1) for (p, q), (r0, r1) in zip(zip(edges, edges[1:]), sub)]
-    else: units.append(((a, b), m0, m1))
+    return sub
+
+
+units = []
+if len(mv) == len(ov):                                              # same words: each energy phrase takes the model words whose middle falls in it, ours by the same index
+    sub = [r for r in subregions(int(regs[0][0] * 100), int(regs[-1][1] * 100), GAPW) if r[1] - r[0] > 0.12]
+    owner = [min(range(len(sub)), key=lambda k: 0 if sub[k][0] <= (w[1] + w[2]) / 2 <= sub[k][1] else min(abs(sub[k][0] - (w[1] + w[2]) / 2), abs(sub[k][1] - (w[1] + w[2]) / 2))) for w in mv]
+    for k in range(len(sub)):
+        idx = [j for j, o in enumerate(owner) if o == k]
+        if idx: units.append(((idx[0], idx[-1] + 1), sub[k][0], sub[k][1]))
+    assert all(u[0][1] == v[0][0] for u, v in zip(units, units[1:])), "word order broken: align by hand"
+else:
+    units = []                                                          # (our word range, model start, model end): a sentence is split further at the model's internal pauses
+    for (a, b), (m0, m1) in zip(zip(cuts, cuts[1:]), regs):
+        sub = []; st = None; i0, i1 = int(m0 * 100), int(m1 * 100)
+        for i in range(i0, i1 + 1):
+            v = i < i1 and act[i]
+            if v and st is None: st = i
+            if not v and st is not None:
+                if sub and st / 100 - sub[-1][1] < GAP2: sub[-1][1] = i / 100
+                else: sub.append([st / 100, i / 100])
+                st = None
+        pauses = sorted(range(a + 1, b), key=lambda j: ov[j][1] - ov[j - 1][2], reverse=True)[:len(sub) - 1]
+        if len(sub) > 1 and len(pauses) == len(sub) - 1 and all(ov[j][1] - ov[j - 1][2] >= 0.08 for j in pauses):
+            edges = [a] + sorted(pauses) + [b]; units += [((p, q), r0, r1) for (p, q), (r0, r1) in zip(zip(edges, edges[1:]), sub)]
+        else: units.append(((a, b), m0, m1))
+
 rep = []
 for (a, b), m0, m1 in units:
     seg = x[int(max(0, ov[a][1] - 0.06) * SR):int((ov[b - 1][2] + 0.10) * SR)]

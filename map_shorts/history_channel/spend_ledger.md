@@ -38,3 +38,4 @@
 - 29.10, C01 v4: part 2 v4 1080p final 3.794 (first submit failed, cost not shown: NOT VERIFIED). Confirmed total now about $16.9.
 - 29.10, C02 draft 0.882. Confirmed total now about $17.8.
 - 29.10, C02 1080p final 4.877. Confirmed total now about $22.7.
+- 29.10, C03 draft 0.784. Confirmed total now about $23.5.

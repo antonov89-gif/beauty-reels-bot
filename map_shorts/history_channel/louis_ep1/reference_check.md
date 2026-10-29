@@ -170,3 +170,16 @@ Status: GENERATED + INSPECTED (draft). 1080p final about $4.88 after the owner's
 ## C02 FINAL 1080p (owner "да"; usage.cost 4.87746, task d3c9695c): frames/C02_final.mp4, preview C01+C02 frames/C02_final_with_prev.mp4 (not committed)
 Checks: 1080x1920, 24 fps, 9.00 s, 0 duplicate frames; join C01 -> C02 frame diff 1.7 vs neighbours 0.5-1.7 (no cut visible); camera +4.5 % rotation-like (selfie steady, he leans in); lips offset max 0.18 s; ASR on C01+C02 hears every C02 word (and reads C01's "Oops, the ceiling" as "Oops, there's a ceiling": small-model slip, the single-file check heard "the ceiling"); -15.3 LUFS, TP -1.9; our voice only, no music, no subtitles; ringed hand on the curl, lean-in, pleased smile; face, wig, gown consistent with C01 (6 frames + full-res crop).
 Status: GENERATED + INSPECTED, awaiting the owner's approval.
+
+## C03 DRAFT (owner "Да" 29.10, about $5.1 total; draft usage.cost 0.784, task 9b1495d9)
+First frame = last frame of C02 final. build_clip.py now aligns by word index when the model's and our word counts match (energy phrases, words assigned by midpoint).
+| Check | Result |
+|--|--|
+| Join C02 -> C03 | PASS: frame diff 2.4 vs neighbours 0.9-2.3 |
+| Camera | PASS: +2.9 %, rotation-like |
+| Action | PASS: the doctor and the surgeon walk in from the door (0.5 s) and stand behind; he looks at them over his shoulder (0.5-2 s), turns back, smug at the lens, slow "Naturally" with a smile |
+| FAIL (fact look) | the doctor wears a RED skullcap and red trim: reads as a CARDINAL, not a royal physician (black robe, black cap). Fix = re-draft with "black cap, no red" (about $0.78) or accept |
+| Lips vs our voice | offset 0.24 s on the long first sentence (model speaks it without pauses), 0.13 and 0.00 on the rest: soft |
+| Words by ear | PASS: every word |
+| Loudness | -14.5 LUFS |
+Status: GENERATED + INSPECTED (draft), not approved.
