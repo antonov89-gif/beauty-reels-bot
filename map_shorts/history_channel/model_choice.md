@@ -38,3 +38,11 @@ Nothing in this plan has been started or paid.
 
 ## Seedance 2.5 (owner 29.10: "take Seedance 2.5, first the draft")
 seedance-2.5-draft (APIpod spec): stage 1 = 480p draft (any prompt/images/audio, 4-30 s), stage 2 = same task rendered at 1080p with `draft_task_id` (reuses prompt, media, duration, seed). Estimator (4-s unit): draft $0.392, 2.5 r2v / i2v 720p $0.882 (= $0.2205/s). Draft 12 s about $1.18 (estimate), final 1080p price NOT VERIFIED. Caveat in the spec: 1-2 images WITHOUT other media = first/last frames; with audio they are references (so the ceiling is a reference, not a guaranteed first frame). i2v 2.5 has first/last frame but no audio input.
+
+## 4K upscale check (owner asked 29.10: "Апскейл")
+- Seedance 2.5 (APIpod): max 1080p, the draft cannot be finalised in 4K (apipod.ai/models/seedance-2.5). 4K exists only as generation in other models (Seedance 2.0 std, Kling 3.0 Omni 4k mode on Higgsfield), i.e. a re-generation, not an upscale.
+- APIpod: no dedicated upscale/Topaz model found on apipod.ai/models.
+- Higgsfield upscale_video (ByteDance preset "aigc" 4k, or Topaz 2160p): available, but no cost preflight and the balance is 0.1 credits; price per second NOT VERIFIED.
+- Third-party Topaz video upscale list prices seen: Evolink $0.055-0.088/s (4x = $0.088/s), Apiframe $0.02/s for 1080p. No account here.
+- YouTube Shorts: a secondary source (Hopper HQ) says Shorts accept 4K uploads but are served at max 1080p; NOT VERIFIED on YouTube Help.
+Decision pending with the owner.
