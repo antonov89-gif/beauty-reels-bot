@@ -31,6 +31,10 @@ cand = {v["name"].split(" - ")[0].split()[0].lower(): v for v in json.load(open(
 VOICES = {  # name: (voice_id, public_owner_id, text prefix)
     "heir_tag": ("AqRCwHAjbeFmvSwJvHll", "779d91788b0d9e364d32e0a0e4273ec722b92887fa710d82f50b2d034a9fb97b", "[strong French accent] "),
 }
+VOICES["heir_phon"] = ("AqRCwHAjbeFmvSwJvHll", "779d91788b0d9e364d32e0a0e4273ec722b92887fa710d82f50b2d034a9fb97b", "[thick French accent] ")
+# TTS-only respelling that pushes a French accent (captions keep normal spelling): th -> z, dropped h
+PHON = [(r"\bThe\b", "Ze"), (r"\bthe\b", "ze"), (r"\bthat\b", "zat"), (r"\bthem\b", "zem"), (r"\bthey\b", "zey"), (r"\bthis\b", "zis"),
+        (r"\bhere\b", "'ere"), (r"\bhundred\b", "'undred"), (r"\bhair\b", "'air"), (r"\bhandsome\b", "'andsome")]
 for k in ("marcel", "antonin", "cyril", "jamie", "nicolas", "henri"):
     v = cand[k]
     VOICES[k] = (v["voice_id"], v["public_owner_id"], "")
@@ -44,6 +48,10 @@ orders = {}
 for n in names:
     vid, owner, pre = VOICES[n]
     text = pre + BODY
+    if n == "heir_phon":
+        import re
+        for x, y in PHON:
+            text = re.sub(x, y, text)
     ts = {"model_id": MODEL, "voice_id": vid, "language_code": "en", "advanced_voice_settings": True, "public_owner_id": owner,
           "voice_settings": {"stability": 0.5, "similarity_boost": 0.75, "style": 0.5, "use_speaker_boost": True, "speed": 0.95}}
     body = {"template_id": tpl, "input_text": text, "config_override": {"tts_settings": ts}, "name": "louis accent test " + n + "_" + MODEL}
