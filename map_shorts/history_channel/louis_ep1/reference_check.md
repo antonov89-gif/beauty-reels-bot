@@ -113,3 +113,15 @@ Status: C01 video GENERATED + INSPECTED; the voice line needs the re-voice befor
 ## C01 FINAL v2 (voice re-done, 29.10, 0.23 RUB): frames/C01_final_v2.mp4 (not committed)
 Re-voice with respelling off for "that" and "handsome" (C01 exceptions). Our take is clear (ASR on the unstretched take: "Oops, the ceiling. There, welcome to Versailles. Yes, I'm that handsome. Try not to faint."). Tempo capped at 1.15x (was 1.3x) so words stay intelligible; residual lip offset max 0.19 s (on "handsome"), 0.00-0.07 s elsewhere. In the assembled file ASR hears every word except the short "I'm" (lost at 1.15x): FLAG, owner's ear decides. 1080x1920, 24 fps, 13.79 s, loudness -14.9 LUFS, true peak -1.9 dBFS, our voice only, no music, 0 duplicate frames, no splice at the speech start.
 Status: GENERATED + INSPECTED, awaiting owner approval. Disk was full during the check (a larger recognition model could not be downloaded; small model used): the recognition is the weaker one.
+
+## FULL CHECK 29.10 (owner: "проверь всё"), results
+PASS: project validator VALID; no video files tracked in git; no secrets in committed history_channel files or CLAUDE.md (key files ignored); no music anywhere (grep); every line consistent between lines_ep1_emotion.json, script_full, script_ru, storyboard captions and recording_sheet (3 "misses" were formatting only: 357 vs spelled-out number, the laugh tag, the signature-opener marker); C01 final: 1080x1920, 24 fps, H.264 + AAC, one audio stream, no tags, -14.9 LUFS, TP -1.9, 0 duplicate frames, no seam, camera steady, face/wig/gown consistent on 6 full-res frames.
+FIXED during the check: (1) the spend ledger said "about $13.0" and "nothing generated yet": recomputed = $12.4 confirmed (images 0.90 + video 11.46 + voice 4.79 RUB), plus NOT VERIFIED up to about $8 for 3 failed Kling r2v tasks and 2 failed Seedance 2.5 submits; (2) the timeline: C01 is 13.8 s, not 12, so all later clips +2 s, runtime about 2:08 (scripts, RU script, storyboard updated); (3) the stale C01 method text in script_full.
+OPEN (not done, needs the owner or later steps):
+1. C01 is a clip, not the episode: no AI mark in the corner, no title chip "VERSAILLES, FRANCE · 1685" yet (edit layer, done at the end).
+2. Authenticity audit (authenticity-check) not run: mandatory on the FINAL episode before delivery/upload.
+3. Soft: at 5.6 s the eyes roll up showing white (the startled "Oops" beat): acceptable, owner's call; "I'm" is faint at 1.15x tempo.
+4. Soft: the voice is a designed AI voice with a French accent; disclosed in the description and platform flags (to do in the publication package).
+5. Disk is full (166 MB free): large models/new clips need space; /home/claude holds about 21 GB of older projects (not touched, owner's decision).
+6. Storyboard frames (22) and card v2 still NOT approved by the owner; C13 and C15 frames need regeneration (new prompts).
+7. Cost of the remaining 13 clips with the fixed method about $65 (draft 0.8 + final 4.3 per 8 s): needs the owner's budget decision.

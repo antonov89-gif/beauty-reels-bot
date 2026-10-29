@@ -26,7 +26,11 @@
 | C01 part 2 final 1080p: Seedance 2.5 Draft -> final (usage.cost 4.87746; a first final submit failed, cost not shown) | $4.88 |
 | C01 re-voice with exceptions (that, handsome), 1 order | 0.23 RUB |
 | vidIQ credits (research of the Elizabeth and Chloe channels) | about 85 credits (balance 949 left) |
-| Video clips (Kling, Veo, Seedance) | $0.00: nothing generated yet |
-Dollar total on images: $0.82 (storyboard frames part $0.62, within the $0.80 cap set for that stage; the cards were approved separately). Next planned: C01 tests, see quality_standard.md.
 
-C01 total video spend (all attempts, incl. rejected): about $13.0 (Kling r2v x3 unknown, 0.65 + 0.65 + 1.96 Kling i2v, 1.26 Seedance 2.0, 1.18 + 0.88 + 4.88 Seedance 2.5, stills 0.08). Next clips must not repeat the exploration: the method is now fixed (see C01 notes).
+## Totals (recomputed 29.10, CONFIRMED by provider usage.cost fields)
+- Images: cards 0.20 + storyboard 0.62 + C01 stills 0.08 = $0.90.
+- Video, C01 only: Kling i2v part 1 v1 0.65 + part 1 v2 0.65 + part 2 (Kling, rejected) 1.96 + Seedance 2.0 test 1.26 + Seedance 2.5 single-take draft 1.18 + part 2 draft 0.88 + part 2 final 4.88 = $11.46.
+- Voice: 4.79 RUB (about $0.06).
+- Confirmed total: about $12.4. (An earlier line said about $13.0: wrong, corrected here.)
+- NOT VERIFIED (cost not shown in the failed task statuses): 3 Kling r2v attempts (up to $2.55 each) and 2 failed Seedance 2.5 submits. Possible extra: up to about $8 + the failed 2.5 submits; if the provider charged them, the true total is higher.
+- Cost per clip going forward with the fixed method (8 s): draft about $0.8 + 1080p final about $4.3 = about $5; 13 clips about $65.
