@@ -22,5 +22,15 @@
   "C03_long_29.10": "[dry, bored] The doctor's here, the surgeon's here, and nobody came to see them. {{pause=0.4}} [smug, pleased] Everyone came to see me. {{pause=0.4}} [soft, satisfied] Naturally.",
   "C04_long_29.10": "[brisk] Now, the wig. {{pause=0.3}} [mock-tragic, a small sigh] My hair started falling out at seventeen. {{pause=0.3}} [wounded pride] I took it personally, {{pause=0.2}} [dry, resolute] so I got a wig.",
   "C05_long_29.10": "[smug] It makes me look taller, they say. {{pause=0.3}} [lofty] I wouldn't know. I never look down. {{pause=0.5}} [sighs contentedly]"
+ },
+ "marcel": {
+  "voice": "ElevenLabs Edward (French, young), voice 1 of page_voice_shortlist.json, eleven_v4",
+  "lines": {
+   "C07": "[eager, slightly out of breath, announcing] The court, Sire.",
+   "C09": "[alarmed, apologetic, panicking] Pardon, Sire!",
+   "C13": "[timid, trying to explain, trailing off] Sire, I only..."
+  },
+  "files": "tts_ep1/marcel_C07_court.mp3, marcel_C09_pardon.mp3, marcel_C13_sire_i_only.mp3 (full order marcel_v1.mp3)",
+  "note": "30.10, 0.23 RUB; AI voice, disclosed in the description."
  }
 }
