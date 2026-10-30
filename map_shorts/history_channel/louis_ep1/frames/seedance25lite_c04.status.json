@@ -1,0 +1,15 @@
+{
+ "code": 200,
+ "message": "success",
+ "data": {
+  "task_id": "ba3f30a3-7ae0-4c07-b223-0fa4af368738",
+  "status": "completed",
+  "progress": 100,
+  "result": [
+   "https://s.apipod.ai/videos/2026/10/30/a6ddb68d-cf2c-453d-9201-406838e0431a.mp4"
+  ],
+  "usage": {
+   "cost": 1.35
+  }
+ }
+}
