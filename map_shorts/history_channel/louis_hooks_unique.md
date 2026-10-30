@@ -18,3 +18,15 @@ Fact status from a web check on 30.10 (popular and secondary sources, primary te
 
 ## Rule
 Before any of these goes into a script: two sources, primary text where possible (Journal de la santé du roi; Liselotte's letters; Dionis; Saint-Simon), facts hedged in the chip, and the description says it is a comedy reconstruction.
+
+## Hook 4 "Perfume and shirts": ADOPTED (owner 30.10: "это нужно учесть"), with these fact rules
+| Statement | Status | How we may use it |
+|--|--|--|
+| He changed his shirt several times a day (sources give 3 to 5) | [2S] (Slate.fr; Premiere Peau; Scento) | as fact, say "several times a day", not a number |
+| He sweated a lot; at the lever the day shirt was shaken out and sometimes changed because "the King perspired freely" | Saint-Simon, via two secondary sources (cour-de-france.fr; partylike1660.com) | as fact, attributed: "Saint-Simon wrote..." in the description |
+| Washing was mostly with cloths soaked in alcohol/scented spirits; baths only on doctors' orders | [1S-2S] (Slate.fr; Scento) | hedge: "mostly" |
+| Heavy perfume when young; later in life he could not stand strong perfume, nobody near him might wear it, windows were opened | popular sources only (Premiere Peau; Cent; Calendar-UK) | hedge "in later years", "they say"; not in ep.1 (1685 is not "later in life" for sure) |
+| "Only three baths in his life" | LEGEND (disputed by Slate.fr) | ONLY as a rumour the king denies ("They say three baths. Lies. Four."); the description says it is a popular legend |
+Where it goes:
+- Ep.1 (C09-C15 not filmed yet, no extra words): the dressing burst C11 opens on a fresh linen shirt held out to him by a courtier (chip, optional: "HE CHANGED HIS SHIRT SEVERAL TIMES A DAY"). Free, part of the frame plan.
+- Ep.4 "The Smell of Power" (outline): he sniffs the lens, grimaces, "Who is wearing perfume? Open the windows." A page runs along the gallery opening windows; a courtier is sent out for smelling of jasmine; the shirt change mid-sentence ("This one is warm. Next."); the "three baths" rumour denied as the button; the court copies him: everybody changing shirts, a courtier with ten shirts on his arm.

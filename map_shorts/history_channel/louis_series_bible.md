@@ -49,3 +49,6 @@ Courtiers, pages and guards wear simple period wigs and plain clothes; nobody co
 
 ## Camera manner lock (owner 29.10: "больше внимания на камеру ... он не умеет держать камеру")
 Every video prompt starts with CAMERA_BASE from louis_ep1/camera_plan_ep1.md and adds the per-clip camera beats (0-2 / 2-5 / 5-8 s) with one clumsy moment per clip. A clip whose camera is calm or tripod-like fails the gate and is not shown.
+
+## Series hook engine (owner 30.10)
+"My body fails, I declare it the fashion": a vain handsome king whose body betrays him; every defect becomes a court trend; a courtier in the background copies the newest one. Own hooks, not the reference's teeth: see louis_hooks_unique.md (adopted: 4 "perfume and shirts"; proposed: 1 fistula, 2 appetite, 3 peas, 5 close-stool audiences). Every fact needs two sources; legends only as rumours the king denies, and the description says so.
