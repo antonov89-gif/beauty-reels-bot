@@ -411,3 +411,7 @@ Found and fixed:
 Result frames/C09L_final_A.mp4 (not committed): clicks none; hiss runs only natural consonants (2.30-2.38 "s" of Sire, 4.09-4.15 "h", 7.87-7.94 "t"); lips open with no voice: none; voice with the king's lips shut: 1.88-2.12 s = Marcel's "Pardon, Sire!" (his line, the king is silent: expected; Marcel's own lips NOT VERIFIED); lag 0.00 s whole clip (corr 0.55), windows +0.04 / +0.04 / -0.04 s; ASR all words both beams; -14.9 LUFS, TP -1.4 dBFS.
 Same two build faults (0.04 s margins at touching words, single-pass loudnorm + 2 ms limiter) are in build_c02_lite.py ... build_c05_lite.py: C02-C05 Lite finals likely carry the same clicks / doubled fragments: NOT yet checked or fixed.
 NOT VERIFIED by ear: the 2.5x stretched "hat" vowel and the 0.55 "Eyes on".
+
+## C09 Lite v7: owner verdict "Нет это ужасно" (30.10). REJECTED.
+Lesson: cutting our finished TTS line into words and stretching them to the model's lips (tempo 0.40 on "hat", 0.55 on "Eyes on", 1.5 on "Lower") makes the voice sound artificial; the numbers (lag 0.00, no clicks) said nothing about how it sounds. Method stopped for C09 and NOT to be used on C02-C05.
+Right fix: a new take of the line in the locked voice with the rhythm of the lips written into the text (pauses and drawls), then whole phrases placed with tempo within +-10 %. Needs one Lumean order (about 0.23 RUB) = the owner's yes.
