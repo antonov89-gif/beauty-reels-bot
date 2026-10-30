@@ -103,3 +103,5 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 30.10 | C14 on Seedance 2.5 Lite r2v, 11 s (task cc89cb0d) | $1.65 (usage.cost) |
 | 30.10 | C15 on Seedance 2.5 Lite r2v, 9 s (task 50263738) | $1.35 (usage.cost) |
 | 30.10 | total C12-C15 | $5.55 |
+| 30.10 | C01 v3 voice line (reference audio for the model test), Lumean ElevenLabs v4 locked voice, one order (owner "Да") | 0.23 RUB |
+| 30.10 | C01 v3 TEST on Seedance 2.0 r2v 720p, 13 s (owner "Сиденс 2.0 делай"; task 8f898832) | $1.638 (usage.cost) |
