@@ -77,3 +77,4 @@
 | 30.10 | Marcel three-quarter redo, Nano Banana 2.1 | $0.04 (usage.cost) |
 | 30.10 | Cook card: three-quarter + 14 sheet images, Nano Banana 2.1 | $0.60 (15 x 0.04) |
 | 30.10 | Copycat Duke Armand card: front + three-quarter + 8 sheet + three-quarter redo (11 images), Nano Banana 2.1 | $0.44 (11 x 0.04) |
+| 30.10 | C09 first frame v8 with Marcel, Nano Banana 2.1 | $0.04 (usage.cost) |
