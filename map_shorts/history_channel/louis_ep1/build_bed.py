@@ -5,17 +5,22 @@ v2 is built so that nothing stays the same:
  - events: a library of different sounds (silk, wool, footsteps with heel click, door creak + latch, wood creak, ring clink, powder puff, wig set-down, cloth swish, fire crackle, far birds)
    placed (a) on the real motion peaks of each clip, (b) at hand-set story moments, (c) at random times by a per-clip event list, never on top of speech;
  - every clip has its own event mix and density; events are ducked 9 dB under speech; reverb on murmur and (partly) on events.
+v3 (30.10, owner: "в референсе звуки от телефона, у нас этого нет"; reference audio measured, sound_reference_vlog1.md):
+ - the phone is heard: a low handling rumble that rises with the real camera speed, grip rubs and knocks on the phone body on camera jerks and at pick-ups (dry, at the mic, not ducked);
+ - the voice goes through a phone-mic chain: low cut, darker top, proximity (closer = more bass, louder, drier; farther = thinner, quieter, more room), distance from per-clip keyframes plus the measured zoom of the picture;
+ - the air is low-frequency (the reference quiet floor has its centre at 170-620 Hz), the old hiss is gone.
 Reference level: pause floor about -49 dB RMS (Vlog 1 measured), no silence >= 0.5 s at -50 dB. Usage: python3 build_bed.py"""
-import subprocess, numpy as np
+import subprocess, numpy as np, cv2
+from scipy.signal import butter, sosfilt
 SR = 48000
 F = "frames/"
 SC = "/tmp/claude-0/-home-user-beauty-reels-bot/bb7f8515-f5d4-586a-94a3-df9db5a7e320/scratchpad/"
 CLIPS = [("C01", "C01_final_v4", "A"), ("C02", "C02_final", "A"), ("C03", "C03_final", "A"), ("C04", "C04_final", "B"),
          ("C05", "C05_final_jumpcut", "B"), ("C06", "C06_final", "B"), ("C07", "C07_final", "C"), ("C08", "C08_final_lcut", "C")]
 # scene: air level dB, band colour offsets dB (30-150, 150-600, 600-2500, 2500-7000), crowd voices, crowd level dB, reverb RT s
-SCENE = {"A": dict(air=-50.5, col=(3, 1, -4, -10), voices=3, crowd=-57, rt=1.3, seed=11),
-         "B": dict(air=-51, col=(1, 2, -3, -11), voices=0, crowd=-99, rt=0.8, seed=22),
-         "C": dict(air=-50, col=(2, 3, -2, -8), voices=8, crowd=-50, rt=1.6, seed=33)}
+SCENE = {"A": dict(air=-50.5, col=(4, 1, -9, -22), voices=3, crowd=-57, rt=1.3, seed=11),
+         "B": dict(air=-51, col=(3, 2, -9, -22), voices=0, crowd=-99, rt=0.8, seed=22),
+         "C": dict(air=-50, col=(3, 3, -7, -18), voices=8, crowd=-50, rt=1.6, seed=33)}
 # per clip: ambient event rate per second and weights of kinds; motion events use `motion` kinds
 CLIP = {"C01": dict(rate=1.0, kinds={"bird": 3, "crackle": 4, "silk": 2, "creak": 1}, motion=["silk"], gain=0),
         "C02": dict(rate=1.6, kinds={"silk": 3, "shuffle": 3, "clink": 1, "creak": 1, "crackle": 2, "cough": 1}, motion=["silk", "clink"], gain=0),
@@ -25,6 +30,14 @@ CLIP = {"C01": dict(rate=1.0, kinds={"bird": 3, "crackle": 4, "silk": 2, "creak"
         "C06": dict(rate=1.5, kinds={"crackle": 3, "hair": 3, "wool": 2, "clink": 1, "puff": 2}, motion=["hair", "puff", "wool", "clink"], gain=0),
         "C07": dict(rate=2.2, kinds={"step": 5, "silk": 3, "clink": 2, "creak": 2, "shuffle": 3, "door": 0}, motion=["silk", "step", "clink"], gain=0),
         "C08": dict(rate=2.0, kinds={"swish": 4, "creak": 3, "step": 2, "silk": 2, "clink": 1, "shuffle": 2}, motion=["swish", "silk", "creak"], gain=0)}
+# phone-to-mouth distance 0 = close selfie, 1 = far (propped on the table / pointing away); the measured zoom of the picture moves it further
+DIST = {"C01": [(0, .75), (1.6, .75), (2.4, .1)], "C02": [(0, .1)], "C03": [(0, .15)], "C04": [(0, .8)], "C05": [(0, .5)],
+        "C06": [(0, .7), (1.4, .7), (3.0, .15)], "C07": [(0, .2)], "C08": [(0, .25)]}
+# handling: (clip, time, kind, level dB) at the mic; plus automatic ones on camera jerks
+HANDLE = [("C01", 0.15, "grip", -27), ("C01", 0.9, "bump", -26), ("C01", 1.7, "grip", -26), ("C01", 2.8, "bump", -24),
+          ("C02", 2.2, "grip", -29), ("C02", 6.6, "grip", -31), ("C03", 0.85, "grip", -29), ("C03", 6.3, "bump", -31),
+          ("C04", 0.05, "bump", -30), ("C06", 1.45, "grip", -24), ("C06", 1.55, "bump", -23), ("C06", 2.3, "grip", -27),
+          ("C07", 0.1, "grip", -27), ("C07", 1.25, "bump", -24), ("C07", 5.6, "grip", -26), ("C08", 0.4, "grip", -27), ("C08", 2.7, "grip", -27)]
 # hand-set story moments: (clip, time s, kind, level dB, pan)
 STORY = [("C03", 0.9, "silk", -32, 0.1), ("C03", 1.5, "silk", -31, 0.3), ("C04", 4.6, "wood", -29, 0.0), ("C06", 5.4, "puff", -30, 0.0),
          ("C07", 0.2, "door", -31, 0.7), ("C07", 0.6, "step", -34, 0.6), ("C07", 0.9, "step", -33, -0.5), ("C07", 1.2, "step", -34, 0.4), ("C07", 1.5, "step", -33, -0.7),
@@ -162,9 +175,17 @@ def ev_bird(r):                                                         # far, o
     return out
 
 
+def ev_grip(r):                                                         # fingers sliding / re-gripping the phone body, heard through the mic
+    n = int(SR * r.uniform(.25, .7)); y = bandnoise(n, 60, 1400, 1.2, r); grain = np.abs(bandnoise(n, 15, 80, 0, r)); return y * grain * env_exp(n, .2, 2.5)
+
+
+def ev_bump(r):                                                         # a knock on the phone body: low thump + short mid knock
+    n = int(SR * .2); t = np.arange(n) / SR; return np.sin(2 * np.pi * r.uniform(55, 110) * t) * np.exp(-t * 32) + 0.5 * bandnoise(n, 300, 2000, 0.5, r) * np.exp(-t * 90)
+
+
 EV = {k[3:]: v for k, v in globals().items() if k.startswith("ev_")}
-LEVEL = dict(silk=-39, wool=-37, swish=-36, hair=-41, puff=-33, step=-34, shuffle=-39, wood=-33, wig=-31, creak=-39, door=-33, clink=-43, tools=-38, crackle=-40, cough=-44, bird=-47)
-WET = dict(bird=.9, door=.5, step=.45, creak=.4, cough=.8, shuffle=.4, tools=.4)
+LEVEL = dict(grip=-28, bump=-26, silk=-39, wool=-37, swish=-36, hair=-41, puff=-33, step=-34, shuffle=-39, wood=-33, wig=-31, creak=-39, door=-33, clink=-43, tools=-38, crackle=-40, cough=-44, bird=-47)
+WET = dict(grip=0, bump=0, bird=.9, door=.5, step=.45, creak=.4, cough=.8, shuffle=.4, tools=.4)
 
 
 def place(buf, ev, t, pan, wet, ir):
@@ -202,6 +223,49 @@ def clip_events(cid, path, d, voice, ir, buf, duck):
     return nm, ns, nr
 
 
+def camera(p):                                                          # per frame: camera speed (frame widths per frame) and cumulative log zoom
+    cap = cv2.VideoCapture(p); orb = cv2.ORB_create(800); bf = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True); prev = None; sp = [0.0]; ls = [0.0]
+    while True:
+        ok, fr = cap.read()
+        if not ok: break
+        g = cv2.cvtColor(cv2.resize(fr, (180, 320)), cv2.COLOR_BGR2GRAY)
+        if prev is not None:
+            v, sc = 0.05, 1.0                                           # no features = lens covered or a fast blur
+            k1, d1 = orb.detectAndCompute(prev, None); k2, d2 = orb.detectAndCompute(g, None)
+            if d1 is not None and d2 is not None and len(k1) > 15 and len(k2) > 15:
+                m = bf.match(d1, d2)
+                if len(m) >= 10:
+                    p1 = np.float32([k1[x.queryIdx].pt for x in m]); p2 = np.float32([k2[x.trainIdx].pt for x in m])
+                    M, inl = cv2.estimateAffinePartial2D(p1, p2, method=cv2.RANSAC, ransacReprojThreshold=3)
+                    if M is not None and inl is not None and inl.sum() >= 8: v = float(np.hypot(M[0, 2], M[1, 2])) / 180; sc = float(np.hypot(M[0, 0], M[1, 0]))
+            sp.append(v); ls.append(ls[-1] + np.log(max(.9, min(1.1, sc))))
+        prev = g
+    return np.convolve(np.array(sp), np.ones(5) / 5, "same"), np.array(ls)
+
+
+def per_sample(curve, L): return np.interp(np.arange(L) / SR, np.arange(len(curve)) / 24, curve).astype(np.float32)
+
+
+def phone_voice(v, dist, ir):                                           # phone-mic chain with proximity; dist 0..1 per sample
+    hp = sosfilt(butter(2, 110, "hp", fs=SR, output="sos"), v); lo = sosfilt(butter(2, 300, "lp", fs=SR, output="sos"), hp); hi = sosfilt(butter(2, 3500, "hp", fs=SR, output="sos"), hp)
+    y = hp + lo * (0.9 * (1 - dist) - 0.4 * dist) - hi * 0.5            # close: proximity bass; far: thinner; always a darker top than a studio mic (reference tilt -8.4 dB/oct)
+    y = sosfilt(butter(2, 8000, "lp", fs=SR, output="sos"), y)
+    return (y * 10 ** (-9 * dist / 20) + reverb(y.astype(np.float32), ir) * (0.12 + 0.3 * dist)).astype(np.float32)   # far = quieter and roomier (reference word level range 13.8 dB)
+
+
+def handling(cid, d, speed, ir, r):                                     # rumble that follows the camera speed + grips/knocks on jerks and hand-set moments
+    L = int(SR * d); buf = np.zeros((2, L + SR * 2), np.float32); n = 0
+    sp = per_sample(speed, L); g = 10 ** ((-58 + 18 * np.clip(sp / 0.03, 0, 1)) / 20); g = np.convolve(g, np.ones(2400) / 2400, "same")
+    for ch in range(2): buf[ch, :L] += bandnoise(L, 30, 600, 1.5, np.random.default_rng(sum(map(ord, cid)) + ch)) * g
+    for c, t, k, lv in HANDLE:
+        if c == cid: add_event(buf, k, t, lv - 4, r.uniform(-.2, .2), ir, r); n += 1
+    last = -9
+    for i in range(2, len(speed) - 2):                                  # automatic: speed peaks (jerks) above 0.012 frame widths per frame
+        if speed[i] > 0.012 and speed[i] == speed[max(0, i - 12):i + 12].max() and i / 24 - last > 0.6 and not any(c == cid and abs(t - i / 24) < .4 for c, t, _, _ in HANDLE):
+            last = i / 24; k = "bump" if speed[i] > 0.025 else "grip"; add_event(buf, k, i / 24, LEVEL[k] - 4 + r.uniform(-2, 2), r.uniform(-.2, .2), ir, r); n += 1
+    return buf[:, :L], n
+
+
 def main():
     order = []
     for cid, src, sc in CLIPS: p = F + src + ".mp4"; order.append((cid, p, sc, dur(p)))
@@ -221,11 +285,16 @@ def main():
         mix_all = bed + evb[:, :n]
         for cid, p, d, t0, vv, nm, ns, nr in offs:
             s = int(SR * t0); L = int(SR * d); seg = mix_all[:, s:s + L].copy(); f = int(SR * .02); seg[:, :f] *= np.linspace(0, 1, f); seg[:, -f:] *= np.linspace(1, 0, f)
-            mix = np.clip(seg + vv[None, :] * db(-2.6), -.89, .89)
+            speed, zoom = camera(p); r = np.random.default_rng(sum(map(ord, cid)) * 31)
+            key = DIST[cid]; dk = np.interp(np.arange(L) / SR, [k[0] for k in key] + [d + 1], [k[1] for k in key] + [key[-1][1]])
+            dist = np.clip(dk - 0.8 * per_sample(zoom, L), 0, 1)
+            hb, nh = handling(cid, d, speed, ir, r); seg = seg + hb
+            voice_ph = phone_voice(vv, dist, ir)
+            mix = np.clip(seg + voice_ph[None, :] * db(-2.6), -.89, .89)
             raw = SC + cid + "_bed.f32"; open(raw, "wb").write(mix.T.astype(np.float32).tobytes()); open(SC + cid + "_bedonly.f32", "wb").write(seg.T.astype(np.float32).tobytes())
             out = F + cid + "_bed.mp4"
             subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", p, "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", raw, "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "320k", "-shortest", out], check=True)
-            print(cid, "scene", sc, "dur", round(d, 2), "events: motion", nm, "story", ns, "ambient", nr, flush=True)
+            print(cid, "scene", sc, "dur", round(d, 2), "events: motion", nm, "story", ns, "ambient", nr, "handling", nh, "| distance min/max", round(float(dist.min()), 2), round(float(dist.max()), 2), flush=True)
     ins = sum([["-i", F + c + "_bed.mp4"] for c, _, _ in CLIPS], [])
     fc = "".join(f"[{i}:v]setsar=1[v{i}];" for i in range(len(CLIPS))) + "".join(f"[v{i}][{i}:a]" for i in range(len(CLIPS))) + f"concat=n={len(CLIPS)}:v=1:a=1[v][a]"
     subprocess.run(["ffmpeg", "-y", "-v", "error"] + ins + ["-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-crf", "20", "-c:a", "aac", "-b:a", "320k", F + "EP1_C01-C08_bed.mp4"], check=True)

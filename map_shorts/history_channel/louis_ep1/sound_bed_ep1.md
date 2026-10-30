@@ -1,4 +1,6 @@
-# Ep.1 sound bed C01-C08, v2, 30.10.2026
+# Ep.1 sound bed C01-C08, v3 (phone sound) on top of v2, 30.10.2026
+v3: owner "в референсе звуки от телефона, у нас этого нет": handling rumble, grips and knocks, phone-mic voice with proximity, low-frequency air. Details and measurements: sound_reference_vlog1.md. Below: the v2 notes.
+
 Owner on v1: "звук постоянно один и тот же". Correct: v1 was one stationary hiss (one noise, its low-frequency band always on, the same in every scene) plus a few rustles. Spectrogram of v1 showed a steady horizontal band in every clip. v2 rebuilds it so that nothing repeats. Script: build_bed.py (own synthesis, no samples, no library, no music; free). Reference: Vlog 1 LjfGP7wpjVs measured on the owner's mp4 (voice_source.md): pause floor about -49.5 dB (10th percentile), no silence > 1 s at -50 dB, ambience differs per shot, -15.4 LUFS.
 
 ## What changed

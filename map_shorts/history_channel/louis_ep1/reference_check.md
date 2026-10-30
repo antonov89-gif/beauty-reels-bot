@@ -323,3 +323,6 @@ Room tone + people murmur + foley on motion peaks; no silence >= 0.5 s at -50 dB
 
 ## Sound bed v2, 30.10 (owner on v1: "звук постоянно один и тот же")
 v1 was a stationary hiss: rebuilt (sound_bed_ep1.md): breathing air in 4 bands, a crowd of synthetic voices, 18 kinds of events on motion peaks, story moments and random times (not over speech), a different mix per clip. Measured: no silence >= 0.5 s at -50 dB, -14.8 LUFS, TP -4.4, words identical (ASR medium). Ear check by the owner pending.
+
+## Sound v3 "phone sound", 30.10 (owner: "в референсе звуки от телефона и от всего, у нас этого нет")
+Reference audio re-analysed (sound_reference_vlog1.md: measured + vidIQ hypothesis): handling thumps/rubs, low-frequency phone-mic floor, proximity changes of the voice, darker mic colour, no music. Added to build_bed.py: rumble following the measured camera speed, grips/knocks on jerks and hand-set moments, phone-mic voice chain with distance from keyframes + measured zoom. Checks: words identical (ASR medium) in all 8 clips, no silence, -15.0 LUFS, TP -1.0. Ear check by the owner pending. The C03 "and" issue is still open (owner to choose a word/tag).
