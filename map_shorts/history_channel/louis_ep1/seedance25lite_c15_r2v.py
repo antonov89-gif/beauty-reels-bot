@@ -1,5 +1,5 @@
 """C15 on Seedance 2.5 LITE r2v, voice trial v4 (owner 30.10: "Сначала сделаем на модели для всех серии потом посмотрим"): the model voices the king from our v3 voice as reference audio and keeps its own speech and sounds (C09 r2v route, which the owner preferred). C10 passed (owner "Норм" to the voice of C09 and C10 together).
-Inputs: reference image 1 = frames/C15_v7.jpg (the gilded mirror covers the lower right, banquet table behind), image 2 = the king's face master; reference audio 1 = voice/tts_ep1/C15_ref6s.wav (make_ref_audio.py C15 0.3 6, built AFTER the Lumean order). 720p, 6 s, $0.15/s = $0.90. Needs the owner's yes. Usage: python3 seedance25lite_c15_r2v.py show | go"""
+Inputs: reference image 1 = frames/C15_v7.jpg (the gilded mirror covers the lower right, banquet table behind), image 2 = the king's face master; reference audio 1 = voice/tts_ep1/C15_ref9s.wav (make_ref_audio.py C15 0.3 9, built AFTER the Lumean order). 720p, 9 s, $0.15/s = $1.35. Needs the owner's yes. Usage: python3 seedance25lite_c15_r2v.py show | go"""
 import json, re, subprocess, sys, urllib.request
 sys.path.insert(0, "/home/claude/v51")
 import apipod
@@ -28,14 +28,14 @@ CAMERA_BASE = ("Filmed by himself on a phone held in one hand at arm's length, a
 FM = H0 + "louis_card/face_master_v3/"
 prompt = (CAMERA_BASE +
           'Reference image 1 is the scene and the opening frame: the same vain French king in the tall grey-white powdered wig, white powdered face with pink rouge, thin upturned moustache, a scarlet velvet coat with gold suns and a white lace jabot, holds a gilded hand mirror that covers the lower right of the frame; behind him a long banquet table with marzipan towers and candles. His face is exactly reference image 2. '
-          'DIALOGUE: the king speaks the line of reference audio 1, in his voice from that audio, with the same words and rhythm: "Now, if you\'ll excuse me... ... the soup is getting cold." then a cold, haughty laugh; lips clearly moving with every word, mouth closed in the pauses. '
-          'ACTION: 0-2.5 s he lifts his chin, polite and lofty, the phone sways; 2.5-4.5 s he turns towards the banquet table and says the last words with a gleeful hungry look; 4.5-6 s a cold haughty laugh, chin up, and the gilded mirror swings across the lens as he walks to the table. '
+          'DIALOGUE: the king speaks the line of reference audio 1, in his voice from that audio, with the same words and rhythm: "Hit like. Ring the bell. ... Anyway, do what you like." then a cold, haughty laugh, then, gleeful and hungry: "I\'m off to the table to feast!"; lips clearly moving with every word, mouth closed in the pauses. '
+          'ACTION: 0-2.5 s he commands with a ringed finger at the lens; 2.5-5 s he waves the phone side away dismissively on "do what you like"; 5-7 s a cold haughty laugh, chin up; 7-9 s he turns towards the banquet table and walks to it, the gilded mirror swings across the lens. '
           'Same face, wig, makeup and costume throughout. Picture: natural window daylight, slightly underexposed like a real phone video, real skin texture with pores, no beauty filter, not golden everywhere. '
           "Sound: recorded by the phone's own microphone: his voice close, cutlery and murmurs from the banquet, candles, the swish of velvet. No music.")
 body = {"model": "seedance-2.5-lite-r2v", "prompt": prompt,
         "image_urls": [host(H0 + "louis_ep1/frames/C15_v7.jpg", "image/jpeg"), host(FM + "face_front_talking.jpg", "image/jpeg")],
-        "audio_urls": [host(H0 + "voice/tts_ep1/C15_ref6s.wav", "audio/wav")],
-        "duration": 6, "resolution": "720p", "aspect_ratio": "9:16", "generate_audio": True}
+        "audio_urls": [host(H0 + "voice/tts_ep1/C15_ref9s.wav", "audio/wav")],
+        "duration": 9, "resolution": "720p", "aspect_ratio": "9:16", "generate_audio": True}
 mode = sys.argv[1] if len(sys.argv) > 1 else "show"
 print(json.dumps({k: (v if k != "prompt" else v[:70] + "...") for k, v in body.items()}, indent=1)[:900])
 if mode == "go":
