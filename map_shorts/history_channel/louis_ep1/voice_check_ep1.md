@@ -12,7 +12,7 @@ Files: voice/tts_ep1/C01-C15.mp3 (14 lines, locked voice v3 The Young Heir, Fren
 | C06 | PASS | PASS | |
 | C07 | PASS | **FAIL -> FIXED**: heard "Take note." The final "s" of "notes" (TTS 5.04-5.30 s) fell after the end of the clip (7.91 s). Fix (free): L-cut, the 0.25 s tail is mixed into the silent start of C08 (C08 voice starts at 1.10 s). Re-check by ASR on the join: "Take notes!" PASS. Files: frames/C08_final_lcut.mp4 (use it in the edit instead of C08_final.mp4), frames/C07_C08_lcut_check.mp4. | |
 | C08 | PASS | PASS | the 0.3 s pause before "To myself" is there (ASR joins it into one sentence, the joke still lands by ear) |
-| C09 | **SOFT FAIL**: heard "there goes **a** hat" (respelling "ze" before "hat") | not built yet | fix before the clip is built: re-voice with plain "the" in this one place, Lumean about 0.23 RUB, needs a separate yes |
+| C09 | FIXED 30.10: re-voiced with plain "the" (0.23 RUB), ASR hears "there goes the hat" | not built yet | see voice/qc.md |
 | C10 | PASS | not built | |
 | C12 | PASS ("357") | not built | |
 | C13 | PASS | not built | |

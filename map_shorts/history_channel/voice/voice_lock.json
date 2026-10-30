@@ -1,102 +1,105 @@
 {
-  "channel": "history POV channel (Louis XIV series)",
-  "locked": "2026-10-29",
-  "version": 3,
-  "approved_by": "owner 29.10: accent test 2, variant B (respelling) - 'Да нормально'",
-  "provider": "ElevenLabs via Lumean (pay-as-you-go)",
-  "voice_name": "The Young Heir (ElevenLabs voice library, aristocrat page) with a French accent",
-  "voice_id": "AqRCwHAjbeFmvSwJvHll",
-  "public_owner_id": "779d91788b0d9e364d32e0a0e4273ec722b92887fa710d82f50b2d034a9fb97b",
-  "model_id": "eleven_v4",
-  "language_code": "en",
-  "voice_settings": {
-    "stability": 0.5,
-    "similarity_boost": 0.75,
-    "style": 0.5,
-    "use_speaker_boost": true,
-    "speed": 0.95
-  },
-  "accent": {
-    "text_prefix": "[thick French accent] ",
-    "respelling_tts_only": [
-      [
-        "\\bThe\\b",
-        "Ze"
-      ],
-      [
-        "\\bthe\\b",
-        "ze"
-      ],
-      [
-        "\\bthat\\b",
-        "zat"
-      ],
-      [
-        "\\bthem\\b",
-        "zem"
-      ],
-      [
-        "\\bthey\\b",
-        "zey"
-      ],
-      [
-        "\\bthis\\b",
-        "zis"
-      ],
-      [
-        "\\bhere\\b",
-        "'ere"
-      ],
-      [
-        "\\bhundred\\b",
-        "'undred"
-      ],
-      [
-        "\\bhair\\b",
-        "'air"
-      ],
-      [
-        "\\bhandsome\\b",
-        "'andsome"
-      ]
-    ],
-    "rule": "Apply the prefix and the respelling ONLY to the text sent to TTS (regex, word boundaries), line by line. The script and the platform SRT keep normal English spelling. There are NO burned-in subtitles (owner 29.10), so every line must be clear by ear: after each render transcribe it; a respelled word heard as a different word is added to respelling_exceptions for that clip and the clip is re-voiced.",
-    "respelling_exceptions": {
-      "C03": [
-        "here"
-      ],
-      "C05": [
-        "they"
-      ],
-      "C10": [
-        "the"
-      ],
-      "C02": [
-        "the"
-      ],
-      "C04": [
-        "the",
-        "hair"
-      ],
-      "C01": [
-        "that",
-        "handsome"
-      ]
-    }
-  },
-  "tags": "emotion tags per line from voice/lines_ep1_emotion.json (stability 0.5)",
-  "reference_sample": "map_shorts/history_channel/voice/heir_fr_sample.mp3 (0-12.8 s of audition_accent/heir_phon_eleven_v4.mp3: the opener + C02 start); used as the voice reference for Kling 'voices'",
-  "note": "ONE voice on every video of this channel. AI voice is disclosed in the description and platform flags. Never edit silently: any change = a new lock version after the owner agrees.",
-  "supersedes": {
-    "version": 2,
-    "model_id": "eleven_v4",
-    "accent": "none (posh British)",
-    "sample": "heir_sample.mp3",
-    "previous": {
-      "version": 1,
-      "model_id": "eleven_v3",
-      "approved": "2026-10-29 (voice 7 'The Young Heir', 'вроде нормально')",
-      "sample": "heir_sample_v3.mp3"
-    }
+ "channel": "history POV channel (Louis XIV series)",
+ "locked": "2026-10-29",
+ "version": 3,
+ "approved_by": "owner 29.10: accent test 2, variant B (respelling) - 'Да нормально'",
+ "provider": "ElevenLabs via Lumean (pay-as-you-go)",
+ "voice_name": "The Young Heir (ElevenLabs voice library, aristocrat page) with a French accent",
+ "voice_id": "AqRCwHAjbeFmvSwJvHll",
+ "public_owner_id": "779d91788b0d9e364d32e0a0e4273ec722b92887fa710d82f50b2d034a9fb97b",
+ "model_id": "eleven_v4",
+ "language_code": "en",
+ "voice_settings": {
+  "stability": 0.5,
+  "similarity_boost": 0.75,
+  "style": 0.5,
+  "use_speaker_boost": true,
+  "speed": 0.95
+ },
+ "accent": {
+  "text_prefix": "[thick French accent] ",
+  "respelling_tts_only": [
+   [
+    "\\bThe\\b",
+    "Ze"
+   ],
+   [
+    "\\bthe\\b",
+    "ze"
+   ],
+   [
+    "\\bthat\\b",
+    "zat"
+   ],
+   [
+    "\\bthem\\b",
+    "zem"
+   ],
+   [
+    "\\bthey\\b",
+    "zey"
+   ],
+   [
+    "\\bthis\\b",
+    "zis"
+   ],
+   [
+    "\\bhere\\b",
+    "'ere"
+   ],
+   [
+    "\\bhundred\\b",
+    "'undred"
+   ],
+   [
+    "\\bhair\\b",
+    "'air"
+   ],
+   [
+    "\\bhandsome\\b",
+    "'andsome"
+   ]
+  ],
+  "rule": "Apply the prefix and the respelling ONLY to the text sent to TTS (regex, word boundaries), line by line. The script and the platform SRT keep normal English spelling. There are NO burned-in subtitles (owner 29.10), so every line must be clear by ear: after each render transcribe it; a respelled word heard as a different word is added to respelling_exceptions for that clip and the clip is re-voiced.",
+  "respelling_exceptions": {
+   "C03": [
+    "here"
+   ],
+   "C05": [
+    "they"
+   ],
+   "C10": [
+    "the"
+   ],
+   "C02": [
+    "the"
+   ],
+   "C04": [
+    "the",
+    "hair"
+   ],
+   "C01": [
+    "that",
+    "handsome"
+   ],
+   "C09": [
+    "the"
+   ]
   }
+ },
+ "tags": "emotion tags per line from voice/lines_ep1_emotion.json (stability 0.5)",
+ "reference_sample": "map_shorts/history_channel/voice/heir_fr_sample.mp3 (0-12.8 s of audition_accent/heir_phon_eleven_v4.mp3: the opener + C02 start); used as the voice reference for Kling 'voices'",
+ "note": "ONE voice on every video of this channel. AI voice is disclosed in the description and platform flags. Never edit silently: any change = a new lock version after the owner agrees.",
+ "supersedes": {
+  "version": 2,
+  "model_id": "eleven_v4",
+  "accent": "none (posh British)",
+  "sample": "heir_sample.mp3",
+  "previous": {
+   "version": 1,
+   "model_id": "eleven_v3",
+   "approved": "2026-10-29 (voice 7 'The Young Heir', 'вроде нормально')",
+   "sample": "heir_sample_v3.mp3"
+  }
+ }
 }
