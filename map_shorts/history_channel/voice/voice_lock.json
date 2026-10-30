@@ -85,7 +85,16 @@
    "C09": [
     "the"
    ]
-  }
+  },
+  "tts_text_overrides": {
+   "C03": [
+    [
+     "surgeon's here, and",
+     "surgeon's here and"
+    ]
+   ]
+  },
+  "tts_text_overrides_note": "TTS-only text fixes (the script and SRT keep the original). C03 30.10: the comma before 'and' made the voice pause and drop into a creaky low register (heard as a switch of take)."
  },
  "tags": "emotion tags per line from voice/lines_ep1_emotion.json (stability 0.5)",
  "reference_sample": "map_shorts/history_channel/voice/heir_fr_sample.mp3 (0-12.8 s of audition_accent/heir_phon_eleven_v4.mp3: the opener + C02 start); used as the voice reference for Kling 'voices'",

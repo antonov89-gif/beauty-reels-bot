@@ -32,6 +32,8 @@ lines = json.load(open(os.path.join(HERE, "lines_ep1_emotion.json")))["lines"]
 
 def tts_line(c):
     t = lines[c]
+    for a, b in lock["accent"].get("tts_text_overrides", {}).get(c, []):   # TTS-only text fixes, the script keeps the original
+        t = t.replace(a, b)
     skip = lock["accent"].get("respelling_exceptions", {}).get(c, [])
     for x, y in lock["accent"]["respelling_tts_only"]:
         if x.replace("\\b", "").lower() not in skip:
