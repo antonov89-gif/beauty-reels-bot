@@ -7,15 +7,21 @@ V = "A"; SR = 48000; MODEL = "frames/seedance25lite_c09.mp4"
 SC = "/tmp/claude-0/-home-user-beauty-reels-bot/bb7f8515-f5d4-586a-94a3-df9db5a7e320/scratchpad/"
 MARCEL_AT = 1.85; MARCEL_GAIN = 0.6                    # speech onset of "Pardon, Sire!" (s) and its level against the king (he stands further away)
 # name, speech in our TTS (voice/tts_ep1/C09.mp3; borders from the energy dips and word times), mouth window in the clip, seed start, search radius, tempo range, optimise?
-UNITS = [("Lower!",          0.16, 0.67, 0.05, 0.85, 0.27, 0.25, (1.0, 1.5), True),
-         ("Lower!",          1.10, 1.52, 1.00, 1.60, 1.12, 0.20, (1.2, 1.6), True),     # only "Lo-wer" is kept, the sustained tail is cut (the mouth shuts at 1.42; cut earlier the word sounded like "Low")
-         ("And there goes",  2.27, 2.81, 0, 0, 2.97, 0, (0.9, 0.9), False),            # head turned away (no face 2.3-3.4): seed from the model's audio (2.95)
-         ("the",             2.84, 3.10, 3.70, 4.00, 3.83, 0.10, (0.8, 1.3), True),
-         ("hat.",            3.17, 3.40, 4.00, 4.80, 4.30, 0.20, (0.5, 1.0), True),
-         ("Eyes on",         3.87, 4.145, 5.95, 6.78, 6.15, 0.15, (0.55, 1.1), True),   # mouth wide 6.1-6.65, the model's voice only starts at 6.52
-         ("me,",             4.145, 4.47, 6.78, 7.30, 6.88, 0.12, (0.8, 1.3), True),   # lips shut at 6.85-6.95 (m), vowel 7.0-7.2
-         ("not on the hat.", 4.66, 5.33, 7.20, 8.05, 7.20, 0.12, (0.8, 1.1), True)]   # small mouth 7.25-7.5, wide on "hat" 7.58-7.9
+UNITS = [("Lower!",          0.16, 0.67, 0.05, 0.85, 0.27, 0.25, (1.0, 1.5), True, 1.0),
+         ("Lower!",          1.10, 1.52, 1.00, 1.60, 1.12, 0.20, (1.2, 1.6), True, 1.0),   # only "Lo-wer" is kept, the sustained tail is cut (the mouth shuts at 1.42; cut earlier the word sounded like "Low")
+         ("And there goes",  2.27, 2.81, 0, 0, 2.97, 0, (0.9, 0.9), False, 1.0),           # head turned away (no face 2.3-3.4): seed from the model's audio (2.95)
+         ("the",             2.84, 3.10, 3.70, 4.00, 3.83, 0.10, (0.8, 1.3), True, 1.0),
+         ("hat.",            3.17, 3.40, 4.00, 4.80, 4.30, 0.20, (0.5, 1.0), True, 1.5),   # the mouth is widest on "hat" while our deadpan "hat." trails off 17 dB down: flattened and lifted
+         ("Eyes on",         3.87, 4.145, 5.95, 6.78, 6.15, 0.15, (0.55, 1.1), True, 1.0), # mouth wide 6.1-6.65, the model's voice only starts at 6.52
+         ("me,",             4.145, 4.47, 6.78, 7.30, 6.88, 0.12, (0.8, 1.3), True, 1.0),  # lips shut at 6.85-6.95 (m), vowel 7.0-7.2
+         ("not on the",      4.66, 5.14, 7.10, 7.54, 7.16, 0.06, (1.3, 1.6), True, 1.0),   # small mouth 7.25-7.5, closed at 7.50
+         ("hat.",            5.16, 5.33, 7.54, 8.05, 7.58, 0.08, (0.6, 1.0), True, 1.5)]   # wide 7.58-7.83
 mouth = json.load(open(SC + "c09qc/mouth_model.json")); mt = np.array([r[0] for r in mouth]); ml = np.array([np.nan if r[1] is None else r[1] for r in mouth])
+
+
+def flatten(seg, power=0.6, cap=2.2):                                # evens out a word that trails off (our deadpan "hat.") so it carries as much as the wide mouth asks for
+    w = int(SR * .03); e = np.sqrt(np.convolve(seg ** 2, np.ones(w) / w, "same")); e = np.maximum(e, e.max() * 0.02)
+    return (seg * np.minimum((e.max() / e) ** power, cap)).astype(np.float32)
 
 
 def load(p):
@@ -47,12 +53,13 @@ def fit(o0, o1, w0, w1, seed, rad, tr, lo):
 
 
 prev_end = 0.0
-for n, (name, o0, o1, w0, w1, seed, rad, tr, opt) in enumerate(UNITS):
-    r = fit(o0, o1, w0, w1, seed, rad, tr, prev_end + 0.02) if opt else None
+for n, (name, o0, o1, w0, w1, seed, rad, tr, opt, gain) in enumerate(UNITS):
+    r = fit(o0, o1, w0, w1, seed, rad, tr, prev_end - 0.06) if opt else None
     c, s, tp = (r[0], r[1], r[2]) if r else (float("nan"), seed, tr[0])
     seg = x[int((o0 - 0.04) * SR):int((o1 + 0.04) * SR)].copy(); f = int(SR * .006); seg[:f] *= np.linspace(0, 1, f); fo = int(SR * (.04 if name == "Lower!" and o0 > 1 else .006)); seg[-fo:] *= np.linspace(1, 0, fo)
+    if gain > 1: seg = flatten(seg); fo2 = int(SR * .03); seg[-fo2:] *= np.linspace(1, 0, fo2)   # the breath after the "t" is not lifted
     if abs(tp - 1) > .01: seg = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "-", "-af", f"atempo={tp:.3f}", "-f", "f32le", "-"], input=seg.tobytes(), capture_output=True, check=True).stdout, np.float32)
-    i0 = int(max(0, s - 0.04 / tp) * SR); k = min(len(seg), len(track) - i0); track[i0:i0 + k] += seg[:k]
+    i0 = int(max(0, s - 0.04 / tp) * SR); k = min(len(seg), len(track) - i0); track[i0:i0 + k] += seg[:k] * gain
     prev_end = s + (o1 - o0) / tp
     print(f"{name:16s} start {s:.2f} s  tempo {tp:.2f}  speech {(o1 - o0) / tp:.2f} s  mouth corr {c:.2f}" + ("" if opt else "  (seed, no face)"))
 f = int(SR * .01); mx = mx.copy(); mx[:f] *= np.linspace(0, 1, f); mx[-f:] *= np.linspace(1, 0, f)
