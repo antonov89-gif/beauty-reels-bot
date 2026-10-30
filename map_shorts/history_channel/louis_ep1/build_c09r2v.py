@@ -41,3 +41,17 @@ subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", MODEL, "-f", "f32le", "-ar"
 r = np.frombuffer(open(SC + "sep/lite_c09r2v_rest.f32", "rb").read(), np.float32).reshape(-1, 2)
 r = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", "44100", "-ac", "2", "-i", "-", "-ar", str(SR), "-f", "f32le", "-"], input=r.tobytes(), capture_output=True).stdout, np.float32)
 open(SC + f"lite_c09r2v_rest_{V}.f32", "wb").write(r.astype(np.float32).tobytes())
+# Preview with the model's own SOUNDS (owner 30.10 "Предыдущее видео c09r2v лучше": the raw take has the hat thump and the phone knocks, our voice-only file had none).
+# Our voice at the loudness of the model's speech stem (-18.1 LUFS), the htdemucs rest stem (hat drop at 3.5-4.0 s, knock at 6.0-6.25 s) as it is, then one gain to -14 LUFS.
+VOICE_LUFS_MODEL = -18.1
+mix = SC + "c09R_mix.f32"
+rest = r.reshape(-1, 2) if r.size % 2 == 0 else r[:-1].reshape(-1, 2)
+voice = np.frombuffer(open(SC + "c09R_voice.f32", "rb").read(), np.float32) * 10 ** ((VOICE_LUFS_MODEL - I) / 20)
+n = min(len(voice), len(rest)); st = rest[:n].copy(); st += voice[:n, None]
+open(mix, "wb").write(st.astype(np.float32).tobytes())
+meas = subprocess.run(["ffmpeg", "-hide_banner", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", mix, "-af", "ebur128", "-f", "null", "-"], capture_output=True, text=True).stderr
+I2 = float([l for l in meas.splitlines() if l.strip().startswith("I:")][-1].split()[1])
+fc = f"[0:v]{vf}[vv];[1:a]volume={-14 - I2:.2f}dB,alimiter=limit=0.84:attack=5:release=80:level=disabled[v]"
+subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", MODEL, "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", mix, "-filter_complex", fc, "-map", "[vv]", "-map", "[v]",
+                "-c:v", "libx264", "-crf", "16", "-c:a", "aac", "-b:a", "320k", "-ar", "48000", "-shortest", f"frames/C09R_mix_{V}.mp4"], check=True)
+print("with the model's sounds: frames/C09R_mix_A.mp4")
