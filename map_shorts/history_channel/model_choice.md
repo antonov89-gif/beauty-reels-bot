@@ -49,3 +49,15 @@ Decision pending with the owner.
 
 ## Seedance 2.5 draft route: final only in 1080p (verified 29.10 on the API)
 The final step from a draft_task_id answers 400 "supports only 1080p resolution" for 720p (rejected at validation, no charge). So the draft route costs draft 0.098 $/s + final 0.542 $/s (about $5.2 per 8 s with the final at 1080p); the direct i2v route offers 720p at 0.2205 $/s (about $1.76 per 8 s) but does NOT keep the exact first frame (C05, C08 jumped). Use the draft route for continuations (no visible cut), the direct 720p route only for planned hard cuts.
+
+## Model ratings after the C01-C08 work (30.10, 0-5, mine, subjective; measured facts in reference_check.md)
+| Model | Face/texture | Lips on OUR voice | Phone camera | Keeps first frame | Own sound | Price | Verdict |
+|--|--|--|--|--|--|--|--|
+| Seedance 2.5 draft -> 1080p | 4 | 4 | 3 | exact | almost none (no sound asked) | about $5.1 / 8 s | for hidden joins (C01-C03, C06, C08) |
+| Seedance 2.5 direct 720p | 4 | 4 | 3 | NO (jumps in C05, C08) | same | $1.76 / 8 s | hard cuts only (C07) |
+| Seedance 2.5 LITE i2v 720p | 4.5 (texture 1969 vs 645-1594, grain 3.0) | 4 (0.06-0.12 s after phrase-level alignment) | 4 | close, not exact (diff 7.2) | yes, room and knocks when asked | $1.35 / 9 s (pilot C04, actual) | best value; only C04 tested |
+| Kling 4.0 i2v 1080p | 3.5 | 2 (own faster line, words 0.4-0.9 s early) | 3 | yes | own voice | about $2 / 9 s | rejected for dialogue |
+| Kling 4.0 r2v | n/a | rejects our voice reference (3 of 3) | - | no | - | about $1.14 / 8 s | rejected |
+| Veo 3.1 | 3 | not tested | 3 | no | - | $1 / 8 s | fallback only |
+| Wan 2.7 | - | - | - | - | - | - | rejected by the owner |
+Plan: Lite where the join may be a cut (C04, C05, C07, C09+), the draft route only where the join must be invisible (C02, C03); every prompt carries a SOUND block; the model's speech is removed with htdemucs (free) and its sounds kept.
