@@ -61,3 +61,9 @@ The final step from a draft_task_id answers 400 "supports only 1080p resolution"
 | Veo 3.1 | 3 | not tested | 3 | no | - | $1 / 8 s | fallback only |
 | Wan 2.7 | - | - | - | - | - | - | rejected by the owner |
 Plan: Lite where the join may be a cut (C04, C05, C07, C09+), the draft route only where the join must be invisible (C02, C03); every prompt carries a SOUND block; the model's speech is removed with htdemucs (free) and its sounds kept.
+
+## Our voice as INPUT (30.10, owner: "Можно ли сразу в генерацию засунуть нашу озвучку")
+- APIpod Seedance 2.5 Lite Reference-to-Video (`seedance-2.5-lite-r2v`, docs.apipod.ai/seedance/2-5-lite-reference-to-video): `audio_urls` up to 10 reference audios, 2-30 s each, total <= 30 s, must come with at least one reference image or video; up to 30 images; 4-30 s; 720p only. APIpod estimate 30.10: $0.60 per 4 s = the same $0.15/s as Lite i2v (8 s = $1.20); the charge with audio input NOT VERIFIED.
+- Lite i2v (`seedance-2.5-lite-i2v`) has first/last frame but NO audio input. In r2v the image is a reference, not an exact first frame (fine for hard cuts, not for invisible joins).
+- Lip sync to the given audio is not documented for the route: to be proven on C09 (seedance25lite_c09_r2v.py, reference audio voice/tts_ep1/C09_ref8s.wav). If it works, it replaces the cut-and-fit method for all dialogue clips (no stretching of our voice afterwards).
+- Same idea elsewhere: Seedance 2.5 r2v (non-Lite) $0.882 per 4 s = $0.22/s; Seedance 2.0 r2v $0.63 per 4 s; Higgsfield Seedance 2.0 with start frame + audio roles (MCP answered 423 / balance error 30.10: not usable now). Kling 4.0 r2v voice reference rejected our voice 29.10.
