@@ -13,19 +13,19 @@
 
 **C01 (0–11 с)** — фирменное начало каждой серии
 Камера смотрит в расписной потолок, телефон дрожит в руке. Он говорит «Ой, потолок», пока камера ещё на потолке, потом опускает телефон на себя и, когда камера встала, продолжает.
-Реплика (v2, 30.10, по референсу): «Oops, the ceiling. There. [пауза] The whole court watches me. So now you can. [пауза] Yes, I'm that handsome.»
+Реплика: «Oops, the ceiling. There. Welcome to Versailles. Yes, I'm that handsome. Try not to faint.»
 Перевод: «Ой, потолок. Вот. Добро пожаловать в Версаль. Да, я настолько красив. Постарайтесь не упасть в обморок.»
 Плашка: «VERSAILLES, FRANCE · 1685». Единственное «какой я красавец» в ролике.
 
 **C02 (11–20 с)**
 Селфи с руки, поправляет локон рукой в перстнях, подаётся к камере, как будто делится секретом.
-Реплика (v2, 30.10): «A hundred people watch me wake up. [пауза] Honestly... I've never once been alone.»
+Реплика (v5, 30.10, короче): «A hundred people watch me wake up. [пауза] I call it... opening night.»
 Перевод: «Сотня человек смотрит, как я просыпаюсь. Я называю это... премьерой.»
 Плашка: «LE LEVER (THE RISING): UP TO ~100 PEOPLE» [1И].
 
 **C03 (20–28 с)**
 Входят врач и хирург, он скучающе смотрит на них через плечо, отворачивается к камере, самодовольно тянет «Naturally».
-Реплика (v2, 30.10): «The doctor and the surgeon are here before I'm awake. [пауза] They worry. [пауза] Flattering, no?»
+Реплика (v5, 30.10, короче): «The doctor. The surgeon. Nobody came to see them. [пауза] Everyone came for me. Naturally.»
 Перевод: «Врач. Хирург. Никто не пришёл к ним. Все пришли ко мне. Естественно.»
 Плашка: «A DOCTOR AND A SURGEON WERE IN THE ROOM BEFORE HE GOT UP» [2И].
 
@@ -35,7 +35,7 @@
 
 **C04 (28–37 с)**
 Телефон стоит на столе. Поднимает тёмный длинный парик, рука на груди, трагическое лицо.
-Реплика (v2, 30.10): «So... the wig. My hair started falling out at seventeen. [пауза] I took it... personally.»
+Реплика (v5, 30.10, короче): «Now, the wig. My hair started falling out at seventeen. [пауза] I took it personally.»
 Перевод: «Теперь парик. В семнадцать у меня начали выпадать волосы. Я принял это на свой счёт.»
 Плашка: «HAIR LOSS FROM AGE ~17 (ABOUT 1655), THEN WIGS» [2И].
 
@@ -47,7 +47,7 @@
 
 **C06 (42–51 с)**
 Берёт телефон со стола в руку, тычет белым париком прямо в объектив (кудри закрывают кадр), фыркает, хитро улыбается.
-Реплика (v2, 30.10): «White, grey, a little powder. [пауза] Now half the court copies it. [пауза] Badly, of course.»
+Реплика: «White, grey, a little powder. One day, everybody will wear this. I'm just early.»
 Перевод: «Белый, седой, немного пудры. Однажды все будут такое носить. Я просто пришёл раньше.» [Ш]
 
 ---
@@ -59,13 +59,13 @@
 Близкое селфи с руки, за спиной в спальню входят придворные.
 **НОВОЕ:** паж за кадром (другой голос): «The court, Sire.» — «Двор, сир.»
 Действие: «Bow. Lower. Good.» говорит через плечо двору (они кланяются всё ниже, на «Good» он одобрительно кивает); «Yes, this is the new wig. Take notes.» поворачивается обратно в камеру и говорит зрителям, постукивая по парику.
-Реплика (v2, 30.10): «Bow. Lower. [пауза] Good. [пауза] Yes... the new wig. [пауза] Take notes.»
+Реплика: «Bow. Lower. Good. Yes, this is the new wig. Take notes.»
 Перевод: «Поклон. Ниже. Хорошо. Да, это новый парик. Записывайте.»
 Плашка: «THE COURT ENTERED IN ORDER OF RANK» [2И].
 
 **C08 (59–67 с)**
 Камера наезжает на лицо почти вплотную, за спиной продолжаются поклоны.
-Реплика (v2, 30.10): «All these people, and nobody may speak before me. [пауза] It's very quiet, being king.»
+Реплика: «All these people, and nobody may speak before me. I love listening. To myself, mostly.»
 Перевод: «Все эти люди, и никто не смеет заговорить раньше меня. Обожаю слушать. В основном себя.»
 
 **C09 (67–75 с)**
