@@ -32,6 +32,9 @@ if os.environ.get("C05SRC"): CLIPS = [(c, os.environ["C05SRC"] if c == "C05" els
 if os.environ.get("C05SND"): MODEL_SND["C05"] = os.environ["C05SND"]
 if os.environ.get("C02SRC"): CLIPS = [(c, os.environ["C02SRC"] if c == "C02" else s, sc) for c, s, sc in CLIPS]
 if os.environ.get("C02SND"): MODEL_SND["C02"] = os.environ["C02SND"]
+if os.environ.get("C03SRC"): CLIPS = [(c, os.environ["C03SRC"] if c == "C03" else s, sc) for c, s, sc in CLIPS]
+if os.environ.get("C03SND"): MODEL_SND["C03"] = os.environ["C03SND"]
+if os.environ.get("C03DIST"): DIST["C03"] = [(0, float(os.environ["C03DIST"]))]
 if os.environ.get("C02DIST"): DIST["C02"] = [(0, float(os.environ["C02DIST"]))]
 if os.environ.get("C05DIST"): DIST["C05"] = [(0, float(os.environ["C05DIST"]))]
 if os.environ.get("C04DIST"): DIST["C04"] = [(0, float(os.environ["C04DIST"]))]   # the Lite C04 leans close to the lens
