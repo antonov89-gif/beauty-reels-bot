@@ -52,3 +52,11 @@ Every video prompt starts with CAMERA_BASE from louis_ep1/camera_plan_ep1.md and
 
 ## Series hook engine (owner 30.10)
 "My body fails, I declare it the fashion": a vain handsome king whose body betrays him; every defect becomes a court trend; a courtier in the background copies the newest one. Own hooks, not the reference's teeth: see louis_hooks_unique.md (adopted: 4 "perfume and shirts"; proposed: 1 fistula, 2 appetite, 3 peas, 5 close-stool audiences). Every fact needs two sources; legends only as rumours the king denies, and the description says so.
+
+## Lines like the reference (owner 30.10: "идем дальше, с учетом референса: фразы, мысль, паузы")
+From C12 on (and in every redo of C01-C08, C13-C15), measured against the reference in louis_ep1/lines_vs_reference.md:
+1. A thought, not a gag: fact + a small confession or sly admission + a turn; the joke comes from the situation, not from a tag line.
+2. Spoken shape: "so", "well", "now", unfinished sentences; contractions; no polished punchline pairs (at most one smug tag every two clips).
+3. Air: about 14-15 words per 8-9 s (reference 83-99 wpm), 1-2 real pauses of 0.6-1 s, one before the turn.
+4. Range: now and then a soft moment (he laughs at himself), not only arrogance.
+5. Facts stay with two sources; legends only as rumours he denies (and say so in the description).
