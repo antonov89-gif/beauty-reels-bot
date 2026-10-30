@@ -64,3 +64,4 @@
 | 30.10 | C04 pilot, Seedance 2.5 Lite i2v 720p 9 s (APIpod) | $1.35 (usage.cost) |
 | 30.10 | Lumean: C09 re-voice, C03 re-voice (not adopted), C02-C05 short lines | 3 x 0.23 RUB |
 | 30.10 | C05 remake, Seedance 2.5 Lite i2v 720p 6 s (APIpod) | $0.90 (usage.cost) |
+| 30.10 | C02 remake, Seedance 2.5 Lite i2v 720p 9 s (APIpod) | $1.35 (usage.cost) |
