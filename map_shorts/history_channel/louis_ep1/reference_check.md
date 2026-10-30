@@ -317,3 +317,6 @@ Status: GENERATED + INSPECTED, awaiting the owner's approval.
 
 ## Voice check 30.10 (voice_check_ep1.md)
 C07 lost the final "s" of "notes" at the clip end: fixed free by an L-cut into the silent start of C08: frames/C08_final_lcut.mp4 replaces C08_final.mp4 in the edit; ASR on the join "Take notes!" PASS. C09 line heard as "a hat": re-voice proposed (0.23 RUB, needs a yes). C12-C15 pitch about 4 semitones above C02-C10: check by ear when built.
+
+## Sound bed C01-C08, 30.10 (owner "сделай сразу шум как в референсе"; sound_bed_ep1.md, build_bed.py; free, own synthesis)
+Room tone + people murmur + foley on motion peaks; no silence >= 0.5 s at -50 dB in any clip (was 1.5-5.2 s each), floor -48.6 dB (reference -49.5), -14.8 LUFS, TP -4.2, ASR identical before/after, no tonal content. Files: frames/C0x_bed.mp4 (C08 uses the L-cut version) and frames/EP1_C01-C08_bed.mp4 (not committed). Status: GENERATED + MEASURED; ear check by the owner pending.
