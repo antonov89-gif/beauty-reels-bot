@@ -54,8 +54,8 @@ def gen(c, name, scene, refs, extra=""):
 c, step = sys.argv[1], sys.argv[2]; ch = CH[c]; P = ch["prefix"]; D = H0 + ch["dir"]
 SAME = " EXACTLY the same man as in the FIRST (and SECOND) reference image: the same face, eyes, brows, nose, chins, skin and age; do not change them. "
 if step == "front":
-    gen(c, P + "_front", "Close front portrait, shoulders and head, looking straight into the lens with an eager, nervous smile.", [H0 + "chef_card/cook_front_toque.jpg"],
-        " The reference image shows exactly the right FACE and the right kitchen, apron and neck cloth: keep the same man, face, skin and sweat, but replace the tall pleated chef's toque by a plain soft rounded linen cap with no pleats, as a cook wore in the 1680s.")
+    gen(c, P + "_front", "Close front portrait, shoulders and head, looking straight into the lens with an eager, nervous smile.", [H0 + "chef_card/cook_front_v2_thumb.jpg"],
+        " The reference image shows exactly the right FACE and the right kitchen, apron and neck cloth: keep exactly the same man, face, skin, sweat, cap, apron and kitchen, but (1) NO thumb, finger or hand anywhere in the frame (his arms hang down out of sight, nothing in the foreground), and (2) a clearly visible heavy double chin and fuller jowls, as a well-fed cook.")
 elif step == "three_quarter":
     gen(c, P + "_three_quarter", "Three-quarter view from the waist up, carrying a large copper pot with both hands, glancing at the lens with a nervous smile.", [D + P + "_front.jpg"], SAME)
 else:
