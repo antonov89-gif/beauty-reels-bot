@@ -5,7 +5,7 @@ import subprocess, numpy as np
 V = "A"; SR = 48000; MODEL = "frames/seedance25lite_c09r2v.mp4"
 SC = "/tmp/claude-0/-home-user-beauty-reels-bot/bb7f8515-f5d4-586a-94a3-df9db5a7e320/scratchpad/"
 A, BC = "../voice/tts_ep1/C09.mp3", "../voice/tts_ep1/C09b-C09c.mp3"
-MARCEL_AT = 4.00; MARCEL_GAIN = 0.6                    # speech onset of "Pardon, Sire!" while the hat tumbles, before the king's next line (4.87)
+MARCEL_AT = 4.00; MARCEL_GAIN = 0.0                    # owner 30.10 "Марселя голос не видно что он говорит": his mouth only hangs half open in alarm (face mesh on a 3x crop: no word-like movement), and he leaves the frame at 4.6 s, so his "Pardon, Sire!" is DROPPED from C09 (gain 0)
 # name, take, speech start/end in the take (pauses on both sides), speech start in the clip, tempo
 PIECES = [("Lower!",                      A, 0.16, 0.67, 1.85, 1.30),
           ("Lower!",                      A, 1.10, 1.75, 3.21, 1.20),   # x1.2: ends 3.75 with the lips (3.67) instead of 3.86
@@ -30,7 +30,7 @@ for name, take, a, b, at, tp in PIECES:
 f = int(SR * .01); mx = mx.copy(); mx[:f] *= np.linspace(0, 1, f); mx[-f:] *= np.linspace(1, 0, f)
 w = int(SR * .01); em = np.array([np.sqrt((mx[i:i + w] ** 2).mean()) for i in range(0, len(mx) - w, w)])
 i0 = int((MARCEL_AT - float(np.argmax(em > em.max() * 0.1)) * 0.01) * SR); k = min(len(mx), len(track) - i0); track[i0:i0 + k] += mx[:k] * MARCEL_GAIN
-print("Marcel 'Pardon, Sire!' speech starts at", MARCEL_AT, "s")
+print("Marcel line:", "dropped" if MARCEL_GAIN == 0 else f"speech starts at {MARCEL_AT} s")
 open(SC + "c09R_voice.f32", "wb").write(track.tobytes())
 meas = subprocess.run(["ffmpeg", "-hide_banner", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", SC + "c09R_voice.f32", "-af", "ebur128", "-f", "null", "-"], capture_output=True, text=True).stderr
 I = float([l for l in meas.splitlines() if l.strip().startswith("I:")][-1].split()[1])   # one constant gain to -14 LUFS + soft limiter (no single-pass loudnorm: it clicked)

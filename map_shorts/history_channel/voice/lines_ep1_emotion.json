@@ -33,7 +33,8 @@
    "C13": "[timid, trying to explain, trailing off] Sire, I only..."
   },
   "files": "tts_ep1/marcel_C07_court.mp3, marcel_C09_pardon.mp3, marcel_C13_sire_i_only.mp3 (full order marcel_v1.mp3)",
-  "note": "30.10, 0.23 RUB; AI voice, disclosed in the description."
+  "note": "30.10, 0.23 RUB; AI voice, disclosed in the description.",
+  "note_C09": "30.10 owner: 'Марселя голос не видно что он говорит' -> 'Pardon, Sire!' dropped from C09 (his mouth is not seen speaking). Rule for Marcel's lines (C07, C13): he must be close to the lens with his mouth clearly speaking in the generated picture, else the line is cut."
  },
  "note_C09bc": "30.10: C09 re-voice timed to the lips of seedance25lite_c09.mp4 (two takes in ONE order, owner 'Да' to one order about 0.23 RUB): Lower 0.25-0.62 | Lower 1.12-1.42 | (Marcel) | And there goes 2.95-3.55 | the 3.83-3.93 | haaat 4.0-4.7 | (1.4 s) | Eyes on 6.1-6.65 | me 6.85-7.2 | not on the hat 7.25-7.9. Captions keep 'Lower. Lower... and there goes the hat. Eyes on me, not on the hat.' ('haaat' is a TTS-only drawl)."
 }
