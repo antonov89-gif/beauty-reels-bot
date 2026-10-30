@@ -84,3 +84,16 @@
 | 30.10 | C09 on Seedance 2.5 Lite r2v with our voice as reference audio (owner "Да"; task b4c2d6c0) | $1.20 (usage.cost) |
 | 30.10 | C10 on Seedance 2.5 Lite r2v, voice trial v4 (owner "Да"; 8 s) | $1.20 (usage.cost) |
 | 30.10 | C12 voice line v2 (reference manner), Lumean ElevenLabs v4 locked voice, one order (owner chose 'Новая реплика', yes to both) | 0.23 RUB |
+
+## Totals recomputed 30.10 (owner: "Посчитай по деньгам сколько выходит")
+Spent (CONFIRMED by provider usage.cost):
+- up to 29.10: about $56.7 (almost all of it the draft -> 1080p clips C01-C08, about $5 each; they are being replaced).
+- 30.10: Lite remakes C02-C05 $4.80 | Marcel card $0.92 | cook card $0.72 | copyist card $0.44 | C09 frames v8+v9 $0.08 | C09 Lite i2v $1.20 + C09 r2v $1.20 + C10 r2v $1.20 = $10.56.
+- Voice (Lumean): 29.10 about 6-7 RUB (est.), 30.10 1.38 RUB: together about $0.1.
+- TOTAL CONFIRMED about $67.3 + voice $0.1 = about $67.4. NOT VERIFIED on top: 3 Kling r2v attempts (up to $2.55 each) and 2 failed Seedance 2.5 submits, if the provider charged them: up to about $75. C12 r2v was rejected at submit ("insufficient quota"): $0.
+Still to spend to finish episode 1 on the r2v route (Lite $0.15/s, 101 s left = C01 10, C02 8, C03 8, C04 8, C05 6, C06 9, C07 8, C08 9, C12 9, C13 8, C14 9, C15 9; the 8-s burst uses the existing stills B1-B8, free):
+- raw $15.15 + about 6 new first frames $0.24 + new reference-audio orders about 0.5 RUB = about $15.4.
+- With 30 % re-rolls (this episode so far: C09 needed 2 clips for 1 accepted, C10 1 for 1): about $19.9; with 50 %: about $23.
+- Top up APIpod by about $20 for episode 1 (the balance is used up).
+Steady state per episode (about 112 s of video at Lite $0.15/s + frames): $17.9 raw, about $23 with 30 % re-rolls. At 2 per week about $46 per week (about $197 per month); at 3 per week about $69 per week (about $296 per month).
+Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts RPM about $0.03 per 1,000 views, long videos about $2; only after YPP): a Short with 120k views = about $3.6, 250k = $7.5, 1.55M (the reference's best) = $46.5; to repay $23 one Short needs about 770k views. A 10-min long video with 300k views = about $600. So Shorts pay for discovery, the money is in long videos and in YPP; before YPP the income is $0.
