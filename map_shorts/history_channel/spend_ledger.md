@@ -68,3 +68,5 @@
 | 30.10 | C03 remake, Seedance 2.5 Lite i2v 720p 8 s (APIpod) | $1.20 (usage.cost) |
 | 30.10 | total of the Lite remakes C02, C03, C04, C05 | $4.80 |
 | 30.10 | Marcel the page: card images, Nano Banana 2.1, 3 images | $0.12 (usage.cost 0.04 x 3) |
+| 30.10 | Marcel full card: 16 images, Nano Banana 2.1 | $0.64 (usage.cost 0.04 x 16) |
+| 30.10 | Marcel voice (Edward), Lumean | 0.23 RUB |
