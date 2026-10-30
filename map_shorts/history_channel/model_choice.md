@@ -102,3 +102,12 @@ Reading: against Lite 720p the unlimited week pays off from about 125 generation
 - The site's own advice: treat the window as a bonus to a plan you would buy for the credits anyway, not as the reason to buy.
 - Physical ceiling of the free lane (one clip at a time): 4.7 min per clip = 306 per day non-stop = about 2,100 per week; 8 min = 180 / day, 1,260 / week; 12 min = 120 / day, 840 / week (APIpod Lite equivalent $1,000-2,500, 1080p $3,600-9,000). With a person checking about 12 hours a day, half of that. Our need (125 generations = 7 episodes; 288 = best-of-3 on 7 episodes) is 1.4-3.2 hours of lane time per day: the ceiling is not the limit, scripts and checking are.
 - Open points to ask support@seeddance.io BEFORE paying: is reference-to-video with images + audio reference covered by the free lane; does the window exist without the Halloween banner (the article describes it as a standing part of Premium); how long does the free lane wait in practice.
+
+## C01 v3 test: prices for 13 s on the candidate models (owner 30.10: "C01 v3, давай это будет тест, посчитай клинг 4.0 и сиденс 2.0")
+APIpod's /v1/pricing/estimate ignores duration and resolution (it returns the price of the default unit: Kling i2v $0.725 = 5 s, Seedance 2.0 $0.63 = 5 s, Lite $0.60 = 4 s), so the per-second rates below are the CHARGED ones (usage.cost) or the model page:
+| Route | Rate | 13 s | Takes our voice? | Note |
+| Seedance 2.5 Lite r2v 720p (baseline, used for C09-C15) | $0.15/s | $1.95 | yes (audio_urls), the model re-speaks it close to our voice | |
+| Seedance 2.0 r2v 720p | $0.126/s (charged $1.26 for 10 s, 29.10) | $1.64 | yes (audio_urls) | 1080p $0.315/s = $4.10; older model; 4-15 s |
+| Kling 4.0 i2v 1080p | $0.2175/s (charged 0.6525 for 3 s, 29.10) | $2.83 | NO (native audio only, no audio input) | 720p $0.145/s = $1.89; exact first frame + keyframes; its own voice |
+| Kling 4.0 r2v 720p | $0.1428/s | $1.86 | `voices` field rejected our voice 3 of 3 (29.10) | not worth testing |
+Prepared, not run: seedance20_c01_r2v.py (needs C01_ref13s.wav = Lumean order of the C01 v3 line, 0.23 RUB), kling40_c01_i2v.py (first frame = the ceiling, keyframe_1 = him in bed). Judge on the same checks as C09-C15 (ASR, speaker similarity, lips vs speech, ceiling opening on frame 0, king the only star).
