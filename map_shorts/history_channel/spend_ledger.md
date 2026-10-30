@@ -78,3 +78,4 @@
 | 30.10 | Cook card: three-quarter + 14 sheet images, Nano Banana 2.1 | $0.60 (15 x 0.04) |
 | 30.10 | Copycat Duke Armand card: front + three-quarter + 8 sheet + three-quarter redo (11 images), Nano Banana 2.1 | $0.44 (11 x 0.04) |
 | 30.10 | C09 first frame v8 with Marcel, Nano Banana 2.1 | $0.04 (usage.cost) |
+| 30.10 | C09 on Seedance 2.5 Lite (720p, 8 s, owner "Да" after the price $1.20 was named; task 441f783d) | $1.20 (usage.cost) |
