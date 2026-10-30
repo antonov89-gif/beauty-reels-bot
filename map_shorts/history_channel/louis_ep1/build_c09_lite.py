@@ -10,8 +10,7 @@ MARCEL_AT = 1.85; MARCEL_GAIN = 0.6                    # speech onset of "Pardon
 UNITS = [("Lower!",          0.16, 0.67, 0.05, 0.85, 0.27, 0.25, (1.0, 1.5), True, 1.0),
          ("Lower!",          1.10, 1.52, 1.00, 1.60, 1.12, 0.20, (1.2, 1.6), True, 1.0),   # only "Lo-wer" is kept, the sustained tail is cut (the mouth shuts at 1.42; cut earlier the word sounded like "Low")
          ("And there goes",  2.27, 2.81, 0, 0, 2.97, 0, (0.9, 0.9), False, 1.0),           # head turned away (no face 2.3-3.4): seed from the model's audio (2.95)
-         ("the",             2.84, 3.10, 3.70, 4.00, 3.83, 0.10, (0.8, 1.3), True, 1.0),
-         ("hat.",            3.17, 3.40, 4.00, 4.80, 4.30, 0.20, (0.5, 1.0), True, 1.5),   # the mouth is widest on "hat" while our deadpan "hat." trails off 17 dB down: flattened and lifted
+         ("the hat.",        2.84, 3.40, 3.75, 4.80, 3.83, 0.06, (0.62, 0.8), True, 1.5),  # one drawn-out "the haaat": the lips move without a pause 3.8-4.6 s (v3 had "the", 0.23 s of silence, "hat" = lips moving in silence at 4.15-4.38)
          ("Eyes on",         3.87, 4.145, 5.95, 6.78, 6.15, 0.15, (0.55, 1.1), True, 1.0), # mouth wide 6.1-6.65, the model's voice only starts at 6.52
          ("me,",             4.145, 4.47, 6.78, 7.30, 6.88, 0.12, (0.8, 1.3), True, 1.0),  # lips shut at 6.85-6.95 (m), vowel 7.0-7.2
          ("not on the",      4.66, 5.14, 7.10, 7.54, 7.16, 0.06, (1.3, 1.6), True, 1.0),   # small mouth 7.25-7.5, closed at 7.50
