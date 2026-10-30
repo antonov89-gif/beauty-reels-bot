@@ -5,7 +5,7 @@ Bed per scene: A bedchamber = Chambord castle interior #1 (3431, quiet visitors'
 C court = Chambord castle #3 (3433, busy murmur under vaults). Foley: door 3211, footsteps on parquet 0376/0165, squeaking parquet 3051/3053/3060, cloth 0013,
 coat rubbed 1104 (grips), microphone taps 2016-2019 (knocks on the phone), key on a wooden table 0087. Phone voice: low cut, a darker top, proximity (closer = more bass and louder), NO reverb.
 Usage: python3 build_sound_v4.py -> frames/<clip>_snd.mp4, frames/EP1_C01-C08_snd.mp4"""
-import subprocess, numpy as np, cv2
+import os, subprocess, numpy as np, cv2
 from scipy.signal import butter, sosfilt
 SR = 48000; F = "frames/"; B = "../sfx/bsb/"
 SC = "/tmp/claude-0/-home-user-beauty-reels-bot/bb7f8515-f5d4-586a-94a3-df9db5a7e320/scratchpad/"
@@ -24,6 +24,11 @@ FOLEY = [("C01", 0.15, "1104", None, 0.6, -30, 0), ("C01", 0.9, "2016", 0, 0.4, 
          ("C07", 0.15, "3211", None, 2.4, -29, .7), ("C07", 0.6, "0376", 4.0, 2.6, -33, .5), ("C07", 1.25, "2016", 0, 0.4, -28, 0), ("C07", 5.6, "1104", 2.0, 0.5, -30, 0),
          ("C08", 0.4, "0013", 6.0, 0.6, -32, -.3), ("C08", 0.7, "3053", 0, 1.3, -33, -.6), ("C08", 1.15, "0013", 1.0, 0.7, -32, .5), ("C08", 1.6, "3060", 0, 1.9, -33, .6), ("C08", 2.7, "1104", 4.0, 0.5, -31, 0)]
 TAPS = ["2016", "2017", "2018", "2019"]
+# optional overrides (env): C04SRC=C04L_final_A  C04SND=<f32 of the model's own sounds, 48 kHz stereo>  TAG=_lite  (outputs <clip>_snd<TAG>.mp4)
+TAG = os.environ.get("TAG", "")
+if os.environ.get("C04SRC"): CLIPS = [(c, os.environ["C04SRC"] if c == "C04" else s, sc) for c, s, sc in CLIPS]
+MODEL_SND = {"C04": os.environ["C04SND"]} if os.environ.get("C04SND") else {}
+if os.environ.get("C04DIST"): DIST["C04"] = [(0, float(os.environ["C04DIST"]))]   # the Lite C04 leans close to the lens
 
 
 def db(x): return 10 ** (x / 20)
@@ -100,6 +105,8 @@ def main():
                 last = k / 24; put(fol, piece(TAPS[rng.integers(4)], 0, 0.5), k / 24, -30 + rng.uniform(-2, 2), 0); n += 1
         key = DIST[cid]; dk = np.interp(np.arange(L) / SR, [q[0] for q in key] + [d + 1], [q[1] for q in key] + [key[-1][1]])
         zs = np.interp(np.arange(L) / SR, np.arange(len(zoom)) / 24, zoom); dist = np.clip(dk - 0.8 * zs, 0, 1)
+        if cid in MODEL_SND:                                            # the video model's own sounds (its speech removed by htdemucs): room, knocks, cloth
+            ms = np.frombuffer(open(MODEL_SND[cid], "rb").read(), np.float32).reshape(-1, 2).T[:, :L]; bed = bed * db(-6) + np.pad(ms, ((0, 0), (0, L - ms.shape[1]))) * db(3)
         room = bed + fol[:, :L]                                         # the room and the foley reach the same phone mic: same colour (reference quiet floor centre 170-624 Hz)
         for ch in range(2):
             r_ = room[ch]; hi = sosfilt(butter(2, 3000, "hp", fs=SR, output="sos"), r_)
@@ -112,11 +119,12 @@ def main():
     I = float(r.split("I:")[-1].split("LUFS")[0]); g = db(-15.0 - I)                # whole episode to -15 LUFS (reference -15.4), one gain for all clips
     for cid, p, mix, n in outs:
         mix = np.clip(mix * g, -.89, .89); raw = SC + cid + "_snd.f32"; open(raw, "wb").write(mix.T.astype(np.float32).tobytes())
-        subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", p, "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", raw, "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "320k", "-shortest", F + cid + "_snd.mp4"], check=True)
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", p, "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", raw, "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "320k", "-shortest", F + cid + "_snd" + TAG + ".mp4"], check=True)
         print(cid, "foley", n, flush=True)
-    ins = sum([["-i", F + c + "_snd.mp4"] for c, _, _ in CLIPS], [])
+    ins = sum([["-i", F + c + "_snd" + TAG + ".mp4"] for c, _, _ in CLIPS], [])
     fc = "".join(f"[{i}:v]setsar=1[v{i}];" for i in range(len(CLIPS))) + "".join(f"[v{i}][{i}:a]" for i in range(len(CLIPS))) + f"concat=n={len(CLIPS)}:v=1:a=1[v][a]"
-    subprocess.run(["ffmpeg", "-y", "-v", "error"] + ins + ["-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-crf", "20", "-c:a", "aac", "-b:a", "320k", F + "EP1_C01-C08_snd.mp4"], check=True)
+    subprocess.run(["ffmpeg", "-y", "-v", "error"] + ins + ["-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-crf", "20", "-c:a", "aac", "-b:a", "320k", F + "EP1_C01-C08_snd" + TAG + ".mp4"], check=True)
 
 
-main()
+if __name__ == "__main__":
+    main()
