@@ -29,3 +29,13 @@ No tag or bracket is spoken aloud in any line (ASR finds only the script words).
 ## Still open (known, not voice errors)
 - Dead silence in the finals: 1.5-5.2 s per clip (pauses between phrases with muted model audio): the room tone + foley layer (free) fills it.
 - Page and courtier lines ("The court, Sire." / "Pardon, Sire!" / "Sire, I only..."): the page voice is not chosen yet (shortlist 1-6).
+
+## Episode 23-24 s (owner: "проверь озвучку на 23-24 секунды"), 30.10
+Episode time = C03 clip time + 20 s, so 23-24 s is C03 at 3-4 s: "(the) surgeon's here, [pause] and (nobody...)".
+- Words: ASR medium hears every word with probability >= 0.97 ("the surgeon's here, and"): PASS. Same words with and without the bed.
+- No click or splice spike in 22.5-24.5 s (spike detector 0 in both versions; the largest sample step is a sibilant of the voice itself).
+- Voice-only (no bed) level: speech -17...-10 dB per 0.25 s, pause 0.24 s between "here," and "and" at 23.66-23.9 s.
+- FOUND: in the TTS itself (voice/tts_ep1/C03.mp3, 2.2-2.45 s) the onset of "and" is a creaky low vowel: pitch 110 Hz against 150-200 Hz in the neighbouring words, level -27...-24 dB (speech about -15), voicing 0.8, lasting about 0.25 s before the consonant. By ear it can read as a drawled "uh... and" filler. It is the voice, not the bed. NOT VERIFIED BY EAR.
+- Under "surgeon's here" the bed has a silk rustle (ducked 9 dB, below -45 dB): unlikely audible.
+- Other candidate for the same stretch: tempo. "and nobody came to see them" (3.9-4.84 s of the clip) is 1.23x faster than the TTS (above the 1.15 cap; the lip fit forced it), just after the window.
+Options (all free except a re-voice): (a) trim the creaky onset of "and" by 0.15 s in the C03 voice and re-align; (b) leave; (c) re-voice C03 (0.23 RUB, own yes). Waiting for the owner to say what exactly sounds wrong. A/B excerpts: frames/ab/ep_22-25_WITH_bed.mp4 and ep_22-25_voice_only.mp4 (not committed).
