@@ -111,3 +111,6 @@ APIpod's /v1/pricing/estimate ignores duration and resolution (it returns the pr
 | Kling 4.0 i2v 1080p | $0.2175/s (charged 0.6525 for 3 s, 29.10) | $2.83 | NO (native audio only, no audio input) | 720p $0.145/s = $1.89; exact first frame + keyframes; its own voice |
 | Kling 4.0 r2v 720p | $0.1428/s | $1.86 | `voices` field rejected our voice 3 of 3 (29.10) | not worth testing |
 Prepared, not run: seedance20_c01_r2v.py (needs C01_ref13s.wav = Lumean order of the C01 v3 line, 0.23 RUB), kling40_c01_i2v.py (first frame = the ceiling, keyframe_1 = him in bed). Judge on the same checks as C09-C15 (ASR, speaker similarity, lips vs speech, ceiling opening on frame 0, king the only star).
+
+## Decision 30.10 (owner "Нормально"): C01 route = Kling 4.0 i2v + our voice laid over
+Kling 4.0 i2v (exact first frame + keyframe, 1080p, $0.2175/s) gave the best picture (sharpness 880 vs 389 for Seedance 2.0 at 720p), period background and the best lips (corr 0.71), but its own voice (0.70 to our v3). Kling's voice is removed with the htdemucs vocals stem and our v3 line is laid in whole phrases on its phrase starts (no slowing, speed-up max 1.3): lips corr 0.68, voice = ours (0.96). Free post step: build_c01_kling_ourvoice.py. Candidate route for the next clip that needs a re-roll (C13: the exact first frame keeps the plain courtier), each generation with its own yes.
