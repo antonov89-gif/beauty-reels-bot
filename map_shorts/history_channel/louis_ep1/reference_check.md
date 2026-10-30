@@ -459,3 +459,5 @@ Speech (model's own, ASR medium beam 5 and 1): "Red heels, nobles only, and only
 Voice consistency (resemblyzer cosine): C10 model voice vs our v3 C10 line 0.91 (= as close as our own takes to each other, 0.89-0.91); C10 model vs C09 model 0.79; C09 model vs v3 0.77. So C10 sounds almost exactly like our locked voice, C09 less: the model voice VARIES between clips (C09 is the outlier). Ear check by the owner needed.
 Sound: no music found (non-speech stem -44...-71 dBFS, one knock at 5.5-6.0 s); raw loudness -18.4 LUFS, TP -4.0 (to be lifted with one gain in the episode).
 Owner 30.10 "Норм" to the voice of C09 r2v and C10 r2v heard together: both kept. Next prepared, not run: seedance25lite_c12_r2v.py (C12_v7a.jpg + face master + C12_ref9s.wav, 9 s, $1.35).
+
+## C12 r2v submit, 30.10: REJECTED by APIpod "insufficient quota" (HTTP 500 at submit, no task created, no charge). The APIpod balance is used up; the owner tops it up, then C12 is run again on his yes (script ready: seedance25lite_c12_r2v.py, reference C12_ref9s.wav with the v2 line).
