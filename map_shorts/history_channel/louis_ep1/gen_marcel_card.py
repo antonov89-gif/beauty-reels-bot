@@ -10,7 +10,7 @@ FACE = ("a slim young man of about 18 with a round, open, slightly freckled face
 LIVERY = ("a plain short white-powdered wig tied at the nape with a black ribbon, a sky-blue wool coat with plain silver braid on the cuffs and a row of small silver buttons, a white linen cravat, white stockings and black buckled shoes; no gold, no red")
 BASE = "Vertical 9:16 phone photo, ultra-wide front camera look, soft natural window light in a gilded palace room, photorealistic, real skin texture with visible pores. No text, no modern objects. "
 SC = {"front": f"Close front portrait, shoulders and head, looking straight into the lens with a worried, eager look. {FACE.capitalize()}, wearing {LIVERY}.",
-      "three_quarter": f"Three-quarter view from the waist up, bowing slightly with his eyes lowered then glancing at the lens. {FACE.capitalize()}, wearing {LIVERY}. EXACTLY the same face as the first reference image.",
+      "three_quarter": f"Head and shoulders in a TRUE three-quarter view: the whole head and body turned 45 degrees to HIS left, so we see his right cheek and his right ear fully while the far cheek and far ear are partly hidden, the nose pointing clearly to the side of the frame, his eyes turned back toward the lens with a worried look. {FACE.capitalize()}, wearing {LIVERY}. EXACTLY the same face as the first reference image.",
       "full": f"Full-length standing figure in a gilded palace corridor, holding a large plumed black hat in both hands in front of him, anxious posture. {FACE.capitalize()}, wearing {LIVERY}. EXACTLY the same face as the first reference image."}
 
 

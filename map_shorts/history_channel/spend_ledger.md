@@ -74,3 +74,4 @@
 | 30.10 | Cook front redo with a period cap, Nano Banana 2.1 | $0.04 (usage.cost) |
 | 30.10 | Cook front v3 (no thumb, fuller double chin), Nano Banana 2.1 | $0.04 (usage.cost) |
 | 30.10 | Marcel emotions redo (apologetic, timid, terrified), Nano Banana 2.1 | $0.12 (3 x 0.04) |
+| 30.10 | Marcel three-quarter redo, Nano Banana 2.1 | $0.04 (usage.cost) |
