@@ -461,3 +461,6 @@ Sound: no music found (non-speech stem -44...-71 dBFS, one knock at 5.5-6.0 s); 
 Owner 30.10 "Норм" to the voice of C09 r2v and C10 r2v heard together: both kept. Next prepared, not run: seedance25lite_c12_r2v.py (C12_v7a.jpg + face master + C12_ref9s.wav, 9 s, $1.35).
 
 ## C12 r2v submit, 30.10: REJECTED by APIpod "insufficient quota" (HTTP 500 at submit, no task created, no charge). The APIpod balance is used up; the owner tops it up, then C12 is run again on his yes (script ready: seedance25lite_c12_r2v.py, reference C12_ref9s.wav with the v2 line).
+
+## Episode 1 length estimate on the r2v route (30.10, owner "Проверь какой получится ролик по времени")
+Measured: C09 r2v 8.06 s, C10 r2v 8.06 s; old cut C01-C08 v5 = 68.2 s. Planned (script_ru.md, one setup about 8-9 s, lines about 14-15 words): C01 10 | C02 8 | C03 8 | C04 8 | C05 6 | C06 9 | C07 8 | C08 9 | C09 8.06 | C10 8.06 | burst 8 (stills) | C12 9 | C13 8 | C14 9 | C15 9 = about 126 s; minus 0.3-0.5 s of dead air trimmed at each of 14 cuts -> about 2:00-2:05. Merging the outro (C14 + C15 into one clip) -> about 1:52-1:56. Reference vlogs 1:55-2:23. YouTube Help: Shorts up to 3 min (square/vertical, uploads after 15.10.2024). Still to generate: C01-C08, C12-C15 = 12 clips, about 101 s x $0.15 = about $15.2 at the Lite rate.
