@@ -97,3 +97,4 @@ Still to spend to finish episode 1 on the r2v route (Lite $0.15/s, 101 s left = 
 - Top up APIpod by about $20 for episode 1 (the balance is used up).
 Steady state per episode (about 112 s of video at Lite $0.15/s + frames): $17.9 raw, about $23 with 30 % re-rolls. At 2 per week about $46 per week (about $197 per month); at 3 per week about $69 per week (about $296 per month).
 Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts RPM about $0.03 per 1,000 views, long videos about $2; only after YPP): a Short with 120k views = about $3.6, 250k = $7.5, 1.55M (the reference's best) = $46.5; to repay $23 one Short needs about 770k views. A 10-min long video with 300k views = about $600. So Shorts pay for discovery, the money is in long videos and in YPP; before YPP the income is $0.
+| 30.10 | C13-C15 voice lines v2 (reference manner, outro as before), Lumean ElevenLabs v4 locked voice, one order (owner: "да звук") | 0.25 RUB |

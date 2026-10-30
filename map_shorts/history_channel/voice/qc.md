@@ -16,3 +16,6 @@ Two takes in one file: B 0-11 s ("[deadpan, slow] ... the... [drawn out] haaat .
 
 ## C12 v2 line, 30.10 (owner: new line, yes to the order and the clip; Lumean 0.23 RUB, order 01a18e8d): tts_ep1/C12.mp3 (old take kept as C12_v1_old.mp3)
 The order completed; the first download broke (connection reset at s3.lumean.app), the finished file was fetched from the same order, no second order. 8.05 s. ASR medium beam 5 / 1: "Venice kept the secret. So we borrowed their glassmakers. Now every wall looks at me." all words (beam 5 hears "so" at 0.12, beam 1 at 0.99; "glassmakers" 0.56-0.74), the "So we..." pause 0.7 s, the pause before "Now" 1.3 s. Reference for C12 r2v: tts_ep1/C12_ref9s.wav (line 0.30-7.73 s of 9 s).
+
+## C13-C15 voice lines (owner 30.10 "да звук"; Lumean 0.25 RUB, one order, 675 characters): tts_ep1/C13-C15.mp3 split into C13.mp3 6.13 s, C14.mp3 7.88 s, C15.mp3 7.36 s (cuts in the quietest 20 ms of the gaps at 6.13 s and 14.01 s; the old takes are kept as *_v1_old.mp3)
+ASR medium beam 5: all words, probabilities 0.56-1.00 (lowest: "Ring" 0.56, "Mon Dieu" 0.70-0.72). Reference audio for the r2v clips: C13_ref8s.wav, C14_ref11s.wav, C15_ref9s.wav (make_ref_audio.py).
