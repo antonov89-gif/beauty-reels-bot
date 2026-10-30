@@ -10,3 +10,6 @@ Current C03.mp3 = the original take (unchanged). Next options need the owner: a 
 
 ## Marcel the page voice, 30.10 (owner "голоса продублируй"; Lumean 0.23 RUB, one order)
 Voice 1 "Edward" (ElevenLabs, French, young), eleven_v4, three lines with 1.2 s between: ASR medium hears "The court, Sire." / "Pardon, Sire." / "Sire, I only..." (all words); median pitch 229 Hz vs the king 140-200 Hz (a clearly higher, younger voice: good contrast); 7.05 s. Split into tts_ep1/marcel_C07_court.mp3, marcel_C09_pardon.mp3, marcel_C13_sire_i_only.mp3. Not yet heard by the owner. NOT VERIFIED by ear: age and accent, the emotion tags (panic on "Pardon"), a French accent on a French voice with no accent tag.
+
+## C09 re-voice timed to the lips, 30.10 (owner "Да"; Lumean 0.23 RUB, one order, 452 chars): tts_ep1/C09b-C09c.mp3
+Two takes in one file: B 0-11 s ("[deadpan, slow] ... the... [drawn out] haaat ... [slow, haughty, drawling] Eyes on... me"), C 11-22 s (plain, slow). ASR medium: all words, probabilities 0.90-1.00 except B's first "lower" 0.32 and "eyes" 0.68. Both takes are SLOWER than the lips (e.g. "not on the hat" 1.3 s vs lips 0.65 s), so the clip uses a comp of whole words/phrases from takes A (C09.mp3), B and C, see louis_ep1/build_c09_lite.py. Respelling exception "the" as for C09 (C09b, C09c). "haaat" is a TTS-only drawl; captions keep "hat".

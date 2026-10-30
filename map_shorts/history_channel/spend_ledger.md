@@ -79,3 +79,4 @@
 | 30.10 | Copycat Duke Armand card: front + three-quarter + 8 sheet + three-quarter redo (11 images), Nano Banana 2.1 | $0.44 (11 x 0.04) |
 | 30.10 | C09 first frame v8 with Marcel, Nano Banana 2.1 | $0.04 (usage.cost) |
 | 30.10 | C09 on Seedance 2.5 Lite (720p, 8 s, owner "Да" after the price $1.20 was named; task 441f783d) | $1.20 (usage.cost) |
+| 30.10 | C09 king re-voice timed to the lips: two takes (B drawled, C plain slow) in ONE Lumean order, ElevenLabs v4, locked voice (owner "Да" to one order about 0.23 RUB) | 0.23 RUB |

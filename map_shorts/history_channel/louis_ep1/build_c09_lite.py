@@ -1,78 +1,50 @@
-"""C09 from the Seedance 2.5 Lite remake (seedance25lite_c09.mp4, 720p): our locked line laid on the king's MOUTH, Marcel's own voice for "Pardon, Sire!", the model's own SOUNDS kept (its speech removed by htdemucs).
-v2 (30.10, owner: "sound does not match"): v1 placed our phrases on the onsets of the model's speech stem; measured against the real mouth (lip_measure.py, face mesh) the model's audio is itself up to 0.4 s late on "Eyes" (the mouth opens at 6.1 s, the voice starts at 6.52 s) and our voice was 0.2 s late on "Lower!", 0.3-0.4 s early-ending on "and there goes the hat". Now every short unit of our line (a word or a few words) is placed by a search over start (+-0.25 s of a seed) and tempo that maximises the correlation of the mouth opening with our speech energy; units where the face is turned away (2.3-3.3 s) keep the seed from the model's audio.
-The model made no real "Pardon, Sire!" (only a faint blip at 2.5 s), so Marcel's cry is ours (voice/tts_ep1/marcel_C09_pardon.mp3), placed when the hat tumbles and he turns after it.
-Usage: python3 lip_measure.py frames/seedance25lite_c09.mp4 <scratchpad>/c09qc/mouth_model.json ; python3 build_c09_lite.py -> frames/C09L_final_A.mp4 (1080x1920, our voices only) + scratchpad lite_c09_rest_A.f32 (model sounds)"""
-import json, subprocess, numpy as np
+"""C09 from the Seedance 2.5 Lite remake (seedance25lite_c09.mp4, 720p): the locked voice laid on the king's lips by COMPING whole words/phrases from three takes, Marcel's own voice for "Pardon, Sire!".
+v8 (30.10): v2-v7 cut one take into words and stretched them (tempo down to 0.40) to fit the lips: the owner: "Нет это ужасно". Now: no slowing down, speed-up at most 1.3, cuts only in the pauses between words, every piece taken from the take whose length already fits the lips:
+take A = tts_ep1/C09.mp3 (the take used before), takes B and C = tts_ep1/C09b-C09c.mp3 (one Lumean order 30.10, 0.23 RUB, owner "Да"; B 0-11 s with drawls, C 11-22 s plain slow).
+Lip targets (lip_measure.py on the clip): Lower 0.25-0.62 | Lower 1.12-1.42 | (Marcel) | And there goes ...-3.55 (head turned 2.3-3.4) | the 3.83-3.93 | lips shut 3.96 | haaat 4.0-4.7 | Eyes on 6.1-6.65, me 6.9-7.2 | not on the hat 7.25-7.9.
+Usage: python3 build_c09_lite.py -> frames/C09L_final_A.mp4 (1080x1920, voices only) + scratchpad lite_c09_rest_A.f32 (model sounds)"""
+import subprocess, numpy as np
 V = "A"; SR = 48000; MODEL = "frames/seedance25lite_c09.mp4"
 SC = "/tmp/claude-0/-home-user-beauty-reels-bot/bb7f8515-f5d4-586a-94a3-df9db5a7e320/scratchpad/"
+A, BC = "../voice/tts_ep1/C09.mp3", "../voice/tts_ep1/C09b-C09c.mp3"
 MARCEL_AT = 1.85; MARCEL_GAIN = 0.6                    # speech onset of "Pardon, Sire!" (s) and its level against the king (he stands further away)
-# name, speech in our TTS (voice/tts_ep1/C09.mp3; borders from the energy dips and word times), mouth window in the clip, seed start, search radius, tempo range, optimise?
-UNITS = [("Lower!",          0.16, 0.67, 0.05, 0.85, 0.27, 0.25, (1.0, 1.5), True, 1.0),
-         ("Lower!",          1.10, 1.52, 1.00, 1.60, 1.12, 0.20, (1.2, 1.6), True, 1.0),   # only "Lo-wer" is kept, the sustained tail is cut (the mouth shuts at 1.42; cut earlier the word sounded like "Low")
-         ("And there goes",  2.27, 2.95, 0, 0, 2.95, 0, (1.1, 1.1), False, 1.0),          # head turned away (no face 2.3-3.4): seed from the model's audio (2.95); "goes" ends at 2.95 in our TTS (voiced to 2.86, then the s)
-         ("the",             2.95, 3.14, 3.75, 4.00, 3.83, 0.04, (0.9, 1.2), True, 1.0),   # voiced 2.96-3.12, dip at 3.12-3.15 (v1-v4 cut at 2.81/3.10 and carried the end of "goes" into "the")
-         ("h",               3.155, 3.225, 0, 0, 4.08, 0, (1.0, 1.0), False, 1.0),        # the breath of "hat" stays at natural length (v5 stretched it 2.5x and lifted it: a 0.2 s loud hiss at 4.0-4.2 s = the owner's "defect")
-         ("a-t",             3.225, 3.41, 0, 0, 4.15, 0, (0.40, 0.40), False, 2.0), # only the vowel is stretched (periodic, stretches cleanly); the mouth is wide 4.0-4.72 (a long "haaat"); our vowel trails off 18-33 dB down: flattened and lifted
-         ("Eyes on",         3.87, 4.145, 5.95, 6.78, 6.15, 0.15, (0.55, 1.1), True, 1.0), # mouth wide 6.1-6.65, the model's voice only starts at 6.52
-         ("me,",             4.145, 4.47, 6.78, 7.30, 6.88, 0.12, (0.8, 1.3), True, 1.0),  # lips shut at 6.85-6.95 (m), vowel 7.0-7.2
-         ("not on the",      4.66, 5.14, 7.10, 7.54, 7.16, 0.06, (1.3, 1.6), True, 1.0),   # small mouth 7.25-7.5, closed at 7.50
-         ("hat.",            5.16, 5.33, 7.54, 8.05, 7.58, 0.08, (0.6, 1.0), True, 1.5)]   # wide 7.58-7.83
-mouth = json.load(open(SC + "c09qc/mouth_model.json")); mt = np.array([r[0] for r in mouth]); ml = np.array([np.nan if r[1] is None else r[1] for r in mouth])
-
-
-def flatten(seg, power=0.6, cap=2.2):                                # evens out a word that trails off (our deadpan "hat.") so it carries as much as the wide mouth asks for
-    w = int(SR * .03); e = np.sqrt(np.convolve(seg ** 2, np.ones(w) / w, "same")); e = np.maximum(e, e.max() * 0.02)
-    return (seg * np.minimum((e.max() / e) ** power, cap)).astype(np.float32)
+# name, take, speech start/end in the take (borders sit in pauses >= 80 ms), speech start in the clip, tempo, level (None = same active level as the first piece; a number = the previous piece's factor times it)
+PIECES = [("Lower!",          A,  0.16,  0.67, 0.19, 1.20, None),
+          ("Lower!",          BC, 1.11,  1.67, 1.06, 1.30, None),
+          ("And there goes",  BC, 15.39, 16.38, 2.76, 1.25, None),   # take C; ends 3.55 with the open mouth on "goes"
+          ("the",             BC, 16.48, 16.71, 3.81, 1.15, None),   # take C; ends at the shut lips (3.96-4.0)
+          ("haaa-",           BC, 5.14,  5.51, 4.10, 1.00, None),    # take B, a real drawl at natural speed, on the opening mouth 4.1-4.47
+          ("-t",              BC, 5.67,  5.75, 4.50, 1.00, 0.6),     # take B's closing "t" without its 0.16 s closure, on the widest mouth at 4.5 s; only the burst (0.08 s), not the 0.1 s breath after it
+          ("Eyes on me,",     BC, 18.95, 20.11, 6.08, 1.00, None),   # take C, natural speed: "me" on the opening lips 6.9-7.2
+          ("not on the hat.", A,  4.66,  5.36, 7.25, 1.00, None)]    # take A: the only take short enough for 7.25-7.9
 
 
 def load(p):
     return np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-i", p, "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout, np.float32)
 
 
-def env(y, sr=SR):
-    w = int(sr * .01); return np.array([np.sqrt((y[i:i + w] ** 2).mean()) for i in range(0, len(y) - w, w)])
-
-
-x = load("../voice/tts_ep1/C09.mp3"); mx = load("../voice/tts_ep1/marcel_C09_pardon.mp3")
+takes = {A: load(A), BC: load(BC)}; mx = load("../voice/tts_ep1/marcel_C09_pardon.mp3")
 dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", MODEL], capture_output=True, text=True).stdout)
-track = np.zeros(int(SR * (dur + 0.3)), np.float32); ex = env(x)
-
-
-def fit(o0, o1, w0, w1, seed, rad, tr, lo):
-    """start s and tempo tp for one unit: max correlation of the mouth opening with our speech energy over the frames of the window that have a face"""
-    ok = ~np.isnan(ml) & (mt >= w0) & (mt < w1); best = (-9, seed, 1.0, None)
-    if ok.sum() < 6: return None
-    a = ml[ok]
-    for tp in np.arange(tr[0], tr[1] + 1e-9, 0.05):
-        for s in np.arange(max(seed - rad, lo), seed + rad + 1e-4, 0.02):
-            src = o0 + (mt[ok] - s) * tp                                                      # time in our TTS that sounds at each video frame
-            e = np.where((src >= o0) & (src <= o1), np.interp(src, np.arange(len(ex)) * .01, ex), 0.0)
-            if e.max() == 0 or a.std() == 0: continue
-            c = np.corrcoef(a, np.sqrt(e))[0, 1] - 0.15 * abs(s - seed) / rad
-            if c > best[0]: best = (c, s, tp, None)
-    return best
-
-
-prev_end = 0.0
-for n, (name, o0, o1, w0, w1, seed, rad, tr, opt, gain) in enumerate(UNITS):
-    r = fit(o0, o1, w0, w1, seed, rad, tr, prev_end - 0.06) if opt else None
-    c, s, tp = (r[0], r[1], r[2]) if r else (float("nan"), seed, tr[0])
-    pre = min(0.04, max(0.0, o0 - (UNITS[n - 1][2] if n else 0.0)))                    # margins only into silence: where words touch (goes|the, on|me, h|a-t, the|hat) a 0.04 s margin played a piece of the neighbour twice (v1-v6)
-    post = min(0.04, max(0.0, (UNITS[n + 1][1] if n + 1 < len(UNITS) else len(x) / SR) - o1))
-    seg = x[int((o0 - pre) * SR):int((o1 + post) * SR)].copy(); f = int(SR * .006); seg[:f] *= np.linspace(0, 1, f); fo = int(SR * (.04 if name == "Lower!" and o0 > 1 else .006)); seg[-fo:] *= np.linspace(1, 0, fo)
-    if gain > 1: seg = flatten(seg); fo2 = int(SR * .03); seg[-fo2:] *= np.linspace(1, 0, fo2)   # the breath after the "t" is not lifted
-    if abs(tp - 1) > .01: seg = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "-", "-af", (f"atempo={tp:.3f}" if tp >= 0.5 else f"atempo=0.5,atempo={tp / 0.5:.3f}"), "-f", "f32le", "-"], input=seg.tobytes(), capture_output=True, check=True).stdout, np.float32)
-    if name == "a-t": seg = seg * np.linspace(0.6, 1.3, len(seg)).astype(np.float32)               # the long vowel swells towards the widest mouth (4.5 s) instead of trailing off
-    i0 = int(max(0, s - pre / tp) * SR); k = min(len(seg), len(track) - i0); track[i0:i0 + k] += seg[:k] * gain
-    prev_end = s + (o1 - o0) / tp
-    print(f"{name:16s} start {s:.2f} s  tempo {tp:.2f}  speech {(o1 - o0) / tp:.2f} s  mouth corr {c:.2f}" + ("" if opt else "  (seed, no face)"))
+track = np.zeros(int(SR * (dur + 0.3)), np.float32)
+ref = None
+for name, take, a, b, at, tp, lv in PIECES:
+    PAD = 0.03                                                                  # into the pause on both sides
+    seg = takes[take][int((a - PAD) * SR):int((b + PAD) * SR)].astype(np.float64).copy(); f = int(SR * .01); seg[:f] *= np.linspace(0, 1, f); seg[-f:] *= np.linspace(1, 0, f)
+    w = int(SR * .05); r = np.sqrt(np.convolve(seg ** 2, np.ones(w) / w, "same")); act = np.sqrt((seg[r > r.max() * 0.2] ** 2).mean())
+    ref = ref or act; fac = ref / act if lv is None else fac * lv; seg *= fac   # pieces from different takes at one level (active-speech RMS)
+    seg = seg.astype(np.float32)
+    if abs(tp - 1) > .01: seg = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "-", "-af", f"atempo={tp:.3f}", "-f", "f32le", "-"], input=seg.tobytes(), capture_output=True, check=True).stdout, np.float32)
+    f = int(SR * .005); seg = seg.copy(); seg[:f] *= np.linspace(0, 1, f); seg[-f:] *= np.linspace(1, 0, f)   # fades again after atempo (its last samples clicked at 0.69 s)
+    i0 = int((at - PAD / tp) * SR); k = min(len(seg), len(track) - i0); track[i0:i0 + k] += seg[:k]
+    print(f"{name:16s} {('A' if take == A else ('B' if a < 11 else 'C'))} {a:5.2f}-{b:5.2f}  at {at:.2f}-{at + (b - a) / tp:.2f} s  tempo {tp:.2f}")
 f = int(SR * .01); mx = mx.copy(); mx[:f] *= np.linspace(0, 1, f); mx[-f:] *= np.linspace(1, 0, f)
-em = env(mx); i0 = int((MARCEL_AT - float(np.argmax(em > em.max() * 0.1)) * 0.01) * SR); k = min(len(mx), len(track) - i0); track[i0:i0 + k] += mx[:k] * MARCEL_GAIN
+w = int(SR * .01); em = np.array([np.sqrt((mx[i:i + w] ** 2).mean()) for i in range(0, len(mx) - w, w)])
+i0 = int((MARCEL_AT - float(np.argmax(em > em.max() * 0.1)) * 0.01) * SR); k = min(len(mx), len(track) - i0); track[i0:i0 + k] += mx[:k] * MARCEL_GAIN
 print("Marcel 'Pardon, Sire!' speech starts at", MARCEL_AT, "s")
 open(SC + "c09L_voice.f32", "wb").write(track.tobytes())
-vf = "scale=1080:1920:flags=lanczos,setsar=1,fps=24,format=yuv420p"
 meas = subprocess.run(["ffmpeg", "-hide_banner", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", SC + "c09L_voice.f32", "-af", "ebur128", "-f", "null", "-"], capture_output=True, text=True).stderr
-I = float([l for l in meas.splitlines() if l.strip().startswith("I:")][-1].split()[1])           # one constant gain to -14 LUFS: the single-pass loudnorm + 2 ms limiter (v1-v6) put 4 clicks into the voice (1.57, 1.84, 7.74, 7.78 s)
+I = float([l for l in meas.splitlines() if l.strip().startswith("I:")][-1].split()[1])           # one constant gain to -14 LUFS (a single-pass loudnorm + 2 ms limiter put clicks into the voice)
+vf = "scale=1080:1920:flags=lanczos,setsar=1,fps=24,format=yuv420p"
 fc = f"[0:v]{vf}[vv];[1:a]volume={-14 - I:.2f}dB,alimiter=limit=0.84:attack=5:release=80:level=disabled[v]"
 print("voice", I, "LUFS -> gain", round(-14 - I, 2), "dB")
 subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", MODEL, "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", SC + "c09L_voice.f32", "-filter_complex", fc, "-map", "[vv]", "-map", "[v]",
