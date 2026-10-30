@@ -40,3 +40,20 @@ The camera language and the sound are now close. What separates us from the refe
 5. **The set piece with another person** (C09): wide view of the hat falling, the courtier's "Pardon, Sire!" (page voice: owner to pick 1-6), the king's cold laugh, swing back to him; as in the reference's tray gag, this is the episode's peak.
 6. **Breath and life in the voice** (cheap, at the next re-voice): ElevenLabs tags [inhales], [sighs], [chuckles] at 2-3 places per episode; the laugh in C15 stays.
 7. **Optional "ugly truth" beat** (script, needs facts checked with two sources before use): the reference's engine is the gross historical truth; for Louis a candidate is his teeth (reported tooth extraction and palate injury around 1685). Only after a fact check, and only if the owner wants it in the series.
+
+## Done 30.10 (owner "делай"): items 2 and 3, free
+- Grade (grade_ep.py) on all clips: episode picture brightness 116 -> 96 (ref 86), texture 645 -> 1307 (ref 2360), grain 1.81 -> 2.28 (ref 2.81); gold calmer (saturation -20 %, yellows -25 %).
+- 30 fps: tested (minterpolate on C06 fast move) and REJECTED: interpolated frames double the wig stand and smear the face. 24 fps kept.
+- C04-C05 digital hand-held (make_sway.py): drift + roll + nudges at the pauses (C04 1.7 s, 5.4 s; C05 1.85 s) with knocks in the sound; C05 settles back to the original frame in its last 0.7 s, so the invisible C05 -> C06 join stays (frame diff at the join 4.2 vs neighbours 3.5). Still seconds 16 % -> 0 %.
+- Sound v4 rebuilt on the swayed clips; episode -15.0 LUFS, TP -1.2, no silence, every word by ASR medium.
+- Output: frames/EP1_C01-C08_v5.mp4 (not committed).
+
+## Correction to item 1 (pace)
+A re-voice alone cannot slow C02-C05: the model's lips speak the long lines, so a shorter voice leaves the mouth moving with no sound. Slower, airier delivery in C02-C05 needs those clips re-generated with the short lines (about $4.3-5.1 each via the draft route, about $18-20 for the four, APIpod quota must be topped up; each its own yes), which also fixes their static camera properly. For C09-C15 the short-line rule applies before generation (free).
+Proposed short lines (owner to approve):
+| Clip | Now (words, wpm) | Proposed | Words |
+|--|--|--|--|
+| C02 (9 s) | Some mornings, a hundred people watch me wake up. The ceremony is called the rising. I call it opening night. (20, 133) | A hundred people watch me wake up. [beat] I call it... opening night. | 11 |
+| C03 (8 s) | The doctor's here, the surgeon's here, and nobody came to see them. Everyone came to see me. Naturally. (18, 142) | The doctor. The surgeon. Nobody came to see them. [beat] Everyone came for me. Naturally. | 14 |
+| C04 (9 s) | Now, the wig. My hair started falling out at seventeen. I took it personally, so I got a wig. (18, 120) | Now, the wig. My hair started falling out at seventeen. [beat] I took it personally. | 13 |
+| C05 (5.4 s) | It makes me look taller, they say. I wouldn't know. I never look down. (14, 156) | They say it makes me taller. [beat] I never look down. | 10 |
