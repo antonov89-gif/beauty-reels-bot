@@ -24,10 +24,10 @@ SC = {
  "e1_neutral": "Close front portrait, head and shoulders, neutral calm face, looking at the lens.",
  "e2_worried": "Close front portrait, head and shoulders, a worried frown, eyebrows pulled together, lips pressed.",
  "e3_alarmed": "Close front portrait, head and shoulders, alarmed, eyes wide, mouth open to cry out.",
- "e4_apologetic": "Close front portrait, head and shoulders, apologetic, head slightly lowered, eyes looking up from under the brows, a small wince.",
+ "e4_apologetic": "Close front portrait, head and shoulders, clearly APOLOGETIC and ashamed: the head bowed forward, the eyes looking up at the lens from under raised brows with the inner ends pulled up, the lips pressed into a pained wince, shoulders hunched, both hands clasped in front of his chest in a pleading gesture.",
  "e5_eager": "Close front portrait, head and shoulders, eager and out of breath, eyebrows raised, mouth slightly open as if announcing something.",
- "e6_timid": "Close front portrait, head and shoulders, timid, eyes lowered, trying to speak, lips slightly parted.",
- "e7_terrified": "Close front portrait, head and shoulders, terrified, eyes very wide, mouth tight, a flinch as if someone shouted his name.",
+ "e6_timid": "Close front portrait, head and shoulders, clearly TIMID and shy: the chin tucked in, the shoulders drawn up, the eyes cast down and to the side, the mouth slightly open as if he wants to speak but dares not, a tense small frown.",
+ "e7_terrified": "Close front portrait, head and shoulders, clearly TERRIFIED: the eyes extremely wide with the whites showing all around, the eyebrows raised high, the mouth open in a silent gasp, the head pulled back and the whole body recoiled as if someone had screamed his name.",
  "e8_relieved": "Close front portrait, head and shoulders, relieved, a shy small smile, shoulders relaxed.",
 }
 urls = {}
