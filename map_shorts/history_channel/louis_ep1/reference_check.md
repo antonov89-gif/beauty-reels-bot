@@ -314,3 +314,6 @@ Lips vs our voice: P1 1.10-3.39 vs 1.16-3.50, P2 4.45-5.22 vs 4.48-5.22 (PASS); 
 Status: GENERATED + INSPECTED, awaiting the owner's approval.
 
 ## C09 video: the submit was REFUSED by APIpod ("insufficient quota", HTTP 500) at 29.10 after the C08 final; no task created, no charge. Most likely the APIpod balance is used up (confirmed spend today about $56.7 + earlier days); the balance cannot be read through the API (no balance endpoint). Needs a top-up by the owner or a different provider/credits. seedance25_c09.py is ready (direct 720p, 8 s, about $1.76).
+
+## Voice check 30.10 (voice_check_ep1.md)
+C07 lost the final "s" of "notes" at the clip end: fixed free by an L-cut into the silent start of C08: frames/C08_final_lcut.mp4 replaces C08_final.mp4 in the edit; ASR on the join "Take notes!" PASS. C09 line heard as "a hat": re-voice proposed (0.23 RUB, needs a yes). C12-C15 pitch about 4 semitones above C02-C10: check by ear when built.
