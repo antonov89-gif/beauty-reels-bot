@@ -13,19 +13,19 @@
 
 **C01 (0–11 с)** — фирменное начало каждой серии
 Камера смотрит в расписной потолок, телефон дрожит в руке. Он говорит «Ой, потолок», пока камера ещё на потолке, потом опускает телефон на себя и, когда камера встала, продолжает.
-Реплика: «Oops, the ceiling. There. Welcome to Versailles. Yes, I'm that handsome. Try not to faint.»
+Реплика (v2, 30.10, по референсу): «Oops, the ceiling. There. [пауза] The whole court watches me. So now you can. [пауза] Yes, I'm that handsome.»
 Перевод: «Ой, потолок. Вот. Добро пожаловать в Версаль. Да, я настолько красив. Постарайтесь не упасть в обморок.»
 Плашка: «VERSAILLES, FRANCE · 1685». Единственное «какой я красавец» в ролике.
 
 **C02 (11–20 с)**
 Селфи с руки, поправляет локон рукой в перстнях, подаётся к камере, как будто делится секретом.
-Реплика (v5, 30.10, короче): «A hundred people watch me wake up. [пауза] I call it... opening night.»
+Реплика (v2, 30.10): «A hundred people watch me wake up. [пауза] Honestly... I've never once been alone.»
 Перевод: «Сотня человек смотрит, как я просыпаюсь. Я называю это... премьерой.»
 Плашка: «LE LEVER (THE RISING): UP TO ~100 PEOPLE» [1И].
 
 **C03 (20–28 с)**
 Входят врач и хирург, он скучающе смотрит на них через плечо, отворачивается к камере, самодовольно тянет «Naturally».
-Реплика (v5, 30.10, короче): «The doctor. The surgeon. Nobody came to see them. [пауза] Everyone came for me. Naturally.»
+Реплика (v2, 30.10): «The doctor and the surgeon are here before I'm awake. [пауза] They worry. [пауза] Flattering, no?»
 Перевод: «Врач. Хирург. Никто не пришёл к ним. Все пришли ко мне. Естественно.»
 Плашка: «A DOCTOR AND A SURGEON WERE IN THE ROOM BEFORE HE GOT UP» [2И].
 
@@ -35,7 +35,7 @@
 
 **C04 (28–37 с)**
 Телефон стоит на столе. Поднимает тёмный длинный парик, рука на груди, трагическое лицо.
-Реплика (v5, 30.10, короче): «Now, the wig. My hair started falling out at seventeen. [пауза] I took it personally.»
+Реплика (v2, 30.10): «So... the wig. My hair started falling out at seventeen. [пауза] I took it... personally.»
 Перевод: «Теперь парик. В семнадцать у меня начали выпадать волосы. Я принял это на свой счёт.»
 Плашка: «HAIR LOSS FROM AGE ~17 (ABOUT 1655), THEN WIGS» [2И].
 
@@ -47,7 +47,7 @@
 
 **C06 (42–51 с)**
 Берёт телефон со стола в руку, тычет белым париком прямо в объектив (кудри закрывают кадр), фыркает, хитро улыбается.
-Реплика: «White, grey, a little powder. One day, everybody will wear this. I'm just early.»
+Реплика (v2, 30.10): «White, grey, a little powder. [пауза] Now half the court copies it. [пауза] Badly, of course.»
 Перевод: «Белый, седой, немного пудры. Однажды все будут такое носить. Я просто пришёл раньше.» [Ш]
 
 ---
@@ -59,13 +59,13 @@
 Близкое селфи с руки, за спиной в спальню входят придворные.
 **НОВОЕ:** паж за кадром (другой голос): «The court, Sire.» — «Двор, сир.»
 Действие: «Bow. Lower. Good.» говорит через плечо двору (они кланяются всё ниже, на «Good» он одобрительно кивает); «Yes, this is the new wig. Take notes.» поворачивается обратно в камеру и говорит зрителям, постукивая по парику.
-Реплика: «Bow. Lower. Good. Yes, this is the new wig. Take notes.»
+Реплика (v2, 30.10): «Bow. Lower. [пауза] Good. [пауза] Yes... the new wig. [пауза] Take notes.»
 Перевод: «Поклон. Ниже. Хорошо. Да, это новый парик. Записывайте.»
 Плашка: «THE COURT ENTERED IN ORDER OF RANK» [2И].
 
 **C08 (59–67 с)**
 Камера наезжает на лицо почти вплотную, за спиной продолжаются поклоны.
-Реплика: «All these people, and nobody may speak before me. I love listening. To myself, mostly.»
+Реплика (v2, 30.10): «All these people, and nobody may speak before me. [пауза] It's very quiet, being king.»
 Перевод: «Все эти люди, и никто не смеет заговорить раньше меня. Обожаю слушать. В основном себя.»
 
 **C09 (67–75 с)**
@@ -99,7 +99,7 @@
 **C13 (99–107 с)**
 Останавливается у зеркала, за плечом маячит придворный.
 **НОВОЕ:** придворный (другой голос): «Sire, I only...» — «Сир, я только...», король обрывает.
-Реплика: «Don't stand behind me, you're ruining my reflection. Go. Over there. Further.»
+Реплика (v2, 30.10): «Mon Dieu, don't stand behind me, you're spoiling my reflection. [пауза] Go. Over there. Further.»
 Перевод: «Не стойте у меня за спиной, вы портите мне отражение. Идите. Вон туда. Дальше.»
 
 ---
@@ -108,13 +108,13 @@
 
 **C14 (107–115 с)**
 У дверей галереи поправляет локон, косится на пажа; перед «Subscribe» молча смотрит в ручное зеркальце и довольно кивает себе, потом показывает пальцем в камеру.
-Реплика: «Tonight I dine in public. You may watch, but don't stare. Well... a little. Subscribe to my stunning channel.»
+Реплика (v2, 30.10, концовка в одном клипе): «Next time, I dine in public. [пауза] You may watch... but don't stare. [пауза] Well, a little. [пауза] Subscribe, and come hungry.»
 Перевод: «Сегодня вечером я ужинаю при всех. Можете смотреть, но не пялиться. Ну... разве что чуть-чуть. Подписывайтесь на мой потрясающий канал.»
 Плашка: «NEXT: DINNER, IN PUBLIC» [2И].
 
 **C15 (115–125 с)**
 Командует пальцем, на «do what you like» отмахивается, потом надменно смеётся, задрав подбородок, и уходит к банкетному столу; золочёное зеркальце закрывает объектив.
-Реплика: «Hit like. Ring the bell. Anyway, do what you like. [надменный смех] I'm off to the table to feast!»
+Реплика (v2, 30.10, кнопка 6 с): «Now, if you'll excuse me... [пауза] the soup is getting cold.» [холодный смех]
 Перевод: «Ставьте лайк. Жмите на колокольчик. А впрочем, делайте что хотите. [надменный смех] А я пошёл к столу пировать!»
 Финальная карточка: «THE SUN IS NEVER LATE.» — «СОЛНЦЕ НИКОГДА НЕ ОПАЗДЫВАЕТ.»
 

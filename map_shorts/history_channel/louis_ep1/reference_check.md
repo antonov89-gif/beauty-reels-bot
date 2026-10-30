@@ -464,3 +464,7 @@ Owner 30.10 "Норм" to the voice of C09 r2v and C10 r2v heard together: both 
 
 ## Episode 1 length estimate on the r2v route (30.10, owner "Проверь какой получится ролик по времени")
 Measured: C09 r2v 8.06 s, C10 r2v 8.06 s; old cut C01-C08 v5 = 68.2 s. Planned (script_ru.md, one setup about 8-9 s, lines about 14-15 words): C01 10 | C02 8 | C03 8 | C04 8 | C05 6 | C06 9 | C07 8 | C08 9 | C09 8.06 | C10 8.06 | burst 8 (stills) | C12 9 | C13 8 | C14 9 | C15 9 = about 126 s; minus 0.3-0.5 s of dead air trimmed at each of 14 cuts -> about 2:00-2:05. Merging the outro (C14 + C15 into one clip) -> about 1:52-1:56. Reference vlogs 1:55-2:23. YouTube Help: Shorts up to 3 min (square/vertical, uploads after 15.10.2024). Still to generate: C01-C08, C12-C15 = 12 clips, about 101 s x $0.15 = about $15.2 at the Lite rate.
+
+## Lines v2 applied (owner 30.10: "нет дальше что осталось делаем" to the proposal lines_v2_proposal.md)
+voice/lines_ep1_emotion.json and louis_ep1/script_ru.md now hold the v2 lines for C01, C02, C03, C04, C06, C07, C08, C13, C14 (outro with the subscribe joke, ONE clip), C15 (6-s button); C05, C09, C10, C12 unchanged. Previous texts kept as "<clip>_v2prop" in previous_lines.
+Not paid yet (each needs its own yes, CLAUDE.md): (1) the voice order for the new lines, one Lumean order, 1,621 characters, 0.63 RUB (ElevenLabs v4, voice v3); (2) the clips on Seedance 2.5 Lite r2v, $15.30 without re-rolls (C12 first, after the APIpod top-up: its submit was refused "insufficient quota" on 30.10).
