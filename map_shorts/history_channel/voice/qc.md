@@ -13,3 +13,6 @@ Voice 1 "Edward" (ElevenLabs, French, young), eleven_v4, three lines with 1.2 s 
 
 ## C09 re-voice timed to the lips, 30.10 (owner "Да"; Lumean 0.23 RUB, one order, 452 chars): tts_ep1/C09b-C09c.mp3
 Two takes in one file: B 0-11 s ("[deadpan, slow] ... the... [drawn out] haaat ... [slow, haughty, drawling] Eyes on... me"), C 11-22 s (plain, slow). ASR medium: all words, probabilities 0.90-1.00 except B's first "lower" 0.32 and "eyes" 0.68. Both takes are SLOWER than the lips (e.g. "not on the hat" 1.3 s vs lips 0.65 s), so the clip uses a comp of whole words/phrases from takes A (C09.mp3), B and C, see louis_ep1/build_c09_lite.py. Respelling exception "the" as for C09 (C09b, C09c). "haaat" is a TTS-only drawl; captions keep "hat".
+
+## C12 v2 line, 30.10 (owner: new line, yes to the order and the clip; Lumean 0.23 RUB, order 01a18e8d): tts_ep1/C12.mp3 (old take kept as C12_v1_old.mp3)
+The order completed; the first download broke (connection reset at s3.lumean.app), the finished file was fetched from the same order, no second order. 8.05 s. ASR medium beam 5 / 1: "Venice kept the secret. So we borrowed their glassmakers. Now every wall looks at me." all words (beam 5 hears "so" at 0.12, beam 1 at 0.99; "glassmakers" 0.56-0.74), the "So we..." pause 0.7 s, the pause before "Now" 1.3 s. Reference for C12 r2v: tts_ep1/C12_ref9s.wav (line 0.30-7.73 s of 9 s).

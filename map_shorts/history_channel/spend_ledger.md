@@ -83,3 +83,4 @@
 | 30.10 | C09 first frame v9 (hat in a courtier's hand, empty floor), Nano Banana 2.1 | $0.04 (usage.cost) |
 | 30.10 | C09 on Seedance 2.5 Lite r2v with our voice as reference audio (owner "Да"; task b4c2d6c0) | $1.20 (usage.cost) |
 | 30.10 | C10 on Seedance 2.5 Lite r2v, voice trial v4 (owner "Да"; 8 s) | $1.20 (usage.cost) |
+| 30.10 | C12 voice line v2 (reference manner), Lumean ElevenLabs v4 locked voice, one order (owner chose 'Новая реплика', yes to both) | 0.23 RUB |
