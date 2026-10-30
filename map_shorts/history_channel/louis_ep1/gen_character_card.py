@@ -10,7 +10,7 @@ H0 = "/home/user/beauty-reels-bot/map_shorts/history_channel/"
 K = open("/home/user/beauty-reels-bot/.zernio_key").read().strip(); H = {"Authorization": "Bearer " + K, "Content-Type": "application/json"}
 CH = {"chef": dict(dir="chef_card/", prefix="cook",
     face="a large broad-shouldered man of about 45 with a round, ruddy, sweaty face, a bulbous nose, thick dark bushy eyebrows, small bright blue eyes, a double chin, flushed cheeks, no moustache and no beard, skin shining with sweat",
-    dress="a tall white cook's cap, a white linen apron over a cream shirt with the sleeves rolled to the elbows, a white cloth knotted at the neck; no gold, no red, no wig",
+    dress="a plain soft rounded white linen cap sitting low on the head, with no pleats and not tall, a white linen apron over a cream shirt with the sleeves rolled to the elbows, a white cloth knotted at the neck; no gold, no red, no wig",
     place="a plain warm stone palace kitchen corridor with copper pots hanging on the wall")}
 BASE = "Vertical 9:16 photo, soft even natural light, photorealistic, real skin texture with visible pores. No text. "
 ANG = {"a1_left34": "Head and shoulders, turned three-quarters to HIS left, looking at the lens, neutral.", "a2_right34": "Head and shoulders, turned three-quarters to HIS right, looking at the lens, neutral.",
@@ -54,8 +54,8 @@ def gen(c, name, scene, refs, extra=""):
 c, step = sys.argv[1], sys.argv[2]; ch = CH[c]; P = ch["prefix"]; D = H0 + ch["dir"]
 SAME = " EXACTLY the same man as in the FIRST (and SECOND) reference image: the same face, eyes, brows, nose, chins, skin and age; do not change them. "
 if step == "front":
-    gen(c, P + "_front", "Close front portrait, shoulders and head, looking straight into the lens with an eager, nervous smile.", [H0 + "marcel_card/marcel_front.jpg"],
-        " The light and the period look like the reference image, but he is a DIFFERENT, much older and heavier man: ignore the face, wig and costume in the reference.")
+    gen(c, P + "_front", "Close front portrait, shoulders and head, looking straight into the lens with an eager, nervous smile.", [H0 + "chef_card/cook_front_toque.jpg"],
+        " The reference image shows exactly the right FACE and the right kitchen, apron and neck cloth: keep the same man, face, skin and sweat, but replace the tall pleated chef's toque by a plain soft rounded linen cap with no pleats, as a cook wore in the 1680s.")
 elif step == "three_quarter":
     gen(c, P + "_three_quarter", "Three-quarter view from the waist up, carrying a large copper pot with both hands, glancing at the lens with a nervous smile.", [D + P + "_front.jpg"], SAME)
 else:

@@ -13,3 +13,5 @@ Lines (draft, ep.2): "More, Sire? Of course, Sire!" | "The pheasant, Sire... the
 Step 1: cook_front.jpg (front, neutral nervous smile), $0.04, then the owner approves the face.
 Step 2: three-quarters, profiles, back, from below/above, and emotions (neutral, nervous smile, panicked, proud, sweating relief, apologetic, delighted, shocked) as for Marcel: 16 images about $0.64, refs always cook_front.jpg + cook_three_quarter.jpg.
 Rules for every frame with him: descriptor verbatim + "exactly the same face as the first two reference images"; background or edge of the frame; a side-by-side crop is shown to the owner before any video.
+
+## Redo 30.10 (owner "да" to the soft-cap fix; $0.04): cook_front.jpg now has a plain soft rounded linen cap (the first version with the modern toque is kept as cook_front_toque.jpg). INSPECTED: the same man (same face, sweat, brows, light-blue eyes, apron, neck cloth, kitchen), the cap is period-correct (soft, low, no pleats). Soft: a thumb at the bottom edge (selfie look). NOT APPROVED by the owner yet; the 15 further images (about $0.60) wait for the owner's yes.
