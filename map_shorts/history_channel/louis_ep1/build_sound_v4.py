@@ -28,6 +28,9 @@ TAPS = ["2016", "2017", "2018", "2019"]
 TAG = os.environ.get("TAG", "")
 if os.environ.get("C04SRC"): CLIPS = [(c, os.environ["C04SRC"] if c == "C04" else s, sc) for c, s, sc in CLIPS]
 MODEL_SND = {"C04": os.environ["C04SND"]} if os.environ.get("C04SND") else {}
+if os.environ.get("C05SRC"): CLIPS = [(c, os.environ["C05SRC"] if c == "C05" else s, sc) for c, s, sc in CLIPS]
+if os.environ.get("C05SND"): MODEL_SND["C05"] = os.environ["C05SND"]
+if os.environ.get("C05DIST"): DIST["C05"] = [(0, float(os.environ["C05DIST"]))]
 if os.environ.get("C04DIST"): DIST["C04"] = [(0, float(os.environ["C04DIST"]))]   # the Lite C04 leans close to the lens
 
 
