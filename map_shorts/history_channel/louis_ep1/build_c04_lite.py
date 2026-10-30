@@ -6,7 +6,7 @@ import subprocess, sys, numpy as np
 from faster_whisper import WhisperModel
 V = sys.argv[1]; SR = 48000; MODEL = "frames/seedance25lite_c04.mp4"
 SC = "/tmp/claude-0/-home-user-beauty-reels-bot/bb7f8515-f5d4-586a-94a3-df9db5a7e320/scratchpad/"
-UNITS = [(0, 3, 0.00, 1.84), (3, 10, 2.54, 4.48), (10, 14, 7.54, 8.90)]   # our word range, model start, model end
+UNITS = [(0, 1, 0.45, 1.10), (1, 3, 1.35, 1.95), (3, 10, 2.54, 4.48), (10, 14, 7.54, 8.90)]   # "Now," and "the wig." are two separate lip phrases in the model (0.58 and 1.39 s)   # our word range, model start, model end
 TRIM = (5.2, 6.95) if V == "B" else None                                     # removed stretch of the silent pause
 m = WhisperModel("medium", device="cpu", compute_type="int8")   # small put "My" inside the sigh before it
 segs, _ = m.transcribe("../voice/tts_ep1/C04.mp3", word_timestamps=True, language="en", beam_size=5)
@@ -21,6 +21,7 @@ def cut_at(j):
     return min((np.sqrt((x[int(t * SR):int((t + .02) * SR)] ** 2).mean()), t) for t in np.arange(lo, max(lo + .01, hi - .02), .005))[1] + 0.01
 
 
+SIGH = (1.20, 1.60)                                              # the "small sigh" of our TTS before "My"; the model sighs/"ugh" with its mouth at 4.82-5.3 s
 MV = np.frombuffer(open(SC + "sep/lite_c04_vocals.f32", "rb").read(), np.float32).reshape(-1, 2).mean(1)   # the model's speech alone (htdemucs), 44.1 kHz
 
 
@@ -38,12 +39,18 @@ def model_onset(m0, m1):
 
 for a, b, m0, m1 in UNITS:
     s0 = cut_at(a) if a else max(0, ov[0][1] - 0.04); s1 = cut_at(b) if b < len(ov) else ov[-1][2] + 0.25
+    if (a, b) == (1, 3): s1 = min((np.sqrt((x[int(t * SR):int((t + .02) * SR)] ** 2).mean()), t) for t in np.arange(0.92, 1.2, .005))[1] + 0.01   # stop before the sigh
+    if (a, b) == (3, 10): s0 = max(s0, SIGH[1])                                                                                                       # start after the sigh
     seg = x[int(s0 * SR):int(s1 * SR)].copy(); f = int(SR * .006); seg[:f] *= np.linspace(0, 1, f); seg[-f:] *= np.linspace(1, 0, f)
-    tp = float(np.clip((ov[b - 1][2] - ov[a][1]) / (m1 - m0), 0.9, 1.12))
+    tp = float(np.clip((ov[b - 1][2] - ov[a][1]) / (m1 - m0), 1.0, 1.12))
     if abs(tp - 1) > .01: seg = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "-", "-af", f"atempo={tp:.3f}", "-f", "f32le", "-"], input=seg.tobytes(), capture_output=True, check=True).stdout, np.float32)
     lead = onset(seg, (ov[a][1] - s0) / tp - 0.1); t0 = model_onset(m0, m1) - (cut if TRIM and m0 > TRIM[1] else 0)   # align the first speech energy of our phrase to the first speech energy of the model's phrase
     i0 = int(max(0, t0 - lead) * SR); k = min(len(seg), len(track) - i0); track[i0:i0 + k] += seg[:k]
     print(" ".join(w for w, _, _ in ov[a:b]), "| speech starts", round(t0, 2), "tempo", round(tp, 3), "| our length", round(len(seg) / SR, 2), "model length", round(m1 - m0, 2))
+if True:                                                            # our sigh on the model's sigh
+    sg = x[int(SIGH[0] * SR):int(SIGH[1] * SR)].copy(); f = int(SR * .02); sg[:f] *= np.linspace(0, 1, f); sg[-f:] *= np.linspace(1, 0, f)
+    t_m = 4.82 - (cut if TRIM and 4.82 > TRIM[1] else 0); i0 = int(t_m * SR) - int(onset(sg) * SR); k = min(len(sg), len(track) - i0)
+    if i0 >= 0 and not (TRIM and TRIM[0] <= 4.82 < TRIM[1] + .5): track[i0:i0 + k] += sg[:k] * 2.0; print("sigh placed at", round(t_m, 2), "s, our length", round(len(sg) / SR, 2))
 open(SC + "c04L_voice.f32", "wb").write(track.tobytes())
 vf = "scale=1080:1920:flags=lanczos,setsar=1,fps=24,format=yuv420p"
 if TRIM: vf = f"select='not(between(t,{TRIM[0]},{TRIM[1]}))',setpts=N/24/TB," + vf
