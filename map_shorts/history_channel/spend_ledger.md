@@ -105,3 +105,5 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 30.10 | total C12-C15 | $5.55 |
 | 30.10 | C01 v3 voice line (reference audio for the model test), Lumean ElevenLabs v4 locked voice, one order (owner "Да") | 0.23 RUB |
 | 30.10 | C01 v3 TEST on Seedance 2.0 r2v 720p, 13 s (owner "Сиденс 2.0 делай"; task 8f898832) | $1.638 (usage.cost) |
+| 30.10 | C01 v3 TEST on Kling 4.0 i2v 1080p, 13 s (owner "Запускай сразу клинг 4"; task ea2d34aa) | $2.8275 (usage.cost) |
+| 30.10 | C01 v3 test total (Seedance 2.0 + Kling 4.0, Lite not run) | $4.4655 + 0.23 RUB |

@@ -506,3 +506,21 @@ Checks (qc_r2v.py C01 s20_c01r2v; scripts are not changed otherwise):
 - Picture: sharpness (Laplacian variance 720x1280, 6 frames) 389 vs Lite C10 426, C12 285, C14 260: the same level.
 - Defects seen on frames (SOFT): (1) 3.8-4.6 s a hand holding a second phone and a feathered hat at the right edge (the filming phone should be the only one; 0.6-0.8 s); (2) the background figures at 2.5-6 s read as modern visitors (a pale pink top, grey and dark coats, small and soft) instead of period courtiers in plain clothes; (3) the 0.4 s open mouth in the pause at 5.4-5.8 s. The king is the only person in the foreground and the only costume with gold.
 Verdict (mine, not the owner's): the best C01 so far: the opening and the line are fully there and the voice is the closest to ours (0.96). It still needs the owner's look at 1-3 points above. Decision on Lite and Kling is pending (own yes per generation).
+
+## C01 v3 TEST on Kling 4.0 i2v (owner: "Запускай сразу клинг 4 и сверим качество"), 30.10: frames/kling40_c01i2v.mp4 (not committed)
+Status: GENERATED + INSPECTED, not approved. Model kling-4.0-i2v, 1076x1924, 24 fps, 13.04 s, usage.cost $2.8275 (task ea2d34aa). Inputs: image_urls = C01_ceiling2.jpg (first frame), keyframe_urls = C01_part2_first_v4.jpg; the model speaks with its OWN voice (no audio input). Prompt = the same action and line as the Seedance 2.0 run.
+Checks (qc_r2v.py C01 k40_c01i2v): ASR beam 5 and 1 identical, ALL words ("Oops, the ceiling. There. Bonjour. I am Louis, King of France. They call me the Sun King. Yes, I'm that handsome."), probabilities 0.69-1.00; speech 0.3-12.45 s, a short extra sound 12.9-13.0 s (not a word); pauses 1.65-2.4, 2.8-3.9, 4.5-5.25, 7.15-8.0, 9.5-10.75 s. Speaker similarity to OUR v3 take of this line only 0.70 (to C09 0.72, C12 0.67, C10 0.64, C14 0.61, C15 0.61 model voices): a different voice from the series. Lips vs speech: lag 0.00 s, corr 0.71 (best so far; faces found 263 of 313 frames). Loudness -11.5 LUFS (very loud, needs -6 dB or more in the mix; LRA 4.7). Sounds: no music; a phone knock 3.0-3.25 s (-33 dBFS) and a rustle 4.0-4.5 s (-39/-47 dBFS), the rest -50...-74. Sharpness at 720x1280: 880 (Seedance 2.0 389; native 1080p).
+Eye check on 14 + 6 frames: opening frame 0 = C01_ceiling2 (matches); the phone swings down with real motion blur at 2.0-2.4 s, the face is in frame from 2.2 s (a little before "There." at 2.56 s); face, wig, moustache, beauty mark match the master; the gold gown is crisp; background figures read as period courtiers (dark coats, a hat) and are small; no second phone seen; a ringed hand gesture toward the lens at about 10 s; smug smirk on the last frame. After 3.5 s the pose is nearly static (less hand-held sway than designed): SOFT.
+Comparison file for the owner: frames/C01_compare_s20_vs_kling40.mp4 (make_compare.py, side by side, sound clip by clip, each at -16 LUFS; not committed).
+| | Seedance 2.0 r2v 720p | Kling 4.0 i2v 1080p |
+|--|--|--|
+| Price, 13 s | $1.638 | $2.8275 (1.73x) |
+| Resolution | 720x1280 | 1076x1924 |
+| Words | all | all |
+| Voice vs OUR v3 take | 0.96 (takes our voice as audio input) | 0.70 (own voice, cannot take ours) |
+| Lips vs speech (lag 0) | 0.27-0.35 (noisy measure, open mouth in a pause at 5.4-5.8 s) | 0.71 |
+| Raw loudness | -18.0 LUFS | -11.5 LUFS |
+| Model sounds | none (stem -59...-73 dBFS) | phone knock 3.0 s, rustle 4.0 s |
+| Sharpness at 720p | 389 | 880 |
+| Defects | second phone in a hand 3.8-4.6 s; bystanders look modern | voice not ours; static pose after 3.5 s; sound 12.9-13.0 s; very loud |
+The Lite (2.5) run of the same C01 is NOT done (own yes, $1.95): no three-way table yet. Open: Kling's voice would need a speech-to-speech conversion into our v3 voice (not tested, price not checked) or our voice laid over its lips (the C09 lesson: owner rejected word-sliced voice).
