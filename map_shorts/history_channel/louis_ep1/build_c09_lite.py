@@ -9,8 +9,9 @@ MARCEL_AT = 1.85; MARCEL_GAIN = 0.6                    # speech onset of "Pardon
 # name, speech in our TTS (voice/tts_ep1/C09.mp3; borders from the energy dips and word times), mouth window in the clip, seed start, search radius, tempo range, optimise?
 UNITS = [("Lower!",          0.16, 0.67, 0.05, 0.85, 0.27, 0.25, (1.0, 1.5), True, 1.0),
          ("Lower!",          1.10, 1.52, 1.00, 1.60, 1.12, 0.20, (1.2, 1.6), True, 1.0),   # only "Lo-wer" is kept, the sustained tail is cut (the mouth shuts at 1.42; cut earlier the word sounded like "Low")
-         ("And there goes",  2.27, 2.81, 0, 0, 2.97, 0, (0.9, 0.9), False, 1.0),           # head turned away (no face 2.3-3.4): seed from the model's audio (2.95)
-         ("the hat.",        2.84, 3.40, 3.75, 4.80, 3.83, 0.06, (0.62, 0.8), True, 1.5),  # one drawn-out "the haaat": the lips move without a pause 3.8-4.6 s (v3 had "the", 0.23 s of silence, "hat" = lips moving in silence at 4.15-4.38)
+         ("And there goes",  2.27, 2.95, 0, 0, 2.95, 0, (1.1, 1.1), False, 1.0),          # head turned away (no face 2.3-3.4): seed from the model's audio (2.95); "goes" ends at 2.95 in our TTS (voiced to 2.86, then the s)
+         ("the",             2.95, 3.14, 3.75, 4.00, 3.83, 0.04, (0.9, 1.2), True, 1.0),   # voiced 2.96-3.12, dip at 3.12-3.15 (v1-v4 cut at 2.81/3.10 and carried the end of "goes" into "the")
+         ("hat.",            3.15, 3.42, 4.00, 4.80, 4.02, 0.06, (0.4, 0.8), True, 2.2),   # mouth shuts at 3.96, then wide 4.0-4.7: a long breathy "haaat"; our "hat." trails off 17 dB down: flattened and lifted
          ("Eyes on",         3.87, 4.145, 5.95, 6.78, 6.15, 0.15, (0.55, 1.1), True, 1.0), # mouth wide 6.1-6.65, the model's voice only starts at 6.52
          ("me,",             4.145, 4.47, 6.78, 7.30, 6.88, 0.12, (0.8, 1.3), True, 1.0),  # lips shut at 6.85-6.95 (m), vowel 7.0-7.2
          ("not on the",      4.66, 5.14, 7.10, 7.54, 7.16, 0.06, (1.3, 1.6), True, 1.0),   # small mouth 7.25-7.5, closed at 7.50
@@ -57,7 +58,7 @@ for n, (name, o0, o1, w0, w1, seed, rad, tr, opt, gain) in enumerate(UNITS):
     c, s, tp = (r[0], r[1], r[2]) if r else (float("nan"), seed, tr[0])
     seg = x[int((o0 - 0.04) * SR):int((o1 + 0.04) * SR)].copy(); f = int(SR * .006); seg[:f] *= np.linspace(0, 1, f); fo = int(SR * (.04 if name == "Lower!" and o0 > 1 else .006)); seg[-fo:] *= np.linspace(1, 0, fo)
     if gain > 1: seg = flatten(seg); fo2 = int(SR * .03); seg[-fo2:] *= np.linspace(1, 0, fo2)   # the breath after the "t" is not lifted
-    if abs(tp - 1) > .01: seg = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "-", "-af", f"atempo={tp:.3f}", "-f", "f32le", "-"], input=seg.tobytes(), capture_output=True, check=True).stdout, np.float32)
+    if abs(tp - 1) > .01: seg = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "-", "-af", (f"atempo={tp:.3f}" if tp >= 0.5 else f"atempo=0.5,atempo={tp / 0.5:.3f}"), "-f", "f32le", "-"], input=seg.tobytes(), capture_output=True, check=True).stdout, np.float32)
     i0 = int(max(0, s - 0.04 / tp) * SR); k = min(len(seg), len(track) - i0); track[i0:i0 + k] += seg[:k] * gain
     prev_end = s + (o1 - o0) / tp
     print(f"{name:16s} start {s:.2f} s  tempo {tp:.2f}  speech {(o1 - o0) / tp:.2f} s  mouth corr {c:.2f}" + ("" if opt else "  (seed, no face)"))
