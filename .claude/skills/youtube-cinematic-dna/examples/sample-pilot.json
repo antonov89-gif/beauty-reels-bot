@@ -1,0 +1,13 @@
+{
+  "note": "FICTIONAL TEMPLATE ONLY, not generated footage or observations about a YouTube video",
+  "project_id": "DEMO-PILOT-SPEC",
+  "target_duration_sec": 32,
+  "shots": [
+    {"id":"P01","start_sec":0,"end_sec":4,"story_purpose":"Hook: an unexpected package falls into an empty train car","camera":"35mm-ish low static wide with a motivated minor tilt","action":"Package slides and stops under a seat","continuity":"Empty car, night, rain outside, package begins center-left and ends by right bench","sound":"Wheels on tracks + package skids, no speech"},
+    {"id":"P02","start_sec":4,"end_sec":9,"story_purpose":"Reveal protagonist noticing the sound","camera":"50mm-ish medium; held-off frame with slight operator reframe","action":"Person looks down, then reaches toward bench","continuity":"Person enters from left, package remains under right bench, same cool overhead car light","sound":"Room-tone train rattle + jacket foley"},
+    {"id":"P03","start_sec":9,"end_sec":14,"story_purpose":"New danger: warning indicator illuminates","camera":"close insert from same axis, restrained push","action":"Red timer display reflects in character's eye, no invented readable signage","continuity":"Same package and geography; person remains crouched near right bench","sound":"Electrical chirp, train rattle ducks slightly"},
+    {"id":"P04","start_sec":14,"end_sec":20,"story_purpose":"Action: character drags package away from vent","camera":"28–35mm side medium tracking along aisle","action":"Two-hand grasp, weight transfer and fabric tension","continuity":"Package moves from right bench toward center aisle; no vanish/reappear","sound":"Shoe grip + coarse plastic drag + breath"},
+    {"id":"P05","start_sec":20,"end_sec":26,"story_purpose":"Close emotional decision","camera":"65mm-ish performance close-up from established side","action":"Eyes glance to emergency handle, breath catches","continuity":"Character crouched near aisle, same train and light, package now in aisle","sound":"Natural quiet whispered line with spatial car acoustics"},
+    {"id":"P06","start_sec":26,"end_sec":32,"story_purpose":"Payoff: chooses to open a window instead of pulling alarm","camera":"wide geographic return, gently reframe to window","action":"Character braces, reaches window, window starts to open","continuity":"Package stays in aisle, established train direction preserved","sound":"Handle rattle + air pressure + music resolves and stops"}
+  ]
+}
