@@ -78,10 +78,15 @@ else:
             edges = [a] + sorted(pauses) + [b]; units += [((p, q), r0, r1) for (p, q), (r0, r1) in zip(zip(edges, edges[1:]), sub)]
         else: units.append(((a, b), m0, m1))
 
+def cut_at(j):                                                      # boundary before our word j: the minimum-energy point between the end of word j-1 and 0.15 s after the start of word j
+    lo, hi = max(0.0, ov[j - 1][2] - 0.05), min(len(x) / SR, ov[j][1] + 0.15); e = [(np.sqrt((x[int(t * SR):int((t + .02) * SR)] ** 2).mean()), t) for t in np.arange(lo, max(lo + 0.01, hi - .02), .005)]
+    return min(e)[1] + 0.01
+
+
 rep = []
 for (a, b), m0, m1 in units:
-    s0 = max(0, ov[a][1] - 0.06, ov[a - 1][2] if a > 0 else 0); s1 = min(ov[b - 1][2] + 0.10, ov[b][1] - 0.02 if b < len(ov) else 1e9)   # cut at word borders: no piece of a neighbour word
-    seg = x[int(s0 * SR):int(s1 * SR)]
+    s0 = cut_at(a) if a > 0 else max(0, ov[a][1] - 0.06); s1 = cut_at(b) if b < len(ov) else ov[b - 1][2] + 0.10   # cut at the quietest point of the pause between words (ASR word times drift by 0.1-0.2 s on drawled onsets)
+    seg = x[int(s0 * SR):int(s1 * SR)].copy(); f = int(SR * 0.006); seg[:f] *= np.linspace(0, 1, f); seg[-f:] *= np.linspace(1, 0, f)   # 6 ms fades: no click at the join
     our_d = ov[b - 1][2] - ov[a][1]; mod_d = m1 - m0; tempo = 1.0
     if our_d > mod_d * 1.05:
         tempo = min(MAXT, our_d / mod_d)
