@@ -19,14 +19,14 @@
 
 **C02 (11–20 с)**
 Селфи с руки, поправляет локон рукой в перстнях, подаётся к камере, как будто делится секретом.
-Реплика: «Some mornings, a hundred people watch me wake up. The ceremony is called the rising. I call it opening night.»
-Перевод: «Иногда по утрам сотня человек смотрит, как я просыпаюсь. Церемония называется «подъём». А я называю это премьерой.»
+Реплика (v5, 30.10, короче): «A hundred people watch me wake up. [пауза] I call it... opening night.»
+Перевод: «Сотня человек смотрит, как я просыпаюсь. Я называю это... премьерой.»
 Плашка: «LE LEVER (THE RISING): UP TO ~100 PEOPLE» [1И].
 
 **C03 (20–28 с)**
 Входят врач и хирург, он скучающе смотрит на них через плечо, отворачивается к камере, самодовольно тянет «Naturally».
-Реплика: «The doctor's here, the surgeon's here, and nobody came to see them. Everyone came to see me. Naturally.»
-Перевод: «Врач здесь, хирург здесь, и никто не пришёл смотреть на них. Все пришли смотреть на меня. Естественно.»
+Реплика (v5, 30.10, короче): «The doctor. The surgeon. Nobody came to see them. [пауза] Everyone came for me. Naturally.»
+Перевод: «Врач. Хирург. Никто не пришёл к ним. Все пришли ко мне. Естественно.»
 Плашка: «A DOCTOR AND A SURGEON WERE IN THE ROOM BEFORE HE GOT UP» [2И].
 
 ---
@@ -35,14 +35,14 @@
 
 **C04 (28–37 с)**
 Телефон стоит на столе. Поднимает тёмный длинный парик, рука на груди, трагическое лицо.
-Реплика: «Now, the wig. My hair started falling out at seventeen. I took it personally, so I got a wig.»
-Перевод: «Теперь парик. В семнадцать у меня начали выпадать волосы. Я принял это на свой счёт и завёл парик.»
+Реплика (v5, 30.10, короче): «Now, the wig. My hair started falling out at seventeen. [пауза] I took it personally.»
+Перевод: «Теперь парик. В семнадцать у меня начали выпадать волосы. Я принял это на свой счёт.»
 Плашка: «HAIR LOSS FROM AGE ~17 (ABOUT 1655), THEN WIGS» [2И].
 
 **C05 (37–42 с)**
 Скачок на крупный план, гладит тёмный парик, смотрит свысока.
-Реплика: «It makes me look taller, they say. I wouldn't know. I never look down.»
-Перевод: «Говорят, он делает меня выше. Не знаю. Я никогда не смотрю вниз.»
+Реплика (v5, 30.10, короче): «They say it makes me taller. [пауза] I never look down.»
+Перевод: «Говорят, он делает меня выше. Я никогда не смотрю вниз.»
 Плашка: «TALL WIGS ADDED HEIGHT» [1И].
 
 **C06 (42–51 с)**

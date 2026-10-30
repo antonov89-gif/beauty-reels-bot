@@ -1,12 +1,12 @@
 {
  "voice_lock": "voice/voice_lock.json v3 (The Young Heir, Eleven v4, French accent: prefix + respelling applied at TTS time, these lines stay in normal spelling)",
- "note": "Tags in [brackets] are ElevenLabs audio/emotion tags (not spoken). Pauses with {{pause=0.3}} as in the Lumean pipeline. Text rewritten 29.10 (owner: natural English for an English-speaking audience, no AI-sounding patterns, French accent). Tag support on v4 and the accent tag are UNTESTED: first test = C01-C05. Self-praise ('what a handsome man I am') ONCE per video, in the opener only (owner 29.10). C08 and C09 rewritten 29.10 (screenwriter review, owner approved).",
+ "note": "Tags in [brackets] are ElevenLabs audio/emotion tags (not spoken). Pauses with {{pause=0.3}} as in the Lumean pipeline. Text rewritten 29.10 (owner: natural English for an English-speaking audience, no AI-sounding patterns, French accent). Tag support on v4 and the accent tag are UNTESTED: first test = C01-C05. Self-praise ('what a handsome man I am') ONCE per video, in the opener only (owner 29.10). C08 and C09 rewritten 29.10 (screenwriter review, owner approved). | 30.10: C02-C05 shortened (owner \"да\"): max 14-16 words per 8 s, a pause before the punchline (compare_reference_ep1_v2.md).",
  "lines": {
   "C01": "[startled, then annoyed] Oops, the ceiling. {{pause=0.3}} [satisfied] There. {{pause=0.4}} [smug, drawling] Welcome to Versailles. [delighted, self-admiring] Yes, I'm that handsome. {{pause=0.4}} [sneering, amused] Try not to faint.",
-  "C02": "[conspiratorial, proud] Some mornings, a hundred people watch me wake up. {{pause=0.2}} The ceremony is called the rising. {{pause=0.4}} [smug, with a soft laugh] I call it opening night.",
-  "C03": "[dry, bored] The doctor's here, the surgeon's here, and nobody came to see them. {{pause=0.4}} [smug, pleased] Everyone came to see me. {{pause=0.4}} [soft, satisfied] Naturally.",
-  "C04": "[brisk] Now, the wig. {{pause=0.3}} [mock-tragic, a small sigh] My hair started falling out at seventeen. {{pause=0.3}} [wounded pride] I took it personally, {{pause=0.2}} [dry, resolute] so I got a wig.",
-  "C05": "[smug] It makes me look taller, they say. {{pause=0.3}} [lofty] I wouldn't know. I never look down. {{pause=0.5}} [sighs contentedly]",
+  "C02": "[conspiratorial, proud] A hundred people watch me wake up. {{pause=0.6}} [smug, savouring] I call it... {{pause=0.3}} opening night.",
+  "C03": "[dry, bored] The doctor. {{pause=0.2}} The surgeon. {{pause=0.3}} Nobody came to see them. {{pause=0.7}} [smug, pleased] Everyone came for me. {{pause=0.4}} [soft, satisfied] Naturally.",
+  "C04": "[brisk] Now, the wig. {{pause=0.4}} [mock-tragic, a small sigh] My hair started falling out at seventeen. {{pause=0.7}} [wounded pride] I took it personally.",
+  "C05": "[smug] They say it makes me taller. {{pause=0.7}} [lofty] I never look down. {{pause=0.4}} [sighs contentedly]",
   "C06": "[theatrical, savouring] White, grey, a little powder. {{pause=0.4}} [prophetic, grandly] One day, everybody will wear this. {{pause=0.4}} [mock-modest, chuckles] I'm just early.",
   "C07": "[regal, bored] Bow. Lower. Good. {{pause=0.4}} [delighted, preening] Yes, this is the new wig. {{pause=0.3}} [arrogant] Take notes.",
   "C08": "[contemptuous] All these people, and nobody may speak before me. {{pause=0.5}} [tender, adoring] I love listening. {{pause=0.3}} [snorts a laugh] To myself, mostly.",
@@ -16,5 +16,11 @@
   "C13": "[snapping, irritated] Don't stand behind me, you're ruining my reflection. {{pause=0.5}} [imperious, waving him off] Go. {{pause=0.2}} Over there. {{pause=0.2}} Further.",
   "C14": "[mock-generous] Tonight I dine in public. You may watch, {{pause=0.3}} [firm] but don't stare. {{pause=0.4}} [sly, conspiratorial] Well... a little. {{pause=0.5}} [imperious, grand] Subscribe to my stunning channel.",
   "C15": "[imperious, commanding] Hit like. {{pause=0.2}} Ring the bell. {{pause=0.4}} [dismissive, bored] Anyway, do what you like. {{pause=0.4}} [laughs, a cold, arrogant, haughty laugh, contemptuous] {{pause=0.4}} [gleeful, hungry] I'm off to the table to feast!"
+ },
+ "previous_lines": {
+  "C02_long_29.10": "[conspiratorial, proud] Some mornings, a hundred people watch me wake up. {{pause=0.2}} The ceremony is called the rising. {{pause=0.4}} [smug, with a soft laugh] I call it opening night.",
+  "C03_long_29.10": "[dry, bored] The doctor's here, the surgeon's here, and nobody came to see them. {{pause=0.4}} [smug, pleased] Everyone came to see me. {{pause=0.4}} [soft, satisfied] Naturally.",
+  "C04_long_29.10": "[brisk] Now, the wig. {{pause=0.3}} [mock-tragic, a small sigh] My hair started falling out at seventeen. {{pause=0.3}} [wounded pride] I took it personally, {{pause=0.2}} [dry, resolute] so I got a wig.",
+  "C05_long_29.10": "[smug] It makes me look taller, they say. {{pause=0.3}} [lofty] I wouldn't know. I never look down. {{pause=0.5}} [sighs contentedly]"
  }
 }
