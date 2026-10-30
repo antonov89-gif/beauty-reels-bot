@@ -320,3 +320,6 @@ C07 lost the final "s" of "notes" at the clip end: fixed free by an L-cut into t
 
 ## Sound bed C01-C08, 30.10 (owner "сделай сразу шум как в референсе"; sound_bed_ep1.md, build_bed.py; free, own synthesis)
 Room tone + people murmur + foley on motion peaks; no silence >= 0.5 s at -50 dB in any clip (was 1.5-5.2 s each), floor -48.6 dB (reference -49.5), -14.8 LUFS, TP -4.2, ASR identical before/after, no tonal content. Files: frames/C0x_bed.mp4 (C08 uses the L-cut version) and frames/EP1_C01-C08_bed.mp4 (not committed). Status: GENERATED + MEASURED; ear check by the owner pending.
+
+## Sound bed v2, 30.10 (owner on v1: "звук постоянно один и тот же")
+v1 was a stationary hiss: rebuilt (sound_bed_ep1.md): breathing air in 4 bands, a crowd of synthetic voices, 18 kinds of events on motion peaks, story moments and random times (not over speech), a different mix per clip. Measured: no silence >= 0.5 s at -50 dB, -14.8 LUFS, TP -4.4, words identical (ASR medium). Ear check by the owner pending.
