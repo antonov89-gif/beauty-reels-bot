@@ -35,7 +35,7 @@ FOLEY += [("C12", 0.3, "0376", 4.0, 8.3, -38, .3)]                              
 # fact plates: clip, start, end (s in the clip), text (lines split by |); [n] in script_ru.md = number of sources
 PLATES = [("C01", 2.7, 6.2, "VERSAILLES, FRANCE · 1685"), ("C02", 0.8, 4.8, "LE LEVER (THE RISING):|UP TO ~100 PEOPLE"),
           ("C03", 0.8, 5.0, "A DOCTOR AND A SURGEON WERE|IN THE ROOM BEFORE HE GOT UP"), ("C04", 2.0, 6.5, "HAIR LOSS FROM AGE ~17|(ABOUT 1655), THEN WIGS"),
-          ("C05", 0.6, 3.8, "TALL WIGS ADDED HEIGHT"), ("C07", 0.8, 4.5, "THE COURT ENTERED|IN ORDER OF RANK"), ("C10", 0.8, 4.8, "RED HEELS:|A COURT PRIVILEGE, 1670s"),
+          ("C05", 0.6, 3.8, "TALL WIGS ADDED HEIGHT"), ("C07", 0.8, 4.5, "COURTIERS CAME IN|BY ORDER OF PRIVILEGE"), ("C10", 0.8, 4.8, "RED HEELS:|A COURT PRIVILEGE, 1670s"),
           ("C11", 1.0, 6.5, "AT 14 HE DANCED|THE SUN GOD APOLLO (1653)"), ("C12", 1.0, 5.0, "HALL OF MIRRORS:|357 MIRRORS · 1678–1684"), ("C14", 0.8, 4.5, "NEXT: DINNER, IN PUBLIC")]
 SERIF = "/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf"; SANS = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 
