@@ -1,6 +1,6 @@
 # Publication package: Louis XIV Vlog #1 "My Morning" (history channel, NOT Mr. Buck), 31.10.2026
-File: `frames/EP1_full_D.mp4` (2:09.5, 1080x1920, 24 fps, -15.1 LUFS; not committed). Captions: `EP1_en.srt` (42 cues, script text, ASR timing). Cover: `EP1_cover_96s.png` (frame at 96.2 s).
-Status: NOT for upload yet. Blockers: (1) the channel account (Zernio has only Mr. Buck; this video must never go there); (2) the voice licence item in `authenticity_audit_2026_10_31.md` (model voice in C09-C15).
+File: `frames/EP1_full_E.mp4` (2:09.5, 1080x1920, 24 fps, -15.0 LUFS; not committed; one voice: our licensed v3 TTS in every clip). Captions: `EP1_en.srt` (42 cues, script text, ASR timing). Cover: `EP1_cover_96s.png` (frame at 96.2 s).
+Status: ready except the channel account (Zernio has only Mr. Buck; this video must never go there). The voice licence item is closed (cut E, audit 31.10).
 
 ## 1. Title (<= 60 chars, one emoji, series tag)
 Main: **100 People Watched Him Wake Up 👑 Louis XIV Vlog #1** (51)
@@ -57,4 +57,4 @@ SEO note: captions file uploaded (EN .srt); the reference channel uses burned-in
 
 ## 7. Notes
 - Not verifiable here: how the voice sounds to a native ear; YouTube's own reaction to an AI-heavy channel; the ElevenLabs Voice Library Addendum in full.
-- Voice licence (see the audit): Lumean's user agreement (lumean.app/terms, s.8.2) grants a non-exclusive, irrevocable licence for personal AND commercial use of results worldwide, limited by the third-party provider's terms (s.8.3), and bans imitating a real person's voice without consent (s.6.2.1, s.8.4). Our TTS lines (C01-C08) are covered. The model voice in C09-C15 is a video model re-creating a library voice outside ElevenLabs: the open risk.
+- Voice licence (see the audit): Lumean's user agreement (lumean.app/terms, s.8.2) grants a non-exclusive, irrevocable licence for personal AND commercial use of results worldwide, limited by the third-party provider's terms (s.8.3), and bans imitating a real person's voice without consent (s.6.2.1, s.8.4). Cut E uses only our TTS lines in every clip: covered. (The model voice of cut D is not used.)

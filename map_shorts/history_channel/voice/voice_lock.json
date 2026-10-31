@@ -116,6 +116,7 @@
   "method": "the king's voice is the video model's own speech: Seedance 2.5 Lite r2v (seedance-2.5-lite-r2v) with the v3 locked voice (this file) as reference audio (audio_urls, the clip's line at natural pace, built free from tts_ep1/<clip>.mp3); the model's speech AND its sounds are kept; lips are in sync by construction",
   "measured": "C09 r2v: speaker similarity of the model voice to the v3 takes 0.77-0.79 (v3 takes between themselves 0.90-0.91); accent and consistency between clips to be checked clip by clip (resemblyzer cosine vs C09 r2v)",
   "still_in_force": "no music; AI voice disclosed; one voice per video: every clip of an episode goes through the same route; v3 stays the fallback and the source of the reference audio",
-  "decision_pending": "after the episode: keep v4 or go back to v3"
+  "decision_pending": "after the episode: keep v4 or go back to v3",
+  "result_31_10": "Ended for published videos (owner 31.10 'Проверяй и дальше поехали'): the model voice re-creates the ElevenLabs library voice outside ElevenLabs (Lumean terms s.8.4, ElevenLabs Use Policy s.3/s.12 risk). Episode 1 final: our v3 TTS laid over the model clips by whole phrases (build_c01_kling_ourvoice.py, build_r2v_ourvoice.py). Model clips may still be generated with the v3 reference audio for lip timing, but their speech is replaced."
  }
 }
