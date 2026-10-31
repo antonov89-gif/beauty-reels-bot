@@ -39,8 +39,8 @@ Plate: HIS SISTER-IN-LAW WROTE: 4 SOUPS, A WHOLE PHEASANT, A PARTRIDGE, A BIG SA
 **C06 (0:47-0:55)**
 A pheasant arrives. Marcel holds out a silver fork right into the lens. Louis takes a leg with his fingers.
 MARCEL (off screen): "Your fork, Sire?"
-LOUIS: "My grandsons were taught to use a fork. [pause] I've untaught them."
-(Марсель: «Ваша вилка, сир?» Людовик: «Внуков научили есть вилкой. Я их разучил.»)
+LOUIS: "Someone taught the peasants to use a fork. [pause] I've untaught them."
+(Марсель: «Ваша вилка, сир?» Людовик: «Людишек научили есть вилкой. Я их разучил.»)
 Plate: HE FORBADE HIS GRANDSONS TO USE FORKS
 
 **C07 (0:55-1:03)**
