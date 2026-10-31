@@ -1,5 +1,5 @@
 {
- "note": "Episode 1 dub lines (owner 31.10: 'Теперь звуковую дорожку, французский, испанскую и русскую'). Same phrase structure and pauses as the English lines (lines_ep1_emotion.json), kept about as short as the English so each phrase fits the lips at speed-up <= 1.3 (no slowing). Emotion tags stay in English (ElevenLabs v4 reads them). FR: native French (no accent tag); ES and RU: the king keeps his French accent (prefix in tts_dub.py).",
+ "note": "Episode 1 dub lines (owner 31.10: 'Теперь звуковую дорожку, французский, испанскую и русскую'). Same phrase structure and pauses as the English lines (lines_ep1_emotion.json), kept about as short as the English so each phrase fits the lips at speed-up <= 1.3 (no slowing). Emotion tags stay in English (ElevenLabs v4 reads them). FR: native French (no accent tag); ES and RU: the king keeps his French accent (prefix in tts_dub.py). PT (Brazilian Portuguese) with the French accent tag; ZH (Mandarin, Simplified) WITHOUT the accent tag (a French accent on a tonal language risks clarity).",
  "fr": {
   "C01": "[startled, then annoyed] Oups, le plafond. {{pause=0.3}} [satisfied] Voilà. {{pause=0.5}} [grand, formal] Bonjour. Je suis Louis, roi de France. {{pause=0.4}} [proud, drawling] On m'appelle le Roi-Soleil. {{pause=0.5}} [delighted, self-admiring] Oui... je suis si beau.",
   "C02": "[conspiratorial, proud] Cent personnes me regardent me lever. {{pause=0.6}} [smug, savouring] J'appelle ça... {{pause=0.3}} la première.",
@@ -47,5 +47,37 @@
   "C13": "[snapping, irritated] Mon Dieu, не стойте сзади, вы портите отражение. {{pause=0.5}} [imperious, waving him off] Идите. {{pause=0.2}} Туда. {{pause=0.2}} Дальше.",
   "C14": "[mock-generous] В следующий раз я ужинаю при всех. {{pause=0.5}} Смотреть можно... [firm] но не пялиться. {{pause=0.6}} [sly, conspiratorial] Ну, чуть-чуть. {{pause=0.6}} [imperious, grand] Подписывайтесь на мой роскошный канал.",
   "C15": "[imperious, commanding] Лайк. {{pause=0.2}} Колокольчик. {{pause=0.4}} [dismissive, bored] А впрочем, делайте что хотите. {{pause=0.4}} [laughs, a cold, arrogant, haughty laugh, contemptuous] {{pause=0.4}} [gleeful, hungry] А я пошёл пировать!"
+ },
+ "pt": {
+  "C01": "[startled, then annoyed] Opa, o teto. {{pause=0.3}} [satisfied] Pronto. {{pause=0.5}} [grand, formal] Bonjour. Eu sou Luís, rei da França. {{pause=0.4}} [proud, drawling] Me chamam de Rei Sol. {{pause=0.5}} [delighted, self-admiring] Sim... eu sou lindo assim.",
+  "C02": "[conspiratorial, proud] Cem pessoas me veem acordar. {{pause=0.6}} [smug, savouring] Eu chamo isso de... {{pause=0.3}} estreia.",
+  "C03": "[dry, bored] O médico. {{pause=0.2}} O cirurgião. {{pause=0.3}} Ninguém veio por eles. {{pause=0.7}} [smug, pleased] Todos vieram por mim. {{pause=0.4}} [soft, satisfied] Naturalmente.",
+  "C04": "[brisk] Agora, a peruca. {{pause=0.4}} [mock-tragic, a small sigh] Aos dezessete, meu cabelo começou a cair. {{pause=0.7}} [wounded pride] Levei para o lado pessoal.",
+  "C05": "[smug] Dizem que ela me deixa mais alto. {{pause=0.7}} [lofty] Eu nunca olho para baixo. {{pause=0.4}} [sighs contentedly]",
+  "C06": "[theatrical, savouring] Branca, cinza, um pouco de pó. {{pause=0.4}} [prophetic, grandly] Um dia, todos vão usar isso. {{pause=0.4}} [mock-modest, chuckles] Eu só cheguei cedo.",
+  "C07": "[regal, bored] Reverência. Mais baixo. Bom. {{pause=0.4}} [delighted, preening] Sim, é a peruca nova. {{pause=0.3}} [arrogant] Anotem.",
+  "C08": "[contemptuous] Tanta gente, e ninguém fala antes de mim. {{pause=0.5}} [tender, adoring] Adoro ouvir. {{pause=0.3}} [snorts a laugh] Principalmente a mim.",
+  "C09": "[sharp, scandalised] Mais baixo. {{pause=0.3}} Mais baixo... {{pause=0.3}} [deadpan] e lá se vai o chapéu. {{pause=0.4}} [recovering haughtiness] Olhem para mim, não para o chapéu.",
+  "C10": "[flirtatious, teasing] Saltos vermelhos. Só nobres, {{pause=0.3}} [smug] e só os que eu gosto. {{pause=0.4}} [proud] Os meus são os mais altos, claro.",
+  "C12": "[sly, confiding] Veneza guardava o segredo. {{pause=0.6}} Então nós... pegamos emprestados os vidreiros. {{pause=0.8}} [glancing at the mirrors, pleased] Agora cada parede olha para mim. [laughs softly at himself]",
+  "C13": "[snapping, irritated] Mon Dieu, não fique atrás de mim, você estraga meu reflexo. {{pause=0.5}} [imperious, waving him off] Vá. {{pause=0.2}} Ali. {{pause=0.2}} Mais longe.",
+  "C14": "[mock-generous] Da próxima vez, janto em público. {{pause=0.5}} Podem olhar... [firm] mas sem encarar. {{pause=0.6}} [sly, conspiratorial] Bom, um pouquinho. {{pause=0.6}} [imperious, grand] Inscrevam-se no meu canal deslumbrante.",
+  "C15": "[imperious, commanding] Deem like. {{pause=0.2}} Ativem o sininho. {{pause=0.4}} [dismissive, bored] Enfim, façam o que quiserem. {{pause=0.4}} [laughs, a cold, arrogant, haughty laugh, contemptuous] {{pause=0.4}} [gleeful, hungry] Eu vou para a mesa banquetear!"
+ },
+ "zh": {
+  "C01": "[startled, then annoyed] 哎呀，天花板。{{pause=0.3}} [satisfied] 好了。{{pause=0.5}} [grand, formal] Bonjour。我是路易，法国国王。{{pause=0.4}} [proud, drawling] 人们叫我太阳王。{{pause=0.5}} [delighted, self-admiring] 是的……我就是这么帅。",
+  "C02": "[conspiratorial, proud] 一百个人看着我起床。{{pause=0.6}} [smug, savouring] 我管这叫……{{pause=0.3}} 首演。",
+  "C03": "[dry, bored] 医生。{{pause=0.2}} 外科医生。{{pause=0.3}} 没人是来看他们的。{{pause=0.7}} [smug, pleased] 大家都是为我来的。{{pause=0.4}} [soft, satisfied] 理所当然。",
+  "C04": "[brisk] 现在，说说假发。{{pause=0.4}} [mock-tragic, a small sigh] 我十七岁就开始掉头发。{{pause=0.7}} [wounded pride] 这事我记仇了。",
+  "C05": "[smug] 据说它让我显得更高。{{pause=0.7}} [lofty] 我从不往下看。{{pause=0.4}} [sighs contentedly]",
+  "C06": "[theatrical, savouring] 白的，灰的，扑点粉。{{pause=0.4}} [prophetic, grandly] 总有一天，人人都会戴。{{pause=0.4}} [mock-modest, chuckles] 我只是来早了。",
+  "C07": "[regal, bored] 鞠躬。再低。很好。{{pause=0.4}} [delighted, preening] 对，这是新假发。{{pause=0.3}} [arrogant] 记下来。",
+  "C08": "[contemptuous] 这么多人，没人敢比我先开口。{{pause=0.5}} [tender, adoring] 我爱倾听。{{pause=0.3}} [snorts a laugh] 主要是听我自己。",
+  "C09": "[sharp, scandalised] 再低。{{pause=0.3}} 再低……{{pause=0.3}} [deadpan] 帽子飞了。{{pause=0.4}} [recovering haughtiness] 看我，别看帽子。",
+  "C10": "[flirtatious, teasing] 红鞋跟。只给贵族，{{pause=0.3}} [smug] 还只给我喜欢的。{{pause=0.4}} [proud] 当然，我的最高。",
+  "C12": "[sly, confiding] 威尼斯守着秘密。{{pause=0.6}} 所以我们……借来了他们的玻璃匠。{{pause=0.8}} [glancing at the mirrors, pleased] 现在每面墙都在看我。[laughs softly at himself]",
+  "C13": "[snapping, irritated] Mon Dieu，别站我身后，你毁了我的倒影。{{pause=0.5}} [imperious, waving him off] 走。{{pause=0.2}} 那边。{{pause=0.2}} 再远点。",
+  "C14": "[mock-generous] 下次，我要当众用餐。{{pause=0.5}} 你们可以看……[firm] 但别盯着。{{pause=0.6}} [sly, conspiratorial] 好吧，看一点。{{pause=0.6}} [imperious, grand] 订阅我这个惊艳的频道。",
+  "C15": "[imperious, commanding] 点赞。{{pause=0.2}} 开铃铛。{{pause=0.4}} [dismissive, bored] 算了，你们随便。{{pause=0.4}} [laughs, a cold, arrogant, haughty laugh, contemptuous] {{pause=0.4}} [gleeful, hungry] 我去大吃一顿了！"
  }
 }

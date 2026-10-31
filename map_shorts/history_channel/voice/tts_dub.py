@@ -1,6 +1,6 @@
 """Dub voice for episode 1 in another language with the SAME locked voice (voice_lock.json: ElevenLabs v4 "The Young Heir" via Lumean), one Lumean order per language.
 Lines: lines_ep1_dub.json (<lang> -> clip -> line). Clips are joined with a 2-s pause so the result can be split per clip later (split_dub.py). FR: native French, no accent tag; ES/RU: "[thick French accent]" prefix.
-Usage: python3 tts_dub.py preview|go fr|es|ru  -> tts_ep1/dub_<lang>.mp3. "preview" is free (price only); "go" places a PAID order: only after the owner's yes with the price.
+Usage: python3 tts_dub.py preview|go fr|es|ru|pt|zh  -> tts_ep1/dub_<lang>.mp3. "preview" is free (price only); "go" places a PAID order: only after the owner's yes with the price.
 The key is read from .lumean_key (never printed, never committed)."""
 import json, os, sys, time, urllib.request
 KEYFILES = ["/tmp/claude-0/-home-user-beauty-reels-bot/bb7f8515-f5d4-586a-94a3-df9db5a7e320/scratchpad/.lumean_key", "/home/user/beauty-reels-bot/.lumean_key", "/home/claude/v51/.lumean_key"]
@@ -25,7 +25,7 @@ def api(m, p, b=None):
 
 mode, lang = sys.argv[1], sys.argv[2]
 lock = json.load(open(os.path.join(HERE, "voice_lock.json"))); lines = json.load(open(os.path.join(HERE, "lines_ep1_dub.json")))[lang]
-prefix = "" if lang == "fr" else lock["accent"]["text_prefix"]
+prefix = "" if lang in ("fr", "zh") else lock["accent"]["text_prefix"]   # FR native; ZH without the accent tag (clarity of a tonal language)
 text = prefix + " {{pause=2.0}} ".join(lines[c] for c in CLIPS)
 tpl = next(t["id"] for t in api("GET", "/templates") if t["service_key"] == "elevenlabs")
 ts = {"model_id": lock["model_id"], "voice_id": lock["voice_id"], "public_owner_id": lock["public_owner_id"], "language_code": lang,
