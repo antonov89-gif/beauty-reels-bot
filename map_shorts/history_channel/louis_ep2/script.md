@@ -5,7 +5,7 @@ Changes from draft 3: lines cut to 12-16 words per clip; a viewer hook after the
 ## Setup 1. The antechamber, candles (0:00-0:29)
 
 **C01 (0:00-0:11)**
-The phone looks at the painted ceiling, candle smoke drifts across it. He turns the phone onto himself; he is already seated at the head of a long table, napkin tucked into the lace.
+Frame 0 (owner 31.10, after the Vlog 2 first frame): the phone is far too close to his face: nose and lips fill the frame, tilted about 20 degrees, the face off-centre to the right, the top half covered by a dark out-of-focus mass (his own scarlet velvet sleeve and fist, still fumbling with the phone), one eye at the lower edge, mouth a little open, soft focus, wide-angle distortion. About 1 s of fumbling, then the phone swings up to the painted ceiling, candle smoke drifts across it ("Oops, the ceiling"), and he turns it onto himself: he is already seated at the head of a long table, napkin tucked into the lace.
 LOUIS: "Oops, the ceiling. There. Bonjour. I am Louis, King of France. They call me the Sun King. Yes... I'm that handsome."
 («Ой, потолок. Вот. Бонжур. Я Людовик, король Франции. Меня называют Король-Солнце. Да... я настолько красив.»)
 Plate: VERSAILLES, FRANCE · 1685
