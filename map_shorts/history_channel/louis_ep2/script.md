@@ -1,5 +1,5 @@
 # Louis XIV Vlog #2 "Dinner in Public": script (draft 1, 31.10.2026)
-About 2:05. Evening, Versailles, the king's public dinner. He films himself on a phone, as in episode 1. Lines are spoken in English; the Russian is for the owner only. No music.
+About 2:09. Evening, Versailles, the king's public dinner. He films himself on a phone, as in episode 1. Lines are spoken in English; the Russian is for the owner only. No music.
 
 ## Setup 1. The antechamber, candles (0:00-0:27)
 
@@ -65,7 +65,7 @@ LOUIS: "[laughs] Mon Dieu, it's all over the phone. [pause] Leave it. Nobody saw
 Eight close-ups of about 1 s, no words: soup, pheasant, partridge, a big salad, mutton, ham, pastry, fruit. Only plates, silver, the crowd murmuring.
 Plate: SOUP, ROASTS, SALADS, SWEETS, THEN FRUIT
 
-## Setup 4. Dessert (1:27-1:43)
+## Setup 4. Dessert (1:27-1:47)
 
 **C10 (1:27-1:35)**
 A small silver dish of green peas. He holds one pea up to the lens, focus hunts.
@@ -73,20 +73,20 @@ LOUIS: "Peas. A lady here wrote that the court talks about nothing else. [pause]
 («Горошек. Одна дама при дворе написала, что двор только о нём и говорит. Это я начал.»)
 Plate: 1696 LETTER: THE COURT'S CRAZE FOR GREEN PEAS
 
-**C11 (1:35-1:43)**
-He leans back, wipes his fingers on the napkin, glances at the crowd. Quieter.
-LOUIS: "They call it greed. [pause] I call it a long day of being looked at."
-(«Они называют это обжорством. А я называю это длинным днём, когда на тебя все смотрят.»)
+**C11 (1:35-1:47)**
+He leans back, wipes his fingers on the napkin, glances at the crowd. Quieter. Then he looks straight into the lens, chin up.
+LOUIS: "They call it greed. [pause] I call it a long day of being looked at. [pause] Don't be afraid of getting fat. Be afraid of being a loser. [haughty laugh]"
+(«Они называют это обжорством. А я называю это длинным днём, когда на тебя все смотрят. Не бойтесь потолстеть, бойтесь остаться неудачниками. [надменный смех]»)
 
-## Ending (1:43-2:05)
+## Ending (1:47-2:09)
 
-**C12 (1:43-1:53)**
+**C12 (1:47-1:57)**
 He stands up, the crowd bows. He looks into the hand mirror, nods to himself, then points at the camera.
 LOUIS: "Next time, my surgeon has plans for me. [pause] Don't worry, he's been practising. [pause] Subscribe to my stunning channel."
 («В следующий раз у моего хирурга на меня планы. Не волнуйтесь, он тренировался. Подписывайтесь на мой потрясающий канал.»)
 Plate: NEXT: THE OPERATION
 
-**C13 (1:53-2:03)**
+**C13 (1:57-2:07)**
 He gives orders with a finger, waves the viewers off on "do what you like", laughs coldly with his chin up, then turns and sits back down at the full table. The mirror covers the lens.
 LOUIS: "Hit like. Ring the bell. Anyway, do what you like. [haughty laugh] I'm off to the table to feast!"
 («Ставьте лайк. Жмите на колокольчик. А впрочем, делайте что хотите. [надменный смех] А я пошёл к столу пировать!»)
