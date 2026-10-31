@@ -29,3 +29,14 @@ Data (vidIQ / Nexlev, 31.10): 2:05, published 15.10, 1,599,002 views, 50,961 lik
 
 ## Verdict
 Our draft is richer in plot and has more physical gags; the reference wins on economy (shorter lines, more silence) and on two quotable devices (do-not-ask, operator as a character). The fix is cutting, not adding: this also brings ep.2 under 3:00 without touching the owner's lines.
+
+## Picture analysis (vidIQ watch job, 31.10; a text hypothesis until the mp4 is checked on frames: NOT VERIFIED ON FRAMES)
+- **5 shots, 4 hard cuts in 125 s.** Shot lengths about 19, 26, 28, 23 and 27 s. Ours: 17 clips of 8-12 s plus an 8-s burst = 17+ cuts in 168 s.
+- 4 of 5 shots are a selfie on her own phone (fingers over the lens at the start and at cuts); one shot is filmed by "Kate" on command, with a physical gag at the lens (a wet scented cloth pushed into it).
+- One background gag by turning the phone over her shoulder (the keyboard player stops and looks awkwardly), then a whip back to her face for the flat line. Same device as our C07 courtier, but there it is ONE beat inside a long take, not a separate clip.
+- No laughing or breaking character; deadpan. Burned-in bold white word-by-word captions at the bottom (vidIQ says so; ep.1 frame forensics agreed for vlog 1). Ours: no burned-in captions (owner rule 29.10); the owner decides whether to test them.
+- Sound is diegetic (water, cloth, room reverb, keyboard); no added effects. Same as our rule: no music.
+- Ending: a stern, unblinking glare into the lens on the last line.
+
+## Consequence for the storyboard
+Our storyboard cuts about 4x more often than the most viewed reference. Merge the 17 clips into about 8 longer takes of 15-25 s, each with its gags inside the take (Seedance 2.0 r2v takes 4-15 s, Kling 4.0 i2v up to 30 s). Cost per second does not change; the risks are identity drift and lip timing over a longer take, so the pilot decides the take length. Clip list for the merge (proposal): 1) C01-C03 opener and the court enters; 2) C04-C05 Marcel films, soup; 3) C06-C08 fork and the question to the viewers; 4) C09-C11 drink, wine, comments; 5) burst; 6) C12-C14 peas and the belly; 7) C15 button and partridge; 8) C16-C17 outro.
