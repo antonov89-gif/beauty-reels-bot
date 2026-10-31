@@ -45,3 +45,9 @@ Compared on crops: owner's C08 (the reference), master v4, C01 first frame. Eyes
 - Powder: forehead Lab owner L*=82.6 a*=9.3 b*=10.9; v4 75.4 / 17.4 / 17.4; v5 75.4 / 20.2 / 16.4. No gain in paleness (L* identical) and the face is even pinker (a* up). FAIL.
 - Eyes: owner muted grey-green; v4 and v5 both grey-brown, v5 maybe a little greyer, not green. FAIL.
 - Decision: the C01 redo from v5 was NOT ordered (it would inherit the same faults). v4 stays the approved base; v5 is rejected. The model does not obey colour wording on the face in this scene. Options for the owner: (a) accept and fix the powder by grade in post (free, per take: less saturation, lift) and the eye colour by wording in the video prompts (at video size the eyes are about 30 px wide); (b) one more image edit of v4 limited to the face ("change only the eye colour and whiten the powder"), $0.12; (c) a different model for the edit (GPT Image 2.5, price per image not verified).
+
+## Master v6 (31.10): edit of v4, only eye colour and powder (owner chose option 2)
+- Nano Banana Pro 4K edit of v4 (refs: v4, owner C08 panel), $0.12 (the master has cost $0.72 over six tries). frames/master_table_v6_4k.jpg (1440 px copy master_table_v6_1440.jpg), face crops owner | v4 | v6: master_face_owner_v4_v6.jpg, eye strips: check_eyes_owner_v4_v6.jpg.
+- Eyes: muted grey-green on both eyes, as the owner's C08. PASS.
+- Powder: forehead Lab owner L*=82.6 a*=9.3 b*=10.9; v4 75.4 / 17.4 / 17.4; v6 78.2 / 11.3 / 7.2: much paler and less pink, close to the owner's (a little greyer, b* lower than the reference). PASS (soft: it reads chalky, slightly lilac-grey).
+- Soft defects: the eyelids opened slightly (the heavy-lidded look is a bit lighter, still haughty), the lips are a brighter coral, the cheek rouge is a larger round patch, the eyes look a little glassy. Everything else (wig, coat, table, crowd, framing) unchanged. NOT APPROVED by the owner yet.

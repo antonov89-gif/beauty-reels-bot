@@ -121,3 +121,4 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 31.10 | Ep.2 set master v4 (haughty face and wig from the owner's C08/C09 reference), Nano Banana Pro 4K 9:16 (owner "Да" to the named route and $0.12; one call) | $0.12 (usage.cost) |
 | 31.10 | Ep.2 C01 first frame (extreme close-up fumble like the Vlog 2 first frame), Nano Banana Pro 2K 9:16 (owner "Да"; one call) | $0.09 (usage.cost) |
 | 31.10 | Ep.2 set master v5 (eye colour and powder fix attempt), Nano Banana Pro 4K 9:16 (owner "Да" to v5 + C01 redo; v5 did NOT fix it, so the C01 redo ($0.09) was NOT ordered) | $0.12 (usage.cost) |
+| 31.10 | Ep.2 set master v6 (edit of v4: only eye colour and powder; owner chose option 2), Nano Banana Pro 4K 9:16 (one call) | $0.12 (usage.cost) |
