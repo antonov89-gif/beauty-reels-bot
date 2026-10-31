@@ -1,7 +1,7 @@
 # Louis XIV Vlog #2 "Dinner in Public": script (draft 3, 31.10.2026)
-About 2:45. Evening, Versailles, the king's public dinner. He films himself on a phone, as in episode 1; he hands the phone to Marcel once. He talks to the viewers as if they stood in the crowd. Few words, long beats: the picture finishes the joke. Lines are spoken in English; the Russian is for the owner only. No music.
+About 2:50. Evening, Versailles, the king's public dinner. He films himself on a phone, as in episode 1; he hands the phone to Marcel once. He talks to the viewers as if they stood in the crowd. Few words, long beats: the picture finishes the joke. Lines are spoken in English; the Russian is for the owner only. No music.
 
-## Setup 1. The antechamber, candles (0:00-0:28)
+## Setup 1. The antechamber, candles (0:00-0:27)
 
 **C01 (0:00-0:11)**
 The phone looks at the painted ceiling, candle smoke drifts across it. He turns the phone onto himself; he is already seated at a long table, napkin tucked into the lace.
@@ -79,7 +79,7 @@ LOUIS: "Salad. A whole bowl. [pause] Find out where he lives."
 Eight close-ups of about 1 s, no words: soup, pheasant, partridge, a big salad, mutton, ham, pastry, fruit. Only plates, silver, the crowd murmuring.
 Plate: SOUP, ROASTS, SALADS, SWEETS, THEN FRUIT
 
-## Setup 5. Dessert (1:45-2:21)
+## Setup 5. Dessert (1:45-2:27)
 
 **C12 (1:45-1:53)**
 A small silver dish of green peas. He holds one pea up to the lens, focus hunts. Quietly, a little hurt.
@@ -87,27 +87,32 @@ LOUIS: "Peas. The whole court talks about nothing else. [pause] Last year it was
 («Горошек. Весь двор говорит только о нём. В прошлом году говорили обо мне.»)
 Plate: 1696 LETTER: THE COURT'S CRAZE FOR GREEN PEAS
 
-**C13 (1:53-2:05)**
+**C13 (1:53-2:01)**
+He slides down in the armchair, hands on his belly, eyes half-closed, the phone held loosely above his face. A long happy sigh.
+LOUIS: "Ohh... [pause] I wasn't born to work. [pause] I was born for happiness, love, pleasure... and a good rest. [contented laugh]"
+(«Ох... Не для работы создан я, а для счастья, любви, удовольствия и отдыха. [довольный смех]»)
+
+**C14 (2:01-2:13)**
 He leans back, wipes his fingers on the napkin, glances at the crowd. Then he looks straight into the lens, chin up.
 LOUIS: "They call it greed. [pause] I call it a long day of being looked at. [pause] Don't be afraid of getting fat. Be afraid of being a loser. [haughty laugh]"
 («Они называют это обжорством. А я называю это длинным днём, когда на тебя все смотрят. Не бойтесь потолстеть, бойтесь остаться неудачниками. [надменный смех]»)
 
-**C14 (2:05-2:19)**
+**C15 (2:13-2:27)**
 He laughs too hard: a gold button shoots off his coat and hits Marcel in the forehead. Marcel says nothing, rubs his forehead. A beat. Then, at the edge of the frame, Marcel's hand slowly reaches for the last partridge leg. Louis sees it on the screen.
 LOUIS: "That button was a gift, Marcel. Keep it. [pause] The partridge, no."
 MARCEL: "I haven't eaten since this morning, Sire."
 LOUIS: "Neither have they. [nods at the crowd] [pause] Take a pea. One."
 («Эта пуговица была подарком, Марсель. Оставь себе. Куропатку нет.» Марсель: «Я с утра не ел, сир.» Людовик: «Они тоже. Возьми горошину. Одну.»)
 
-## Ending (2:19-2:41)
+## Ending (2:27-2:48)
 
-**C15 (2:19-2:30)**
+**C16 (2:27-2:38)**
 He stands up, the crowd bows. He looks into the hand mirror, nods to himself, then points at the camera.
 LOUIS: "Next time, you choose. My surgeon, or my bath. [pause] The surgeon. He's been practising. [pause] On other people. [pause] Subscribe to my stunning channel."
 («В следующий раз выбираете вы. Мой хирург или моя ванна. Хирург. Он тренировался. На других. Подписывайтесь на мой потрясающий канал.»)
 Plate: NEXT: THE OPERATION
 
-**C16 (2:30-2:40)**
+**C17 (2:38-2:48)**
 He gives orders with a finger, waves the viewers off on "do what you like", laughs coldly with his chin up, then turns and sits back down at the full table. The mirror covers the lens.
 LOUIS: "Hit like. Ring the bell. Anyway, do what you like. [haughty laugh] I'm off to the table to feast!"
 («Ставьте лайк. Жмите на колокольчик. А впрочем, делайте что хотите. [надменный смех] А я пошёл к столу пировать!»)
