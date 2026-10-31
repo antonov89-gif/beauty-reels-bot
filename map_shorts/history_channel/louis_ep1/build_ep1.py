@@ -109,8 +109,10 @@ def main():
         starts = {l.split()[0]: float(l.split()[1]) for l in open(SC + "ep1_starts.txt")}; raw = SC + "ep1_mix.f32"
         r = subprocess.run(["ffmpeg", "-hide_banner", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", raw, "-af", "ebur128", "-f", "null", "-"], capture_output=True, text=True).stderr
         I = float(r.split("I:")[-1].split("LUFS")[0]); return render(SC + "ep1_v.mp4", raw, starts, -15.0 - I, I, starts["END"] + END)
+    DUB = os.environ.get("DUB")                                         # dub audio track (build_dub.py voices): same sound design, the picture of cut E is reused (stream copy)
     rng = np.random.default_rng(4); t_scene = {}; mixes = []; segs = []; starts = {}; t = 0.0
     for cid, name, sc, vsrc, msrc, grade, dk in CLIPS:
+        if DUB and vsrc != "SILENT": vsrc = SC + f"dub_{DUB}_{cid}.f32"
         p, d, mix, n = clip_mix(cid, name, sc, vsrc, msrc, dk, t_scene, rng)
         h0, t0_ = (round(x * 24) / 24 for x in TRIM.get(cid, (0, 0)))   # whole frames, so picture and sound stay in step over 15 segments
         mix = mix[:, int(round(h0 * SR)):int(round((d - t0_) * SR))]; d = mix.shape[1] / SR
@@ -118,12 +120,22 @@ def main():
         li = lufs2(mix); lg = float(np.clip(LEVEL.get(cid, -17.8) - li, -4, 4)) if cid not in LEVEL else LEVEL[cid] - li; mix = mix * S.db(lg)
         mixes.append(mix); starts[cid] = t; t += d
         g = SC + f"ep1_{cid}_g.mp4"                                     # graded picture, same encoder settings for every segment (concat by stream copy)
+        if DUB: print(f"{cid}: {d:.2f} s, mix {li:.1f} LUFS, level {lg:+.1f} dB", flush=True); continue
         subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", f"{h0:.3f}", "-t", f"{d:.3f}", "-i", p, "-an", "-vf", f"scale=1080:1920,setsar=1,fps=24,{grade}{extra_v(cid)},format=yuv420p", "-c:v", "libx264", "-crf", "17", "-preset", "medium", "-r", "24", g], check=True)
         segs.append(g); print(f"{cid} {name}: {d:.2f} s at {starts[cid]:.2f}, foley/knocks {n}, mix {li:.1f} LUFS, level {lg:+.1f} dB", flush=True)
     # end card: the gallery bed fades out under the text on black
     L = int(SR * END); bi, bst, blv = BED["D"][0]; y = S.src(bi)[:, int((bst + t_scene["D"]) * SR):int((bst + t_scene["D"]) * SR) + L]
     endmix = y / (np.sqrt((y ** 2).mean()) + 1e-9) * S.db(blv - 4) * np.linspace(1, 0, L)[None, :]; mixes.append(endmix.astype(np.float32)); starts["END"] = t; t += END
     ge = SC + "ep1_END_g.mp4"
+    if DUB:
+        allmix = np.concatenate(mixes, axis=1); raw = SC + f"ep1_mix_{DUB}.f32"; open(raw, "wb").write(allmix.T.astype(np.float32).tobytes())
+        r = subprocess.run(["ffmpeg", "-hide_banner", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", raw, "-af", "ebur128", "-f", "null", "-"], capture_output=True, text=True).stderr
+        I = float(r.split("I:")[-1].split("LUFS")[0]); a_out = F + f"EP1_{TAG}_audio_{DUB}.m4a"; v_out = F + f"EP1_full_{TAG}_{DUB}.mp4"
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", raw, "-af", f"volume={-15.0 - I:.2f}dB,alimiter=limit=0.89:attack=5:release=80:level=disabled",
+                        "-c:a", "aac", "-b:a", "256k", "-ar", "48000", a_out], check=True)
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", F + f"EP1_full_{TAG}.mp4", "-i", a_out, "-map", "0:v", "-map", "1:a", "-c", "copy", "-shortest", "-movflags", "+faststart",
+                        "-metadata:s:a:0", f"language={ {'fr': 'fra', 'es': 'spa', 'ru': 'rus'}.get(DUB, DUB) }", v_out], check=True)
+        print(a_out, v_out, f"{t:.2f} s; mix {I:.1f} LUFS -> -15"); return
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", f"color=c=black:s=1080x1920:r=24:d={END}", "-vf", "format=yuv420p", "-c:v", "libx264", "-crf", "17", "-preset", "medium", "-r", "24", ge], check=True); segs.append(ge)
     allmix = np.concatenate(mixes, axis=1); raw = SC + "ep1_mix.f32"; open(raw, "wb").write(allmix.T.astype(np.float32).tobytes())
     r = subprocess.run(["ffmpeg", "-hide_banner", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", raw, "-af", "ebur128", "-f", "null", "-"], capture_output=True, text=True).stderr

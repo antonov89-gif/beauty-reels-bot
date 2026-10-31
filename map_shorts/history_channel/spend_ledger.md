@@ -107,3 +107,6 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 30.10 | C01 v3 TEST on Seedance 2.0 r2v 720p, 13 s (owner "Сиденс 2.0 делай"; task 8f898832) | $1.638 (usage.cost) |
 | 30.10 | C01 v3 TEST on Kling 4.0 i2v 1080p, 13 s (owner "Запускай сразу клинг 4"; task ea2d34aa) | $2.8275 (usage.cost) |
 | 30.10 | C01 v3 test total (Seedance 2.0 + Kling 4.0, Lite not run) | $4.4655 + 0.23 RUB |
+| 31.10 | Episode 1 dub voice, Lumean ElevenLabs v4 locked voice: French (native) 2743 chars | 0.96 RUB |
+| 31.10 | Episode 1 dub voice: Spanish (French accent) 2719 chars | 0.95 RUB |
+| 31.10 | Episode 1 dub voice: Russian (French accent) 2646 chars (owner "Делай" to the three named orders) | 0.92 RUB |
