@@ -24,6 +24,7 @@ CLIPS += [(c, f"{c}R_final", "C" if c in ("C09", "C10") else "D", SC + f"{c}R_fi
 CLIPS += [("C11", "C11_burst", "C", "SILENT", None, GRADE, [(0, .2)])]
 CLIPS += [(c, f"{c}R_final", "D", SC + f"{c}R_final_voice48.f32", SC + f"{c}R_final_rest48.f32", GRADE_LITE, [(0, d)]) for c, d in (("C12", .2), ("C13", .1), ("C14", .2), ("C15", .2))]
 END = 2.0                                                               # end card length, s
+AI_MARK = os.environ.get("AI_MARK", "0") == "1"                         # owner 31.10 "Убери надпись Аи генератор": no corner mark; AI disclosure stays on the end card, in the description and the YouTube altered/synthetic flag
 BED = dict(S.BED); BED["D"] = [("3433", 100.0, -43)]                   # D = Hall of Mirrors: a later, calmer part of Chambord Castle #3 (3432 was tried: steady 1050/1570 Hz tones in 7-8 % of frames, possibly music: not used)
 LEVEL = {"C11": -27.0}                                                  # per-clip mix loudness before the one episode gain: speech clips to -17.8 LUFS (gain clamped +-4 dB), the wordless burst lower
 FOLEY = [f for f in S.FOLEY if f[0] != "C01"]                           # C02-C08 foley as in the C01-C08 cut; C01 is the new Kling take
@@ -92,6 +93,10 @@ def lufs2(mix):
 
 
 def main():
+    if os.environ.get("OVERLAY_ONLY"):                                  # re-render only the overlays from the last run's picture, mix and timeline (scratchpad)
+        starts = {l.split()[0]: float(l.split()[1]) for l in open(SC + "ep1_starts.txt")}; raw = SC + "ep1_mix.f32"
+        r = subprocess.run(["ffmpeg", "-hide_banner", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", raw, "-af", "ebur128", "-f", "null", "-"], capture_output=True, text=True).stderr
+        I = float(r.split("I:")[-1].split("LUFS")[0]); return render(SC + "ep1_v.mp4", raw, starts, -15.0 - I, I, starts["END"] + END)
     rng = np.random.default_rng(4); t_scene = {}; mixes = []; segs = []; starts = {}; t = 0.0
     for cid, name, sc, vsrc, msrc, grade, dk in CLIPS:
         p, d, mix, n = clip_mix(cid, name, sc, vsrc, msrc, dk, t_scene, rng)
@@ -110,7 +115,12 @@ def main():
     I = float(r.split("I:")[-1].split("LUFS")[0]); gain = -15.0 - I
     lst = SC + "ep1_list.txt"; open(lst, "w").write("".join(f"file '{s}'\n" for s in segs)); vcat = SC + "ep1_v.mp4"
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", vcat], check=True)
-    dt = [f"drawtext=fontfile={SANS}:text='AI-GENERATED':fontsize=28:fontcolor=white@0.85:x=60:y=210:box=1:boxcolor=black@0.45:boxborderw=8:enable='lt(t,{starts['END']:.2f})'"]
+    open(SC + "ep1_starts.txt", "w").write("\n".join(f"{k} {v:.3f}" for k, v in starts.items()))
+    render(vcat, raw, starts, gain, I, t)
+
+
+def render(vcat, raw, starts, gain, I, t):
+    dt = [f"drawtext=fontfile={SANS}:text='AI-GENERATED':fontsize=28:fontcolor=white@0.85:x=60:y=210:box=1:boxcolor=black@0.45:boxborderw=8:enable='lt(t,{starts['END']:.2f})'"] if AI_MARK else []
     for i, (cid, a, b, text) in enumerate(PLATES):
         tf = SC + f"ep1_plate_{i}.txt"; open(tf, "w").write(text.replace("|", "\n"))
         dt.append(f"drawtext=fontfile={SERIF}:textfile={tf}:expansion=none:fontsize=50:line_spacing=10:fontcolor=white:x=(w-text_w)/2:y=1250:box=1:boxcolor=black@0.55:boxborderw=18"
@@ -123,8 +133,7 @@ def main():
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", vcat, "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", raw, "-filter_complex",
                     f"[0:v]{','.join(dt)}[v];[1:a]volume={gain:.2f}dB,alimiter=limit=0.89:attack=5:release=80:level=disabled[a]", "-map", "[v]", "-map", "[a]",
                     "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-c:a", "aac", "-b:a", "320k", "-ar", "48000", "-movflags", "+faststart", out], check=True)
-    open(SC + "ep1_starts.txt", "w").write("\n".join(f"{k} {v:.3f}" for k, v in starts.items()))
-    print(out, f"{t:.2f} s; mix {I:.1f} LUFS, gain {gain:+.2f} dB")
+    print(out, f"{t:.2f} s; mix {I:.1f} LUFS, gain {gain:+.2f} dB; corner AI mark {'ON' if AI_MARK else 'OFF'}")
 
 
 if __name__ == "__main__":

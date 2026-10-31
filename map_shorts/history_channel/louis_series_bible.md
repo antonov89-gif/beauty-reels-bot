@@ -60,3 +60,7 @@ From C12 on (and in every redo of C01-C08, C13-C15), measured against the refere
 3. Air: about 14-15 words per 8-9 s (reference 83-99 wpm), 1-2 real pauses of 0.6-1 s, one before the turn.
 4. Range: now and then a soft moment (he laughs at himself), not only arrogance.
 5. Facts stay with two sources; legends only as rumours he denies (and say so in the description).
+
+
+## AI disclosure on screen (owner 31.10: "Убери надпись Аи генератор")
+No persistent corner "AI-GENERATED" mark on the history-channel videos. Disclosure stays: the end-card line "AI-generated comedy reconstruction", the first line of the description (visuals and voice AI-generated, dialogue invented for comedy) and the YouTube altered/synthetic content flag (and TikTok AI-generated label) at upload.
