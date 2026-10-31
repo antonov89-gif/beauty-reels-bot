@@ -50,8 +50,8 @@ LOUIS: "Look. He eats with his fingers now. [pause] Last week he had a silver fo
 
 **C08 (1:03-1:11)**
 He points the greasy pheasant leg at the lens.
-LOUIS: "You. Fork or fingers? Comments. [pause] Wrong answers go to the Bastille."
-(«Вы. Вилка или пальцы? В комментарии. Неправильные ответы поедут в Бастилию.»)
+LOUIS: "And you? How do you eat, with a fork or with your fingers? [pause] Write it in the comments. [pause] Wrong answers go to the Bastille."
+(«А вы как едите? Вилкой или пальцами? Напишите в комментариях. Неправильные ответы поедут в Бастилию.»)
 
 ## Setup 4. The drink (1:11-1:37)
 
