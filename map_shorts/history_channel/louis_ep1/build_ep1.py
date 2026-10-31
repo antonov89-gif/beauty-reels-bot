@@ -134,7 +134,7 @@ def main():
         subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", raw, "-af", f"volume={-15.0 - I:.2f}dB,alimiter=limit=0.89:attack=5:release=80:level=disabled",
                         "-c:a", "aac", "-b:a", "256k", "-ar", "48000", a_out], check=True)
         subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", F + f"EP1_full_{TAG}.mp4", "-i", a_out, "-map", "0:v", "-map", "1:a", "-c", "copy", "-shortest", "-movflags", "+faststart",
-                        "-metadata:s:a:0", f"language={ {'fr': 'fra', 'es': 'spa', 'ru': 'rus'}.get(DUB, DUB) }", v_out], check=True)
+                        "-metadata:s:a:0", f"language={ {'fr': 'fra', 'es': 'spa', 'ru': 'rus', 'pt': 'por', 'zh': 'zho'}.get(DUB, DUB) }", v_out], check=True)
         print(a_out, v_out, f"{t:.2f} s; mix {I:.1f} LUFS -> -15"); return
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", f"color=c=black:s=1080x1920:r=24:d={END}", "-vf", "format=yuv420p", "-c:v", "libx264", "-crf", "17", "-preset", "medium", "-r", "24", ge], check=True); segs.append(ge)
     allmix = np.concatenate(mixes, axis=1); raw = SC + "ep1_mix.f32"; open(raw, "wb").write(allmix.T.astype(np.float32).tobytes())

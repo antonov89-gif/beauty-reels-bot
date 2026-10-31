@@ -68,6 +68,12 @@ for n, c in enumerate(CLIPS):
     for m in range(1, k):
         over = en(placed[m - 1]) + 0.06 - st(placed[m])
         if over > 0: placed[m][5] += over; placed[m][6] += over
+    clip_end = len(ref) / SR - 0.05                                     # the last phrase must end inside the clip: first faster (max 1.3), then earlier into the pause before it
+    q_ = placed[-1]
+    if en(q_) > clip_end:
+        q_[4] = max(q_[4], min(1.3, (q_[3] - q_[2]) / max(0.1, clip_end - st(q_))))
+        if en(q_) > clip_end:
+            room = st(q_) - (en(placed[-2]) + 0.02 if k > 1 else 0.0); d = min(en(q_) - clip_end, max(0.0, room)); q_[5] -= d; q_[6] -= d
     late = 0.0; cutoff = 0.0
     for cut0, cut1, a, b, tp, ea, eb in placed:
         cutoff = max(cutoff, ea + (b - a) / tp - len(ref) / SR)

@@ -110,3 +110,5 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 31.10 | Episode 1 dub voice, Lumean ElevenLabs v4 locked voice: French (native) 2743 chars | 0.96 RUB |
 | 31.10 | Episode 1 dub voice: Spanish (French accent) 2719 chars | 0.95 RUB |
 | 31.10 | Episode 1 dub voice: Russian (French accent) 2646 chars (owner "Делай" to the three named orders) | 0.92 RUB |
+| 31.10 | Episode 1 dub voice: Portuguese (Brazil, French accent) 2746 chars (owner "да") | 0.96 RUB |
+| 31.10 | Episode 1 dub voice: Chinese Mandarin (no accent tag) 1947 chars (owner "да") | 0.60 RUB |
