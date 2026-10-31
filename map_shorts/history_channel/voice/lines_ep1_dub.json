@@ -1,0 +1,51 @@
+{
+ "note": "Episode 1 dub lines (owner 31.10: 'Теперь звуковую дорожку, французский, испанскую и русскую'). Same phrase structure and pauses as the English lines (lines_ep1_emotion.json), kept about as short as the English so each phrase fits the lips at speed-up <= 1.3 (no slowing). Emotion tags stay in English (ElevenLabs v4 reads them). FR: native French (no accent tag); ES and RU: the king keeps his French accent (prefix in tts_dub.py).",
+ "fr": {
+  "C01": "[startled, then annoyed] Oups, le plafond. {{pause=0.3}} [satisfied] Voilà. {{pause=0.5}} [grand, formal] Bonjour. Je suis Louis, roi de France. {{pause=0.4}} [proud, drawling] On m'appelle le Roi-Soleil. {{pause=0.5}} [delighted, self-admiring] Oui... je suis si beau.",
+  "C02": "[conspiratorial, proud] Cent personnes me regardent me lever. {{pause=0.6}} [smug, savouring] J'appelle ça... {{pause=0.3}} la première.",
+  "C03": "[dry, bored] Le médecin. {{pause=0.2}} Le chirurgien. {{pause=0.3}} Personne ne vient pour eux. {{pause=0.7}} [smug, pleased] Tous viennent pour moi. {{pause=0.4}} [soft, satisfied] Naturellement.",
+  "C04": "[brisk] Bon, la perruque. {{pause=0.4}} [mock-tragic, a small sigh] À dix-sept ans, mes cheveux tombaient. {{pause=0.7}} [wounded pride] Je l'ai très mal pris.",
+  "C05": "[smug] On dit qu'elle me grandit. {{pause=0.7}} [lofty] Je ne regarde jamais en bas. {{pause=0.4}} [sighs contentedly]",
+  "C06": "[theatrical, savouring] Blanche, grise, un peu de poudre. {{pause=0.4}} [prophetic, grandly] Un jour, tout le monde portera ça. {{pause=0.4}} [mock-modest, chuckles] Je suis juste en avance.",
+  "C07": "[regal, bored] Saluez. Plus bas. Bien. {{pause=0.4}} [delighted, preening] Oui, c'est la nouvelle perruque. {{pause=0.3}} [arrogant] Notez bien.",
+  "C08": "[contemptuous] Tous ces gens, et nul ne parle avant moi. {{pause=0.5}} [tender, adoring] J'adore écouter. {{pause=0.3}} [snorts a laugh] Surtout moi-même.",
+  "C09": "[sharp, scandalised] Plus bas. {{pause=0.3}} Plus bas... {{pause=0.3}} [deadpan] et voilà le chapeau. {{pause=0.4}} [recovering haughtiness] Regardez-moi, pas le chapeau.",
+  "C10": "[flirtatious, teasing] Talons rouges. Pour les nobles, {{pause=0.3}} [smug] et ceux que j'aime. {{pause=0.4}} [proud] Les miens sont les plus hauts, bien sûr.",
+  "C12": "[sly, confiding] Venise gardait le secret. {{pause=0.6}} Alors on a... emprunté leurs verriers. {{pause=0.8}} [glancing at the mirrors, pleased] Désormais, chaque mur me regarde. [laughs softly at himself]",
+  "C13": "[snapping, irritated] Mon Dieu, pas derrière moi, vous gâchez mon reflet. {{pause=0.5}} [imperious, waving him off] Allez. {{pause=0.2}} Par là. {{pause=0.2}} Plus loin.",
+  "C14": "[mock-generous] La prochaine fois, je dîne en public. {{pause=0.5}} Vous pourrez regarder... [firm] sans me fixer. {{pause=0.6}} [sly, conspiratorial] Bon, un peu. {{pause=0.6}} [imperious, grand] Abonnez-vous à ma sublime chaîne.",
+  "C15": "[imperious, commanding] Un like. {{pause=0.2}} La cloche. {{pause=0.4}} [dismissive, bored] Bref, faites ce que vous voulez. {{pause=0.4}} [laughs, a cold, arrogant, haughty laugh, contemptuous] {{pause=0.4}} [gleeful, hungry] Moi, je file festoyer !"
+ },
+ "es": {
+  "C01": "[startled, then annoyed] Uy, el techo. {{pause=0.3}} [satisfied] Ya. {{pause=0.5}} [grand, formal] Bonjour. Soy Luis, rey de Francia. {{pause=0.4}} [proud, drawling] Me llaman el Rey Sol. {{pause=0.5}} [delighted, self-admiring] Sí... soy así de guapo.",
+  "C02": "[conspiratorial, proud] Cien personas me ven despertar. {{pause=0.6}} [smug, savouring] Yo lo llamo... {{pause=0.3}} el estreno.",
+  "C03": "[dry, bored] El médico. {{pause=0.2}} El cirujano. {{pause=0.3}} Nadie vino por ellos. {{pause=0.7}} [smug, pleased] Todos vinieron por mí. {{pause=0.4}} [soft, satisfied] Naturalmente.",
+  "C04": "[brisk] Ahora, la peluca. {{pause=0.4}} [mock-tragic, a small sigh] A los diecisiete se me caía el pelo. {{pause=0.7}} [wounded pride] Me lo tomé como algo personal.",
+  "C05": "[smug] Dicen que me hace más alto. {{pause=0.7}} [lofty] Nunca miro hacia abajo. {{pause=0.4}} [sighs contentedly]",
+  "C06": "[theatrical, savouring] Blanca, gris, un poco de polvo. {{pause=0.4}} [prophetic, grandly] Un día, todos llevarán esto. {{pause=0.4}} [mock-modest, chuckles] Solo me adelanté.",
+  "C07": "[regal, bored] Reverencia. Más abajo. Bien. {{pause=0.4}} [delighted, preening] Sí, es la peluca nueva. {{pause=0.3}} [arrogant] Tomen nota.",
+  "C08": "[contemptuous] Tanta gente, y nadie habla antes que yo. {{pause=0.5}} [tender, adoring] Me encanta escuchar. {{pause=0.3}} [snorts a laugh] Sobre todo a mí.",
+  "C09": "[sharp, scandalised] Más abajo. {{pause=0.3}} Más abajo... {{pause=0.3}} [deadpan] y ahí va el sombrero. {{pause=0.4}} [recovering haughtiness] Mírenme a mí, no al sombrero.",
+  "C10": "[flirtatious, teasing] Tacones rojos. Solo nobles, {{pause=0.3}} [smug] y solo los que me gustan. {{pause=0.4}} [proud] Los míos, los más altos, claro.",
+  "C12": "[sly, confiding] Venecia guardaba el secreto. {{pause=0.6}} Así que... les pedimos prestados sus vidrieros. {{pause=0.8}} [glancing at the mirrors, pleased] Ahora cada pared me mira. [laughs softly at himself]",
+  "C13": "[snapping, irritated] Mon Dieu, no se ponga detrás, me arruina el reflejo. {{pause=0.5}} [imperious, waving him off] Váyase. {{pause=0.2}} Allí. {{pause=0.2}} Más lejos.",
+  "C14": "[mock-generous] La próxima vez, ceno en público. {{pause=0.5}} Pueden mirar... [firm] pero sin mirar fijo. {{pause=0.6}} [sly, conspiratorial] Bueno, un poquito. {{pause=0.6}} [imperious, grand] Suscríbanse a mi espléndido canal.",
+  "C15": "[imperious, commanding] Denle like. {{pause=0.2}} La campanita. {{pause=0.4}} [dismissive, bored] En fin, hagan lo que quieran. {{pause=0.4}} [laughs, a cold, arrogant, haughty laugh, contemptuous] {{pause=0.4}} [gleeful, hungry] ¡Me voy a darme un festín!"
+ },
+ "ru": {
+  "C01": "[startled, then annoyed] Ой, потолок. {{pause=0.3}} [satisfied] Вот. {{pause=0.5}} [grand, formal] Бонжур. Я Людовик, король Франции. {{pause=0.4}} [proud, drawling] Меня зовут Король-Солнце. {{pause=0.5}} [delighted, self-admiring] Да... я настолько красив.",
+  "C02": "[conspiratorial, proud] Сто человек смотрят, как я встаю. {{pause=0.6}} [smug, savouring] Я зову это... {{pause=0.3}} премьерой.",
+  "C03": "[dry, bored] Врач. {{pause=0.2}} Хирург. {{pause=0.3}} К ним никто не пришёл. {{pause=0.7}} [smug, pleased] Все пришли ко мне. {{pause=0.4}} [soft, satisfied] Естественно.",
+  "C04": "[brisk] Теперь парик. {{pause=0.4}} [mock-tragic, a small sigh] В семнадцать я начал лысеть. {{pause=0.7}} [wounded pride] Я принял это лично.",
+  "C05": "[smug] Говорят, он делает меня выше. {{pause=0.7}} [lofty] Я не смотрю вниз. {{pause=0.4}} [sighs contentedly]",
+  "C06": "[theatrical, savouring] Белый, седой, немного пудры. {{pause=0.4}} [prophetic, grandly] Однажды все будут это носить. {{pause=0.4}} [mock-modest, chuckles] Я просто пришёл раньше.",
+  "C07": "[regal, bored] Поклон. Ниже. Хорошо. {{pause=0.4}} [delighted, preening] Да, это новый парик. {{pause=0.3}} [arrogant] Записывайте.",
+  "C08": "[contemptuous] Столько людей, и никто не смеет говорить первым. {{pause=0.5}} [tender, adoring] Обожаю слушать. {{pause=0.3}} [snorts a laugh] Себя, в основном.",
+  "C09": "[sharp, scandalised] Ниже. {{pause=0.3}} Ниже... {{pause=0.3}} [deadpan] ну вот, шляпа улетела. {{pause=0.4}} [recovering haughtiness] Смотрите на меня, не на шляпу.",
+  "C10": "[flirtatious, teasing] Красные каблуки. Только дворянам, {{pause=0.3}} [smug] и только любимчикам. {{pause=0.4}} [proud] Мои, конечно, самые высокие.",
+  "C12": "[sly, confiding] Венеция хранила секрет. {{pause=0.6}} Ну а мы... одолжили их стекольщиков. {{pause=0.8}} [glancing at the mirrors, pleased] Теперь на меня смотрит каждая стена. [laughs softly at himself]",
+  "C13": "[snapping, irritated] Mon Dieu, не стойте сзади, вы портите отражение. {{pause=0.5}} [imperious, waving him off] Идите. {{pause=0.2}} Туда. {{pause=0.2}} Дальше.",
+  "C14": "[mock-generous] В следующий раз я ужинаю при всех. {{pause=0.5}} Смотреть можно... [firm] но не пялиться. {{pause=0.6}} [sly, conspiratorial] Ну, чуть-чуть. {{pause=0.6}} [imperious, grand] Подписывайтесь на мой роскошный канал.",
+  "C15": "[imperious, commanding] Лайк. {{pause=0.2}} Колокольчик. {{pause=0.4}} [dismissive, bored] А впрочем, делайте что хотите. {{pause=0.4}} [laughs, a cold, arrogant, haughty laugh, contemptuous] {{pause=0.4}} [gleeful, hungry] А я пошёл пировать!"
+ }
+}
