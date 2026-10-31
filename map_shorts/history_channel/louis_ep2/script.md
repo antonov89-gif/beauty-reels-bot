@@ -65,8 +65,10 @@ Plate: GLASSES WERE BROUGHT ONLY WHEN THE KING ASKED
 **C10 (1:19-1:27)**
 The cup reaches him at last, Marcel bumps the table, wine splashes over the lens. A red blur, silence. Louis laughs, for real, at himself.
 MARCEL (quietly): "Sorry, Sire."
-LOUIS: "[laughs] Mon Dieu. [pause] Leave it. Nobody saw anything."
-(Марсель: «Простите, сир.» Людовик: «[смеётся] Боже мой. Оставь. Никто ничего не видел.»)
+LOUIS: "[laughs] Mon Dieu. [pause] Leave it. Nobody saw anything. [pause] And nobody will see you again."
+Marcel freezes, eyes wide, terrified. A beat of silence.
+LOUIS: "[laughs] I'm joking."
+(Марсель: «Простите, сир.» Людовик: «[смеётся] Боже мой. Оставь. Никто ничего не видел. И тебя больше никто не увидит.» Испуганный взгляд Марселя, пауза. Людовик: «[смеётся] Шучу.»)
 
 **C11 (1:27-1:37)**
 He wipes the lens with his sleeve and turns the phone towards Marcel, who reads the comments over his shoulder.
