@@ -118,3 +118,4 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 31.10 | Ep.2 set master frame (table + crowd + king), Nano Banana Pro 4K 9:16 (owner "Да да"; task in louis_ep2/frames/master_table_4k.jpg.task_id) | $0.12 (usage.cost) |
 | 31.10 | Ep.2 set master v2 (only the wig changed to the tall one, same face), Nano Banana Pro 4K 9:16 (owner "Сделай"; one call) | $0.12 (usage.cost) |
 | 31.10 | Ep.2 set master v3 (face fix: young narrow face, both eyes open; tall wig kept), Nano Banana Pro 4K 9:16 (owner "Это ужас, переделай и проверь"; one call) | $0.12 (usage.cost) |
+| 31.10 | Ep.2 set master v4 (haughty face and wig from the owner's C08/C09 reference), Nano Banana Pro 4K 9:16 (owner "Да" to the named route and $0.12; one call) | $0.12 (usage.cost) |
