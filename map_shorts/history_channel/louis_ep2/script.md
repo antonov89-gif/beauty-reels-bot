@@ -31,8 +31,8 @@ Plate: A FEW HIGH-RANKING LADIES SAT IN FRONT, THE REST STOOD
 ## Setup 3. The first course (0:37-1:11)
 
 **C05 (0:37-0:47)**
-The phone is back in his hand. A servant puts down soup; he eats it straight from the bowl. A second bowl arrives, then a third.
-LOUIS: "My sister-in-law says I eat four bowls of soup. [pause, a third bowl arrives] She can't count."
+The phone is back in his hand. Beside him four empty soup bowls already stand in a stack; he eats from a fifth straight from the bowl.
+LOUIS: "My sister-in-law says I eat four bowls of soup. [pause, a servant puts down a sixth] She can't count."
 («Невестка говорит, что я съедаю четыре тарелки супа. Она не умеет считать.»)
 Plate: HIS SISTER-IN-LAW WROTE: 4 SOUPS, A WHOLE PHEASANT, A PARTRIDGE, A BIG SALAD, AND MORE
 
@@ -66,7 +66,7 @@ Plate: GLASSES WERE BROUGHT ONLY WHEN THE KING ASKED
 The cup reaches him at last, Marcel bumps the table, wine splashes over the lens. A red blur, silence. Louis laughs, for real, at himself.
 MARCEL (quietly): "Sorry, Sire."
 LOUIS: "[laughs] Mon Dieu. [pause] Leave it. Nobody saw anything. [pause] And nobody will see you again."
-Marcel freezes, eyes wide, terrified. A beat of silence.
+He turns the red-smeared phone onto Marcel: Marcel freezes, eyes wide, terrified. A beat of silence.
 LOUIS: "[laughs] I'm joking."
 (Марсель: «Простите, сир.» Людовик: «[смеётся] Боже мой. Оставь. Никто ничего не видел. И тебя больше никто не увидит.» Испуганный взгляд Марселя, пауза. Людовик: «[смеётся] Шучу.»)
 

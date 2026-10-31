@@ -11,8 +11,8 @@ Internal file (not part of the script). Status: [2S] two independent sources, [1
 | C09 | No glass on the table; brought on request | [1S official] | chateauversailles.fr ("Glasses... only provided upon request"). "A drink for the King!" is a dramatisation |
 | Burst | Order: soup and starters, roasts and salads, sweets, fruit | [1S official] | chateauversailles.fr |
 | C12 | 1696 letter on the court's craze for peas | [2S] letter; author disputed (Maintenon, sometimes Sévigné) | bernardaud.com "Les petits pois du roi"; louis_hooks_unique.md (30.10 check). Plate gives no author |
-| C15 | Surgeon Félix practised before the 1686 operation | [2S] | louis_hooks_unique.md (30.10); no number in the line |
-| C04, C07, C08, C10, C11, C13, C14 | Marcel filming, courtier copying, Bastille joke, wine on the lens, comments read by Marcel, "long day", the button, Marcel and the partridge | invented scenes | comedy, no claim |
+| C16 | Surgeon Félix practised before the 1686 operation | [2S] | louis_hooks_unique.md (30.10); no number in the line |
+| C04, C07, C08, C10, C11, C13, C14, C15 | Marcel filming, courtier copying, Bastille joke, wine on the lens and the threat to Marcel, comments read by Marcel, "born for happiness" (comic: the real Louis was known as a hard-working king), "long day", the button, Marcel and the partridge | invented scenes | comedy, no claim |
 
 Before generation: a second source for C04, C09 and the burst plate, or keep the plates as written (official site wording, attributed in the description).
 Description must say: comedy reconstruction, AI visuals and voice, dialogue invented; quote attributed to Princess Palatine; the peas letter's author is disputed; the cupbearer's call and the wine accident are invented.
