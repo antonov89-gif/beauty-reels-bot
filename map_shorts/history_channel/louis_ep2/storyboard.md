@@ -16,7 +16,7 @@ Antechamber, evening, candlelight only, one long white-clothed table, the king's
 | Mirror | in his hand C14-C15 |
 
 ## Takes
-Route: K = Kling 4.0 i2v 1080p ($0.2175/s, exact first frame; solo king), S = Seedance 2.0 r2v 720p ($0.126/s; Marcel or crowd action). Length = planned; the pilot may change merged takes.
+Route (owner 31.10: everything at 720p): K = Kling 4.0 i2v 720p ($0.145/s, exact first frame; solo king), S = Seedance 2.0 720p ($0.126/s; Marcel or crowd action); Seedance 2.5 720p (full $0.2205/s, Lite $0.15/s) only as the fallback for a take where 2.0 fails. First frames: Nano Banana Pro. Length = planned; the pilot may change merged takes.
 | # | Time / s | Route | Frame and action | Clumsy camera moment | Risk and the fix |
 |--|--|--|--|--|--|
 | C01 | 0:00 / 11 | K | Ceiling with candle smoke, swing down to his face at the head of the table | fast tilt overshoots to the chin | as ep.1 C01 method |

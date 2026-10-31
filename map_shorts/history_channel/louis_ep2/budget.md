@@ -25,3 +25,10 @@ Context (spend_ledger.md): ep.1 cost about $67 confirmed, of which about $57 wer
 - Seedance 2.0 r2v on takes with Marcel or the crowd C03, C04, C06, C08, C09, C10, C13 = 68 s x $0.126 = $8.6.
 - Video raw $25.3; with 30 % re-takes $32.9. Frames: about 16 first frames + re-takes = about 22 generations on Nano Banana Pro (2K $0.09, a few 4K $0.12) = about $2.2. Voice and 5 dubs about 5.5 RUB.
 - **Total about $35 with re-takes (about $28 without).** Estimated; the real speech length (and so the take lengths) is known only after the TTS.
+
+## Owner decision 31.10: all video at 720p, frames on Nano Banana Pro
+Prices read on apipod.ai/pricing 31.10: Kling 4.0 i2v 720p $0.145/s (1080p $0.2175); Seedance 2.0 i2v 720p $0.126/s (r2v charged $0.126/s in ep.1; r2v price not shown on the page); Seedance 2.5 720p $0.2205/s, Lite $0.15/s (with a reference video the 2.5 rates drop to $0.1323 / $0.09); Nano Banana Pro 2K $0.09, 4K $0.12.
+- Kling 720p on 77 s of solo-king takes = $11.2. Seedance 2.0 720p on 68 s of Marcel/crowd takes = $8.6. Raw video **$19.8**; with 30 % re-takes **$25.7** (a re-take on Seedance 2.5 full instead of 2.0 adds $0.09 per second).
+- Frames: about 22 Nano Banana Pro generations (mostly 2K, the set master in 4K) = about $2.2.
+- Voice and 5 dubs about 5.5 RUB (about $0.07).
+- **Total about $28 with re-takes (about $22 without)**, $7 less than the 1080p Kling plan. Trade-off: Kling at 720p is softer than the 1080p we used for ep.1 C01; the grade (sharpen, grain) is applied anyway, and the pilot checks the texture number against the 887-1790 range of earlier clips.
