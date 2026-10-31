@@ -32,8 +32,8 @@ Plate: A FEW HIGH-RANKING LADIES SAT IN FRONT, THE REST STOOD
 
 **C05 (0:37-0:47)**
 The phone is back in his hand. A servant puts down soup; he eats it straight from the bowl. A second bowl arrives, then a third.
-LOUIS: "The soup walks here from the kitchen. [pause] It arrives tired. [pause] My sister-in-law counts my bowls in her letters. Four. [pause] She's being kind."
-(«Суп идёт сюда пешком с кухни. Приходит уставшим. Невестка считает мои тарелки в письмах. Четыре. Это она по доброте.»)
+LOUIS: "My sister-in-law says I eat four bowls of soup. [pause, a third bowl arrives] She can't count."
+(«Невестка говорит, что я съедаю четыре тарелки супа. Она не умеет считать.»)
 Plate: HIS SISTER-IN-LAW WROTE: 4 SOUPS, A WHOLE PHEASANT, A PARTRIDGE, A BIG SALAD, AND MORE
 
 **C06 (0:47-0:55)**
