@@ -1,0 +1,8 @@
+# Ep.2 reference_check (statuses: GENERATED / INSPECTED / APPROVED)
+## Voice (31.10)
+- King C02-C14: tts_ep2/C02-C14.mp3, 91.0 s of audio incl. pauses, 31 phrases (energy runs). GENERATED; NOT LISTENED TO by me beyond duration and phrase count; NOT APPROVED. Opener (tts_ep1/C01.mp3, 10.6 s) and outro (tts_ep1/C15.mp3, 7.4 s) reused.
+- Marcel tts_ep2/marcel.mp3 (14.1 s with 2-s gaps), cupbearer tts_ep2/cupbearer.mp3 (1.9 s). GENERATED; NOT APPROVED. AI voices, disclosed.
+- Length estimate: king 91 + 10.6 + 7.4 = 109 s of speech, Marcel/cupbearer about 8 s, burst 6 s, silent beats: the episode lands near 2:20-2:35, below 3:00 with no cuts needed. To be confirmed on the assembled cut.
+## Set master frame (31.10), Nano Banana Pro 4K 3072x5504, $0.12
+- File frames/master_table_4k.jpg (1440 px copy master_table_1440.jpg, face check master_vs_face_check.jpg). GENERATED. INSPECTED by me on the frame: photoreal selfie, the long table with white cloth, gold plates, candelabra, standing crowd in plain wigs, ladies seated at the right, empty folding stools in the foreground, painted ceiling, black windows; the king in the scarlet coat with gold suns, white lace cravat, white wig, pink rouge, upturned moustache, light eyes.
+- Face vs face_front_talking.jpg: same moustache shape, light eyes, long nose, narrow face; he reads slightly older and heavier than the face master and the beauty spot beside the mouth is not visible. Soft defects: the napkin is not visible (only the lace cravat), the wig is moderate height, not as tall as tall_wig_ref, the phone hand is a closed fist without the phone in frame (fine for a selfie), the front-row ladies sit on chairs along the table rather than on the folding stools in front. NOT APPROVED by the owner.
