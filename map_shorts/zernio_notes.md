@@ -28,3 +28,8 @@ The Metricool copies of all 11 were set to DRAFT (not deleted) so nothing posts 
 Own uploads: POST /media/presign -> PUT the file to uploadUrl -> use publicUrl (media.zernio.com/temp/...). Zernio moves the file from temp/ to media/ when the post is created (seen 25.10).
 | 29.10 14:00 | Dahala Khagrabari (text+music, 16.9 s, audited PASS 25.10; moved from 10:00 on 25.10, slot clash with Canberra) | YT+TT |
 | (draft) | AI cinema animation v2: humpback whale, rejected by the owner, draft until v3 | YT+TT |
+
+## History channel accounts (31.10, owner: "на zernio нужно создать аккаунт тик ток")
+- Tried: POST /profiles ("History POV - Louis XIV (NOT Mr. Buck)") and GET /connect/tiktok: both refused 402 PAYMENT_REQUIRED "Add a payment method to connect more than 2 accounts" (free_tier_account_limit 2, current 2 = Mr. Buck YouTube + TikTok, has_payment_method false). Nothing was created, nothing charged.
+- Zernio pricing (zernio.com/pricing, read 31.10): accounts 1-2 free, accounts 3-10 $6/month each, no per-post charge. History channel TikTok = account 3 ($6/mo); its YouTube = account 4 (another $6/mo).
+- Owner's steps: (1) create the TikTok account in the TikTok app (a Zernio connect only links an existing account); (2) add a payment method: https://zernio.com/dashboard/billing?add_payment_method=1 ; (3) tell Claude: it creates the separate profile and sends the TikTok authUrl (GET /connect/tiktok?profileId=...), the owner logs in and approves; (4) GET /accounts confirms; the history videos then post ONLY to that profile's accounts, never to Mr. Buck.
