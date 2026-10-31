@@ -1,5 +1,5 @@
 # Publication package: Louis XIV Vlog #1 "My Morning" (history channel, NOT Mr. Buck), 31.10.2026
-File: `frames/EP1_full_E.mp4` (2:09.5, 1080x1920, 24 fps, -15.0 LUFS; not committed; one voice: our licensed v3 TTS in every clip). Captions: `EP1_en.srt` (42 cues, script text, ASR timing). Cover: `EP1_cover_96s.png` (frame at 96.2 s).
+File: `frames/EP1_full_E.mp4` (2:09.5, 1080x1920, 24 fps, -15.0 LUFS; not committed; one voice: our licensed v3 TTS in every clip). Captions: `EP1_en.srt` (42 cues, script text, ASR timing on cut E) + translations with the same timing: `EP1_fr.srt`, `EP1_es.srt`, `EP1_ru.srt`, `EP1_de.srt`, `EP1_zh-Hans.srt`, `EP1_hi.srt` (make_srt_translations.py; translated by Claude for the character, NOT checked by native speakers). Cover: `EP1_cover_96s.png` (frame at 96.2 s).
 Status: ready except the channel account (Zernio has only Mr. Buck; this video must never go there). The voice licence item is closed (cut E, audit 31.10).
 
 ## 1. Title (<= 60 chars, one emoji, series tag)
@@ -36,7 +36,7 @@ SEO note: captions file uploaded (EN .srt); the reference channel uses burned-in
 96.2 s: the king in the Hall of Mirrors, scarlet coat with gold suns, the tall wig, ringed hand on the chest, mirrors and chandeliers behind; face large and sharp, no plate text in frame, nothing cut by the Shorts UI. Exported: `EP1_cover_96s.png` (1080x1920). On mobile the Shorts cover is chosen from the video timeline: pick 1:36.
 
 ## 5. Upload form
-- YouTube: Made for kids NO; paid promotion NO; altered or synthetic content YES (realistic AI people, place and voice); category Comedy; language English; captions: upload `EP1_en.srt` (English); comments ON; licence Standard YouTube.
+- YouTube: Made for kids NO; paid promotion NO; altered or synthetic content YES (realistic AI people, place and voice); category Comedy; language English; captions: upload `EP1_en.srt` (English) and the six translations (French fr, Spanish es, Russian ru, German de, Chinese Simplified zh-Hans, Hindi hi) under Subtitles; the burned-in fact plates stay English; comments ON; licence Standard YouTube.
 - TikTok: AI-generated content label ON; caption: "Bonjour. 100 people watch me wake up. 👑 AI comedy reconstruction, facts in the plates. #louisxiv #versailles #history #funnyhistory #fyp"; no trending sound added (the video has no music, keep it that way).
 - Instagram Reels: "AI info" label ON, same caption.
 - After scheduling: read the post back and confirm the AI flags.
