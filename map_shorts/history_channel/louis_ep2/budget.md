@@ -1,4 +1,4 @@
-# Ep.2 budget (31.10.2026). Nothing here is ordered.
+# Ep.2 budget (31.10.2026, updated for script draft 4). Nothing here is ordered.
 Prices: images from apipod.ai/pricing read 31.10 (Nano Banana Pro 1K $0.06 / 2K $0.09 / 4K $0.12; Nano Banana 2 2K $0.06; Nano Banana 2.1 2K $0.04 (our current); GPT Image 2.5 Sunburst/Flare are token-based, per-image price NOT VERIFIED). Video: $/s from model_choice.md and spend_ledger.md (Seedance 2.0 r2v 720p $0.126; Seedance 2.5 Lite r2v $0.15; Kling 4.0 i2v 1080p $0.2175), to be re-checked on the provider before each order. Charges with audio input are NOT VERIFIED beyond what ep.1 showed.
 
 ## Frames (about 29 first/reference images + about 40 % re-takes = about 40 generations)
@@ -19,3 +19,9 @@ Prices: images from apipod.ai/pricing read 31.10 (Nano Banana Pro 1K $0.06 / 2K 
 ## Everything for ep.2 (recommended: mixed route + Nano Banana Pro 2K)
 Frames $3.6 + video $36.4 (with re-takes) + voice about 1 RUB + dubs in 5 languages about 4.5 RUB (about $0.07) = about **$40**; without re-takes about $32. Cheapest sensible: Seedance 2.0 everywhere + Nano Banana 2.1 = about $28. Top quality: Kling everywhere + Pro 4K = about $50.
 Context (spend_ledger.md): ep.1 cost about $67 confirmed, of which about $57 were the replaced draft clips.
+
+## Update for draft 4 (15 takes, 145 s generated of 151 s)
+- Kling 4.0 i2v on solo-king takes C01, C02, C05, C07, C11, C12, C14, C15 = 77 s x $0.2175 = $16.7.
+- Seedance 2.0 r2v on takes with Marcel or the crowd C03, C04, C06, C08, C09, C10, C13 = 68 s x $0.126 = $8.6.
+- Video raw $25.3; with 30 % re-takes $32.9. Frames: about 16 first frames + re-takes = about 22 generations on Nano Banana Pro (2K $0.09, a few 4K $0.12) = about $2.2. Voice and 5 dubs about 5.5 RUB.
+- **Total about $35 with re-takes (about $28 without).** Estimated; the real speech length (and so the take lengths) is known only after the TTS.

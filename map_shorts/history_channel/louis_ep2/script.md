@@ -1,121 +1,116 @@
-# Louis XIV Vlog #2 "Dinner in Public": script (draft 3, 31.10.2026)
-About 2:50. Evening, Versailles, the king's public dinner. He films himself on a phone, as in episode 1; he hands the phone to Marcel once. He talks to the viewers as if they stood in the crowd. Few words, long beats: the picture finishes the joke. Lines are spoken in English; the Russian is for the owner only. No music.
+# Louis XIV Vlog #2 "Dinner in Public": script (draft 4, 31.10.2026)
+About 2:30. Evening, Versailles, the king's public dinner. He films himself on a phone, as in episode 1, and hands it to Marcel twice. He talks to the viewers as if they stood in the crowd. Short lines, silence after every gag: the picture finishes the joke. English is spoken; the Russian is for the owner only. No music.
+Changes from draft 3: lines cut to 12-16 words per clip; a viewer hook after the opener; Marcel is ordered and praised; clips merged where one gag chain runs with the same people (C06 = old C06+C07, C11 = old C12+C13); the owner's lines are kept as they were.
 
-## Setup 1. The antechamber, candles (0:00-0:27)
+## Setup 1. The antechamber, candles (0:00-0:29)
 
 **C01 (0:00-0:11)**
-The phone looks at the painted ceiling, candle smoke drifts across it. He turns the phone onto himself; he is already seated at a long table, napkin tucked into the lace.
+The phone looks at the painted ceiling, candle smoke drifts across it. He turns the phone onto himself; he is already seated at the head of a long table, napkin tucked into the lace.
 LOUIS: "Oops, the ceiling. There. Bonjour. I am Louis, King of France. They call me the Sun King. Yes... I'm that handsome."
 («Ой, потолок. Вот. Бонжур. Я Людовик, король Франции. Меня называют Король-Солнце. Да... я настолько красив.»)
 Plate: VERSAILLES, FRANCE · 1685
 
-**C02 (0:11-0:19)**
-He tilts the phone to the empty gold plates, then back to his face.
-LOUIS: "Every night at ten, I eat in front of the whole court. [pause] Tonight that's you. Stand at the back."
-(«Каждый вечер в десять я ем на глазах у всего двора. Сегодня это вы. Встаньте сзади.»)
+**C02 (0:11-0:20)**
+He tilts the phone to the empty gold plates and back to his face.
+LOUIS: "You say I eat too much. [pause] Slanderers. [pause] Every night at ten, I dine in front of the court. Tonight... you too."
+(«Вы говорите, что я слишком много ем. Клеветники. Каждый вечер в десять я ужинаю на глазах у двора. Сегодня... и у вас.»)
 Plate: THE KING'S PUBLIC DINNER · EVERY NIGHT AT 10 PM
 
-**C03 (0:19-0:27)**
+**C03 (0:20-0:27)**
 People come in through a side door and bow. One bows too little. Louis looks at him, then at the lens, and looks the viewer up and down.
-LOUIS: "Bow. Lower. Good. [pause] Anyone dressed properly may come in. [pause] Hm. Most of you."
-(«Поклон. Ниже. Хорошо. Входить может любой, кто прилично одет. Хм. Большинство из вас.»)
+LOUIS: "Bow. Lower. Good. [pause] Anyone dressed properly may come in. [pause] Most of you."
+(«Поклон. Ниже. Хорошо. Входить может любой, кто прилично одет. Большинство из вас.»)
 
-## Setup 2. Marcel films (0:27-0:37)
+## Setup 2. Marcel films (0:27-0:36)
 
-**C04 (0:27-0:37)**
+**C04 (0:27-0:36)**
 He holds the phone out to the side without looking. Marcel takes it; the picture jumps, then shows the room wide: the long table, duchesses on folding stools in front, the crowd standing behind. Marcel tilts down too far: the king's double chin fills the frame.
-LOUIS: "Marcel, show them the room. [pause] Duchesses sit. Everybody else stands. [pause] Not my chin, Marcel."
+LOUIS: "Marcel, show them the room. [pause] Duchesses sit. Everyone else stands. [pause] Not my chin, Marcel."
 («Марсель, покажи им зал. Герцогини сидят. Остальные стоят. Не подбородок, Марсель.»)
 Plate: A FEW HIGH-RANKING LADIES SAT IN FRONT, THE REST STOOD
 
-## Setup 3. The first course (0:37-1:11)
+## Setup 3. The first course (0:36-1:08)
 
-**C05 (0:37-0:47)**
-The phone is back in his hand. Beside him four empty soup bowls already stand in a stack; he eats from a fifth straight from the bowl.
+**C05 (0:36-0:45)**
+The phone is back in his hand. Beside him four empty soup bowls already stand in a stack; he drinks from a fifth.
 LOUIS: "My sister-in-law says I eat four bowls of soup. [pause, a servant puts down a sixth] She can't count."
 («Невестка говорит, что я съедаю четыре тарелки супа. Она не умеет считать.»)
 Plate: HIS SISTER-IN-LAW WROTE: 4 SOUPS, A WHOLE PHEASANT, A PARTRIDGE, A BIG SALAD, AND MORE
 
-**C06 (0:47-0:55)**
-A pheasant arrives. Marcel holds out a silver fork right into the lens. Louis takes a leg with his fingers.
+**C06 (0:45-0:58)** (one take, old C06 + C07)
+A pheasant arrives. Marcel holds a silver fork right into the lens. Louis takes a leg with his fingers. He turns the phone over his shoulder: in the crowd a courtier eats a chicken leg with both hands and licks his fingers, very seriously. Back to the king's face.
 MARCEL (off screen): "Your fork, Sire?"
-LOUIS: "Someone taught the peasants to use a fork. [pause] I've untaught them."
-(Марсель: «Ваша вилка, сир?» Людовик: «Людишек научили есть вилкой. Я их разучил.»)
+LOUIS: "Someone taught the peasants to use a fork. [pause] I've untaught them. [pause, turn] Look. Last week he had a silver fork."
+(Марсель: «Ваша вилка, сир?» Людовик: «Людишек научили есть вилкой. Я их разучил. Смотрите. На прошлой неделе у него была серебряная вилка.»)
 Plate: HE FORBADE HIS GRANDSONS TO USE FORKS
 
-**C07 (0:55-1:03)**
-He points the phone over his shoulder: in the crowd a courtier is eating a chicken leg with his hands and licking his fingers, very seriously.
-LOUIS: "Look. He eats with his fingers now. [pause] Last week he had a silver fork."
-(«Смотрите. Теперь он ест руками. А на прошлой неделе у него была серебряная вилка.»)
-
-**C08 (1:03-1:11)**
+**C07 (0:58-1:06)**
 He points the greasy pheasant leg at the lens.
-LOUIS: "And you? How do you eat, with a fork or with your fingers? [pause] Write it in the comments. [pause] Wrong answers go to the Bastille."
-(«А вы как едите? Вилкой или пальцами? Напишите в комментариях. Неправильные ответы поедут в Бастилию.»)
+LOUIS: "Fork or fingers? Tell me in the comments. [pause] Wrong answers go to the Bastille."
+(«Вилка или пальцы? Напишите в комментариях. Неправильные ответы поедут в Бастилию.»)
 
-## Setup 4. The drink (1:11-1:37)
+## Setup 4. The drink (1:06-1:35)
 
-**C09 (1:11-1:19)**
+**C08 (1:06-1:13)**
 He lifts one finger without looking. Behind him a cup starts its trip from hand to hand.
 CUPBEARER (off screen): "A drink for the King!"
-LOUIS: "There's no glass on my table. I ask for a drink... [pause] and then I get a little older."
+LOUIS: "No glass on my table. I ask for a drink... [pause] and I get a little older."
 (Виночерпий: «Питьё для короля!» Людовик: «Бокала на моём столе нет. Я прошу пить... и немного старею.»)
 Plate: GLASSES WERE BROUGHT ONLY WHEN THE KING ASKED
 
-**C10 (1:19-1:27)**
-The cup reaches him at last, Marcel bumps the table, wine splashes over the lens. A red blur, silence. Louis laughs, for real, at himself.
+**C09 (1:13-1:22)**
+The cup reaches him at last, Marcel bumps the table, wine splashes over the lens. A red blur, silence. Louis laughs, for real. He turns the red-smeared phone onto Marcel, who freezes, terrified. A beat.
 MARCEL (quietly): "Sorry, Sire."
 LOUIS: "[laughs] Mon Dieu. [pause] Leave it. Nobody saw anything. [pause] And nobody will see you again."
-He turns the red-smeared phone onto Marcel: Marcel freezes, eyes wide, terrified. A beat of silence.
+(pause, Marcel's terrified face)
 LOUIS: "[laughs] I'm joking."
-(Марсель: «Простите, сир.» Людовик: «[смеётся] Боже мой. Оставь. Никто ничего не видел. И тебя больше никто не увидит.» Испуганный взгляд Марселя, пауза. Людовик: «[смеётся] Шучу.»)
+(Марсель: «Простите, сир.» Людовик: «[смеётся] Боже мой. Оставь. Никто ничего не видел. И тебя больше никто не увидит.» Пауза, испуганный Марсель. «[смеётся] Шучу.»)
 
-**C11 (1:27-1:37)**
-He wipes the lens with his sleeve and turns the phone towards Marcel, who reads the comments over his shoulder.
-LOUIS: "Marcel. What are they saying?"
-MARCEL: "One asks if you ever eat a vegetable, Sire."
+**C10 (1:22-1:32)**
+He wipes the lens with his sleeve and turns the phone towards Marcel, who reads the screen over the king's shoulder.
+LOUIS: "Well done, Marcel. Keep filming."
+MARCEL: "Someone asks if you ever eat vegetables, Sire."
 LOUIS: "Salad. A whole bowl. [pause] Find out where he lives."
-(«Марсель. Что пишут?» Марсель: «Один спрашивает, едите ли вы хоть когда-нибудь овощи, сир.» Людовик: «Салат. Целую миску. Узнай, где он живёт.»)
+(«Молодец, Марсель. Продолжай снимать.» Марсель: «Один спрашивает, едите ли вы хоть когда-нибудь овощи, сир.» Людовик: «Салат. Целую миску. Узнай, где он живёт.»)
 
-## Burst. The courses (1:37-1:45)
-Eight close-ups of about 1 s, no words: soup, pheasant, partridge, a big salad, mutton, ham, pastry, fruit. Only plates, silver, the crowd murmuring.
+## Burst. The courses (1:32-1:38)
+Eight close-ups of under 1 s each, no words: soup, pheasant, partridge, a big salad, mutton, ham, pastry, fruit with one partridge leg left on its dish. Only plates, silver, the crowd murmuring.
 Plate: SOUP, ROASTS, SALADS, SWEETS, THEN FRUIT
 
-## Setup 5. Dessert (1:45-2:27)
+## Setup 5. Dessert (1:38-2:11)
 
-**C12 (1:45-1:53)**
-A small silver dish of green peas. He holds one pea up to the lens, focus hunts. Quietly, a little hurt.
-LOUIS: "Peas. The whole court talks about nothing else. [pause] Last year it was me."
-(«Горошек. Весь двор говорит только о нём. В прошлом году говорили обо мне.»)
-Plate: 1696 LETTER: THE COURT'S CRAZE FOR GREEN PEAS
+**C11 (1:38-1:53)** (one take, old C12 + C13; the king alone, a calm contrast beat)
+A small silver dish of green peas; he holds one pea up to the lens, focus hunts, a little hurt. Then he slides low in the armchair, hands on his belly, eyes half-closed, the phone loose above his face. A long happy sigh.
+LOUIS: "Peas. Everyone talks about them. [pause] Last year it was me. [pause] Ohh... I wasn't born to work. I was born for happiness, love, pleasure... and a good rest. [contented laugh]"
+(«Горошек. О нём все говорят. В прошлом году говорили обо мне. Ох... Не для работы создан я, а для счастья, любви, удовольствия и отдыха. [довольный смех]»)
+Plate: A LETTER FROM THE COURT: EVERYONE WAS CRAZY ABOUT GREEN PEAS
 
-**C13 (1:53-2:01)**
-He slides down in the armchair, hands on his belly, eyes half-closed, the phone held loosely above his face. A long happy sigh.
-LOUIS: "Ohh... [pause] I wasn't born to work. [pause] I was born for happiness, love, pleasure... and a good rest. [contented laugh]"
-(«Ох... Не для работы создан я, а для счастья, любви, удовольствия и отдыха. [довольный смех]»)
+**C12 (1:53-2:00)**
+He sits up, wipes his fingers on the napkin, glances at the crowd, then straight into the lens, chin up.
+LOUIS: "Don't be afraid of getting fat. Be afraid of being a loser. [haughty laugh]"
+(«Не бойтесь потолстеть, бойтесь остаться неудачниками. [надменный смех]»)
 
-**C14 (2:01-2:13)**
-He leans back, wipes his fingers on the napkin, glances at the crowd. Then he looks straight into the lens, chin up.
-LOUIS: "They call it greed. [pause] I call it a long day of being looked at. [pause] Don't be afraid of getting fat. Be afraid of being a loser. [haughty laugh]"
-(«Они называют это обжорством. А я называю это длинным днём, когда на тебя все смотрят. Не бойтесь потолстеть, бойтесь остаться неудачниками. [надменный смех]»)
+**C13 (2:00-2:13)**
+He laughs too hard: a gold button shoots off his coat and hits Marcel in the forehead. Marcel says nothing, rubs his forehead. A beat. Then at the edge of the frame Marcel's hand slowly reaches for the last partridge leg. Louis sees it on the screen.
+LOUIS: "That button was a gift. [pause] The partridge, no."
+MARCEL: "I haven't eaten since this morning."
+LOUIS: "Neither have they. [nods at the crowd] Take a pea. One."
+(«Эта пуговица была подарком. Куропатку нет.» Марсель: «Я с утра не ел.» Людовик: «Они тоже. Возьми горошину. Одну.»)
 
-**C15 (2:13-2:27)**
-He laughs too hard: a gold button shoots off his coat and hits Marcel in the forehead. Marcel says nothing, rubs his forehead. A beat. Then, at the edge of the frame, Marcel's hand slowly reaches for the last partridge leg. Louis sees it on the screen.
-LOUIS: "That button was a gift, Marcel. Keep it. [pause] The partridge, no."
-MARCEL: "I haven't eaten since this morning, Sire."
-LOUIS: "Neither have they. [nods at the crowd] [pause] Take a pea. One."
-(«Эта пуговица была подарком, Марсель. Оставь себе. Куропатку нет.» Марсель: «Я с утра не ел, сир.» Людовик: «Они тоже. Возьми горошину. Одну.»)
+## Ending (2:13-2:31)
 
-## Ending (2:27-2:48)
-
-**C16 (2:27-2:38)**
+**C14 (2:13-2:22)**
 He stands up, the crowd bows. He looks into the hand mirror, nods to himself, then points at the camera.
-LOUIS: "Next time, you choose. My surgeon, or my bath. [pause] The surgeon. He's been practising. [pause] On other people. [pause] Subscribe to my stunning channel."
-(«В следующий раз выбираете вы. Мой хирург или моя ванна. Хирург. Он тренировался. На других. Подписывайтесь на мой потрясающий канал.»)
+LOUIS: "Next time, my surgeon. He's been practising. [pause] On other people. [pause] Subscribe to my stunning channel."
+(«В следующий раз мой хирург. Он тренировался. На других. Подписывайтесь на мой потрясающий канал.»)
 Plate: NEXT: THE OPERATION
 
-**C17 (2:38-2:48)**
+**C15 (2:22-2:31)**
 He gives orders with a finger, waves the viewers off on "do what you like", laughs coldly with his chin up, then turns and sits back down at the full table. The mirror covers the lens.
 LOUIS: "Hit like. Ring the bell. Anyway, do what you like. [haughty laugh] I'm off to the table to feast!"
 («Ставьте лайк. Жмите на колокольчик. А впрочем, делайте что хотите. [надменный смех] А я пошёл к столу пировать!»)
 End card: THE SUN IS NEVER LATE. · AI-generated comedy reconstruction
+
+## Map old -> new
+C01 -> C01 | C02 -> C02 (hook added) | C03 -> C03 | C04 -> C04 | C05 -> C05 | C06+C07 -> C06 | C08 -> C07 | C09 -> C08 | C10 -> C09 | C11 -> C10 | burst | C12+C13 -> C11 | C14 -> C12 (greed line cut) | C15 -> C13 | C16 -> C14 (poll "you choose" cut) | C17 -> C15.
+Reserved, not used (needs a second source): a "do not ask" gag about the royal close-stool chair (louis_hooks_unique.md, hook 5).
