@@ -116,3 +116,4 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 31.10 | Ep.2 Marcel lines (Edward, 4 lines, 227 chars) | 0.23 RUB |
 | 31.10 | Ep.2 cupbearer line (Christopher, 59 chars; the quoted ~0.2 RUB for both was too low, minimum order 0.23 each; owner told) | 0.23 RUB |
 | 31.10 | Ep.2 set master frame (table + crowd + king), Nano Banana Pro 4K 9:16 (owner "Да да"; task in louis_ep2/frames/master_table_4k.jpg.task_id) | $0.12 (usage.cost) |
+| 31.10 | Ep.2 set master v2 (only the wig changed to the tall one, same face), Nano Banana Pro 4K 9:16 (owner "Сделай"; one call) | $0.12 (usage.cost) |
