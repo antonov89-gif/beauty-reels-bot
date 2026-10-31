@@ -38,3 +38,8 @@ One voice and native lips everywhere; a question-hook and a reason to film; the 
 2. Sound: lift the bedroom/dressing bed 3-4 dB (no dead air), lower the burst bed about 4 dB.
 3. Trim dead air at the joins: about 5-8 s (to about 2:05).
 Paid or owner-rule items: C13 re-roll (declined 30.10), a premise line in C01 (new C01 needed), captions (owner's rule), one voice (licence item in the audit).
+
+## Cut D (owner 31.10 "С референсом": the free fixes toward the reference), frames/EP1_full_D.mp4 (not committed)
+Measured with the same script: length 129.5 s (ref 128) | brightness 91 (ref 86; was 101; C13 123 -> 97, every clip 89-97) | texture 2103 (ref 2360; was 1971; C06 779 -> 1047, C08 387 -> 571, C13 1168 -> 1502, C15 1028 -> 1264) | camera still 1 % of seconds (ref 3 %) | 20 cuts in 128 s | 104 wpm over the speech clips, 3.1 words per speaking second (ref 2.5-3.1) | -15.1 LUFS (ref -15.4) | floor p10 -46.1 dB overall (ref -49.5): bedroom/dressing -49...-52 (near-silent 0.5-s windows 50 -> 3), court -37...-42, burst -32 (was -28), gallery -30...-40.
+Changes: silent heads trimmed (C02 1.21, C05 0.29, C06 0.58, C07 0.79, C09 0.50, C10 0.29, C12 0.29 s; never a word or an action), per-clip gamma toward brightness 90, sharpen + grain on C06, C08, C13-C15, bedroom/dressing beds +4 dB, burst -4 dB. All lines complete by ASR; plates shifted with the trims and checked on frames.
+Still behind the reference (not free): one voice, a premise line, the gross-truth engine, 30 fps phone feel, captions (owner's rule).

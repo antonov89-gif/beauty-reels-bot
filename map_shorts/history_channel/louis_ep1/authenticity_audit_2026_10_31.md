@@ -71,3 +71,6 @@ NOT yet cleared for upload: item 8 (package and flags) and the voice licence ite
 - https://www.bgc.bard.edu/research/articles/557/nicole-dee-collins-souvenir-louis ; https://psource.sitehost.iu.edu/PDF/Archive%20Articles/Spring2014/2014%20-%20Spring%20-%204%20-%20Barringer%20Sarah.pdf ; https://blogs.getty.edu/iris/?p=23772
 - https://elevenlabs.io/terms-of-use ; https://elevenlabs.io/use-policy ; https://elevenlabs.io/vla (found, not read in full)
 - https://bigsoundbank.com/droit.html (checked 30.10)
+
+## Re-render 31.10: cut D (frames/EP1_full_D.mp4, 129.50 s, 265 MB)
+Changed: silent heads trimmed, darker grade, texture, bed levels (compare_ep1_full_vs_reference.md). Re-run checks: all lines complete by ASR (check_ep1.py), plates present and timed on frames, blackdetect/freezedetect only the planned end card (127.50-129.46 s), -15.1 LUFS, TP -0.9 dBFS, no music by the tone test. Claims, AI list, people, licences unchanged. Verdict unchanged: FIXED; upload still waits for item 8 and the voice licence item.

@@ -26,13 +26,25 @@ CLIPS += [(c, f"{c}R_final", "D", SC + f"{c}R_final_voice48.f32", SC + f"{c}R_fi
 END = 2.0                                                               # end card length, s
 AI_MARK = os.environ.get("AI_MARK", "0") == "1"                         # owner 31.10 "Убери надпись Аи генератор": no corner mark; AI disclosure stays on the end card, in the description and the YouTube altered/synthetic flag
 BED = dict(S.BED); BED["D"] = [("3433", 100.0, -43)]                   # D = Hall of Mirrors: a later, calmer part of Chambord Castle #3 (3432 was tried: steady 1050/1570 Hz tones in 7-8 % of frames, possibly music: not used)
-LEVEL = {"C11": -27.0}                                                  # per-clip mix loudness before the one episode gain: speech clips to -17.8 LUFS (gain clamped +-4 dB), the wordless burst lower
+BED["A"] = [("3431", 20.0, -43)]; BED["B"] = [("2855", 30.0, -45), ("3431", 90.0, -54)]   # cut D: +4 dB (cut C bedroom/dressing floor -52...-56 dB vs reference -49.5, near-silent 0.5-s windows)
+LEVEL = {"C11": -31.0}                                                  # per-clip mix loudness before the one episode gain: speech clips to -17.8 LUFS (gain clamped +-4 dB), the wordless burst lower
 FOLEY = [f for f in S.FOLEY if f[0] != "C01"]                           # C02-C08 foley as in the C01-C08 cut; C01 is the new Kling take
 FOLEY += [("C01", 0.15, "1104", None, 0.6, -30, 0), ("C01", 1.95, "1104", 3.0, 0.5, -31, 0)]            # grip rubs before and during the phone turn (Kling's own knock at 3.0 s stays)
 FOLEY += [("C11", i + 0.04, "0013", float(i * 0.7), 0.55, -31 - (i % 3), (-1) ** i * .3) for i in range(8)]   # a silk swish on every cut of the burst
 FOLEY += [("C11", 3.1, "2017", 0, 0.4, -33, 0), ("C11", 6.2, "1104", 2.0, 0.5, -33, 0)]                 # the hand mirror tapped, the comb
 FOLEY += [("C12", 0.3, "0376", 4.0, 8.3, -38, .3)]                                                     # his steps on the gallery parquet under the model's own sounds
 # fact plates: clip, start, end (s in the clip), text (lines split by |); [n] in script_ru.md = number of sources
+# cut D (owner 31.10 "С референсом"): silent heads trimmed toward the reference length (128 s), picture darker toward the reference brightness 86 and more texture on the smooth clips
+TRIM = {"C02": (1.2, 0), "C05": (0.3, 0), "C06": (0.6, 0), "C07": (0.8, 0), "C09": (0.5, 0), "C10": (0.3, 0), "C12": (0.3, 0)}   # (head, tail) s: only silence before the first word, never the action
+BRIGHT_C = {"C01": 99, "C02": 103, "C03": 99, "C07": 99, "C08": 106, "C09": 110, "C10": 97, "C11": 98, "C12": 104, "C13": 123, "C14": 107, "C15": 109}   # cut C brightness (compare_ep1_full_ref.py)
+TARGET_BRIGHT = 90
+def extra_v(cid):
+    f = []
+    if cid in BRIGHT_C:
+        m = BRIGHT_C[cid]; g = max(0.75, float(np.log(m / 255) / np.log(TARGET_BRIGHT / 255))); f.append(f"eq=gamma={g:.3f}")
+    if cid in ("C06", "C08"): f.append("unsharp=7:7:1.0:5:5:0,noise=c0s=6:c0f=t+u")
+    if cid in ("C13", "C14", "C15"): f.append("unsharp=5:5:0.7:5:5:0,noise=c0s=6:c0f=t+u")
+    return ("," + ",".join(f)) if f else ""
 PLATES = [("C01", 2.7, 6.2, "VERSAILLES, FRANCE · 1685"), ("C02", 0.8, 4.8, "LE LEVER (THE RISING):|UP TO ~100 PEOPLE"),
           ("C03", 0.8, 5.0, "A DOCTOR AND A SURGEON WERE|IN THE ROOM BEFORE HE GOT UP"), ("C04", 2.0, 6.5, "HAIR LOSS FROM AGE ~17|(ABOUT 1655), THEN WIGS"),
           ("C05", 0.6, 3.8, "TALL WIGS ADDED HEIGHT"), ("C07", 0.8, 4.5, "COURTIERS CAME IN|BY ORDER OF PRIVILEGE"), ("C10", 0.8, 4.8, "RED HEELS:|A COURT PRIVILEGE, 1670s"),
@@ -100,10 +112,13 @@ def main():
     rng = np.random.default_rng(4); t_scene = {}; mixes = []; segs = []; starts = {}; t = 0.0
     for cid, name, sc, vsrc, msrc, grade, dk in CLIPS:
         p, d, mix, n = clip_mix(cid, name, sc, vsrc, msrc, dk, t_scene, rng)
+        h0, t0_ = (round(x * 24) / 24 for x in TRIM.get(cid, (0, 0)))   # whole frames, so picture and sound stay in step over 15 segments
+        mix = mix[:, int(round(h0 * SR)):int(round((d - t0_) * SR))]; d = mix.shape[1] / SR
+        f = int(SR * .015); mix[:, :f] *= np.linspace(0, 1, f); mix[:, -f:] *= np.linspace(1, 0, f)
         li = lufs2(mix); lg = float(np.clip(LEVEL.get(cid, -17.8) - li, -4, 4)) if cid not in LEVEL else LEVEL[cid] - li; mix = mix * S.db(lg)
         mixes.append(mix); starts[cid] = t; t += d
         g = SC + f"ep1_{cid}_g.mp4"                                     # graded picture, same encoder settings for every segment (concat by stream copy)
-        subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", p, "-an", "-vf", f"scale=1080:1920,setsar=1,fps=24,{grade},format=yuv420p", "-c:v", "libx264", "-crf", "17", "-preset", "medium", "-r", "24", g], check=True)
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", f"{h0:.3f}", "-t", f"{d:.3f}", "-i", p, "-an", "-vf", f"scale=1080:1920,setsar=1,fps=24,{grade}{extra_v(cid)},format=yuv420p", "-c:v", "libx264", "-crf", "17", "-preset", "medium", "-r", "24", g], check=True)
         segs.append(g); print(f"{cid} {name}: {d:.2f} s at {starts[cid]:.2f}, foley/knocks {n}, mix {li:.1f} LUFS, level {lg:+.1f} dB", flush=True)
     # end card: the gallery bed fades out under the text on black
     L = int(SR * END); bi, bst, blv = BED["D"][0]; y = S.src(bi)[:, int((bst + t_scene["D"]) * SR):int((bst + t_scene["D"]) * SR) + L]
@@ -124,7 +139,7 @@ def render(vcat, raw, starts, gain, I, t):
     for i, (cid, a, b, text) in enumerate(PLATES):
         tf = SC + f"ep1_plate_{i}.txt"; open(tf, "w").write(text.replace("|", "\n"))
         dt.append(f"drawtext=fontfile={SERIF}:textfile={tf}:expansion=none:fontsize=50:line_spacing=10:fontcolor=white:x=(w-text_w)/2:y=1250:box=1:boxcolor=black@0.55:boxborderw=18"
-                  f":enable='between(t,{starts[cid] + a:.2f},{starts[cid] + b:.2f})'")
+                  f":enable='between(t,{starts[cid] + a - round(TRIM.get(cid, (0, 0))[0] * 24) / 24:.2f},{starts[cid] + b - round(TRIM.get(cid, (0, 0))[0] * 24) / 24:.2f})'")
     tf = SC + "ep1_endcard.txt"; open(tf, "w").write("THE SUN IS NEVER LATE.")
     dt.append(f"drawtext=fontfile={SERIF}:textfile={tf}:expansion=none:fontsize=72:fontcolor=white:x=(w-text_w)/2:y=(h-text_h)/2:enable='gte(t,{starts['END'] + 0.15:.2f})'")
     tf2 = SC + "ep1_endcard2.txt"; open(tf2, "w").write("AI-generated comedy reconstruction")
@@ -132,7 +147,7 @@ def render(vcat, raw, starts, gain, I, t):
     out = F + f"EP1_full_{TAG}.mp4"
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", vcat, "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", raw, "-filter_complex",
                     f"[0:v]{','.join(dt)}[v];[1:a]volume={gain:.2f}dB,alimiter=limit=0.89:attack=5:release=80:level=disabled[a]", "-map", "[v]", "-map", "[a]",
-                    "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-c:a", "aac", "-b:a", "320k", "-ar", "48000", "-movflags", "+faststart", out], check=True)
+                    "-c:v", "libx264", "-crf", os.environ.get("CRF", "21"), "-preset", "medium", "-c:a", "aac", "-b:a", "320k", "-ar", "48000", "-movflags", "+faststart", out], check=True)
     print(out, f"{t:.2f} s; mix {I:.1f} LUFS, gain {gain:+.2f} dB; corner AI mark {'ON' if AI_MARK else 'OFF'}")
 
 
