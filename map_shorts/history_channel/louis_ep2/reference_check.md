@@ -76,3 +76,12 @@ INSPECTED by me on the full sheets and a face-crop comparison A3 | a1 | angles f
 - Emotions: E1, E2, E3 (joyful laugh), E5 (hurt, the pea), E6 (annoyed), E7 (blissful, eyes closed) PASS; E4 (cold arrogant laugh) FAIL: it reads as a friendly smile with open eyes, not a sneer; E8 (startled) has a ringed hand in the frame against the "no hands" rule (usable, soft).
 - Missing from the angles sheet: A6 (from below), A7 (from above), A8 (full length with the red heels). The owner's emotions tiles carry burned-in labels "E1..E8" (to be cropped when used as references).
 - Status: usable as the character card; NOT APPROVED by the owner yet. Redo/add prompts: king_sheet_redo_prompts.md (A6, A7, A8, E4, E8).
+
+## Redo results from the owner (04.11): A6, A7, A8, E4, E8
+INSPECTED in the chat message only (the image files did not reach the disk, so no face-crop comparison; NOT measured). Visual verdicts:
+- A6 (from below): PASS: haughty look, towering wig, scarlet coat with suns, lace cravat; no napkin.
+- A7 (from above): PASS: looks up, sly smile, wig and coat match.
+- A8 (full length): PASS: hands on hips, rings, white stockings, black buckled shoes with red heels, plain warm-grey wall.
+- E8 (startled): PASS: eyes wide, both hands out of frame (the correction worked).
+- E4 (cold laugh): SOFT: closed-mouth smug sneer with heavy lids, closer to haughty than before but not a laugh; usable for the "haughty laugh" only as a smirk start frame; real laugh comes from the video model.
+- Status: GENERATED + visually INSPECTED in chat; NOT APPROVED by the owner. To store the files in the repo the owner must send them as files (or save to sheet/).
