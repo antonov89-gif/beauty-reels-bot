@@ -543,3 +543,9 @@ Decision for the next batch: keep E1 as a default style (no harm), do not claim 
 - NOT AVAILABLE: engaged %, % viewed, subscribers, retention curve (YouTube Analytics lag ends 26.10; Nexlev retention is paid).
 - Formula v1 NOT SUPPORTED at n = 1 (1.3x, not 3x; 0 comments). Next: Croatia/Neum with a paradox hook, 35-40 s, 2-3 AI clips only; premium_gate before showing. Details: views_playbook_2026_10_27.md section 8.
 - YPP: still ~50 subscribers; Shorts views far from 10M/90 days (gap ~74x as of 27.10).
+
+### 04.11 Weekly views review (scheduled task fired 02.11 09:20 UTC, read 04.11 16:01 UTC): NOT RUN
+- vidIQ answered "no access" to our channel UCFphFU69Tgz3LyHoZzODdWw: the connected vidIQ account is a different one (authenticated as another user, the only channel listed is "AYNRA", 5 subscribers, 0 videos). Nexlev returned ACCESS DENIED (plan FREE) for get_my_channel_overview and get_my_traffic_sources.
+- No data was pulled and no credits spent; steps 1-3 (our 7-day numbers, market scan, playbook update) are NOT DONE. No numbers are invented.
+- Needed from the owner: reconnect vidIQ to the Mr. Buck account (the one that owns UCFphFU69Tgz3LyHoZzODdWw) and, for traffic sources, a Nexlev plan that includes the "my channel" tools (or the YouTube Analytics through vidIQ once it is reconnected).
+- Last confirmed YPP state (27.10): about 50 subscribers; Shorts views about 74x short of 10M per 90 days.
