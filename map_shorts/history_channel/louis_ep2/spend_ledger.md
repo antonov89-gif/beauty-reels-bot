@@ -9,3 +9,4 @@
 - 04.11 ep.2 T3b pilot (Kling 4.0 i2v 720p 8s, F03b): $1.16 (usage.cost)
 - 04.11 ep.2 T1b chain clip (Kling 4.0 i2v 720p 10s, first frame = T1 v5 last frame): $1.45 (usage.cost)
 - 04.11 ep.2 T1c chain clip (Kling 4.0 i2v 720p 8s, first frame = T1b last frame): $1.16 (usage.cost)
+- 04.11 ep.2 T1d chain clip (Kling 4.0 i2v 720p 8s, first frame = T1c last frame): $1.16 (usage.cost)

@@ -194,3 +194,12 @@ INSPECTED (2 frames/second sheet, 16 frames + face crops at 2.5 s, 4.5 s, 7.5 s 
 - Acting: the smile fades and he leans into the lens offended (1.5-3 s), a cold pause, eyes closed with a sniff and a wave of the ringed hand (4.5-6.5 s), chin up looking down his nose at the end (7-8 s).
 - Not checked: lips vs our voice (voice not ordered), model audio (muted).
 Status: GENERATED + INSPECTED, NOT APPROVED by the owner.
+
+## T1d (chain clip 4, 04.11, owner "Да"): Kling 4.0 i2v 720p 8 s, @first_frame = pilot_frames/T1c_last.jpg: pilot_frames/T1d_kling40.mp4 (724x1284, 24 fps, 8.04 s). ACTUAL COST $1.16 (usage.cost). Last frame: pilot_frames/T1d_last.jpg.
+INSPECTED (2 frames/second sheet, 16 frames; face crops vs the T1 v5 last frame):
+- Join T1c -> T1d: RMSE 0.027, PASS (same picture).
+- Scene: same hall, table, ladies, courtiers: PASS.
+- Acting as planned: sweep of the hand to the table and court (2-4 s), a theatrical pause, a lean toward the lens and a pointing ringed finger at the viewer (6-7 s), smug nod at the end.
+- Identity: SOFT-FAIL from about 4 s. The haughty look is lost (broad grin, brows raised, eyes wide open = our own "no wide-open staring eyes" rule), the skin turns pinker/redder, the rouge becomes two blotchy patches, the forehead and eye area show more lines (older), and the lean-in enlarges the face and exposes the model's softness (pixelated skin at 7.5 s). It is the same character type but the weakest of the chain so far.
+- Not checked: lips vs our voice (not ordered), model audio (muted).
+Status: GENERATED + INSPECTED, identity SOFT-FAIL after 4 s, NOT APPROVED. Proposed fix: shorter retake (6 s) with a calmer acting (no lean-in, heavy lids kept, point from a distance).
