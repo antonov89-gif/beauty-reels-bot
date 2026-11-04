@@ -122,3 +122,5 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 31.10 | Ep.2 C01 first frame (extreme close-up fumble like the Vlog 2 first frame), Nano Banana Pro 2K 9:16 (owner "Да"; one call) | $0.09 (usage.cost) |
 | 31.10 | Ep.2 set master v5 (eye colour and powder fix attempt), Nano Banana Pro 4K 9:16 (owner "Да" to v5 + C01 redo; v5 did NOT fix it, so the C01 redo ($0.09) was NOT ordered) | $0.12 (usage.cost) |
 | 31.10 | Ep.2 set master v6 (edit of v4: only eye colour and powder; owner chose option 2), Nano Banana Pro 4K 9:16 (one call) | $0.12 (usage.cost) |
+| 04.11 | Ep.2 king sheet TEST a1: GPT Image 2.5 Sunburst Lite 4K 9:16, reference R1 (A3) via the public raw GitHub URL (owner "Делаю тест"; one call) | $0.12 (usage.cost) |
+| 04.11 | Ep.2 king sheet TEST a1 on Nano Banana 2.1 4K: REJECTED at submit by the content filter ("explicit content in the prompt"), NOT charged | $0 |
