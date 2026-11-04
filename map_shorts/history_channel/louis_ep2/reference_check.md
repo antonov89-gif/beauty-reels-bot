@@ -149,3 +149,6 @@ INSPECTED (1 frame/second contact sheet + face crops of seconds 5, 8, 11 next to
 - Camera: frame-to-frame change stays high through 6-11 s (RMSE 0.10-0.21), more hand-held than retake 2.
 - Not checked: lip sync with our voice (not ordered), the model's own audio (muted per the no-music rule).
 Status: GENERATED + INSPECTED, NOT APPROVED by the owner.
+
+## Owner's new image (04.11, no text): pilot_frames/T1_keyframe_owner2.jpg (941x1672), the king at the dinner table, smug closed-mouth look, ringed hand at a wig curl (same idea as the A3 edit keyframe, different render; origin not stated).
+INSPECTED (eye/nose/moustache crops next to A3 and next to T1_keyframe_edit_768.jpg): scene PASS (candlelit hall, long table with candelabra and glasses on the right, ladies seated, courtiers standing behind, tall white-grey wig, coat with suns, lace, rings). Identity: SOFT. The face is slightly narrower and more angular than A3 (higher cheekbones, finer nose, longer face), the moustache is more flared; it reads as a close relative, not exactly the A3 man. T1_keyframe_edit (the edit of A3) is closer to A3. Not used in any video call.
