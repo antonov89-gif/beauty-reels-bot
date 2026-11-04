@@ -47,8 +47,8 @@ LOUIS: "So. Do I eat too much? [pause] No. I eat like a king. [pause] Don't be a
 
 ## Take 7. Next episode and the signature outro (2:16-2:42)
 He stands, the crowd bows, he looks into the hand mirror, nods, points at the lens; then orders with a finger, waves the viewers off, laughs coldly and sits back down at the full table; the mirror covers the lens.
-LOUIS: "All this food has a price. [pause] In the next video, I'll tell you about my operation. [pause] My surgeon practised it first... on other patients. [pause] Lucky them. [pause] Subscribe to my stunning channel. [pause] Hit like. Ring the bell. Anyway, do what you like. [haughty laugh] I'm off to the table to feast!"
-(«Вся эта еда имеет цену. В следующем видео расскажу о своей операции. Мой хирург сначала тренировался... на других пациентах. Повезло им. Подписывайтесь на мой потрясающий канал. Ставьте лайк. Жмите на колокольчик. А впрочем, делайте что хотите. А я пошёл к столу пировать!»)
+LOUIS: "All this food has a price. [pause] In the next video, I'll tell you about my operation. [pause] My surgeon practised it first... on other patients. [pause] Very kind of them. [pause] Subscribe to my stunning channel. [pause] Hit like. Ring the bell. Anyway, do what you like. [haughty laugh] I'm off to the table to feast!"
+(«Вся эта еда имеет цену. В следующем видео расскажу о своей операции. Мой хирург сначала тренировался... на других пациентах. Очень мило с их стороны. Подписывайтесь на мой потрясающий канал. Ставьте лайк. Жмите на колокольчик. А впрочем, делайте что хотите. А я пошёл к столу пировать!»)
 Plate: NEXT: THE OPERATION. End card: THE SUN IS NEVER LATE. · AI-generated comedy reconstruction
 
 ## Compared with the competitor (Vlog 6)
