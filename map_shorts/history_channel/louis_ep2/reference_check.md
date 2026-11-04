@@ -152,3 +152,11 @@ Status: GENERATED + INSPECTED, NOT APPROVED by the owner.
 
 ## Owner's new image (04.11, no text): pilot_frames/T1_keyframe_owner2.jpg (941x1672), the king at the dinner table, smug closed-mouth look, ringed hand at a wig curl (same idea as the A3 edit keyframe, different render; origin not stated).
 INSPECTED (eye/nose/moustache crops next to A3 and next to T1_keyframe_edit_768.jpg): scene PASS (candlelit hall, long table with candelabra and glasses on the right, ladies seated, courtiers standing behind, tall white-grey wig, coat with suns, lace, rings). Identity: SOFT. The face is slightly narrower and more angular than A3 (higher cheekbones, finer nose, longer face), the moustache is more flared; it reads as a close relative, not exactly the A3 man. T1_keyframe_edit (the edit of A3) is closer to A3. Not used in any video call.
+
+## T1 retake 4 (04.11, owner "делай"): Kling 4.0 i2v 720p 11 s, @first_frame = F01a, @keyframe_1 = T1_keyframe_owner2.jpg (the owner's own image): pilot_frames/T1_kling40_v5.mp4 (724x1284, 24 fps, 11.04 s). ACTUAL COST $1.595 (usage.cost). T1 video total so far: 5 clips x $1.595 = $7.975; images $0.36.
+INSPECTED (1 frame/second contact sheet + face crops of seconds 5, 8, 11 next to A3):
+- Identity stable inside the clip from second 4 to 11 (same narrow face, arched brows, pale green-grey eyes, thin moustache with curled tips, tall white-grey wig of constant colour/height, coat with suns, ringed hand at the wig/cheek). But it follows the owner's keyframe, not A3: the face is narrower and longer, the brows more arched and the eyes lighter than A3 (a close relative, not the A3 man), as predicted for owner2. T1_kling40_v4.mp4 is closer to A3.
+- Action as planned: fumble 0-2 s, pull-back 2-3 s, speaks 3-6 s, settles into the smug pose 7-8 s, speaks again to 11 s; a nice natural hand gesture at second 5.
+- Camera: frame change 0.07-0.18 over 6-11 s (hand-held enough).
+- Not checked: lip sync with our voice (not ordered), the model's own audio (muted per the no-music rule).
+Status: GENERATED + INSPECTED, NOT APPROVED by the owner. Of the T1 takes, v4 (A3 edit keyframe) = closest to A3; v5 (owner keyframe) = most consistent with the owner's image.
