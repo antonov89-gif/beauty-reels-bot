@@ -1,0 +1,5 @@
+
+## New reference from the owner, 04.11.2026: owner_frames/owner_hall_mirrors_selfie.jpg
+1125x2000, selfie in the Hall of Mirrors (daylight, chandelier, candelabra, courtiers in brown/black walking behind, a lady in a pale gown) — a DIFFERENT location and lighting than the louis_ep2 dinner scene (gilded antechamber, night, candlelight only). Owner: "Также этот можно добавлять и добавить в карточку персонажа" (file it into the character card too).
+INSPECTED by me, face-crop vs A3_white_wig.jpg: strong identity match — same heavy-lidded eyes, brow shape, nose, beauty mark beside the mouth, light rouge, moustache with curled tips, tall white-grey wig with rolled curls, scarlet velvet coat with gold suns. Good new angle/lighting for the card library (daylight look, hand with three rings visible, chest-up three-quarter framing).
+Added to the card as a general identity reference. NOT used as-is for the louis_ep2 dinner-scene keyframe (wrong hall, wrong light, wrong background people would risk a visible jump if spliced mid-clip into the candlelit dinner take).
