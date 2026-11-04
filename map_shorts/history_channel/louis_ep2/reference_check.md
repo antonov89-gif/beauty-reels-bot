@@ -102,3 +102,9 @@ INSPECTED by me (contact sheet every 15th frame + first + last frame): the fumbl
 Soft defects: a small reflective phone screen is visible in his ringed hand mid-clip (a "phone within the phone" effect, model-generated prop, slightly odd but small and in motion); skin is a touch rosier/rounder than the card in the brighter table shots (lighting, not identity drift). No clown makeup, no white mask, no extra fingers, no music (video's own audio not yet checked for content, will be muted regardless per the no-music rule).
 fps = 24 (same as our ep.1 clips; reference's 30 fps still not matched, no artefact-free fix found).
 Status: GENERATED + INSPECTED, NOT APPROVED by the owner.
+
+## T1 RETAKE, Kling 4.0 i2v, 720p, start frame F01a, @first_frame tag fixed (04.11, owner "да" to the retake)
+File: pilot_frames/T1_kling40_v2.mp4 (724x1284, 24 fps, 11.04 s). ACTUAL COST $1.595 (status usage.cost).
+INSPECTED: frame 0 now matches F01a almost exactly (same sleeve angle, same fist, same candlelit background, same face crop) — visibly tighter than the first try (pilot_frames/T1_kling40.mp4), which only approximated it. Full action as planned: 0-3 s fumble close-up, 3-5 s pulls the phone back, 5-11 s sits up and speaks the opener with natural lip movement; same face/wig/coat throughout; one ringed hand gesture mid-clip, no "phone within phone" artefact this time. No clown makeup, no white mask, no extra fingers, no music.
+Conclusion: the @first_frame tag fix (model_choice.md, 04.11) is confirmed to matter — this retake is the better clip of the two. Recommend using T1_kling40_v2.mp4 as the kept take; v1 (T1_kling40.mp4) is a discard, kept for the record only.
+Status: GENERATED + INSPECTED, NOT APPROVED by the owner.
