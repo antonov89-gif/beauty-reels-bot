@@ -169,3 +169,9 @@ INSPECTED (2 frames/second contact sheet, 16 frames + face crops of 1.0 s, 4.5 s
 - Camera: frame change 0.12-0.19, hand-held enough.
 - Not checked: lip sync with our voice (not ordered), the model's own audio (muted per the no-music rule).
 Status: GENERATED + INSPECTED, NOT APPROVED by the owner.
+
+## Owner 04.11 on T3b: "Человек совершенно не то... Это же не следующая сцена." -> T3b REJECTED. Method error found and fixed.
+- T3b face, re-checked on the crops: a rounder, heavier, different-looking man, not the T1 king; my "same character, soft" verdict above was too lenient. The room also changed (round tables instead of the long table).
+- Root cause (verified in louis_ep1/reference_check.md lines 95, 157, 175, 213, 236, 307, 363): ep.1 was built as a CHAIN: every next clip's first frame = the exact last frame of the previous approved clip, so the face, wig, light and room carry over and the joins were measured. In ep.2 I started T3b from F03b, a still generated separately from the card, and skipped the rest of Take 1 and all of Take 2. A new still = a new face and a new room every time.
+- Fix, binding for ep.2 from now on: (1) clips in script order, no jumps; (2) first frame of each clip = last frame of the previous approved clip (pilot_frames/T1_v5_last.jpg is the start of T1b); (3) the T1 keyframe (T1_keyframe_owner2.jpg, the face the owner chose for T1 v5) is passed as @keyframe_1 in each clip as the identity anchor; (4) a scene change (new place or new framing) is made by EDITING the last frame of the previous clip (the method that kept the face on the A3 edit), never by a fresh still; (5) clips <= 9 s; (6) before reporting: face crops at 3 points vs the previous clip's last frame and vs the anchor, background check, join frame diff.
+- F03b and F04b are withdrawn as start frames (separate stills, different face/room).
