@@ -29,3 +29,13 @@ D. Gate before showing: face_gate.py on every clip (mean >= 0.60, min >= 0.45) p
 E. Re-do from the point where the chain fell below the gate: T1c (0.57) and T1d (0.55). T1 v5 (0.70) and T1b (0.63) pass.
 F. Fallback to test once if A-D fail: Kling 4.0 r2v with kling_elements (2-4 face images = face lock per its spec, model_choice.md), about $1.14 per 8 s; it does not pin the first frame, so it is a test, not the plan.
 Cost impact: anchors about $0.6-0.7 once; retakes of T1c and T1d about $2.0-2.3; the rest of the episode at about $1.16 per 8 s without the 30 % retake reserve being used up by face failures.
+
+## Addendum 04.11 (owner: "не будет ли уменьшаться качество, если каждый раз брать последний кадр?"): measured
+Sharpness = variance of the Laplacian on the frame scaled to 724x1284 (higher = more fine detail); frames at +0.5 s after the start and -0.5 s before the end of each clip:
+| Clip | start | end |
+|--|--|--|
+| T1b | 176 | 230 |
+| T1c | 131 | 91 |
+| T1d | 72 | 47 |
+Chain trend: 230 (end of T1b) -> 131 (start of T1c, the same frame after one video round trip) -> 91 -> 72 -> 47: detail falls by about 80 % over three links. The number is confounded by the acting (the lean-in and motion blur in T1d lower it), colour saturation also drifts (about 163 -> 149 -> 114 at the end of T1d), so it is a strong hint, not a clean measurement. Mechanism: the last frame is an H.264 frame of a model render at 720p; feeding it back as the next start frame adds one more generation of softening and colour drift each time.
+Fix, part of the anchor method: do NOT chain from raw last frames. Each clip starts from a sharp anchor STILL (made by editing the best frame, 4K, then downscaled once) and ends pinned to an anchor pose via @last_frame, so the model's last frame is only a look-alike of the anchor and the next clip restarts from the clean still: quality and face are reset every 6-8 s. The seam (render of the anchor vs the anchor still) is a few pixels at the same pose and is hidden by the cut. Also unify colour/sharpness in editing (one grade over the whole video).
