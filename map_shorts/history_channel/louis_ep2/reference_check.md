@@ -203,3 +203,7 @@ INSPECTED (2 frames/second sheet, 16 frames; face crops vs the T1 v5 last frame)
 - Identity: SOFT-FAIL from about 4 s. The haughty look is lost (broad grin, brows raised, eyes wide open = our own "no wide-open staring eyes" rule), the skin turns pinker/redder, the rouge becomes two blotchy patches, the forehead and eye area show more lines (older), and the lean-in enlarges the face and exposes the model's softness (pixelated skin at 7.5 s). It is the same character type but the weakest of the chain so far.
 - Not checked: lips vs our voice (not ordered), model audio (muted).
 Status: GENERATED + INSPECTED, identity SOFT-FAIL after 4 s, NOT APPROVED. Proposed fix: shorter retake (6 s) with a calmer acting (no lean-in, heavy lids kept, point from a distance).
+
+## Owner's "best last frame" (04.11): pilot_frames/owner_best_last_frame.jpg (1284x2250)
+Side by side with pilot_frames/T1b_last.jpg: the same picture (pose, hand with rings at the wig curl, closed eyes, smug closed-mouth smile, hall, ladies, candelabra) at a higher resolution/sharper, so it is the owner's enlarged version of the T1b last frame (RMSE vs T1b_last 0.107, vs every other chain frame 0.18-0.23). The owner calls it the best frame of the chain: the face in it is the narrow haughty-smug face of T1/T1b, with no pink blotches and no wide eyes.
+Use proposed: identity anchor for the T1d retake as @last_frame (image_urls[1]), with @first_frame = T1c_last.jpg, so the clip ends on this face. Not yet used in a video call.
