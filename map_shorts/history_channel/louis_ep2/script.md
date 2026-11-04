@@ -1,5 +1,5 @@
 # Louis XIV Vlog #2 "Dinner in Public": script (draft 6.1, 04.11.2026)
-Owner edit 04.11 (6.3): new ending, he cannot stop the recording ("So... how do you turn this off?"), hard cut; replaces the mirror-over-the-lens cut. Owner edit 04.11 (6.2): "Ohh... I wasn't born to work..." comes right after the camera shows the laden table and the king eating with appetite. Owner edits 04.11 (6.1): "Oops, the ceiling. There." removed (no ceiling swing in this episode); "This is my antechamber." removed; "Dinner comes in four services" rephrased in plain words.
+Owner edit 04.11 (6.4): "AI-generated comedy reconstruction" removed from the end card; AI disclosure stays in the description and the platform flags. Owner edit 04.11 (6.3): new ending, he cannot stop the recording ("So... how do you turn this off?"), hard cut; replaces the mirror-over-the-lens cut. Owner edit 04.11 (6.2): "Ohh... I wasn't born to work..." comes right after the camera shows the laden table and the king eating with appetite. Owner edits 04.11 (6.1): "Oops, the ceiling. There." removed (no ceiling swing in this episode); "This is my antechamber." removed; "Dinner comes in four services" rephrased in plain words.
 About 2:45. Owner 04.11: "still only quips; write a normal script with meaning in the talk, like the competitor". Draft 6 is written as a guided tour, the way Vlog 6 is: the king EXPLAINS how his public dinner works, step by step ("this is... every night... first... then..."), in his own arrogant voice. Gags are kept only where they grow out of a fact or an accident. The owner's lines are kept.
 Meaning in one sentence: "This is how the King of France ate every night: in public, in four services, with his fingers, without a glass, and he is proud of every bite."
 Shape: myth (he eats too much) -> promise (today you watch) -> tour: the room and the rule, the food in services, the drink -> verdict and moral -> next episode -> signature outro. Six long takes plus the outro, like the reference's five long takes.
@@ -56,7 +56,7 @@ At the table he turns the phone to his face and pokes the screen to stop the vid
 LOUIS: "So... [pause] how do you turn this off?"
 («Так... как тут выключить?»)
 Hard cut mid-poke to the end card.
-End card: THE SUN IS NEVER LATE. · AI-generated comedy reconstruction
+End card: THE SUN IS NEVER LATE.
 
 ## Compared with the competitor (Vlog 6)
 | | Vlog 6 | Draft 6 |

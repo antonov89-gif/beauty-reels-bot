@@ -64,3 +64,6 @@ From C12 on (and in every redo of C01-C08, C13-C15), measured against the refere
 
 ## AI disclosure on screen (owner 31.10: "Убери надпись Аи генератор")
 No persistent corner "AI-GENERATED" mark on the history-channel videos. Disclosure stays: the end-card line "AI-generated comedy reconstruction", the first line of the description (visuals and voice AI-generated, dialogue invented for comedy) and the YouTube altered/synthetic content flag (and TikTok AI-generated label) at upload.
+
+## On-screen AI line removed (owner 04.11: "AI-generated comedy reconstruction это убрать")
+From episode 2 on, the end card shows only "THE SUN IS NEVER LATE." No AI text on screen at all. Disclosure stays: the first line of the description (visuals and voice AI-generated, dialogue invented for comedy) and the platform flags at upload (YouTube altered/synthetic content ON, which makes YouTube show its own label; TikTok AI-generated label ON). This narrows the CLAUDE.md line "label AI visuals on screen" for this channel by the owner's decision.
