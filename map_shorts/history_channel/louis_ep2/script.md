@@ -1,5 +1,5 @@
 # Louis XIV Vlog #2 "Dinner in Public": script (draft 6.1, 04.11.2026)
-Owner edit 04.11 (6.2): "Ohh... I wasn't born to work..." comes right after the camera shows the laden table and the king eating with appetite. Owner edits 04.11 (6.1): "Oops, the ceiling. There." removed (no ceiling swing in this episode); "This is my antechamber." removed; "Dinner comes in four services" rephrased in plain words.
+Owner edit 04.11 (6.3): new ending, he cannot stop the recording ("So... how do you turn this off?"), hard cut; replaces the mirror-over-the-lens cut. Owner edit 04.11 (6.2): "Ohh... I wasn't born to work..." comes right after the camera shows the laden table and the king eating with appetite. Owner edits 04.11 (6.1): "Oops, the ceiling. There." removed (no ceiling swing in this episode); "This is my antechamber." removed; "Dinner comes in four services" rephrased in plain words.
 About 2:45. Owner 04.11: "still only quips; write a normal script with meaning in the talk, like the competitor". Draft 6 is written as a guided tour, the way Vlog 6 is: the king EXPLAINS how his public dinner works, step by step ("this is... every night... first... then..."), in his own arrogant voice. Gags are kept only where they grow out of a fact or an accident. The owner's lines are kept.
 Meaning in one sentence: "This is how the King of France ate every night: in public, in four services, with his fingers, without a glass, and he is proud of every bite."
 Shape: myth (he eats too much) -> promise (today you watch) -> tour: the room and the rule, the food in services, the drink -> verdict and moral -> next episode -> signature outro. Six long takes plus the outro, like the reference's five long takes.
@@ -46,10 +46,17 @@ LOUIS: "So. Do I eat too much? [pause] No. I eat like a king. [pause] Don't be a
 («Итак. Я слишком много ем? Нет. Я ем как король. Не бойтесь потолстеть, бойтесь остаться неудачниками.»)
 
 ## Take 7. Next episode and the signature outro (2:16-2:42)
-He stands, the crowd bows, he looks into the hand mirror, nods, points at the lens; then orders with a finger, waves the viewers off, laughs coldly and sits back down at the full table; the mirror covers the lens.
+He stands, the crowd bows, he looks into the hand mirror, nods, points at the lens; then orders with a finger, waves the viewers off, laughs coldly and sits back down at the full table.
 LOUIS: "All this food has a price. [pause] In the next video, I'll tell you about my operation. [pause] My surgeon practised it first... on other patients. [pause] Very kind of them. [pause] Subscribe to my stunning channel. [pause] Hit like. Ring the bell. Anyway, do what you like. [haughty laugh] I'm off to the table to feast!"
 («Вся эта еда имеет цену. В следующем видео расскажу о своей операции. Мой хирург сначала тренировался... на других пациентах. Очень мило с их стороны. Подписывайтесь на мой потрясающий канал. Ставьте лайк. Жмите на колокольчик. А впрочем, делайте что хотите. А я пошёл к столу пировать!»)
-Plate: NEXT: THE OPERATION. End card: THE SUN IS NEVER LATE. · AI-generated comedy reconstruction
+Plate: NEXT: THE OPERATION.
+
+## Take 8. He cannot stop the recording (2:42-2:48)
+At the table he turns the phone to his face and pokes the screen to stop the video. Nothing happens. He frowns, pokes again, harder; his finger fills the lens, the picture shakes and tilts, his eye comes very close to the lens.
+LOUIS: "So... [pause] how do you turn this off?"
+(«Так... как тут выключить?»)
+Hard cut mid-poke to the end card.
+End card: THE SUN IS NEVER LATE. · AI-generated comedy reconstruction
 
 ## Compared with the competitor (Vlog 6)
 | | Vlog 6 | Draft 6 |
