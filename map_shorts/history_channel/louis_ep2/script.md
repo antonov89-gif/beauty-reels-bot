@@ -1,121 +1,63 @@
-# Louis XIV Vlog #2 "Dinner in Public": script (draft 5, 04.11.2026)
-About 2:30. Evening, Versailles, the king's public dinner. He films himself on a phone, as in episode 1, and hands it to Marcel twice. He talks to the viewers as if they stood in the crowd. Short lines, silence after every gag: the picture finishes the joke. English is spoken; the Russian is for the owner only. No music.
-Owner edits 04.11: "And this is my channel" added to the opener (C01); C02 rewritten ("Of course, that's not true... Today, before your eyes"). MEANING (draft 5, owner 04.11: "no meaning, only small quips"): the Short is a myth-and-verdict argument. Myth: "the Sun King was a glutton" (C02). Promise: "come, I will show you my dinner" (C03). Tour: every block says a documented fact out loud and carries one gag (the public ritual and the stools, the sister-in-law's list, the fork ban, the glass on request, the four services, the peas craze). Verdict (C12): "So, do I eat too much? No. I eat exactly what a king should." Moral for the viewer (owner's line): "Don't be afraid of getting fat. Be afraid of being a loser." One sentence: "They say the Sun King was a glutton; here is his public dinner, the facts prove it, and he turns the myth into a boast."
-All owner lines and edits are kept word for word. New in draft 5: the promise line in C03, the pheasant fact in C06, the spoken "Four services. Every night." over the burst, the peas fact in C11, the verdict in C12.
-Changes from draft 3: lines cut to 12-16 words per clip; a viewer hook after the opener; Marcel is ordered and praised; clips merged where one gag chain runs with the same people (C06 = old C06+C07, C11 = old C12+C13); the owner's lines are kept as they were.
+# Louis XIV Vlog #2 "Dinner in Public": script (draft 6, 04.11.2026)
+About 2:45. Owner 04.11: "still only quips; write a normal script with meaning in the talk, like the competitor". Draft 6 is written as a guided tour, the way Vlog 6 is: the king EXPLAINS how his public dinner works, step by step ("this is... every night... first... then..."), in his own arrogant voice. Gags are kept only where they grow out of a fact or an accident. The owner's lines are kept.
+Meaning in one sentence: "This is how the King of France ate every night: in public, in four services, with his fingers, without a glass, and he is proud of every bite."
+Shape: myth (he eats too much) -> promise (today you watch) -> tour: the room and the rule, the food in services, the drink -> verdict and moral -> next episode -> signature outro. Six long takes plus the outro, like the reference's five long takes.
+Cut from draft 5 (back on the owner's word): "Find out where he lives" / the vegetables comment, the button and partridge scene, "Last week he had a silver fork", "Four services" as a voice-over (now spoken in the tour).
 
-## Setup 1. The antechamber, candles (0:00-0:29)
-
-**C01 (0:00-0:11)**
-Frame 0 (owner 31.10, after the Vlog 2 first frame): the phone is far too close to his face: nose and lips fill the frame, tilted about 20 degrees, the face off-centre to the right, the top half covered by a dark out-of-focus mass (his own scarlet velvet sleeve and fist, still fumbling with the phone), one eye at the lower edge, mouth a little open, soft focus, wide-angle distortion. About 1 s of fumbling, then the phone swings up to the painted ceiling, candle smoke drifts across it ("Oops, the ceiling"), and he turns it onto himself: he is already seated at the head of a long table, napkin tucked into the lace.
-LOUIS: "Oops, the ceiling. There. Bonjour. I am Louis, King of France. And this is my channel. They call me the Sun King. Yes... I'm that handsome."
-(«Ой, потолок. Вот. Бонжур. Я Людовик, король Франции. И это мой канал. Меня называют Король-Солнце. Да... я настолько красив.»)
+## Take 1. Selfie at the table (0:00-0:22)
+First frame: the phone far too close, nose and lips fill the frame, tilted, the top half covered by his own scarlet sleeve and fist. A second of fumbling, up to the painted ceiling, then onto his face: he sits at the head of the long table, napkin tucked into the lace, the crowd behind him.
+LOUIS: "Oops, the ceiling. There. Bonjour. I am Louis, King of France. And this is my channel. They call me the Sun King. Yes... I'm that handsome. [pause] You say I eat too much. [pause] Of course, that's not true. [pause] Every day I feast in front of the court. Today... before your eyes."
+(«Ой, потолок. Вот. Бонжур. Я Людовик, король Франции. И это мой канал. Меня называют Король-Солнце. Да... я настолько красив. Вы говорите, что я слишком много ем. Это, конечно, неправда. Каждый день я пирую на глазах у двора. Сегодня... на ваших.»)
 Plate: VERSAILLES, FRANCE · 1685
 
-**C02 (0:11-0:20)**
-He tilts the phone to the empty gold plates and back to his face.
-LOUIS: "You say I eat too much. [pause] Of course, that's not true. [pause] Every day I feast in front of the court. Today... before your eyes."
-(«Вы говорите, что я слишком много ем. Это, конечно, неправда. Каждый день я пирую на глазах у двора. Сегодня... на ваших.»)
-Plate: THE KING'S PUBLIC DINNER · EVERY NIGHT AT 10 PM
+## Take 2. The room and the rule (0:22-0:49)
+Selfie; people come in through a side door and bow, one too little. Then he hands the phone to Marcel, who shows the room: the long table, duchesses on folding stools in front, the crowd standing behind. Back to the king.
+LOUIS: "This is my antechamber. Every night at ten, I dine here. In public. [pause] Anyone dressed properly may come in. [pause] Most of you. [to the late bower] Bow. Lower. Good. [pause] Marcel, show them. [Marcel's wide shot] The duchesses sit. Everyone else stands. [back to the king] Why in public? [pause] A king belongs to his people. Even at dinner."
+(«Это моя передняя. Каждый вечер в десять я ужинаю здесь. При всех. Войти может любой, кто прилично одет. Большинство из вас. Поклон. Ниже. Хорошо. Марсель, покажи им. Герцогини сидят. Остальные стоят. Почему при всех? Король принадлежит своему народу. Даже за ужином.»)
+Plates: THE KING'S PUBLIC DINNER · EVERY NIGHT AT 10 PM / A FEW HIGH-RANKING LADIES SAT, THE REST STOOD
 
-**C03 (0:20-0:29)**
-People come in through a side door and bow. One bows too little. Louis looks at him, then at the lens, and looks the viewer up and down.
-LOUIS: "Bow. Lower. Good. [pause] Anyone dressed properly may come in. [pause] Most of you. [pause] Come, I'll show you my dinner."
-(«Поклон. Ниже. Хорошо. Входить может любой, кто прилично одет. Большинство из вас. Идёмте, покажу вам мой ужин.»)
+## Take 3. The food (0:49-1:19)
+Selfie. A stack of empty soup bowls beside him; a servant puts down another. Then a pheasant and a partridge are carried in; he takes a leg with his fingers; Marcel's fork comes into the lens and is pushed away; the greasy leg points at the lens.
+LOUIS: "Dinner comes in four services. [pause] First, soup. [pause] My sister-in-law writes that I eat four bowls. [a sixth bowl is put down] She can't count. [pause] Then the roasts. A whole pheasant. A partridge. [Marcel's fork in the lens] Someone taught the peasants to use a fork. [pause] I've untaught them. [leg to the lens] Fork or fingers? Tell me in the comments. [pause] Wrong answers go to the Bastille."
+(«Ужин подают в четыре перемены. Сначала суп. Невестка пишет, что я съедаю четыре тарелки. Она не умеет считать. Потом жаркое. Фазан целиком. Куропатка. Людишек научили есть вилкой. Я их разучил. Вилка или пальцы? Напишите в комментариях. Неправильные ответы поедут в Бастилию.»)
+Plates: FOUR SERVICES: SOUP, ROASTS AND SALADS, PUDDINGS, FRUIT / HIS SISTER-IN-LAW WROTE: 4 SOUPS, A WHOLE PHEASANT, A PARTRIDGE... / HE FORBADE HIS GRANDSONS TO USE FORKS
 
-## Setup 2. Marcel films (0:27-0:36)
-
-**C04 (0:27-0:36)**
-He holds the phone out to the side without looking. Marcel takes it; the picture jumps, then shows the room wide: the long table, duchesses on folding stools in front, the crowd standing behind. Marcel tilts down too far: the king's double chin fills the frame.
-LOUIS: "Marcel, show them the room. [pause] Duchesses sit. Everyone else stands. [pause] Not my chin, Marcel."
-(«Марсель, покажи им зал. Герцогини сидят. Остальные стоят. Не подбородок, Марсель.»)
-Plate: A FEW HIGH-RANKING LADIES SAT IN FRONT, THE REST STOOD
-
-## Setup 3. The first course (0:36-1:08)
-
-**C05 (0:36-0:45)**
-The phone is back in his hand. Beside him four empty soup bowls already stand in a stack; he drinks from a fifth.
-LOUIS: "My sister-in-law says I eat four bowls of soup. [pause, a servant puts down a sixth] She can't count."
-(«Невестка говорит, что я съедаю четыре тарелки супа. Она не умеет считать.»)
-Plate: HIS SISTER-IN-LAW WROTE: 4 SOUPS, A WHOLE PHEASANT, A PARTRIDGE, A BIG SALAD, AND MORE
-
-**C06 (0:45-0:58)** (one take, old C06 + C07)
-A pheasant arrives. Marcel holds a silver fork right into the lens. Louis takes a leg with his fingers. He turns the phone over his shoulder: in the crowd a courtier eats a chicken leg with both hands and licks his fingers, very seriously. Back to the king's face.
-LOUIS: "A pheasant. A whole one. She wrote that too."
-MARCEL (off screen): "Your fork, Sire?"
-LOUIS: "Someone taught the peasants to use a fork. [pause] I've untaught them. [pause, turn] Look. Last week he had a silver fork."
-(Людовик: «Фазан. Целиком. Об этом она тоже писала.» Марсель: «Ваша вилка, сир?» Людовик: «Людишек научили есть вилкой. Я их разучил. Смотрите. На прошлой неделе у него была серебряная вилка.»)
-Plate: HE FORBADE HIS GRANDSONS TO USE FORKS
-
-**C07 (0:58-1:06)**
-He points the greasy pheasant leg at the lens.
-LOUIS: "Fork or fingers? Tell me in the comments. [pause] Wrong answers go to the Bastille."
-(«Вилка или пальцы? Напишите в комментариях. Неправильные ответы поедут в Бастилию.»)
-
-## Setup 4. The drink (1:06-1:35)
-
-**C08 (1:06-1:13)**
-He lifts one finger without looking. Behind him a cup starts its trip from hand to hand.
+## Take 4. The drink (1:19-1:44)
+Selfie. He lifts one finger without looking; behind him a gold cup goes from hand to hand. It reaches him, Marcel bumps the table, wine splashes over the lens. He laughs, turns the red phone onto Marcel, who freezes.
+LOUIS: "There is no glass on my table. [pause] When I want a drink, I ask..."
 CUPBEARER (off screen): "A drink for the King!"
-LOUIS: "No glass on my table. I ask for a drink... [pause] and I get a little older."
-(Виночерпий: «Питьё для короля!» Людовик: «Бокала на моём столе нет. Я прошу пить... и немного старею.»)
+LOUIS: "...and I get a little older. [wine on the lens; he laughs] Mon Dieu. [pause] Leave it. Nobody saw anything. [pause] And nobody will see you again. [Marcel's terrified face; pause] I'm joking."
+MARCEL (quietly): "Sorry, Sire."
+(«Бокала на моём столе нет. Хочу пить, прошу...» Виночерпий: «Питьё для короля!» «...и немного старею. Боже мой. Оставь. Никто ничего не видел. И тебя больше никто не увидит. Шучу.» Марсель: «Простите, сир.»)
 Plate: GLASSES WERE BROUGHT ONLY WHEN THE KING ASKED
 
-**C09 (1:13-1:22)**
-The cup reaches him at last, Marcel bumps the table, wine splashes over the lens. A red blur, silence. Louis laughs, for real. He turns the red-smeared phone onto Marcel, who freezes, terrified. A beat.
-MARCEL (quietly): "Sorry, Sire."
-LOUIS: "[laughs] Mon Dieu. [pause] Leave it. Nobody saw anything. [pause] And nobody will see you again."
-(pause, Marcel's terrified face)
-LOUIS: "[laughs] I'm joking."
-(Марсель: «Простите, сир.» Людовик: «[смеётся] Боже мой. Оставь. Никто ничего не видел. И тебя больше никто не увидит.» Пауза, испуганный Марсель. «[смеётся] Шучу.»)
+## Take 5. The last services (1:44-2:02)
+Eight quick close-ups of the dishes (salad, mutton, ham, pastry, fruit), then the king alone: a small silver dish of green peas, a pea held up to the lens; he slides low in his armchair, hands on his belly, eyes half-closed.
+LOUIS: "Then salad. Ham. Pastry. Fruit. [pause] All in less than an hour. [pause] And peas. The whole court talks about nothing else. [sinking into the chair] Ohh... I wasn't born to work. I was born for happiness, love, pleasure... and a good rest. [contented laugh]"
+(«Потом салат. Ветчина. Выпечка. Фрукты. Всё меньше чем за час. И горошек. Весь двор только о нём и говорит. Ох... Не для работы создан я, а для счастья, любви, удовольствия и отдыха.»)
+Plates: THE MEAL LASTED LESS THAN AN HOUR / A LETTER FROM THE COURT: EVERYONE WAS CRAZY ABOUT GREEN PEAS
 
-**C10 (1:22-1:32)**
-He wipes the lens with his sleeve and turns the phone towards Marcel, who reads the screen over the king's shoulder.
-LOUIS: "Well done, Marcel. Keep filming."
-MARCEL: "Someone asks if you ever eat vegetables, Sire."
-LOUIS: "Salad. A whole bowl. [pause] Find out where he lives."
-(«Молодец, Марсель. Продолжай снимать.» Марсель: «Один спрашивает, едите ли вы хоть когда-нибудь овощи, сир.» Людовик: «Салат. Целую миску. Узнай, где он живёт.»)
+## Take 6. The verdict (2:02-2:16)
+He sits up, wipes his fingers, looks at the pheasant bones on his plate, then into the lens, chin up.
+LOUIS: "So. Do I eat too much? [pause] No. I eat like a king. [pause] Don't be afraid of getting fat. Be afraid of being a loser. [haughty laugh]"
+(«Итак. Я слишком много ем? Нет. Я ем как король. Не бойтесь потолстеть, бойтесь остаться неудачниками.»)
 
-## Burst. The courses (1:32-1:38)
-Eight close-ups of under 1 s each: soup, pheasant, partridge, a big salad, mutton, ham, pastry, fruit with one partridge leg left on its dish. Plates, silver, the crowd murmuring; over it the king, deadpan, off screen:
-LOUIS (V.O.): "Four services. Every night."
-(«Четыре перемены. Каждый вечер.»)
-Plate: FOUR SERVICES: SOUP, ROASTS AND SALADS, PUDDINGS, FRUIT
+## Take 7. Next episode and the signature outro (2:16-2:42)
+He stands, the crowd bows, he looks into the hand mirror, nods, points at the lens; then orders with a finger, waves the viewers off, laughs coldly and sits back down at the full table; the mirror covers the lens.
+LOUIS: "Next time, my surgeon. He's been practising. [pause] On other people. [pause] Subscribe to my stunning channel. [pause] Hit like. Ring the bell. Anyway, do what you like. [haughty laugh] I'm off to the table to feast!"
+(«В следующий раз мой хирург. Он тренировался. На других. Подписывайтесь на мой потрясающий канал. Ставьте лайк. Жмите на колокольчик. А впрочем, делайте что хотите. А я пошёл к столу пировать!»)
+Plate: NEXT: THE OPERATION. End card: THE SUN IS NEVER LATE. · AI-generated comedy reconstruction
 
-## Setup 5. Dessert (1:38-2:11)
-
-**C11 (1:38-1:53)** (one take, old C12 + C13; the king alone, a calm contrast beat)
-A small silver dish of green peas; he holds one pea up to the lens, focus hunts, a little hurt. Then he slides low in the armchair, hands on his belly, eyes half-closed, the phone loose above his face. A long happy sigh.
-LOUIS: "Peas. A lady at court writes that nobody talks about anything else. [pause] Last year they talked about me. [pause] Ohh... I wasn't born to work. I was born for happiness, love, pleasure... and a good rest. [contented laugh]"
-(«Горошек. Одна дама при дворе пишет, что больше ни о чём не говорят. В прошлом году говорили обо мне. Ох... Не для работы создан я, а для счастья, любви, удовольствия и отдыха. [довольный смех]»)
-Plate: A LETTER FROM THE COURT: EVERYONE WAS CRAZY ABOUT GREEN PEAS
-
-**C12 (1:53-2:04)**
-He sits up, wipes his fingers on the napkin, glances at the pheasant bones on his plate, then straight into the lens, chin up: the verdict and the moral of the Short.
-LOUIS: "So. Do I eat too much? [pause] No. I eat exactly what a king should. [pause] Don't be afraid of getting fat. Be afraid of being a loser. [haughty laugh]"
-(«Итак. Я слишком много ем? Нет. Я ем ровно столько, сколько положено королю. Не бойтесь потолстеть, бойтесь остаться неудачниками. [надменный смех]»)
-
-**C13 (2:00-2:13)**
-He laughs too hard: a gold button shoots off his coat and hits Marcel in the forehead. Marcel says nothing, rubs his forehead. A beat. Then at the edge of the frame Marcel's hand slowly reaches for the last partridge leg. Louis sees it on the screen.
-LOUIS: "That button was a gift. [pause] The partridge, no."
-MARCEL: "I haven't eaten since this morning."
-LOUIS: "Neither have they. [nods at the crowd] Take a pea. One."
-(«Эта пуговица была подарком. Куропатку нет.» Марсель: «Я с утра не ел.» Людовик: «Они тоже. Возьми горошину. Одну.»)
-
-## Ending (2:13-2:31)
-
-**C14 (2:13-2:22)**
-He stands up, the crowd bows. He looks into the hand mirror, nods to himself, then points at the camera.
-LOUIS: "Next time, my surgeon. He's been practising. [pause] On other people. [pause] Subscribe to my stunning channel."
-(«В следующий раз мой хирург. Он тренировался. На других. Подписывайтесь на мой потрясающий канал.»)
-Plate: NEXT: THE OPERATION
-
-**C15 (2:22-2:31)**
-He gives orders with a finger, waves the viewers off on "do what you like", laughs coldly with his chin up, then turns and sits back down at the full table. The mirror covers the lens.
-LOUIS: "Hit like. Ring the bell. Anyway, do what you like. [haughty laugh] I'm off to the table to feast!"
-(«Ставьте лайк. Жмите на колокольчик. А впрочем, делайте что хотите. [надменный смех] А я пошёл к столу пировать!»)
-End card: THE SUN IS NEVER LATE. · AI-generated comedy reconstruction
-
-## Map old -> new
-C01 -> C01 | C02 -> C02 (hook added) | C03 -> C03 | C04 -> C04 | C05 -> C05 | C06+C07 -> C06 | C08 -> C07 | C09 -> C08 | C10 -> C09 | C11 -> C10 | burst | C12+C13 -> C11 | C14 -> C12 (greed line cut) | C15 -> C13 | C16 -> C14 (poll "you choose" cut) | C17 -> C15.
-Reserved, not used (needs a second source): a "do not ask" gag about the royal close-stool chair (louis_hooks_unique.md, hook 5).
+## Compared with the competitor (Vlog 6)
+| | Vlog 6 | Draft 6 |
+|--|--|--|
+| Speech type | guided tour, explains how a thing works, deadpan | the same: guided tour of the public dinner |
+| Myth / thesis | "you say I bathed once a month" | "you say I eat too much" |
+| Promise | "today I show you my bathroom" | "today... before your eyes", then "this is my antechamber" |
+| Spoken facts | about 12 | about 12 (10 pm, in public, dress rule, stools, four services, soup x4, pheasant, partridge, fork ban, no glass, under an hour, peas) |
+| Jokes | about 6, born from facts | about 7, born from facts or an accident (can't count, fork, Bastille, older, wine, born for happiness, loser) |
+| Verdict | "once a month? No." | "do I eat too much? No. I eat like a king." |
+| Message | "wash your hands, stop believing myths" | "don't be afraid of getting fat, be afraid of being a loser" |
+| Takes | 5 long | 6 long + outro |
+Spoken words: about 280 (Vlog 6: 187 in 2:05), so draft 6 is about 2:40-2:50 at our ep.1 pace; the real length comes from the voice.
+New fact in the speech: "all in less than an hour" (chateauversailles.fr, one official source; a second source is wanted). "A king belongs to his people. Even at dinner." is the king's opinion, not a factual claim.
