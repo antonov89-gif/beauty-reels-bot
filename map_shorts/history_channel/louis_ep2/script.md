@@ -1,5 +1,5 @@
 # Louis XIV Vlog #2 "Dinner in Public": script (draft 6.1, 04.11.2026)
-Owner edits 04.11 (6.1): "Oops, the ceiling. There." removed (no ceiling swing in this episode); "This is my antechamber." removed; "Dinner comes in four services" rephrased in plain words.
+Owner edit 04.11 (6.2): "Ohh... I wasn't born to work..." comes right after the camera shows the laden table and the king eating with appetite. Owner edits 04.11 (6.1): "Oops, the ceiling. There." removed (no ceiling swing in this episode); "This is my antechamber." removed; "Dinner comes in four services" rephrased in plain words.
 About 2:45. Owner 04.11: "still only quips; write a normal script with meaning in the talk, like the competitor". Draft 6 is written as a guided tour, the way Vlog 6 is: the king EXPLAINS how his public dinner works, step by step ("this is... every night... first... then..."), in his own arrogant voice. Gags are kept only where they grow out of a fact or an accident. The owner's lines are kept.
 Meaning in one sentence: "This is how the King of France ate every night: in public, in four services, with his fingers, without a glass, and he is proud of every bite."
 Shape: myth (he eats too much) -> promise (today you watch) -> tour: the room and the rule, the food in services, the drink -> verdict and moral -> next episode -> signature outro. Six long takes plus the outro, like the reference's five long takes.
@@ -33,9 +33,11 @@ MARCEL (quietly): "Sorry, Sire."
 Plate: GLASSES WERE BROUGHT ONLY WHEN THE KING ASKED
 
 ## Take 5. The last services (1:44-2:02)
-Eight quick close-ups of the dishes (salad, mutton, ham, pastry, fruit), then the king alone: a small silver dish of green peas, a pea held up to the lens; he slides low in his armchair, hands on his belly, eyes half-closed.
-LOUIS: "Then salad. Ham. Pastry. Fruit. [pause] All in less than an hour. [pause] And peas. The whole court talks about nothing else. [sinking into the chair] Ohh... I wasn't born to work. I was born for happiness, love, pleasure... and a good rest. [contented laugh]"
-(«Потом салат. Ветчина. Выпечка. Фрукты. Всё меньше чем за час. И горошек. Весь двор только о нём и говорит. Ох... Не для работы создан я, а для счастья, любви, удовольствия и отдыха.»)
+Quick close-ups of the dishes (salad, mutton, ham, pastry, fruit) and a small silver dish of green peas; he holds one pea up to the lens.
+LOUIS: "Then salad. Ham. Pastry. Fruit. [pause] All in less than an hour. [pause] And peas. The whole court talks about nothing else."
+Then Marcel holds the phone and shows the whole laden table, and the king eating with great appetite: he tears bread, bites into a pastry, licks his fingers, takes a spoonful of peas, chews with his eyes closed in bliss (about 4 s, no words, only chewing and the crowd's murmur). Then he leans back in the armchair, hands on his belly, eyes half-closed, a long happy sigh.
+LOUIS: "Ohh... [pause] I wasn't born to work. [pause] I was born for happiness, love, pleasure... and a good rest. [contented laugh]"
+(«Потом салат. Ветчина. Выпечка. Фрукты. Всё меньше чем за час. И горошек. Весь двор только о нём и говорит.» Марсель показывает весь стол и как король сытно ест, около 4 секунд без слов. Король откидывается в кресле: «Ох... Не для работы создан я, а для счастья, любви, удовольствия и отдыха.»)
 Plates: THE MEAL LASTED LESS THAN AN HOUR / A LETTER FROM THE COURT: EVERYONE WAS CRAZY ABOUT GREEN PEAS
 
 ## Take 6. The verdict (2:02-2:16)
