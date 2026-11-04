@@ -1,26 +1,27 @@
-# Louis XIV Vlog #2 "Dinner in Public": script (draft 6, 04.11.2026)
+# Louis XIV Vlog #2 "Dinner in Public": script (draft 6.1, 04.11.2026)
+Owner edits 04.11 (6.1): "Oops, the ceiling. There." removed (no ceiling swing in this episode); "This is my antechamber." removed; "Dinner comes in four services" rephrased in plain words.
 About 2:45. Owner 04.11: "still only quips; write a normal script with meaning in the talk, like the competitor". Draft 6 is written as a guided tour, the way Vlog 6 is: the king EXPLAINS how his public dinner works, step by step ("this is... every night... first... then..."), in his own arrogant voice. Gags are kept only where they grow out of a fact or an accident. The owner's lines are kept.
 Meaning in one sentence: "This is how the King of France ate every night: in public, in four services, with his fingers, without a glass, and he is proud of every bite."
 Shape: myth (he eats too much) -> promise (today you watch) -> tour: the room and the rule, the food in services, the drink -> verdict and moral -> next episode -> signature outro. Six long takes plus the outro, like the reference's five long takes.
 Cut from draft 5 (back on the owner's word): "Find out where he lives" / the vegetables comment, the button and partridge scene, "Last week he had a silver fork", "Four services" as a voice-over (now spoken in the tour).
 
 ## Take 1. Selfie at the table (0:00-0:22)
-First frame: the phone far too close, nose and lips fill the frame, tilted, the top half covered by his own scarlet sleeve and fist. A second of fumbling, up to the painted ceiling, then onto his face: he sits at the head of the long table, napkin tucked into the lace, the crowd behind him.
-LOUIS: "Oops, the ceiling. There. Bonjour. I am Louis, King of France. And this is my channel. They call me the Sun King. Yes... I'm that handsome. [pause] You say I eat too much. [pause] Of course, that's not true. [pause] Every day I feast in front of the court. Today... before your eyes."
-(«Ой, потолок. Вот. Бонжур. Я Людовик, король Франции. И это мой канал. Меня называют Король-Солнце. Да... я настолько красив. Вы говорите, что я слишком много ем. Это, конечно, неправда. Каждый день я пирую на глазах у двора. Сегодня... на ваших.»)
+First frame: the phone far too close, nose and lips fill the frame, tilted, the top half covered by his own scarlet sleeve and fist. A second of fumbling, then he pulls the phone back to his face: he sits at the head of the long table, napkin tucked into the lace, the crowd behind him.
+LOUIS: "Bonjour. I am Louis, King of France. And this is my channel. They call me the Sun King. Yes... I'm that handsome. [pause] You say I eat too much. [pause] Of course, that's not true. [pause] Every day I feast in front of the court. Today... before your eyes."
+(«Бонжур. Я Людовик, король Франции. И это мой канал. Меня называют Король-Солнце. Да... я настолько красив. Вы говорите, что я слишком много ем. Это, конечно, неправда. Каждый день я пирую на глазах у двора. Сегодня... на ваших.»)
 Plate: VERSAILLES, FRANCE · 1685
 
 ## Take 2. The room and the rule (0:22-0:49)
 Selfie; people come in through a side door and bow, one too little. Then he hands the phone to Marcel, who shows the room: the long table, duchesses on folding stools in front, the crowd standing behind. Back to the king.
-LOUIS: "This is my antechamber. Every night at ten, I dine here. In public. [pause] Anyone dressed properly may come in. [pause] Most of you. [to the late bower] Bow. Lower. Good. [pause] Marcel, show them. [Marcel's wide shot] The duchesses sit. Everyone else stands. [back to the king] Why in public? [pause] A king belongs to his people. Even at dinner."
-(«Это моя передняя. Каждый вечер в десять я ужинаю здесь. При всех. Войти может любой, кто прилично одет. Большинство из вас. Поклон. Ниже. Хорошо. Марсель, покажи им. Герцогини сидят. Остальные стоят. Почему при всех? Король принадлежит своему народу. Даже за ужином.»)
+LOUIS: "Every night at ten, I dine here. In public. [pause] Anyone dressed properly may come in. [pause] Most of you. [to the late bower] Bow. Lower. Good. [pause] Marcel, show them. [Marcel's wide shot] The duchesses sit. Everyone else stands. [back to the king] Why in public? [pause] A king belongs to his people. Even at dinner."
+(«Каждый вечер в десять я ужинаю здесь. При всех. Войти может любой, кто прилично одет. Большинство из вас. Поклон. Ниже. Хорошо. Марсель, покажи им. Герцогини сидят. Остальные стоят. Почему при всех? Король принадлежит своему народу. Даже за ужином.»)
 Plates: THE KING'S PUBLIC DINNER · EVERY NIGHT AT 10 PM / A FEW HIGH-RANKING LADIES SAT, THE REST STOOD
 
 ## Take 3. The food (0:49-1:19)
 Selfie. A stack of empty soup bowls beside him; a servant puts down another. Then a pheasant and a partridge are carried in; he takes a leg with his fingers; Marcel's fork comes into the lens and is pushed away; the greasy leg points at the lens.
-LOUIS: "Dinner comes in four services. [pause] First, soup. [pause] My sister-in-law writes that I eat four bowls. [a sixth bowl is put down] She can't count. [pause] Then the roasts. A whole pheasant. A partridge. [Marcel's fork in the lens] Someone taught the peasants to use a fork. [pause] I've untaught them. [leg to the lens] Fork or fingers? Tell me in the comments. [pause] Wrong answers go to the Bastille."
-(«Ужин подают в четыре перемены. Сначала суп. Невестка пишет, что я съедаю четыре тарелки. Она не умеет считать. Потом жаркое. Фазан целиком. Куропатка. Людишек научили есть вилкой. Я их разучил. Вилка или пальцы? Напишите в комментариях. Неправильные ответы поедут в Бастилию.»)
-Plates: FOUR SERVICES: SOUP, ROASTS AND SALADS, PUDDINGS, FRUIT / HIS SISTER-IN-LAW WROTE: 4 SOUPS, A WHOLE PHEASANT, A PARTRIDGE... / HE FORBADE HIS GRANDSONS TO USE FORKS
+LOUIS: "My dinner comes in four rounds of dishes. [pause] First, soup. [pause] My sister-in-law writes that I eat four bowls. [a sixth bowl is put down] She can't count. [pause] Then the roasts. A whole pheasant. A partridge. [Marcel's fork in the lens] Someone taught the peasants to use a fork. [pause] I've untaught them. [leg to the lens] Fork or fingers? Tell me in the comments. [pause] Wrong answers go to the Bastille."
+(«Мой ужин приносят в четыре захода. Сначала суп. Невестка пишет, что я съедаю четыре тарелки. Она не умеет считать. Потом жаркое. Фазан целиком. Куропатка. Людишек научили есть вилкой. Я их разучил. Вилка или пальцы? Напишите в комментариях. Неправильные ответы поедут в Бастилию.»)
+Plates: FOUR ROUNDS OF DISHES: SOUP, ROASTS AND SALADS, PUDDINGS, FRUIT / HIS SISTER-IN-LAW WROTE: 4 SOUPS, A WHOLE PHEASANT, A PARTRIDGE... / HE FORBADE HIS GRANDSONS TO USE FORKS
 
 ## Take 4. The drink (1:19-1:44)
 Selfie. He lifts one finger without looking; behind him a gold cup goes from hand to hand. It reaches him, Marcel bumps the table, wine splashes over the lens. He laughs, turns the red phone onto Marcel, who freezes.
