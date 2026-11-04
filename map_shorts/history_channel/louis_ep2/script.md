@@ -1,6 +1,8 @@
-# Louis XIV Vlog #2 "Dinner in Public": script (draft 4, 31.10.2026)
+# Louis XIV Vlog #2 "Dinner in Public": script (draft 5, 04.11.2026)
 About 2:30. Evening, Versailles, the king's public dinner. He films himself on a phone, as in episode 1, and hands it to Marcel twice. He talks to the viewers as if they stood in the crowd. Short lines, silence after every gag: the picture finishes the joke. English is spoken; the Russian is for the owner only. No music.
-Owner edits 04.11: "And this is my channel" added to the opener (C01); C02 rewritten ("Of course, that's not true... Today, before your eyes"). Changes from draft 3: lines cut to 12-16 words per clip; a viewer hook after the opener; Marcel is ordered and praised; clips merged where one gag chain runs with the same people (C06 = old C06+C07, C11 = old C12+C13); the owner's lines are kept as they were.
+Owner edits 04.11: "And this is my channel" added to the opener (C01); C02 rewritten ("Of course, that's not true... Today, before your eyes"). MEANING (draft 5, owner 04.11: "no meaning, only small quips"): the Short is a myth-and-verdict argument. Myth: "the Sun King was a glutton" (C02). Promise: "come, I will show you my dinner" (C03). Tour: every block says a documented fact out loud and carries one gag (the public ritual and the stools, the sister-in-law's list, the fork ban, the glass on request, the four services, the peas craze). Verdict (C12): "So, do I eat too much? No. I eat exactly what a king should." Moral for the viewer (owner's line): "Don't be afraid of getting fat. Be afraid of being a loser." One sentence: "They say the Sun King was a glutton; here is his public dinner, the facts prove it, and he turns the myth into a boast."
+All owner lines and edits are kept word for word. New in draft 5: the promise line in C03, the pheasant fact in C06, the spoken "Four services. Every night." over the burst, the peas fact in C11, the verdict in C12.
+Changes from draft 3: lines cut to 12-16 words per clip; a viewer hook after the opener; Marcel is ordered and praised; clips merged where one gag chain runs with the same people (C06 = old C06+C07, C11 = old C12+C13); the owner's lines are kept as they were.
 
 ## Setup 1. The antechamber, candles (0:00-0:29)
 
@@ -16,10 +18,10 @@ LOUIS: "You say I eat too much. [pause] Of course, that's not true. [pause] Ever
 («Вы говорите, что я слишком много ем. Это, конечно, неправда. Каждый день я пирую на глазах у двора. Сегодня... на ваших.»)
 Plate: THE KING'S PUBLIC DINNER · EVERY NIGHT AT 10 PM
 
-**C03 (0:20-0:27)**
+**C03 (0:20-0:29)**
 People come in through a side door and bow. One bows too little. Louis looks at him, then at the lens, and looks the viewer up and down.
-LOUIS: "Bow. Lower. Good. [pause] Anyone dressed properly may come in. [pause] Most of you."
-(«Поклон. Ниже. Хорошо. Входить может любой, кто прилично одет. Большинство из вас.»)
+LOUIS: "Bow. Lower. Good. [pause] Anyone dressed properly may come in. [pause] Most of you. [pause] Come, I'll show you my dinner."
+(«Поклон. Ниже. Хорошо. Входить может любой, кто прилично одет. Большинство из вас. Идёмте, покажу вам мой ужин.»)
 
 ## Setup 2. Marcel films (0:27-0:36)
 
@@ -39,9 +41,10 @@ Plate: HIS SISTER-IN-LAW WROTE: 4 SOUPS, A WHOLE PHEASANT, A PARTRIDGE, A BIG SA
 
 **C06 (0:45-0:58)** (one take, old C06 + C07)
 A pheasant arrives. Marcel holds a silver fork right into the lens. Louis takes a leg with his fingers. He turns the phone over his shoulder: in the crowd a courtier eats a chicken leg with both hands and licks his fingers, very seriously. Back to the king's face.
+LOUIS: "A pheasant. A whole one. She wrote that too."
 MARCEL (off screen): "Your fork, Sire?"
 LOUIS: "Someone taught the peasants to use a fork. [pause] I've untaught them. [pause, turn] Look. Last week he had a silver fork."
-(Марсель: «Ваша вилка, сир?» Людовик: «Людишек научили есть вилкой. Я их разучил. Смотрите. На прошлой неделе у него была серебряная вилка.»)
+(Людовик: «Фазан. Целиком. Об этом она тоже писала.» Марсель: «Ваша вилка, сир?» Людовик: «Людишек научили есть вилкой. Я их разучил. Смотрите. На прошлой неделе у него была серебряная вилка.»)
 Plate: HE FORBADE HIS GRANDSONS TO USE FORKS
 
 **C07 (0:58-1:06)**
@@ -74,21 +77,23 @@ LOUIS: "Salad. A whole bowl. [pause] Find out where he lives."
 («Молодец, Марсель. Продолжай снимать.» Марсель: «Один спрашивает, едите ли вы хоть когда-нибудь овощи, сир.» Людовик: «Салат. Целую миску. Узнай, где он живёт.»)
 
 ## Burst. The courses (1:32-1:38)
-Eight close-ups of under 1 s each, no words: soup, pheasant, partridge, a big salad, mutton, ham, pastry, fruit with one partridge leg left on its dish. Only plates, silver, the crowd murmuring.
-Plate: SOUP, ROASTS, SALADS, SWEETS, THEN FRUIT
+Eight close-ups of under 1 s each: soup, pheasant, partridge, a big salad, mutton, ham, pastry, fruit with one partridge leg left on its dish. Plates, silver, the crowd murmuring; over it the king, deadpan, off screen:
+LOUIS (V.O.): "Four services. Every night."
+(«Четыре перемены. Каждый вечер.»)
+Plate: FOUR SERVICES: SOUP, ROASTS AND SALADS, PUDDINGS, FRUIT
 
 ## Setup 5. Dessert (1:38-2:11)
 
 **C11 (1:38-1:53)** (one take, old C12 + C13; the king alone, a calm contrast beat)
 A small silver dish of green peas; he holds one pea up to the lens, focus hunts, a little hurt. Then he slides low in the armchair, hands on his belly, eyes half-closed, the phone loose above his face. A long happy sigh.
-LOUIS: "Peas. Everyone talks about them. [pause] Last year it was me. [pause] Ohh... I wasn't born to work. I was born for happiness, love, pleasure... and a good rest. [contented laugh]"
-(«Горошек. О нём все говорят. В прошлом году говорили обо мне. Ох... Не для работы создан я, а для счастья, любви, удовольствия и отдыха. [довольный смех]»)
+LOUIS: "Peas. A lady at court writes that nobody talks about anything else. [pause] Last year they talked about me. [pause] Ohh... I wasn't born to work. I was born for happiness, love, pleasure... and a good rest. [contented laugh]"
+(«Горошек. Одна дама при дворе пишет, что больше ни о чём не говорят. В прошлом году говорили обо мне. Ох... Не для работы создан я, а для счастья, любви, удовольствия и отдыха. [довольный смех]»)
 Plate: A LETTER FROM THE COURT: EVERYONE WAS CRAZY ABOUT GREEN PEAS
 
-**C12 (1:53-2:00)**
-He sits up, wipes his fingers on the napkin, glances at the crowd, then straight into the lens, chin up.
-LOUIS: "Don't be afraid of getting fat. Be afraid of being a loser. [haughty laugh]"
-(«Не бойтесь потолстеть, бойтесь остаться неудачниками. [надменный смех]»)
+**C12 (1:53-2:04)**
+He sits up, wipes his fingers on the napkin, glances at the pheasant bones on his plate, then straight into the lens, chin up: the verdict and the moral of the Short.
+LOUIS: "So. Do I eat too much? [pause] No. I eat exactly what a king should. [pause] Don't be afraid of getting fat. Be afraid of being a loser. [haughty laugh]"
+(«Итак. Я слишком много ем? Нет. Я ем ровно столько, сколько положено королю. Не бойтесь потолстеть, бойтесь остаться неудачниками. [надменный смех]»)
 
 **C13 (2:00-2:13)**
 He laughs too hard: a gold button shoots off his coat and hits Marcel in the forehead. Marcel says nothing, rubs his forehead. A beat. Then at the edge of the frame Marcel's hand slowly reaches for the last partridge leg. Louis sees it on the screen.

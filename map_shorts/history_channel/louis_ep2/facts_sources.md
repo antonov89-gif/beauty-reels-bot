@@ -16,3 +16,12 @@ Internal file (not part of the script). Status: [2S] two independent sources, [1
 
 Before generation: a second source for C04, C09 and the burst plate, or keep the plates as written (official site wording, attributed in the description).
 Description must say: comedy reconstruction, AI visuals and voice, dialogue invented; quote attributed to Princess Palatine; the peas letter's author is disputed; the cupbearer's call and the wine accident are invented.
+
+## Draft 5 additions (04.11)
+| Clip | Statement | Status | Sources |
+|--|--|--|--|
+| Burst | Four services: soup and starters, roasts and salads, puddings, fruit | [1S official] | chateauversailles.fr "Royal tables"; a second source is wanted before publishing |
+| C06 | "A pheasant. A whole one. She wrote that too": the Palatine's list has a whole pheasant | [2S as her quote, secondary] | thegoodlifefrance.com; ripleys.com |
+| C11 | A lady at court wrote that the court talked of nothing but peas | [2S letter; author disputed; 1696] | bernardaud.com; louis_hooks_unique.md; the line says "a lady at court", the plate has no year |
+| C12 | "I eat exactly what a king should": the king's opinion, not a factual claim | character line | - |
+The myth of the Short ("the Sun King was a glutton") rests on the sister-in-law's letters; the description must say so and must not use the autopsy "stomach twice normal" (legend).
