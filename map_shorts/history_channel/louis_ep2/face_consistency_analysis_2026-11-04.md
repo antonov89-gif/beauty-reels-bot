@@ -39,3 +39,24 @@ Sharpness = variance of the Laplacian on the frame scaled to 724x1284 (higher = 
 | T1d | 72 | 47 |
 Chain trend: 230 (end of T1b) -> 131 (start of T1c, the same frame after one video round trip) -> 91 -> 72 -> 47: detail falls by about 80 % over three links. The number is confounded by the acting (the lean-in and motion blur in T1d lower it), colour saturation also drifts (about 163 -> 149 -> 114 at the end of T1d), so it is a strong hint, not a clean measurement. Mechanism: the last frame is an H.264 frame of a model render at 720p; feeding it back as the next start frame adds one more generation of softening and colour drift each time.
 Fix, part of the anchor method: do NOT chain from raw last frames. Each clip starts from a sharp anchor STILL (made by editing the best frame, 4K, then downscaled once) and ends pinned to an anchor pose via @last_frame, so the model's last frame is only a look-alike of the anchor and the next clip restarts from the clean still: quality and face are reset every 6-8 s. The seam (render of the anchor vs the anchor still) is a few pixels at the same pose and is hidden by the cut. Also unify colour/sharpness in editing (one grade over the whole video).
+
+## Addendum 2 (04.11, owner: "А для чего мы делали карточку персонажа и разные эмоции?"): the card and the emotion tiles are the right identity source; the chain's "best frame" is not
+SFace similarity to A3 (and to the owner's best chain frame):
+| Image | vs A3 | vs best frame |
+|--|--|--|
+| a1 (4K sheet frame) | 0.90 | 0.58 |
+| K_right34 | 0.86 | 0.57 |
+| T1 keyframe = edit of A3 (dinner hall) | 0.86 | 0.58 |
+| K_E2 smug half-smile | 0.82 | 0.57 |
+| K_E4 | 0.82 | 0.64 |
+| K_E8 startled | 0.82 | 0.63 |
+| K_front | 0.79 | 0.58 |
+| K_E6 annoyed | 0.77 | 0.61 |
+| K_E1 haughty | 0.74 | 0.55 |
+| K_E5 hurt | 0.72 | 0.57 |
+| K_left34 | 0.71 | 0.58 |
+| K_E7 blissful | 0.68 | 0.58 |
+| K_E3 joyful laugh | 0.58 | 0.54 |
+| owner's best chain frame | **0.60** | 1.00 |
+Reading: the whole sheet is 0.68-0.90 to A3 (the laugh 0.58 is a wide-open mouth); the chain face, now frozen in the best frame, is only 0.60 to A3 and 0.55-0.64 to every tile: it is a drifted relative made by T1 v5 from the owner's keyframe. So the chain should be rebuilt on the CARD, not on its own drifted frames.
+Corrected plan: anchors = the card A3 and each emotion tile EDITED into the dinner hall (face and expression kept, only the setting changes; the A3 edit already scores 0.86): haughty (E1), smug (E2), annoyed (E6), startled (E8), blissful (E7), laugh (E3), speaking (A3 edit). Gate each anchor >= 0.75 to A3 (laugh >= 0.58). Every clip pinned to them as in the method above.
