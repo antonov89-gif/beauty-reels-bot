@@ -185,3 +185,12 @@ INSPECTED (1 frame/second sheet + face crops at 6 s and 10 s next to the T1 v5 l
 - Soft: the 3-s face crop was off-frame (he leans), checked on the full frame instead; the end has his eyes almost closed (smug), which is also the first frame of T1c.
 - Not checked: lips vs our voice (voice not ordered), model audio (muted).
 Status: GENERATED + INSPECTED, NOT APPROVED by the owner.
+
+## T1c (chain clip 3, 04.11, owner "да"): Kling 4.0 i2v 720p 8 s, @first_frame = pilot_frames/T1b_last.jpg: pilot_frames/T1c_kling40.mp4 (724x1284, 24 fps, 8.04 s). ACTUAL COST $1.16 (usage.cost). Last frame: pilot_frames/T1c_last.jpg (start of T1d).
+INSPECTED (2 frames/second sheet, 16 frames + face crops at 2.5 s, 4.5 s, 7.5 s next to the T1 v5 face + join):
+- Join T1b -> T1c: RMSE 0.030 (same picture).
+- Identity: the same face as T1/T1b through the clip (narrow face, arched brows, heavy lids, moustache, beauty mark); the frown at 2.5 s adds deep forehead lines (acting, not a new face). Same wig and coat.
+- Scene: the same hall, long table, seated ladies, courtiers.
+- Acting: the smile fades and he leans into the lens offended (1.5-3 s), a cold pause, eyes closed with a sniff and a wave of the ringed hand (4.5-6.5 s), chin up looking down his nose at the end (7-8 s).
+- Not checked: lips vs our voice (voice not ordered), model audio (muted).
+Status: GENERATED + INSPECTED, NOT APPROVED by the owner.
