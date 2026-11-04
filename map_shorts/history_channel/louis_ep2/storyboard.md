@@ -1,44 +1,39 @@
-# Ep.2 "Dinner in Public": storyboard v2 (31.10.2026, from script.md draft 4: 15 takes + burst)
-No generation is ordered by this file. Camera base for every take = CAMERA_BASE in louis_ep1/camera_plan_ep1.md (phone in one hand, clumsy, never a gimbal move). The king is the only star; Marcel and the crowd stay plain. Set, light, cast, sound and continuity props are the same as in v1 (kept in git history, commit e464878); changes below.
+# Ep.2 "Dinner in Public": photo storyboard v3 (04.11.2026, for script draft 6.4)
+One row = one first frame (photo) = one video generation. Nothing here is generated yet; every image and every clip needs the owner's yes with the model and the price. Images: Nano Banana Pro 2K 9:16, $0.09 each (apipod.ai/pricing 31.10). Keys for APIpod / Lumean / Zernio are missing in this container: generation is blocked until they are added in the environment settings.
 
-## Set and look (locked)
-Antechamber, evening, candlelight only, one long white-clothed table, the king's armchair at the head, gold plates, painted ceiling, tall black windows. Behind the table a standing crowd in plain wigs; 4-5 ladies on folding stools in front. King: tall white wig, white makeup, scarlet coat with gold suns, lace cravat, napkin (face master v3). Marcel: sky-blue livery, small white wig with black ribbon (marcel_front.jpg + marcel_three_quarter.jpg). Sound: hall room tone, crowd murmur, cutlery on gold, candles, fabric; no music; model audio muted, our v3 voice laid by phrases.
+## Locked references (every frame)
+- KING face, makeup, wig, coat: master v6 (frames/master_table_v6_1440.jpg: haughty heavy lids, muted grey-green eyes, thick matte white powder, light pink cheeks, tall grey-white wig with long curls, scarlet coat with gold suns, white lace cravat). Owner approved v4; v6 = v4 with the eye colour and powder fix: the owner should confirm v6 as the base before the batch.
+- MARCEL: marcel_card/marcel_front.jpg + marcel_three_quarter.jpg (sky-blue livery, small white wig with a black ribbon); for fear: marcel_card/sheet_e7_terrified.jpg.
+- SET: the same antechamber as master v6 (long table with a white cloth, gold plates, candelabra, frescoed ceiling, black windows, standing crowd in plain wigs, ladies seated). Night, candlelight only.
+- CAMERA: a phone in his hand at arm's length (selfie, ultra-wide, slightly too close), unless Marcel holds it. Fine film grain, matte skin with pores, no smoothing (owner 31.10: quality like the C08 reference).
+- Only the king wears scarlet and the tall wig. No text in the images; plates are added in editing.
 
-## Continuity props
-| Prop | State |
-|--|--|
-| Soup bowls | stack of 4 empty from C05; a 6th put down in C05; gone after the burst |
-| Pheasant leg | in his hand C06-C07 |
-| Wine | red splash on the cloth and the right cuff from C09 to the end; the phone smeared in C09, wiped in C10 |
-| Gold button | on the coat until C13, then missing |
-| Partridge | one leg on a dish from the burst until C13 |
-| Peas | a small silver dish from C11 |
-| Mirror | in his hand C14-C15 |
+## Continuity of props
+Napkin tucked into the cravat until take 6 (wipes fingers). Soup bowls: stack of 4 in 3A, a 6th put down. Pheasant leg in his hand 3B-3C; bones on his plate in take 6. Wine: on the lens and the right cuff from 4B to the end. Peas: silver dish from 5B. Hand mirror: in his hand in take 7. Phone: his in all takes except 2B, 5C (Marcel films).
 
-## Takes
-Route (owner 31.10: everything at 720p): K = Kling 4.0 i2v 720p ($0.145/s, exact first frame; solo king), S = Seedance 2.0 720p ($0.126/s; Marcel or crowd action); Seedance 2.5 720p (full $0.2205/s, Lite $0.15/s) only as the fallback for a take where 2.0 fails. First frames: Nano Banana Pro. Length = planned; the pilot may change merged takes.
-| # | Time / s | Route | Frame and action | Clumsy camera moment | Risk and the fix |
+## Frames
+| # | Take / time | Photo (what the first frame shows) | Refs | Video route (proposal) | Status |
 |--|--|--|--|--|--|
-| C01 | 0:00 / 11 | K | FIRST FRAME (owner 31.10, like the Vlog 2 first frame): extreme close-up, nose and lips fill the frame, tilted, face off-centre right, top half covered by his own dark scarlet sleeve and fist out of focus, mouth a little open; about 1 s of fumbling; then up to the ceiling with candle smoke, then down to his face at the head of the table | fumble at frame 0; fast tilt overshoots to the chin | first frame = a new image (Nano Banana Pro 2K, refs: master v4 face, the owner's screenshot as camera reference); Kling keeps the first frame exactly |
-| C02 | 0:11 / 9 | K | Tilt to the empty plates and back; the hook "You say I eat too much" | dip to the table | plates stay empty |
-| C03 | 0:20 / 7 | S | Over his shoulder: people enter, bow, one too little; back to the viewer, look up and down | swing right, face cut at the left edge | small bowing faces in the background |
-| C04 | 0:27 / 9 | S | Hand-off of the phone to Marcel; wide room, ladies on stools; over-tilt to the double chin | hand-off blur, over-tilt | if the hand-off fails, hard cut on the jump |
-| C05 | 0:36 / 9 | K | Stack of 4 empty bowls, he drinks from a fifth, a sixth is put down on the pause | slide towards the new bowl | check the bowl count on frames |
-| C06 | 0:45 / 13 | S | Pheasant, Marcel's fork into the lens, he takes a leg by hand; pan over the shoulder to the courtier eating with both hands; back to his face | fork fills the lens; the pan | thin clear fork; hands in the courtier shot; ONE merged take (old C06+C07) |
-| C07 | 0:58 / 8 | K | The greasy leg at the lens, the question to the viewers | leg at the lens, focus hunts | reuse the C06 pheasant |
-| C08 | 1:06 / 7 | S | One raised finger; the cup goes hand to hand behind him | steady-ish, cup moves across the background | at most 3 hands |
-| C09 | 1:13 / 9 | S + overlay | Marcel bumps the table; wine across the lens (post overlay, not generated); the phone turned to terrified Marcel; "I'm joking" | rough turn to Marcel, jolt on the laugh | red-blur plate made in editing; Marcel e7_terrified frame |
-| C10 | 1:22 / 10 | S | Sleeve wipes the lens; two-shot, Marcel reads the screen | cloth fills the lens | screen text blurred |
-| Burst | 1:32 / 6 | stills | 8 macro stills under 1 s: soup, pheasant, partridge, salad, mutton, ham, pastry, fruit + the last partridge leg | quick pushes | free (Ken-Burns on stills) |
-| C11 | 1:38 / 15 | K | Pea held to the lens, focus pulls to his hurt face; then he slides low in the chair, hands on the belly, phone loose above his face; sigh and laugh (the one calm shot of the episode) | calm: slow drift, no jerks | merged take (old C12+C13), solo king, long take on Kling; if the face drifts after 8 s, split in two |
-| C12 | 1:53 / 7 | K | Sits up, wipes fingers, chin up, haughty laugh | phone jerks up with him | open mouth only; speech is laid |
-| C13 | 2:00 / 13 | S | The button hits Marcel's forehead; beat; Marcel's hand to the last partridge leg; the king sees it on the screen | drift to the dish | cut on the hit; the button may be a post element |
-| C14 | 2:13 / 9 | K | Stands, crowd bows, hand mirror, finger to the lens | swing up with the stand | crowd soft |
-| C15 | 2:22 / 9 | K | Orders by finger, waves off on "do what you like", cold laugh, turns to the table, mirror covers the lens | whip-pan | clean cut to the end card |
-End card: "THE SUN IS NEVER LATE." plus "AI-generated comedy reconstruction", no corner mark.
+| F01a | 1, 0:00 | Extreme close-up fumble: nose and lips fill the frame, tilted ~20 deg, face off-centre right, top half covered by his own scarlet velvet sleeve and fist out of focus, mouth a little open, candle glints behind | master v6 (face), owner_vlog2_first_crop.jpg (framing only) | Kling 720p, 11 s: fumble, he pulls the phone back to his face and says the opener | REDO needed: C01_first_2k.jpg was made from v4 (blue-grey eyes, thin powder) |
+| F01b | 1, 0:11 | Selfie at the head of the table, crowd behind, smug look ("You say I eat too much...") | = master v6 (no new image) | Kling 720p, 11 s | READY (master v6) |
+| F02a | 2, 0:22 | Selfie; behind his shoulder a side door, courtiers come in bowing, one bows too little | master v6, set | Seedance 2.0 720p, 10 s ("Every night at ten... Bow. Lower. Good.") | to make |
+| F02b | 2, 0:32 | Marcel's view, wide: the long table, the king at the head, 4-5 duchesses on folding stools in front, the crowd standing behind; slightly crooked, hand-held | master v6, set | Seedance 2.0 720p, 8 s ("Marcel, show them. The duchesses sit...") | to make |
+| F02c | 2, 0:40 | Back to the selfie: "Why in public? A king belongs to his people." | = master v6 | Kling 720p, 9 s | READY (master v6) |
+| F03a | 3, 0:49 | Selfie; beside him a stack of 4 empty gold soup bowls, he holds a fifth, a servant's hand puts down another | master v6 | Kling 720p, 12 s ("My dinner comes in four rounds... She can't count.") | to make |
+| F03b | 3, 1:01 | Servants carry in a whole roast pheasant and a partridge; he holds a pheasant leg in his fingers; Marcel's hand pushes a thin silver fork into the lens (foreground, out of focus) | master v6, Marcel refs | Seedance 2.0 720p, 10 s ("Then the roasts... I've untaught them.") | to make |
+| F03c | 3, 1:11 | Macro: the greasy pheasant leg pushed at the lens, his haughty face behind it, focus on the leg | master v6 | Kling 720p, 8 s ("Fork or fingers?... Bastille.") | to make |
+| F04a | 4, 1:19 | Selfie; he raises one finger without looking; behind him a gold cup passes from hand to hand among courtiers | master v6, set | Seedance 2.0 720p, 10 s ("There is no glass... a little older.") | to make |
+| F04b | 4, 1:29 | Close on Marcel, terrified (eyes wide), seen through a red wine smear on the lens; the king's hand holds the phone | Marcel refs, sheet_e7_terrified | Seedance 2.0 720p, 10 s ("Mon Dieu... nobody will see you again... I'm joking"); the wine splash itself = an overlay in editing | to make |
+| B1-B6 | 5, 1:44 | Six macro stills, ~1 s each: salad, mutton, ham, pastry, fruit, a small silver dish of green peas | set (gold plates, candlelight) | stills with a slow push-in in editing (no video cost) | to make (6 images) |
+| F05b | 5, 1:50 | Selfie, he holds one green pea up to the lens, slightly hurt look | master v6 | Kling 720p, 6 s ("And peas. The whole court talks about nothing else.") | to make |
+| F05c | 5, 1:56 | Marcel's view: the whole laden table, the king eating with great appetite (tearing bread, biting a pastry, licking fingers), eyes closed in bliss | master v6, set | Seedance 2.0 720p, 5 s, no words | to make |
+| F05d | 5, 2:01 | Low angle from his own hand above his face: he leans back in the armchair, hands on his belly, eyes half closed, about to laugh with joy | master v6 | Kling 720p, 9 s ("Ohh... I wasn't born to work..." + joyful laugh) | to make |
+| F06 | 6, 2:10 | Selfie, chin up, haughty; on his plate the pheasant bones; napkin in his hand | master v6 | Kling 720p, 12 s (verdict + "Don't be afraid of getting fat..." + haughty laugh) | to make |
+| F07a | 7, 2:22 | He stands; behind him the crowd bows; a gilded hand mirror in his other hand; then he points at the lens | master v6, set | Kling 720p, 15 s (teaser + subscribe + outro, he sits back at the table) | to make |
+| F08 | 8, 2:42 | Extreme close-up: his finger poking at the lens/screen, his eye very close behind it, frown, picture tilted | master v6 | Kling 720p, 6 s ("So... how do you turn this off?"), hard cut | to make |
 
-## Plates
-C01 VERSAILLES, FRANCE · 1685 | C02 THE KING'S PUBLIC DINNER · EVERY NIGHT AT 10 PM | C04 A FEW HIGH-RANKING LADIES SAT IN FRONT, THE REST STOOD | C05 HIS SISTER-IN-LAW WROTE: 4 SOUPS, A WHOLE PHEASANT, A PARTRIDGE, A BIG SALAD, AND MORE | C06 HE FORBADE HIS GRANDSONS TO USE FORKS | C08 GLASSES WERE BROUGHT ONLY WHEN THE KING ASKED | Burst SOUP, ROASTS, SALADS, SWEETS, THEN FRUIT | C11 A LETTER FROM THE COURT: EVERYONE WAS CRAZY ABOUT GREEN PEAS (no year) | C14 NEXT: THE OPERATION.
-
-## First frames and work order
-About 16 first frames (one set master with the crowd at Nano Banana Pro 4K, the rest 2K); character refs exist. Order: voice (TTS preview is free, the order about 1 RUB) to fix the real length, then the pilot of C01, C09 overlay test and C11 (the long solo take), at most 2 corrective attempts per take, then the batch. Each paid call needs its own yes.
+## Numbers
+- New images: 15 frames + 6 burst stills = 21 images x $0.09 = $1.89; with about 30 % re-takes about $2.5. (F01b and F02c reuse master v6.)
+- Video (proposal, 720p as the owner chose): Kling 720p ($0.145/s) on F01a, F01b, F02c, F03a, F03c, F05b, F05d, F06, F07a, F08 = 99 s = $14.4; Seedance 2.0 720p ($0.126/s) on F02a, F02b, F03b, F04a, F04b, F05c = 53 s = $6.7. Video raw about $21, with 30 % re-takes about $27. Prices to be re-checked on the provider before each order.
+- Voice: re-order of the changed lines (takes 1-8, about 0.5-1 RUB) after the Lumean key is back.
+- Work order (production gate): first F01a + F03b + F04b as the pilot (one solo, one with Marcel and a prop, one with Marcel's face), check each against master v6 and the Marcel card (face, eyes, powder), then the rest.
