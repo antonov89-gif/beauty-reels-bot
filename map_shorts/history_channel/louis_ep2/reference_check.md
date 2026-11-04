@@ -85,3 +85,6 @@ INSPECTED in the chat message only (the image files did not reach the disk, so n
 - E8 (startled): PASS: eyes wide, both hands out of frame (the correction worked).
 - E4 (cold laugh): SOFT: closed-mouth smug sneer with heavy lids, closer to haughty than before but not a laugh; usable for the "haughty laugh" only as a smirk start frame; real laugh comes from the video model.
 - Status: GENERATED + visually INSPECTED in chat; NOT APPROVED by the owner. To store the files in the repo the owner must send them as files (or save to sheet/).
+
+## 04.11: scene prompts v4 (prompts_ready_v4.md, prompts_images_v4.html)
+King = card A3 + a tile of the owner's emotion sheet (refs/K_E1-E8, K_front/left34/right34/profile/back cropped from the owner sheets); GPT Image 2.5 Sunburst Lite 4K high; napkin removed from the costume (F06 keeps a napkin in the hand as a prop); master v6 no longer referenced (video fallbacks T1b/T2c start from the first approved table selfie). Pilot order: F01a, F03b, F04b. Nothing generated; images by the owner. Check on arrival: face vs A3, Marcel vs his card, no white mask / clown makeup, wig white-grey and tall.
