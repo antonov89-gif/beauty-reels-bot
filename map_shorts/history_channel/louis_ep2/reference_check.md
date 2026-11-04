@@ -128,3 +128,11 @@ Status: GENERATED + INSPECTED, NOT APPROVED by the owner. Intended use: @keyfram
 
 ## T1 keyframe v2 (04.11, owner "ок"): pilot_frames/T1_keyframe_gen_v2_4k.jpg (2161x3840; 941 px copy ..._v2_941.jpg), refs A3 + K_A3_face_crop.jpg, prompt: same age as the reference (~40), firm jawline, no jowls/bags. ACTUAL COST $0.12.
 INSPECTED (crop next to A3 and to v1): wig white-grey, scene right, beauty mark, moustache, scarlet coat/suns, lace, rings (hand with fingers fine) all OK; head tilted three-quarter. AGE/FACE: only a small improvement over v1 — the face is still heavier and more lined (cheeks, eye area) than A3; not clearly younger. Verdict: SOFT/borderline, NOT clearly better than v1. Status: GENERATED + INSPECTED, NOT APPROVED by the owner.
+
+## T1 retake 2 (04.11, owner "1"): Kling 4.0 i2v 720p 11 s, @first_frame = F01a, @keyframe_1 = T1_keyframe_gen_v2_941.jpg: pilot_frames/T1_kling40_v3.mp4 (724x1284, 24 fps, 11.04 s). ACTUAL COST $1.595 (usage.cost).
+INSPECTED (1 frame/second contact sheet, 11 frames, vs A3 and vs the v2 clip):
+- Identity: the face stays one man from 3 s to 11 s: leaner than in the first retake (no round fleshy cheeks), the moustache with curled tips, beauty mark, tall white-grey wig of constant colour and height, scarlet coat with gold suns, lace; no blond wig, no ageing drift. Clearly better than T1_kling40_v2.mp4. Soft: still slightly older/heavier than A3 (inherits the keyframe), the late frames show a lined forehead.
+- Action: 0-2 s fumble close-up as in F01a, 2-3 s pulls the phone back, 3-6 s settles and speaks, 7-11 s seated and speaking with a raised ringed hand, as in the keyframe.
+- Camera: sway and framing drift are present until ~7 s; from 7 to 11 s the framing is nearly locked (frame RMSE 0.13 -> 0.06): less hand-held than the reference manner; to be fixed in editing/next takes if it looks static.
+- Not checked: lip movement against our TTS (voice not ordered), the model's own audio (muted per the no-music rule).
+Status: GENERATED + INSPECTED, NOT APPROVED by the owner. Best of the three T1 takes so far.

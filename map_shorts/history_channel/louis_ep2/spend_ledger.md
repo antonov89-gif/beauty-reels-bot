@@ -2,3 +2,4 @@
 - 04.11 ep.2 T1 RETAKE (Kling 4.0 i2v, 720p, 11s, F01a, @first_frame tag fixed): $1.595 (usage.cost)
 - 04.11 ep.2 T1 identity keyframe (GPT Image 2.5 Sunburst Lite 4K high): $0.12 (usage.cost)
 - 04.11 ep.2 T1 identity keyframe v2 (GPT Image 2.5 Sunburst Lite 4K high): $0.12 (usage.cost)
+- 04.11 ep.2 T1 retake 2 (Kling 4.0 i2v 720p 11s, first frame F01a + keyframe v2): $1.595 (usage.cost)
