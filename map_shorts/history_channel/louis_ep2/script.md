@@ -36,8 +36,8 @@ Plate: GLASSES WERE BROUGHT ONLY WHEN THE KING ASKED
 Quick close-ups of the dishes (salad, mutton, ham, pastry, fruit) and a small silver dish of green peas; he holds one pea up to the lens.
 LOUIS: "Then salad. Ham. Pastry. Fruit. [pause] All in less than an hour. [pause] And peas. The whole court talks about nothing else."
 Then Marcel holds the phone and shows the whole laden table, and the king eating with great appetite: he tears bread, bites into a pastry, licks his fingers, takes a spoonful of peas, chews with his eyes closed in bliss (about 4 s, no words, only chewing and the crowd's murmur). Then he leans back in the armchair, hands on his belly, eyes half-closed, a long happy sigh.
-LOUIS: "Ohh... [pause] I wasn't born to work. [pause] I was born for happiness, love, pleasure... and a good rest. [contented laugh]"
-(«Потом салат. Ветчина. Выпечка. Фрукты. Всё меньше чем за час. И горошек. Весь двор только о нём и говорит.» Марсель показывает весь стол и как король сытно ест, около 4 секунд без слов. Король откидывается в кресле: «Ох... Не для работы создан я, а для счастья, любви, удовольствия и отдыха.»)
+LOUIS: "Ohh... [pause] I wasn't born to work. [pause] I was born for happiness, love, pleasure... and a good rest. [a joyful, delighted laugh at his own witty line, as if he has just made the best joke at court]"
+(«Потом салат. Ветчина. Выпечка. Фрукты. Всё меньше чем за час. И горошек. Весь двор только о нём и говорит.» Марсель показывает весь стол и как король сытно ест, около 4 секунд без слов. Король откидывается в кресле: «Ох... Не для работы создан я, а для счастья, любви, удовольствия и отдыха.» [радостный смех: он сам смеётся над своей остроумной шуткой])
 Plates: THE MEAL LASTED LESS THAN AN HOUR / A LETTER FROM THE COURT: EVERYONE WAS CRAZY ABOUT GREEN PEAS
 
 ## Take 6. The verdict (2:02-2:16)
