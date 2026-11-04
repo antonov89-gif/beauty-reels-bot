@@ -175,3 +175,13 @@ Status: GENERATED + INSPECTED, NOT APPROVED by the owner.
 - Root cause (verified in louis_ep1/reference_check.md lines 95, 157, 175, 213, 236, 307, 363): ep.1 was built as a CHAIN: every next clip's first frame = the exact last frame of the previous approved clip, so the face, wig, light and room carry over and the joins were measured. In ep.2 I started T3b from F03b, a still generated separately from the card, and skipped the rest of Take 1 and all of Take 2. A new still = a new face and a new room every time.
 - Fix, binding for ep.2 from now on: (1) clips in script order, no jumps; (2) first frame of each clip = last frame of the previous approved clip (pilot_frames/T1_v5_last.jpg is the start of T1b); (3) the T1 keyframe (T1_keyframe_owner2.jpg, the face the owner chose for T1 v5) is passed as @keyframe_1 in each clip as the identity anchor; (4) a scene change (new place or new framing) is made by EDITING the last frame of the previous clip (the method that kept the face on the A3 edit), never by a fresh still; (5) clips <= 9 s; (6) before reporting: face crops at 3 points vs the previous clip's last frame and vs the anchor, background check, join frame diff.
 - F03b and F04b are withdrawn as start frames (separate stills, different face/room).
+
+## T1b (chain clip 2, 04.11, owner "дальше давай"): Kling 4.0 i2v 720p 10 s, @first_frame = pilot_frames/T1_v5_last.jpg: pilot_frames/T1b_kling40.mp4 (724x1284, 24 fps, 10.04 s). ACTUAL COST $1.45 (usage.cost). Last frame saved: pilot_frames/T1b_last.jpg (start of T1c).
+INSPECTED (1 frame/second sheet + face crops at 6 s and 10 s next to the T1 v5 last frame + join):
+- Join T1 v5 -> T1b: first frame vs v5 last frame RMSE 0.038 (same picture, no jump).
+- Identity: the same face as T1 v5 through all 10 s (narrow face, arched brows, heavy lids, thin moustache with curled tips, beauty mark, rouge), same tall white-grey wig, same coat; no drift.
+- Scene: the same long table, seated ladies, standing courtiers, candelabra; no change of room.
+- Acting per beat: hand sweep to the hall at 2-3 s ("Welcome to Versailles"), ringed hand on the chest 4-7 s ("my channel", "Sun King"), eyes half closed and the wig curl at 8-10 s ("I'm that handsome"), a closed-mouth smug smile at the end.
+- Soft: the 3-s face crop was off-frame (he leans), checked on the full frame instead; the end has his eyes almost closed (smug), which is also the first frame of T1c.
+- Not checked: lips vs our voice (voice not ordered), model audio (muted).
+Status: GENERATED + INSPECTED, NOT APPROVED by the owner.
