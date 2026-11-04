@@ -6,6 +6,7 @@ Write like a person talking, not like a model. Contractions (I'm, don't, that's)
 
 ## Signature opener (fixed text, first ~8 s of EVERY video; owner 29.10)
 "Oops, the ceiling. There. Welcome to Versailles. Yes, I'm that handsome. Try not to faint."
+Ep.2 variant (owner 04.11): no ceiling swing ("Oops, the ceiling. There." removed, 6.1) and no "Try not to faint"; text: "Is it... is it on? Ah. There I am. Bonjour. I am Louis, King of France. Welcome to Versailles. And this is my channel. They call me the Sun King. Yes... I'm that handsome."
 Since 29.10 the king films HIMSELF (selfie arm in frame, like the reference): the video opens on the painted ceiling, he turns the phone onto himself and speaks only after the phone points at him. Owner chose this opener (option B). "Bow. Lower. Good." stays only as his command to the court when it enters (C07 in ep.1). Marcel the page is a side character (off screen, "my left side, MY left").
 
 ## Signature outro (fixed text, last ~16 s of EVERY video; owner 29.10)

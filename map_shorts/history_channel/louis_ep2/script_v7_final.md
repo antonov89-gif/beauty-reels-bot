@@ -1,8 +1,8 @@
 # Louis XIV Vlog #2 "Dinner in Public": script draft 7.1 FINAL TEXT (04.11.2026)
-Owner chose variant A on every beat ("а"). Cut to fit 3:00. Brackets = action or tone (not spoken); OWNER = owner's own words, unchanged.
+Owner chose variant A on every beat ("а"). Owner 04.11: "Добавить. Welcome to Versailles" (added after "King of France."; "Try not to faint" not added). Cut to fit 3:00. Brackets = action or tone (not spoken); OWNER = owner's own words, unchanged.
 
 ## Take 1. Selfie at the table
-LOUIS: "[phone too close, muffled] Is it... is it on? [pulls it back, sees himself, pleased] Ah. There I am. [clears throat] Bonjour. I am Louis, King of France. And this is my channel. They call me the Sun King. Yes... I'm that handsome. [a satisfied sigh] Some of you write that I eat too much. I read it. [sniffs] Of course, that's not true. Every day I feast in front of the court. Today... before your eyes."
+LOUIS: "[phone too close, muffled] Is it... is it on? [pulls it back, sees himself, pleased] Ah. There I am. [clears throat] Bonjour. I am Louis, King of France. Welcome to Versailles. And this is my channel. They call me the Sun King. Yes... I'm that handsome. [a satisfied sigh] Some of you write that I eat too much. I read it. [sniffs] Of course, that's not true. Every day I feast in front of the court. Today... before your eyes."
 
 ## Take 2. The room and the rule
 LOUIS: "Every night at ten, I dine here. In public. Anyone dressed properly may come in. [a man behind bows too little; the king turns his head slowly] ...Lower. Lower. Good. Marcel, show them. [the picture shows the floor and Marcel's shoes] Up. Up, Marcel. There. The duchesses sit. Everyone else stands. [back to the king, takes a grape] People ask me why I eat in front of everyone. They want to see their king. [eats the grape] Even with his mouth full."
