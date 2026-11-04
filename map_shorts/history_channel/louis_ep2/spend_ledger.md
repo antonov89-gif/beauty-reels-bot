@@ -6,3 +6,4 @@
 - 04.11 ep.2 T1 keyframe by editing card A3 (GPT Image 2.5 Sunburst Lite 4K high): $0.12 (usage.cost)
 - 04.11 ep.2 T1 retake 3 (Kling 4.0 i2v 720p 11s, F01a + keyframe edit of A3): $1.595 (usage.cost)
 - 04.11 ep.2 T1 retake 4 (Kling 4.0 i2v 720p 11s, F01a + owner's keyframe image): $1.595 (usage.cost)
+- 04.11 ep.2 T3b pilot (Kling 4.0 i2v 720p 8s, F03b): $1.16 (usage.cost)

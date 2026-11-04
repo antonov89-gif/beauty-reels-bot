@@ -160,3 +160,12 @@ INSPECTED (1 frame/second contact sheet + face crops of seconds 5, 8, 11 next to
 - Camera: frame change 0.07-0.18 over 6-11 s (hand-held enough).
 - Not checked: lip sync with our voice (not ordered), the model's own audio (muted per the no-music rule).
 Status: GENERATED + INSPECTED, NOT APPROVED by the owner. Of the T1 takes, v4 (A3 edit keyframe) = closest to A3; v5 (owner keyframe) = most consistent with the owner's image.
+
+## T3b pilot clip (04.11, owner "д"): Kling 4.0 i2v 720p 8 s, @first_frame = F03b: pilot_frames/T3b_kling40.mp4 (724x1284, 24 fps, 8.04 s). ACTUAL COST $1.16 (usage.cost). Gen script gen_t3b_kling40.py, prompt t3b_kling40_prompt.txt.
+INSPECTED (2 frames/second contact sheet, 16 frames + face crops of 1.0 s, 4.5 s, 6.5 s next to A3):
+- Action as planned: eyes closed, breathes in the smell of the roast leg held in his fingers (0-1.5 s), servants with the pheasant and partridge pass behind (0-4.5 s), Marcel's hand with a CLEAR four-tine silver fork enters the lens (1.5-4 s) with focus hunting, he turns to the lens and speaks with the fork at his hand (5-7 s), takes a bite of the leg with eyes closed at the end (7.5-8 s). Marcel's blue sleeve with silver braid stays consistent.
+- Identity: the same character through the clip (tall white-grey wig of constant height/colour, scarlet coat with suns, lace, thin moustache with curled tips, beauty mark) but SOFT: the face is rounder and heavier than A3 in the later seconds (jowls, deep frown lines at 6.5 s), rouge heavier than the card.
+- Scene drift: the long dining table of F03b turns into a wide hall with several round tables behind him from about 3 s (the background is not the same "long table" setting as T1/F03b); minor for a close selfie but a continuity break against the other takes.
+- Camera: frame change 0.12-0.19, hand-held enough.
+- Not checked: lip sync with our voice (not ordered), the model's own audio (muted per the no-music rule).
+Status: GENERATED + INSPECTED, NOT APPROVED by the owner.
