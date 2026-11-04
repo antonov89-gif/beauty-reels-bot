@@ -1,8 +1,8 @@
 {
  "voice_lock": "voice/voice_lock.json v3",
- "note": "Ep.2 king lines from louis_ep2/script.md draft 4. C01 (opener) and C15 (outro) reuse tts_ep1/C01.mp3 and tts_ep1/C15.mp3 (fixed text, no new order). Numbers = ep.2 takes.",
+ "note": "Ep.2 king lines from louis_ep2/script.md draft 4. 04.11: the opener gained 'And this is my channel' (owner), so C01 can NOT reuse tts_ep1/C01.mp3: new order needed for C01 and C02 (the old C02 in tts_ep2/C02-C14.mp3 is superseded). C15 (outro) still reuses tts_ep1/C15.mp3. Numbers = ep.2 takes.",
  "lines": {
-  "C02": "[sly, confiding] You say I eat too much. {{pause=0.6}} [dismissive] Slanderers. {{pause=0.6}} [casual, grand] Every night at ten, I dine in front of the court. {{pause=0.5}} [wry] Tonight... you too.",
+  "C02": "[sly, confiding] You say I eat too much. {{pause=0.6}} [airy, dismissive] Of course, that's not true. {{pause=0.6}} [casual, grand] Every day I feast in front of the court. {{pause=0.5}} [wry] Today... before your eyes.",
   "C03": "[imperious] Bow. {{pause=0.2}} Lower. {{pause=0.2}} [approving] Good. {{pause=0.6}} [matter-of-fact] Anyone dressed properly may come in. {{pause=0.6}} [dry, eyeing the viewer] Most of you.",
   "C04": "[bossy] Marcel, show them the room. {{pause=0.7}} [casual] Duchesses sit. Everyone else stands. {{pause=0.7}} [sharp, annoyed] Not my chin, Marcel.",
   "C05": "[confiding, amused] My sister-in-law says I eat four bowls of soup. {{pause=1.0}} [deadpan] She can't count.",
@@ -14,7 +14,8 @@
   "C11": "[hurt, quiet] Peas. Everyone talks about them. {{pause=0.8}} Last year it was me. {{pause=1.2}} [dreamy, sinking into the chair] Ohh... {{pause=0.5}} I wasn't born to work. {{pause=0.6}} [sighing happily] I was born for happiness, love, pleasure... {{pause=0.4}} and a good rest. [contented laugh]",
   "C12": "[smug, imperious] Don't be afraid of getting fat. {{pause=0.5}} Be afraid of being a loser. {{pause=0.4}} [laughs, a cold, arrogant, haughty laugh, contemptuous]",
   "C13": "[calm, grand] That button was a gift. {{pause=0.8}} [firm] The partridge, no. {{pause=1.4}} [dry] Neither have they. {{pause=0.6}} [magnanimous] Take a pea. One.",
-  "C14": "[mock-generous] Next time, my surgeon. He's been practising. {{pause=0.7}} [sly] On other people. {{pause=0.7}} [imperious, grand] Subscribe to my stunning channel."
+  "C14": "[mock-generous] Next time, my surgeon. He's been practising. {{pause=0.7}} [sly] On other people. {{pause=0.7}} [imperious, grand] Subscribe to my stunning channel.",
+  "C01": "[startled, then annoyed] Oops, the ceiling. {{pause=0.3}} [satisfied] There. {{pause=0.5}} [grand, formal] Bonjour. I am Louis, King of France. {{pause=0.3}} [proud] And this is my channel. {{pause=0.4}} [proud, drawling] They call me the Sun King. {{pause=0.5}} [delighted, self-admiring] Yes... I'm that handsome."
  },
  "marcel": {
   "C06": "[polite, anxious] Your fork, Sire?",

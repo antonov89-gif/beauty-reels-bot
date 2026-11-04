@@ -1,19 +1,19 @@
 # Louis XIV Vlog #2 "Dinner in Public": script (draft 4, 31.10.2026)
 About 2:30. Evening, Versailles, the king's public dinner. He films himself on a phone, as in episode 1, and hands it to Marcel twice. He talks to the viewers as if they stood in the crowd. Short lines, silence after every gag: the picture finishes the joke. English is spoken; the Russian is for the owner only. No music.
-Changes from draft 3: lines cut to 12-16 words per clip; a viewer hook after the opener; Marcel is ordered and praised; clips merged where one gag chain runs with the same people (C06 = old C06+C07, C11 = old C12+C13); the owner's lines are kept as they were.
+Owner edits 04.11: "And this is my channel" added to the opener (C01); C02 rewritten ("Of course, that's not true... Today, before your eyes"). Changes from draft 3: lines cut to 12-16 words per clip; a viewer hook after the opener; Marcel is ordered and praised; clips merged where one gag chain runs with the same people (C06 = old C06+C07, C11 = old C12+C13); the owner's lines are kept as they were.
 
 ## Setup 1. The antechamber, candles (0:00-0:29)
 
 **C01 (0:00-0:11)**
 Frame 0 (owner 31.10, after the Vlog 2 first frame): the phone is far too close to his face: nose and lips fill the frame, tilted about 20 degrees, the face off-centre to the right, the top half covered by a dark out-of-focus mass (his own scarlet velvet sleeve and fist, still fumbling with the phone), one eye at the lower edge, mouth a little open, soft focus, wide-angle distortion. About 1 s of fumbling, then the phone swings up to the painted ceiling, candle smoke drifts across it ("Oops, the ceiling"), and he turns it onto himself: he is already seated at the head of a long table, napkin tucked into the lace.
-LOUIS: "Oops, the ceiling. There. Bonjour. I am Louis, King of France. They call me the Sun King. Yes... I'm that handsome."
-(«Ой, потолок. Вот. Бонжур. Я Людовик, король Франции. Меня называют Король-Солнце. Да... я настолько красив.»)
+LOUIS: "Oops, the ceiling. There. Bonjour. I am Louis, King of France. And this is my channel. They call me the Sun King. Yes... I'm that handsome."
+(«Ой, потолок. Вот. Бонжур. Я Людовик, король Франции. И это мой канал. Меня называют Король-Солнце. Да... я настолько красив.»)
 Plate: VERSAILLES, FRANCE · 1685
 
 **C02 (0:11-0:20)**
 He tilts the phone to the empty gold plates and back to his face.
-LOUIS: "You say I eat too much. [pause] Slanderers. [pause] Every night at ten, I dine in front of the court. Tonight... you too."
-(«Вы говорите, что я слишком много ем. Клеветники. Каждый вечер в десять я ужинаю на глазах у двора. Сегодня... и у вас.»)
+LOUIS: "You say I eat too much. [pause] Of course, that's not true. [pause] Every day I feast in front of the court. Today... before your eyes."
+(«Вы говорите, что я слишком много ем. Это, конечно, неправда. Каждый день я пирую на глазах у двора. Сегодня... на ваших.»)
 Plate: THE KING'S PUBLIC DINNER · EVERY NIGHT AT 10 PM
 
 **C03 (0:20-0:27)**

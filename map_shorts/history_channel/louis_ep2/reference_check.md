@@ -51,3 +51,8 @@ Compared on crops: owner's C08 (the reference), master v4, C01 first frame. Eyes
 - Eyes: muted grey-green on both eyes, as the owner's C08. PASS.
 - Powder: forehead Lab owner L*=82.6 a*=9.3 b*=10.9; v4 75.4 / 17.4 / 17.4; v6 78.2 / 11.3 / 7.2: much paler and less pink, close to the owner's (a little greyer, b* lower than the reference). PASS (soft: it reads chalky, slightly lilac-grey).
 - Soft defects: the eyelids opened slightly (the heavy-lidded look is a bit lighter, still haughty), the lips are a brighter coral, the cheek rouge is a larger round patch, the eyes look a little glassy. Everything else (wig, coat, table, crowd, framing) unchanged. NOT APPROVED by the owner yet.
+
+## Owner text edits 04.11
+- C01 opener: "Bonjour. I am Louis, King of France. And this is my channel." The sentence is inserted; "They call me the Sun King. Yes... I'm that handsome." is kept (the once-per-video praise rule, bible 29.10) unless the owner says to cut it.
+- C02: "You say I eat too much. Of course, that's not true. Every day I feast in front of the court. Today... before your eyes." Plate "EVERY NIGHT AT 10 PM" stays (fact: chateauversailles.fr).
+- VOICE: the generated C02 (inside tts_ep2/C02-C14.mp3, 31.10) and the ep.1 opener (tts_ep1/C01.mp3) no longer match the text. A new Lumean order is needed for C01 + C02 (about 0.23-0.5 RUB, needs the owner's yes and the Lumean key, which is missing in this container). C03-C14 are unchanged.
