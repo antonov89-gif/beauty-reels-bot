@@ -124,3 +124,4 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 31.10 | Ep.2 set master v6 (edit of v4: only eye colour and powder; owner chose option 2), Nano Banana Pro 4K 9:16 (one call) | $0.12 (usage.cost) |
 | 04.11 | Ep.2 king sheet TEST a1: GPT Image 2.5 Sunburst Lite 4K 9:16, reference R1 (A3) via the public raw GitHub URL (owner "Делаю тест"; one call) | $0.12 (usage.cost) |
 | 04.11 | Ep.2 king sheet TEST a1 on Nano Banana 2.1 4K: REJECTED at submit by the content filter ("explicit content in the prompt"), NOT charged | $0 |
+| 04.11 | Ep.2 anchors: 6 emotion tiles edited into the dinner hall, GPT Image 2.5 Sunburst Lite 4K high (owner "1, делай якоря"; E3 first refused by the 5-task concurrency limit, not charged, then submitted) | $0.72 (6 x $0.12 usage.cost) |

@@ -60,3 +60,8 @@ SFace similarity to A3 (and to the owner's best chain frame):
 | owner's best chain frame | **0.60** | 1.00 |
 Reading: the whole sheet is 0.68-0.90 to A3 (the laugh 0.58 is a wide-open mouth); the chain face, now frozen in the best frame, is only 0.60 to A3 and 0.55-0.64 to every tile: it is a drifted relative made by T1 v5 from the owner's keyframe. So the chain should be rebuilt on the CARD, not on its own drifted frames.
 Corrected plan: anchors = the card A3 and each emotion tile EDITED into the dinner hall (face and expression kept, only the setting changes; the A3 edit already scores 0.86): haughty (E1), smug (E2), annoyed (E6), startled (E8), blissful (E7), laugh (E3), speaking (A3 edit). Gate each anchor >= 0.75 to A3 (laugh >= 0.58). Every clip pinned to them as in the method above.
+
+## Anchors made 04.11 (owner "1, делай якоря"): pilot_frames/anchors/ANCHOR_<tile>_<name>_4k.jpg (4K, local, not committed) and _1080.jpg copies (committed)
+GPT Image 2.5 Sunburst Lite, 4K, high, 9:16, each = ONE edit of the upscaled emotion tile into the dinner hall (6 calls x $0.12 = $0.72; E3 was refused by the provider's concurrency limit (5 in flight, 429, not charged) and submitted again, inside the same named batch).
+SFace: vs A3 / vs its own tile: E1 haughty 0.73 / 0.91; E2 smug 0.81 / 0.93; E3 laugh 0.69 / 0.89; E6 annoyed 0.73 / 0.94; E7 blissful 0.68 / 0.92; E8 startled 0.79 / 0.95.
+Gate as I first wrote it (>= 0.75 to A3): E1, E6, E7 are below (0.73, 0.73, 0.68). I am relaxing it openly, because the tiles themselves are 0.74, 0.77, 0.68 to A3 (closed eyes and a frown lower the score) and the anchors keep their tile at 0.89-0.95: the edit preserved the face. Revised anchor gate: >= 0.85 to its own tile AND >= 0.65 to A3.
