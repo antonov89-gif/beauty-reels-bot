@@ -133,3 +133,13 @@ Total of all five about $1.5, less than one Kling retake plus a spare. MiniMax H
 
 ## Not verified / open
 Real price list tiers hidden as "+N more" on apipod.ai/pricing (kling-3.0 extra tier, muse-video, wan, seedance r2v variants); the second 175k characters of that page were not read. Unify credit to dollar rate. Higgsfield, vidIQ generation, Veo Quality, any direct vendor price. Quality of every UNPROVEN route for faces and hand-held motion.
+
+## Kling 3.0 i2v on APIPod: spec verified 05.11.2026 (economist, read-only, nothing submitted)
+Sources: docs.apipod.ai/api-reference/openapi/kling-3.0--kling-3.0-i2v.yaml (the real file name has the double-dash form; llms.txt lists it; the short name kling-3.0-i2v.yaml is a 404) and apipod.ai/pricing (first 100k chars), both read 05.11.
+- Model id `kling-3.0-i2v`; endpoint POST /v1/videos/generations; async task. Related ids exist: kling-3.0-turbo-i2v, kling-3.0-omni-i2v/r2v/edit (price NOT on the first 100k chars of the price page; NOT CHECKED).
+- `image_urls`: 1 = first frame, 2 = first + last (index 0/1). Aliases first_frame_image / last_frame_image. Aspect follows the first frame. NO `@first_frame` / `@last_frame` tags in the spec (they are Kling 4.0 only; do not rely on them, write the prompt without tags). NO keyframes, no negative prompt, no audio input. Multi-shot (multi_shot + multi_prompt up to 5 shots, 500 chars each) allows only a first frame, so no last pin.
+- `duration` integer 3-15 s (10 s allowed), default 5. `resolution` 720p / 1080p / 4k, default 720p. `generate_audio` default false for single-shot (native audio only; we mute it anyway).
+- PROMPT LIMIT: 2,500 characters (Kling 4.0: 8,000). Our T3d prompt (take3_T3d_prompt.txt) is 3,880 chars, so it does NOT fit and must be condensed (about -35 %) before any Kling 3.0 pilot; this is a change to the prompt, so it needs a new owner review.
+- Image size / format limit: not stated in the spec (NOT CHECKED); our 4K JPG refs were accepted by Kling 4.0.
+- Price (page, 05.11, per second): 720p no audio $0.08; 720p audio $0.12; 1080p audio $0.16; 4K $0.40; 1080p no audio hidden ("+1 more"). 10 s 720p no audio = $0.80 (8 s = $0.64) vs Kling 4.0 $1.45 (measured) = saving $0.65 per 10 s clip. A provider claim until a real charged usage.cost is seen.
+- Quality for OUR gates (face SFace, sharpness, motion): NOT MEASURED. Pilot only with the owner's yes, same pins, same words, judged by clip_qc / ref_compare.
