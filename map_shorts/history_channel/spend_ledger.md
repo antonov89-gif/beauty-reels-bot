@@ -154,3 +154,5 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 05.11 | Ep.2 TOTAL pictures + video 04-05.11 (sum of usage.cost above, failed calls with no cost shown counted as $0) | $28.99 |
 | 05.11 | Ep.2 T2c start still (GPT Image 2.5 Sunburst Lite 4K high, refs A3 + R10 hall), owner "Да" | $0.12 (usage.cost) |
 | 05.11 | Ep.2 running TOTAL | $29.11 |
+| 05.11 | Ep.2 T2c end still (GPT Image 2.5 Sunburst Lite 4K edit of the T2c start still), owner "Да" | $0.12 (usage.cost) |
+| 05.11 | Ep.2 running TOTAL | $29.23 |
