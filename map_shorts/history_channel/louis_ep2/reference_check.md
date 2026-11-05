@@ -314,3 +314,18 @@ Status: GENERATED + INSPECTED, PASS, NOT APPROVED by the owner.
 
 ## Reference R9_hall_only.jpg WITHDRAWN (05.11, owner: "Что это такое, проверь лучше")
 R9 was two crops of the pose P2 still stitched side by side: a visible vertical seam in the middle, stray white wig hairs along the seam (from the king's wig), two different perspectives. My check before sending looked at it at a small size and missed the hairs and the seam. It was used once (T2b start still v2; that result shows no seam or hairs, checked again). Replaced by R10_hall_clean.jpg: ONE crop (top-left 78 % x 50 %) of the T2b start still: hall, windows, paintings, chandelier, candelabra, the long table, ladies on stools, courtiers; no king, no seam, no stray hair (checked at full size).
+
+## clip_qc.py calibration (05.11, owner "Делай": the clip-inspector agent)
+Tool: tools/clip_qc.py, agent: .claude/agents/clip-inspector.md. Fixed before use: (1) sharpness baseline = the clip's own first second (a 4K still at video size measured 1792 vs 434 for the same frame in the clip: video encoding always looks 4x softer, so the still is not a baseline); (2) frozen background = SUM of the two edge strips < 1.0, the same measure as the reference gate (the first draft halved it and showed 42 % for T2a v2 instead of 17 %); (3) face limits raised to median 0.70 / p10 0.55 (0.65 / 0.45 let T3b "a different man" through at 0.66).
+| clip | face med/p10 | sharp | seams | motion bg/body % | verdict by the tool | known truth |
+|---|---|---|---|---|---|---|
+| TAKE1_piece2 | 0.73/0.69 | FAIL (s6-14 < 60 %, decay 0.60) | FAIL 5.92 s | 0/33 | FAIL | jump at 5.9 s (rejected) |
+| T3b | 0.66/0.51 FAIL | FAIL s2-3 | ok | 0/12 | FAIL | different man (rejected) |
+| T1c | 0.57/0.53 FAIL | ok | ok | 0/0 | FAIL | chain face decay (rejected) |
+| PILOT_take1_15s | 0.79/0.71 | FAIL s1-3, s11-12 | ok | 47/13 | FAIL | ghost 10.45-11.75 s (cut in edit) |
+| TAKE1_piece2b | 0.83/0.79 | ok | ok | 93/80 FAIL | motion only | accepted; needs virtual hand-held |
+| TAKE1_piece3 | 0.85/0.77 | ok | ok | 25/50 FAIL | motion only | accepted; needs virtual hand-held |
+| TAKE2_T2a_v2 | 0.77/0.62 | ok (WARN s9 dip) | ok | 17/17 FAIL | motion only (slightly) | accepted; hand-held in edit |
+| TAKE2_T2b (--no-face, --mistake 1-3) | skipped: POV, no principal face | ok | ok | 0/12 | PASS | accepted |
+| TAKE1_rough_v2_muted (edit with virtual hand-held) | - | - | planned cuts | 0/0 | motion PASS | the edit fixes the frozen backgrounds |
+Conclusion: the tool separates all known rejects from the kept clips. Kept Take 1/T2a clips fail only the motion gate as raw clips: virtual hand-held in the edit is required for them (status ACCEPTED FOR EDIT), and every new clip uses the living-room paragraph.
