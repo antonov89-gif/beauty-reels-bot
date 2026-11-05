@@ -277,3 +277,5 @@ INSPECTED (2 frames/s sheet, background strip frames at 0.5/2.5/4.5/6.5 s, SFace
 - Not checked: lips vs our voice (no voice), model audio (muted).
 Status: GENERATED + INSPECTED, all gates PASS, the "living room" works; NOT APPROVED by the owner.
 Decision proposal: the live-room paragraph goes into EVERY prompt from now on (T2a retake, T2c, Take 3...). The existing static pieces (pilot 15 s, piece 2b 15 s, piece 3 8 s, T2a 12 s) could be redone with it: about $2.18 + $2.18 + $1.16 + $1.74 = $7.26; the owner decides.
+
+## Pose stills attempt (05.11, owner "Да давай"): two edits of the A3 edit (P1 frown, P2 pleased), GPT Image 2.5 Sunburst Lite 4K high, gen_pose_stills.py: BOTH FAILED at the provider: status failed, error_code SUBMISSION_UNCERTAIN ("could not confirm whether the upstream provider completed this task... not retried automatically to avoid duplicate charges"). No image returned, no usage.cost in the status: charge NOT VERIFIED (provider says it avoids duplicate charges; the account balance cannot be read here). Task ids saved in pilot_frames/anchors/POSE_*.task_id. No retry without a new "yes" (CLAUDE.md: a failure retry needs its own yes).

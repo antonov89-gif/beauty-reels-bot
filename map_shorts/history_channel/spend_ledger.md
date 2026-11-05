@@ -132,3 +132,4 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 05.11 | Ep.2 Take 1 piece 3 (Kling 4.0 i2v 720p 8s; first = last = A3 edit; owner "кусок 3 делай") | $1.16 (usage.cost) |
 | 05.11 | Ep.2 Take 2 piece T2a (Kling 4.0 i2v 720p 12s; first = last = A3 edit; owner "да, запускай T2a") | $1.74 (usage.cost) |
 | 05.11 | Ep.2 TEST living room: Take 1 piece 3 text with background life in the prompt (Kling 4.0 i2v 720p 8s; owner "1") | $1.16 (usage.cost) |
+| 05.11 | Ep.2 pose stills P1/P2 (GPT Image 2.5 Sunburst Lite 4K high, edits of the A3 edit; owner "Да давай"): both FAILED at the provider (SUBMISSION_UNCERTAIN), no image, charge NOT VERIFIED (none shown) | $0 shown (unverified) |
