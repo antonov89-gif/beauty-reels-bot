@@ -232,3 +232,13 @@ INSPECTED (2 frames/s sheet of 30 frames, six full-size frames at 1.5, 2.0, 7.0,
 - Soft: the rouge reads strong in the close-up; the model's output is 720x1280 (follows the 768x1365 first frame), not 724x1284.
 - Not checked: lip sync with our voice (voice not ordered), model audio (muted).
 Status: GENERATED + INSPECTED, face and sharpness PASS, one defect (ghost head at ~11 s), NOT APPROVED by the owner.
+
+## Take 1 piece 2 (05.11, owner "Да"): Kling 4.0 i2v 720p 15 s: pilot_frames/TAKE1_piece2.mp4 (720x1280, 24 fps, 15.04 s). ACTUAL COST $2.175 (usage.cost). Pins: first = A3 edit, keyframe_1 = E7, keyframe_2 = E6, last = E2. Lines: "They call me the Sun King. Yes... I'm that handsome. Some of you write that I eat too much. I read it. Of course, that's not true." (27 words). Last frame saved: TAKE1_piece2_last.jpg. Script gen_take1_piece2.py, prompt take1_piece2_prompt.txt.
+INSPECTED (2 frames/s sheet of 30, jump strip at 5.5/5.88/5.96/6.2 s next to the E6 anchor, SFace per second, sharpness per second, frame-diff scan, pin search):
+- Face: SFace to A3 mean 0.75, median 0.75, p10 0.69, min 0.67, no outlier: the same king all 15 s.
+- Join with the pilot's last frame: first frame vs PILOT last RMSE 0.028 (both are the A3 edit pose): the seam between piece 1 and piece 2 is invisible. Last frame vs E2 anchor RMSE 0.024: held.
+- DEFECT 1 (hard jump): at about 5.9 s a one-frame hard change (frame difference 44.9, the only spike) from the A3-edit composition (head left, hall at left, table small at right) to the composition of the E2/E6 anchors (head bigger and more central, windows in the centre, table large at right). The wig turns from grey-white to warm taupe, the jabot lace changes. It is a cut inside the generation.
+- DEFECT 2 (quality drop): sharpness of the head area 250-300 before the jump, 64-127 after it (mean from 4 s: 132 against 236 in the pilot).
+- Mid-keyframes did not land as frames (closest frames to E7/E6 have RMSE 0.21/0.20), only the LAST frame landed (E2 at 14.75 s, RMSE 0.045).
+- Cause (read together with the pilot): the model hurries toward the LAST frame's composition and then stays there. In the pilot first and last were the SAME image (A3 edit), so no jump; here the last frame (E2) has a different composition from the first frame, so the clip jumps to it at 5.9 s. The ghost double head at 11 s in the pilot is the same effect: a blend toward the keyframes' compositions. RULE: first and last pins must have the SAME composition (loop on one base image); keyframes of another composition produce a jump or a ghost.
+Status: GENERATED + INSPECTED, face PASS, seam FAIL (jump at 5.9 s), quality drop after the jump, NOT APPROVED. The pilot's ghost at ~11 s has the same cause.
