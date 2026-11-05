@@ -293,3 +293,5 @@ INSPECTED (2 frames/s sheet of 24, six background strips at 4.0-9.5 s, SFace, sh
 - Sharpness: head area mean 242 (range 132-270; static v1 305). Slight loss with the larger movement; the lowest second is the moment of the head turn.
 - Not checked: lips vs our voice (no voice), model audio (muted).
 Status: GENERATED + INSPECTED, all gates PASS, NOT APPROVED by the owner. Replaces T2a v1 (static, no courtier).
+
+## T2b start still attempt (05.11, owner "1"): GPT Image 2.5 Sunburst Lite 4K high, refs A3 edit + Marcel full-length (R8): FAILED at the provider, status failed, error_code SUBMISSION_UNCERTAIN (no image, no usage.cost: charge not shown, not verified). Third provider failure of this kind today (P1 twice, T2b once; P2 failed once and then succeeded on the same call, so it is intermittent, not a content block). No retry without a new "yes" (CLAUDE.md). Task id in pilot_frames/anchors/T2b_start_marcel_4k.task_id; prompt in t2b_still_prompt.txt.
