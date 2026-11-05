@@ -459,3 +459,27 @@ File pilot_frames/anchors/T3d_end_4k.jpg (2161x3840, local) + T3d_end_768.jpg. A
 Measured: SFace end vs start 0.958, vs A3 0.804; head box start [243,395,372x552] vs end [241,397,371x542] (same place); wig saturation 90 -> 90 (no drift); quality sharp 293.3 / detail 2.76 / blocks 1.0 (passes the subject limits 150 / 2.0; start 363 / 3.12); head area at 720x1280 1021 -> 787 = -23 % (inside the 30 % rule).
 Eye check OK: flat deadpan stare into the lens under heavy lids, lips closed and glossy, the leg lowered in the same ringed fist with the bite visible and the bitten end pointing down toward the platter, hand anatomy clean at 100 % (thumb on top, rings ruby/pearl, lace cuff), carcass at the lower edge, ladies/courtiers/servant behind, one king, no text.
 Note: the start still's noted differences stay (nose slightly toward frame right); an edit with an explicit "keep the quality" sentence and a strong start lost only 23 % at video size, the best result of the end-still edits.
+
+## QC TAKE3_T3d.mp4 (05.11.2026): ACCEPTED (all measured gates PASS; thumb mistake NOT VERIFIED), status INSPECTED
+Raw Kling 4.0 i2v 720p 10 s. Prompt take3_T3d_prompt.txt; mistake window 1-2 s.
+- face (vs A3): median 0.781, p10 0.711, low frame 1.5 s only (leg jab, face soft): PASS
+- sharp per second: 217,16,31,189,40,187,240,181,215,248; s1=16 planned focus hunt (excluded), s2=31 leg jab/close leg, s4=40 planned phone jerk 4-5 s; s1+s2 are consecutive soft seconds in reality (jab+hunt, planned 1.5-3.2 s), no other consecutive; last-third decay -1.44 (sharper); vs previous clip T3c mean 0.70 (WARN, drop 30 % caused by the dips only, other seconds 181-248): PASS with WARN
+- seams: median diff 5.68, no spike-cut: PASS
+- motion: frozen background 0 %, still body 10 %: PASS
+- pins: first RMSE 0.036, last 0.032: PASS
+- info: join to T3c last frame 0.191 (different setup, cut allowed)
+Eye: one king, same man as A3 (nose, moustache, beauty mark, silver-grey wig), no ghost, no text, no fork, no modern objects. s2: bitten leg large near mouth, clean hand with 3 visible rings, thumb + fingers normal, face sharp enough. s6: swallow done, lips closed, leg lowered in the fist still visibly bitten, servant with a dish at the right edge, lady with a fan behind. s10: deadpan stare, brow raised, leg pointing down to the platter, matches the end still. Room lives: ladies/fan, courtiers, servant right side. Hand-held feel clear (roll, re-aims, jerk). End pose differs from start. Planned thumb at 6 s: NOT seen on the sheet (NOT VERIFIED, not blocking). Focus hunt around 1-1.5 s seen (frames blur with the leg).
+Script 7.3: chew, jab with the leg at the lens, "Fork or fingers?", pause/blink, comments line with a head tilt, swallow, "Wrong answers go to the Bastille." with a nod, silent stare at the end: matches. Lips plausible for the v3 voice.
+
+## Reference comparison TAKE3_T3d.mp4 (05.11)
+Raw 10 s Kling 720x1280, piece 3c, 1 setup (S8b), no cuts. Measured by tools/ref_compare.py; setups, mistakes and room by eye on a contact sheet (ref sheet = first 30.8 s).
+| metric | reference | ours | deviation |
+|--|--|--|--|
+| shots / longest | 2 shots in 30.8 s, 23.6 s | 1 shot, 10.0 s | OK for a single raw take; no angle change |
+| frozen background | 0 % | 0 % | OK |
+| still body | 0 % | 10 % (T3c 25, T3a 60, T2c 75) | OK (gate 15) |
+| head, face widths/s | 0.19 | 0.14 (T3c 0.10, T3a 0.07, T2c 0.07) | FAIL (gate 0.18) |
+| words per minute | 50-90 | 84 (14 words) | OK |
+| phone mistakes | 5 per 128 s | 3 by eye (blur ~1-1.5 s, thumb ~4 s not 6 s, dip at end) | OK, timing off |
+| room | people move | one man enters ~5-6 s, others static | partial |
+Verdict: absolute score helped (still body, camera); head motion and room still short. ACCEPTED FOR EDIT with virtual hand-held and punch-ins. Not a similarity percentage.
