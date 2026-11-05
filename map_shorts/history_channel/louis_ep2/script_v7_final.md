@@ -25,11 +25,11 @@ LOUIS (OWNER): "[leans back, hands on the belly, a long happy sigh] Ohh... I was
 LOUIS: "[wipes his fingers, sits up, glances at the bones on his plate, pushes the plate a little away] So. Do I eat too much? ...No. I eat like a king. [chin up] Don't be afraid of getting fat. Be afraid of being a loser. [haughty laugh]"
 
 ## Take 7. The end (OWNER 05.11, replaces the teaser and the old outro)
-LOUIS: "[leans back, thinks, looks around the hall] So... I was wondering what else to show you here. [pause, a short laugh] Ha. Probably... nothing. [stands up, the crowd bows] That's all. Bye. I'm busy. [beat, points at the lens] ...And you: subscribe to my stunning channel. And like. [pause, narrowing his eyes] Or else..."
+LOUIS: "[leans back, thinks, looks around the hall] So... I was wondering what else to show you here. [pause, a short laugh] Ha. Probably... nothing. [stands up, the crowd bows] That's all. Bye. I'm busy. [beat, points at the lens] ...And you: subscribe to my stunning channel. And like. [pause, a lazy wave of the hand, he looks away, bored] Or... whatever."
 (Owner's words: «Я тут подумал, что вам тут ещё такого показать. Ахах, наверно... "Ничего". Всё, пока, я занят... а вы подписывайтесь на мой потрясающий канал и ставьте лайки... ну илиии...»)
 
 ## End
-Hard cut on "Or else..." to the end card: THE SUN IS NEVER LATE.
+Hard cut on "Or... whatever." to the end card: THE SUN IS NEVER LATE.
 (Owner 05.11: Take 8 "So... how do you turn this off? Marcel? Marcel!" moved to the next episode, see ../next_episodes_ideas.md.)
 
 ## Cuts from 7.0 (to fit 3:00)
