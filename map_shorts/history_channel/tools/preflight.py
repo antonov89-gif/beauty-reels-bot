@@ -1,0 +1,93 @@
+"""PRE-GENERATION GATE for the history channel (owner 05.11: "создай агента, который по всем правилам проверял перед каждым запуском генерации").
+Mechanical checks of ONE generation script before it may run. Writes .preflight/<script>.json with the script's sha256 when everything passes;
+the PreToolUse hook (.claude/hooks/require_preflight.py) blocks any real run of a gen_*.py whose current sha256 has no PASS record.
+Judgment checks (emotion per beat, laugh, angle new vs earlier setups, living room, phone mistake, end pose) are done by the agent
+.claude/agents/pregen-reviewer.md and recorded with --reviewer-pass. The owner's "да" after seeing the refs + Russian prompt is recorded with --owner-yes.
+Usage:
+  python3 tools/preflight.py <gen_script.py>                         # mechanical checks only (prints the report)
+  python3 tools/preflight.py <gen_script.py> --reviewer-pass "<note>"  # after the reviewer agent said PASS
+  python3 tools/preflight.py <gen_script.py> --owner-yes "<owner's words>"  # after the owner's yes; writes the PASS record
+"""
+import hashlib, json, os, re, subprocess, sys, time, urllib.request
+REPO = "/home/user/beauty-reels-bot"
+RAW_PREFIX = "https://raw.githubusercontent.com/antonov89-gif/beauty-reels-bot/claude/funny-bardeen-uj4fiv/"
+BEST_ORIGINAL_SMALL_OK = {"R1_king_card_A3_white_wig.jpg", "A3_white_wig.jpg"}   # best existing original, named as such
+PRICE = {"kling-4.0-i2v": {"720p": 0.145, "1080p": 0.2175}, "gpt-image-2.5-sunburst-lite": 0.12}
+
+def sha(p): return hashlib.sha256(open(p, "rb").read()).hexdigest()
+
+def main():
+    if len(sys.argv) < 2: sys.exit(__doc__)
+    script = os.path.abspath(sys.argv[1]); src = open(script).read(); name = os.path.basename(script)
+    fails, warns, notes = [], [], []
+    # --- refs: RAW + "path" pieces ---
+    raw_base = re.search(r'RAW\s*=\s*"([^"]+)"', src)
+    raw_base = raw_base.group(1) if raw_base else ""
+    refs = re.findall(r'RAW\s*\+\s*"([^"]+)"', src)
+    if not refs: fails.append("no reference images found (RAW + \"...\")")
+    for r in refs:
+        url = raw_base + r
+        rel = url.replace(RAW_PREFIX, "")
+        local = os.path.join(REPO, rel)
+        if not os.path.exists(local): fails.append(f"ref missing locally: {rel}"); continue
+        tracked = subprocess.run(["git", "-C", REPO, "ls-files", "--error-unmatch", rel], capture_output=True).returncode == 0
+        if not tracked: fails.append(f"ref not committed: {rel}")
+        try:
+            code = urllib.request.urlopen(urllib.request.Request(url, method="HEAD"), timeout=30).status
+        except Exception as e:
+            code = getattr(e, "code", str(e))
+        if code != 200: fails.append(f"ref URL not reachable ({code}): {url}")
+        wh = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "stream=width,height", "-of", "csv=p=0", local], capture_output=True, text=True).stdout.strip().split(",")
+        try: w, h = int(wh[0]), int(wh[1])
+        except Exception: fails.append(f"cannot read size: {rel}"); continue
+        short = min(w, h); base = os.path.basename(rel)
+        if short < 1024 and base not in BEST_ORIGINAL_SMALL_OK:
+            fails.append(f"ref too small ({w}x{h}, short side {short} < 1024): {rel}  (rule H7: use a better source or words)")
+        elif short < 1024:
+            notes.append(f"{base} {w}x{h}: below 1024 but the best existing original (allowed, named)")
+        else:
+            notes.append(f"{base} {w}x{h} OK")
+        if re.search(r"(_last\.jpg|frame_?\d+|/tmp/)", rel): warns.append(f"ref looks like a video frame: {rel} (rule H3)")
+    # --- prompt text checks ---
+    m = re.search(r'prompt\s*=\s*\((.*?)\)\n', src, re.S)
+    prompt = " ".join(re.findall(r'"((?:[^"\\]|\\.)*)"', m.group(1))) if m else ""
+    model = (re.search(r'"model":\s*"([^"]+)"', src) or [None, ""])[1]
+    is_video = "videos" in src or "i2v" in model
+    if not prompt: fails.append("prompt not found")
+    low = prompt.lower()
+    for k, why in [("no text", "no burned-in text"), ("modern", "no modern objects")]:
+        if k not in low: fails.append(f"prompt lacks '{k}' ({why})")
+    if is_video:
+        if "kling" in model and "@first_frame" not in prompt: fails.append("Kling prompt lacks the @first_frame tag (rule H1)")
+        if "@last_frame" in prompt and len(set(re.findall(r'"image_urls":\s*\[([^\]]*)\]', src))) == 0: warns.append("@last_frame named but image_urls not parsed")
+        if not re.search(r"hand-held|hand held|in (a|his|one) hand", low): fails.append("video prompt lacks hand-held camera (rule C1, no static frames)")
+        if not re.search(r"no music", low): fails.append("video prompt lacks 'no music'")
+        if not re.search(r"fan|whisper|shift|servant|courtier", low): warns.append("no living-room cue (fans, whispering, servants) found (rule E2)")
+        if re.search(r"propped|tripod|locked[- ]off|static camera", low): fails.append("static/propped camera in a video prompt (owner 05.11: none)")
+        if not re.search(r"no fast pans|no whip|never a smooth gimbal", low): warns.append("no guard against whip pans/gimbal (ghosting risk)")
+    # --- price ---
+    dur = re.search(r'"duration":\s*(\d+)', src); res = re.search(r'"resolution":\s*"([^"]+)"', src)
+    if is_video and dur and res and model in PRICE:
+        price = PRICE[model].get(res.group(1), 0) * int(dur.group(1))
+    else:
+        price = PRICE.get(model, 0) if isinstance(PRICE.get(model, 0), float) else 0
+    # --- record ---
+    os.makedirs(os.path.join(REPO, ".preflight"), exist_ok=True)
+    rec_path = os.path.join(REPO, ".preflight", name + ".json")
+    rec = json.load(open(rec_path)) if os.path.exists(rec_path) else {}
+    h = sha(script)
+    if rec.get("sha256") != h: rec = {"sha256": h}
+    rec.update({"script": script, "model": model, "price_usd": round(price, 3), "refs": refs, "mechanical": "PASS" if not fails else "FAIL", "fails": fails, "warns": warns, "time": time.time()})
+    if "--reviewer-pass" in sys.argv: rec["reviewer"] = sys.argv[sys.argv.index("--reviewer-pass") + 1]
+    if "--owner-yes" in sys.argv: rec["owner_yes"] = sys.argv[sys.argv.index("--owner-yes") + 1]
+    rec["PASS"] = bool(not fails and rec.get("reviewer") and rec.get("owner_yes"))
+    json.dump(rec, open(rec_path, "w"), indent=1, ensure_ascii=False)
+    print(f"PREFLIGHT {name}: model {model}, price about ${price:.3f}")
+    for n in notes: print("  ok   ", n)
+    for w in warns: print("  WARN ", w)
+    for f in fails: print("  FAIL ", f)
+    print("  mechanical:", rec["mechanical"], "| reviewer:", rec.get("reviewer", "MISSING"), "| owner yes:", rec.get("owner_yes", "MISSING"), "| RUN ALLOWED:", rec["PASS"])
+    sys.exit(0 if not fails else 1)
+
+if __name__ == "__main__":
+    main()
