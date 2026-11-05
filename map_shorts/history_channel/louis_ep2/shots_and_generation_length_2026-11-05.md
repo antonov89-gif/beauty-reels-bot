@@ -32,3 +32,20 @@ We generate 8-10 s clips and join them, so every 8-10 s is a seam where the face
 4. Gate each take: SFace median >= 0.65 and p10 >= 0.45 against A3, outliers checked by eye, plus the sharpness numbers against the first anchor still.
 5. Pilot first: one 15 s piece (the first 15 s of Take 1) at $2.18 to see whether a long pinned take holds the face and the sharpness. If it does, the takes are 20-30 s.
 Risks: a failed 30 s take costs $4.35 (against $1.16 for a failed 8 s clip); speech timing over 30 s; our voice is laid over the picture by whole phrases, so the model's mouth timing must be close; the anchors force the poses at their moments, so the acting between them is the model's.
+
+## Addendum 05.11 (owner: "посмотри на референс, сколько держится поза у героя, смена кадров; у нас одна поза держится очень долго и сзади придворные стоят неподвижно"): measured
+Method: per-second frame differences (108x192 grey) in zones: subject (head and chest), lower part (hands, body), background strips (left and right edges, where the room and the people are), head-centre path from face boxes. Reference = Vlog 1, 6-23 s (the seated medium, 17 s); ours = piece 2b (15 s), T2a (12 s), pilot 3-10 s.
+| | Reference 6-23 s | ours 2b | ours T2a | ours pilot 3-10 s |
+|--|--|--|--|--|
+| Seconds when hands/body are almost still (motion < 2.5) | 0 % | 80 % | 42 % | - |
+| Seconds when the background is frozen (strips < 1.0) | 0 % | 93 % | 92 % | - |
+| Background-strip motion (mean) | 3.3 | 0.2 | 0.3 | 1.1 |
+| Lower part / hands (mean) | 5.3 | 2.4 | 3.2 | 5.1 |
+| Head-centre path, face widths per second | 0.20 | 0.11 | 0.12 | 0.15 |
+Reading: the reference never freezes for a whole second: the hands, the body and the room edges (a hand-held camera) always move; ours holds one pose for 15 s with a static camera (the background moves 15 times less) and the people behind stand still (the model animates the subject, not the crowd). Also the reference's first 23.6 s is one unbroken take, but the framing "breathes": head turns (13-14 s, 18-21 s), arm moves, leaning; the viewer never gets a still image. Whole-video structure (from the 360p copy, earlier): 14 shots, median 1.9 s, mean 9.2 s.
+## Free fix tried in the edit (TAKE1_rough_v2_muted.mp4, 36.8 s, local): virtual hand-held (a slow drift and a tiny roll of the whole frame) + a punch-in of 1.2x every 4-5 s (changes the frame size without a new generation) + the pilot's ghost (10.45-11.75 s) cut out
+Measured: seconds with a frozen background 93 % -> 0 %, head path 0.11 -> 0.28 (the reference 0.20), the face still the same (SFace to A3 mean 0.80, median 0.80, p10 0.74, min 0.65). COST: the head sharpness halves (mean 436 -> 225) because the frame is upscaled by 1.05-1.26x and rotated; the people behind still do not move (the edit cannot move them).
+## What can still be done (each needs the owner's yes)
+(a) Background life in the generation: ask for it in the prompt (a lady fans herself, courtiers shift weight and whisper, a servant crosses behind). Kling 4.0 i2v usually keeps the background static, so it may not work; a retake costs $1.74-$2.18 per 12-15 s. Seedance 2.0 is better with crowds (plan notes) but has no last frame to pin the face. Test on ONE 8 s clip ($1.16) before changing the method.
+(b) Real shot changes: a cutaway to the crowd or Marcel (a second still from the same card edit + a clip), 2-3 per take: about $0.12 + $1.16 each.
+(c) A softer version of the edit (smaller zoom, fewer punch-ins, a sharpen pass) to limit the sharpness loss.
