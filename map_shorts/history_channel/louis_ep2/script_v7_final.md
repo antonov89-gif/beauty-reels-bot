@@ -28,9 +28,9 @@ LOUIS: "[wipes his fingers, sits up, glances at the bones on his plate, pushes t
 LOUIS: "[leans back, thinks, looks around the hall] So... I was wondering what else to show you here. [pause, a short laugh] Ha. Probably... nothing. [stands up, the crowd bows] That's all. Bye. I'm busy. [beat, points at the lens] ...And you: subscribe to my stunning channel. And like. [pause, narrowing his eyes] Or else..."
 (Owner's words: «Я тут подумал, что вам тут ещё такого показать. Ахах, наверно... "Ничего". Всё, пока, я занят... а вы подписывайтесь на мой потрясающий канал и ставьте лайки... ну илиии...»)
 
-## Take 8. He cannot stop the recording
-LOUIS: "[pokes the screen] So... [pokes harder, frowning] how do you turn this off? Marcel? Marcel!"
-Hard cut on "Marcel!". End card: THE SUN IS NEVER LATE.
+## End
+Hard cut on "Or else..." to the end card: THE SUN IS NEVER LATE.
+(Owner 05.11: Take 8 "So... how do you turn this off? Marcel? Marcel!" moved to the next episode, see ../next_episodes_ideas.md.)
 
 ## Cuts from 7.0 (to fit 3:00)
 Removed: T1 "Now."; T2 "Most of you would get in. Probably."; T3 "Right. The food." and "to everyone"; T4 "You'll notice", the second "Leave it", "Marcel bumps the table" line kept as action only; T5 "After that..." and the finger counting speech; T7 "Ah." kept, "(pause)" removed.
