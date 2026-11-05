@@ -24,3 +24,7 @@ Kling 4.0 i2v, 720p, 15 s, $2.18.
 - @last_frame (15 s) = ANCHOR_E2_smug_1080.jpg (smug half-smile)
 Beats: 0-3 s fumble "Is it... is it on?"; 3-4.5 s pulls back, "Ah. There I am."; 5 s the A3-edit pause, clears his throat; 5.5-8.5 s "Bonjour. I am Louis, King of France."; 9-10.5 s sweeps a hand at the hall, "Welcome to Versailles."; 10 s the E1 pose in the pause; 11-13.5 s "And this is my channel."; 15 s the E2 half-smile.
 Acting limits: heavy lids, no wide eyes, no broad grin, no lean toward the lens, medium distance; hand-held sway, no gimbal, no zoom; no music; no text.
+
+## Update 05.11 (owner: "У нас уже есть кадры, зачем опять"): no new frame
+I tried to make the fumble first frame for free from the existing A3 edit (crop + tilt + blurred sleeve): it looked fake (enormous nose, a blob instead of a sleeve), discarded. Decision (owner wants existing frames, the face must be strictly the card face, F01a is 0.10 to the card with a brown moustache): the pilot starts from the EXISTING A3 edit; the "phone too close" beat is acted by the model as a move (the phone comes in close, then pulls back), not by a special first frame. F01a stays as the owner's original and is not used in the pilot.
+Pins (even spacing, 0 / 5 / 10 / 15 s): @first_frame = T1_keyframe_edit_768.jpg (A3 edit); @keyframe_1 (5 s) = ANCHOR_E2_smug_1080.jpg; @keyframe_2 (10 s) = ANCHOR_E1_haughty_1080.jpg; @last_frame (15 s) = T1_keyframe_edit_768.jpg again (closes on the same smug pose). Kling 4.0 i2v, 720p, 15 s, $2.18 (the pilot the owner approved).
