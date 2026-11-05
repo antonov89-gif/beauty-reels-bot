@@ -139,3 +139,16 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 05.11 | Ep.2 T2b start still retry (same call; owner "идём дальше"): FAILED SUBMISSION_UNCERTAIN, no image, charge not shown | $0 shown (unverified) |
 | 05.11 | Ep.2 T2b start still v2 (GPT Image 2.5 Sunburst Lite 4K, re-worded, refs hall-only + Marcel + card; owner "2") | $0.12 (usage.cost) |
 | 05.11 | Ep.2 T2b clip (Kling 4.0 i2v 720p 8s, first frame = Marcel low still; owner "Да") | $1.16 (usage.cost) |
+| 04.11 | Ep.2 T1 pilot (Kling 4.0 i2v, 720p, 11s, F01a) (moved here 05.11 from a stray louis_ep2/spend_ledger.md) | $1.595 (usage.cost) |
+| 04.11 | Ep.2 T1 RETAKE (Kling 4.0 i2v, 720p, 11s, F01a, @first_frame tag fixed) (moved here 05.11 from a stray louis_ep2/spend_ledger.md) | $1.595 (usage.cost) |
+| 04.11 | Ep.2 T1 identity keyframe (GPT Image 2.5 Sunburst Lite 4K high) (moved here 05.11 from a stray louis_ep2/spend_ledger.md) | $0.12 (usage.cost) |
+| 04.11 | Ep.2 T1 identity keyframe v2 (GPT Image 2.5 Sunburst Lite 4K high) (moved here 05.11 from a stray louis_ep2/spend_ledger.md) | $0.12 (usage.cost) |
+| 04.11 | Ep.2 T1 retake 2 (Kling 4.0 i2v 720p 11s, first frame F01a + keyframe v2) (moved here 05.11 from a stray louis_ep2/spend_ledger.md) | $1.595 (usage.cost) |
+| 04.11 | Ep.2 T1 keyframe by editing card A3 (GPT Image 2.5 Sunburst Lite 4K high) (moved here 05.11 from a stray louis_ep2/spend_ledger.md) | $0.12 (usage.cost) |
+| 04.11 | Ep.2 T1 retake 3 (Kling 4.0 i2v 720p 11s, F01a + keyframe edit of A3) (moved here 05.11 from a stray louis_ep2/spend_ledger.md) | $1.595 (usage.cost) |
+| 04.11 | Ep.2 T1 retake 4 (Kling 4.0 i2v 720p 11s, F01a + owner's keyframe image) (moved here 05.11 from a stray louis_ep2/spend_ledger.md) | $1.595 (usage.cost) |
+| 04.11 | Ep.2 T3b pilot (Kling 4.0 i2v 720p 8s, F03b) (moved here 05.11 from a stray louis_ep2/spend_ledger.md) | $1.16 (usage.cost) |
+| 04.11 | Ep.2 T1b chain clip (Kling 4.0 i2v 720p 10s, first frame = T1 v5 last frame) (moved here 05.11 from a stray louis_ep2/spend_ledger.md) | $1.45 (usage.cost) |
+| 04.11 | Ep.2 T1c chain clip (Kling 4.0 i2v 720p 8s, first frame = T1b last frame) (moved here 05.11 from a stray louis_ep2/spend_ledger.md) | $1.16 (usage.cost) |
+| 04.11 | Ep.2 T1d chain clip (Kling 4.0 i2v 720p 8s, first frame = T1c last frame) (moved here 05.11 from a stray louis_ep2/spend_ledger.md) | $1.16 (usage.cost) |
+| 05.11 | Ep.2 TOTAL pictures + video 04-05.11 (sum of usage.cost above, failed calls with no cost shown counted as $0) | $28.99 |
