@@ -181,3 +181,5 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 
 ## economist recommendation 05.11.2026 (piece 3c / T3d, no spend)
 Kling 3.0 i2v 720p no audio 10 s = $0.80 (page price, unproven) vs Kling 4.0 $1.45 measured. Prompt must be cut from 3,880 to <= 2,500 chars and has no @tags. Keep 10 s: 14 words at 110 wpm = 7.6 s of speech + swallow + pause + silent beat > 8 s. Details in MODEL_NOTES.md (Kling 3.0 section).
+| 05.11 | Ep.2 T3d clip (piece 3c Fork or fingers; Kling 4.0 i2v 720p 10 s, pins T3d start/end), owner "Да" | $1.45 (usage.cost) |
+| 05.11 | Ep.2 running TOTAL | $36.47 |
