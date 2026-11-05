@@ -12,6 +12,7 @@ import hashlib, json, os, re, subprocess, sys, time, urllib.request
 REPO = "/home/user/beauty-reels-bot"
 RAW_PREFIX = "https://raw.githubusercontent.com/antonov89-gif/beauty-reels-bot/claude/funny-bardeen-uj4fiv/"
 BEST_ORIGINAL_SMALL_OK = {"R1_king_card_A3_white_wig.jpg", "A3_white_wig.jpg"}   # best existing original, named as such
+OWNER_QUALITY_EXCEPTION = {"T2c_end_v2_4k.jpg": "owner 05.11 'Делай': last pin of the 720p T2c clip, sharp 132 / detail 1.81, -27 % at video size (reference_check.md)"}   # explicit owner exceptions, one file each, never chain from them
 PRICE = {"kling-4.0-i2v": {"720p": 0.145, "1080p": 0.2175}, "gpt-image-2.5-sunburst-lite": 0.12}
 
 def sha(p): return hashlib.sha256(open(p, "rb").read()).hexdigest()
@@ -59,7 +60,10 @@ def main():
             lim = {"sharp": 80, "detail": 1.3, "blocks": 1.30} if room else {"sharp": 150, "detail": 2.0, "blocks": 1.20}
             bad = [k for k in ("sharp", "detail") if qm.get(k, 0) < lim[k]] + (["blocks"] if qm.get("blocks", 9) > lim["blocks"] else [])
             msg = f"quality {base}: sharp {qm.get('sharp')} detail {qm.get('detail')} blocks {qm.get('blocks')} ({'room-only limits' if room else 'subject limits'})"
-            (fails if bad else notes).append(msg + (f" -> TOO LOW: {bad}" if bad else " OK"))
+            if bad and base in OWNER_QUALITY_EXCEPTION:
+                notes.append(msg + f" -> TOO LOW {bad} but OWNER EXCEPTION: {OWNER_QUALITY_EXCEPTION[base]}"); bad = []
+            else:
+                (fails if bad else notes).append(msg + (f" -> TOO LOW: {bad}" if bad else " OK"))
     # --- prompt text checks ---
     m = re.search(r'prompt\s*=\s*\((.*?)\)\n', src, re.S)
     prompt = " ".join(re.findall(r'"((?:[^"\\]|\\.)*)"', m.group(1))) if m else ""
