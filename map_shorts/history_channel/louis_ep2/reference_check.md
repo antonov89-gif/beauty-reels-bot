@@ -355,3 +355,5 @@ File pilot_frames/anchors/T2c_end_v2_4k.jpg (2161x3840, local) + T2c_end_v2_768.
 | head box at 1080 | 349,588,285x427 | 350,585,282x421 | 336,577,297x421 |
 | wig saturation | 133 | 142 | 144 |
 Eye: v2 reads better as "mouth full" (pursed lips, fuller cheek), eyes in the lens, smug; hand on the dish edge (4 fingers + hidden thumb), lady with the fan, servant walking, sleeve kept; faint mottle on forehead/cheek still at 4K, no halos. Second and last corrective attempt for this still (cap 2). Neither v1 nor v2 passes the 4K subject limits (150 / 2.0); at video size both lose 27 % (inside the 30 % clip rule). Use as the last pin needs the owner's explicit exception.
+
+- Owner 05.11 "Делай": T2c_end_v2_4k.jpg accepted as the LAST PIN of the T2c clip as an explicit exception (4K quality below the subject limits sharp 132 / detail 1.81; at video size -27 %, inside the 30 % clip rule). It is not used as a reference for anything else (never chain from it).
