@@ -1,5 +1,5 @@
-# Louis XIV Vlog #2 "Dinner in Public": script draft 7.1 FINAL TEXT (04.11.2026)
-Owner chose variant A on every beat ("а"). Owner 04.11: "Добавить. Welcome to Versailles" (added after "King of France."; "Try not to faint" not added). Cut to fit 3:00. Brackets = action or tone (not spoken); OWNER = owner's own words, unchanged.
+# Louis XIV Vlog #2 "Dinner in Public": script draft 7.2 (05.11.2026; 7.1 of 04.11 + owner's edits)
+Owner chose variant A on every beat ("а"). Owner 04.11: "Добавить. Welcome to Versailles" (added after "King of France."; "Try not to faint" not added). Owner 05.11: the teaser about the operation removed ("All this food has a price... Very kind of them."), the verdict kept, the ending rewritten in the owner's words (Take 7). Cut to fit 3:00. Brackets = action or tone (not spoken); OWNER = owner's own words, unchanged.
 
 ## Take 1. Selfie at the table
 LOUIS: "[phone too close, muffled] Is it... is it on? [pulls it back, sees himself, pleased] Ah. There I am. [clears throat] Bonjour. I am Louis, King of France. Welcome to Versailles. And this is my channel. They call me the Sun King. Yes... I'm that handsome. [a satisfied sigh] Some of you write that I eat too much. I read it. [sniffs] Of course, that's not true. Every day I feast in front of the court. Today... before your eyes."
@@ -24,8 +24,9 @@ LOUIS (OWNER): "[leans back, hands on the belly, a long happy sigh] Ohh... I was
 ## Take 6. The verdict (OWNER)
 LOUIS: "[wipes his fingers, sits up, glances at the bones on his plate, pushes the plate a little away] So. Do I eat too much? ...No. I eat like a king. [chin up] Don't be afraid of getting fat. Be afraid of being a loser. [haughty laugh]"
 
-## Take 7. Next episode and the outro
-LOUIS: "[shifts in the armchair, winces] Ah. All this food has a price. [lower, confidential] In the next video, I'll tell you about my operation. My surgeon practised it first... on other patients. Very kind of them. [stands; the crowd bows] Subscribe to my stunning channel. Hit like. Ring the bell. Anyway, do what you like. [haughty laugh] I'm off to the table to feast!"
+## Take 7. The end (OWNER 05.11, replaces the teaser and the old outro)
+LOUIS: "[leans back, thinks, looks around the hall] So... I was wondering what else to show you here. [pause, a short laugh] Ha. Probably... nothing. [stands up, the crowd bows] That's all. Bye. I'm busy. [beat, points at the lens] ...And you: subscribe to my stunning channel. And like. [pause, narrowing his eyes] Or else..."
+(Owner's words: «Я тут подумал, что вам тут ещё такого показать. Ахах, наверно... "Ничего". Всё, пока, я занят... а вы подписывайтесь на мой потрясающий канал и ставьте лайки... ну илиии...»)
 
 ## Take 8. He cannot stop the recording
 LOUIS: "[pokes the screen] So... [pokes harder, frowning] how do you turn this off? Marcel? Marcel!"
