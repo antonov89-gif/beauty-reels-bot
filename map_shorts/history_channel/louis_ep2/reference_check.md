@@ -423,3 +423,27 @@ File pilot_frames/anchors/T3c_end_4k.jpg (2161x3840, local) + T3c_end_768.jpg. A
 Measured: SFace end vs start 0.905, vs A3 0.821; head box start [340,509,292x409] vs end [336,512,289x391] (slight turn, same place); quality sharp 151.4 (>= 150) / detail 1.78 (< 2.0) / blocks 1.0; head area at 720x1280 700 -> 554 = -21 % (inside the 30 % rule).
 Eye check OK: strong disgust (upper lip curled, one brow up, half-closed heavy lids, cold stare at the fork), the ringed hand still holds the leg with stretched skin, the viewer's-left hand raised with index and middle fingers up and the thumb beside the fork handle, a two-tined silver fork whose handle is held by Marcel's hand in the sky-blue braided sleeve coming from the lower left (fork head sharp at hand distance as asked), pheasant on the platter, ladies with fans, a servant partly out at the right edge; one king; no text. The two hands near the fork read as "Marcel offers, the king flicks it away"; fingers plausible at 100 % (no fused or extra fingers seen).
 Open: detail 1.78 is below the subject limit 2.0, so preflight will block the clip call until the owner grants an explicit exception for T3c_end_4k.jpg (as for T2c_end_v2).
+
+## Reference comparison TAKE3_T3c.mp4 (05.11)
+Tool: tools/ref_compare.py vs Vlog 1 0-30.8 s, words 5, setups 1, mistakes 3 (planned, 1 clearly seen by eye). Cuts: none (single 8 s take).
+| metric | reference | ours | deviation |
+|--|--|--|--|
+| frozen background | 0 % | 0 % | OK (tool); by eye the room is nearly locked, people do not move |
+| still body | 0 % | 25 % | FAIL (gate 15); T3a 60, T2c 75 |
+| head motion fw/s | 0.19 | 0.10 | FAIL (gate 0.18); T3a/T2c 0.07 |
+| words per min | 50-90 | 38 | low, normal for a 5-word gag; silence after the gag exists |
+| setups | 7 in 128 s | 1 | n/a for one take |
+| phone mistakes | 5 in 128 s | fork in lens ~4.5 s, dip ~6-7 s seen; focus hunt 2.4 s not seen | partial |
+Verdict: needs edit work (virtual hand-held + punch-ins), not regeneration. Per-beat score helped pose and body, barely the camera and the room.
+
+## QC TAKE3_T3c.mp4 (05.11.2026): ACCEPTED FOR EDIT (motion fails; fork tine count WARN), status INSPECTED
+Raw Kling 4.0 i2v clip 8.04 s, 720x1280, 24 fps, 193 frames, no audio. Prompt take3_T3c_prompt.txt; mistake window given 2-3 s.
+- face (vs A3): median 0.787, p10 0.698, low frame 3.0 s only (sidelong glance, still the same man): PASS
+- sharp per second: 219,247,70,227,284,226,238,275; s2 = 70 (32 % of first) is the planned focus hunt (excluded by --mistake 2-3, matches 2.4 s in the prompt); no 2 consecutive < 60 %; last-third decay -0.10 (sharper); vs previous clip T3a mean 0.87: PASS
+- seams: median diff 4.24, no spike-cut: PASS
+- motion: frozen background 0 %, still body 25 % (limit 15): FAIL -> needs virtual hand-held in the edit (head sways little at s6-8), re-measure the edited piece
+- pins: first vs start still RMSE 0.029, last vs end still 0.027: PASS
+- info: join to T3a last frame 0.213 (different setup, cut allowed)
+Eye: same man as A3 (nose, curled moustache, beauty mark on the viewer's right, rouge, silver-grey wig), one king, no ghost, no text, no modern objects. Rings on 4 fingers + thumb at s3/s6/s8, two raised fingers at s6/s8 are clean (index + middle, no extra fingers); the flat hand on the carcass at s2-3 has 4 fingers + thumb, plausible. The leg stays in the ringed hand with stretched skin from s0 to s8. Room lives: ladies with fans, courtiers, servant with a lidded dish enters from the right at s6 and stays half out at s8 (black-gold coat). Phone feel: drift and re-aim visible, focus hunt at s2 (sharp 70, face drops soft) matches the plan; the sleeve slide and the dip at 7 s are NOT clearly visible on the sheet (NOT VERIFIED, framing at s7-8 changes only a little). End pose differs (s0 eyes down at the leg, s8 closed-mouth cold stare, brow lowered, fingers up beside the fork).
+WARN fork: the fork has 3 tines at s1-s4 (crops of s_03, s_04), is motion-blurred at s5, and has 2 tines from s6 to the end (matches the end still). Prompt limit was exactly two tines. Also the fork is already in frame at about 1 s (planned 1.5-3 s) and the sleeve is grey-blue lace-like at s2-3 vs sky-blue braid at s6-8 (reads as the same sleeve after the slide). At 720p a viewer is unlikely to count tines, but it is a visible morph 3 -> 2 across s5.
+Script 7.3: tears a leg (s0-1, tugging), fork enters at s1-2, "What is that?" about s3-4 (mouth open, chin up, sidelong look at the fork), "A fork?" about s4.5-5.5 (squint, brow), s6 two fingers raised to the fork (he does not touch it, the fork stays in Marcel's hand: reads as a flick-away), silent disgusted beat s6.5-8 with the leg still held. Matches the beat; lips plausible for v3 voice over whole phrases.
