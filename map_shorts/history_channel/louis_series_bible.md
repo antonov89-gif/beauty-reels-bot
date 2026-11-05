@@ -33,6 +33,8 @@ Measured gaps of ep.1 0-42 s vs the reference (louis_ep1/reference_compare_0-42.
 6. Sound: a full diegetic bed under everything (room tone of the palace, distant voices, footsteps on parquet, fabric, jewellery, doors, objects), never dead digital silence; still NO music; the video models' own audio stays muted.
 7. Personal hook per episode (a past humiliation turned into power, a secret, a rule only he may break) and one fact per setup.
 
+Full list of what we take from the references: REFERENCE_RULES.md (05.11).
+
 ## Reference gate (measured 05.11 on the owner's Vlog 1 file and transcripts; binding for every clip and episode)
 Owner 05.11: "он снимает с телефона, не должно быть статических кадров, должна быть тряска рукой... всё как у референса: паузы, ракурсы, длина склеек". Numbers measured by me on the reference (map_shorts/history_channel/louis_ep2/shots_and_generation_length_2026-11-05.md, compare_vlog1_first30s_vs_T1_2026-11-05.md, frames_vlog1_LjfGP7wpjVs.md):
 | Item | Reference | Gate for our clips |
