@@ -501,3 +501,16 @@ File pilot_frames/anchors/T4a_end_v2_4k.jpg (2161x3840, local) + T4a_end_v2_768.
 Measured: SFace v2 vs start 0.922, vs A3 0.751; head box start [591,702,237x335] vs v2 [593,694,234x320]; quality sharp 162.7 (>= 150) / detail 1.89 (< 2.0) / blocks 1.0; head area at 720x1280 689 -> 542 = -21 % (inside the 30 % rule, v1 was -31 %).
 Eye check OK: eyes up and aside toward the chandelier (bored, waiting), brow slightly up, mouth closed, the ringed hand on the cloth with the index finger lifted and three rings visible (the fourth ring is hidden by the curl: plausible), cupbearer gone, two white-gloved hands with a gold goblet at the right edge behind the chair, a lady's fan in a new position, no glass on the table, plates/napkin/rolls/knife and fork unchanged, one king, no text.
 Open: detail 1.89 is just below the subject limit 2.0, so preflight needs an explicit owner exception for T4a_end_v2_4k.jpg before the clip call.
+
+## Reference comparison TAKE4_T4a.mp4 (05.11)
+Measured by tools/ref_compare.py (ref 0-30.8 s) + contact sheets by eye. Status: INSPECTED, ACCEPTED FOR EDIT (virtual hand-held on the last 3 s).
+| metric | reference | ours | gate/deviation |
+|--|--|--|--|
+| shots / longest | 2 / 23.6 s | 1 / 12.0 s | one setup, no cut (fine for a 12 s piece) |
+| frozen background | 0 % | 0 % | OK |
+| still body | 0 % | 17 % | gate 15 %: marginal FAIL |
+| head fw/s | 0.19 | 0.44 | OK (includes camera travel) |
+| words per min | 50-90 | 80 (16 words) | OK |
+| phone mistakes | 5 in 128 s | 1 seen by eye (thumb ~4.5 s, too big ~35 %); focus hunt at 9 s NOT seen | planned 2 |
+| setups | 7 in 128 s | 1 | n/a per piece |
+By eye: camera hand-held with drift and roll, king in frame throughout; pose held (finger at chin) ~3 s; goblet hand early (~5 s vs 7.5 s); left side of the room quiet.
