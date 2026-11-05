@@ -483,3 +483,9 @@ Raw 10 s Kling 720x1280, piece 3c, 1 setup (S8b), no cuts. Measured by tools/ref
 | phone mistakes | 5 per 128 s | 3 by eye (blur ~1-1.5 s, thumb ~4 s not 6 s, dip at end) | OK, timing off |
 | room | people move | one man enters ~5-6 s, others static | partial |
 Verdict: absolute score helped (still body, camera); head motion and room still short. ACCEPTED FOR EDIT with virtual hand-held and punch-ins. Not a similarity percentage.
+
+## T4a start still (Take 4 the drink, S9, 05.11, owner "Да" after refs + Russian prompt; reviewer FAIL on the first draft, fixes applied): GENERATED -> INSPECTED: ACCEPTED as the start pin
+File pilot_frames/anchors/T4a_start_4k.jpg (2161x3840, local) + T4a_start_768.jpg. ACTUAL COST $0.12. Script gen_t4a_start.py.
+Measured: SFace vs A3 0.817; biggest face box at 1080 237x335 px = head width ~159 px at 720x1280 (>= 130 needed: readable for the video model); quality sharp 211.4 / detail 2.22 / blocks 1.0 (subject limits OK, no exception).
+Eye check OK: new angle (across the table, from above, medium-wide, the king in the right third, table receding to the left with candelabra and flowers), face turned toward the frame centre, stare into the lens, beauty mark on the viewer's right of the mouth, silver-grey wig (not beige), four-ring hand relaxed on the cloth (fingers clean), NO glass or goblet anywhere on the table (the R10 glasses were not copied), plates/napkins/rolls only, a cupbearer with an empty tray small at the far left, two rows of courtiers, a lady with a fan; one king; no text.
+Notes: a small silver knife and a fork lie beside the plates on the left side of the table (cutlery, no gag conflict visible at video size, but the fork gag of Take 3 makes forks a continuity risk: avoid close-ups of the cutlery, or note it for the edit); the table is bare in front of the king as asked.
