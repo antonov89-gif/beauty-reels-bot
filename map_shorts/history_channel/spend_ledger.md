@@ -166,3 +166,5 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 05.11 | Ep.2 running TOTAL | $31.33 |
 | 05.11 | Ep.2 T3a clip (Kling 4.0 i2v 720p 10 s, first T3a start still, last T3a end still), owner "Да" | $1.45 (usage.cost) |
 | 05.11 | Ep.2 running TOTAL | $32.78 |
+| 05.11 | Ep.2 T3b food-burst stills F1-F5 (GPT Image 2.5 Sunburst Lite 4K, text only), owner "Да" on 5 named calls | 5 x $0.12 = $0.60 (usage.cost each) |
+| 05.11 | Ep.2 running TOTAL | $33.38 |
