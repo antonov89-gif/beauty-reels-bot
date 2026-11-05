@@ -48,6 +48,18 @@ def main():
         else:
             notes.append(f"{base} {w}x{h} OK")
         if re.search(r"(_last\.jpg|frame_?\d+|/tmp/)", rel): warns.append(f"ref looks like a video frame: {rel} (rule H3)")
+        # real quality, not only the pixel size (owner 05.11)
+        qpy = next((x for x in ("/tmp/fv/bin/python",) if os.path.exists(x)), None)
+        if not qpy:
+            fails.append("quality tool missing: create /tmp/fv (see tools/quality_metrics.py header)")
+        else:
+            out = subprocess.run([qpy, os.path.join(REPO, "map_shorts/history_channel/tools/quality_metrics.py"), local], capture_output=True, text=True).stdout.strip().splitlines()
+            qm = json.loads(out[-1]) if out else {}
+            room = "hall" in base.lower()
+            lim = {"sharp": 80, "detail": 1.3, "blocks": 1.30} if room else {"sharp": 150, "detail": 2.0, "blocks": 1.20}
+            bad = [k for k in ("sharp", "detail") if qm.get(k, 0) < lim[k]] + (["blocks"] if qm.get("blocks", 9) > lim["blocks"] else [])
+            msg = f"quality {base}: sharp {qm.get('sharp')} detail {qm.get('detail')} blocks {qm.get('blocks')} ({'room-only limits' if room else 'subject limits'})"
+            (fails if bad else notes).append(msg + (f" -> TOO LOW: {bad}" if bad else " OK"))
     # --- prompt text checks ---
     m = re.search(r'prompt\s*=\s*\((.*?)\)\n', src, re.S)
     prompt = " ".join(re.findall(r'"((?:[^"\\]|\\.)*)"', m.group(1))) if m else ""
