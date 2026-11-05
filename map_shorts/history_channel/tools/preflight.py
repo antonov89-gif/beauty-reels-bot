@@ -25,7 +25,8 @@ def main():
     raw_base = re.search(r'RAW\s*=\s*"([^"]+)"', src)
     raw_base = raw_base.group(1) if raw_base else ""
     refs = re.findall(r'RAW\s*\+\s*"([^"]+)"', src)
-    if not refs: fails.append("no reference images found (RAW + \"...\")")
+    if not refs and "# TEXT_ONLY_NO_REFERENCE" in src: notes.append("text-only call, no reference image (declared in the script)")
+    elif not refs: fails.append("no reference images found (RAW + \"...\")")
     for r in refs:
         url = raw_base + r
         rel = url.replace(RAW_PREFIX, "")
