@@ -12,7 +12,7 @@ import hashlib, json, os, re, subprocess, sys, time, urllib.request
 REPO = "/home/user/beauty-reels-bot"
 RAW_PREFIX = "https://raw.githubusercontent.com/antonov89-gif/beauty-reels-bot/claude/funny-bardeen-uj4fiv/"
 BEST_ORIGINAL_SMALL_OK = {"R1_king_card_A3_white_wig.jpg", "A3_white_wig.jpg"}   # best existing original, named as such
-OWNER_QUALITY_EXCEPTION = {"T2c_end_v2_4k.jpg": "owner 05.11 'Делай': last pin of the 720p T2c clip, sharp 132 / detail 1.81, -27 % at video size (reference_check.md)"}   # explicit owner exceptions, one file each, never chain from them
+OWNER_QUALITY_EXCEPTION = {"T3c_end_4k.jpg": "owner 05.11 'Да': last pin of the 720p T3b-C clip, sharp 151 / detail 1.78, -21 % at video size (reference_check.md)", "T2c_end_v2_4k.jpg": "owner 05.11 'Делай': last pin of the 720p T2c clip, sharp 132 / detail 1.81, -27 % at video size (reference_check.md)"}   # explicit owner exceptions, one file each, never chain from them
 PRICE = {"kling-4.0-i2v": {"720p": 0.145, "1080p": 0.2175}, "gpt-image-2.5-sunburst-lite": 0.12}
 
 def sha(p): return hashlib.sha256(open(p, "rb").read()).hexdigest()
