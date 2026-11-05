@@ -1,5 +1,5 @@
 # Louis XIV Vlog #2 "Dinner in Public": script draft 7.2 (05.11.2026; 7.1 of 04.11 + owner's edits)
-Owner chose variant A on every beat ("а"). Owner 04.11: "Добавить. Welcome to Versailles" (added after "King of France."; "Try not to faint" not added). Owner 05.11: the teaser about the operation removed ("All this food has a price... Very kind of them."), the verdict kept, the ending rewritten in the owner's words (Take 7). Cut to fit 3:00. Brackets = action or tone (not spoken); OWNER = owner's own words, unchanged.
+Owner chose variant A on every beat ("а"). Owner 04.11: "Добавить. Welcome to Versailles" (added after "King of France."; "Try not to faint" not added). Owner 05.11: the teaser about the operation removed ("All this food has a price... Very kind of them."), the verdict kept, the ending rewritten in the owner's words (Take 7); Take 8 moved to the next episode. Count 05.11: 310 spoken words = about 3:26 at the reference's 90 words per minute (3:00 would need about 270 words); open decision of the owner. Brackets = action or tone (not spoken); OWNER = owner's own words, unchanged.
 
 ## Take 1. Selfie at the table
 LOUIS: "[phone too close, muffled] Is it... is it on? [pulls it back, sees himself, pleased] Ah. There I am. [clears throat] Bonjour. I am Louis, King of France. Welcome to Versailles. And this is my channel. They call me the Sun King. Yes... I'm that handsome. [a satisfied sigh] Some of you write that I eat too much. I read it. [sniffs] Of course, that's not true. Every day I feast in front of the court. Today... before your eyes."
@@ -33,4 +33,4 @@ Hard cut on "Or... whatever." to the end card: THE SUN IS NEVER LATE.
 (Owner 05.11: Take 8 "So... how do you turn this off? Marcel? Marcel!" moved to the next episode, see ../next_episodes_ideas.md.)
 
 ## Cuts from 7.0 (to fit 3:00)
-Removed: T1 "Now."; T2 "Most of you would get in. Probably."; T3 "Right. The food." and "to everyone"; T4 "You'll notice", the second "Leave it", "Marcel bumps the table" line kept as action only; T5 "After that..." and the finger counting speech; T7 "Ah." kept, "(pause)" removed.
+Removed: T1 "Now."; T2 "Most of you would get in. Probably."; T3 "Right. The food." and "to everyone"; T4 "You'll notice", the second "Leave it", "Marcel bumps the table" line kept as action only; T5 "After that..." and the finger counting speech; (the 7.1 Take 7 teaser and outro were replaced on 05.11 by the owner's ending).

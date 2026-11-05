@@ -9,7 +9,7 @@ A2 [T] Facts 2 : 1 jokes (Vlog 6: about 12 fact blocks, about 6 jokes); jokes gr
 A3 [T] A reason to film in the opener (Vlog 1: "a queen must be seen by her people, so here I am").
 A4 [T] A personal hook with a payoff (Tower: "I was here as a prisoner... this time I have the keys"): a past humiliation turned into power.
 A5 [T] A confession + a real fact + a turn; one human moment where he laughs at himself; one soft moment, not only arrogance.
-A6 [T] Next-episode tease + one self-aware joke at the end.
+A6 [T] Next-episode tease + one self-aware joke at the end. (Owner exception for ep.2, 05.11: no teaser; the ending is the owner's dismissive "Or... whatever.")
 
 ## B. Lines and delivery
 B1 [M/T] Pace 50-90 words per minute (Vlog 2 about 50, Vlog 1 83-99, Vlog 6 about 90); 2.5-3.1 words per speaking second; 7-9 pauses > 0.5 s per 25-30 s take; a beat of silence after each gag.
