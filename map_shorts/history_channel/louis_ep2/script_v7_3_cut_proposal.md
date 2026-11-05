@@ -1,4 +1,4 @@
-# Script 7.3 CUT PROPOSAL (05.11, owner: "Режь и покажи перед дальнейшими действиями"): NOT applied to script_v7_final.md until the owner says yes
+# Script 7.3 CUT PROPOSAL (05.11, owner: "Режь и покажи перед дальнейшими действиями"): APPLIED 05.11 with the owner's changes: 2c kept as in 7.2; "Banned." removed from Take 3; "And get a little older." removed from Take 4
 Goal: 3:00 at the reference pace (90 words per minute). 7.2 = 310 words (about 3:26). 7.3 = 272 words (about 3:01).
 Untouched: everything already filmed (Take 1, 2a, 2b) and every owner line (5c "Ohh... I wasn't born to work...", 6 the verdict, 7 the ending). Facts and the comment prompt kept.
 

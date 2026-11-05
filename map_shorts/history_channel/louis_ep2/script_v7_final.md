@@ -1,5 +1,5 @@
-# Louis XIV Vlog #2 "Dinner in Public": script draft 7.2 (05.11.2026; 7.1 of 04.11 + owner's edits)
-Owner chose variant A on every beat ("а"). Owner 04.11: "Добавить. Welcome to Versailles" (added after "King of France."; "Try not to faint" not added). Owner 05.11: the teaser about the operation removed ("All this food has a price... Very kind of them."), the verdict kept, the ending rewritten in the owner's words (Take 7); Take 8 moved to the next episode. Count 05.11: 310 spoken words = about 3:26 at the reference's 90 words per minute (3:00 would need about 270 words); open decision of the owner. Brackets = action or tone (not spoken); OWNER = owner's own words, unchanged.
+# Louis XIV Vlog #2 "Dinner in Public": script draft 7.3 (05.11.2026; 7.2 + the owner's cuts)
+Owner chose variant A on every beat ("а"). Owner 04.11: "Добавить. Welcome to Versailles" (added after "King of France."; "Try not to faint" not added). Owner 05.11: the teaser about the operation removed ("All this food has a price... Very kind of them."), the verdict kept, the ending rewritten in the owner's words (Take 7); Take 8 moved to the next episode. Count 05.11: 310 spoken words = about 3:26 at the reference's 90 words per minute (3:00 would need about 270 words); Owner 05.11 cuts (7.3): Take 2 grape line kept as in 7.2; Take 3 shortened, "Banned." not used; Take 4 shortened, "And get a little older." removed; Take 5a shortened. Brackets = action or tone (not spoken); OWNER = owner's own words, unchanged.
 
 ## Take 1. Selfie at the table
 LOUIS: "[phone too close, muffled] Is it... is it on? [pulls it back, sees himself, pleased] Ah. There I am. [clears throat] Bonjour. I am Louis, King of France. Welcome to Versailles. And this is my channel. They call me the Sun King. Yes... I'm that handsome. [a satisfied sigh] Some of you write that I eat too much. I read it. [sniffs] Of course, that's not true. Every day I feast in front of the court. Today... before your eyes."
@@ -8,16 +8,16 @@ LOUIS: "[phone too close, muffled] Is it... is it on? [pulls it back, sees himse
 LOUIS: "Every night at ten, I dine here. In public. Anyone dressed properly may come in. [a man behind bows too little; the king turns his head slowly] ...Lower. Lower. Good. Marcel, show them. [the picture shows the floor and Marcel's shoes] Up. Up, Marcel. There. The duchesses sit. Everyone else stands. [back to the king, takes a grape] People ask me why I eat in front of everyone. They want to see their king. [eats the grape] Even with his mouth full."
 
 ## Take 3. The food
-LOUIS: "The food comes in four rounds. First, soup. [slurps] Mm. My sister-in-law writes that I eat four bowls. [a servant puts down one more] ...She can't count. [the roasts come in; he closes his eyes and breathes in] Ah. Here they are. A whole pheasant. And a partridge. [tears a leg; Marcel's fork comes into the lens] What is that. Someone taught the peasants to use a fork. [pushes it away with two fingers] I've untaught them. [chewing, points the leg at the lens] Fork or fingers? Tell me in the comments. [swallows] Wrong answers go to the Bastille."
+LOUIS: "Four rounds. First, soup. [slurps] My sister-in-law says I eat four bowls. [a servant puts down one more] ...She can't count. [the roasts come in; he closes his eyes and breathes in] A whole pheasant. A partridge. [tears a leg; Marcel's fork comes into the lens] What is that? A fork? [pushes it away with two fingers, disgusted] [chewing, points the leg at the lens] Fork or fingers? Tell me in the comments. [swallows] Wrong answers go to the Bastille."
 
 ## Take 4. The drink
-LOUIS: "There's no glass on my table. When I want a drink, I just... [lifts one finger without looking]"
+LOUIS: "No glass on my table. Thirsty? I just... [lifts one finger without looking]"
 CUPBEARER (off screen): "A drink for the King!"
-LOUIS: "[the cup goes from hand to hand behind him; he waits, drumming his fingers] ...and then I wait. And I get a little older. [wine splashes over the lens] ...Mon Dieu. [silence, then he laughs for real] Leave it. Nobody saw anything. [turns the phone onto Marcel; quiet, flat] And nobody will see you again. [Marcel freezes; pause] I'm joking."
+LOUIS: "[the cup goes from hand to hand behind him; he waits, drumming his fingers] ...and I wait. [wine splashes over the lens] ...Mon Dieu. [silence, then he laughs for real] Nobody saw anything. [turns the phone onto Marcel; quiet, flat] And nobody will see you again. [Marcel freezes; pause] Joking."
 MARCEL (quietly): "Sorry, Sire."
 
 ## Take 5. The last rounds
-LOUIS: "Then... salad, ham, pastry, fruit... [gives up counting] all in under an hour. [holds a pea to the lens, softly] And peas. The whole court talks about nothing else. [eats it, delighted]"
+LOUIS: "Then salad, ham, pastry, fruit. [gives up counting] In under an hour. [holds a pea to the lens, softly] And peas. The court talks of nothing else. [eats it, delighted]"
 [Marcel films the laden table and the king eating, about 4 s, no words: chewing, a happy hum, the murmur of the crowd]
 LOUIS (OWNER): "[leans back, hands on the belly, a long happy sigh] Ohh... I wasn't born to work. I was born for happiness, love, pleasure... and a good rest. [a joyful laugh at his own line]"
 
