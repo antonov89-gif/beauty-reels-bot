@@ -80,6 +80,11 @@ def main():
         if not re.search(r"no music", low): fails.append("video prompt lacks 'no music'")
         if not re.search(r"fan|whisper|shift|servant|courtier", low): warns.append("no living-room cue (fans, whispering, servants) found (rule E2)")
         if re.search(r"propped|tripod|locked[- ]off|static camera", low): fails.append("static/propped camera in a video prompt (owner 05.11: none)")
+        if re.search(r"framing (stays|remains|is kept) the same|same framing all the time|frame stays the same", low): fails.append("prompt says the framing stays the same: write 'the frame drifts, rolls and re-centres by a few percent' (PROMPT_CAMERA_LESSONS rule 4)")
+        moves = len(re.findall(r"push-in|push-back|drift|tilt|re-aim|jerk|roll|swing|sway|focus hunt|slides? in", low))
+        timed = len(re.findall(r"\d+(?:\.\d+)?\s*-\s*\d+(?:\.\d+)?\s*s:", low))
+        if timed < 3: warns.append(f"only {timed} timed beats in the video prompt (PROMPT_CAMERA_LESSONS: a camera/pose/room score with times)")
+        if moves < 4: fails.append(f"camera motion is described only {moves} times: write a camera score per beat (PROMPT_CAMERA_LESSONS rule 1)")
         if not re.search(r"no fast pans|no whip|never a smooth gimbal", low): warns.append("no guard against whip pans/gimbal (ghosting risk)")
     # --- price ---
     dur = re.search(r'"duration":\s*(\d+)', src); res = re.search(r'"resolution":\s*"([^"]+)"', src)

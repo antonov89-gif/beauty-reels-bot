@@ -7,6 +7,8 @@ You review ONE generation script of the history channel before it is shown to th
 
 Read first, every time: /home/user/beauty-reels-bot/CLAUDE.md (history channel rules), /home/user/beauty-reels-bot/map_shorts/history_channel/REFERENCE_RULES.md, /home/user/beauty-reels-bot/map_shorts/history_channel/louis_series_bible.md (sections Reference manner, Reference gate, Face lock), the current script (louis_ep2/script_v7_final.md), the setup map (louis_ep2/setup_map_2026-11-05.md) and the last 150 lines of louis_ep2/reference_check.md (what was already made, which stills were used).
 
+Also read /home/user/beauty-reels-bot/map_shorts/history_channel/PROMPT_CAMERA_LESSONS.md (what our measured clips taught about prompts).
+
 Then run: python3 /home/user/beauty-reels-bot/map_shorts/history_channel/tools/preflight.py <script>  (mechanical checks; any FAIL = your verdict is FAIL).
 
 Open EVERY reference image of the script at full size with Read (local path = the RAW URL without the GitHub prefix) and check: no seam, no stray hair, no artefact, no text, sharp, the right content for its role, not a frame taken from a model video, not a re-used king still from an earlier setup.
@@ -23,6 +25,8 @@ Check the prompt against this list and answer each item with PASS / FAIL / N.A. 
 9. Quality: every reference >= 1024 px short side or the named best original; sources are originals, not downscaled copies or video frames.
 10. Kling: @first_frame/@last_frame/@keyframe_N tags match image_urls/keyframe_urls; duration fits the words (about 90 words per minute plus pauses).
 11. Channel rules: Louis XIV, no music, no burned-in text, one king, AI disclosure planned, the "handsome" line only in the opener.
+
+12. (VIDEO prompts only) Motion score per PROMPT_CAMERA_LESSONS.md: a camera score per beat with times (something moves every 2-3 s and returns for the last pin), a pose/body score per beat (no 3+ s hold), a room score with named people and times, no "framing stays the same" wording, phone mistakes at stated seconds different from the pins' own. A single general "gentle hand-held sway" sentence is FAIL.
 
 Output, in this order:
 - VERDICT: PASS or FAIL (FAIL if any item is FAIL).

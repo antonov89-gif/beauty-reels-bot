@@ -1,0 +1,22 @@
+# Prompt lessons from measuring our clips against the reference (owner 05.11: "это нужно прописывать изначально в промте; агент-сравниватель должен подсказывать агенту, который делает промты")
+Read by pregen-reviewer BEFORE it reviews a video prompt; appended by reference-comparator after every comparison. The prompt-writer (me) applies these when writing the prompt, not after the clip.
+
+## Measured facts (raw Kling clips, 720p, 05.11)
+| clip | what the prompt said about the camera | measured | lesson |
+|--|--|--|--|
+| T3a (soup) | one general sentence "gentle hand-held sway, small roll, re-centring jerks, a slight push-in" + "the room and the king stay in place" | first 5 s alive (head moved, push-in on the face), 6-10 s frame almost still; still body 60 %, head 0.07 fw/s (ref 0.19) | a general sentence is used once, then forgotten: the model calms down after about 5 s. The camera move must be written PER BEAT, with times |
+| T2c (grape) | the same general sentence | still body 75 %, head 0.07 | same |
+| T2a v2 | "gentle hand-held sway and small roll only" + "framing stays the same" | frozen background 17 %, still body 17 %, head 0.15 | "framing stays the same" damps the motion |
+| T1 rough v2 (edit) | virtual hand-held + punch-ins added in the EDIT | head 0.11 -> 0.28, frozen background 93 % -> 0 % | the edit fixes it for free; the prompt should still ask for it so the edit has less to invent |
+
+## Rules for every video prompt (checked by pregen-reviewer item 12, partly by tools/preflight.py)
+1. A CAMERA SCORE per beat with times, not one general sentence. Each 2-3 s something moves: e.g. "0-2 s slow drift left and a small roll to the right; 2-4 s a push-in toward the face while he speaks; 4-5 s a quick re-aim (the phone jerks down and comes back); 5-7 s a slow drift right and a tilt up; 7-9 s a small push-back; 9-10 s settles with a last small sway". The moves must return so that the last frame matches the last pin.
+2. A BODY AND POSE SCORE per beat: every 2-3 s he does something visible (turns the head, shifts the weight, hand moves, eyebrow, glance to the lens/to the side, a gesture). No beat of 3+ s with "holds the pose"; the silent beat after a gag is allowed to be still in the face but the camera and the room keep moving.
+3. A ROOM SCORE with named people and times (not "the room is alive"): who turns, who whispers, who crosses and when (e.g. "at 2 s the lady on the left turns to her neighbour; at 5 s a courtier steps behind him from right to left; at 8 s a servant crosses with a dish").
+4. NEVER write "the framing stays the same" / "the same framing all the time" / "the frame stays": write "the room and the king stay in place while the frame drifts, rolls and re-centres by a few percent". The pins fix only the first and last frame.
+5. Phone mistakes at stated seconds, different from the pins' own (a pin that already carries a thumb makes a static pink spot, not a mistake): focus hunt at 5 s, the thumb sliding in and out as a transition, the lens tilting to the ceiling for half a second.
+6. Targets to name in the prompt notes and check after: head motion >= 0.18 face widths/s, still body <= 15 %, frozen background <= 10 % (tools/ref_compare.py).
+7. If after the prompt the raw clip still fails the motion gate, the edit adds virtual hand-held; that is accepted (status ACCEPTED FOR EDIT), but record the fail here so the next prompt is stronger.
+
+## Entries added by reference-comparator (date, clip, what was missing, what to write in the next prompt)
+- 05.11 T3a: after 6 s the pose does not change and the room barely moves; next prompt: pose and room score every 2-3 s, named people, a second phone mistake at 5 s.
