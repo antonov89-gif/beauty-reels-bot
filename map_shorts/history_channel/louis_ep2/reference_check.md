@@ -343,3 +343,15 @@ File pilot_frames/anchors/T2c_end_4k.jpg (2161x3840, local) + T2c_end_768.jpg. A
 Measured: SFace end vs start 0.928, vs A3 0.716 (>= 0.70); head box start [349,588,285,427] vs end [350,585,282,421] (same camera); wig saturation 133 -> 142 (same beige, no drift); RMSE whole 0.104 (people moved), top-left background 0.021.
 Quality: whole-image sharp 195.8 -> 122.5, detail 2.23 -> 1.74 (below the subject limits as a 4K still; a faint mottled texture on the cheek/forehead at 4K). At video size (720x1280) head area 504 -> 367 = -27 % (inside the 30 % rule) and side by side at 720p the two faces look equal, the mottle is not visible. So: usable as the LAST PIN of the 720p clip only; not to be used as a reference for any further image edit (quality rule: never chain from it).
 Eye check OK: grape eaten, mouth closed, smug heavy-lidded look straight into the lens, ringed hand resting on the dish edge (4 fingers visible, thumb hidden, rings ok), lady in blue with the fan whispering, servant walking at the right, blue sleeve lower-left kept, one king, no text.
+
+## T2c end still v2 (05.11, owner "1" then "Да"; reviewer PASS): GENERATED -> INSPECTED: better than v1 but still below the reference quality limits
+File pilot_frames/anchors/T2c_end_v2_4k.jpg (2161x3840, local) + T2c_end_v2_768.jpg. ACTUAL COST $0.12. Script gen_t2c_end_v2.py.
+| | start | end v1 | end v2 |
+|--|--|--|--|
+| whole sharp / detail (quality_metrics) | 195.8 / 2.23 | 122.5 / 1.74 | 132.0 / 1.81 |
+| head area at 720x1280 | 504 | 367 (-27 %) | 369 (-27 %) |
+| SFace vs A3 | 0.762 | 0.716 | 0.742 |
+| SFace vs start | - | 0.928 | 0.891 |
+| head box at 1080 | 349,588,285x427 | 350,585,282x421 | 336,577,297x421 |
+| wig saturation | 133 | 142 | 144 |
+Eye: v2 reads better as "mouth full" (pursed lips, fuller cheek), eyes in the lens, smug; hand on the dish edge (4 fingers + hidden thumb), lady with the fan, servant walking, sleeve kept; faint mottle on forehead/cheek still at 4K, no halos. Second and last corrective attempt for this still (cap 2). Neither v1 nor v2 passes the 4K subject limits (150 / 2.0); at video size both lose 27 % (inside the 30 % clip rule). Use as the last pin needs the owner's explicit exception.
