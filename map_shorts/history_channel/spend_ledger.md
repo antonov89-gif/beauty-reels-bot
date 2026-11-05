@@ -170,3 +170,5 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 05.11 | Ep.2 running TOTAL | $33.38 |
 | 05.11 | Ep.2 T3b-C start still (S8a fork gag; GPT Image 2.5 Sunburst Lite 4K, refs A3 + R10 hall), owner "Да" | $0.12 (usage.cost) |
 | 05.11 | Ep.2 running TOTAL | $33.50 |
+| 05.11 | Ep.2 T3b-C end still (GPT Image 2.5 Sunburst Lite 4K edit of the T3b-C start still), owner "Да" | $0.12 (usage.cost) |
+| 05.11 | Ep.2 running TOTAL | $33.62 |
