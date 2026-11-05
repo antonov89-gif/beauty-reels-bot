@@ -1,4 +1,4 @@
-"""T2c START still (prepared 05.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs: 1 = card A3 (face), 2 = K_right34 (angle), 3 = R9 hall only (room). One call, about $0.12."""
+"""T2c START still (prepared 05.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs: 1 = card A3 (face), 2 = K_right34 (angle), 3 = R10 hall clean (room; R9 was a stitched crop with a seam and stray wig hairs, withdrawn). One call, about $0.12."""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod
@@ -10,7 +10,7 @@ prompt = ("Vertical 9:16 hand-held phone photo, wide lens, slightly underexposed
 "Behind him, slightly out of focus: the candlelit gilded hall of reference 3, ladies on folding stools with open fans whispering to each other, standing courtiers in plain wigs. "
 "No text, no logos, no modern objects, no extra fingers, no blond or cream wig, no clown makeup, only one king.")
 body = {"model": "gpt-image-2.5-sunburst-lite", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",
-        "image_urls": [RAW + "R1_king_card_A3_white_wig.jpg", RAW + "K_right34.jpg", RAW + "R9_hall_only.jpg"]}
+        "image_urls": [RAW + "R1_king_card_A3_white_wig.jpg", RAW + "K_right34.jpg", RAW + "R10_hall_clean.jpg"]}
 H0 = "/home/user/beauty-reels-bot/map_shorts/history_channel/louis_ep2/"
 open(H0 + "t2c_start_prompt.txt", "w").write(prompt)
 if len(sys.argv) > 1 and sys.argv[1] == "go":

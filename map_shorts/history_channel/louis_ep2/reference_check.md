@@ -311,3 +311,6 @@ INSPECTED (2 frames/s sheet of 16, three crops of the far end at 3.0/5.0/7.5 s, 
 - Soft: the picture is darker and warmer than the still; the hall reads as several tables behind the long one near the end; 18th-century ladies' hair (as in all frames).
 - Not checked: the voice (off-screen, our TTS later), model audio (muted).
 Status: GENERATED + INSPECTED, PASS, NOT APPROVED by the owner.
+
+## Reference R9_hall_only.jpg WITHDRAWN (05.11, owner: "Что это такое, проверь лучше")
+R9 was two crops of the pose P2 still stitched side by side: a visible vertical seam in the middle, stray white wig hairs along the seam (from the king's wig), two different perspectives. My check before sending looked at it at a small size and missed the hairs and the seam. It was used once (T2b start still v2; that result shows no seam or hairs, checked again). Replaced by R10_hall_clean.jpg: ONE crop (top-left 78 % x 50 %) of the T2b start still: hall, windows, paintings, chandelier, candelabra, the long table, ladies on stools, courtiers; no king, no seam, no stray hair (checked at full size).
