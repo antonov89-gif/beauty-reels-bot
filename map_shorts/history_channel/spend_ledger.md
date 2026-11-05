@@ -126,3 +126,4 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 04.11 | Ep.2 king sheet TEST a1 on Nano Banana 2.1 4K: REJECTED at submit by the content filter ("explicit content in the prompt"), NOT charged | $0 |
 | 04.11 | Ep.2 anchors: 6 emotion tiles edited into the dinner hall, GPT Image 2.5 Sunburst Lite 4K high (owner "1, делай якоря"; E3 first refused by the 5-task concurrency limit, not charged, then submitted) | $0.72 (6 x $0.12 usage.cost) |
 | 05.11 | Ep.2 T1 re-done with anchors (Kling 4.0 i2v 720p 8s: first frame F01a, keyframe edit of A3, last frame anchor E2; owner "Да") | $1.16 (usage.cost) |
+| 05.11 | Ep.2 PILOT: first 15 s of Take 1, ONE pinned generation (Kling 4.0 i2v 720p 15s; first/last = A3 edit, keyframes E2 and E1; owner "да, делай пилот") | $2.175 (usage.cost) |

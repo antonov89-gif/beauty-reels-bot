@@ -220,3 +220,15 @@ INSPECTED (2 frames/second sheet, face crops of 6 frames next to A3, SFace per f
 - Acting: fumble 0-1.5 s (sleeve and fist), pull-back with a pleased look, settles into the keyframe pose around 4 s, speaks with natural lip movement, ends in the smug half-smile.
 - Not checked: lip sync with our voice (not ordered), model audio (muted).
 Status: GENERATED + INSPECTED (gate PASS with one outlier frame explained), NOT APPROVED by the owner.
+
+## PILOT: first 15 s of Take 1 as ONE pinned generation (05.11, owner "да, делай пилот"): pilot_frames/PILOT_take1_15s.mp4 (720x1280, 24 fps, 15.04 s). ACTUAL COST $2.175 (usage.cost). Pins: @first_frame and @last_frame = T1_keyframe_edit_768.jpg (A3 edit), @keyframe_1 (5 s) = ANCHOR_E2, @keyframe_2 (10 s) = ANCHOR_E1. Last frame saved: PILOT_take1_15s_last.jpg. Prompt: pilot_take1_15s_prompt.txt; script gen_pilot_take1_15s.py. Only existing frames used, no new image (owner: "У нас уже есть кадры").
+INSPECTED (2 frames/s sheet of 30 frames, six full-size frames at 1.5, 2.0, 7.0, 11.0, 12.5, 14.9 s, SFace per second, sharpness per second, frame-difference scan, pin search):
+- Face (SFace to A3, face_gate): mean 0.75, median 0.77, p10 0.73 over 15 s (second half 0.75, no decay); best of every clip so far (T1 anchored 0.70, chain clips 0.55-0.63). One low frame at 11.0 s (0.21): the head is turned in a whip-pan, checked by eye. By eye: the same card king in the close-up at 1.5-2.0 s (thin dark moustache with curled tips, beauty mark, heavy lids) and in the seated frames; no brown moustache, no jump.
+- Pins: first frame vs A3 edit RMSE 0.029, last frame vs A3 edit 0.031: both held. The two keyframes (E2 at 5 s, E1 at 10 s) did NOT land as frames: the closest frames to them have RMSE 0.23, as far as any frame is (they differ in head size and background from the A3 edit), so they acted at most as loose references. The face held anyway because of the two end pins and the A3 look.
+- Sharpness (head area, Laplacian, from 4 s): mean 236, steady 197-301 for 12 s with no decay (T1 anchored seated: 127; the chain fell 230 -> 47). Lower only in the out-of-focus close-up (22-24) and the whip-pan (57 at 11 s).
+- Seams: no single-frame spike (a cut/seam would be one); frame-difference is high continuously only at 10.5-11.5 s (about 18-31), which is the fast hand sweep and camera whip, not a cut.
+- Acting: the phone swings in close (close-up face with a thumb at the lower right edge), the pull-back, a pursed "Bonjour" mouth at 7 s, a hand sweep toward the hall at 10.5-11.5 s, a return to the smug pose with the ringed hand at the wig curl at 12.5-15 s.
+- DEFECT: at about 11.0 s, during the whip-pan, two heads/faces overlap (a ghost at the left edge and a second smaller face), about 0.5 s of motion-blurred ghosting. Visible when slowed down.
+- Soft: the rouge reads strong in the close-up; the model's output is 720x1280 (follows the 768x1365 first frame), not 724x1284.
+- Not checked: lip sync with our voice (voice not ordered), model audio (muted).
+Status: GENERATED + INSPECTED, face and sharpness PASS, one defect (ghost head at ~11 s), NOT APPROVED by the owner.
