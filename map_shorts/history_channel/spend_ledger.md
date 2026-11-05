@@ -138,3 +138,4 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 05.11 | Ep.2 T2b start still (GPT Image 2.5 Sunburst Lite 4K, refs A3 edit + Marcel full; owner "1"): FAILED SUBMISSION_UNCERTAIN, no image, charge not shown | $0 shown (unverified) |
 | 05.11 | Ep.2 T2b start still retry (same call; owner "идём дальше"): FAILED SUBMISSION_UNCERTAIN, no image, charge not shown | $0 shown (unverified) |
 | 05.11 | Ep.2 T2b start still v2 (GPT Image 2.5 Sunburst Lite 4K, re-worded, refs hall-only + Marcel + card; owner "2") | $0.12 (usage.cost) |
+| 05.11 | Ep.2 T2b clip (Kling 4.0 i2v 720p 8s, first frame = Marcel low still; owner "Да") | $1.16 (usage.cost) |
