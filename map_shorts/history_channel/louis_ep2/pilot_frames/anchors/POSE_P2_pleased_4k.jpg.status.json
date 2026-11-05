@@ -2,10 +2,14 @@
  "code": 200,
  "message": "success",
  "data": {
-  "task_id": "dded47c2-0e78-4041-aa92-ca47b2993ec1",
-  "status": "failed",
-  "error_code": "SUBMISSION_UNCERTAIN",
-  "error_message": "[SUBMISSION_UNCERTAIN] We could not confirm whether the upstream provider completed this task. To avoid duplicate generation and duplicate charges, it was not retried automatically. Please submit a new request.",
-  "completed_at": 1793879180
+  "task_id": "e9b078f8-6439-455f-b171-c19735375c19",
+  "status": "completed",
+  "result": [
+   "https://s.apipod.ai/images/2026/11/05/bc1a4504-f457-4510-a931-7a451bd09ff0.png"
+  ],
+  "completed_at": 1793879475,
+  "usage": {
+   "cost": 0.12
+  }
  }
 }

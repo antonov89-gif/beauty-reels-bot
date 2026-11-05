@@ -26,5 +26,6 @@ def run(k):
     d = res.get("data") or {}; u = find(d)
     if u: apipod.download(u, out)
     print(k, d.get("status"), "cost", (d.get("usage") or {}).get("cost"), "saved" if u else "NO URL")
-ts = [threading.Thread(target=run, args=(k,)) for k in POSES]
-[t.start() for t in ts]; [t.join() for t in ts]
+import sys as _s
+for k in (_s.argv[1:] or list(POSES)):
+    run(k)   # one after the other (retry of the 05.11 SUBMISSION_UNCERTAIN failures, owner 'Да')
