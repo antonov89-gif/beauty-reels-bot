@@ -168,3 +168,5 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 05.11 | Ep.2 running TOTAL | $32.78 |
 | 05.11 | Ep.2 T3b food-burst stills F1-F5 (GPT Image 2.5 Sunburst Lite 4K, text only), owner "Да" on 5 named calls | 5 x $0.12 = $0.60 (usage.cost each) |
 | 05.11 | Ep.2 running TOTAL | $33.38 |
+| 05.11 | Ep.2 T3b-C start still (S8a fork gag; GPT Image 2.5 Sunburst Lite 4K, refs A3 + R10 hall), owner "Да" | $0.12 (usage.cost) |
+| 05.11 | Ep.2 running TOTAL | $33.50 |
