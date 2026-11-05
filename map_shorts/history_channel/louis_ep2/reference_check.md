@@ -242,3 +242,13 @@ INSPECTED (2 frames/s sheet of 30, jump strip at 5.5/5.88/5.96/6.2 s next to the
 - Mid-keyframes did not land as frames (closest frames to E7/E6 have RMSE 0.21/0.20), only the LAST frame landed (E2 at 14.75 s, RMSE 0.045).
 - Cause (read together with the pilot): the model hurries toward the LAST frame's composition and then stays there. In the pilot first and last were the SAME image (A3 edit), so no jump; here the last frame (E2) has a different composition from the first frame, so the clip jumps to it at 5.9 s. The ghost double head at 11 s in the pilot is the same effect: a blend toward the keyframes' compositions. RULE: first and last pins must have the SAME composition (loop on one base image); keyframes of another composition produce a jump or a ghost.
 Status: GENERATED + INSPECTED, face PASS, seam FAIL (jump at 5.9 s), quality drop after the jump, NOT APPROVED. The pilot's ghost at ~11 s has the same cause.
+
+## Take 1 piece 2 RETAKE b (05.11, owner "да, повторяй кусок 2"): Kling 4.0 i2v 720p 15 s, first = last = A3 edit, NO keyframes: pilot_frames/TAKE1_piece2b.mp4 (720x1280, 24 fps, 15.04 s). ACTUAL COST $2.175 (usage.cost). Last frame: TAKE1_piece2b_last.jpg. Script gen_take1_piece2b.py, prompt take1_piece2b_prompt.txt.
+INSPECTED (2 frames/s sheet of 30, SFace per second, sharpness per second, frame-difference scan, pins and join):
+- Face: SFace to A3 mean 0.81, median 0.81, p10 0.78, min 0.75, no outlier: the best of every clip so far (pilot 0.75, piece 2 first try 0.75, T1 anchored 0.70, chain 0.55-0.63).
+- Quality: head sharpness mean 324 (range 207-398) over the whole clip, no decay (pilot 236, first piece 2 132, T1 anchored 127).
+- Seams: NO spike anywhere after 3 s (the largest frame difference is 8.8, the median 2.4); the composition, the wig colour and the room stay the same for 15 s.
+- Pins: first frame vs A3 edit RMSE 0.036, last frame vs A3 edit 0.030; join pilot last frame -> this first frame 0.028 (invisible seam between piece 1 and piece 2).
+- Acting: the lines are said with natural lip movement, eyes closed on the sigh, a frown and a sniff, a wave of the back of the ringed hand at 12.5 s, a return to the pose. Soft: restrained: the ringed hand stays at the wig curl in most frames and the face moves little (frame-difference median 2.4; the reference's calm stretch is 2-4, so it is within range, but the expressions "offended" and "frown" are subtle).
+- Not checked: lip sync with our voice (not ordered), model audio (muted).
+Status: GENERATED + INSPECTED, all gates PASS, NOT APPROVED by the owner. Confirms the pin rule: the same image as first and last frame, no keyframes of another composition.

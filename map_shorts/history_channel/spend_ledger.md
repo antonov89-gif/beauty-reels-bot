@@ -128,3 +128,4 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 05.11 | Ep.2 T1 re-done with anchors (Kling 4.0 i2v 720p 8s: first frame F01a, keyframe edit of A3, last frame anchor E2; owner "Да") | $1.16 (usage.cost) |
 | 05.11 | Ep.2 PILOT: first 15 s of Take 1, ONE pinned generation (Kling 4.0 i2v 720p 15s; first/last = A3 edit, keyframes E2 and E1; owner "да, делай пилот") | $2.175 (usage.cost) |
 | 05.11 | Ep.2 Take 1 piece 2 (Kling 4.0 i2v 720p 15s; first = A3 edit, keyframes E7/E6, last = E2; owner "Да"); jump at 5.9 s, not accepted | $2.175 (usage.cost) |
+| 05.11 | Ep.2 Take 1 piece 2 RETAKE (Kling 4.0 i2v 720p 15s; first = last = A3 edit, no keyframes; owner "да, повторяй кусок 2") | $2.175 (usage.cost) |
