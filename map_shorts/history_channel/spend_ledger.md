@@ -158,3 +158,5 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 05.11 | Ep.2 running TOTAL | $29.23 |
 | 05.11 | Ep.2 T2c end still v2 (GPT Image 2.5 Sunburst Lite 4K edit, keep-the-detail sentence), owner "Да" | $0.12 (usage.cost) |
 | 05.11 | Ep.2 running TOTAL | $29.35 |
+| 05.11 | Ep.2 T2c clip (Kling 4.0 i2v 720p 12 s, first T2c start still, last T2c end v2), owner "Да" | $1.74 (usage.cost) |
+| 05.11 | Ep.2 running TOTAL | $31.09 |

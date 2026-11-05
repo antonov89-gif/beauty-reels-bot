@@ -358,3 +358,14 @@ Eye: v2 reads better as "mouth full" (pursed lips, fuller cheek), eyes in the le
 
 - Owner 05.11 "Делай": T2c_end_v2_4k.jpg accepted as the LAST PIN of the T2c clip as an explicit exception (4K quality below the subject limits sharp 132 / detail 1.81; at video size -27 %, inside the 30 % clip rule). It is not used as a reference for anything else (never chain from it).
 - T2c clip gate (reviewer 05.11): measure sharpness per second (drop <= 30 %), seams, face, motion; the beige wig colour is NOT judged on the clip (graded in the edit); last pin is the owner exception.
+
+## QC TAKE2_T2c (05.11): ACCEPTED FOR EDIT (only motion fails; GENERATED -> INSPECTED)
+Clip pilot_frames/TAKE2_T2c.mp4, 720x1280, 24 fps, 12.04 s, Kling 4.0 i2v. Frames: pilot_frames/qc_T2c/.
+- face (vs A3): median 0.744, p10 0.705, no low frames, no no-face frames: PASS (beige wig not judged)
+- sharp per second: 172,199,208,208,209,207,217,213,202,173,169,159; min ratio vs first 0.93, last-third decay 0.10, no s <60 %, no dips (mistake s3-4 excluded): PASS; vs previous clip mean 1.02
+- seams: median diff 1.71, suspect cuts none: PASS
+- motion: frozen background 0 %, still body 75 % (limit 15): FAIL -> needs virtual hand-held in the edit, re-measure the edited piece
+- pins: first vs start still RMSE 0.029, last vs end_v2 0.024: PASS
+- info: join to T2b last frame 0.231 (different setup, cut allowed)
+Eye: same man as A3 (nose, moustache, beauty mark visible s4/s8/s12, rouge), one king, no ghost, no melted hands (4 fingers + thumb, rings ok s8; hand on dish edge s12), no text, no modern objects. Room lives: ladies raise fans and whisper (s4), servant/courtier crosses to the right (s8, s12), floor visible, candles. Sleeve lower left present from ~s3.5 to the end and large at s4-s8 (phone mistake read as a persistent sleeve; focus hunt not clearly visible). End pose differs (hand down on the dish, eyes in the lens, smug s12). Costume/room same as start still; camera on the king's right as the owner chose.
+Script: grape between fingers, drily looks away s0-4, looks at the lens at s8 with the grape still raised and lips parted, the grape goes to the mouth later (about s9-10.5), chewing, hand lowered by s11, smug look to the end. The eating is about 2 s later than the prompt (7.5-9 s), the pause after the gag s11-12 is held; fine for the v3 voice laid over whole phrases (line 3 "Even with his mouth full" should start at about s9.5-10).
