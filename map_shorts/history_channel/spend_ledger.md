@@ -152,3 +152,5 @@ Income side (ESTIMATE, Nexlev category estimate of the reference channel: Shorts
 | 04.11 | Ep.2 T1c chain clip (Kling 4.0 i2v 720p 8s, first frame = T1b last frame) (moved here 05.11 from a stray louis_ep2/spend_ledger.md) | $1.16 (usage.cost) |
 | 04.11 | Ep.2 T1d chain clip (Kling 4.0 i2v 720p 8s, first frame = T1c last frame) (moved here 05.11 from a stray louis_ep2/spend_ledger.md) | $1.16 (usage.cost) |
 | 05.11 | Ep.2 TOTAL pictures + video 04-05.11 (sum of usage.cost above, failed calls with no cost shown counted as $0) | $28.99 |
+| 05.11 | Ep.2 T2c start still (GPT Image 2.5 Sunburst Lite 4K high, refs A3 + R10 hall), owner "Да" | $0.12 (usage.cost) |
+| 05.11 | Ep.2 running TOTAL | $29.11 |

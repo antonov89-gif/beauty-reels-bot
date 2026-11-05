@@ -329,3 +329,10 @@ Tool: tools/clip_qc.py, agent: .claude/agents/clip-inspector.md. Fixed before us
 | TAKE2_T2b (--no-face, --mistake 1-3) | skipped: POV, no principal face | ok | ok | 0/12 | PASS | accepted |
 | TAKE1_rough_v2_muted (edit with virtual hand-held) | - | - | planned cuts | 0/0 | motion PASS | the edit fixes the frozen backgrounds |
 Conclusion: the tool separates all known rejects from the kept clips. Kept Take 1/T2a clips fail only the motion gate as raw clips: virtual hand-held in the edit is required for them (status ACCEPTED FOR EDIT), and every new clip uses the living-room paragraph.
+
+## T2c start still (05.11, owner "Да" after refs + Russian prompt; reviewer PASS): GENERATED -> INSPECTED: NOT ACCEPTED YET
+File pilot_frames/anchors/T2c_start_4k.jpg (2161x3840, local) + T2c_start_768.jpg. ACTUAL COST $0.12 (usage.cost). Script gen_t2c_start.py.
+Measured: SFace vs A3 0.762 (good, same man: nose, moustache, beauty mark, rouge); quality sharp 195.8, detail 2.23, blocks 1.00 (subject limits OK); 1 king.
+Eye check, OK: grape between ringed fingers at the mouth, heavy lids looking down at it, gold dish of grapes at the lower edge, blurred sky-blue sleeve lower-left (phone mistake), ladies with fans, courtiers, servant with a dish behind, eye level, hand-held tilt.
+FAILS: (1) camera side flipped: the nose points to frame RIGHT, we see the king's RIGHT cheek (asked: left cheek, face to frame left); the beauty mark is still visible on the far side of the mouth. (2) wig colour: beige/cream, wig-area saturation 133 vs card A3 22 (T1 edit still 83); the prompt forbade a cream wig. Minor: crisp over-sharpened halo, 18th-century ladies' hairstyles behind (known soft point).
+Not used for anything until the owner decides.
