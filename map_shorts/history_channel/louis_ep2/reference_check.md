@@ -380,3 +380,28 @@ Differences from the prompt: the king looks at the LENS with a smug half-smile, 
 File pilot_frames/anchors/T3a_end_4k.jpg (2161x3840, local) + T3a_end_768.jpg. ACTUAL COST $0.12. Script gen_t3a_end.py.
 Measured: SFace end vs start 0.930, vs A3 0.799; head box start [378,447,291x401] vs end [378,443,282x399] (same camera, same place); quality sharp 185.2 / detail 2.03 / blocks 1.0 (passes subject limits 150 / 2.0, start 221 / 2.22); head area at 720x1280 830 -> 699 = -16 %; RMSE whole 0.101 (pose and servant changed).
 Eye check OK: wet shiny lips, closed mouth, flat deadpan look into the lens (a faint smirk remains), ringed hand with the spoon lowered toward the bowl (rings on 4 fingers, thumb seen), a second silver bowl set down at the right, servant now a white blur at the right edge, lady with the fan and courtiers behind, pink thumb blur kept at the lower left, silver-grey wig same as the start, one king, no text.
+
+## QC TAKE3_T3a (05.11): ACCEPTED FOR EDIT (only motion fails; one sharpness WARN at s3; GENERATED -> INSPECTED)
+Clip pilot_frames/TAKE3_T3a.mp4, 720x1280, 24 fps, 10.04 s, Kling 4.0 i2v. Frames: pilot_frames/qc_T3a/. Run with --mistake 4-6.
+- face (vs A3): median 0.776, p10 0.747, no low frames: PASS
+- sharp per second: 280,333,229,18,122,276,335,326,331,302; mistake s4-5 excluded; s3 = 18 (6 % of first) single dip -> WARN (not 2 consecutive); last-third decay -0.14 (sharper); vs previous clip mean 1.31. Per-frame: soft 2.9-3.45 s (Laplacian 38-54), back to 113-144 at 3.5-3.9 s. Eye: s_03 face and spoon readable, a push-in/focus hunt before the slurp; reads as the phone focus hunt, but 2 s earlier than planned (5 s).
+- seams: median diff 2.22, no spike-cut: PASS
+- motion: frozen background 0 %, still body 60 % (limit 15): FAIL -> needs virtual hand-held in the edit (s6-10 framing nearly identical), re-measure the edited piece
+- pins: first vs start still RMSE 0.032, last vs end still 0.028: PASS
+- info: join to T2c last frame 0.201 (different setup, cut allowed)
+Eye: same man as A3 (nose, moustache with curled tips, beauty mark on the viewer's right, rouge, silver-grey wig), one king, no ghost, no melted hands (rings on 4 fingers + thumb, s5/s7/s8), no text, no modern objects. Costume and room as the start still; angle S6 very low, new vs the previous setups; end pose differs (spoon down, deadpan, raised brow at s7-8, closed mouth). Pink thumb at lower left constant s0-10 (planned). Room lives: ladies with fans, courtiers, servant in a black-gold coat enters from the right at s5 holding the second bowl (s5), white glove in the foreground at s8 and a second bowl at the lower right from s7 (the put-down is read at about s7-8, matching "bowls" 7.6); chandelier and candles.
+Script 7.3: spoon, slurp at about 3-4.3 s (spoon at lips s3-s4), lowered by s5, deadpan look at s5-s6, servant bowl set down at s7-8, raised brow and smug deadpan at s7-8, held look s9-10. Matches the beat; lips plausible for the v3 voice laid over whole phrases (line 1 about 1-3 s, line 2 from about 5 s, "...She can't count." from about 8.2 s). Weak points: the planned focus hunt at 5 s is not visible (the hunt is at 3 s), the sway is small after s6.
+
+## Reference comparison TAKE3_T3a.mp4 (05.11.2026)
+Raw Kling clip 10.04 s, 720x1280, 24 fps, no audio stream; S6 very low from the table. Tool: ref_compare.py (ref 0-30.8 s), words 14, setups 1, mistakes 2 (count by eye: thumb lower left stays the whole clip, slide at about 3-5 s; no clear focus hunt seen).
+| metric | reference | ours | verdict |
+|--|--|--|--|
+| shots / longest | 2 cuts at 23.6 s / 23.6 s | 1 / 10.0 s | fine for one setup of a piece |
+| frozen background | 0 % | 0 % | OK (tool; by eye the room is steady from 6 s, people behind move little: glove, fan) |
+| still body | 0 % | 60 % | FAIL (gate <= 15 %) |
+| head, face widths/s | 0.19 | 0.07 | FAIL (gate >= 0.18) |
+| wpm | 50-90 | 84 by text (14 words / 10 s); audio not in file, NOT VERIFIED | OK on paper |
+| setups | 7 in 128 s | 1 | one is right for this piece |
+| phone mistakes | 5 in 128 s | thumb yes (constant blob, not a mistake in motion); slide yes; focus hunt NOT seen | partial |
+By eye: low selfie-like angle OK, spoon/eating action, glove servant crossing 4.5-5.5 and 7-9 s; from about 6 s the head and framing hold one pose to the end; end pose close to start (no big change). Face stays the same king.
+Verdict: needs edit work (virtual hand-held + punch-ins), regeneration only if the owner wants real camera life; not shown as done.
