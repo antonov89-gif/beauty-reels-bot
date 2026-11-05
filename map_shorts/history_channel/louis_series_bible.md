@@ -33,6 +33,20 @@ Measured gaps of ep.1 0-42 s vs the reference (louis_ep1/reference_compare_0-42.
 6. Sound: a full diegetic bed under everything (room tone of the palace, distant voices, footsteps on parquet, fabric, jewellery, doors, objects), never dead digital silence; still NO music; the video models' own audio stays muted.
 7. Personal hook per episode (a past humiliation turned into power, a secret, a rule only he may break) and one fact per setup.
 
+## Reference gate (measured 05.11 on the owner's Vlog 1 file and transcripts; binding for every clip and episode)
+Owner 05.11: "он снимает с телефона, не должно быть статических кадров, должна быть тряска рукой... всё как у референса: паузы, ракурсы, длина склеек". Numbers measured by me on the reference (map_shorts/history_channel/louis_ep2/shots_and_generation_length_2026-11-05.md, compare_vlog1_first30s_vs_T1_2026-11-05.md, frames_vlog1_LjfGP7wpjVs.md):
+| Item | Reference | Gate for our clips |
+|--|--|--|
+| Camera | a phone in her hand: drift, roll, re-aims, push-ins; in 128 s 7 different setups (low selfie with a thumb, table-height dutch close-up, very low looking up, food burst, side-on, wide from low, new spot) | hand-held in EVERY clip; NO propped/static shot; a new angle for every setup |
+| Seconds with a frozen background (camera and people) | 0 % | <= 10 % |
+| Seconds with still hands/body | 0 % | <= 15 % |
+| Head motion | 0.20 face widths per second | >= 0.18 |
+| Shot lengths | 14 shots in 128 s: three long takes 23.6/28.8/30.1 s, three medium 9.8/12.7/17.4 s, one 5.9 s burst of 9 micro-cuts; mean 9.2 s, median 1.9 s | per episode: 2-3 long takes 15-30 s, 3-4 medium 8-17 s, one burst of 6-9 cuts (0.2-1.5 s) of objects/food, cuts only between setups |
+| Speech pace and pauses | Vlog 1 about 110 words in 131 s (~50 wpm, Vlog 2 note), Vlog 6 187 words in 125 s (~90 wpm); short lines, silence after gags | 60-90 wpm per episode (our draft 7.1 has 339 words for about 3:00 = 113 wpm: too dense, cut or lengthen with action beats); one beat of silence after each gag |
+| Phone mistakes | 5 in 128 s (thumb, hand sweeping in, fingers in front, a thumb covering the lens as a transition) | at least 1 per take |
+| Sound | room tone always, no silence > 1 s | voice + room tone + foley, never dead silence; no music |
+| Face | one face | SFace to A3 median >= 0.65, p10 >= 0.45, eye check |
+
 ## Face lock v3 (owner 29.10: "почему лица разные ... плохо делаешь промты и фотокарточку")
 The face master is the king of the video clips: louis_card/face_master_v3/ (README there: descriptor block, ref order, side-by-side check before any video). Card v2 and the old storyboard frames C07+ are not used as identity sources. Every new first frame is made from the face master and checked against it before generation of video.
 
