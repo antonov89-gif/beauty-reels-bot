@@ -13,9 +13,9 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Camera (filmed by Marcel): "
 "hand-held, held a little ABOVE the dishes and tilted down about 25 degrees, a medium-close look at the laden table: "
 "in sharp focus in the foreground a gold platter of roast pheasant, a ham, a pyramid of pastries, a bowl of fruit and a gold dish of peas, all heaped, plates and gold dishes only; "
-"the king sits far behind them at the top of the frame, small and softly out of focus (his face about 14 percent of the frame width, centre at 45 percent), chewing, a napkin in his cravat; "
+"the king sits at the far end of the table along its length at the top of the frame, only slightly soft but clearly readable (his face about 19 percent of the frame width, the whole wig inside the frame, centre at 45 percent), heavy lids half-lowered, chewing with relish, his hands hidden behind the dishes; "
 "rolled about 7 degrees to the right. "
-"Behind him the candlelit hall, standing courtiers in plain wigs, at the back left a lady with a fan, no chandelier. "
+"Behind him the candlelit hall, standing courtiers in plain wigs, at the back right a lady with a fan, no chandelier. "
 "No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "
 )
 

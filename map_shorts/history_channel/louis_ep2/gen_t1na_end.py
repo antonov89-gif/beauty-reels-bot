@@ -9,7 +9,7 @@ prompt = ("Edit the photo: "
 "Keep the man's face, age, skin, moustache, beauty mark on the viewer's right of the mouth and rouge EXACTLY (do not redraw his identity); "
 "the wig keeps its cool silver-grey and white. "
 "Change ONLY the distance and the expression: "
-"the phone has been pulled back, so that his face now fills about 56 percent of the frame width with its centre at 50 percent, more of the painted ceiling and the gold cornice visible above; "
+"the phone has been pulled back a little, so that his face now fills about 66 percent of the frame width with its centre at 50 percent, the same painted ceiling and gold cornice, the same blurred shapes in the lower corners; "
 "the thumb is gone from the lower right corner (a strip of the scarlet coat and lace at the lower edge instead); "
 "he has seen himself on the screen and is pleased: "
 "heavy lids, the eyes now on the lens, the lips closed in a smug faint smile, the chin slightly lifted. "
@@ -19,7 +19,7 @@ prompt = ("Edit the photo: "
 "no smoothing, no blur, no softening, no painted or mottled texture on the skin; "
 "natural detail, no over-sharpening, no halos. "
 "Real phone footage, fine film grain, real skin texture, no beauty filter. "
-"No text, no logos, no modern objects, no extra fingers, only one king. "
+"No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, only one king. "
 )
 
 body = {"model": "gpt-image-2.5-sunburst-lite", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",

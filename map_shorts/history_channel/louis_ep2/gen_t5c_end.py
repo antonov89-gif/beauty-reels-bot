@@ -5,7 +5,7 @@ import apipod
 RAW = "https://raw.githubusercontent.com/antonov89-gif/beauty-reels-bot/claude/funny-bardeen-uj4fiv/map_shorts/history_channel/louis_ep2/refs/"
 H0 = "/home/user/beauty-reels-bot/map_shorts/history_channel/louis_ep2/"
 prompt = ("Edit the photo: "
-"keep EXACTLY the same camera position, the same high angle, the same roll, the same framing and crop, the same head size and head position (the face centre at 50 percent of the frame width), the same wig, the coat, the armchair and the hall. "
+"keep EXACTLY the same camera position, the same high angle, the same roll, the same framing and crop, the same head size and head position (the face centre at 50 percent of the frame width, the blurred people at the right unchanged), the same wig, the coat, the armchair and the hall. "
 "Keep the man's face, age, skin, moustache, beauty mark on the viewer's right of the mouth and rouge EXACTLY (do not redraw his identity); "
 "the wig keeps its cool silver-grey and white. "
 "Change ONLY the expression and the hands: "
@@ -18,7 +18,7 @@ prompt = ("Edit the photo: "
 "no smoothing, no blur, no softening, no painted or mottled texture on the skin; "
 "natural detail, no over-sharpening, no halos. "
 "Real phone footage, fine film grain, real skin texture, no beauty filter. "
-"No text, no logos, no modern objects, no extra fingers, only one king. "
+"No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, only one king. "
 )
 
 body = {"model": "gpt-image-2.5-sunburst-lite", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",

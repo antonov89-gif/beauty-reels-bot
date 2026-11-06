@@ -9,15 +9,15 @@ prompt = ("Edit the photo: "
 "Keep the man's face, age, skin, moustache, beauty mark on the viewer's right of the mouth and rouge EXACTLY (do not redraw his identity); "
 "the wig keeps its cool silver-grey and white. "
 "Change ONLY the expression and the head: "
-"he is letting out a long satisfied sigh, the eyes closed under heavy lids, the chin lifted higher and the head tipped back about 8 degrees, the lips parted a little, a deeply self-satisfied look; "
-"the head, the top of the wig and the face centre stay within 3 percent of the photo. "
+"he is letting out a long satisfied sigh, the eyes closed under heavy lids, the chin lifted higher and the head tipped back about 5 degrees, the lips parted a little, a deeply self-satisfied look; "
+"the top of the wig and the face centre move at most 5 percent from the photo. "
 "QUALITY: "
 "keep the full resolution, sharpness and fine detail of the original photo: "
 "the face, the moustache hairs, the wig curls, the lace and the gold embroidery must stay exactly as crisp and detailed as in the photo; "
 "no smoothing, no blur, no softening, no painted or mottled texture on the skin; "
 "natural detail, no over-sharpening, no halos. "
 "Real phone footage, fine film grain, real skin texture, no beauty filter. "
-"No text, no logos, no modern objects, no extra fingers, only one king. "
+"No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, only one king. "
 )
 
 body = {"model": "gpt-image-2.5-sunburst-lite", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",

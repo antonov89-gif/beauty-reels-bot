@@ -1,16 +1,16 @@
-"""Take 1 NEW piece 1c: Some of you write that I eat too much ... before your eyes (setup S2b, three-quarter right, arm's length): END still, an EDIT of the start still (same camera, different pose; prepared 06.11, NOT run until the owner's yes). One ref = refs/t1nc_start_4k.jpg (the 4K original). One call, about $0.12. Run: python3 gen_t1nc_end.py go"""
+"""Take 1 NEW piece 1c: Some of you write that I eat too much ... before your eyes (setup S2b, chest height from his left, diagonal along the table): END still, an EDIT of the start still (same camera, different pose; prepared 06.11, NOT run until the owner's yes). One ref = refs/t1nc_start_4k.jpg (the 4K original). One call, about $0.12. Run: python3 gen_t1nc_end.py go"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod
 RAW = "https://raw.githubusercontent.com/antonov89-gif/beauty-reels-bot/claude/funny-bardeen-uj4fiv/map_shorts/history_channel/louis_ep2/refs/"
 H0 = "/home/user/beauty-reels-bot/map_shorts/history_channel/louis_ep2/"
 prompt = ("Edit the photo: "
-"keep EXACTLY the same camera position, the same angle, the same roll, the same framing and crop, the same head size and head position (the face centre at 46 percent of the frame width), the same wig, the coat, the napkin and the hall. "
+"keep EXACTLY the same camera position, the same chest-height diagonal angle along the table, the same roll, the same framing and crop, the same head size and head position, the same wig, the coat and the hall with the people. "
 "Keep the man's face, age, skin, moustache, beauty mark on the viewer's right of the mouth and rouge EXACTLY (do not redraw his identity); "
 "the wig keeps its cool silver-grey and white. "
 "Change ONLY the expression and the head: "
-"he is now looking straight into the lens with an expansive grand look, the chin lifted, one eyebrow raised, the lips closed in a smug faint smile as if saying 'before your eyes', the head turned a few degrees toward the lens; "
-"the head, the top of the wig and the face centre stay within 3 percent of the photo. "
+"he is now looking straight into the lens with a grand smug look under heavy lids (the eyes stay half-lowered, never wide), the chin lifted, one eyebrow raised, the lips closed in a faint proud smile as if saying 'before your eyes', the head turned a few degrees toward the lens; "
+"the face centre stays within 3 percent of the photo. "
 "QUALITY: "
 "keep the full resolution, sharpness and fine detail of the original photo: "
 "the face, the moustache hairs, the wig curls, the lace and the gold embroidery must stay exactly as crisp and detailed as in the photo; "

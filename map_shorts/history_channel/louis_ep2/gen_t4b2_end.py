@@ -10,14 +10,14 @@ prompt = ("Edit the photo: "
 "Change ONLY his expression and head: "
 "he has just heard 'Joking' and is relieved but shaken, saying quietly 'Sorry, Sire': "
 "the head bowed forward about 8 degrees with the chin tucked, the eyes looking up into the lens under raised brows, a tiny trembling forced half-smile, the lips slightly parted in the middle of a word, the shoulders dropped a little; "
-"the head, the top of the wig and the face centre stay within 3 percent of the photo. "
+"the top of the wig stays in place and the face centre moves down at most 4 percent. "
 "QUALITY: "
 "keep the full resolution, sharpness and fine detail of the original photo: "
-"the face, the moustache hairs, the wig curls, the lace and the gold embroidery must stay exactly as crisp and detailed as in the photo; "
+"the face, the freckles, the wig and the lace and silver braid must stay exactly as crisp and detailed as in the photo; "
 "no smoothing, no blur, no softening, no painted or mottled texture on the skin; "
 "natural detail, no over-sharpening, no halos. "
 "Real phone footage, fine film grain, real skin texture, no beauty filter. "
-"No text, no logos, no modern objects, no extra fingers, only one king. "
+"No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no king in the frame. "
 )
 
 body = {"model": "gpt-image-2.5-sunburst-lite", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",

@@ -252,6 +252,7 @@ P["t1nc"] = dict(
           "{TAIL}")
 )
 
+exec(open(H0 + 'patch_v2.py').read())
 # ================================================================ writers
 IMG_FOOT = '''
 body = {"model": "gpt-image-2.5-sunburst-lite", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",
@@ -311,8 +312,12 @@ for k, p in P.items():
             'GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: %s. One call, about $0.12. Run: python3 gen_%s_start.py go"""\n') % (p["title"], p["lines"].replace('"""', "'"), ", ".join(p["refs"]), k)
     open(H0 + "gen_%s_start.py" % k, "w").write(doc0 + HEAD + "prompt = " + q(p["start"]) + "\n" + (IMG_FOOT % (reflist, k + "_start", k + "_start")))
     doc1 = ('"""%s: END still, an EDIT of the start still (same camera, different pose; prepared 06.11, NOT run until the owner\'s yes). One ref = refs/%s_start_4k.jpg (the 4K original). One call, about $0.12. Run: python3 gen_%s_end.py go"""\n') % (p["title"], k, k)
-    open(H0 + "gen_%s_end.py" % k, "w").write(doc1 + HEAD + "prompt = " + q(p["end"]) + "\n" + (IMG_FOOT % ('RAW + "%s_start_4k.jpg"' % k, k + "_end", k + "_end")))
-    clip = p["clip"].replace("{HEAD}", CLIPHEAD).replace("{KING}", KING).replace("{MARCEL}", MARCEL).replace("{TAIL}", CLIPTAIL)
+    endrefs = ", ".join(['RAW + "%s_start_4k.jpg"' % k] + ['RAW + "%s"' % r for r in p.get("end_extra", [])])
+    open(H0 + "gen_%s_end.py" % k, "w").write(doc1 + HEAD + "prompt = " + q(p["end"]) + "\n" + (IMG_FOOT % (endrefs, k + "_end", k + "_end")))
+    tail = CLIPTAIL
+    if p.get("_tail") == "marcel":
+        tail = tail.replace("heavy eyelids stay except in the laugh beats, no wide-open eyes for the king, ", "").replace("only one king in the frame (no second king, no double)", "no king in the frame, only Marcel")
+    clip = p["clip"].replace("{HEAD}", CLIPHEAD).replace("{KING}", KING).replace("{MARCEL}", MARCEL).replace("{TAIL}", tail)
     doc2 = ('"""%s: CLIP (prepared 06.11, NOT run until the owner\'s yes after seeing the refs and the Russian prompt). Kling 4.0 i2v 720p %d s = $%.2f (0.145 x %d). first = %s_start_4k, last = %s_end_4k. Lines (script 7.3): %s Motion score per PROMPT_CAMERA_LESSONS.md. Runs only with the argument go. One call, no retries without a new yes."""\n') % (p["title"], p["sec"], price_clip, p["sec"], k, k, p["lines"].replace('"""', "'"))
     open(H0 + "gen_take_%s.py" % k, "w").write(doc2 + HEAD + "prompt = " + q(clip) + "\n" + (VID_FOOT % (k, k, p["sec"], k, k, k, k)))
     print(k, "start/end $0.24 + clip $%.2f = $%.2f" % (price_clip, 0.24 + price_clip), "| prompt chars", len(clip))

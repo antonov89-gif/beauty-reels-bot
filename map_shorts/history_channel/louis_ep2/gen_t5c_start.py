@@ -9,13 +9,14 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "exactly the same man, same age, heavy-lidded eyes, thin dark waxed moustache with curled tips, a small dark beauty mark clearly visible on the viewer's right of the mouth, light rouge, the tall powdered wig in cool silver-grey and white (NOT beige, NOT cream, NOT golden), the scarlet velvet coat with gold suns, lace cravat; "
 "do not copy its pose or background. "
 "Camera: "
-"the king's own arm's-length phone held HIGH and slightly behind and above his head, looking DOWN at his face from about 55 degrees above as he leans back in a gilded armchair (a high angle, never eye level), rolled about 8 degrees to the right; "
-"his face fills about 52 percent of the frame width with its centre at 50 percent, the top of the wig at the top edge, the chin and the lace cravat in the lower middle, sharp. "
+"the king's own arm's-length phone held IN FRONT of him and HIGH above his face, looking DOWN at him from about 55 degrees above as he leans back in a gilded armchair (a high angle, never eye level), rolled about 14 degrees to the right; "
+"his face fills about 40 percent of the frame width with its centre at 50 percent, the whole tall wig about 75 percent of the width and inside the frame, the chin and the lace cravat in the lower middle, sharp. "
 "Pose and emotion: "
 "he has just leaned back into the carved gilded armchair, the head resting against its back, the eyes closed under heavy lids in a long happy sigh, the lips parted a little, a deeply contented face; "
 "both hands rest on his belly over the scarlet coat, five natural fingers each, at the lower edge. "
 "Around the edges of the frame: "
-"the carved gilded armchair top and the candlelit gilded hall blurred, no chandelier, no glass on the table, nobody close. "
+"the carved gilded armchair and the candlelit gilded hall blurred, no chandelier, and on the right and right-centre blurred figures far below: "
+"a servant in livery, a courtier's powdered wig and shoulder, and a lady with a fan. "
 "No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "
 )
 

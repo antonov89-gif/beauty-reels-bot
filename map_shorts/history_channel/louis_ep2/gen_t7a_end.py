@@ -9,7 +9,8 @@ prompt = ("Edit the photo: "
 "Keep the man's face, age, skin, moustache, beauty mark on the viewer's right of the mouth and rouge EXACTLY (do not redraw his identity); "
 "the wig keeps its cool silver-grey and white. "
 "Change ONLY the expression: "
-"his eyes are back on the lens and he has just said 'probably nothing' and is giving a short dry laugh, the mouth slightly open with a smirk, the upper teeth just visible, one eyebrow raised, the head tipped a few degrees toward the viewer's left; "
+"the aftermath of his short dry laugh: "
+"his heavy-lidded eyes back on the lens, a dry smirk with the lips closed or just parted, one eyebrow raised, the head tipped a few degrees toward the viewer's left, the lady's fan at the back closed; "
 "the head, the top of the wig and the face centre stay within 3 percent of the photo. "
 "QUALITY: "
 "keep the full resolution, sharpness and fine detail of the original photo: "
@@ -17,7 +18,7 @@ prompt = ("Edit the photo: "
 "no smoothing, no blur, no softening, no painted or mottled texture on the skin; "
 "natural detail, no over-sharpening, no halos. "
 "Real phone footage, fine film grain, real skin texture, no beauty filter. "
-"No text, no logos, no modern objects, no extra fingers, only one king. "
+"No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, only one king. "
 )
 
 body = {"model": "gpt-image-2.5-sunburst-lite", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",

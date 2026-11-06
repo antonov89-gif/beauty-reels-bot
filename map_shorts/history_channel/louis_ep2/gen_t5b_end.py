@@ -5,11 +5,12 @@ import apipod
 RAW = "https://raw.githubusercontent.com/antonov89-gif/beauty-reels-bot/claude/funny-bardeen-uj4fiv/map_shorts/history_channel/louis_ep2/refs/"
 H0 = "/home/user/beauty-reels-bot/map_shorts/history_channel/louis_ep2/"
 prompt = ("Edit the photo: "
-"keep EXACTLY the same hall, table, dishes and food positions, the same wig and coat; "
-"change ONLY the camera and the king: "
-"the camera has tilted UP about 20 degrees and moved in a little, so that now the king is the subject, sharp, his face filling about 46 percent of the frame width (centre at 50 percent), the food now soft at the lower edge; "
+"the same hall, the same table and dishes (the same arrangement of the food, now seen from the new camera position), the same wig and coat. "
+"Change ONLY the camera and the king: "
+"the camera has tilted UP about 20 degrees and moved in, rolled about 4 degrees to the left, so that now the king is the subject, sharp, his face filling about 38 percent of the frame width (the whole wig inside the frame, centre at 50 percent), the food now soft at the lower edge; "
+"behind him the lady with the fan at the right, standing courtiers in plain wigs and a servant; "
 "his cheeks full of food, chewing happily with a closed mouth, eyes closed under heavy lids in bliss, one hand holding a golden spoon near the lower edge. "
-"Keep the man's face, age, skin, moustache, beauty mark on the viewer's right of the mouth and rouge EXACTLY (do not redraw his identity); "
+"Keep the man's face, age, skin, moustache, beauty mark on the viewer's right of the mouth and rouge EXACTLY as in reference 1 (the card) (do not redraw his identity); "
 "the wig keeps its cool silver-grey and white. "
 "QUALITY: "
 "keep the full resolution, sharpness and fine detail of the original photo: "
@@ -21,7 +22,7 @@ prompt = ("Edit the photo: "
 )
 
 body = {"model": "gpt-image-2.5-sunburst-lite", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",
-        "image_urls": [RAW + "t5b_start_4k.jpg"]}
+        "image_urls": [RAW + "t5b_start_4k.jpg", RAW + "R1_king_card_A3_white_wig.jpg"]}
 open(H0 + "t5b_end_prompt.txt", "w").write(prompt)
 if len(sys.argv) > 1 and sys.argv[1] == "go":
     r = apipod.submit("images", body); print(r)

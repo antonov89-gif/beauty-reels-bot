@@ -12,13 +12,13 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "ignore its angle, and do NOT copy its crystal glasses or the people at its table; "
 "Camera: "
 "hand-held at arm's length at EYE LEVEL, frontal, close: "
-"his face fills about 56 percent of the frame width with its centre at 50 percent of the frame width, the wig top slightly cropped, sharp; "
+"his face fills about 30 percent of the frame width with its centre at 50 percent of the frame width, the whole tall wig about 70 percent of the width and fully inside the frame, sharp; "
 "a slight roll of about 4 degrees to the left; "
-"at the lower edge a gold plate with a few clean chicken bones and a crumpled white napkin, soft. "
+"at the lower edge a gold plate with a few small clean bird bones, soft. "
 "Pose and emotion: "
-"he is wiping his fingers on a lace napkin held in one hand just below the frame, his chin slightly lowered, his heavy-lidded eyes looking down at the bones on the plate with a complacent faint smirk, the lips closed. "
+"he is wiping his fingers on a single lace napkin held in one hand just below the frame, his chin slightly lowered, his heavy-lidded eyes looking down at the bones on the plate with a complacent faint smirk, the lips closed. "
 "Behind him, blurred: "
-"the candlelit gilded hall, standing courtiers in plain wigs, at the back left a lady with a fan, no chandelier. "
+"the candlelit gilded hall, standing courtiers in plain wigs, at the back right a lady with a fan and two courtiers whispering, no chandelier. "
 "No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "
 )
 
