@@ -21,7 +21,7 @@ Check the prompt against this list and answer each item with PASS / FAIL / N.A. 
 5. Living room: people behind react and move (fans, whispers, weight shifts, a servant).
 6. At least one phone mistake in the take (thumb, sleeve, hand, lens covered, focus hunt).
 7. End pose differs from the start pose with the same camera (for clips with a last frame) and first/last frames have the same composition; no keyframe of another composition.
-8. Face references: the card A3 (+ angle in words); a hall-only clean crop when the room is needed; nothing that carries another pose.
+8. Face references (identity rules: read .claude/agents/character-card-specialist.md; check the descriptor block, ref order = image_urls order, face >= 28 percent of the width, head-with-wig framing, drift traps): the card A3 (+ angle in words); a hall-only clean crop when the room is needed; nothing that carries another pose.
 9. Quality: every reference >= 1024 px short side or the named best original; sources are originals, not downscaled copies or video frames.
 10. Kling: @first_frame/@last_frame/@keyframe_N tags match image_urls/keyframe_urls; duration fits the words (about 90 words per minute plus pauses).
 11. Channel rules: Louis XIV, no music, no burned-in text, one king, AI disclosure planned, the "handsome" line only in the opener.
