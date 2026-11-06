@@ -1,0 +1,16 @@
+{
+ "code": 200,
+ "message": "success",
+ "data": {
+  "task_id": "44a075b7-cd55-4a34-ae00-3cdf03fb07dc",
+  "status": "completed",
+  "result": [
+   "https://s.apipod.ai/images/2026/11/06/10201c21-bc9f-46ae-8fb7-f08a015fb18a.png",
+   "https://tuye.closeai.hk/images/2026/11/06/1793942740_8d102e922eef0e0363b12aac54cc210e.png"
+  ],
+  "completed_at": 1793942863,
+  "usage": {
+   "cost": 0.12
+  }
+ }
+}
