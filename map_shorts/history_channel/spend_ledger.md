@@ -195,3 +195,5 @@ Kling 3.0 i2v 720p no audio 10 s = $0.80 (page price, unproven) vs Kling 4.0 $1.
 | 05.11 | Ep.2 running TOTAL | $38.69 |
 | 05.11 | Ep.2 T4b-1 end still (GPT Image 2.5 Sunburst Lite 4K edit of the T4b start still), owner "Да" | $0.12 (usage.cost) |
 | 05.11 | Ep.2 running TOTAL | $38.81 |
+| 05.11 | Ep.2 T4b-1 clip (Take 4 wine and laugh; Kling 4.0 i2v 720p 10 s, pins T4b start / end), owner "Да" | $1.45 (usage.cost) |
+| 05.11 | Ep.2 running TOTAL | $40.26 |
