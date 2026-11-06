@@ -537,3 +537,27 @@ File pilot_frames/anchors/T4b_end_4k.jpg (2161x3840, local) + T4b_end_768.jpg. A
 Measured: SFace end vs start 0.808, vs A3 0.790 (a real laugh keeps the identity); quality sharp 178.8 / detail 2.10 / blocks 1.0 (passes the subject limits 150 / 2.0); face area at 720x1280 523 -> 387 = -26 % (inside the 30 % rule). Head box start [424,762,403x552] vs end [456,666,357x523] at 1080: the head moved up about 5 % of the frame height and 3 % right (asked: within 3 %; the tip-back of the laugh), so Kling will move the head between the pins, which suits the laugh.
 Eye check OK: a big real laugh (eyes squeezed nearly shut under heavy lids, crow's feet, upper teeth natural and slightly uneven, lower teeth hidden, moustache with curled tips and the beauty mark on the viewer's right of the mouth in place), wig silver-grey, a wine film on the left: the left third is red, soft and glossy with the lady with the fan seen through it and a wavy dark-red drip edge running down the wig curls (it never touches the face; it reads more like a running drip line than a wide film, acceptable), the right two thirds sharp, no hands, no cup/glass, one king, no text.
 Notes: a tiny dark dot under the teeth (invisible at 720p); the wine edge is thin: the clip prompt must make the splash an event and let the film stay on the left third.
+
+## Reference comparison TAKE4_T4b.mp4 (06.11.2026)
+Tool: tools/ref_compare.py vs Vlog 1 0-30.8 s; setups/phone mistakes/words from the brief, not counted by the tool.
+| metric | reference | ours | verdict |
+|--|--|--|--|
+| shots / longest | 2 shots, cut at 23.6 s | 1 shot, 10.0 s | n/a for a raw 10 s piece (edit decides cuts) |
+| frozen background | 0 % | 0 % | OK (red curtain edge moves; measured) |
+| still body | 0 % | 40 % | FAIL (T4a 17, T3d 10, T3c 25) |
+| head fw/s | 0.19 | 0.20 | OK, marginal (T4a 0.44, T3d 0.14, T3c 0.10) |
+| words/min | 50-90 | 30 (5 words, laugh) | below gate, explained by the laugh |
+| setups | 7 in 128 s | 1 | fine for one piece |
+| phone mistakes | 5 in 128 s | thumb at 6.5 s NOT seen by eye; glove/plume 0-1 s | not confirmed |
+By eye: face fixed centre, small sway, tiny static room, no visible splash/focus blur at 2-2.5 s, real laugh 6-9.5 s. Verdict: needs edit work (virtual hand-held, punch-ins), not regeneration; lesson in PROMPT_CAMERA_LESSONS.md.
+
+## QC TAKE4_T4b.mp4 (06.11): BRAK by the gates (sharp: 2 consecutive seconds < 60 % at 7-8 s, decay 0.34; motion 40 %); eye check mostly clean, usable only with owner decision
+Raw Kling 4.0 i2v 720p 10 s, piece 4b-1 "wine and laugh", selfie from above. clip_qc.py --first T4b_start_4k --last T4b_end_4k --prev TAKE4_T4a --mistake 6-7.
+- face (vs A3): median 0.782, p10 0.572, low frames 7.0 and 7.5 s (laugh, head tipped back): PASS (judged by eye, same man)
+- sharp per second: 313,142,47,281,289,278,218,57,62,215; baseline 313; s1-s2 (142, 47) = goblet + splash blur event (planned 2.5 s blur), s7-s8 (57, 62) = laugh, NOT planned; seconds < 60 %: 1,2,7,8 (7-8 consecutive); last-third decay 0.34 (> 0.30): FAIL (frames s_07, s_08 opened: look sharp by eye, face and wig crisp, drop is from the tipped-back head/open mouth/motion; the metric is strict, the gate is not met)
+- seams: median diff 3.3, no spike-cut: PASS
+- motion: frozen background 0 %, still body 40 % (gate 15): FAIL (fixable with virtual hand-held in the edit, but sharp fails too)
+- pins: first RMSE 0.033, last 0.026: PASS
+- info: join to T4a last 0.231 (different setup); sharpness vs T4a mean 1.10
+Eye: one king, same man as A3 (silver-grey wig, moustache, beauty mark), no ghost, no text, no modern objects, no melted hands. CRIT 1: no goblet at 0 s; the gloved hand with the gold goblet is HUGE and close to the lens at ~1.0 s (s_01, covers the left ~45 % of the frame and half the face; planned 1.5-2.2 s, so early and too big), gone by 2 s, no goblet/hand from 2 s to 10 s: OK. CRIT 2: wine: s_02 (2 s) the whole left ~28 % is red, from 3 s a red tint + wavy drip line on the left ~25-30 %; from 6 s the drip line runs over the left wig side curls and tints them red-maroon (s_06-s_10): wig top stays grey and the face is never touched, but the wine lies on the side curls of the wig (marginal against "never touches the wig"). CRIT 3: laugh s_07-s_08: eyes shut, upper teeth only, natural, jaw plausible, no extra teeth: OK. CRIT 4: wig and face inside the frame always (wig top near the top edge at s_07). CRIT 5: no ghost. Thumb: pink thumb at the lower right edge at ~6 s (s_06) and s_07, tiny (~5 % width), covers nothing: seen but weak. Laugh starts early (smile at s_06, real laugh by s_07), so the silent beat after "Mon Dieu" is short (~1 s instead of planned 4.5-5.5 s plus build). End pose = laugh, differs from start. Room: fan lady and courtiers visible and move slightly, servant right.
+Script 7.3: smirk, wine splash, "Mon Dieu" (face at 3 s: eyes half shut, lips slightly open: plausible), laugh, "Nobody saw anything" at laughing mouth: matches broadly; beat timing earlier than planned.
