@@ -1,0 +1,163 @@
+{
+ "out": "/home/user/beauty-reels-bot/map_shorts/history_channel/louis_ep2/pilot_frames/EP2_rough_v3_muted.mp4",
+ "total_s": 119.17,
+ "segments": [
+  {
+   "src": "PILOT_take1_15s.mp4",
+   "in": 3.5,
+   "out": 10.0,
+   "sway": false,
+   "start": 0.0,
+   "len": 6.5,
+   "label": "Take 1 pilot (raw; the violent zoom-out and shake of the first 3.5 s cut)"
+  },
+  {
+   "src": "PILOT_take1_15s.mp4",
+   "in": 12.0,
+   "out": 15.04,
+   "sway": false,
+   "start": 6.5,
+   "len": 3.04,
+   "label": "Take 1 pilot after the ghost cut and its jolts (10.0-12.0 s cut)"
+  },
+  {
+   "src": "TAKE1_piece2b.mp4",
+   "in": 0,
+   "out": 15.04,
+   "sway": false,
+   "start": 9.54,
+   "len": 15.04,
+   "label": "Take 1 piece 2b (raw)"
+  },
+  {
+   "src": "TAKE1_piece3_alive.mp4",
+   "in": 0,
+   "out": 8.04,
+   "sway": false,
+   "start": 24.58,
+   "len": 8.04,
+   "label": "Take 1 piece 3 alive (raw)"
+  },
+  {
+   "src": "TAKE2_T2a_v2.mp4",
+   "in": 0,
+   "out": 12.04,
+   "sway": false,
+   "start": 32.62,
+   "len": 12.04,
+   "label": "2a rule and bow"
+  },
+  {
+   "src": "TAKE2_T2b.mp4",
+   "in": 0,
+   "out": 8.04,
+   "sway": false,
+   "start": 44.67,
+   "len": 8.04,
+   "label": "2b Marcel POV"
+  },
+  {
+   "src": "TAKE2_T2c.mp4",
+   "in": 0,
+   "out": 12.04,
+   "sway": false,
+   "start": 52.71,
+   "len": 12.04,
+   "label": "2c grape"
+  },
+  {
+   "src": "TAKE3_T3a.mp4",
+   "in": 0,
+   "out": 10.04,
+   "sway": false,
+   "start": 64.75,
+   "len": 10.04,
+   "label": "3a soup"
+  },
+  {
+   "src": "T3b_F1_4k.jpg",
+   "sway": "crop",
+   "start": 74.79,
+   "len": 0.92,
+   "label": "food burst"
+  },
+  {
+   "src": "T3b_F2_4k.jpg",
+   "sway": "crop",
+   "start": 75.71,
+   "len": 0.71,
+   "label": "food burst"
+  },
+  {
+   "src": "T3b_F3_4k.jpg",
+   "sway": "crop",
+   "start": 76.42,
+   "len": 0.58,
+   "label": "food burst"
+  },
+  {
+   "src": "T3b_F4_4k.jpg",
+   "sway": "crop",
+   "start": 77.0,
+   "len": 1.0,
+   "label": "food burst"
+  },
+  {
+   "src": "T3b_F2_4k.jpg",
+   "sway": "crop",
+   "start": 78.0,
+   "len": 0.5,
+   "label": "food burst"
+  },
+  {
+   "src": "T3b_F3_4k.jpg",
+   "sway": "crop",
+   "start": 78.5,
+   "len": 0.5,
+   "label": "food burst"
+  },
+  {
+   "src": "T3b_F5_4k.jpg",
+   "sway": "crop",
+   "start": 79.0,
+   "len": 1.0,
+   "label": "food burst"
+  },
+  {
+   "src": "TAKE3_T3c.mp4",
+   "in": 0,
+   "out": 8.04,
+   "sway": false,
+   "start": 80.0,
+   "len": 8.04,
+   "label": "3b-C fork"
+  },
+  {
+   "src": "TAKE3_T3d.mp4",
+   "in": 0,
+   "out": 10.04,
+   "sway": false,
+   "start": 88.04,
+   "len": 10.04,
+   "label": "3c fork or fingers"
+  },
+  {
+   "src": "TAKE4_T4a.mp4",
+   "in": 0,
+   "out": 12.04,
+   "sway": false,
+   "start": 98.08,
+   "len": 12.04,
+   "label": "4a drink"
+  },
+  {
+   "src": "TAKE4_T4b.mp4",
+   "in": 1.0,
+   "out": 10.04,
+   "sway": false,
+   "start": 110.13,
+   "len": 9.04,
+   "label": "4b-1 wine and laugh (first take, PLACEHOLDER, from 1.0 s)"
+  }
+ ]
+}
