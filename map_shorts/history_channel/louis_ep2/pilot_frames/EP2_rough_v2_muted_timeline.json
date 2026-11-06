@@ -1,0 +1,136 @@
+{
+ "out": "/home/user/beauty-reels-bot/map_shorts/history_channel/louis_ep2/pilot_frames/EP2_rough_v2_muted.mp4",
+ "total_s": 123.38,
+ "segments": [
+  {
+   "src": "TAKE1_rough_v2_muted.mp4",
+   "in": 0,
+   "out": 36.83,
+   "sway": false,
+   "start": 0.0,
+   "len": 36.83,
+   "label": "Take 1 opener (existing rough edit)"
+  },
+  {
+   "src": "TAKE2_T2a_v2.mp4",
+   "in": 0,
+   "out": 12.04,
+   "sway": false,
+   "start": 36.83,
+   "len": 12.04,
+   "label": "2a rule and bow"
+  },
+  {
+   "src": "TAKE2_T2b.mp4",
+   "in": 0,
+   "out": 8.04,
+   "sway": false,
+   "start": 48.88,
+   "len": 8.04,
+   "label": "2b Marcel POV"
+  },
+  {
+   "src": "TAKE2_T2c.mp4",
+   "in": 0,
+   "out": 12.04,
+   "sway": false,
+   "start": 56.92,
+   "len": 12.04,
+   "label": "2c grape"
+  },
+  {
+   "src": "TAKE3_T3a.mp4",
+   "in": 0,
+   "out": 10.04,
+   "sway": false,
+   "start": 68.96,
+   "len": 10.04,
+   "label": "3a soup"
+  },
+  {
+   "src": "T3b_F1_4k.jpg",
+   "sway": "crop",
+   "start": 79.0,
+   "len": 0.92,
+   "label": "food burst"
+  },
+  {
+   "src": "T3b_F2_4k.jpg",
+   "sway": "crop",
+   "start": 79.92,
+   "len": 0.71,
+   "label": "food burst"
+  },
+  {
+   "src": "T3b_F3_4k.jpg",
+   "sway": "crop",
+   "start": 80.62,
+   "len": 0.58,
+   "label": "food burst"
+  },
+  {
+   "src": "T3b_F4_4k.jpg",
+   "sway": "crop",
+   "start": 81.21,
+   "len": 1.0,
+   "label": "food burst"
+  },
+  {
+   "src": "T3b_F2_4k.jpg",
+   "sway": "crop",
+   "start": 82.21,
+   "len": 0.5,
+   "label": "food burst"
+  },
+  {
+   "src": "T3b_F3_4k.jpg",
+   "sway": "crop",
+   "start": 82.71,
+   "len": 0.5,
+   "label": "food burst"
+  },
+  {
+   "src": "T3b_F5_4k.jpg",
+   "sway": "crop",
+   "start": 83.21,
+   "len": 1.0,
+   "label": "food burst"
+  },
+  {
+   "src": "TAKE3_T3c.mp4",
+   "in": 0,
+   "out": 8.04,
+   "sway": false,
+   "start": 84.21,
+   "len": 8.04,
+   "label": "3b-C fork"
+  },
+  {
+   "src": "TAKE3_T3d.mp4",
+   "in": 0,
+   "out": 10.04,
+   "sway": false,
+   "start": 92.25,
+   "len": 10.04,
+   "label": "3c fork or fingers"
+  },
+  {
+   "src": "TAKE4_T4a.mp4",
+   "in": 0,
+   "out": 12.04,
+   "sway": false,
+   "start": 102.29,
+   "len": 12.04,
+   "label": "4a drink"
+  },
+  {
+   "src": "TAKE4_T4b.mp4",
+   "in": 1.0,
+   "out": 10.04,
+   "sway": false,
+   "start": 114.33,
+   "len": 9.04,
+   "label": "4b-1 wine and laugh (first take, PLACEHOLDER, from 1.0 s)"
+  }
+ ]
+}
