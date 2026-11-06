@@ -571,3 +571,15 @@ Measured with tools/ref_compare.py on the whole edit (reference slice 0-30.8 s):
 Quality of the virtual hand-held (head-area sharpness per 5 samples, raw clip -> edit): T2a 350 -> 276 (0.79), T2c 195 -> 151 (0.77), T3a 257 -> 200 (0.78), T3c 212 -> 166 (0.79), T4a 165 -> 129 (0.78), T4b 177 -> 144 (0.82): a loss of 18-23 % (inside the 30 % rule); a milder zoom (1.04) would lose less but show the borders.
 Eye check on the contact sheet at 12 points: setups differ cut to cut (selfie, floor POV, side grape, low soup, food burst crops, fork, leg macro, across the table, wine and laugh), no black borders, no seams, no text.
 Open: the voice and room tone (blocked), the missing pieces, Take 1 trimming (the viewer proposed 25-28 s), the 4b-1 retake, then the authenticity audit and the grade (the beige wig of T2c and T3c).
+
+## Rough cut v2, no virtual shake (06.11): EP2_rough_v2_muted.mp4 vs v1 vs reference Vlog 1 slice 0-30.8 s (tools/ref_compare.py + contact sheets; per-segment script run on the edit)
+Whole edit (123.4 s): same 22 shots / same cuts in v1 and v2 (mean 5.6, median 4.4, burst of 6 micro-shots at 79-84 s). Reference slice: 2 shots, cut 23.6 s, frozen bg 0, still body 0, head 0.19.
+| metric | ref | v1 (virtual shake) | v2 (none) |
+|--|--|--|--|
+| frozen background % (gate <=10) | 0 | 0 | 2 OK |
+| still body % (gate <=15) | 0 | 13 OK | 23 FAIL |
+| head fw/s (gate >=0.18) | 0.19 | 0.56 | 0.46 OK |
+Per segment v1 -> v2 (frozen bg / still body / head): T2a 0/8/0.17 -> 17/17/0.15; T2c 0/50/0.09 -> 0/75/0.06; T3a 0/20/0.09 -> 0/60/0.07; T3c(3b-C) 0/25/0.12 -> 0/25/0.11; T3d 0/10/0.13 -> same; T4a 0/17/0.43 -> same; T4b 0/11/0.24 -> 0/44/0.23. Take 1 (baked-in shake) 0/0/0.17.
+Head-area sharpness edit vs raw clip (5 samples): v2 0.92-1.00 on all clips except 3b-C 0.83 (still inside 30 %, it is a soft frame at the dip); v1 had 0.75-1.14 (crop clips lost up to 25 %, T3c 0.75). v2 = no loss from the edit (only the one encode). Take 1 0.98 vs its own source.
+By eye: v2 segments T2c, T3a, T4b are close to a locked frame (face fixed in the centre, only the model's micro-sway); T3d, T4a, T2b (floor POV) and the angle jumps feel like a real phone. The reference itself is not violently shaky: seated, calm hand, but a new angle every few seconds and the thumb/phone events; so v1 shake amplitude was wrong, but v2 for T2c/T3a/T4b is too static. Take 1: a blurred punch-in at ~1.5 s and head jumping between tiles = a little too shaky (the same "terrible" look), the rest 4-37 s acceptable.
+Verdict: v2 is better than v1 in look and quality, fails the still-body gate (23 %) because of T2c 75 %, T3a 60 %, T4b 44 %. Fix = new angle/shorter takes or a very light (<=1.5 %, slow, low-frequency) drift only on those three, not the v1 shake.
