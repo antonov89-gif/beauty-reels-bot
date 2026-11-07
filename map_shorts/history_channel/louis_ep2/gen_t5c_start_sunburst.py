@@ -13,15 +13,15 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Reference 2 shows the same man from above: "
 "take ONLY the camera height and the way the face is foreshortened from above (large forehead, short chin) from it, the face and the wig from reference 1; the head pose and the eyes are NOT taken from reference 2: his head rests straight back against the chair, centred and facing the camera, the chin up, the eyes closed. "
 "Camera: "
-"a camera held at arm's length IN FRONT of him and HIGH above his face, looking DOWN at him from about 55 degrees above as he leans back in a gilded armchair (a clearly high angle), rolled about 14 degrees to the right; "
-"his face fills about 35 percent of the frame width with its centre at 50 percent, the whole tall wig about 66 percent of the width with at least 15 percent free space on each side, the chin and the lace cravat in the lower middle, sharp. "
+"a camera held at arm's length IN FRONT of him and HIGH above his face, looking DOWN at him from about 55 degrees above as he leans back in a gilded armchair (a clearly high angle), the whole picture is rotated 14 degrees clockwise so the vertical lines of the armchair lean 14 degrees to the right; "
+"pulled back so a band of empty gilded wall about 15 percent of the frame height fills the top of the frame above the wig; his face fills about 28 percent of the frame width with its centre at 50 percent, the whole tall wig about 55 percent of the width with at least 20 percent free space on each side, the chin and the lace cravat in the lower middle, sharp. "
 "Pose and emotion: "
 "he has just leaned back into the carved gilded armchair, the head resting against its back, the eyes closed under heavy lids in a long happy sigh, the lips parted a little, a deeply contented face; "
 "both hands rest on his belly over the scarlet coat, visible along the bottom edge of the frame, five natural fingers each, the fingers loosely overlapping. "
 "Around the edges of the frame: "
 "the carved gilded armchair and the candlelit gilded hall blurred, lit by wall sconces with the ceiling out of frame, and on the right and right-centre blurred figures far below: "
-"a servant in livery, a courtier's powdered wig and shoulder, and a lady with a fan. "
-"One king only, natural light rouge. The table and the armchair hold only plates, gold dishes, silver platters, napkins and candle holders. Clean picture with no text or lettering, no modern objects, only things of the 1680s. "
+"a servant in livery carrying one covered silver dish, a courtier's powdered wig and shoulder, and a lady with a fan. "
+"One king only, natural light rouge. The table and the armchair hold only plates, covered silver dishes, silver platters, napkins and candle holders. Clean picture with no text or lettering, no modern objects, only things of the 1680s. "
 )
 
 body = {"model": "gpt-image-2.5-sunburst", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",
