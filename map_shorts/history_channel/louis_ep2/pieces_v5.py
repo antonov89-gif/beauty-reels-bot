@@ -144,3 +144,7 @@ _rr(_a, "clip", "7-10 s: the corner of the king's mouth tightens and lifts into 
 # ===== B end pin: Marcel RELIEVED after 'Joking.' (reviewer + brief) =====
 _rr(_b, "end", "Marcel stands frozen with his head bowed a little, his eyes wide, looking up at the king, his lips pressed together, a bead of sweat on his temple, his hands lowered together in front of him (five natural fingers each);", "Marcel has just let out a small breath of relief: his shoulders dropped, his lips relaxed, his eyes on the king, his hands lowered together in front of him (five natural fingers each);")
 _rr(_b, "end", "the same wigs, coats, the same hall", "the same wigs exactly as in reference 1, the same coats, the same hall")
+
+# ===== B clip adapted to the accepted B end pin (Marcel still wide-eyed, hands lowered, the king flat) =====
+_rr(_b, "clip", "Marcel exhales and lowers his hands, settling to @last_frame. ", "Marcel lowers his hands with a shaky breath, his eyes still wide on the king, settling to @last_frame. ")
+_rr(_b, "clip", "9.3-10 s sly (2); Marcel 0-3 s dread (3), 3-5.8 s flinching (2), 5.8-8.5 s frozen terror (3), 9.3-10 s relief (2).", "9.3-10 s sly (2); Marcel 0-3 s dread (3), 3-5.8 s flinching (2), 5.8-8.5 s frozen terror (3), 9.3-10 s shaky half-relief with the eyes still wide (2).")
