@@ -13,12 +13,13 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Camera: "
 "his own phone held far too close and LOW, a low selfie from under his chin looking up at about 40 degrees, wide lens, rolled about 12 degrees to the left: "
 "his head with the tall wig fills about 85 percent of the frame width (his face about 38 percent), foreshortened from below, the chin and the underside of the moustache nearest the lens, the whole wig with its side curls readable and its top close to but not past the top edge, behind and above him the painted ceiling of a gilded palace hall with soft cloud and sky paintings and a gold cornice, candlelit; "
-"his pink thumb and the edge of the phone case are visible at the lower right corner; "
+"only the blurred tip of his pink thumb is visible at the very lower right corner, and NO phone, no phone case and no screen is visible anywhere in the frame (the phone is the camera); "
 "the face is still sharp and readable; "
 "in the lower left and lower right corners blurred shapes of the hall: "
 "at the left a grey powdered wig and a lace shoulder of a courtier, at the right an open fan and a servant's livery shoulder. "
 "Pose and emotion: "
-"he is squinting at the phone screen with a puzzled frown, heavy lids half-lowered, one eyebrow raised, the lips slightly parted as he mumbles 'is it on'. "
+"he is squinting into the lens as if reading its screen, with a puzzled frown, heavy lids half-lowered, one eyebrow raised, the lips slightly parted as he mumbles 'is it on'. "
+"The phone that films is never visible in the frame. "
 "No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "
 )
 

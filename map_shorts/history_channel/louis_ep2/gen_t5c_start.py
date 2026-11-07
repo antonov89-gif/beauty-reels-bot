@@ -19,6 +19,7 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Around the edges of the frame: "
 "the carved gilded armchair and the candlelit gilded hall blurred, no chandelier, and on the right and right-centre blurred figures far below: "
 "a servant in livery, a courtier's powdered wig and shoulder, and a lady with a fan. "
+"The phone that films is never visible in the frame. "
 "No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "
 )
 

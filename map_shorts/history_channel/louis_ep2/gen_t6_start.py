@@ -19,6 +19,7 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "he is wiping his fingers on a single lace napkin held in one hand just below the frame, his chin slightly lowered, his heavy-lidded eyes looking down at the bones on the plate with a complacent faint smirk, the lips closed. "
 "Behind him, blurred: "
 "the candlelit gilded hall, standing courtiers in plain wigs, at the back right a lady with a fan and two courtiers whispering, no chandelier. "
+"The phone that films is never visible in the frame. "
 "No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "
 )
 

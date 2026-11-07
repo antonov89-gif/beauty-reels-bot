@@ -21,6 +21,7 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Pose and emotion: "
 "he is half risen, his free hand pressing on the white tablecloth at the lower edge (five natural fingers), the look haughty and bored under heavy lids, the lips closed in a faint smirk; "
 "behind him at both sides the courtiers in plain wigs and the ladies in wide gowns are just starting to bow, their heads dipping at different depths. "
+"The phone that films is never visible in the frame. "
 "No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "
 )
 

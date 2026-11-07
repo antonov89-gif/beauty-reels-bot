@@ -15,6 +15,7 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "behind him, soft and blurred, the candlelit gilded hall with a few courtiers' heads and a servant in livery on the right, no chandelier. "
 "Pose and emotion: "
 "he gives a smug sideways look at the lens under heavy lids, the chin lifted, one eyebrow raised, the lips closed in a faint proud smile. "
+"The phone that films is never visible in the frame. "
 "No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "
 )
 

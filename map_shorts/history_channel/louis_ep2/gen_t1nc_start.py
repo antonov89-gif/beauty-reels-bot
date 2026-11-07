@@ -18,6 +18,7 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Pose and emotion: "
 "he is reading the comments with a wounded look: "
 "heavy lids, the lips pursed, the brows pulled together a little, the head tilted slightly. "
+"The phone that films is never visible in the frame. "
 "No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "
 )
 

@@ -21,6 +21,7 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Pose and emotion: "
 "he has leaned back in the armchair, his chin raised, thoughtful, his heavy-lidded eyes looking up and away to the right at the hall as if searching for an idea, the lips closed and pursed a little; "
 "one hand resting on the chair arm at the lower edge. "
+"The phone that films is never visible in the frame. "
 "No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "
 )
 
