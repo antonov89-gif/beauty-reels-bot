@@ -202,3 +202,4 @@ Kling 3.0 i2v 720p no audio 10 s = $0.80 (page price, unproven) vs Kling 4.0 $1.
 07.11 Ep.2 t1na start still retake (phone visible in v1): $0.12. Ep.2 running total $40.50
 07.11 Ep.2 t1na start still third attempt: $0.12. Ep.2 running total $40.62
 07.11 Ep.2 t1na end still: $0.12. Ep.2 running total $40.74
+07.11 Ep.2 t4bA start still: $0.12. Ep.2 running total $40.86
