@@ -22,6 +22,13 @@ rep("the carved gilded armchair and the candlelit gilded hall blurred, no chande
     "the carved gilded armchair and the candlelit gilded hall blurred, lit by wall sconces with the ceiling out of frame, and on the right and right-centre blurred figures far below: ")
 rep('"No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "',
     '"One king only, natural light rouge. The table and the armchair hold only plates, gold dishes, silver platters, napkins and candle holders. Clean picture with no text or lettering, no modern objects, only things of the 1680s. "')
+
+rep("Reference 2 shows the same man from above, head tilted back: ", "Reference 2 shows the same man from above: ")
+rep("take the camera angle and the head pose from it, the face and the wig from reference 1. ", "take ONLY the camera height and the way the face is foreshortened from above (large forehead, short chin) from it, the face and the wig from reference 1; the head pose and the eyes are NOT taken from reference 2: his head rests straight back against the chair, centred and facing the camera, the chin up, the eyes closed. ")
+rep("an arm's-length selfie angle IN FRONT of him", "a camera held at arm's length IN FRONT of him")
+rep("both hands rest on his belly over the scarlet coat, five natural fingers each, at the lower edge. ", "both hands rest on his belly over the scarlet coat, visible along the bottom edge of the frame, five natural fingers each, the fingers loosely overlapping. ")
+rep("the whole tall wig about 68 percent of the width with at least 15 percent free space on each side,", "the whole tall wig about 66 percent of the width with at least 15 percent free space on each side,")
+rep("his face fills about 36 percent", "his face fills about 35 percent")
 i = s.index('"""', 3)
 doc = ('"""Take 5 piece 5c START still on gpt-image-2.5-sunburst (non-Lite), 4K high 9:16, measured charge about $0.10 (preflight table pre-deduct $0.50). Setup S12 (from above, leaning back, eyes closed in a long happy sigh, hands on the belly). '
        'Refs in order: K4_master_neutral_O8.png, K4_angle_high_O13.png. Result: pilot_frames/anchors/t5c_start_sunburst_4k.jpg. Run: python3 gen_t5c_start_sunburst.py go\nBRIEF: briefs/brief_t5_t7.md\n"""')
