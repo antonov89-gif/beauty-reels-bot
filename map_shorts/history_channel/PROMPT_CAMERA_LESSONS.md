@@ -40,3 +40,5 @@ Read by pregen-reviewer BEFORE it reviews a video prompt; appended by reference-
 ## Identity lessons (angles O10-O13, 07.11)
 - Angle tiles O10-O13 (941x1672) pass the gate and are the O8 lineage; attach master O8 as ref 1 and ONE matching tile as ref 2 (profile O10, 3/4 right O11, low O12, high O13); never mirror a tile (beauty mark flips).
 - O10/O11 wigs are warmer (R-B 41-44) than the lock: keep 'cool silver-grey and white, NOT beige' in the prompt. 3/4 LEFT tile is missing (S2).
+
+- 07.11 owner: the wig reads warmer or cooler on camera depending on the light and the room (candles, studio, window). Rule: lock the wig's TRUE colour (powdered silver-grey and white) and its shape/height, but do NOT fail a still or a clip only because the wig is a little warmer under candlelight; judge the wig against the scene light (compare with the same light, e.g. the neighbouring clips), flag only a clearly different colour (beige/cream/golden body colour, not a light tint) or a different shape. In prompts keep one short 'cool silver-grey and white' phrase, drop the stacked negations that fight the lighting.

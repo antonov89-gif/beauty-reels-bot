@@ -16,6 +16,8 @@ Read first: /home/user/beauty-reels-bot/CLAUDE.md, map_shorts/history_channel/lo
 6. Face-to-wig proportion note: the wig is about twice the face width; framings must be stated for the HEAD WITH WIG, not for the face alone.
 7. A DRIFT LIST (what changed between generations and which words fixed it).
 
+- Wig colour and light (owner 07.11): the wig looks warmer or cooler depending on the light and the room, so lock its true colour (powdered silver-grey and white) and its shape and height, judge colour against the scene light, and flag only a clearly different body colour (beige/cream/golden) or shape, not a light tint.
+
 ## How to attach references (rules to check in every script)
 - Order: identity ref first (the master or the best angle tile), then the pose/composition ref if any, then the hall/room ref last; the prompt must name each as 'reference 1/2/3' in the SAME order as image_urls.
 - Never attach a ref that carries something unwanted (R10 hall has glasses, a chandelier and real faces: say 'ignore its people, glasses and chandelier' or use a hall-only crop).
