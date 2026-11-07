@@ -1,13 +1,15 @@
-"""Take 5 piece 5c Ohh, I wasn't born to work (setup S12, from above): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: LOUIS (OWNER): "[leans back, hands on the belly, a long happy sigh] Ohh... I wasn't born to work. I was born for happiness, love, pleasure... and a good rest. [a joyful laugh at his own line]" GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: R1_king_card_A3_white_wig.jpg. One call, about $0.12. Run: python3 gen_t5c_start.py go"""
+"""Take 5 piece 5c Ohh, I wasn't born to work (setup S12, from above): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: LOUIS (OWNER): "[leans back, hands on the belly, a long happy sigh] Ohh... I wasn't born to work. I was born for happiness, love, pleasure... and a good rest. [a joyful laugh at his own line]" GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: K4_master_neutral_O8.png, K4_angle_high_O13.png. One call, about $0.12. Run: python3 gen_t5c_start.py go"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod
 RAW = "https://raw.githubusercontent.com/antonov89-gif/beauty-reels-bot/claude/funny-bardeen-uj4fiv/map_shorts/history_channel/louis_ep2/refs/"
 H0 = "/home/user/beauty-reels-bot/map_shorts/history_channel/louis_ep2/"
 prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexposed, fine film grain, real skin texture, no beauty filter. "
-"Reference 1 is the king's face and costume: "
-"exactly the same man, same age, heavy-lidded eyes, thin dark waxed moustache with curled tips, a small dark beauty mark clearly visible on the viewer's right of the mouth, light rouge, the tall powdered wig in cool silver-grey and white (NOT beige, NOT cream, NOT golden), the scarlet velvet coat with gold suns, lace cravat; "
-"do not copy its pose or background. "
+"Reference 1 (the king's master portrait) is his face and costume: "
+"exactly the same man of about 45, same heavy-lidded eyes, thin dark waxed moustache with curled tips, a small dark beauty mark clearly visible on the viewer's right of the mouth, light rouge, the tall powdered wig in cool silver-grey and white (NOT beige, NOT cream, NOT golden), the scarlet velvet coat with gold suns, lace cravat; "
+"do not copy its neutral pose or backdrop. "
+"Reference 2 shows the same man from above, head tilted back: "
+"take the camera angle and the head pose from it, the face and the wig from reference 1. "
 "Camera: "
 "the king's own arm's-length phone held IN FRONT of him and HIGH above his face, looking DOWN at him from about 55 degrees above as he leans back in a gilded armchair (a high angle, never eye level), rolled about 14 degrees to the right; "
 "his face fills about 40 percent of the frame width with its centre at 50 percent, the whole tall wig about 75 percent of the width and inside the frame, the chin and the lace cravat in the lower middle, sharp. "
@@ -21,7 +23,7 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 )
 
 body = {"model": "gpt-image-2.5-sunburst-lite", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",
-        "image_urls": [RAW + "R1_king_card_A3_white_wig.jpg"]}
+        "image_urls": [RAW + "K4_master_neutral_O8.png", RAW + "K4_angle_high_O13.png"]}
 open(H0 + "t5c_start_prompt.txt", "w").write(prompt)
 if len(sys.argv) > 1 and sys.argv[1] == "go":
     r = apipod.submit("images", body); print(r)

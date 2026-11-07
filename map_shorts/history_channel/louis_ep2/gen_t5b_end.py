@@ -12,7 +12,7 @@ prompt = ("Edit the photo: "
 "his cheeks full of food, chewing happily with a closed mouth, eyes closed under heavy lids in bliss, one hand holding a golden spoon near the lower edge. "
 "Keep the man's face, age, skin, moustache, beauty mark on the viewer's right of the mouth and rouge EXACTLY as in reference 2 (the card; "
 "reference 1 is the start photo) (do not redraw his identity); "
-"the wig keeps its cool silver-grey and white. "
+"the wig keeps its silver-grey and white (a light tint from the scene light is fine). "
 "QUALITY: "
 "keep the full resolution, sharpness and fine detail of the original photo: "
 "the face, the moustache hairs, the wig curls, the lace and the gold embroidery must stay exactly as crisp and detailed as in the photo; "
@@ -23,7 +23,7 @@ prompt = ("Edit the photo: "
 )
 
 body = {"model": "gpt-image-2.5-sunburst-lite", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",
-        "image_urls": [RAW + "t5b_start_4k.jpg", RAW + "R1_king_card_A3_white_wig.jpg"]}
+        "image_urls": [RAW + "t5b_start_4k.jpg", RAW + "K4_master_neutral_O8.png"]}
 open(H0 + "t5b_end_prompt.txt", "w").write(prompt)
 if len(sys.argv) > 1 and sys.argv[1] == "go":
     r = apipod.submit("images", body); print(r)

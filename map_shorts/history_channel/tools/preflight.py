@@ -11,7 +11,7 @@ Usage:
 import hashlib, json, os, re, subprocess, sys, time, urllib.request
 REPO = "/home/user/beauty-reels-bot"
 RAW_PREFIX = "https://raw.githubusercontent.com/antonov89-gif/beauty-reels-bot/claude/funny-bardeen-uj4fiv/"
-BEST_ORIGINAL_SMALL_OK = {"R1_king_card_A3_white_wig.jpg", "A3_white_wig.jpg"}   # best existing original, named as such
+BEST_ORIGINAL_SMALL_OK = {"R1_king_card_A3_white_wig.jpg", "A3_white_wig.jpg", "K4_master_neutral_O8.png", "K4_expr_shock_O9.png", "K4_angle_profileL_O10.png", "K4_angle_34right_O11.png", "K4_angle_low_O12.png", "K4_angle_high_O13.png", "K4_angle_overshoulder_O14.png"}   # best existing original, named as such
 OWNER_QUALITY_EXCEPTION = {"T4a_end_v2_4k.jpg": "owner 05.11 'Да': last pin of the 720p T4a clip, sharp 163 / detail 1.89 (limit 2.0), -21 % at video size (reference_check.md)", "T3c_end_4k.jpg": "owner 05.11 'Да': last pin of the 720p T3b-C clip, sharp 151 / detail 1.78, -21 % at video size (reference_check.md)", "T2c_end_v2_4k.jpg": "owner 05.11 'Делай': last pin of the 720p T2c clip, sharp 132 / detail 1.81, -27 % at video size (reference_check.md)"}   # explicit owner exceptions, one file each, never chain from them
 PRICE = {"kling-4.0-i2v": {"720p": 0.145, "1080p": 0.2175}, "gpt-image-2.5-sunburst-lite": 0.12}
 

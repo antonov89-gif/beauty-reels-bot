@@ -1,11 +1,11 @@
-"""Take 5 piece 5b Marcel films the laden table and the king eating (no words): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: [Marcel films the laden table and the king eating, about 4 s, no words: chewing, a happy hum, the murmur of the crowd] GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: R1_king_card_A3_white_wig.jpg, R10_hall_clean.jpg. One call, about $0.12. Run: python3 gen_t5b_start.py go"""
+"""Take 5 piece 5b Marcel films the laden table and the king eating (no words): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: [Marcel films the laden table and the king eating, about 4 s, no words: chewing, a happy hum, the murmur of the crowd] GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: K4_master_neutral_O8.png, R10_hall_clean.jpg. One call, about $0.12. Run: python3 gen_t5b_start.py go"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod
 RAW = "https://raw.githubusercontent.com/antonov89-gif/beauty-reels-bot/claude/funny-bardeen-uj4fiv/map_shorts/history_channel/louis_ep2/refs/"
 H0 = "/home/user/beauty-reels-bot/map_shorts/history_channel/louis_ep2/"
 prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexposed, fine film grain, real skin texture, no beauty filter. "
-"Reference 1 is the king's face and costume: "
+"Reference 1 (the king's master portrait) is his face and costume: "
 "exactly the same man, heavy-lidded eyes, thin dark waxed moustache with curled tips, the beauty mark on the viewer's right of the mouth, the tall powdered wig in cool silver-grey and white (NOT beige, NOT cream, NOT golden), the scarlet velvet coat with gold suns; "
 "do not copy its pose. "
 "Reference 2 shows only the hall: "
@@ -20,7 +20,7 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 )
 
 body = {"model": "gpt-image-2.5-sunburst-lite", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",
-        "image_urls": [RAW + "R1_king_card_A3_white_wig.jpg", RAW + "R10_hall_clean.jpg"]}
+        "image_urls": [RAW + "K4_master_neutral_O8.png", RAW + "R10_hall_clean.jpg"]}
 open(H0 + "t5b_start_prompt.txt", "w").write(prompt)
 if len(sys.argv) > 1 and sys.argv[1] == "go":
     r = apipod.submit("images", body); print(r)
