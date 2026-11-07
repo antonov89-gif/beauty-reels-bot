@@ -691,3 +691,6 @@ Eye by second: 0 s king smirk at Marcel, Marcel open hands raised, shocked (matc
 Verdict BRAK for use as clean piece: face and sharp gates fail, the deadpan beat (the gag's cold line) is replaced by a closed-eyes head-back pose. Usable fragments: 0-4 s (laugh build, strong) and 8-10 s (eyes on Marcel, end pin match). Fix prompt: "king's eyes OPEN on Marcel from 5.0 s, the laugh ends at 4.5 s, head returns upright and faces Marcel, no head-back, no closed eyes after 4.5 s, wig 4 % inside left edge"; add "sharp focus, no motion blur except at 4.2 s". Seam to previous clip not measured further (A end = B start pin, RMSE 0.022).
 
 ## 07.11 owner decision: clip 4b-B taken WHOLE into the edit as is ("берём весь, потом посмотрим"); status ACCEPTED_FOR_EDIT, inspector/comparator BRAK items (eyes closed 4-7 s, no deadpan, no squint, no lens look) stay on the rework list after the full montage.
+
+## Reference briefs t5a t5b t5c t6 t7a t7b (07.11.2026)
+Brief mode, ref.mov re-seen on fps 2 sheets (0-12, 12-24, 24-30.5 s). Result: no exact reference beat (slice is a solo monologue, no food/laugh/stand/point); nearest beats and the grammar are in briefs/brief_t5_t7.md; all emotion and gesture lines for the pieces are HYPOTHESIS, camera/gaze/expression-rate rules ON FRAMES. Nothing generated, nothing spent.
