@@ -1,4 +1,4 @@
-"""Take 5 piece 5a START still on gpt-image-2.5-sunburst (non-Lite), 4K high 9:16, about $0.10. Same prompt and refs as the Lite script (K4 master O8, angle low O12, hall R10). Result: pilot_frames/anchors/t5a_start_sunburst_4k.jpg. Run: python3 gen_t5a_start_sunburst.py go
+"""Take 5 piece 5a START still on gpt-image-2.5-sunburst (non-Lite), 4K high 9:16, measured charge about $0.10 (4b-B end still, ledger), preflight table pre-deduct $0.50. Same prompt and refs as the Lite script (K4 master O8, angle low O12, hall R10). Result: pilot_frames/anchors/t5a_start_sunburst_4k.jpg. Run: python3 gen_t5a_start_sunburst.py go
 BRIEF: briefs/brief_t5_t7.md
 """
 import json, re, sys
@@ -8,25 +8,24 @@ RAW = "https://raw.githubusercontent.com/antonov89-gif/beauty-reels-bot/claude/f
 H0 = "/home/user/beauty-reels-bot/map_shorts/history_channel/louis_ep2/"
 prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexposed, fine film grain, real skin texture, no beauty filter. "
 "Reference 1 (the king's master portrait) is his face and costume: "
-"exactly the same man of about 45, same heavy-lidded eyes, thin dark waxed moustache with curled tips, a small dark beauty mark clearly visible on the viewer's right of the mouth, light rouge, the tall powdered wig in silver-grey and white (its colour reads a little warmer or cooler with the light), the scarlet velvet coat with gold suns, lace cravat; "
-"do not copy its neutral pose or backdrop. "
+"exactly the same man of about 45, same heavy-lidded light grey-hazel eyes, thin dark waxed moustache with curled tips, a small dark beauty mark clearly visible on the viewer's right of the mouth, light rouge, the tall powdered wig in silver-grey and white (its colour reads a little warmer or cooler with the light), the scarlet velvet coat with gold suns, lace cravat; "
+"take only the face, wig and costume from it. "
 "Reference 2 shows the same man from below, low camera: "
 "take the camera angle and the head pose from it, the face and the wig from reference 1. "
 "Reference 3 shows only the hall: "
-"ignore its angle, and do NOT copy its crystal glasses or the people at its table; "
+"take only the gilded walls, the candlelight and the standing courtiers; its angle, its people at the table, its chandelier and its glassware stay out of the picture; "
 "Camera (filmed by Marcel): "
-"LOW, from the near corner at the END of the long table, the lens only about 25 centimetres above the tablecloth, looking along the table toward the king who sits at its far end; "
-"NOT across the table and NOT from above, rolled about 10 degrees to the left. "
+"LOW, from the near corner at the END of the long table, the lens only about 25 centimetres above the tablecloth, looking along the table toward the king who sits at its far end, level with the tablecloth, rolled about 10 degrees to the left. "
 "In the foreground, soft and out of focus at the lower edge and the right edge: "
 "a silver platter with a glazed ham, a pyramid of small pastries, a dish of fruit and a bowl of strawberries (all food on the table, plates and gold dishes only). "
-"The king sits at the far end, his face fills about 28 percent of the frame width (the tall wig about 60 percent, with at least 15 percent free space on each side) with its centre at 58 percent of the frame width, sharp, turned three-quarter toward the lens, napkin tucked into the lace cravat. "
+"The king sits at the far end, his face fills about 28 percent of the frame width (the tall wig about 60 percent, with at least 15 percent free space on each side) with its centre at 54 percent of the frame width, sharp, head turned a quarter toward the viewer's left, both eyes and the beauty mark on the viewer's right clearly visible, napkin tucked into the lace cravat. "
 "Pose and emotion: "
-"he is counting the dishes on his fingers, just giving up, with a tolerant amused look, heavy lids half-lowered, lips closed in a faint smirk, one hand raised showing a few fingers; "
+"he is counting the dishes on his fingers, just giving up, with a tolerant amused look, eyes open under heavy lids, looking down and to the right at his own raised fingers, lips closed in a faint smirk, one hand raised with four empty fingers spread and the thumb folded; "
 "the other hand rests on the cloth in front of a small silver dish of green peas on the cloth before him. "
 "Behind him: "
 "the candlelit gilded hall, standing courtiers in plain wigs, at the back right a lady with an open fan, a servant in livery far behind at the right; "
-"no chandelier. "
-"No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "
+"the hall is lit by wall candle sconces and the ceiling is out of frame. "
+"One king only, natural light rouge, five fingers on each hand. The table holds only plates, gold dishes, silver platters, napkins and candle holders. "
 )
 
 body = {"model": "gpt-image-2.5-sunburst", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",
