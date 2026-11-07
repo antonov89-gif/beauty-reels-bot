@@ -891,3 +891,14 @@ Read: self-filmed walking vlog, not a studio portrait (arm toward the lens, wide
 Fix (prompt): replace "the whole wig about 60 percent" wording with a hard geometry: "the long side curls end well inside the frame, the left curls stop at 20 percent of the frame width and the right curls at 80 percent, a wide band of gilded wall and bowing courtiers visible left of the curls; the top of the wig is 8 percent below the top edge; shoulders and coat fill the bottom"; ask for a slightly smaller head (face 27-28 %) and "irises on the lens, pupils centred on the camera". Alternative if the owner likes this frame: crop-scale 0.9 of a pad is NOT possible (wall at top), so a re-roll is needed.
 
 ## 07.11 owner: still 7a-WALK START taken as is ("Нормально"); BRAK items (whole wig about 74% wide, left curls 5% from the edge, wig top 3% from the top, gaze slightly off the lens, fingers a soft mass) go to the rework list; the clip prompt forbids drift right, tilt down and push-in.
+
+## Reference comparison TAKE_t7aw_seedance.mp4 (07.11.2026, reference-comparator, ON FRAMES fps 2; ref slice 24-30.5 s)
+| metric | reference | ours | verdict |
+|---|---|---|---|
+| shots / cuts | 1 / 0 | 1 / 0 | OK |
+| still_body_pct | 0 | 60 | FAIL (gate 15) |
+| head_fw_per_s | 0.23 | 0.09 | FAIL (gate 0.18) |
+| frozen background | 0 | 0 | tool OK, but by eye the hall is the same framing 0-10 s, no walking (ON FRAMES) |
+| words/min | - | 120 | FAIL (gate 60-90) |
+| phone mistake | 5/128 s | 1 (finger at left edge ~9 s) | OK count; fingers at left, not bottom |
+Beats (ON FRAMES): 0-2.5 s eyes roll up-left, brows pinched (theatrical, head almost still); 2.5-4 speaks to lens; 5-6.5 wide laugh with teeth; 7-8 squint smirk; 8.5-10 side glance. Camera arm fixed at lower right, no step bob, no re-aim, no push-in. People: fan lady and courtiers static. Realism: reads as AI/acted (mugging, perfect wig, no gait), not a man walking and filming himself. Verdict: needs regeneration (or heavy virtual hand-held plus walk); voice tone NOT VERIFIED (no sound).
