@@ -752,3 +752,23 @@ FAIL: large crystal goblet/stem in the left foreground (x 0-270 of 1125, y 1250-
 Fix in prompt: "no glasses, goblets, crystal or stemware anywhere; the table holds only gold and silver dishes, candles in plain silver sticks; foreground left is a gold bowl or a candle stick"; "camera tilted down 25 deg, horizon rolled 7 deg right"; "he is chewing, jaw mid-chew, cheek slightly full".
 
 ## 07.11 owner: still 5b START taken as is ("делай как есть"); BRAK items (4 glasses/goblets in the frame, mouth closed not chewing, tilt about 10-15 deg not 25) go to the rework list; the glassware must be checked in the clip and cropped/covered in the edit if it appears.
+
+## QC TAKE_t5b_seedance.mp4 (Seedance 2.5 Lite 720p 5 s, 07.11, clip-inspector): BRAK as raw 5 s (eyes closed about 1.2 s, thumb about 1.5 s, no eating); usable 0-3.5 s
+Numbers (clip_qc, --face-ref K4_master_neutral_O8.png, --first t5b_start_4k.jpg, --mistake 4-5): 720x1278 24 fps 5.04 s. face median 0.797 / p10 0.744 PASS. sharp per second 596/452/357/375/432, min ratio 0.60 at 2 s (borderline, single, not 2 consecutive), last-third decay 0.28 PASS (limit 0.30). seams none PASS. motion frozen bg 0 %, still body 0 % PASS. first pin RMSE 0.047 PASS. join to prev t5a v2 0.228 (info).
+Eye (frames every 0.25 s + crops): identity same man (beige-silver wig, curled moustache, suns coat, beauty mark below the mouth at the viewer's right visible 3.5-4.5 s). No ghost, no text, no extra fingers seen, no phone drawn. GLASS: tall stemmed glass at left foreground (x 0-15 %) and flutes at right edge from about 4 s are present in every frame as in the still; NONE is lifted, drunk from, moved or animated (static, only camera shift); the king's hand at 2.25-2.75 s touches the plate area at the left, nothing reaches the mouth. Silver cloche and a servant's white-sleeved arm enter right at 1.0-1.5 s (room lives, OK). Wig-top margin during the tilt-up (2.5-3.5 s): min about 7 % of height (about 90 px), wig whole, PASS. Lens look: about 2.75-3.5 s (about 0.75 s, planned 3.2-3.8, about 0.4 s early) OK. Eyes CLOSED about 3.75-5.0 s (about 1.2 s and to the last frame; plan max 0.5 s at 4.2-4.6) FAIL, last frame = closed eyes, head tilted back (brief: never end on closed eyes; end should be hand with food at lips, eyes on lens). Mouth closed all clip, no chewing, no bite with food: the main action of the piece is MISSING. Phone thumb: big pink finger bottom-right (about 10-12 % width, tall) visible from about 3.5 s to the end (about 1.5 s; plan 0.5 s at 4.4-4.9) WARN; fingertip does not hide the face. Tilt from dishes up to the king at 2-3 s with focus softness is present and good; angle is down on the table, hand-held drift.
+Verdict BRAK for the full 5 s as raw. Use 0-3.5 s in the edit (tilt-up, lens look, cut before the eyes close and the thumb); or regenerate with: "he chews with a visible moving jaw and takes a bite from a fork raised to his lips at 2-3 s", "eyes stay OPEN, relish shown by a brow lift, eyes shut at most 0.4 s", "pink thumb enters only at 4.4-4.9 s", "last frame: food at the lips, eyes on the lens". The glassware stays on the rework list: crop or cover it in the edit.
+
+## Reference comparison TAKE_t5b_seedance.mp4 (07.11, reference-comparator, brief_t5_t7 BRIEF 5b)
+| metric | ref | ours | verdict |
+|--|--|--|--|
+| tool: frozen bg / still body / head fw/s | 0 / 0 / 0.19 | 0 / 0 / 0.5 | OK (motion) |
+| shots, cuts | cut at 23.6 | 1 shot, 5.04 s, 720x1278 24 fps | ok for a 5 s piece |
+| re-aim ON FRAMES (ref 3.0-4.5, 30-40 % in 1.5 s) | blur 0.5 s | at about 2.4-2.8 s, blur 0.3 s, king larger | OK, earlier than brief 1.8-3.2 is fine |
+| eyes open | open, changes 0.5-2 s | closed/lowered 0-2.4 and 3.7-5.0 (about 3.7 s of 5); open 2.7-3.6 | FAIL (brief: closed max 0.4 s at 4.2-4.7) |
+| lens look 3.2-3.8 | - | open-eyed chin-up about 2.7-3.5, hard to call a lens look | WARN |
+| chewing / swallow | HYPOTHESIS | not readable on frames | FAIL |
+| hand to mouth | HYPOTHESIS | white cuff right edge at about 2.3 s, hand low at 2.5; no food at the lips seen | WARN |
+| thumb | bottom right 12 %, 0.5 s at 4.4 | enters about 3.5, stays to 5.0, 15-20 % | FAIL |
+| phone mistakes | >= 1 | thumb only (too long); no dip/drop | WARN |
+| end pose | eyes up on lens, food at lips | eyes closed, head back | FAIL |
+Voice: no speech (none planned). Verdict: needs regeneration, or edit 2.4-3.7 s only.
