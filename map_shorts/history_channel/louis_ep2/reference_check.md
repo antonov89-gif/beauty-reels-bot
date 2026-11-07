@@ -772,3 +772,5 @@ Verdict BRAK for the full 5 s as raw. Use 0-3.5 s in the edit (tilt-up, lens loo
 | phone mistakes | >= 1 | thumb only (too long); no dip/drop | WARN |
 | end pose | eyes up on lens, food at lips | eyes closed, head back | FAIL |
 Voice: no speech (none planned). Verdict: needs regeneration, or edit 2.4-3.7 s only.
+
+## 07.11 owner: clip 5b ACCEPTED_FOR_EDIT as is ("норм, дальше"); use 2.4-3.7 s or trim the closed-eyes tail and crop the glassware/thumb; open items (no chewing, eyes closed 3.75 s to end, thumb 1.5 s, glasses) on the rework list.
