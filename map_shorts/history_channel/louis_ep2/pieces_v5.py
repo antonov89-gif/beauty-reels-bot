@@ -125,3 +125,8 @@ _rr(_a, "start", "On the table: only the gold plate, the gold candlesticks and t
 _rr(_a, "start", "face centre at 32 percent of the width,", "face centre at 36 percent of the width,")
 _rr(_a, "start", "(his head with the white wig about 34 percent of the width, his face about 22 percent, face centre at 76 percent of the width, sharp)", "(his head with the white wig about 32 percent of the width, his face about 21 percent, face centre at 73 percent of the width, sharp)")
 _rr(_a, "start", "both heads fully inside the frame with their wigs and about 5 percent free space at each edge.", "both heads fully inside the frame with all their wig curls and about 5 percent of empty background at each side edge.")
+
+# ===== end still A matches the accepted sunburst start (king face centre 36, Marcel 73) =====
+_rr(_a, "end", "(the king's face centre at 32 percent and Marcel's at 76 percent of the frame width)", "(the king's face centre at 36 percent and Marcel's at 73 percent of the frame width)")
+_rr(_a, "end", "no glass or crystal glass anywhere, no extra fingers, only one king.", "only one king.")
+_rr(_a, "end", "as he holds back a laugh, the cheeks slightly raised, the nostrils slightly flared; The heads move", "as he holds back a laugh, the cheeks slightly raised, the nostrils slightly flared. The heads move")
