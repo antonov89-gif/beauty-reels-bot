@@ -790,3 +790,5 @@ Eye: same man (silver wig, curled moustache, beauty mark below the mouth at the 
 Fix in the prompt: make the wig smaller (about 55 %: step the camera back, state "wig width about half the frame, clear wall margin at both sides"), explicitly "the whole picture tilted 14 degrees clockwise, the horizon and the wall verticals slanted" (or apply the 14 deg rotation as an edit and re-measure, with the top margin kept >= 15 % after cropping).
 
 ## 07.11 owner: still 5c START v2 taken as is ("дальше"); BRAK items (roll 2.6 deg instead of 14, wig 66% wide, side margins 15-18%) go to the rework list; the roll is built in the clip prompt / the edit.
+
+- 07.11 5c clip prompt deviations from the brief, deliberate: push-in 4% instead of 6% and laugh shake 4% instead of 8% (the pin has margins of only 12.5% top / 15-17% sides); the second line runs at about 3.8 words/s (the voice is laid in later, speed-up max 1.3).
