@@ -35,6 +35,8 @@ rep("his face fills about 35 percent of the frame width with its centre at 50 pe
 rep("rolled about 14 degrees to the right; ", "the whole picture is rotated 14 degrees clockwise so the vertical lines of the armchair lean 14 degrees to the right; ")
 rep("a servant in livery, a courtier's powdered wig and shoulder, and a lady with a fan. ", "a servant in livery carrying one covered silver dish, a courtier's powdered wig and shoulder, and a lady with a fan. ")
 rep("The table and the armchair hold only plates, gold dishes, silver platters, napkins and candle holders.", "The table and the armchair hold only plates, covered silver dishes, silver platters, napkins and candle holders.")
+
+rep("The table and the armchair hold only plates, covered silver dishes", "The table holds only plates, covered silver dishes")
 i = s.index('"""', 3)
 doc = ('"""Take 5 piece 5c START still on gpt-image-2.5-sunburst (non-Lite), 4K high 9:16, measured charge about $0.10 (preflight table pre-deduct $0.50). Setup S12 (from above, leaning back, eyes closed in a long happy sigh, hands on the belly). '
        'Refs in order: K4_master_neutral_O8.png, K4_angle_high_O13.png. Result: pilot_frames/anchors/t5c_start_sunburst_4k.jpg. Run: python3 gen_t5c_start_sunburst.py go\nBRIEF: briefs/brief_t5_t7.md\n"""')

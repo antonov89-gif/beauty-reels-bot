@@ -21,7 +21,7 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Around the edges of the frame: "
 "the carved gilded armchair and the candlelit gilded hall blurred, lit by wall sconces with the ceiling out of frame, and on the right and right-centre blurred figures far below: "
 "a servant in livery carrying one covered silver dish, a courtier's powdered wig and shoulder, and a lady with a fan. "
-"One king only, natural light rouge. The table and the armchair hold only plates, covered silver dishes, silver platters, napkins and candle holders. Clean picture with no text or lettering, no modern objects, only things of the 1680s. "
+"One king only, natural light rouge. The table holds only plates, covered silver dishes, silver platters, napkins and candle holders. Clean picture with no text or lettering, no modern objects, only things of the 1680s. "
 )
 
 body = {"model": "gpt-image-2.5-sunburst", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",
