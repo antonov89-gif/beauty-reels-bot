@@ -50,3 +50,34 @@ O1 is the best master candidate: neutral, frontal, even light, mouth closed, sha
 4. Wig-colour pass if silver-grey is kept.
 5. Hall-only plate without glass (the selfie's crystal glass must not be a ref).
 Honest limits: identity judged by eye and SFace only; the owner approves.
+
+## Part 2: O6-O9 (07.11.2026)
+| file | size | expr | sharp | detail | blocks | face w (%) | SFace vs O8 | vs O1 | vs A3 | wig R-B (A3=14, O1=41) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| O8 | 941x1672 | neutral front, slight smirk-lid | 992 | 6.04 | 1.03 | 35.4 | - | 0.833 | 0.776 | 35 |
+| O9 | 941x1672 | shocked, both eyes wide, symmetric | 816 | 5.74 | 1.03 | 35.5 | 0.825 | 0.828 | 0.747 | 31 |
+| O6 | 820x1456 | 3/4, smirk, hand with rings at cravat | 696 | 3.89 | 1.06 | 32.6 | 0.777 | 0.663 | 0.932 | 27 |
+| O7 | 720x1290 | selfie in hall | 281 | 3.66 | 1.35 (FAIL) | 29.3 | 0.770 | 0.708 | 0.877 | 51 (warm candle light) |
+Gate: O8, O9, O6 PASS; O7 FAILS blocks (1.35 > 1.20) and has glass, candles and ~20 real faces: NOT a reference for anything (at most a mood/composition idea in words).
+
+### O8 as master v4
+- Better than O1: sharpest of the set (992 vs 846), face 35 percent, mouth closed, no hand, symmetric light; SFace vs A3 0.776 (O1 0.692, below the 0.70 gate), vs O1 0.833. It bridges the O-set and the A3 lineage. Wig is white-grey with ringlets, visually cool silver-white; but numerically R-B 35 (O1 41, A3 14): the studio light adds a warm cast, so it is still warmer than A3. The text lock 'cool silver-grey and white, NOT beige' stays correct for prompts; do not call it 'warm'.
+- Verdict: O8 = master v4 (still 941x1672, no 2K: the best original that exists; an upscale/edit to 2K+ would need its own yes). Replace O1 as master; O1 stays as a backup.
+- Eye check O8: beauty mark on the VIEWER'S RIGHT under the mouth, moustache tips curled up, grey-green eyes, heavy lids (a mild smirk-bored look, so O8 is also a usable 'bored' base), age reads about 45.
+
+### O9 (shock)
+Good expression card: both eyes wide and symmetric (O2 had one eye), SFace 0.825 vs O8, same wig, mark on viewer's right. Use O9 for shock beats, not O2. Slight risk: forehead wrinkles and wide eyes age him; say 'brief' in prompts.
+
+### O6 and O7 drift check
+- O6 and O7 are the A3 lineage (SFace vs A3 0.93 and 0.88), NOT the O1/O8 lineage (vs O1 0.66 and 0.71): face is a bit longer/heavier with deeper lines and a slightly bigger nose/jowl; wig colder grey (O6 R-B 27, a darker grey-silver than O8). So the owner's own sets hold two faces: A3/O6/O7 (older, heavier) and O1/O8/O9/O4 (leaner, 45). Both are the same character by eye (mark on viewer's right, moustache, rouge, costume), but a call must not mix them. Pick the O8 lineage and keep A3/O6/O7 out of the same call.
+- O6: usable only as a costume/props ref (ring hand, rings: ruby and pearl, lace cuff, cravat); the hand is on the cravat. Not an identity ref. Smirk and 3/4 beat idea: its face is NOT O8 lineage.
+- O7: not usable (see gate, glass, real faces, face 29 percent).
+
+### Updated recommendation
+- Master: K4_master_neutral_O8 (O8). Identity ref 1 always O8.
+- Expression set on disk: neutral = O8; shock = O9; stern = O4; sad+pea = O5 (prop only); closed-eye content = O3 (not a ref); O2 retired. O6 = ring/cravat props only.
+- Still missing as FILES: closed smirk (O8 lid is the nearest; a proper 3/4 smirk in the O8 face), bored heavy-lid proper, big laugh with teeth, soft smile, profile (over the shoulder), 3/4 left and right, low and high angles, full-costume (chest-down) sheet. The 5 inline-only images sent earlier (profile over the shoulder, smirk, laugh, soft smile, bored) are still NOT on disk: not measured, not usable. Ask the owner for them as FILES.
+- Descriptor block (order fixed, matches O8): 'a man of about 45 with a pale complexion, soft pink rouge on the cheeks and forehead lines, heavy-lidded grey-green eyes, a long straight nose, a narrow face, a thin waxed moustache with curled upturned tips, one small dark beauty mark below the mouth on the RIGHT side of the image (viewer's right); a very tall voluminous powdered wig in cool silver-grey and white, about twice the width of his face, with side roll curls and long ringlets down the chest, NOT beige, cream or golden; scarlet velvet coat with gold sun-face embroidery, white lace cravat'. Age lock: 'about 45', never 'young', 'old', 'heavy'.
+- Reference order: image 1 = O8 (identity), image 2 = the matching expression/angle file of the same lineage (O9 shock, O4 stern; none for others), image 3 = hall-only plate ('ignore people, glasses and chandelier' if not a pure crop). Max 2 identity images. Do not attach A3, O6, O7.
+- Copied (no edits): louis_ep2/refs/K4_master_neutral_O8.png, K4_expr_shock_O9.png. Still to copy when the owner confirms: K4_expr_stern_O4.png, K4_expr_sad_pea_O5.png (from O4/O5). Do not use O1 as master any more.
+Honest limits: identity judged by eye and SFace; the wig colour numbers are a sample of the wig top under studio light; only the owner approves.

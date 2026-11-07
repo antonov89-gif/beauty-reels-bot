@@ -34,3 +34,5 @@ Read by pregen-reviewer BEFORE it reviews a video prompt; appended by reference-
 - 06.11 R10_hall_clean is not clean (glasses, chandelier, faces): always say "ignore its people, glasses and chandelier" until a real hall-only plate exists.
 - (07.11 owner set O1-O5) Owner portraits O1-O5 (941x1672) are one man (SFace 0.78-0.83 vs O1) but only 0.65-0.73 vs A3: wig is warm beige (not the locked cool silver-grey), face about 45. Never mix A3 and O-set refs in one call; decide wig/age lock first.
 - (07.11) O-set has frontal tiles only (no 3/4, profile, low/high) and chest cropped; O3 closed eyes is not an identity ref. Missing smirk, bored, laugh: make from the master; inline-only images must be sent as files to be measured.
+- (07.11, card) Master v4 = O8 (sharp 992, SFace vs A3 0.776, vs O1 0.833). The owner's files hold two face lineages: A3/O6/O7 (older, heavier; SFace between them 0.86-0.93) and O1/O4/O8/O9 (leaner, about 45; 0.82-0.83); never attach both in one call.
+- (07.11, card) O7 (hall selfie) fails the block gate (1.35) and carries glass and real faces: never a reference. O6 = props only (ring hand). Shock card = O9 (symmetric), not O2.
