@@ -28,3 +28,10 @@ assert "extra fingers" not in P["t1na"]["start"]
 a = "the thumb is gone from the lower right corner (a strip of the scarlet coat and lace at the lower edge instead);"
 assert a in P["t1na"]["end"]
 P["t1na"]["end"] = P["t1na"]["end"].replace(a, "the lower right corner stays as in the photo, blurred hall and lace;").replace("no extra fingers, ", "")
+P["t1na"]["end_extra"] = ["K4_master_neutral_O8.png"]
+e = P["t1na"]["end"]
+e = e.replace("Edit the photo: ", "Reference 1 is the photo to edit; reference 2 is identity only (the neutral frontal master): use it only to keep the face, moustache, beauty mark on the viewer's right of the mouth and rouge, and never copy its pose, angle or framing. Edit the photo (reference 1): ", 1)
+e = e.replace("the lower right corner stays as in the photo, blurred hall and lace;", "the lower right corner stays as in the photo, blurred hall, fan and candles;")
+e = e.replace("the lips closed in a smug faint smile, the chin slightly lifted.", "the lips closed in a smug faint smile, the head turned about 5 degrees toward his left, the chin lifted, the gaze straight into the lens (the head moves 3 to 5 percent).")
+assert "reference 2 is identity only" in e and "fan and candles" in e and "5 degrees toward his left" in e
+P["t1na"]["end"] = e

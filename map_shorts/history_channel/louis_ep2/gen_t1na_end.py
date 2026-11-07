@@ -4,15 +4,18 @@ sys.path.insert(0, "/home/claude/v51")
 import apipod
 RAW = "https://raw.githubusercontent.com/antonov89-gif/beauty-reels-bot/claude/funny-bardeen-uj4fiv/map_shorts/history_channel/louis_ep2/refs/"
 H0 = "/home/user/beauty-reels-bot/map_shorts/history_channel/louis_ep2/"
-prompt = ("Edit the photo: "
+prompt = ("Reference 1 is the photo to edit; "
+"reference 2 is identity only (the neutral frontal master): "
+"use it only to keep the face, moustache, beauty mark on the viewer's right of the mouth and rouge, and never copy its pose, angle or framing. "
+"Edit the photo (reference 1): "
 "keep EXACTLY the same low selfie angle from under the chin, the same roll, the same ceiling and cornice behind, the same wig, coat and cravat. "
 "Keep the man's face, age, skin, moustache, beauty mark on the viewer's right of the mouth and rouge EXACTLY (do not redraw his identity); "
 "the wig keeps its silver-grey and white (a light tint from the scene light is fine). "
 "Change ONLY the distance and the expression: "
 "the camera has been pulled back a little, so that his head with the wig now fills about 80 percent of the frame width (his face about 36 percent) with its centre at 50 percent, the same painted ceiling and gold cornice, the same blurred shapes in the lower corners; "
-"the lower right corner stays as in the photo, blurred hall and lace; "
+"the lower right corner stays as in the photo, blurred hall, fan and candles; "
 "he has seen himself and is pleased: "
-"heavy lids, the eyes now on the lens, the lips closed in a smug faint smile, the chin slightly lifted. "
+"heavy lids, the eyes now on the lens, the lips closed in a smug faint smile, the head turned about 5 degrees toward his left, the chin lifted, the gaze straight into the lens (the head moves 3 to 5 percent). "
 "QUALITY: "
 "keep the full resolution, sharpness and fine detail of the original photo: "
 "the face, the moustache hairs, the wig curls, the lace and the gold embroidery must stay exactly as crisp and detailed as in the photo; "
@@ -23,7 +26,7 @@ prompt = ("Edit the photo: "
 )
 
 body = {"model": "gpt-image-2.5-sunburst-lite", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",
-        "image_urls": [RAW + "t1na_start_4k.jpg"]}
+        "image_urls": [RAW + "t1na_start_4k.jpg", RAW + "K4_master_neutral_O8.png"]}
 open(H0 + "t1na_end_prompt.txt", "w").write(prompt)
 if len(sys.argv) > 1 and sys.argv[1] == "go":
     r = apipod.submit("images", body); print(r)
