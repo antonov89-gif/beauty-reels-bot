@@ -36,3 +36,7 @@ Read by pregen-reviewer BEFORE it reviews a video prompt; appended by reference-
 - (07.11) O-set has frontal tiles only (no 3/4, profile, low/high) and chest cropped; O3 closed eyes is not an identity ref. Missing smirk, bored, laugh: make from the master; inline-only images must be sent as files to be measured.
 - (07.11, card) Master v4 = O8 (sharp 992, SFace vs A3 0.776, vs O1 0.833). The owner's files hold two face lineages: A3/O6/O7 (older, heavier; SFace between them 0.86-0.93) and O1/O4/O8/O9 (leaner, about 45; 0.82-0.83); never attach both in one call.
 - (07.11, card) O7 (hall selfie) fails the block gate (1.35) and carries glass and real faces: never a reference. O6 = props only (ring hand). Shock card = O9 (symmetric), not O2.
+
+## Identity lessons (angles O10-O13, 07.11)
+- Angle tiles O10-O13 (941x1672) pass the gate and are the O8 lineage; attach master O8 as ref 1 and ONE matching tile as ref 2 (profile O10, 3/4 right O11, low O12, high O13); never mirror a tile (beauty mark flips).
+- O10/O11 wigs are warmer (R-B 41-44) than the lock: keep 'cool silver-grey and white, NOT beige' in the prompt. 3/4 LEFT tile is missing (S2).
