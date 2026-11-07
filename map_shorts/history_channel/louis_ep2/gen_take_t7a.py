@@ -1,5 +1,5 @@
 """Take 7 piece 7a I was wondering what else to show you (setup S16, three-quarter right): CLIP (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Kling 4.0 i2v 720p 10 s = $1.45 (0.145 x 10). first = t7a_start_4k, last = t7a_end_4k. Lines (script 7.3): LOUIS (OWNER): "[leans back, thinks, looks around the hall] So... I was wondering what else to show you here. [pause, a short laugh] Ha. Probably... nothing." Motion score per PROMPT_CAMERA_LESSONS.md. Runs only with the argument go. One call, no retries without a new yes.
-BRIEF: briefs/brief_t7a.md
+BRIEF: briefs/brief_t5_t7.md
 """
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")

@@ -1,5 +1,5 @@
 """Take 7 piece 7b he stands, the crowd bows, bye, subscribe (setup S14, low swing up): CLIP (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Kling 4.0 i2v 720p 14 s = $2.03 (0.145 x 14). first = t7b_start_4k, last = t7b_end_4k. Lines (script 7.3): LOUIS (OWNER): "[stands up, the crowd bows] That's all. Bye. I'm busy. [beat, points at the lens] ...And you: subscribe to my stunning channel. And like. [pause, a lazy wave of the hand, he looks away, bored] Or... whatever." Hard cut on "Or... whatever." to the end card. Motion score per PROMPT_CAMERA_LESSONS.md. Runs only with the argument go. One call, no retries without a new yes.
-BRIEF: briefs/brief_t7b.md
+BRIEF: briefs/brief_t5_t7.md
 """
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")

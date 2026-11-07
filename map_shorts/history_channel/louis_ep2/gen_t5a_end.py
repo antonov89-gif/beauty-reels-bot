@@ -1,5 +1,5 @@
 """Take 5 piece 5a salad, ham, pastry, fruit, peas (setup S11): END still, an EDIT of the start still (same camera, different pose; prepared 06.11, NOT run until the owner's yes). One ref = refs/t5a_start_4k.jpg (the 4K original). One call, about $0.12. Run: python3 gen_t5a_end.py go
-BRIEF: briefs/brief_t5a.md
+BRIEF: briefs/brief_t5_t7.md
 """
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")

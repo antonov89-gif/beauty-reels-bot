@@ -1,5 +1,5 @@
 """Take 5 piece 5a salad, ham, pastry, fruit, peas (setup S11): CLIP (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Kling 4.0 i2v 720p 12 s = $1.74 (0.145 x 12). first = t5a_start_4k, last = t5a_end_4k. Lines (script 7.3): LOUIS: "Then salad, ham, pastry, fruit. [gives up counting] In under an hour. [holds a pea to the lens, softly] And peas. The court talks of nothing else. [eats it, delighted]" Motion score per PROMPT_CAMERA_LESSONS.md. Runs only with the argument go. One call, no retries without a new yes.
-BRIEF: briefs/brief_t5a.md
+BRIEF: briefs/brief_t5_t7.md
 """
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")

@@ -1,5 +1,5 @@
 """Take 5 piece 5c Ohh, I wasn't born to work (setup S12, from above): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: LOUIS (OWNER): "[leans back, hands on the belly, a long happy sigh] Ohh... I wasn't born to work. I was born for happiness, love, pleasure... and a good rest. [a joyful laugh at his own line]" GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: K4_master_neutral_O8.png, K4_angle_high_O13.png. One call, about $0.12. Run: python3 gen_t5c_start.py go
-BRIEF: briefs/brief_t5c.md
+BRIEF: briefs/brief_t5_t7.md
 """
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")

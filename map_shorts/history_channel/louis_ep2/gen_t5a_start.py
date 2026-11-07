@@ -1,5 +1,5 @@
 """Take 5 piece 5a salad, ham, pastry, fruit, peas (setup S11): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: LOUIS: "Then salad, ham, pastry, fruit. [gives up counting] In under an hour. [holds a pea to the lens, softly] And peas. The court talks of nothing else. [eats it, delighted]" GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: K4_master_neutral_O8.png, K4_angle_low_O12.png, R10_hall_clean.jpg. One call, about $0.12. Run: python3 gen_t5a_start.py go
-BRIEF: briefs/brief_t5a.md
+BRIEF: briefs/brief_t5_t7.md
 """
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
