@@ -129,3 +129,8 @@ _rr(_a, "start", "both heads fully inside the frame with their wigs and about 5 
 # ===== end still A matches the accepted sunburst start (king face centre 36, Marcel 73) =====
 _rr(_a, "end", "(the king's face centre at 32 percent and Marcel's at 76 percent of the frame width)", "(the king's face centre at 36 percent and Marcel's at 73 percent of the frame width)")
 _rr(_a, "end", "as he holds back a laugh, the cheeks slightly raised, the nostrils slightly flared; The heads move", "as he holds back a laugh, the cheeks slightly raised, the nostrils slightly flared. The heads move")
+
+# ===== clip A adapted to the accepted pins (end pin: Marcel's eyes on the spill, king's closed smirk, pool not touching the cuff) =====
+_rr(_a, "clip", "Marcel keeps both hands raised open (trembling slightly) and looks at the king;", "Marcel keeps both hands raised open (trembling slightly), looks at the king, and in the last second his eyes drop to the spill;")
+_rr(_a, "clip", "the red wine pours over the cloth and stops at the edge of the king's cuff", "the red wine pours over the cloth in a long stream toward the front edge of the table and stops just short of the king's hand")
+_rr(_a, "clip", "the corner of the king's mouth tightens and lifts, his lips pressed, the laugh held back, his eyes shining,", "the corner of the king's mouth tightens and lifts into a closed-mouth smirk, his lips pressed, the laugh held back, his eyes shining,")
