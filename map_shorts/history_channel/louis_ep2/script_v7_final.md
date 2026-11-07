@@ -34,3 +34,7 @@ Hard cut on "Or... whatever." to the end card: THE SUN IS NEVER LATE.
 
 ## Cuts from 7.0 (to fit 3:00)
 Removed: T1 "Now."; T2 "Most of you would get in. Probably."; T3 "Right. The food." and "to everyone"; T4 "You'll notice", the second "Leave it", "Marcel bumps the table" line kept as action only; T5 "After that..." and the finger counting speech; (the 7.1 Take 7 teaser and outro were replaced on 05.11 by the owner's ending).
+
+
+## Take 4 v3 (owner 07.11, replaces the Take 4 block above from the splash on)
+Marcel himself spills the wine (a natural accident on the table and the cuff); he looks into the camera, then at the king: MARCEL (quietly): "Sorry, Sire." The king turns his head slowly, a silent beat, laughs for real: LOUIS: "Nobody saw anything." [to Marcel, flat] "And nobody will see you again." [pause] "Joking." Plan: take4b_v3_plan_2026-11-07.md.
