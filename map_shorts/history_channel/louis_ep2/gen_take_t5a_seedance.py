@@ -42,7 +42,7 @@ prompt = (
     "Acting limits: the eyes are open except the one delight beat, the face stays natural, five natural fingers on each hand. "
     "All moves are by hand: no whip pans, no zoom, no gimbal, no dolly. "
     "Sound: only the low murmur of a large hall, fabric, cutlery, candle flicker, breath; no music at all. "
-    "Clean picture with no text or captions, only things of the 1680s, one king in the frame. "
+    "Clean picture with no text or captions, no modern objects, only things of the 1680s, one king in the frame. "
 )
 
 body = {"model": "seedance-2.5-lite-i2v", "prompt": prompt, "image_urls": [RAW + "t5a_start_4k.jpg"],
