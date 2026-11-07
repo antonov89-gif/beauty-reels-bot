@@ -198,3 +198,4 @@ Kling 3.0 i2v 720p no audio 10 s = $0.80 (page price, unproven) vs Kling 4.0 $1.
 | 05.11 | Ep.2 T4b-1 clip (Take 4 wine and laugh; Kling 4.0 i2v 720p 10 s, pins T4b start / end), owner "Да" | $1.45 (usage.cost) |
 | 05.11 | Ep.2 running TOTAL | $40.26 |
 | 06.11 | Ep.2 T4b-1 clip retake v2: NOT SUBMITTED (provider answered HTTP 500 "insufficient quota": the APIpod balance is empty), no charge | $0 |
+07.11 Ep.2 t1na start still (GPT Image 2.5 Sunburst Lite 4K): $0.12 (APIpod; owner yes 07.11). Ep.2 running total $40.38
