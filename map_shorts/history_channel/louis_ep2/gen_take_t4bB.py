@@ -1,4 +1,6 @@
-"""Take 4b v3 piece B: the king laughs, 'Nobody saw anything... And nobody will see you again... Joking' (setup S9b, from the side): CLIP (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Kling 4.0 i2v 720p 10 s = $1.45 (0.145 x 10). first = t4bB_start_4k, last = t4bB_end_4k. Lines (script 7.3): LOUIS: "Nobody saw anything." [turns to Marcel; quiet, flat] "And nobody will see you again." [Marcel freezes; pause] "Joking."  (the king first stares, then laughs for real) Motion score per PROMPT_CAMERA_LESSONS.md. Runs only with the argument go. One call, no retries without a new yes."""
+"""Take 4b v3 piece B: the king laughs, 'Nobody saw anything... And nobody will see you again... Joking' (setup S9b, from the side): CLIP (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Kling 4.0 i2v 720p 10 s = $1.45 (0.145 x 10). first = t4bB_start_4k, last = t4bB_end_4k. Lines (script 7.3): LOUIS: "Nobody saw anything." [turns to Marcel; quiet, flat] "And nobody will see you again." [Marcel freezes; pause] "Joking."  (the king first stares, then laughs for real) Motion score per PROMPT_CAMERA_LESSONS.md. Runs only with the argument go. One call, no retries without a new yes.
+BRIEF: briefs/brief_t4b_B.md
+"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod

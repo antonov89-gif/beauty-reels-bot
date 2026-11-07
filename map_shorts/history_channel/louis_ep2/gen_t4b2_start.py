@@ -1,4 +1,6 @@
-"""Take 4 piece 4b-2 Marcel through the wine (setup S10): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: LOUIS (off screen): "And nobody will see you again." [Marcel freezes; pause] "Joking." MARCEL (quietly): "Sorry, Sire." GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: R8_marcel_full.jpg, R10_hall_clean.jpg. One call, about $0.12. Run: python3 gen_t4b2_start.py go"""
+"""Take 4 piece 4b-2 Marcel through the wine (setup S10): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: LOUIS (off screen): "And nobody will see you again." [Marcel freezes; pause] "Joking." MARCEL (quietly): "Sorry, Sire." GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: R8_marcel_full.jpg, R10_hall_clean.jpg. One call, about $0.12. Run: python3 gen_t4b2_start.py go
+BRIEF: briefs/brief_t4b2.md
+"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod

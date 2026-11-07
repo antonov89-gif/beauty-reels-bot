@@ -1,4 +1,6 @@
-"""Take 4 piece 4b-2 Marcel through the wine (setup S10): CLIP (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Kling 4.0 i2v 720p 8 s = $1.16 (0.145 x 8). first = t4b2_start_4k, last = t4b2_end_4k. Lines (script 7.3): LOUIS (off screen): "And nobody will see you again." [Marcel freezes; pause] "Joking." MARCEL (quietly): "Sorry, Sire." Motion score per PROMPT_CAMERA_LESSONS.md. Runs only with the argument go. One call, no retries without a new yes."""
+"""Take 4 piece 4b-2 Marcel through the wine (setup S10): CLIP (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Kling 4.0 i2v 720p 8 s = $1.16 (0.145 x 8). first = t4b2_start_4k, last = t4b2_end_4k. Lines (script 7.3): LOUIS (off screen): "And nobody will see you again." [Marcel freezes; pause] "Joking." MARCEL (quietly): "Sorry, Sire." Motion score per PROMPT_CAMERA_LESSONS.md. Runs only with the argument go. One call, no retries without a new yes.
+BRIEF: briefs/brief_t4b2.md
+"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod

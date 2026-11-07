@@ -1,4 +1,6 @@
-"""Take 1 NEW piece 1c: Some of you write that I eat too much ... before your eyes (setup S2b, chest height from his left, diagonal along the table): END still, an EDIT of the start still (same camera, different pose; prepared 06.11, NOT run until the owner's yes). One ref = refs/t1nc_start_4k.jpg (the 4K original). One call, about $0.12. Run: python3 gen_t1nc_end.py go"""
+"""Take 1 NEW piece 1c: Some of you write that I eat too much ... before your eyes (setup S2b, chest height from his left, diagonal along the table): END still, an EDIT of the start still (same camera, different pose; prepared 06.11, NOT run until the owner's yes). One ref = refs/t1nc_start_4k.jpg (the 4K original). One call, about $0.12. Run: python3 gen_t1nc_end.py go
+BRIEF: briefs/brief_t1nc.md
+"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod

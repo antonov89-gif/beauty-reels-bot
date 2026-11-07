@@ -1,4 +1,6 @@
-"""Take 4b v3 piece A: Marcel spills the wine, looks at the camera and at the king, 'Sorry, Sire' (setup S9b, from the side): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: MARCEL (quietly): "Sorry, Sire." [Marcel stumbles, the goblet tips, the wine runs over the tablecloth and a little over the king's cuff; he freezes, looks into the camera, then at the king; the king slowly turns his head to Marcel, blank.] GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: K4_master_neutral_O8.png, R8_marcel_full.jpg, R10_hall_clean.jpg. One call, about $0.12. Run: python3 gen_t4bA_start.py go"""
+"""Take 4b v3 piece A: Marcel spills the wine, looks at the camera and at the king, 'Sorry, Sire' (setup S9b, from the side): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: MARCEL (quietly): "Sorry, Sire." [Marcel stumbles, the goblet tips, the wine runs over the tablecloth and a little over the king's cuff; he freezes, looks into the camera, then at the king; the king slowly turns his head to Marcel, blank.] GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: K4_master_neutral_O8.png, R8_marcel_full.jpg, R10_hall_clean.jpg. One call, about $0.12. Run: python3 gen_t4bA_start.py go
+BRIEF: briefs/brief_t4b_A.md
+"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod

@@ -1,4 +1,6 @@
-"""Take 1 NEW piece 1c: Some of you write that I eat too much ... before your eyes (setup S2b, chest height from his left, diagonal along the table): CLIP (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Kling 4.0 i2v 720p 16 s = $2.32 (0.145 x 16). first = t1nc_start_4k, last = t1nc_end_4k. Lines (script 7.3): LOUIS: "[a satisfied sigh] Some of you write that I eat too much. I read it. [sniffs] Of course, that's not true. Every day I feast in front of the court. Today... before your eyes." Motion score per PROMPT_CAMERA_LESSONS.md. Runs only with the argument go. One call, no retries without a new yes."""
+"""Take 1 NEW piece 1c: Some of you write that I eat too much ... before your eyes (setup S2b, chest height from his left, diagonal along the table): CLIP (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Kling 4.0 i2v 720p 16 s = $2.32 (0.145 x 16). first = t1nc_start_4k, last = t1nc_end_4k. Lines (script 7.3): LOUIS: "[a satisfied sigh] Some of you write that I eat too much. I read it. [sniffs] Of course, that's not true. Every day I feast in front of the court. Today... before your eyes." Motion score per PROMPT_CAMERA_LESSONS.md. Runs only with the argument go. One call, no retries without a new yes.
+BRIEF: briefs/brief_t1nc.md
+"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod

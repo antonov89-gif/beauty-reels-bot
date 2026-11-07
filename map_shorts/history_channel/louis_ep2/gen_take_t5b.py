@@ -1,4 +1,6 @@
-"""Take 5 piece 5b Marcel films the laden table and the king eating (no words): CLIP (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Kling 4.0 i2v 720p 5 s = $0.72 (0.145 x 5). first = t5b_start_4k, last = t5b_end_4k. Lines (script 7.3): [Marcel films the laden table and the king eating, about 4 s, no words: chewing, a happy hum, the murmur of the crowd] Motion score per PROMPT_CAMERA_LESSONS.md. Runs only with the argument go. One call, no retries without a new yes."""
+"""Take 5 piece 5b Marcel films the laden table and the king eating (no words): CLIP (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Kling 4.0 i2v 720p 5 s = $0.72 (0.145 x 5). first = t5b_start_4k, last = t5b_end_4k. Lines (script 7.3): [Marcel films the laden table and the king eating, about 4 s, no words: chewing, a happy hum, the murmur of the crowd] Motion score per PROMPT_CAMERA_LESSONS.md. Runs only with the argument go. One call, no retries without a new yes.
+BRIEF: briefs/brief_t5b.md
+"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod

@@ -1,4 +1,6 @@
-"""Take 6 the verdict (setup S13, frontal close, slow push-in): CLIP (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Kling 4.0 i2v 720p 15 s = $2.17 (0.145 x 15). first = t6_start_4k, last = t6_end_4k. Lines (script 7.3): LOUIS (OWNER): "[wipes his fingers, sits up, glances at the bones on his plate, pushes the plate a little away] So. Do I eat too much? ...No. I eat like a king. [chin up] Don't be afraid of getting fat. Be afraid of being a loser. [haughty laugh]" Motion score per PROMPT_CAMERA_LESSONS.md. Runs only with the argument go. One call, no retries without a new yes."""
+"""Take 6 the verdict (setup S13, frontal close, slow push-in): CLIP (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Kling 4.0 i2v 720p 15 s = $2.17 (0.145 x 15). first = t6_start_4k, last = t6_end_4k. Lines (script 7.3): LOUIS (OWNER): "[wipes his fingers, sits up, glances at the bones on his plate, pushes the plate a little away] So. Do I eat too much? ...No. I eat like a king. [chin up] Don't be afraid of getting fat. Be afraid of being a loser. [haughty laugh]" Motion score per PROMPT_CAMERA_LESSONS.md. Runs only with the argument go. One call, no retries without a new yes.
+BRIEF: briefs/brief_t6.md
+"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod

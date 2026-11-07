@@ -1,4 +1,6 @@
-"""Take 7 piece 7a I was wondering what else to show you (setup S16, three-quarter right): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: LOUIS (OWNER): "[leans back, thinks, looks around the hall] So... I was wondering what else to show you here. [pause, a short laugh] Ha. Probably... nothing." GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: K4_master_neutral_O8.png, K4_angle_34right_O11.png, R10_hall_clean.jpg. One call, about $0.12. Run: python3 gen_t7a_start.py go"""
+"""Take 7 piece 7a I was wondering what else to show you (setup S16, three-quarter right): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: LOUIS (OWNER): "[leans back, thinks, looks around the hall] So... I was wondering what else to show you here. [pause, a short laugh] Ha. Probably... nothing." GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: K4_master_neutral_O8.png, K4_angle_34right_O11.png, R10_hall_clean.jpg. One call, about $0.12. Run: python3 gen_t7a_start.py go
+BRIEF: briefs/brief_t7a.md
+"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod

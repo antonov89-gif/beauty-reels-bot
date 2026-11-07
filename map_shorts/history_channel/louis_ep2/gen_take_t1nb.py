@@ -1,4 +1,6 @@
-"""Take 1 NEW piece 1b: And this is my channel / Sun King / handsome (setup S2, table height, rolled): CLIP (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Kling 4.0 i2v 720p 10 s = $1.45 (0.145 x 10). first = t1nb_start_4k, last = t1nb_end_4k. Lines (script 7.3): LOUIS: "And this is my channel. They call me the Sun King. Yes... I'm that handsome. [a satisfied sigh]" Motion score per PROMPT_CAMERA_LESSONS.md. Runs only with the argument go. One call, no retries without a new yes."""
+"""Take 1 NEW piece 1b: And this is my channel / Sun King / handsome (setup S2, table height, rolled): CLIP (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Kling 4.0 i2v 720p 10 s = $1.45 (0.145 x 10). first = t1nb_start_4k, last = t1nb_end_4k. Lines (script 7.3): LOUIS: "And this is my channel. They call me the Sun King. Yes... I'm that handsome. [a satisfied sigh]" Motion score per PROMPT_CAMERA_LESSONS.md. Runs only with the argument go. One call, no retries without a new yes.
+BRIEF: briefs/brief_t1nb.md
+"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod

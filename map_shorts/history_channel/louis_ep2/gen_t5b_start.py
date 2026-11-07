@@ -1,4 +1,6 @@
-"""Take 5 piece 5b Marcel films the laden table and the king eating (no words): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: [Marcel films the laden table and the king eating, about 4 s, no words: chewing, a happy hum, the murmur of the crowd] GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: K4_master_neutral_O8.png, R10_hall_clean.jpg. One call, about $0.12. Run: python3 gen_t5b_start.py go"""
+"""Take 5 piece 5b Marcel films the laden table and the king eating (no words): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: [Marcel films the laden table and the king eating, about 4 s, no words: chewing, a happy hum, the murmur of the crowd] GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: K4_master_neutral_O8.png, R10_hall_clean.jpg. One call, about $0.12. Run: python3 gen_t5b_start.py go
+BRIEF: briefs/brief_t5b.md
+"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod

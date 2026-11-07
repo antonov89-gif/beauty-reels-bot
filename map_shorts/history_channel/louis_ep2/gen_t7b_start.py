@@ -1,4 +1,6 @@
-"""Take 7 piece 7b he stands, the crowd bows, bye, subscribe (setup S14, low swing up): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: LOUIS (OWNER): "[stands up, the crowd bows] That's all. Bye. I'm busy. [beat, points at the lens] ...And you: subscribe to my stunning channel. And like. [pause, a lazy wave of the hand, he looks away, bored] Or... whatever." Hard cut on "Or... whatever." to the end card. GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: K4_master_neutral_O8.png, K4_angle_low_O12.png, R10_hall_clean.jpg. One call, about $0.12. Run: python3 gen_t7b_start.py go"""
+"""Take 7 piece 7b he stands, the crowd bows, bye, subscribe (setup S14, low swing up): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: LOUIS (OWNER): "[stands up, the crowd bows] That's all. Bye. I'm busy. [beat, points at the lens] ...And you: subscribe to my stunning channel. And like. [pause, a lazy wave of the hand, he looks away, bored] Or... whatever." Hard cut on "Or... whatever." to the end card. GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: K4_master_neutral_O8.png, K4_angle_low_O12.png, R10_hall_clean.jpg. One call, about $0.12. Run: python3 gen_t7b_start.py go
+BRIEF: briefs/brief_t7b.md
+"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod

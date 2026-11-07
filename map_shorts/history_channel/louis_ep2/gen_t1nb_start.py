@@ -1,4 +1,6 @@
-"""Take 1 NEW piece 1b: And this is my channel / Sun King / handsome (setup S2, table height, rolled): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: LOUIS: "And this is my channel. They call me the Sun King. Yes... I'm that handsome. [a satisfied sigh]" GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: K4_master_neutral_O8.png. One call, about $0.12. Run: python3 gen_t1nb_start.py go"""
+"""Take 1 NEW piece 1b: And this is my channel / Sun King / handsome (setup S2, table height, rolled): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: LOUIS: "And this is my channel. They call me the Sun King. Yes... I'm that handsome. [a satisfied sigh]" GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: K4_master_neutral_O8.png. One call, about $0.12. Run: python3 gen_t1nb_start.py go
+BRIEF: briefs/brief_t1nb.md
+"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod

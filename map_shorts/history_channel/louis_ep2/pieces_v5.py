@@ -45,3 +45,6 @@ P["t4bB"] = dict(
 )
 P["t4bA"]["end_extra"] = ["K4_master_neutral_O8.png", "R8_marcel_full.jpg"]
 P["t4bB"]["end_extra"] = ["K4_master_neutral_O8.png", "R8_marcel_full.jpg"]
+
+P["t4bA"]["brief"] = "briefs/brief_t4b_A.md"
+P["t4bB"]["brief"] = "briefs/brief_t4b_B.md"

@@ -1,4 +1,6 @@
-"""Take 1 NEW piece 1a: Is it on / Ah there I am / Bonjour / Welcome to Versailles (setup S1, extreme low selfie): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: LOUIS: "[phone too close, muffled] Is it... is it on? [pulls it back, sees himself, pleased] Ah. There I am. [clears throat] Bonjour. I am Louis, King of France. Welcome to Versailles." GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: K4_master_neutral_O8.png, K4_angle_low_O12.png. One call, about $0.12. Run: python3 gen_t1na_start.py go"""
+"""Take 1 NEW piece 1a: Is it on / Ah there I am / Bonjour / Welcome to Versailles (setup S1, extreme low selfie): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: LOUIS: "[phone too close, muffled] Is it... is it on? [pulls it back, sees himself, pleased] Ah. There I am. [clears throat] Bonjour. I am Louis, King of France. Welcome to Versailles." GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: K4_master_neutral_O8.png, K4_angle_low_O12.png. One call, about $0.12. Run: python3 gen_t1na_start.py go
+BRIEF: briefs/brief_t1na.md
+"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod

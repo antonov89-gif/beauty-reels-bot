@@ -1,4 +1,6 @@
-"""Take 1 NEW piece 1a: Is it on / Ah there I am / Bonjour / Welcome to Versailles (setup S1, extreme low selfie): END still, an EDIT of the start still (same camera, different pose; prepared 06.11, NOT run until the owner's yes). One ref = refs/t1na_start_4k.jpg (the 4K original). One call, about $0.12. Run: python3 gen_t1na_end.py go"""
+"""Take 1 NEW piece 1a: Is it on / Ah there I am / Bonjour / Welcome to Versailles (setup S1, extreme low selfie): END still, an EDIT of the start still (same camera, different pose; prepared 06.11, NOT run until the owner's yes). One ref = refs/t1na_start_4k.jpg (the 4K original). One call, about $0.12. Run: python3 gen_t1na_end.py go
+BRIEF: briefs/brief_t1na.md
+"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod

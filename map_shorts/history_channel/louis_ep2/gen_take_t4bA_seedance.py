@@ -1,4 +1,6 @@
-"""Take 4b v3 piece A CLIP on Seedance 2.5 LITE i2v (owner 07.11: "Давай делать в Seedance 2.5 литл"): first = t4bA_start_4k.jpg, last = t4bA_end_4k.jpg (image_urls[0] first frame, [1] last-frame constraint; APIpod spec seedance--2-5-lite-image-to-video), 720p only, 10 s, $0.15/s = $1.50, audio off (the video model's audio is always muted). Same motion score as gen_take_t4bA.py (Kling version, kept). One call, no retries without a new yes. Run: python3 gen_take_t4bA_seedance.py go"""
+"""Take 4b v3 piece A CLIP on Seedance 2.5 LITE i2v (owner 07.11: "Давай делать в Seedance 2.5 литл"): first = t4bA_start_4k.jpg, last = t4bA_end_4k.jpg (image_urls[0] first frame, [1] last-frame constraint; APIpod spec seedance--2-5-lite-image-to-video), 720p only, 10 s, $0.15/s = $1.50, audio off (the video model's audio is always muted). Same motion score as gen_take_t4bA.py (Kling version, kept). One call, no retries without a new yes. Run: python3 gen_take_t4bA_seedance.py go
+BRIEF: briefs/brief_t4b_A.md
+"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod

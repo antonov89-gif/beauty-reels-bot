@@ -312,6 +312,7 @@ def q(s):
 for k, p in P.items():
     price_clip = round(0.145 * p["sec"], 2)
     reflist = ", ".join('RAW + "%s"' % r for r in p["refs"])
+    BR = "BRIEF: " + p.get("brief", "briefs/brief_%s.md" % k) + "\n"
     doc0 = ('"""%s: START still (prepared 06.11, NOT run until the owner\'s yes after seeing the refs and the Russian prompt). Script 7.3 lines: %s '
             'GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: %s. One call, about $0.12. Run: python3 gen_%s_start.py go"""\n') % (p["title"], p["lines"].replace('"""', "'"), ", ".join(p["refs"]), k)
     open(H0 + "gen_%s_start.py" % k, "w").write(doc0 + HEAD + "prompt = " + q(p["start"]) + "\n" + (IMG_FOOT % (reflist, k + "_start", k + "_start")))
@@ -333,3 +334,14 @@ if _os.path.exists(_p): _os.remove(_p)
 for _f in ("gen_t4bB_end.py", "gen_take_t4bB.py"):
     _s = open(H0 + _f).read().replace('"t4bB_start_4k.jpg"', '"t4bA_end_4k.jpg"')
     open(H0 + _f, "w").write(_s)
+
+# every script carries the BRIEF marker (PIPELINE_ROLES.md: no prompt without a reference brief; tools/preflight.py checks the file exists)
+for _k, _p in P.items():
+    _b = _p.get("brief", "briefs/brief_%s.md" % _k)
+    for _f in ("gen_%s_start.py" % _k, "gen_%s_end.py" % _k, "gen_take_%s.py" % _k, "gen_take_%s_seedance.py" % _k):
+        _fp = H0 + _f
+        if not _os.path.exists(_fp): continue
+        _s = open(_fp).read()
+        if "\nBRIEF: " in _s: continue
+        _s = _s.replace('"""\nimport json', "\nBRIEF: " + _b + '\n"""\nimport json', 1)
+        open(_fp, "w").write(_s)

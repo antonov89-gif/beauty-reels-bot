@@ -8,7 +8,7 @@ Usage:
   python3 tools/preflight.py <gen_script.py> --reviewer-pass "<note>"  # after the reviewer agent said PASS
   python3 tools/preflight.py <gen_script.py> --owner-yes "<owner's words>"  # after the owner's yes; writes the PASS record
 """
-import hashlib, json, os, re, subprocess, sys, time, urllib.request
+import os, hashlib, json, os, re, subprocess, sys, time, urllib.request
 REPO = "/home/user/beauty-reels-bot"
 RAW_PREFIX = "https://raw.githubusercontent.com/antonov89-gif/beauty-reels-bot/claude/funny-bardeen-uj4fiv/"
 BEST_ORIGINAL_SMALL_OK = {"R1_king_card_A3_white_wig.jpg", "A3_white_wig.jpg", "K4_master_neutral_O8.png", "K4_expr_shock_O9.png", "K4_angle_profileL_O10.png", "K4_angle_34right_O11.png", "K4_angle_low_O12.png", "K4_angle_high_O13.png", "K4_angle_overshoulder_O14.png", "t4bA_start_4k.jpg", "t4bA_end_4k.jpg"}   # best existing original, named as such
@@ -71,6 +71,13 @@ def main():
     model = (re.search(r'"model":\s*"([^"]+)"', src) or [None, ""])[1]
     is_video = "videos" in src or "i2v" in model
     if not prompt: fails.append("prompt not found")
+    # --- reference brief (PIPELINE_ROLES.md step 1, owner 07.11): the prompt must follow a brief written by the reference-comparator BEFORE it ---
+    bm = re.search(r'BRIEF:\s*(\S+)', src)
+    if not bm: fails.append("no 'BRIEF: briefs/<file>.md' line in the script: the prompt must be written from a reference brief (reference-comparator brief mode, PIPELINE_ROLES.md)")
+    else:
+        bp = os.path.join(os.path.dirname(os.path.abspath(sys.argv[1])), bm.group(1).rstrip('.,;'))
+        if not os.path.exists(bp): fails.append(f"reference brief file missing: {bm.group(1)} (write it with the reference-comparator in brief mode first)")
+        else: notes.append(f"reference brief: {bm.group(1)} ({os.path.getsize(bp)} bytes)")
     low = prompt.lower()
     for k, why in [("no text", "no burned-in text"), ("modern", "no modern objects")]:
         if k not in low: fails.append(f"prompt lacks '{k}' ({why})")
