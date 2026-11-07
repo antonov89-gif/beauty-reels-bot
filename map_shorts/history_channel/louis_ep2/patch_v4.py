@@ -25,3 +25,6 @@ P["t1na"]["start"] = P["t1na"]["start"].replace("the face is still sharp and rea
 assert "tack-sharp 4K" in P["t1na"]["start"]
 P["t1na"]["start"] = P["t1na"]["start"].replace("no extra fingers, ", "")
 assert "extra fingers" not in P["t1na"]["start"]
+a = "the thumb is gone from the lower right corner (a strip of the scarlet coat and lace at the lower edge instead);"
+assert a in P["t1na"]["end"]
+P["t1na"]["end"] = P["t1na"]["end"].replace(a, "the lower right corner stays as in the photo, blurred hall and lace;").replace("no extra fingers, ", "")
