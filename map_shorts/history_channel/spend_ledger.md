@@ -204,3 +204,4 @@ Kling 3.0 i2v 720p no audio 10 s = $0.80 (page price, unproven) vs Kling 4.0 $1.
 07.11 Ep.2 t1na end still: $0.12. Ep.2 running total $40.74
 07.11 Ep.2 t4bA start still: $0.12. Ep.2 running total $40.86
 07.11 Ep.2 clip 4b-A on Seedance 2.5 Lite i2v 720p 10 s: $1.50 (APIpod; owner yes 07.11). Ep.2 running total $42.36
+07.11 Ep.2 t4bA start still v2 (emotion version): $0.12. Ep.2 running total $42.48

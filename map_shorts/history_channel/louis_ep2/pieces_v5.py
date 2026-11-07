@@ -101,3 +101,10 @@ _rr(_a, "clip", "7-10 s a smile breaking through (3)", "7-10 s a laugh held back
 _rr(_a, "clip", "0-2 s a slow drift to the left by 3 percent with the roll easing 3 degrees;", "0-2 s a slow drift of the frame to the left by 3 percent (the king's wig moves away from the left edge and stays inside) with the roll easing 3 degrees;")
 _rr(_a, "clip", "a thumb slips into the lower left corner covering", "a fingertip slips into the lower left corner covering")
 _rr(_b, "clip", "Marcel exhales, settling to @last_frame. ", "Marcel exhales and lowers his hands, settling to @last_frame. ")
+
+# ===== fixes after the inspection of the start still v2 (glass goblet, king's gaze, second dish, wig margin) =====
+_rr(_a, "start", "his eyes on the gold goblet that Marcel carries,", "his pupils clearly visible, his eyes looking up and to the right at the gold goblet that Marcel carries,")
+_rr(_a, "start", "the king sits expectant and amused: eyelids heavy, one eyebrow raised,", "the king sits expectant and amused: eyelids slightly lowered but his pupils visible, one eyebrow raised high,")
+_rr(_a, "start", "one ringed hand resting flat on the white cloth in front of him,", "one ringed hand resting flat on the empty white cloth in front of him (there is no second plate in front of him),")
+_rr(_a, "start", "the goblet metal, never glass.", "the goblet is made entirely of solid opaque gold, both the cup and the stem (no glass, no crystal, no transparent part).")
+_rr(_a, "start", "the whole wig inside the frame with about 5 percent free space at the left edge,", "the whole wig inside the frame with about 5 percent of empty background between the wig and the left edge of the frame,")
