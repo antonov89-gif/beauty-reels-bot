@@ -87,3 +87,17 @@ _b["clip"] = ("{HEAD}{KING_}, filmed by a hand-held camera at table height from 
  "THE ROOM IS ALIVE: candle flames flicker; at 2.5 s a courtier behind the king laughs behind his hand; at 5 s the lady with the fan at the right back leans to her neighbour; at 7 s a servant in livery far behind crosses from right to centre; at 9 s two courtiers behind Marcel stop whispering and look at him. "
  "{TAIL}")
 _b["clip"] = _b["clip"]
+
+# ===== fixes after the review of the emotion rewrite =====
+def _rr(d, f, a, b):
+    assert a in d[f], (f, a[:70]); d[f] = d[f].replace(a, b)
+_rr(_a, "end", "Marcel stands frozen, bent a little, both hands raised open in front of his chest (five natural fingers each), his eyes wide, looking straight into the lens, his lips slightly parted as if about to speak;", "Marcel stands straightened up, both hands raised open in front of his chest (five natural fingers each), his eyes wide, looking at the king, his lips slightly parted as if about to speak;")
+_rr(_a, "end", " Marcel stands straightened up and looks at the king.", "")
+_rr(_a, "end", "(the king's face centre at 30 percent and Marcel's at 76 percent of the frame width)", "(the king's face centre at 32 percent and Marcel's at 76 percent of the frame width)")
+_rr(_a, "clip", "his eyebrows shoot up, his eyes widen a little (the lids stay heavy), a short sharp breath in,", "his brows pull together and up, his nostrils flare, his lids stay heavy, a short sharp breath in,")
+_rr(_a, "clip", "he keeps looking at Marcel, then at the lens, his head tilting about 10 degrees (his eyes open the whole time; they never close for longer than 0.5 s); Marcel keeps both hands raised open (trembling slightly) and looks at the king, then at the lens;", "he keeps looking at Marcel, his head tilting about 10 degrees (his eyes open the whole time; they never close for longer than 0.5 s); Marcel keeps both hands raised open (trembling slightly) and looks at the king;")
+_rr(_a, "clip", "7-10 s: the king's smile breaks through at the corner of his mouth, his eyes shine,", "7-10 s: the corner of the king's mouth tightens and lifts, his lips pressed, the laugh held back, his eyes shining,")
+_rr(_a, "clip", "7-10 s a smile breaking through (3)", "7-10 s a laugh held back at the corner of the mouth (3)")
+_rr(_a, "clip", "0-2 s a slow drift to the left by 3 percent with the roll easing 3 degrees;", "0-2 s a slow drift of the frame to the left by 3 percent (the king's wig moves away from the left edge and stays inside) with the roll easing 3 degrees;")
+_rr(_a, "clip", "a thumb slips into the lower left corner covering", "a fingertip slips into the lower left corner covering")
+_rr(_b, "clip", "Marcel exhales, settling to @last_frame. ", "Marcel exhales and lowers his hands, settling to @last_frame. ")

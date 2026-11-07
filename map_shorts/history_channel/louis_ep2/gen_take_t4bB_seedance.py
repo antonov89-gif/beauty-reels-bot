@@ -39,7 +39,7 @@ prompt = (
     "9.3-10 s: "
     "the king, lightly: "
     "\"Joking.\" the corner of his mouth up, his eyes still flat, one eye narrowing; "
-    "Marcel exhales, settling to the last frame. "
+    "Marcel exhales and lowers his hands, settling to the last frame. "
     "EMOTION SCORE (strength 0-3): "
     "king 0-1.5 s cool stare (1), 1.5-3 s holding back laughter (2-3), 3-4 s real laugh (3), 4-5.8 s smug (2), 5.8-8.5 s deadpan menace (2), 8.5-9.3 s silent (1), 9.3-10 s sly (2); "
     "Marcel 0-3 s dread (3), 3-5.8 s flinching (2), 5.8-8.5 s frozen terror (3), 9.3-10 s relief (2). "
