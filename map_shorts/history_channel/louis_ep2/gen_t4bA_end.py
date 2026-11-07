@@ -15,7 +15,7 @@ prompt = ("Reference 1 is the photo to edit; "
 "Change ONLY the moment: "
 "the gold goblet has fallen over on its side on the white tablecloth, empty, the small gold tray beside it, and a natural pool of dark red wine has spread over the cloth between them and ran to the table edge, a little of it on the edge of the king's cuff only (none on his face, wig or cravat); "
 "Marcel stands straightened up, both hands raised open in front of his chest (five natural fingers each), his eyes wide, looking at the king, his lips slightly parted as if about to speak; "
-"the king has turned his head three-quarter toward Marcel (the viewer's right), his eyelids heavy but OPEN and his eyes on Marcel, one eyebrow raised, the corner of his mouth tight and lifting as he holds back a laugh, the cheeks slightly raised, the nostrils slightly flared; "
+"the king has turned his head three-quarter toward Marcel (the viewer's right), his eyelids heavy but OPEN and his eyes on Marcel, one eyebrow raised, the corner of his mouth tight and lifting as he holds back a laugh, the cheeks slightly raised, the nostrils slightly flared. "
 "The heads move at most 4 percent of the frame width. "
 "QUALITY: "
 "keep the full resolution, sharpness and fine detail of the original photo: "
@@ -23,7 +23,7 @@ prompt = ("Reference 1 is the photo to edit; "
 "no smoothing, no blur, no softening, no painted or mottled texture on the skin; "
 "natural detail, no over-sharpening, no halos. "
 "Real handheld footage, fine film grain, real skin texture, no beauty filter. "
-"No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, only one king. "
+"No text, no logos, no modern objects, only one king. "
 )
 
 body = {"model": "gpt-image-2.5-sunburst-lite", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",

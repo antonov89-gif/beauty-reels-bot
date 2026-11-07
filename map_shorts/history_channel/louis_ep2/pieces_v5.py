@@ -128,5 +128,4 @@ _rr(_a, "start", "both heads fully inside the frame with their wigs and about 5 
 
 # ===== end still A matches the accepted sunburst start (king face centre 36, Marcel 73) =====
 _rr(_a, "end", "(the king's face centre at 32 percent and Marcel's at 76 percent of the frame width)", "(the king's face centre at 36 percent and Marcel's at 73 percent of the frame width)")
-_rr(_a, "end", "no glass or crystal glass anywhere, no extra fingers, only one king.", "only one king.")
 _rr(_a, "end", "as he holds back a laugh, the cheeks slightly raised, the nostrils slightly flared; The heads move", "as he holds back a laugh, the cheeks slightly raised, the nostrils slightly flared. The heads move")

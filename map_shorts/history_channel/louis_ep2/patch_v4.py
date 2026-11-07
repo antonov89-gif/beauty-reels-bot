@@ -35,3 +35,6 @@ e = e.replace("the lower right corner stays as in the photo, blurred hall and la
 e = e.replace("the lips closed in a smug faint smile, the chin slightly lifted.", "the lips closed in a smug faint smile, the head turned about 5 degrees toward his left, the chin lifted, the gaze straight into the lens (the head moves 3 to 5 percent).")
 assert "reference 2 is identity only" in e and "fan and candles" in e and "5 degrees toward his left" in e
 P["t1na"]["end"] = e
+
+# t4bA end: positive-only (hands exist and are described; no glass wording)
+P["t4bA"]["end"] = P["t4bA"]["end"].replace("no glass or crystal glass anywhere, ", "").replace("no extra fingers, ", "")
