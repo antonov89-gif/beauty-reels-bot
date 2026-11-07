@@ -59,7 +59,7 @@ prompt = ("@first_frame is the exact starting frame: "
 "No whip pans and no zoom lens, all moves by hand; "
 "no gimbal, no dolly or flying camera. "
 "Sound: "
-"only diegetic, low murmur of a large hall, fabric, cutlery, candle flicker, his voice and breath; "
+"only diegetic, low murmur of a large hall, fabric, cutlery, candle flicker, breath; "
 "no music at all. "
 "No text or captions, no modern objects, no clear glass or crystal glass anywhere, only one king in the frame (no second king, no double). "
 )

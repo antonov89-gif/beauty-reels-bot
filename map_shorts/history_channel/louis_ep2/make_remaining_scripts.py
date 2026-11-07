@@ -16,7 +16,7 @@ STILLTAIL = " The phone that films is never visible in the frame. No text, no lo
 CLIPHEAD = ("@first_frame is the exact starting frame: for the first 0.3 s keep it as it is, then animate from it. ")
 CLIPTAIL = ("Acting limits: heavy eyelids stay except in the laugh beats, no wide-open eyes for the king, the face stays natural, hands have five natural fingers. "
             "No whip pans and no zoom lens, all moves by hand; no gimbal, no dolly or flying camera. "
-            "Sound: only diegetic, low murmur of a large hall, fabric, cutlery, candle flicker, his voice and breath; no music at all. "
+            "Sound: only diegetic, low murmur of a large hall, fabric, cutlery, candle flicker, breath; no music at all. "
             "No text or captions, no modern objects, no clear glass or crystal glass anywhere, only one king in the frame (no second king, no double).")
 
 P = {}
