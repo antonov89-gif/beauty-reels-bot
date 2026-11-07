@@ -22,3 +22,5 @@
 - 07.11 still 6 START on gpt-image-2.5-sunburst 4K high: $0.09 (usage.cost 0.094076). Ep.2 total about $54.91. Output pilot_frames/anchors/t6_start_sunburst_4k.jpg, GENERATED (not yet inspected).
 
 - 07.11 still 6 START v3 attempt: APIpod task 887502ef returned SUBMISSION_UNCERTAIN (failed, usage none, provider says it was not retried to avoid duplicate charges); no image saved, no charge reported (NOT VERIFIED whether any charge happened); the earlier still t6_start_sunburst_4k.jpg (v1, 20:16) is unchanged. A new attempt needs a new owner yes.
+
+- 07.11 still 6 START v3 on gpt-image-2.5-sunburst 4K high (retry after SUBMISSION_UNCERTAIN): $0.09 (usage.cost 0.094644). Ep.2 total about $55.00 (the uncertain attempt not counted, NOT VERIFIED). v1 kept as t6_start_sunburst_v1_4k.jpg. GENERATED (not yet inspected).
