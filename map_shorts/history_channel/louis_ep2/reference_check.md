@@ -810,3 +810,28 @@ Expressions: sheet shows good variety (sigh, lens, sly smile, eyes up to ceiling
 Fix: prompt "eyes open at all times from 1.0 s except a 0.2 s blink, on 'love' the gaze slides right WITH OPEN EYES"; laugh "starts at 9.2 s and ends at 10.4 s, eyes narrowed but visible"; thumb "fingertip 12 % of width, 0.6 s at 6.8"; wig: widen margins in the start still (known rework item). Edit option: use 0-5.9 s, 7.75-9.2 s, 11.25-12 s; drop 6.0-7.75 and 9.5-11.2.
 
 ## 07.11 owner: clip 5c REJECTED (quality poor, tear wipe looks AI, realism required); NOT taken into the edit; v1 file kept as TAKE_t5c_seedance.mp4. Redo requires the owner yes.
+
+## Reference comparison TAKE_t5c_seedance_v2.mp4 vs v1 and Vlog 1 (07.11, reference-comparator, ON FRAMES fps 2 + 5 fps face crops)
+| metric | reference | v1 | v2 | verdict |
+|--|--|--|--|--|
+| frozen bg / still body (tool) | 0 / 0 % | 0 / 8 % | 0 / 0 % | OK |
+| head fw/s | 0.19 | 0.28 | 0.15 | v2 slightly low (gate 0.18) |
+| eyes shut at start | pin 1 s | 1.4 s | about 1.8 s | v2 FAIL (brief 0.8) |
+| eyes shut mid-line | none >0.5 s | 6.0-7.75 | blinks 6.0, 6.6, 7.4 (0.2-0.4 s) | v2 OK |
+| glance to the lady on "love" | - | none | none (eyes go UP to the ceiling 6.2-6.4) | FAIL |
+| laugh | - | 9.5-11.0, blur, sharp 82/96 | 9.4-10.8, teeth, open slits, sharp 321/229 | v2 OK, natural |
+| ending | - | tear wipe plan removed | open eyes, breath, small smile 11.0-12.0, no tear | v2 OK |
+| thumb | 12 %, 0.6 s | 20 %, 1.5 s | faint pink edge 7.5-8.0 | v2 OK |
+| roll / push-in | - | roll 0-5 | roll 0-5, push-in not readable | brief 14 deg not met |
+Realism by eye: v2 reads as a real person (skin, brows, eye colour, natural smile), the laugh is believable, no melodrama; the only AI-ish traces: eyes shut 1.8 s at the start, the room behind is soft/empty at 9-12 s, the camera sits too stable for a phone in a hand. Verdict: v2 is better than v1 and usable; to be perfect it needs the eyes-open start (cut 1.8-12 s or edit) and a lady glance (not achievable in the edit). Voice tone NOT VERIFIED (no sound).
+
+## QC TAKE_t5c_seedance_v2.mp4 (07.11, clip-inspector): BRAK by the gates (strict), much better than v1; usable as a cut 1.9-9.4 s + 11.5-12 s
+Numbers (clip_qc, 720x1278, 24 fps, 12.04 s, Seedance 2.5 Lite): face A3 median 0.663 / p10 0.613 FAIL (median < 0.70; no frame below 0.55). SFace vs K4_master_neutral_O8 every 0.25 s: median 0.80, p10 0.73, min 0.70 (5.5 s), all >= 0.70 PASS (v1 median 0.78, dips 0.62). Identity by eye: same man, beauty mark below mouth at the viewer's right, moustache, silver wig, suns coat, lace jabot.
+Sharpness per second 607,399,439,420,380,362,317,278,381,436,134,304: seconds < 60 % of first second = 5,6,7,10,11 (first second is the sharp pin frame, baseline inflated); vs the 1-9 s level (about 280-440) only 10 s (134, laugh motion blur 10.25-10.5) is a real dip; last-third decay 0.33 FAIL (limit 0.30). v1 had 140/148 at 6-7 s and 82/96 at 10-11 s: improved (317/278, 134/304). Seams none PASS. Motion frozen bg 0 %, still body 0 % PASS. Pin first vs t5c_start_4k RMSE 0.122 FAIL (same as v1; by eye s_00 matches the pin pose, the framing is slightly tighter).
+Eyes (face-crop sheet every 0.25 s): closed 0-1.75 s (about 1.9 s, brief cap 1.0, it is the pin pose: WARN/FAIL), open 2.0-5.25, blinks 5.5, 6.75, 7.5 (0.25 s each, natural), eyes UP to the ceiling 6.25-6.5 (dreamy beat present, reads slightly like an eye roll), open 7.75-9.25, laugh shut/squeeze 9.5-10.25 (0.75 s, brief shut <= 0.5), slits 10.5-11.25, one more shut frame 11.5, open on the lens 11.75-12. Laugh with squint about 9.5-11.5 = 2 s (brief max 1.5) FAIL minor. Lady glance on "love": not seen, gaze stays on lens/up.
+Thumb: pink thumb bottom right about 7.5-8.4 s (about 0.9 s), width about 15 % of frame, tall (about 30 % of height) at 8.0 (brief 12 %, 0.6 s at 6.8; v1 20 %, 1.5 s): WARN, better than v1, a bit big and late.
+Framing by eye (no tool segments the wig): the clip pushes in: face width 28 % at 0 s -> 36-39 % at 5-10 s. Wig top about 3 % from the top edge at 10 s (about 5 % at 8 s, 12.5 % at 0 s), left margin about 4-5 % at 8-11 s, long right-hand side curls touch/leave the right edge (x 700-720) at 8-11 s (s_08, s_10, s_11, s_12) = cut by the edge FAIL (same as v1, the 4 % push-in plus the lean exceed the pin margins). Roll about 0-3 deg, not 14.
+Objects: no glass, goblet, device, text, tear. Servant with a covered cloche at 0 s, lady with fan and courtier from 7 s (room lives, but background is mostly blurred wall after the push-in).
+Hands: 0 s interlaced, 4 fingers + thumb readable, natural; 10 s hand on belly, fingers long but ok; hands at the bottom edge at 11-12 s half out of frame, five each NOT VERIFIED. No ring, no melting, no second face.
+Realism: no tear, no hand at the eye (rule kept), end on open eyes with a small natural smile (end pose differs from start: PASS). Face does not morph; skin is smooth and the laugh slits at 10.5-11.25 look slightly rubber, the eye-up at 6.25-6.5 theatrical: WARN, minor. Phone mistake: thumb 7.5-8.4 only.
+Fix (prompt): start eyes closed for 1.0 s not 1.9; laugh "9.2-10.4 s, eyes narrowed but visible, never shut"; zero push-in (state "the camera does not move closer, the wig keeps a 12 % wall band above and 10 % at both sides, the right curls stay inside the frame"), thumb "12 % of width at 6.8 s for 0.6 s"; or crop-scale 0.92 in the edit to bring the wig inside. Edit option: 1.9-9.4 s (crop 0.92), 11.5-12 s.
