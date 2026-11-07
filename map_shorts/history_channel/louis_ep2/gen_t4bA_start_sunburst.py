@@ -18,14 +18,14 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "take no objects and no people from it, the table and the people are new. "
 "Camera: "
 "hand-held at TABLE HEIGHT from the SIDE of the long table, about 40 degrees off the line of the table, a CLOSE medium shot, tight enough that the two heads with their wigs fill most of the frame width, rolled about 6 degrees to the right: "
-"the king sits in the LEFT part of the frame (his head with the wig about 50 percent of the frame width, his face about 26 percent, face centre at 32 percent of the width, the whole wig inside the frame with about 5 percent of empty background between the wig and the left edge of the frame, sharp), his head turned only about 10 degrees toward the viewer's right, his pupils clearly visible, his eyes looking up and to the right at the gold goblet that Marcel carries, both eyes and the beauty mark on the viewer's right of his mouth visible; "
-"Marcel stands at the RIGHT of the frame (his head with the white wig about 34 percent of the width, his face about 22 percent, face centre at 76 percent of the width, sharp), turned three-quarter toward the viewer's left, toward the king; "
-"both heads fully inside the frame with their wigs and about 5 percent free space at each edge. "
-"Between and below them the clean white tablecloth with one gold plate and two candles in gold candlesticks; "
+"the king sits in the LEFT part of the frame (his head with the wig about 50 percent of the frame width, his face about 26 percent, face centre at 36 percent of the width, the whole wig inside the frame with about 5 percent of empty background between the wig and the left edge of the frame, sharp), his head turned only about 10 degrees toward the viewer's right, his head tilted very slightly back, his eyes open wide enough to show the whole iris and pupil, looking up and to the right at the gold goblet that Marcel carries, both eyes and the beauty mark on the viewer's right of his mouth visible; "
+"Marcel stands at the RIGHT of the frame (his head with the white wig about 32 percent of the width, his face about 21 percent, face centre at 73 percent of the width, sharp), turned three-quarter toward the viewer's left, toward the king; "
+"both heads fully inside the frame with all their wig curls and about 5 percent of empty background at each side edge. "
+"Between and below them the bare white tablecloth with two candles in gold candlesticks; "
 "the lower corners of the frame show only white tablecloth. "
 "Pose and emotion: "
 "the king sits expectant and amused: "
-"eyelids slightly lowered but his pupils visible, one eyebrow raised high, the lips pressed into a knowing smirk, his eyes fixed on the goblet, one ringed hand resting flat on the empty white cloth in front of him (there is no second plate in front of him), sharp, five natural fingers, the fingers lifting one after another as he drums; "
+"eyelids lifted, his gaze alert, one eyebrow lifted high above the other, the lips pressed into a knowing smirk, his eyes fixed on the goblet, one ringed hand resting flat on the bare, smooth white cloth in front of him, sharp, five natural fingers, the fingers lifting one after another as he drums; "
 "Marcel bends a little over the table, tense and sweating a little, his eyes on the gold goblet of red wine standing on a small gold tray in both his hands (five natural fingers on each hand), the goblet is made entirely of solid opaque gold, cup and stem, polished metal with warm gold reflections. "
 "Everything is tack-sharp 4K: "
 "skin pores, moustache hairs, wig curls, lace and the gold braid, no soft focus, both people in the sharp plane. "
@@ -33,7 +33,7 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "the candlelit gilded hall, standing courtiers in plain wigs, at the back right a lady with an open fan, a servant in livery far behind. "
 "No text, no logos, no modern objects,  no clown makeup, only one king. "
 "On the table: "
-"only the gold plate, the gold candlesticks and the gold goblet. "
+"only the gold candlesticks and the gold goblet. "
 )
 
 body = {"model": "gpt-image-2.5-sunburst", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",

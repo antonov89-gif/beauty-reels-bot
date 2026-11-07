@@ -115,3 +115,13 @@ _rr(_a, "start", "Between and below them the clean white tablecloth with one gol
 _rr(_a, "start", "the goblet is made entirely of solid opaque gold, both the cup and the stem (no glass, no crystal, no transparent part).", "the goblet is made entirely of solid opaque gold, cup and stem, polished metal with warm gold reflections.")
 _rr(_a, "start", "no glass or crystal glass anywhere,", "")
 _rr(_a, "start", "no clown makeup, only one king.", "no clown makeup, only one king. On the table: only the gold plate, the gold candlesticks and the gold goblet.")
+
+# ===== third fix of the start still (inspector on the sunburst test: sleepy gaze, second plate, wig margins) =====
+_rr(_a, "start", "his pupils clearly visible, his eyes looking up and to the right at the gold goblet that Marcel carries,", "his head tilted very slightly back, his eyes open wide enough to show the whole iris and pupil, looking up and to the right at the gold goblet that Marcel carries,")
+_rr(_a, "start", "eyelids slightly lowered but his pupils visible, one eyebrow raised high,", "eyelids lifted, his gaze alert, one eyebrow lifted high above the other,")
+_rr(_a, "start", "one ringed hand resting flat on the empty white cloth in front of him (there is no second plate in front of him),", "one ringed hand resting flat on the bare, smooth white cloth in front of him,")
+_rr(_a, "start", "the clean white tablecloth with one gold plate and two candles in gold candlesticks;", "the bare white tablecloth with two candles in gold candlesticks;")
+_rr(_a, "start", "On the table: only the gold plate, the gold candlesticks and the gold goblet.", "On the table: only the gold candlesticks and the gold goblet.")
+_rr(_a, "start", "face centre at 32 percent of the width,", "face centre at 36 percent of the width,")
+_rr(_a, "start", "(his head with the white wig about 34 percent of the width, his face about 22 percent, face centre at 76 percent of the width, sharp)", "(his head with the white wig about 32 percent of the width, his face about 21 percent, face centre at 73 percent of the width, sharp)")
+_rr(_a, "start", "both heads fully inside the frame with their wigs and about 5 percent free space at each edge.", "both heads fully inside the frame with all their wig curls and about 5 percent of empty background at each side edge.")
