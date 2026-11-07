@@ -1,0 +1,65 @@
+"""Take 5 piece 5a CLIP on Seedance 2.5 LITE i2v (07.11): image_urls[0] = first frame ONLY (owner 07.11: no end still when the next piece is a cut), 720p, 12 s, 9:16, $0.15/s = $1.80, audio off (the model audio is always muted). Built from the reference brief briefs/brief_t5_t7.md BRIEF 5a (eyes open, one lens look at 6.5-7.5 s, thumb 12 % at 8.5 s, one blur at 4.5 s, eyes closed at most 0.8 s inside the delight beat). LOUIS: "Then salad, ham, pastry, fruit. [gives up counting] In under an hour. [holds a pea to the lens, softly] And peas. The court talks of nothing else. [eats it, delighted]" One call, no retries without a new yes. Run: python3 gen_take_t5a_seedance.py go
+BRIEF: briefs/brief_t5_t7.md
+"""
+import json, re, sys
+sys.path.insert(0, "/home/claude/v51")
+import apipod
+H0 = "/home/user/beauty-reels-bot/map_shorts/history_channel/louis_ep2/"
+RAW = "https://raw.githubusercontent.com/antonov89-gif/beauty-reels-bot/claude/funny-bardeen-uj4fiv/map_shorts/history_channel/louis_ep2/refs/"
+prompt = (
+    "The first frame is the exact starting frame: for the first 0.3 s keep it as it is, then animate from it. "
+    "Realistic live action, real skin texture, sharp focus on the face at all times except the one named focus hunt. "
+    "The same king in every frame: the same face, age about 45, heavy-lidded light grey-hazel eyes, thin dark waxed moustache with curled tips, a small dark beauty mark on the viewer's right of the mouth, light rouge, the tall powdered wig in cool silver-grey and white, the scarlet velvet coat with gold suns, lace cravat; "
+    "the candlelit gilded hall behind him lit by wall sconces; the food in the foreground stays soft at the edges. "
+    "The picture is a hand-held shot filmed by Marcel, very low at the near corner of the long table looking along it. "
+    "0-2.5 s, \"Then salad, ham, pastry, fruit.\": "
+    "his eyes follow his own raised fingers down and to the right, heavy lids, closed-lip smirk, he counts on a finger with each word (at 0.4, 1.0, 1.6 and 2.2 s), the head turns half a face width left and right, on \"fruit\" his eyes lift to the lens; "
+    "the other hand rests on the cloth beside the dish of peas; at 1.5 s the lady with the open fan at the back right lifts her fan. "
+    "2.5-4.5 s, \"In under an hour.\": "
+    "he gives up counting, the counting hand drops to the cloth, his eyes roll up to the ceiling for 0.4 s, a short breath through the nose, brows up, then his eyes return to the lens with an amused surrender, both shoulders give a small shrug at 3.2 s; "
+    "at 4 s a courtier at the right centre steps behind him from right to left; "
+    "at 4.5 s the picture softens for 0.5 s and snaps sharp. "
+    "4.5-6.5 s, silent: "
+    "his eyes drop to the dish of peas, brow up, a sly half smile, the lips pucker, two fingers pick up ONE pea and lift it toward the lens; "
+    "at 5.5 s the servant far right turns his head. "
+    "6.5-9 s, softly \"And peas. The court talks of nothing else.\": "
+    "his eyes rest on the pea for 0.5 s, then look INTO THE LENS for 1.0 s while the pea is held beside his cheek, then slide right to the court for 0.5 s and back, one brow rises on \"nothing else\", the pea hand wobbles about 2 cm, the head tilts 10 degrees to the right; "
+    "at 7.5 s two courtiers whisper behind him; at 8.5 s the servant crosses behind with a dish. "
+    "9-12 s, silent: "
+    "the pea goes into his mouth, his eyes close for at most 0.8 s in delight, the head tips back 5 degrees, then his eyes OPEN again, a closed-lip chew, one corner of the mouth up, a happy hum; "
+    "in the last second his eyes drift down and to the right to the next dish; his hand returns to the cloth beside the dish of peas and the fingers rub together; "
+    "at 10 s a lady far right fans herself faster. "
+    "CAMERA SCORE in absolute amounts (hand-held, low; the king and the room stay in place while the frame moves; the whole wig and face stay inside the frame at every moment): "
+    "0-2 s a drift left by 8 percent with the roll held at about 10 degrees left and a push-in of 5 percent at 1.5 s; "
+    "2-4 s a quick dip down by 8 percent with the shrug and back within 0.6 s; "
+    "4.5 s the focus hunt for 0.5 s; "
+    "4.5-6.5 s a slow push-in of 6 percent toward the pea hand; "
+    "6.5-9 s a drift right by 8 percent and the roll easing to about 4 degrees; "
+    "at 8.5 s (allowed window 6.5 to 10.5 s) the tip of Marcel's thumb enters at the bottom right edge, 12 percent of the width, for 0.6 s, far from the face; "
+    "9-12 s a settling sway of 3 percent. "
+    "POSE SCORE as verbs: count, shrug, roll eyes, lift, pick, hold, look, tilt, eat, close eyes briefly, open, hum, glance; "
+    "no expression lasts longer than 2 seconds. "
+    "Acting limits: the eyes are open except the one delight beat, the face stays natural, five natural fingers on each hand. "
+    "All moves are by hand: no whip pans, no zoom, no gimbal, no dolly. "
+    "Sound: only the low murmur of a large hall, fabric, cutlery, candle flicker, breath; no music at all. "
+    "Clean picture with no text or captions, only things of the 1680s, one king in the frame. "
+)
+
+body = {"model": "seedance-2.5-lite-i2v", "prompt": prompt, "image_urls": [RAW + "t5a_start_4k.jpg"],
+        "duration": 12, "resolution": "720p", "aspect_ratio": "9:16", "generate_audio": False}
+open(H0 + "take_t5a_seedance_prompt.txt", "w").write(prompt)
+if len(sys.argv) > 1 and sys.argv[1] == "go":
+    r = apipod.submit("videos", body); print(r)
+    tid = (r.get("data") or {}).get("task_id")
+    if not tid: sys.exit("not submitted: " + json.dumps(r)[:400])
+    open(H0 + "pilot_frames/TAKE_t5a_seedance.task_id", "w").write(tid)
+    res = apipod.wait("videos", tid, timeout=2400, every=10)
+    open(H0 + "pilot_frames/TAKE_t5a_seedance.status.json", "w").write(re.sub(r'(https://[^"?]+)\?[^"]*', r'\1?[signed query removed]', json.dumps(res, indent=1)))
+    d = res.get("data") or {}; print("status", d.get("status"), "usage", d.get("usage"))
+    def find(x):
+        if isinstance(x, str) and x.startswith("http"): return x
+        for v in (x.values() if isinstance(x, dict) else x if isinstance(x, list) else []):
+            u = find(v)
+            if u: return u
+    u = find(d.get("result") or d)
+    if u: apipod.download(u, H0 + "pilot_frames/TAKE_t5a_seedance.mp4"); print("saved")
