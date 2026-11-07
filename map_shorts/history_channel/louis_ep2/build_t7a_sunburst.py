@@ -25,6 +25,12 @@ rep("a strip of the gilded ceiling at the top edge; \"\n\"no chandelier; \"\n", 
 rep("one hand resting on the chair arm at the lower edge. ", "the cuff of his scarlet sleeve and the back of one relaxed hand rest on the chair arm at the lower right edge, cut off by the frame edge, holding nothing. ")
 rep('"No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "',
     '"One king only, natural light rouge. Clean picture with no text or lettering, no modern objects, only gold, velvet, lace and candles of the 1680s. "')
+
+rep("Reference 3 gives only the gilded walls and the warm candlelight of the hall; the table, the people and the dishes are new. ", "Reference 3 gives only the gilded walls, the warm candlelight and the mood of the hall; everything else in the picture is new. ")
+rep("and a little to his right, ", "and a little to the viewer's left of him, so that we see his face turned toward the viewer's right, ")
+rep("with at least 14 percent free wall at the left (his face about 28 percent) with its centre at 42 percent,", "with the long left curls ending at about 16 percent from the left edge, never more than 62 percent for the whole wig, and at least 26 percent of free gilded wall at the right of him (his face about 28 percent) with its centre at 44 percent,")
+rep("at arm's-length distance, not a studio portrait, held a little BELOW", "at arm's-length distance, a spontaneous, slightly crooked, close hand-held frame, off-centre, with natural grain and candle flicker on the skin, held a little BELOW")
+rep("cut off by the frame edge, holding nothing. ", "the fingers relaxed and open, cut off by the frame edge. ")
 i = s.index('"""', 3)
 doc = ('"""Take 7 piece 7a START still on gpt-image-2.5-sunburst (non-Lite), 4K high 9:16, measured charge about $0.10 (preflight table pre-deduct $0.50). Setup S16 (in front and slightly right below eye level, wide, hall on the right; leaned back, chin raised, eyes up-right at the hall). '
        'Refs in order: K4_master_neutral_O8.png, K4_angle_34right_O11.png, R10_hall_clean.jpg. Result: pilot_frames/anchors/t7a_start_sunburst_4k.jpg. Run: python3 gen_t7a_start_sunburst.py go\nBRIEF: briefs/brief_t5_t7.md\n"""')
