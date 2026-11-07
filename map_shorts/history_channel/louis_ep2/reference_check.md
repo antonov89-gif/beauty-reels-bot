@@ -792,3 +792,9 @@ Fix in the prompt: make the wig smaller (about 55 %: step the camera back, state
 ## 07.11 owner: still 5c START v2 taken as is ("дальше"); BRAK items (roll 2.6 deg instead of 14, wig 66% wide, side margins 15-18%) go to the rework list; the roll is built in the clip prompt / the edit.
 
 - 07.11 5c clip prompt deviations from the brief, deliberate: push-in 4% instead of 6% and laugh shake 4% instead of 8% (the pin has margins of only 12.5% top / 15-17% sides); the second line runs at about 3.8 words/s (the voice is laid in later, speed-up max 1.3).
+
+## Reference comparison TAKE_t5c_seedance (07.11.2026), reference-comparator (ON FRAMES, fps 2 sheet, spacing 0.5 s; no sound)
+Tool: 12.0 s, 720x1278 24 fps, 1 shot, frozen bg 0 % OK, still body 8 % OK, head 0.28 fw/s OK (gate >=0.18), 120 wpm FAIL (gate 60-90; voice laid later), phone mistake 1 (thumb 6.0 and 7.0 s, bottom, large ~20 %, 1.0+ s vs limit 0.6 s / 12 %).
+Eye count by eye: closed 0-1.2 (sigh, limit 1.0, open only at 1.5), ~2.5, ~4.5, ~7.0, 9.0-9.5 and 11.0-12.0 (END ON CLOSED/SLIT EYES = brief rule broken). Lens look: 4.0 sly smile and 7.5-8.5 flat stare ON FRAMES (clear), but 2.0 and 4.0 smile ok.
+Beats: 0-1.2 sigh closed (ok, long); 1.5-3.5 open, speaking, smile 2.0 (ok); 4.0 flat-then-sly smile present (ok); 5.0-6.0 eyes UP to ceiling + hand lifts (dreamy beat PRESENT, good); lady glance: NOT SEEN (gaze never goes right; the fan lady is visible behind at 7.5-9, only background); silent beat 7.5-8.5 flat lens stare, no blink seen, face unchanged 1.5 s (ok-ish); laugh 9.5-10.5 real, eyes squeezed shut, blur 9.5-10.0 (hides it); recovery 11.0-12.0 eyes closed smile, NO lens glance, NO tear wipe (fail).
+Verdict: needs edit work or one more regeneration: use 1.5-9.0 s plus laugh; fix end eyes and thumb. Hand-held ok but camera quiet (push-in/roll not measured here).
