@@ -1,0 +1,17 @@
+{
+ "code": 200,
+ "message": "success",
+ "data": {
+  "task_id": "665fca07-3c07-4c31-8b8e-877a3fe6dbcf",
+  "status": "completed",
+  "progress": 100,
+  "result": [
+   "\1?[signed query removed]"
+  ],
+  "usage": {
+   "cost": 2.205,
+   "completion_tokens": 216369,
+   "total_tokens": 216369
+  }
+ }
+}
