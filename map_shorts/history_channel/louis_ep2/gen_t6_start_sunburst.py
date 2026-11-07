@@ -13,14 +13,14 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Reference 2 gives only the gilded walls and the warm candlelight; the table, the people and the dishes are new. "
 "Camera: "
 "the look of a frame from a hand-held vlog that he films of himself at arm's-length distance, not a studio portrait: his face close, slightly off-centre to the left, his head tilted about 8 degrees, a wide-angle lens with visible perspective on the nose and forehead, spontaneous and a little imperfect, at eye level: "
-"his face fills about 34 percent of the frame width with its centre at 46 percent of the frame width, the powdered wig puff about 50 percent of the frame width, the whole wig with its long side curls about 66 percent and never wider than 70 percent, so at least 14 percent of free gilded wall at each side, and the top of the wig sits 6 percent of the frame height below the top edge, sharp; "
+"his face fills about 34 percent of the frame width with its centre at 47 percent of the frame width, the powdered wig puff about 50 percent of the frame width, the whole wig with its long side curls about 66 percent and never wider than 70 percent, so at least 14 percent of free gilded wall at each side, and the top of the wig sits 6 percent of the frame height below the top edge, sharp; "
 "a slight roll of about 4 degrees to the left; "
 "at the lower edge the lace cravat, and below it the rim of a gold plate with a few small clean bird bones, soft; the table is set only with gold plates and gold dishes, the lower left corner is empty gilded table surface; in the lower right corner the scarlet velvet sleeve of his arm enters from below, with a wide white lace cuff and the back of a relaxed hand, large and soft because it is close to the lens; the hand is cut off by the right frame edge, only the cuff, the wrist, the back of the hand and the knuckles show, about 12 percent of the frame width and 10 percent of the height; the hand rests open and relaxed and holds nothing, and it stays clear of the plate. "
 "Pose and emotion: "
 "his shoulders are relaxed and a little turned, his chin slightly lowered, both eyes open, the irises visible under the heavy upper lids, looking straight into the lens, one brow slightly raised, a complacent faint smirk, the lips closed. "
 "Behind him, blurred: "
 "the candlelit gilded hall lit by wall sconces with the ceiling out of frame, standing courtiers in plain wigs, at the back right a lady with an open fan and two courtiers whispering. "
-"One king only, natural light rouge. Clean picture with no text or lettering, no modern objects, only things of the 1680s. "
+"One king only, natural light rouge. Clean picture with no text or lettering, no modern objects, only gold plates, candles, velvet and lace of the 1680s. "
 )
 
 body = {"model": "gpt-image-2.5-sunburst", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",

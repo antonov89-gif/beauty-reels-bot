@@ -49,6 +49,9 @@ rep("his shoulders are relaxed and square, ", "his shoulders are relaxed and a l
 
 rep("from the lower right corner the red sleeve with its lace cuff and the back of his hand reach toward the camera, only the sleeve and the cuff and the back of the hand enter the frame. ", "in the lower right corner the scarlet velvet sleeve of his arm enters from below, with a wide white lace cuff and the back of a relaxed hand, large and soft because it is close to the lens; the hand is cut off by the right frame edge, only the cuff, the wrist, the back of the hand and the knuckles show, about 12 percent of the frame width and 10 percent of the height; the hand rests open and relaxed and holds nothing, and it stays clear of the plate. ")
 rep("Reference 2 gives only the mood of the hall: gilded walls and warm candlelight; its people and everything on its table are not used, the table and the people are new. ", "Reference 2 gives only the gilded walls and the warm candlelight; the table, the people and the dishes are new. ")
+
+rep("with its centre at 46 percent of the frame width, ", "with its centre at 47 percent of the frame width, ")
+rep("Clean picture with no text or lettering, no modern objects, only things of the 1680s. ", "Clean picture with no text or lettering, no modern objects, only gold plates, candles, velvet and lace of the 1680s. ")
 i = s.index('"""', 3)
 doc = ('"""Take 6 (the verdict) START still on gpt-image-2.5-sunburst (non-Lite), 4K high 9:16, measured charge about $0.10 (preflight table pre-deduct $0.50). Setup S13 (frontal, eye level, close; wiping the fingers, eyes down on the bones, complacent smirk). '
        'Refs in order: K4_master_neutral_O8.png, R10_hall_clean.jpg. Result: pilot_frames/anchors/t6_start_sunburst_4k.jpg. Run: python3 gen_t6_start_sunburst.py go\nBRIEF: briefs/brief_t5_t7.md\n"""')
