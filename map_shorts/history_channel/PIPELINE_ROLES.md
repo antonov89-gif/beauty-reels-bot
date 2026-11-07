@@ -15,3 +15,7 @@ WARNING: a generation prompt is NOT written from the producer's imagination. The
 | Costs and models | **model-economist** | cheapest route that holds the gates |
 
 Rules: (a) the producer never judges its own result, steps 7 and 8 are done by agents before the owner sees the image or clip; (b) the brief is written BEFORE the prompt; a prompt without a brief file is FAIL at step 4; (c) a flat or blank face where the script has a reaction or a gag is a defect; (d) emotions, gaze and gestures are written per beat with seconds, taken from the brief.
+
+## End stills (owner 07.11: "Если сцена заканчивается, то последний кадр не нужно делать, там же будет другая сцена и другой кадр")
+- When a piece ends and the next piece is a different setup/angle (a cut), NO end still is made and no last-frame pin is sent: the clip is generated from the START still only (first frame), the last frame is whatever the action ends on and the edit cuts to the next setup. An end still is made only when the same shot continues into the next piece (e.g. 4b-A -> 4b-B) or the owner asks for it.
+- Applies to 5a, 5b, 5c, 6, 7a, 7b unless the brief says the shot continues. Scripts gen_<key>_end.py for these pieces are not run; the clip scripts drop the last-frame image and the "last frame" wording from the prompt (rebuilt with a new reviewer pass and a new owner yes).
