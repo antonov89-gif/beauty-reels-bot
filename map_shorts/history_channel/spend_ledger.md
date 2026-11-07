@@ -208,3 +208,4 @@ Kling 3.0 i2v 720p no audio 10 s = $0.80 (page price, unproven) vs Kling 4.0 $1.
 07.11 Ep.2 t4bA start still TEST on gpt-image-2.5-sunburst (non-Lite, 4K high): $0.101 charged (usage.cost 0.101276; the estimator's $0.50 was only a pre-deduct hold). Ep.2 running total $42.58
 07.11 Ep.2 t4bA start still sunburst attempt 2 (4K): about $0.10. Ep.2 running total $42.68
 07.11 Ep.2 clip 4b-A (emotion version) on Seedance 2.5 Lite i2v 720p 10 s: $1.50 (APIpod; owner yes 07.11). Ep.2 running total $44.18
+07.11 Ep.2 t4bB end still (Sunburst, edit of the A end still): about $0.10. Ep.2 running total $44.28
