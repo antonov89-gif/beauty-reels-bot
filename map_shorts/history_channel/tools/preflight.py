@@ -112,6 +112,8 @@ def main():
     rec["PASS"] = bool(not fails and rec.get("reviewer") and rec.get("owner_yes"))
     json.dump(rec, open(rec_path, "w"), indent=1, ensure_ascii=False)
     print(f"PREFLIGHT {name}: model {model}, price about ${price:.3f}")
+    if is_video and res:
+        print(f"  ordered resolution {res.group(1)} (9:16 = 720x1280): right after the download run tools/check_resolution.py <mp4> {res.group(1).rstrip('p')}  (owner 07.11: we must get the resolution we ordered; any deviation is reported to the owner)")
     for n in notes: print("  ok   ", n)
     for w in warns: print("  WARN ", w)
     for f in fails: print("  FAIL ", f)
