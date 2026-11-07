@@ -1,0 +1,45 @@
+"""Take 4b v3 piece B END still on gpt-image-2.5-sunburst (non-Lite; owner 07.11: делай сам): an EDIT of the end still of piece A (refs: t4bA_end_4k.jpg to edit, K4 master O8 for the king, R8 for Marcel), 4K high 9:16, about $0.10. Result: pilot_frames/anchors/t4bB_end_sunburst_4k.jpg. Run: python3 gen_t4bB_end_sunburst.py go
+BRIEF: briefs/brief_t4b_A_B.md
+"""
+import json, re, sys
+sys.path.insert(0, "/home/claude/v51")
+import apipod
+RAW = "https://raw.githubusercontent.com/antonov89-gif/beauty-reels-bot/claude/funny-bardeen-uj4fiv/map_shorts/history_channel/louis_ep2/refs/"
+H0 = "/home/user/beauty-reels-bot/map_shorts/history_channel/louis_ep2/"
+prompt = ("Reference 1 is the photo to edit (the end still of piece A); "
+"reference 2 is the king's identity only (his neutral master portrait: "
+"the same man of about 45 with the moustache, beauty mark on the viewer's right of the mouth, silver-grey and white wig) and reference 3 is Marcel's identity only (freckles, thick dark brows, white wig, pale blue livery, no tricorn hat): "
+"use them only to keep the faces, and never copy their poses, angles or framing. "
+"Edit the photo (reference 1): "
+"keep EXACTLY the same camera position from the side, the same table height, the same roll, the same framing and crop, the same sizes and positions of both heads, the same wigs exactly as in reference 1, the same coats, the same hall and the same fallen goblet with the pool of red wine on the cloth. "
+"Change ONLY the expressions and the head turns: "
+"the king has turned toward Marcel (the viewer's right), his chin lifted high, one eyebrow raised, his eyes on Marcel with a flat, cool look and the corner of his mouth lifted by one or two millimetres (the laugh is over and the deadpan has begun); "
+"Marcel has just let out a small breath of relief: "
+"his shoulders dropped, his lips relaxed, his eyes on the king, his hands lowered together in front of him (five natural fingers each); "
+"the heads move at most 4 percent of the frame width. "
+"QUALITY: "
+"keep the full resolution, sharpness and fine detail of the original photo: "
+"the face, the moustache hairs, the wig curls, the lace and the gold embroidery must stay exactly as crisp and detailed as in the photo; "
+"no smoothing, no blur, no softening, no painted or mottled texture on the skin; "
+"natural detail, no over-sharpening, no halos. "
+"Real handheld footage, fine film grain, real skin texture, no beauty filter. "
+"No text, no logos, no modern objects, only one king. "
+)
+
+body = {"model": "gpt-image-2.5-sunburst", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",
+        "image_urls": [RAW + "t4bA_end_4k.jpg", RAW + "K4_master_neutral_O8.png", RAW + "R8_marcel_full.jpg"]}
+open(H0 + "t4bB_end_sunburst_prompt.txt", "w").write(prompt)
+if len(sys.argv) > 1 and sys.argv[1] == "go":
+    r = apipod.submit("images", body); print(r)
+    tid = (r.get("data") or {}).get("task_id")
+    if not tid: sys.exit("not submitted")
+    out = H0 + "pilot_frames/anchors/t4bB_end_sunburst_4k.jpg"; open(out + ".task_id", "w").write(tid)
+    res = apipod.wait("images", tid, timeout=900, every=5)
+    open(out + ".status.json", "w").write(re.sub(r'(https://[^"?]+)\?[^"]*', r'\1?[signed query removed]', json.dumps(res, indent=1)))
+    def find(x):
+        if isinstance(x, str) and x.startswith("http"): return x
+        for v in (x.values() if isinstance(x, dict) else x if isinstance(x, list) else []):
+            u = find(v)
+            if u: return u
+    d = res.get("data") or {}; u = find(d); print("status", d.get("status"), "usage", d.get("usage"), d.get("error_code"))
+    if u: apipod.download(u, out); print("saved")
