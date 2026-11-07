@@ -13,7 +13,7 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Reference 3 shows only the hall: "
 "ignore its angle, and do NOT copy its crystal glasses or the people at its table; "
 "Camera: "
-"his own phone in his outstretched hand held LOW, near the level of the table, looking UP at him as he rises from the gilded armchair: "
+"a selfie angle with his arm outstretched, LOW, near the level of the table, looking UP at him as he rises from the gilded armchair: "
 "a low angle of about 30 degrees from below, wide lens, rolled about 8 degrees to the left; "
 "his face fills about 36 percent of the frame width with its centre at 50 percent, the whole tall wig and side curls inside the frame with at least 6 percent free on each side, the head in the upper middle of the frame, sharp, his chin raised; "
 "behind and above him the gilded ceiling edge and the candlelit hall; "
@@ -21,7 +21,6 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Pose and emotion: "
 "he is half risen, his free hand pressing on the white tablecloth at the lower edge (five natural fingers), the look haughty and bored under heavy lids, the lips closed in a faint smirk; "
 "behind him at both sides the courtiers in plain wigs and the ladies in wide gowns are just starting to bow, their heads dipping at different depths. "
-"The phone that films is never visible in the frame. "
 "No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "
 )
 

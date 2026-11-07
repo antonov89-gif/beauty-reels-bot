@@ -16,7 +16,6 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "the king sits at the far end of the table along its length at the top of the frame, only slightly soft but clearly readable (his face about 19 percent of the frame width, the whole wig inside the frame, centre at 45 percent), heavy lids half-lowered, chewing with relish, his hands hidden behind the dishes; "
 "rolled about 7 degrees to the right. "
 "Behind him the candlelit hall, standing courtiers in plain wigs, at the back right a lady with a fan, no chandelier. "
-"The phone that films is never visible in the frame. "
 "No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "
 )
 

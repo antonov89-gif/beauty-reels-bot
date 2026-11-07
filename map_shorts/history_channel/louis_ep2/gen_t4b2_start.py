@@ -14,7 +14,7 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Reference 2 shows only the hall: "
 "ignore its angle, and do NOT copy its crystal glasses or the people at its table; "
 "Camera: "
-"the king's own phone seen from where the king sits, a little LOW looking up at the standing Marcel from about 15 degrees below his eye level, hand-held, rolled about 6 degrees to the right, close: "
+"the view from where the king sits, a little LOW looking up at the standing Marcel from about 15 degrees below his eye level, hand-held, rolled about 6 degrees to the right, close: "
 "Marcel's face fills about 46 percent of the frame width, his face centre at about 54 percent of the frame width, blue livery coat and a strip of white lace at the lower edge, the top of the white wig cropped a little by the top edge. "
 "A deep red wine film is on the LEFT THIRD of the lens (thick dark irregular curved edge between 25 and 33 percent of the frame width, thin and transparent inside with runs and drops, never touching Marcel's face), the right two thirds sharp. "
 "Pose and emotion: "
@@ -23,7 +23,6 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Behind him, blurred: "
 "the candlelit gilded hall, standing courtiers in plain wigs, at the back right a lady with an open fan, at the left behind the wine film a servant in livery; "
 "no chandelier. "
-"The phone that films is never visible in the frame. "
 "No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, no king in the frame, no hat, no tricorn. "
 )
 

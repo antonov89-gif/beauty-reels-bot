@@ -16,7 +16,7 @@ prompt = ("Edit the photo: "
 "the face, the freckles, the wig and the lace and silver braid must stay exactly as crisp and detailed as in the photo; "
 "no smoothing, no blur, no softening, no painted or mottled texture on the skin; "
 "natural detail, no over-sharpening, no halos. "
-"Real phone footage, fine film grain, real skin texture, no beauty filter. "
+"Real handheld footage, fine film grain, real skin texture, no beauty filter. "
 "No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no king in the frame. "
 )
 

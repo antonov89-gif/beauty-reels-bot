@@ -254,6 +254,7 @@ P["t1nc"] = dict(
 
 exec(open(H0 + 'patch_v2.py').read())
 exec(open(H0 + 'patch_v3.py').read())
+exec(open(H0 + 'patch_v4.py').read())
 # ================================================================ writers
 IMG_FOOT = '''
 body = {"model": "gpt-image-2.5-sunburst-lite", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",

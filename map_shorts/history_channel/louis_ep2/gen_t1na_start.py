@@ -11,15 +11,14 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Reference 2 shows the same man from below, chin up: "
 "take the camera angle and the head pose from it, the face and the wig from reference 1. "
 "Camera: "
-"his own phone held far too close and LOW, a low selfie from under his chin looking up at about 40 degrees, wide lens, rolled about 12 degrees to the left: "
+"a selfie shot with the arm extended, held far too close and LOW, from under his chin looking up at about 40 degrees, wide lens, rolled about 12 degrees to the left: "
 "his head with the tall wig fills about 85 percent of the frame width (his face about 38 percent), foreshortened from below, the chin and the underside of the moustache nearest the lens, the whole wig with its side curls readable and its top close to but not past the top edge, behind and above him the painted ceiling of a gilded palace hall with soft cloud and sky paintings and a gold cornice, candlelit; "
-"only the blurred tip of his pink thumb is visible at the very lower right corner, and NO phone, no phone case and no screen is visible anywhere in the frame (the phone is the camera); "
+"the very lower right corner shows only the soft blurred tip of a pink thumb, the rest of that corner is blurred hall; "
 "the face is still sharp and readable; "
 "in the lower left and lower right corners blurred shapes of the hall: "
 "at the left a grey powdered wig and a lace shoulder of a courtier, at the right an open fan and a servant's livery shoulder. "
 "Pose and emotion: "
-"he is squinting into the lens as if reading its screen, with a puzzled frown, heavy lids half-lowered, one eyebrow raised, the lips slightly parted as he mumbles 'is it on'. "
-"The phone that films is never visible in the frame. "
+"he is squinting into the lens as if checking something, with a puzzled frown, heavy lids half-lowered, one eyebrow raised, the lips slightly parted as he mumbles 'is it on'. "
 "No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "
 )
 

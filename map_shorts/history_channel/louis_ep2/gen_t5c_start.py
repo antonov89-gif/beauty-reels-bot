@@ -11,7 +11,7 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Reference 2 shows the same man from above, head tilted back: "
 "take the camera angle and the head pose from it, the face and the wig from reference 1. "
 "Camera: "
-"the king's own arm's-length phone held IN FRONT of him and HIGH above his face, looking DOWN at him from about 55 degrees above as he leans back in a gilded armchair (a high angle, never eye level), rolled about 14 degrees to the right; "
+"an arm's-length selfie angle IN FRONT of him and HIGH above his face, looking DOWN at him from about 55 degrees above as he leans back in a gilded armchair (a high angle, never eye level), rolled about 14 degrees to the right; "
 "his face fills about 40 percent of the frame width with its centre at 50 percent, the whole tall wig about 75 percent of the width and inside the frame, the chin and the lace cravat in the lower middle, sharp. "
 "Pose and emotion: "
 "he has just leaned back into the carved gilded armchair, the head resting against its back, the eyes closed under heavy lids in a long happy sigh, the lips parted a little, a deeply contented face; "
@@ -19,7 +19,6 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Around the edges of the frame: "
 "the carved gilded armchair and the candlelit gilded hall blurred, no chandelier, and on the right and right-centre blurred figures far below: "
 "a servant in livery, a courtier's powdered wig and shoulder, and a lady with a fan. "
-"The phone that films is never visible in the frame. "
 "No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "
 )
 

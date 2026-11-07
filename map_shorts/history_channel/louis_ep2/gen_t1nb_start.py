@@ -9,13 +9,12 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "exactly the same man of about 45, same heavy-lidded eyes, thin dark waxed moustache with curled tips, a small dark beauty mark clearly visible on the viewer's right of the mouth, light rouge, the tall powdered wig in cool silver-grey and white (NOT beige, NOT cream, NOT golden), the scarlet velvet coat with gold suns, lace cravat; "
 "do not copy its neutral pose or backdrop. "
 "Camera: "
-"his phone held in his hand at TABLE HEIGHT, very close, rolled about 15 degrees to the left (a dutch angle), looking at him three-quarter to the viewer's left: "
+"a hand-held selfie angle at TABLE HEIGHT, very close, rolled about 15 degrees to the left (a dutch angle), looking at him three-quarter to the viewer's left: "
 "his head with the whole tall silver-grey wig and side curls fills about 85 percent of the frame width (his face about 37 percent) with its centre at 55 percent, at least 7 percent free on each side, the wig top just inside the top edge, sharp; "
 "at the lower edge the white tablecloth and the corner of a gold plate; "
 "behind him, soft and blurred, the candlelit gilded hall with a few courtiers' heads and a servant in livery on the right, no chandelier. "
 "Pose and emotion: "
 "he gives a smug sideways look at the lens under heavy lids, the chin lifted, one eyebrow raised, the lips closed in a faint proud smile. "
-"The phone that films is never visible in the frame. "
 "No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "
 )
 

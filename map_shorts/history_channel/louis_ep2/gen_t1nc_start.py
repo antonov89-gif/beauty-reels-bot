@@ -11,14 +11,13 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Reference 2 shows only the hall: "
 "ignore its angle, and do NOT copy its crystal glasses or the people at its table; "
 "Camera: "
-"his own hand-held phone held at CHEST HEIGHT, close to the tablecloth, FROM HIS LEFT SIDE looking diagonally ALONG the long table toward him (not across it, not from above): "
+"a hand-held angle at CHEST HEIGHT, close to the tablecloth, FROM HIS LEFT SIDE looking diagonally ALONG the long table toward him (not across it, not from above): "
 "he sits in the LEFT third of the frame, his face about 35 percent of the frame width with the whole tall wig about 70 percent inside the frame, turned toward the viewer's right to look back at the lens over his shoulder; "
 "rolled about 10 degrees to the left; "
 "on the right two thirds the long table stretching away with candles and plain gold dishes (no fruit, no grapes), the court seated and standing courtiers in plain wigs, a lady with an open fan and a servant in livery on the right. "
 "Pose and emotion: "
 "he is reading the comments with a wounded look: "
 "heavy lids, the lips pursed, the brows pulled together a little, the head tilted slightly. "
-"The phone that films is never visible in the frame. "
 "No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "
 )
 
