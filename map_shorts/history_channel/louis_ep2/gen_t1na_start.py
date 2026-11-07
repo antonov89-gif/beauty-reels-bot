@@ -12,7 +12,7 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "take the camera angle and the head pose from it, the face and the wig from reference 1. "
 "Camera: "
 "his own phone held far too close and LOW, a low selfie from under his chin looking up at about 40 degrees, wide lens, rolled about 12 degrees to the left: "
-"his face fills about 70 percent of the frame width, foreshortened from below, the chin and the underside of the moustache nearest the lens, the wig rising toward the top edge, behind and above him the painted ceiling of a gilded palace hall with soft cloud and sky paintings and a gold cornice, candlelit; "
+"his head with the tall wig fills about 85 percent of the frame width (his face about 38 percent), foreshortened from below, the chin and the underside of the moustache nearest the lens, the whole wig with its side curls readable and its top close to but not past the top edge, behind and above him the painted ceiling of a gilded palace hall with soft cloud and sky paintings and a gold cornice, candlelit; "
 "his pink thumb and the edge of the phone case are visible at the lower right corner; "
 "the face is still sharp and readable; "
 "in the lower left and lower right corners blurred shapes of the hall: "
