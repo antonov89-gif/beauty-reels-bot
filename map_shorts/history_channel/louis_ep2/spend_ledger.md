@@ -14,3 +14,5 @@
 - 07.11 still 5c START on gpt-image-2.5-sunburst 4K high: $0.09 (usage.cost 0.094376). Ep.2 total about $51.13. Output pilot_frames/anchors/t5c_start_sunburst_4k.jpg, GENERATED (not yet inspected).
 
 - 07.11 still 5c START v2 on gpt-image-2.5-sunburst 4K high: $0.09 (usage.cost 0.09456). Ep.2 total about $51.22. v1 kept as t5c_start_sunburst_v1_4k.jpg. GENERATED (not yet inspected).
+
+- 07.11 clip 5c on Seedance 2.5 Lite 720p 12 s (first frame only): $1.80. Ep.2 total about $53.02. Output pilot_frames/TAKE_t5c_seedance.mp4, GENERATED (not yet inspected).
