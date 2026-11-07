@@ -13,7 +13,7 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Camera: "
 "a selfie shot with the arm extended, held far too close and LOW, from under his chin looking up at about 40 degrees, wide lens, rolled about 12 degrees to the left: "
 "his head with the tall wig fills about 85 percent of the frame width (his face about 38 percent), foreshortened from below, the chin and the underside of the moustache nearest the lens, the whole wig with its side curls readable and its top close to but not past the top edge, behind and above him the painted ceiling of a gilded palace hall with soft cloud and sky paintings and a gold cornice, candlelit; "
-"the lower right corner shows only the blurred hall, no thumb, no finger and no hand tip anywhere in the frame (the arm that holds the camera is outside the frame); "
+"the lower right corner shows only the blurred hall; "
 "the face is still sharp and readable, tack-sharp 4K, fine lace and wig curl detail, a clean wig outline with no loose net strands, no soft focus; "
 "in the lower left and lower right corners blurred shapes of the hall: "
 "at the left a grey powdered wig and a lace shoulder of a courtier, at the right an open fan and a servant's livery shoulder. "

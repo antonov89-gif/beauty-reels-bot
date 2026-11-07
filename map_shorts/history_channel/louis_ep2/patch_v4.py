@@ -19,7 +19,7 @@ for k, p in P.items():
             t = t.replace(a, b)
         p[f] = t
 # 07.11 third attempt of t1na start (inspector: soft 88/1.47, loose net strands, blurred thumb patch)
-P["t1na"]["start"] = P["t1na"]["start"].replace("the very lower right corner shows only the soft blurred tip of a pink thumb, the rest of that corner is blurred hall;", "the lower right corner shows only the blurred hall, no thumb, no finger and no hand tip anywhere in the frame (the arm that holds the camera is outside the frame);")
-assert "no thumb, no finger" in P["t1na"]["start"]
+P["t1na"]["start"] = P["t1na"]["start"].replace("the very lower right corner shows only the soft blurred tip of a pink thumb, the rest of that corner is blurred hall;", "the lower right corner shows only the blurred hall;")
+assert "shows only the blurred hall;" in P["t1na"]["start"]
 P["t1na"]["start"] = P["t1na"]["start"].replace("the face is still sharp and readable;", "the face is still sharp and readable, tack-sharp 4K, fine lace and wig curl detail, a clean wig outline with no loose net strands, no soft focus;")
 assert "tack-sharp 4K" in P["t1na"]["start"]
