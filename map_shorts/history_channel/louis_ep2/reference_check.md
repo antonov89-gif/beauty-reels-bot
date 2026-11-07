@@ -923,3 +923,14 @@ Read: low arm-held walking vlog frame (wide-angle nose, arm into the lens, tilt,
 Prompt notes (optional re-roll only): face 28 %, centre 54 %, wig top 8-10 %, irises exactly on the lens.
 
 ## 07.11 owner: still 7b-WALK START taken ("Норм, делай дальше"); inspector ACCEPTED with WARNs (face 32% vs 29%, wig top 5% vs 10%, wig 66% vs 58%, pupils slightly left of the lens, finger count not verified).
+
+## Reference comparison TAKE_t7bw_seedance (07.11)
+| metric | ref 24-30.8 | ours | verdict |
+|---|---|---|---|
+| shots | 1 | 1 (14.0 s) | ok |
+| frozen bg % | 0 | 0 | OK |
+| still body % | 0 | 29 | FAIL (gate 15) |
+| head fw/s | 0.23 | 0.10 | FAIL (gate 0.18) |
+| words/min | - | 129 (30 words assumed) | FAIL (60-90) |
+| phone mistakes | - | 0 | FAIL |
+By eye (ON FRAMES): no walking or re-aim, near-static selfie; point 4.5-7.5 good; eyes closed ~2-3 s; wave weak (12-13.5, edge of frame); bored look = eyes up + pursed lips (theatrical), not the reference's gaze down/aside; face otherwise real (pores, natural wig). Voice tone NOT VERIFIED (no sound). Verdict: needs regeneration or virtual hand-held plus trim 0-2 s; do not use 13-14 s eye-roll.
