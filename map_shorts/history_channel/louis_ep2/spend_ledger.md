@@ -30,3 +30,5 @@
 - 07.11 still 7a-WALK START on gpt-image-2.5-sunburst 4K high (one ref O8): $0.09 (usage.cost 0.08824). Ep.2 total about $57.34. Output pilot_frames/anchors/t7aw_start_sunburst_4k.jpg, GENERATED (not yet inspected).
 
 - 07.11 clip 7a-WALK on Seedance 2.5 Lite 720p 10 s (first frame only): $1.50. Ep.2 total about $58.84. Output pilot_frames/TAKE_t7aw_seedance.mp4, GENERATED (not yet inspected).
+
+- 07.11 still 7b-WALK START on gpt-image-2.5-sunburst 4K high (refs O8 + O12): $0.09 (usage.cost 0.094808). Ep.2 total about $58.94. Output pilot_frames/anchors/t7bw_start_sunburst_4k.jpg, GENERATED (not yet inspected).
