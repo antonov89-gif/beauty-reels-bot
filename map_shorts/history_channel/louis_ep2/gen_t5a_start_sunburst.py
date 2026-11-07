@@ -13,7 +13,7 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Reference 2 shows the same man from below, low camera: "
 "take the camera angle and the head pose from it, the face and the wig from reference 1. "
 "Reference 3 shows only the hall: "
-"take only the gilded walls, the candlelight and the standing courtiers; its angle, its people at the table, its chandelier and its glassware stay out of the picture; "
+"take only the gilded walls, the candlelight and the standing courtiers; its angle, its seated ladies and people at the table, its chandelier and its glassware stay out of the picture; "
 "Camera (filmed by Marcel): "
 "LOW, from the near corner at the END of the long table, the lens only about 25 centimetres above the tablecloth, looking along the table toward the king who sits at its far end, level with the tablecloth, rolled about 10 degrees to the left. "
 "In the foreground, soft and out of focus at the lower edge and the right edge: "
@@ -25,7 +25,7 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "Behind him: "
 "the candlelit gilded hall, standing courtiers in plain wigs, at the back right a lady with an open fan, a servant in livery far behind at the right; "
 "the hall is lit by wall candle sconces and the ceiling is out of frame. "
-"One king only, natural light rouge, five fingers on each hand. The table holds only plates, gold dishes, silver platters, napkins and candle holders. "
+"One king only, natural light rouge, five fingers on each hand. The table holds only plates, gold dishes, silver platters, napkins and candle holders. Clean picture with no text or lettering, no modern objects, only things of the 1680s. "
 )
 
 body = {"model": "gpt-image-2.5-sunburst", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",
