@@ -23,6 +23,11 @@ rep("the candlelit gilded hall, standing courtiers in plain wigs, at the back ri
     "the candlelit gilded hall lit by wall sconces with the ceiling out of frame, standing courtiers in plain wigs, at the back right a lady with an open fan and two courtiers whispering. ")
 rep('"No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "',
     '"One king only, natural light rouge. Clean picture with no text or lettering, no modern objects, only things of the 1680s. "')
+
+rep("his heavy-lidded eyes looking down at the bones on the plate with a complacent faint smirk, the lips closed. ", "both eyes open, the irises visible under the heavy upper lids, looking down at the bones on the plate, a complacent faint smirk, the lips closed. ")
+rep("the whole tall wig about 55 percent of the width with at least 20 percent free space on each side and a band of empty gilded wall about 10 percent of the frame height above the wig, sharp; ", "the powdered wig puff about 50 percent of the frame width, the whole wig with its long side curls about 62 percent, so at least 18 percent of free gilded wall at each side, and a band of empty wall about 10 percent of the frame height above the wig, sharp; ")
+rep("Reference 2 gives only the mood of the hall: gilded walls, warm candlelight, standing courtiers in grey wigs; take no objects and no people from it, the table and the people are new. ", "Reference 2 gives only the mood of the hall: gilded walls and warm candlelight. Its people, its crystal glasses and its chandelier are not used; the table and the people are new. ")
+rep("on a single lace napkin held in one hand just below the frame,", "on a single lace napkin held in one hand just below the frame, both hands are below the lower edge of the frame, no hand and no napkin visible,")
 i = s.index('"""', 3)
 doc = ('"""Take 6 (the verdict) START still on gpt-image-2.5-sunburst (non-Lite), 4K high 9:16, measured charge about $0.10 (preflight table pre-deduct $0.50). Setup S13 (frontal, eye level, close; wiping the fingers, eyes down on the bones, complacent smirk). '
        'Refs in order: K4_master_neutral_O8.png, R10_hall_clean.jpg. Result: pilot_frames/anchors/t6_start_sunburst_4k.jpg. Run: python3 gen_t6_start_sunburst.py go\nBRIEF: briefs/brief_t5_t7.md\n"""')
