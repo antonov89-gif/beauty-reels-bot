@@ -1,4 +1,6 @@
-"""Take 5 piece 5c CLIP v2 on Seedance 2.5 LITE i2v (07.11): first frame ONLY (refs/t5c_start_4k.jpg), 720p, 12 s, 9:16, $0.15/s = $1.80, audio off. Rework of v1 (owner 07.11: quality poor, tear looks AI, realism): no tear wipe, eyes open from 0.8 s and on the glance to the lady, natural laugh 9.2-10.4 s with a plain breath after, laugh shake 2 %, thumb 8.3-8.9 s, wig margin 12 %. One call, no retries without a new yes. Run: python3 gen_take_t5c_seedance_v2.py go\nBRIEF: briefs/brief_t5_t7.md\n"""
+"""Take 5 piece 5c CLIP v2 on Seedance 2.5 LITE i2v (07.11): first frame ONLY (refs/t5c_start_4k.jpg), 720p, 12 s, 9:16, $0.15/s = $1.80, audio off. Rework of v1 (owner 07.11: quality poor, tear looks AI, realism): no tear wipe, eyes open from 0.8 s and on the glance to the lady, natural laugh 9.2-10.4 s with a plain breath after, laugh shake 2 %, thumb 8.3-8.9 s, wig margin 12 %. One call, no retries without a new yes. Run: python3 gen_take_t5c_seedance_v2.py go
+BRIEF: briefs/brief_t5_t7.md
+"""
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
 import apipod
