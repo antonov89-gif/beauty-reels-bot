@@ -22,7 +22,7 @@ prompt = ("Reference 1 is the photo to edit (the end still of piece A); "
 "no smoothing, no blur, no softening, no painted or mottled texture on the skin; "
 "natural detail, no over-sharpening, no halos. "
 "Real handheld footage, fine film grain, real skin texture, no beauty filter. "
-"No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, only one king. "
+"No text, no logos, no modern objects, only one king. "
 )
 
 body = {"model": "gpt-image-2.5-sunburst-lite", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",

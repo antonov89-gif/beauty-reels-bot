@@ -38,3 +38,4 @@ P["t1na"]["end"] = e
 
 # t4bA end: positive-only (hands exist and are described; no glass wording)
 P["t4bA"]["end"] = P["t4bA"]["end"].replace("no glass or crystal glass anywhere, ", "").replace("no extra fingers, ", "")
+P["t4bB"]["end"] = P["t4bB"]["end"].replace("no glass or crystal glass anywhere, ", "").replace("no extra fingers, ", "")
