@@ -1,5 +1,5 @@
 """Take 4b v3 piece A: Marcel spills the wine, looks at the camera and at the king, 'Sorry, Sire' (setup S9b, from the side): END still, an EDIT of the start still (same camera, different pose; prepared 06.11, NOT run until the owner's yes). One ref = refs/t4bA_start_4k.jpg (the 4K original). One call, about $0.12. Run: python3 gen_t4bA_end.py go
-BRIEF: briefs/brief_t4b_A.md
+BRIEF: briefs/brief_t4b_A_B.md
 """
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
@@ -15,8 +15,8 @@ prompt = ("Reference 1 is the photo to edit; "
 "Change ONLY the moment: "
 "the gold goblet has fallen over on its side on the white tablecloth, empty, the small gold tray beside it, and a natural pool of dark red wine has spread over the cloth between them and ran to the table edge, a little of it on the edge of the king's cuff only (none on his face, wig or cravat); "
 "Marcel stands frozen, bent a little, both hands raised open in front of his chest (five natural fingers each), his eyes wide, looking straight into the lens, his lips slightly parted as if about to speak; "
-"the king has turned his head toward Marcel (the viewer's right), his chin level, heavy lids, a blank unreadable face, the lips closed; "
-"Marcel's head is a little bowed. "
+"the king has turned his head three-quarter toward Marcel (the viewer's right), his eyelids heavy but OPEN and his eyes on Marcel, one eyebrow raised, the corner of his mouth tight and lifting as he holds back a laugh, the cheeks slightly raised, the nostrils slightly flared; "
+"Marcel stands straightened up and looks at the king. "
 "The heads move at most 4 percent of the frame width. "
 "QUALITY: "
 "keep the full resolution, sharpness and fine detail of the original photo: "

@@ -1,5 +1,5 @@
 """Take 4b v3 piece B: the king laughs, 'Nobody saw anything... And nobody will see you again... Joking' (setup S9b, from the side): END still, an EDIT of the start still (same camera, different pose; prepared 06.11, NOT run until the owner's yes). One ref = refs/t4bB_start_4k.jpg (the 4K original). One call, about $0.12. Run: python3 gen_t4bB_end.py go
-BRIEF: briefs/brief_t4b_B.md
+BRIEF: briefs/brief_t4b_A_B.md
 """
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
@@ -13,7 +13,7 @@ prompt = ("Reference 1 is the photo to edit (the end still of piece A); "
 "Edit the photo (reference 1): "
 "keep EXACTLY the same camera position from the side, the same table height, the same roll, the same framing and crop, the same sizes and positions of both heads, the same wigs, coats, the same hall and the same fallen goblet with the pool of red wine on the cloth. "
 "Change ONLY the expressions and the head turns: "
-"the king has turned toward Marcel (the viewer's right), his chin lifted high, one eyebrow raised, his heavy-lidded eyes on Marcel with a quiet, flat look and a very faint smile on closed lips (the laugh is over); "
+"the king has turned toward Marcel (the viewer's right), his chin lifted high, one eyebrow raised, his eyes on Marcel with a flat, cool look and the corner of his mouth lifted by one or two millimetres (the laugh is over and the deadpan has begun); "
 "Marcel stands frozen with his head bowed a little, his eyes wide, looking up at the king, his lips pressed together, a bead of sweat on his temple, his hands lowered together in front of him (five natural fingers each); "
 "the heads move at most 4 percent of the frame width. "
 "QUALITY: "

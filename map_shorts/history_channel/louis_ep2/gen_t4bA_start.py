@@ -1,5 +1,5 @@
 """Take 4b v3 piece A: Marcel spills the wine, looks at the camera and at the king, 'Sorry, Sire' (setup S9b, from the side): START still (prepared 06.11, NOT run until the owner's yes after seeing the refs and the Russian prompt). Script 7.3 lines: MARCEL (quietly): "Sorry, Sire." [Marcel stumbles, the goblet tips, the wine runs over the tablecloth and a little over the king's cuff; he freezes, looks into the camera, then at the king; the king slowly turns his head to Marcel, blank.] GPT Image 2.5 Sunburst Lite, 4K, high, 9:16. Refs in order: K4_master_neutral_O8.png, R8_marcel_full.jpg, R10_hall_clean.jpg. One call, about $0.12. Run: python3 gen_t4bA_start.py go
-BRIEF: briefs/brief_t4b_A.md
+BRIEF: briefs/brief_t4b_A_B.md
 """
 import json, re, sys
 sys.path.insert(0, "/home/claude/v51")
@@ -17,13 +17,14 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "ignore its angle, and do NOT copy its crystal glasses, its chandelier or the people at its table (new people). "
 "Camera: "
 "hand-held at TABLE HEIGHT from the SIDE of the long table, about 40 degrees off the line of the table, a CLOSE medium shot, tight enough that the two heads with their wigs fill most of the frame width, rolled about 6 degrees to the right: "
-"the king sits in the LEFT part of the frame (his head with the wig about 50 percent of the frame width, his face about 26 percent, face centre at 30 percent of the width, sharp), his head turned about 25 to 30 degrees toward the viewer's LEFT, looking away bored, both eyes and the beauty mark on the viewer's right of his mouth visible; "
+"the king sits in the LEFT part of the frame (his head with the wig about 50 percent of the frame width, his face about 26 percent, face centre at 32 percent of the width, the whole wig inside the frame with about 5 percent free space at the left edge, sharp), his head turned only about 10 degrees toward the viewer's right, his eyes on the gold goblet that Marcel carries, both eyes and the beauty mark on the viewer's right of his mouth visible; "
 "Marcel stands at the RIGHT of the frame (his head with the white wig about 34 percent of the width, his face about 22 percent, face centre at 76 percent of the width, sharp), turned three-quarter toward the viewer's left, toward the king; "
 "both heads fully inside the frame with their wigs and about 5 percent free space at each edge. "
 "Between and below them the clean white tablecloth with one gold plate and two candles; "
 "the lower corners of the frame show only white tablecloth. "
 "Pose and emotion: "
-"the king sits waiting and looking away bored, heavy lids, a faint smirk of impatience, one ringed hand resting flat on the white cloth in front of him, sharp, five natural fingers, the fingers lifting one after another as he drums; "
+"the king sits expectant and amused: "
+"eyelids heavy, one eyebrow raised, the lips pressed into a knowing smirk, his eyes fixed on the goblet, one ringed hand resting flat on the white cloth in front of him, sharp, five natural fingers, the fingers lifting one after another as he drums; "
 "Marcel bends a little over the table, tense and sweating a little, his eyes on the gold goblet of red wine standing on a small gold tray in both his hands (five natural fingers on each hand), the goblet metal, never glass. "
 "Everything is tack-sharp 4K: "
 "skin pores, moustache hairs, wig curls, lace and the gold braid, no soft focus, both people in the sharp plane. "
