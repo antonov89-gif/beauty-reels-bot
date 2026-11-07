@@ -19,7 +19,7 @@ prompt = ("Vertical 9:16 real photograph in dim candlelight, slightly underexpos
 "at the left a grey powdered wig and a lace shoulder of a courtier, at the right an open fan and a servant's livery shoulder. "
 "Pose and emotion: "
 "he is squinting into the lens as if checking something, with a puzzled frown, heavy lids half-lowered, one eyebrow raised, the lips slightly parted as he mumbles 'is it on'. "
-"No text, no logos, no modern objects, no glass or crystal glass anywhere, no extra fingers, no clown makeup, only one king. "
+"No text, no logos, no modern objects, no glass or crystal glass anywhere, no clown makeup, only one king. "
 )
 
 body = {"model": "gpt-image-2.5-sunburst-lite", "prompt": prompt, "aspect_ratio": "9:16", "resolution": "4K", "quality": "high",

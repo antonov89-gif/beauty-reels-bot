@@ -23,3 +23,5 @@ P["t1na"]["start"] = P["t1na"]["start"].replace("the very lower right corner sho
 assert "shows only the blurred hall;" in P["t1na"]["start"]
 P["t1na"]["start"] = P["t1na"]["start"].replace("the face is still sharp and readable;", "the face is still sharp and readable, tack-sharp 4K, fine lace and wig curl detail, a clean wig outline with no loose net strands, no soft focus;")
 assert "tack-sharp 4K" in P["t1na"]["start"]
+P["t1na"]["start"] = P["t1na"]["start"].replace("no extra fingers, ", "")
+assert "extra fingers" not in P["t1na"]["start"]
