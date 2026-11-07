@@ -108,3 +108,10 @@ _rr(_a, "start", "the king sits expectant and amused: eyelids heavy, one eyebrow
 _rr(_a, "start", "one ringed hand resting flat on the white cloth in front of him,", "one ringed hand resting flat on the empty white cloth in front of him (there is no second plate in front of him),")
 _rr(_a, "start", "the goblet metal, never glass.", "the goblet is made entirely of solid opaque gold, both the cup and the stem (no glass, no crystal, no transparent part).")
 _rr(_a, "start", "the whole wig inside the frame with about 5 percent free space at the left edge,", "the whole wig inside the frame with about 5 percent of empty background between the wig and the left edge of the frame,")
+
+# ===== positive-only wording for the hall ref and the goblet (reviewer: a negated object can be drawn) =====
+_rr(_a, "start", "Reference 3 shows only the hall: ignore its angle, and do NOT copy its crystal glasses, its chandelier or the people at its table (new people).", "Reference 3 gives only the mood of the hall: gilded walls, warm candlelight, standing courtiers in grey wigs; take no objects and no people from it, the table and the people are new.")
+_rr(_a, "start", "Between and below them the clean white tablecloth with one gold plate and two candles;", "Between and below them the clean white tablecloth with one gold plate and two candles in gold candlesticks;")
+_rr(_a, "start", "the goblet is made entirely of solid opaque gold, both the cup and the stem (no glass, no crystal, no transparent part).", "the goblet is made entirely of solid opaque gold, cup and stem, polished metal with warm gold reflections.")
+_rr(_a, "start", "no glass or crystal glass anywhere,", "")
+_rr(_a, "start", "no clown makeup, only one king.", "no clown makeup, only one king. On the table: only the gold plate, the gold candlesticks and the gold goblet.")
