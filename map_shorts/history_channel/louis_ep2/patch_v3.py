@@ -7,7 +7,7 @@ WIGOLD = "the tall powdered wig in cool silver-grey and white (NOT beige, NOT cr
 WIGOLD2 = "the tall powdered wig in cool silver-grey and white like the pale grey in reference 1, NOT beige, NOT cream, NOT golden, the candlelight must not tint it"
 WIGNEW = "the tall powdered wig in silver-grey and white (its colour reads a little warmer or cooler with the light)"
 for k, p in P.items():
-    if k == "t4b2":
+    if k in ("t4b2", "t4bA", "t4bB"):
         continue
     refs = ["K4_master_neutral_O8.png"]
     if k in ANGLE: refs.append(ANGLE[k][0])

@@ -20,6 +20,7 @@ CLIPTAIL = ("Acting limits: heavy eyelids stay except in the laugh beats, no wid
             "No text or captions, no modern objects, no clear glass or crystal glass anywhere, only one king in the frame (no second king, no double).")
 
 P = {}
+KID_C = 'the king (the same man of about 45 as @first_frame: heavy-lidded grey-green eyes, thin dark waxed moustache with curled tips, a small dark beauty mark on the viewer\'s right of the mouth, light rouge, the tall powdered wig in silver-grey and white, the scarlet velvet coat with gold suns) and Marcel (a young servant with freckles and thick dark brows, a plain white wig, a pale blue livery coat with silver braid)'
 
 # ---------------------------------------------------------------- Take 4, piece 4b-2: Marcel through the wine (S10)
 P["t4b2"] = dict(
@@ -252,6 +253,7 @@ P["t1nc"] = dict(
           "{TAIL}")
 )
 
+exec(open(H0 + 'pieces_v5.py').read())
 exec(open(H0 + 'patch_v2.py').read())
 exec(open(H0 + 'patch_v3.py').read())
 exec(open(H0 + 'patch_v4.py').read())
@@ -319,7 +321,15 @@ for k, p in P.items():
     tail = CLIPTAIL
     if p.get("_tail") == "marcel":
         tail = tail.replace("heavy eyelids stay except in the laugh beats, no wide-open eyes for the king, ", "").replace("only one king in the frame (no second king, no double)", "no king in the frame, only Marcel")
-    clip = p["clip"].replace("{HEAD}", CLIPHEAD).replace("{KING}", KING).replace("{MARCEL}", MARCEL).replace("{TAIL}", tail)
+    clip = p["clip"].replace("{HEAD}", CLIPHEAD).replace("{KING}", KING).replace("{KING_}", "the same two people as in the frames: " + KID_C).replace("{MARCEL}", MARCEL).replace("{TAIL}", tail)
     doc2 = ('"""%s: CLIP (prepared 06.11, NOT run until the owner\'s yes after seeing the refs and the Russian prompt). Kling 4.0 i2v 720p %d s = $%.2f (0.145 x %d). first = %s_start_4k, last = %s_end_4k. Lines (script 7.3): %s Motion score per PROMPT_CAMERA_LESSONS.md. Runs only with the argument go. One call, no retries without a new yes."""\n') % (p["title"], p["sec"], price_clip, p["sec"], k, k, p["lines"].replace('"""', "'"))
     open(H0 + "gen_take_%s.py" % k, "w").write(doc2 + HEAD + "prompt = " + q(clip) + "\n" + (VID_FOOT % (k, k, p["sec"], k, k, k, k)))
     print(k, "start/end $0.24 + clip $%.2f = $%.2f" % (price_clip, 0.24 + price_clip), "| prompt chars", len(clip))
+
+# piece B continues piece A: its start pin is the END still of piece A (the same image); it has no start script
+import os as _os
+_p = H0 + "gen_t4bB_start.py"
+if _os.path.exists(_p): _os.remove(_p)
+for _f in ("gen_t4bB_end.py", "gen_take_t4bB.py"):
+    _s = open(H0 + _f).read().replace('"t4bB_start_4k.jpg"', '"t4bA_end_4k.jpg"')
+    open(H0 + _f, "w").write(_s)
