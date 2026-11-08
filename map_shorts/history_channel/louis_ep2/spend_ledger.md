@@ -38,3 +38,4 @@
 - 07.11 Take 1 middle still: APIpod returned HTTP 500 "insufficient quota" at submit (not submitted, nothing charged): the provider balance is exhausted. Ep.2 total about $61.04 spent. Needed for the new opener: about $4.05 (3 stills ~$0.30 + 2 clips $1.80 + $1.95). Waiting for a top-up.
 
 - 08.11 still Take 1 MIDDLE (last of 1a / first of 1b) on gpt-image-2.5-sunburst 4K high (retry after the quota top-up): $0.09 (usage.cost 0.088636). Ep.2 total about $61.13. Output pilot_frames/anchors/t1wm_mid_sunburst_4k.jpg, GENERATED (not yet inspected).
+- 08.11 Take 1 middle still v2 (Sunburst 4K high): $0.0950
