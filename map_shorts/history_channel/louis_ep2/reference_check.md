@@ -965,3 +965,6 @@ Numbers: 2160x3840; sharp 604.2, detail 3.65, blocks 0.97 PASS. SFace vs K4_mast
 Eye: arms/hands 0 PASS; no phone, no text PASS; one king, mark on viewer's right, moustache, eyes open to lens (left lid a bit lower, WARN), smug half smile PASS; wig stands at left PASS; man eating, lady with fan, servant with plate PASS; whispering ladies NOT found. FAIL: stemware still drawn on the table at right (wine glass and goblet, about x 1830-2000, y 1980-2250 of 2160x3840, crop checked) = banned object. Identity by eye: same man, but face reads fuller and older than O8.
 v1 vs v2: grade, stemware, face width, SFace NOT fixed; only sharpness improved.
 Prompt fix: shrink to a smaller head (camera further back, side curls inside 62 %), name the dark panelled hall of refs/t1w_start_4k.jpg and its colour (dark, muted, cool grey wig), cut the table detail down to plates and candles with no vessel word, and crop/inpaint the glasses or take a seed without them.
+
+### 08.11 owner decision: Take 1 middle still v2 ACCEPTED AS IS ("делаем дальше без переделок")
+Defects go to the rework list (after the full montage): colour/grade warmer than her start frame, glass + goblet on the table at right, head large (wig ~75 %, margins 11/13 %), SFace 0.49, no whispering ladies, roll 1-2 deg.
